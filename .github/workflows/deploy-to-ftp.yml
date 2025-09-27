@@ -7,7 +7,7 @@ on:
   workflow_dispatch: # Allows manual triggering from GitHub UI
 
 jobs:
-  deploy:
+  ftp-deploy:
     name: Deploy to FTP Server
     runs-on: ubuntu-latest
     
