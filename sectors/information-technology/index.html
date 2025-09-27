@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information Technology Certifications | 47+ Vendors | BTH Education Group</title>
+    <meta name="description" content="Complete IT certification pathways with 47+ vendor ecosystem. CompTIA, Microsoft, AWS, Cisco, Oracle, and more. BTH authorized training with global recognition.">
+    <link rel="icon" type="image/png" href="../../assets/images/favicon.png">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <style>
+        .it-hero {
+            background: linear-gradient(135deg, #1e3c72 0%, #2563eb 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        .it-hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        .it-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .stat-item {
+            text-align: center;
+        }
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        .vendor-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 4rem 0;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        .vendor-card {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border: 1px solid #e0e7ff;
+        }
+        .vendor-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        .vendor-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        .vendor-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--vendor-color, #2563eb);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            color: white;
+            font-size: 1.5rem;
+        }
+        .vendor-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin: 0;
+        }
+        .cert-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .cert-badge {
+            background: var(--vendor-color, #2563eb);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        .vendor-cta {
+            background: var(--vendor-color, #2563eb);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            text-align: center;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .pathway-section {
+            background: #f8fafc;
+            padding: 4rem 0;
+            margin: 4rem 0;
+        }
+        .pathway-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .pathway-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 1rem;
+        }
+        .pathway-steps {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        .step {
+            background: #2563eb;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-weight: 600;
+        }
+        .arrow {
+            color: #6b7280;
+            font-size: 1.5rem;
+        }
+        /* Vendor-specific colors */
+        .comptia { --vendor-color: #dc2626; }
+        .microsoft { --vendor-color: #0078d4; }
+        .aws { --vendor-color: #ff9900; }
+        .cisco { --vendor-color: #1ba0d7; }
+        .oracle { --vendor-color: #f80000; }
+        .vmware { --vendor-color: #007db8; }
+        .google { --vendor-color: #4285f4; }
+        .redhat { --vendor-color: #ee0000; }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="../../index.html">
+                    <img src="../../assets/images/bthlogo.png" alt="BTH Education Group" class="logo-img">
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="../../index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="../../about.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="../../programs.html" class="nav-link active">Programs</a></li>
+                <li class="nav-item"><a href="../../oedp.html" class="nav-link">OEDP</a></li>
+                <li class="nav-item"><a href="../../partners.html" class="nav-link">Partners</a></li>
+                <li class="nav-item"><a href="../../contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="it-hero">
+        <div class="container">
+            <h1>Information Technology Certifications</h1>
+            <p class="subtitle">Master IT foundations with comprehensive certification pathways across 47+ industry-leading vendors</p>
+            
+            <div class="it-stats">
+                <div class="stat-item">
+                    <span class="stat-number">47+</span>
+                    <span class="stat-label">Vendor Partners</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">300+</span>
+                    <span class="stat-label">Certifications</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">6</span>
+                    <span class="stat-label">Core Categories</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">95%</span>
+                    <span class="stat-label">Success Rate</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="vendor-grid">
+            <!-- CompTIA -->
+            <div class="vendor-card comptia">
+                <div class="vendor-header">
+                    <div class="vendor-icon">🏆</div>
+                    <div>
+                        <h3 class="vendor-title">CompTIA Certifications</h3>
+                        <p>Industry Foundation</p>
+                    </div>
+                </div>
+                <div class="cert-list">
+                    <span class="cert-badge">A+</span>
+                    <span class="cert-badge">Network+</span>
+                    <span class="cert-badge">Security+</span>
+                    <span class="cert-badge">Server+</span>
+                    <span class="cert-badge">Cloud+</span>
+                </div>
+                <a href="#" class="vendor-cta">Explore CompTIA Training</a>
+            </div>
+
+            <!-- Microsoft -->
+            <div class="vendor-card microsoft">
+                <div class="vendor-header">
+                    <div class="vendor-icon">🏢</div>
+                    <div>
+                        <h3 class="vendor-title">Microsoft Certifications</h3>
+                        <p>Enterprise Solutions</p>
+                    </div>
+                </div>
+                <div class="cert-list">
+                    <span class="cert-badge">Azure Fundamentals</span>
+                    <span class="cert-badge">Azure Administrator</span>
+                    <span class="cert-badge">Microsoft 365</span>
+                    <span class="cert-badge">Power Platform</span>
+                </div>
+                <a href="#" class="vendor-cta">Explore Microsoft Training</a>
+            </div>
+
+            <!-- AWS -->
+            <div class="vendor-card aws">
+                <div class="vendor-header">
+                    <div class="vendor-icon">☁️</div>
+                    <div>
+                        <h3 class="vendor-title">AWS Certifications</h3>
+                        <p>Cloud Computing</p>
+                    </div>
+                </div>
+                <div class="cert-list">
+                    <span class="cert-badge">Cloud Practitioner</span>
+                    <span class="cert-badge">Solutions Architect</span>
+                    <span class="cert-badge">Developer</span>
+                    <span class="cert-badge">SysOps Admin</span>
+                </div>
+                <a href="#" class="vendor-cta">Explore AWS Training</a>
+            </div>
+
+            <!-- Cisco -->
+            <div class="vendor-card cisco">
+                <div class="vendor-header">
+                    <div class="vendor-icon">🌐</div>
+                    <div>
+                        <h3 class="vendor-title">Cisco Certifications</h3>
+                        <p>Networking Infrastructure</p>
+                    </div>
+                </div>
+                <div class="cert-list">
+                    <span class="cert-badge">CCNA</span>
+                    <span class="cert-badge">CCNP</span>
+                    <span class="cert-badge">CCIE</span>
+                    <span class="cert-badge">DevNet</span>
+                </div>
+                <a href="#" class="vendor-cta">Explore Cisco Training</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="pathway-section">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 3rem; color: #1e293b;">Career Pathways</h2>
+            
+            <div class="pathway-card">
+                <div class="pathway-title">🎯 Network Administrator Path</div>
+                <div class="pathway-steps">
+                    <span class="step">CompTIA A+</span>
+                    <span class="arrow">→</span>
+                    <span class="step">CompTIA Network+</span>
+                    <span class="arrow">→</span>
+                    <span class="step">Cisco CCNA</span>
+                    <span class="arrow">→</span>
+                    <span class="step">Network Administrator</span>
+                </div>
+            </div>
+
+            <div class="pathway-card">
+                <div class="pathway-title">☁️ Cloud Solutions Architect Path</div>
+                <div class="pathway-steps">
+                    <span class="step">AWS Cloud Practitioner</span>
+                    <span class="arrow">→</span>
+                    <span class="step">AWS Solutions Architect</span>
+                    <span class="arrow">→</span>
+                    <span class="step">Azure Administrator</span>
+                    <span class="arrow">→</span>
+                    <span class="step">Cloud Architect</span>
+                </div>
+            </div>
+
+            <div class="pathway-card">
+                <div class="pathway-title">🔒 Cybersecurity Specialist Path</div>
+                <div class="pathway-steps">
+                    <span class="step">CompTIA Security+</span>
+                    <span class="arrow">→</span>
+                    <span class="step">CompTIA CySA+</span>
+                    <span class="arrow">→</span>
+                    <span class="step">CISSP</span>
+                    <span class="arrow">→</span>
+                    <span class="step">Security Analyst</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer style="background: #1e293b; color: white; padding: 3rem 0; text-align: center;">
+        <div class="container">
+            <h3>BTH Education Group - IT Training Excellence</h3>
+            <p>Authorized training partner with global recognition</p>
+            <p>Contact: info@btheducationgroup.org | (+237) 680289956</p>
+        </div>
+    </footer>
+
+    <script src="../../assets/js/main.js"></script>
+</body>
+</html>

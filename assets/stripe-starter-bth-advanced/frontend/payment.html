@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Secure Payment | BTH Education Group</title>
+  <link rel="preconnect" href="https://js.stripe.com" />
+  <style>
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;background:#0b1220;color:#101828;margin:0;}
+    .wrap{max-width:860px;margin:0 auto;padding:32px 20px;color:#fff;}
+    .card{background:#ffffff;border-radius:16px;box-shadow:0 10px 30px rgba(16,24,40,.15);padding:24px;color:#0b1220;}
+    h1{font-size:28px;margin:0 0 8px}
+    .sub{color:#475467;margin:0 0 16px}
+    .product{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;margin:16px 0 8px}
+    .product h2{font-size:20px;margin:0}
+    .muted{color:#667085}
+    .price{font-weight:700;font-size:20px}
+    .row{margin:12px 0}
+    .row-inline{display:flex;gap:10px;align-items:flex-end}
+    label{display:block;font-size:14px;color:#344054;margin-bottom:6px}
+    input[type=text]{width:220px;border:1px solid #d0d5dd;border-radius:10px;padding:10px 12px;font-size:15px}
+    #payment-element{margin-top:12px}
+    button.primary{display:inline-flex;align-items:center;gap:8px;background:#2b6cb0;color:#fff;border:0;border-radius:10px;padding:12px 16px;font-weight:600;cursor:pointer}
+    button.primary:disabled{opacity:.6;cursor:not-allowed}
+    .notice{background:#f2f4f7;border:1px solid #e4e7ec;border-radius:12px;padding:12px 14px;color:#344054;margin:12px 0;font-size:14px}
+    footer{margin-top:16px;font-size:13px;color:#98a2b3}
+    .error{color:#b42318;margin-top:8px}
+    .success{color:#027a48}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <h1>Complete your secure payment</h1>
+      <p class="sub">All major cards & wallets. PCI compliant. 3D Secure when required.</p>
+
+      <div class="row product">
+        <div>
+          <h2 id="prod-name">Loading product…</h2>
+          <div class="muted" id="prod-desc"></div>
+        </div>
+        <div class="price" id="prod-price">$0.00</div>
+      </div>
+
+      <div class="notice">
+        Use this link on any page. Route products with <code>?sku=...</code>. Add an optional promo in the box below.
+      </div>
+
+      <div class="row">
+        <label>Email for receipt</label>
+        <div id="link-authentication-element"></div>
+      </div>
+
+      <div class="row row-inline">
+        <div>
+          <label for="promo">Promo code (optional)</label>
+          <input id="promo" type="text" placeholder="ENTER CODE" autocomplete="off" />
+        </div>
+        <div id="promo-status" class="muted"></div>
+      </div>
+
+      <form id="payment-form">
+        <div id="payment-element"><!-- Stripe Payment Element --></div>
+        <div class="row"><button id="submit" class="primary">Pay now</button></div>
+        <div id="error-message" class="error"></div>
+      </form>
+
+      <footer>By confirming, you authorize BTH Education Group to charge your payment method.</footer>
+    </div>
+  </div>
+
+  <script src="https://js.stripe.com/v3/"></script>
+  <script>
+    // OPTIONAL: set your backend base at runtime if separate origin
+    // window.BTH_BACKEND = 'https://bth-stripe-backend.herokuapp.com';
+  </script>
+  <script type="module" src="assets/js/payment.js"></script>
+</body>
+</html>

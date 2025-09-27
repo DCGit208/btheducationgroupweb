@@ -1,0 +1,15 @@
+{
+  "technology": {
+    "title": "Information Technology",
+    "path": "/technology.html",
+    "cards": [
+      "Core IT Foundations & Networking",
+      "Cloud & Platforms",
+      "Cybersecurity & Privacy",
+      "Software Development & DevOps",
+      "IT Governance & Agile",
+      "Specialized Technical",
+      "Emerging Technologies"
+    ]
+  }
+}

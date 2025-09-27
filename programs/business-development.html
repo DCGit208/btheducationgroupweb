@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Development Professional Certification Pathways | Level 1-5 System | BTH Education Group</title>
+    <meta name="description" content="Advance your business development career with BTH's comprehensive certification pathways. Level 1-5 progression system across digital marketing, sales management, business strategy, and entrepreneurship.">
+    
+    <!-- Favicon and Open Graph Meta Tags -->
+    <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+    <meta property="og:title" content="Business Development Professional Certification Pathways | BTH Education Group">
+    <meta property="og:description" content="Advance your business development career with comprehensive certification pathways across digital marketing, sales management, business strategy, and entrepreneurship.">
+    <meta property="og:image" content="../assets/images/og-image.jpg">
+    <meta property="og:url" content="https://www.btheducationgroup.org/programs/business-development.html">
+    <meta property="og:type" content="website">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflari.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* Business Development-specific styling */
+        :root {
+            /* Business Development Brand Colors */
+            --business-primary: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            --business-secondary: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+            --business-accent: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            --business-marketing: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+            --business-sales: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+            
+            /* Level System Colors */
+            --level-1: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            --level-2: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+            --level-3: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            --level-4: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+            --level-5: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #374151;
+            background: linear-gradient(135deg, #fefbf4 0%, #fef3c7 100%);
+        }
+
+        /* Hero Section */
+        .hero-business {
+            background: var(--business-primary);
+            color: white;
+            padding: 120px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-business::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 25% 25%, rgba(245, 158, 11, 0.3) 0%, transparent 50%),
+                        radial-gradient(circle at 75% 75%, rgba(217, 119, 6, 0.3) 0%, transparent 50%);
+            opacity: 0.8;
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 24px;
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Level Display in Hero */
+        .level-display-hero {
+            background: rgba(255, 255, 255, 0.15);
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 20px 30px;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .level-badge {
+            background: rgba(255, 255, 255, 0.25);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .level-budget {
+            font-size: 1.1rem;
+            font-weight: 600;
+            opacity: 0.9;
+        }
+
+        /* Certification Categories */
+        .certification-categories {
+            padding: 80px 0;
+            background: #fffef6;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        .section-description {
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .category-card {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border-top: 4px solid;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .category-card:nth-child(1) { border-top-color: #8b5cf6; }
+        .category-card:nth-child(2) { border-top-color: #ef4444; }
+        .category-card:nth-child(3) { border-top-color: #3b82f6; }
+        .category-card:nth-child(4) { border-top-color: #10b981; }
+
+        .category-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+        }
+
+        .category-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .category-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--business-primary);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            font-size: 24px;
+            color: white;
+        }
+
+        .category-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin: 0;
+        }
+
+        .category-description {
+            font-size: 1rem;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .cert-count {
+            background: linear-gradient(135deg, #fef3c7, #fde68a);
+            color: #92400e;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        /* Level Integration Section */
+        .level-integration {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .level-display {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .current-level-info {
+            background: var(--business-primary);
+            color: white;
+            padding: 40px;
+            border-radius: 20px;
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .current-level-info::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 200px;
+            height: 200px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transform: translate(50%, -50%);
+        }
+
+        .level-info-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .level-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .level-description {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+
+        .level-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #fff;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            opacity: 0.8;
+            margin-top: 8px;
+        }
+
+        /* CTA Buttons */
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary-large {
+            background: var(--business-primary);
+            color: white;
+            padding: 18px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .btn-primary-large:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(245, 158, 11, 0.3);
+            color: white;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #f59e0b;
+            padding: 16px 30px;
+            border: 2px solid #f59e0b;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            background: #f59e0b;
+            color: white;
+        }
+
+        /* Final CTA Section */
+        .cta-section {
+            background: var(--business-primary);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .cta-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .cta-description {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .categories-grid {
+                grid-template-columns: 1fr;
+                padding: 0 15px;
+            }
+            
+            .level-stats {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .cta-title {
+                font-size: 2rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <a href="../index.html">
+                        <img src="../assets/images/bthlogo.png" alt="BTH Education Group" class="nav-logo">
+                    </a>
+                </div>
+                <div class="nav-menu">
+                    <a href="../index.html" class="nav-link">Home</a>
+                    <a href="../about.html" class="nav-link">About</a>
+                    <a href="../programs.html" class="nav-link active">Programs</a>
+                    <a href="../industry-solutions.html" class="nav-link">Industry Solutions</a>
+                    <a href="../contact.html" class="nav-link">Contact</a>
+                    <a href="../apply.html" class="nav-link btn-nav">Apply Now</a>
+                </div>
+                <div class="nav-hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-business">
+            <div class="hero-content">
+                <h1 class="hero-title">Business Development Professional Certification Pathways</h1>
+                <p class="hero-subtitle">Accelerate your business development career with comprehensive certification pathways across digital marketing, sales management, business strategy, and entrepreneurship. Build the skills that drive growth and success.</p>
+                
+                <!-- Level Integration Display -->
+                <div id="levelDisplay" class="level-display-hero">
+                    <div class="level-badge" id="currentLevelBadge">Level 1 Selected</div>
+                    <div class="level-budget" id="currentBudget">Budget: $13,902.66</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certification Categories -->
+        <section class="certification-categories">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Business Development Certification Categories</h2>
+                    <p class="section-description">Choose from four specialized business development tracks, each designed to advance your career in critical areas of business growth, marketing, sales, and strategic management.</p>
+                </div>
+                
+                <div class="categories-grid">
+                    <!-- Digital Marketing & Growth -->
+                    <div class="category-card" data-category="digital-marketing">
+                        <div class="category-header">
+                            <div class="category-icon">📈</div>
+                            <h3 class="category-title">Digital Marketing & Growth</h3>
+                        </div>
+                        <p class="category-description">Master digital marketing with certifications in SEO, PPC, social media marketing, content strategy, and marketing analytics from leading platforms.</p>
+                        <span class="cert-count">18+ Marketing Certifications</span>
+                    </div>
+                    
+                    <!-- Sales Management & Strategy -->
+                    <div class="category-card" data-category="sales-management">
+                        <div class="category-header">
+                            <div class="category-icon">🎯</div>
+                            <h3 class="category-title">Sales Management & Strategy</h3>
+                        </div>
+                        <p class="category-description">Excel in sales leadership with certifications in sales management, CRM systems, sales analytics, and strategic selling methodologies.</p>
+                        <span class="cert-count">14+ Sales Certifications</span>
+                    </div>
+                    
+                    <!-- Business Strategy & Operations -->
+                    <div class="category-card" data-category="business-strategy">
+                        <div class="category-header">
+                            <div class="category-icon">💼</div>
+                            <h3 class="category-title">Business Strategy & Operations</h3>
+                        </div>
+                        <p class="category-description">Lead strategic initiatives with certifications in business analysis, operations management, strategic planning, and change management.</p>
+                        <span class="cert-count">16+ Strategy Certifications</span>
+                    </div>
+                    
+                    <!-- Entrepreneurship & Innovation -->
+                    <div class="category-card" data-category="entrepreneurship">
+                        <div class="category-header">
+                            <div class="category-icon">🚀</div>
+                            <h3 class="category-title">Entrepreneurship & Innovation</h3>
+                        </div>
+                        <p class="category-description">Drive innovation with certifications in startup management, venture capital, product development, and innovation leadership.</p>
+                        <span class="cert-count">12+ Innovation Certifications</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Level Integration Section -->
+        <section class="level-integration">
+            <div class="level-display">
+                <div class="current-level-info" id="levelInfo">
+                    <div class="level-info-content">
+                        <div class="level-badge" id="levelBadge">Level 1</div>
+                        <h2 class="level-title" id="levelTitle">Foundation Business Development Professional</h2>
+                        <p class="level-description" id="levelDesc">Begin your business development career journey with essential certifications and fundamental skills in marketing, sales, and business strategy.</p>
+                        
+                        <div class="level-stats">
+                            <div class="stat-item">
+                                <span class="stat-number" id="maxCerts">3</span>
+                                <div class="stat-label">Maximum Certifications</div>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number" id="totalBudget">$13,902.66</span>
+                                <div class="stat-label">Total Investment</div>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">60+</span>
+                                <div class="stat-label">Available Certifications</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cta-buttons">
+                    <button class="btn-primary-large" onclick="selectCertifications()">Select Your Certifications</button>
+                    <a href="../hexad-mastery.html" class="btn-secondary">Return to HEXAD Assessment</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="cta-section">
+            <div class="cta-content">
+                <h2 class="cta-title">Ready to Drive Business Growth?</h2>
+                <p class="cta-description">Join thousands of business professionals who are accelerating their careers and driving organizational growth through BTH's comprehensive business development certification pathways.</p>
+                <a href="../apply.html" class="btn-primary-large">Start Your Business Journey</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-brand">
+                    <img src="../assets/images/bthlogo.png" alt="BTH Education Group" class="footer-logo">
+                    <p>Transforming careers through world-class education and certification programs.</p>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Programs</h3>
+                <ul>
+                    <li><a href="../programs.html">All Programs</a></li>
+                    <li><a href="technology.html">Technology</a></li>
+                    <li><a href="healthcare.html">Healthcare</a></li>
+                    <li><a href="cybersecurity.html">Cybersecurity</a></li>
+                    <li><a href="manufacturing.html">Manufacturing</a></li>
+                    <li><a href="renewable-energy.html">Renewable Energy</a></li>
+                    <li><a href="automotive.html">Automotive</a></li>
+                    <li><a href="business-development.html">Business Development</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="../about.html">About BTH</a></li>
+                    <li><a href="../contact.html">Contact Us</a></li>
+                    <li><a href="../industry-solutions.html">Industry Solutions</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="../program-catalog.html">Program Catalog</a></li>
+                    <li><a href="../roi-calculator.html">ROI Calculator</a></li>
+                    <li><a href="../career-assessment.html">Career Assessment</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 BTH Education Group. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Business Development Cross-Page Synchronization JavaScript -->
+    <script>
+        // Business Development Industry Data
+        const businessDevelopmentIndustryData = {
+            name: 'Business Development',
+            categories: [
+                {
+                    id: 'digital-marketing',
+                    name: 'Digital Marketing & Growth',
+                    description: 'Master digital marketing and growth strategies',
+                    certCount: 18,
+                    certifications: [
+                        'Google Ads Certification',
+                        'Google Analytics Individual Qualification',
+                        'Google Digital Marketing Certificate',
+                        'Facebook Blueprint Certification',
+                        'LinkedIn Marketing Solutions Certification',
+                        'HubSpot Content Marketing Certification',
+                        'HubSpot Inbound Marketing Certification',
+                        'HubSpot Email Marketing Certification',
+                        'Hootsuite Social Media Marketing Certification',
+                        'SEMrush SEO Toolkit Certification',
+                        'Moz SEO Essentials Certification',
+                        'Salesforce Marketing Cloud Consultant',
+                        'Adobe Certified Expert - Marketo Engage',
+                        'Mailchimp Certified Marketing Expert',
+                        'Amazon Advertising Certification',
+                        'Twitter Flight School Certification',
+                        'YouTube Creator Academy Certification',
+                        'Shopify Academy Marketing Certification'
+                    ]
+                },
+                {
+                    id: 'sales-management',
+                    name: 'Sales Management & Strategy',
+                    description: 'Excel in sales leadership and strategic selling',
+                    certCount: 14,
+                    certifications: [
+                        'Salesforce Certified Sales Cloud Consultant',
+                        'Salesforce Certified Administrator',
+                        'HubSpot Sales Software Certification',
+                        'LinkedIn Sales Navigator Certification',
+                        'Microsoft Dynamics 365 Sales Functional Consultant',
+                        'Sandler Sales Methodology Certification',
+                        'SPIN Selling Certification',
+                        'Challenger Sale Methodology Certification',
+                        'Dale Carnegie Sales Training Certification',
+                        'Miller Heiman Strategic Selling Certification',
+                        'MEDDIC Sales Methodology Certification',
+                        'Outreach Sales Engagement Certification',
+                        'Gong Revenue Intelligence Certification',
+                        'ZoomInfo Sales Intelligence Certification'
+                    ]
+                },
+                {
+                    id: 'business-strategy',
+                    name: 'Business Strategy & Operations',
+                    description: 'Lead strategic initiatives and business operations',
+                    certCount: 16,
+                    certifications: [
+                        'Certified Business Analysis Professional (CBAP)',
+                        'Project Management Professional (PMP)',
+                        'Certified Associate in Project Management (CAPM)',
+                        'Lean Six Sigma Green Belt',
+                        'Lean Six Sigma Black Belt',
+                        'Change Management Professional (CMP)',
+                        'Prosci Change Management Certification',
+                        'Strategic Planning Professional (SPP)',
+                        'Business Process Management Professional (BPMP)',
+                        'Certified Management Consultant (CMC)',
+                        'Certified Strategy and Competitive Intelligence Professional',
+                        'Agile Business Analysis (AgileBA)',
+                        'Microsoft Power Platform Business Analyst',
+                        'Tableau Desktop Specialist',
+                        'McKinsey Problem Solving Certificate',
+                        'BCG Strategy Certificate'
+                    ]
+                },
+                {
+                    id: 'entrepreneurship',
+                    name: 'Entrepreneurship & Innovation',
+                    description: 'Drive innovation and entrepreneurial ventures',
+                    certCount: 12,
+                    certifications: [
+                        'Stanford Entrepreneurship Certificate',
+                        'MIT Entrepreneurship Certificate',
+                        'Wharton Entrepreneurship Specialization',
+                        'Babson Entrepreneurship Certificate',
+                        'Google for Startups Certificate',
+                        'Y Combinator Startup School Certificate',
+                        'Venture Capital Certification (CVC)',
+                        'Angel Investor Certification',
+                        'Innovation Management Professional (IMP)',
+                        'Design Thinking Professional Certificate',
+                        'Lean Startup Methodology Certification',
+                        'Product Management Professional (PMP)'
+                    ]
+                }
+            ]
+        };
+
+        // Level Configuration (synchronized with HEXAD)
+        const levelConfig = {
+            1: {
+                name: 'Foundation Business Development Professional',
+                description: 'Begin your business development career journey with essential certifications and fundamental skills in marketing, sales, and business strategy.',
+                maxCertifications: 3,
+                budget: 13902.66,
+                badge: 'Level 1'
+            },
+            2: {
+                name: 'Intermediate Business Growth Specialist',
+                description: 'Expand your business development expertise with advanced certifications in digital marketing, sales management, and strategic operations.',
+                maxCertifications: 5,
+                budget: 20704.02,
+                badge: 'Level 2'
+            },
+            3: {
+                name: 'Advanced Business Development Professional',
+                description: 'Master complex business strategies with senior-level certifications in growth marketing, sales leadership, and strategic management.',
+                maxCertifications: 7,
+                budget: 27605.32,
+                badge: 'Level 3'
+            },
+            4: {
+                name: 'Business Development Expert & Leader',
+                description: 'Lead business development initiatives with expert-level certifications in advanced strategy, innovation, and entrepreneurship.',
+                maxCertifications: 9,
+                budget: 34506.68,
+                badge: 'Level 4'
+            },
+            5: {
+                name: 'Business Executive & Strategic Innovator',
+                description: 'Drive organizational transformation with comprehensive executive-level expertise and strategic business development leadership.',
+                maxCertifications: 12,
+                budget: 44272.98,
+                badge: 'Level 5'
+            }
+        };
+
+        // Business Development Cross-Page Synchronization Manager
+        class BusinessDevelopmentCrossPageSyncManager {
+            constructor() {
+                this.currentLevel = 1;
+                this.selectedCertifications = [];
+                this.industryData = businessDevelopmentIndustryData;
+                this.initializePage();
+            }
+
+            initializePage() {
+                // Get level from URL parameters or session storage
+                const urlParams = new URLSearchParams(window.location.search);
+                const levelFromUrl = urlParams.get('level');
+                const levelFromStorage = sessionStorage.getItem('hexad_selected_level');
+                
+                if (levelFromUrl) {
+                    this.currentLevel = parseInt(levelFromUrl);
+                } else if (levelFromStorage) {
+                    this.currentLevel = parseInt(levelFromStorage);
+                }
+                
+                // Update UI with current level
+                this.updateLevelDisplay();
+                
+                // Set up event listeners
+                this.setupEventListeners();
+            }
+
+            setupEventListeners() {
+                // Listen for level changes from HEXAD page
+                window.addEventListener('storage', (e) => {
+                    if (e.key === 'hexad_selected_level') {
+                        this.currentLevel = parseInt(e.newValue);
+                        this.updateLevelDisplay();
+                    }
+                });
+                
+                // Listen for postMessage from HEXAD page
+                window.addEventListener('message', (event) => {
+                    if (event.data.type === 'level_update' && event.data.level) {
+                        this.currentLevel = event.data.level;
+                        this.updateLevelDisplay();
+                    }
+                });
+            }
+
+            updateLevelDisplay() {
+                const config = levelConfig[this.currentLevel];
+                if (!config) return;
+
+                // Update hero section
+                const levelBadge = document.getElementById('currentLevelBadge');
+                const budgetDisplay = document.getElementById('currentBudget');
+                
+                if (levelBadge) {
+                    levelBadge.textContent = `${config.badge} Selected`;
+                }
+                
+                if (budgetDisplay) {
+                    budgetDisplay.textContent = `Budget: $${config.budget.toLocaleString()}`;
+                }
+
+                // Update level info section
+                const levelInfoBadge = document.getElementById('levelBadge');
+                const levelTitle = document.getElementById('levelTitle');
+                const levelDesc = document.getElementById('levelDesc');
+                const maxCerts = document.getElementById('maxCerts');
+                const totalBudget = document.getElementById('totalBudget');
+
+                if (levelInfoBadge) levelInfoBadge.textContent = config.badge;
+                if (levelTitle) levelTitle.textContent = config.name;
+                if (levelDesc) levelDesc.textContent = config.description;
+                if (maxCerts) maxCerts.textContent = config.maxCertifications;
+                if (totalBudget) totalBudget.textContent = `$${config.budget.toLocaleString()}`;
+            }
+
+            saveSelectionData() {
+                const selectionData = {
+                    industry: 'Business Development',
+                    level: this.currentLevel,
+                    selectedCertifications: this.selectedCertifications,
+                    timestamp: Date.now()
+                };
+                
+                sessionStorage.setItem('industry_selection_data', JSON.stringify(selectionData));
+                localStorage.setItem('last_industry_selection', JSON.stringify(selectionData));
+            }
+
+            returnToHexad() {
+                this.saveSelectionData();
+                
+                // Send completion message to parent window (if in iframe)
+                if (window.parent !== window) {
+                    window.parent.postMessage({
+                        type: 'industry_selection_complete',
+                        data: {
+                            industry: 'Business Development',
+                            level: this.currentLevel,
+                            certifications: this.selectedCertifications
+                        }
+                    }, '*');
+                }
+                
+                // Navigate back to HEXAD page
+                window.location.href = '../hexad-mastery.html';
+            }
+        }
+
+        // Initialize page synchronization
+        const businessDevelopmentSync = new BusinessDevelopmentCrossPageSyncManager();
+
+        // Global functions for UI interaction
+        function selectCertifications() {
+            alert(`Business Development Certification Selection\n\nLevel ${businessDevelopmentSync.currentLevel} allows up to ${levelConfig[businessDevelopmentSync.currentLevel].maxCertifications} certifications.\n\nBudget: $${levelConfig[businessDevelopmentSync.currentLevel].budget.toLocaleString()}\n\nTotal Available: 60+ Business Development Certifications\n\nCertification selection interface coming soon!`);
+        }
+
+        // Navigation and UI enhancements
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile navigation toggle
+            const hamburger = document.querySelector('.nav-hamburger');
+            const navMenu = document.querySelector('.nav-menu');
+            
+            if (hamburger && navMenu) {
+                hamburger.addEventListener('click', function() {
+                    navMenu.classList.toggle('active');
+                });
+            }
+            
+            // Category card interactions
+            const categoryCards = document.querySelectorAll('.category-card');
+            categoryCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    const category = this.dataset.category;
+                    console.log(`Selected business development category: ${category}`);
+                    // Future: Open category-specific certification selection
+                });
+            });
+        });
+    </script>
+</body>
+</html>

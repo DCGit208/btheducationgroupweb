@@ -1,0 +1,8 @@
+source "https://rubygems.org"
+
+# Keep the Ruby version flexible to avoid Bundler conflicts on macOS/Heroku.
+# (If you want to pin later: ruby "3.2.2")
+
+gem "sinatra"
+gem "sinatra-contrib"  # provides 'sinatra/json' and other helpers
+gem "stripe"

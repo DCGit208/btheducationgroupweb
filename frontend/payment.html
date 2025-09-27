@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Secure Checkout – BTH Education Group</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script src="https://js.stripe.com/v3/"></script>
+</head>
+<body>
+  <div class="checkout-container">
+    <div class="checkout-header">
+      <h1>Complete Your Enrollment</h1>
+      <p class="checkout-sub">Secure payment • All major cards & wallets • 3D Secure when required</p>
+    </div>
+
+    <div id="program-info" class="checkout-row">
+      <!-- Program name & price will load dynamically -->
+    </div>
+
+    <div class="notice checkout-row">
+      Use <code>?sku=...</code> to route any product here. (Example: <em>?sku=oedp-it-level1</em>)
+    </div>
+
+    <form id="payment-form" class="checkout-card">
+      <label class="checkout-label" for="email">Email for receipt</label>
+      <input type="email" id="email" class="checkout-input" placeholder="you@email.com" required>
+
+      <div class="checkout-inline checkout-row">
+        <div style="flex:1">
+          <label class="checkout-label" for="promo">Promo code (optional)</label>
+          <input id="promo" type="text" class="checkout-input" placeholder="ENTER CODE" autocomplete="off">
+        </div>
+      </div>
+
+      <div class="checkout-row">
+        <label class="checkout-label">Payment method</label>
+        <div id="payment-element"></div>
+      </div>
+
+      <button id="submit" class="btn btn-primary checkout-button">Pay</button>
+
+      <div id="error-message" class="error"></div>
+      <div id="payment-success" class="ok" style="display:none; margin-top:8px;">
+        ✅ Payment successful! A confirmation email has been sent.
+      </div>
+    </form>
+  </div>
+
+  <script>
+    // Local dev: 'http://localhost:5000'
+    // Staging:   'https://<your-heroku-app>.herokuapp.com'
+    window.BTH_BACKEND = window.BTH_BACKEND || "http://localhost:5000";
+  </script>
+  <script src="https://js.stripe.com/v3/"></script>
+  <script src="assets/js/payment.js"></script>
+</body>
+</html>

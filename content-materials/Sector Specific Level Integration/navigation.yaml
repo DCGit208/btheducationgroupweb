@@ -1,0 +1,80 @@
+- title: Information Technology
+  file: Sector1_Information_Technology.md
+  icon: 🖥️
+  description: Cloud, Cybersecurity, Networking, Software Development
+- title: Healthcare Technology
+  file: Sector2_Healthcare_Technology.md
+  icon: 🏥
+  description: Health IT, EHR Systems, Medical Devices, Telemedicine
+- title: Manufacturing & Industrial
+  file: Sector3_Manufacturing_Industrial.md
+  icon: 🏭
+  description: Automation, Quality Control, Lean Six Sigma, Welding
+- title: Automotive Technology
+  file: Sector4_Automotive_Technology.md
+  icon: 🚗
+  description: ICE, Electric Vehicles, Autonomous Systems, Collision Repair
+- title: Energy & Renewable Systems
+  file: Sector5_Energy_Renewable_Systems.md
+  icon: ⚡
+  description: Solar, Wind, Storage, Smart Grid, Energy Efficiency
+- title: Construction & Infrastructure
+  file: Sector6_Construction_Infrastructure.md
+  icon: 🏗️
+  description: General Construction, LEED, Electrical, Plumbing
+- title: Communications & Telecommunications
+  file: Sector7_Communications_Telecommunications.md
+  icon: 📡
+  description: 5G, Fiber Optics, Wireless Systems, Network Optimization
+- title: Creative Arts & Digital Design
+  file: Sector8_Creative_Arts_Digital_Design.md
+  icon: 🎨
+  description: Graphic Design, Digital Media, UX/UI, Adobe, Multimedia
+- title: Finance & Accounting
+  file: Sector9_Finance_Accounting.md
+  icon: 💰
+  description: FinTech, Banking, Risk, Investment, Accounting
+- title: Business & Management
+  file: Sector10_Business_Management.md
+  icon: 📊
+  description: Project Management, Business Analysis, Operations, Leadership
+- title: Environmental & Sustainability
+  file: Sector11_Environmental_Sustainability.md
+  icon: 🌍
+  description: ESG, Green Tech, ISO 14001, Sustainability Reporting
+- title: Public Safety & Emergency Services
+  file: Sector12_Public_Safety_Emergency_Services.md
+  icon: 🛡️
+  description: Emergency Management, Fire Safety, Security, Public Safety Tech
+- title: Aerospace & Defense
+  file: Sector13_Aerospace_Defense.md
+  icon: ✈️
+  description: Aerospace Systems, Avionics, Defense Cyber, Aviation Ops
+- title: Transportation & Logistics
+  file: Sector14_Transportation_Logistics.md
+  icon: 🚢
+  description: Supply Chain, Maritime, Aviation Logistics, Freight, Fleet
+- title: Research & Development
+  file: Sector15_Research_Development.md
+  icon: 🔬
+  description: Laboratory Technology, Clinical Research, Innovation, Data Science
+- title: EdTech
+  file: Sector16_EdTech.md
+  icon: 🎓
+  description: Educational Technology, Instructional Design, eLearning Systems
+- title: Biotech & Life Sciences
+  file: Sector17_Biotech_LifeSciences.md
+  icon: 🧬
+  description: Biomedical Equipment, Clinical Research, Biotechnology, Pharma
+- title: Web Development & Software Engineering
+  file: Sector18_Web_Development_Software_Engineering.md
+  icon: 🌐
+  description: Front-End, Back-End, Full-Stack, Cloud-Native, DevOps
+- title: Government & Civic Technology
+  file: Sector19_Government_Civic_Technology.md
+  icon: 🏛️
+  description: GovTech, Civic Platforms, Digital Identity, Public Sector IT
+- title: Agriculture Technology
+  file: Sector20_Agriculture_Technology.md
+  icon: 🌱
+  description: Smart Farming, IoT in Agriculture, Agri-Biotech, Food Supply Chain
