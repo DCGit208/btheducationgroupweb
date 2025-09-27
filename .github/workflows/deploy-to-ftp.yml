@@ -17,17 +17,6 @@ jobs:
         with:
           fetch-depth: 0 # Get full history for better sync
       
-      - name: Setup Node.js (if needed for build steps)
-        uses: actions/setup-node@v4
-        with:
-          node-version: '18'
-          cache: 'npm'
-        # Uncomment if you have a package.json and need to build
-        # - name: Install dependencies
-        #   run: npm ci
-        # - name: Build project
-        #   run: npm run build
-      
       - name: Deploy to FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
