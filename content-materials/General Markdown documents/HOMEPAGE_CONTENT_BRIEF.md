@@ -6,7 +6,16 @@
 **Primary Conversion Goals:** Assessment, program exploration, direct enrollment
 **Target Audience:** Global professionals, corporations, institutions seeking education solutions
 
----
+--- WHO WE ARE: BTH Education Group is a global education investment organization in Family Education, Professional Early Child Education, Occupational (Industry) Education & Development , Investment education and Education franchisees; We design-develop, build and manage the following programs and strong institutions (SDG 16) for community, regional, national and supra-national maturation; 
+
+- Professional Early Child Education Programs and Institutions (PECE)
+- Occupational-Industry Education and Development Programs, Centers-Institutions (OEDP)
+- Investor Education Programs, Investor Education Schools
+- International Corporation Development
+- International Social Administration Schools
+- Family Maturation Programs and Family Maturation Schools
+- PECE Education Franchises
+- OEDP Education Franchises
 
 ## Hero Section Design
 
