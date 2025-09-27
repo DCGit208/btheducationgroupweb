@@ -1,0 +1,23 @@
+name: Deploy Website via FTP
+
+on:
+  push:
+    branches:
+      - main # Change if using a different branch
+
+jobs:
+  ftp-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: FTP Deploy
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.3
+        with:
+          server: ${{ secrets.ftp.btheducationgroup.com }}
+          username: ${{ secrets.btheducationgrouporg }}
+          password: ${{ secrets.BTH$$$78@1111!!!%%%FF357q }}
+          port: ${{ secrets.FTP_PORT }} # Omit if using default port 21
+          local-dir: .
+            server-dir: /Revised/
