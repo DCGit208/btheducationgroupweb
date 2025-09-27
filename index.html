@@ -592,6 +592,30 @@
       font-size: 0.9rem;
     }
 
+    /* Improved Footer Styles */
+    .footer-bottom-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-badges {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      font-size: 0.9rem;
+    }
+
+    .footer-badge {
+      background: rgba(59, 130, 246, 0.1);
+      color: #3b82f6;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      font-weight: 500;
+    }
+
     /* Mobile Responsive */
     @media (max-width: 768px) {
       .hero-revolutionary {
@@ -653,6 +677,15 @@
       .program-card-revolutionary {
         padding: 2rem;
       }
+
+      .footer-bottom-content {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .footer-badges {
+        justify-content: center;
+      }
     }
   </style>
 </head>
@@ -665,8 +698,8 @@
 
       <div class="nav-links" id="navLinks">
         <a href="about.html">About</a>
-        <a href="programs.html">All Programs</a>
-        <a href="oedp.html">OEDP HEXAD</a>
+        <a href="programs.html">Programs</a>
+        <a href="oedp.html">OEDP</a>
         <a href="hexad-mastery.html">HEXAD Mastery</a>
         <a href="industry-solutions.html">Industries</a>
         <a href="partners.html">Partners</a>
@@ -704,7 +737,7 @@
       </h1>
 
       <p class="hero-subtitle-revolutionary">
-        Revolutionary OEDP HEXAD 6-dimensional training • Global partnerships with Microsoft, AWS, Cisco • Building strong institutions across 120+ countries • You'll find what you're looking for in education, training, coaching, and institutional development
+        Revolutionary OEDP HEXAD 6-dimensional training + AWIS • Global partnerships with Microsoft, AWS, Cisco • Building strong institutions across 120+ countries • You'll find what you're looking for in education, training, coaching, and institutional development
       </p>
 
       <div class="hero-stats-revolutionary">
@@ -1015,7 +1048,14 @@
     </div>
 
     <div class="footer-bottom">
-      <p>&copy; 2025 BTH Education Group. All rights reserved. | Global Education Investment Organization | Building Strong Institutions (SDG 16) | Education Must Be Directed (UDHR Article 26:2)</p>
+      <div class="footer-bottom-content">
+        <p>&copy; 2025 BTH Education Group. All rights reserved.</p>
+        <div class="footer-badges">
+          <span class="footer-badge">🏛️ Global Education Investment Organization</span>
+          <span class="footer-badge">🎯 Building Strong Institutions (SDG 16)</span>
+          <span class="footer-badge">📜 Education Must Be Directed (UDHR Article 26:2)</span>
+        </div>
+      </div>
     </div>
   </div>
 </footer>
