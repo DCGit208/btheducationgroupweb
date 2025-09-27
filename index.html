@@ -592,28 +592,150 @@
       font-size: 0.9rem;
     }
 
-    /* Improved Footer Styles */
-    .footer-bottom-content {
+    /* Professional Footer Styles - Inspired by Microsoft/AWS */
+    .site-footer {
+      background: #f8fafc;
+      border-top: 1px solid #e2e8f0;
+      padding: 4rem 0 2rem;
+    }
+
+    .footer-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .footer-main {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    .footer-brand {
+      max-width: 400px;
+    }
+
+    .footer-brand .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #1e293b;
+      text-decoration: none;
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    .footer-brand .logo span {
+      color: #3b82f6;
+    }
+
+    .footer-brand-description {
+      color: #64748b;
+      line-height: 1.6;
+      font-size: 0.95rem;
+    }
+
+    .footer-section h4 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #1e293b;
+      margin-bottom: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .footer-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-links li {
+      margin-bottom: 0.75rem;
+    }
+
+    .footer-links a {
+      color: #64748b;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+      display: block;
+      padding: 0.25rem 0;
+    }
+
+    .footer-links a:hover {
+      color: #3b82f6;
+      transform: translateX(3px);
+    }
+
+    .footer-divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #e2e8f0, transparent);
+      margin: 2rem 0;
+    }
+
+    .footer-bottom {
       display: flex;
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
-      gap: 1rem;
+      gap: 2rem;
+      padding-top: 2rem;
+      border-top: 1px solid #e2e8f0;
     }
 
-    .footer-badges {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
+    .footer-copyright {
+      color: #64748b;
       font-size: 0.9rem;
     }
 
-    .footer-badge {
-      background: rgba(59, 130, 246, 0.1);
-      color: #3b82f6;
-      padding: 0.3rem 0.8rem;
+    .footer-credentials {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .credential-badge {
+      background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+      color: white;
+      padding: 0.5rem 1rem;
       border-radius: 20px;
+      font-size: 0.8rem;
       font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      box-shadow: 0 2px 10px rgba(59, 130, 246, 0.2);
+      transition: all 0.3s ease;
+    }
+
+    .credential-badge:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 20px rgba(59, 130, 246, 0.3);
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .social-link {
+      width: 40px;
+      height: 40px;
+      background: #f1f5f9;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #64748b;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .social-link:hover {
+      background: #3b82f6;
+      color: white;
+      transform: translateY(-2px);
     }
 
     /* Mobile Responsive */
@@ -678,13 +800,38 @@
         padding: 2rem;
       }
 
-      .footer-bottom-content {
-        flex-direction: column;
+      /* Footer Mobile Responsive */
+      .footer-main {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .footer-brand {
+        max-width: 100%;
         text-align: center;
       }
 
-      .footer-badges {
+      .footer-section {
+        text-align: center;
+      }
+
+      .footer-links a:hover {
+        transform: none;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+      }
+
+      .footer-credentials {
         justify-content: center;
+      }
+
+      .credential-badge {
+        font-size: 0.7rem;
+        padding: 0.4rem 0.8rem;
       }
     }
   </style>
@@ -1007,13 +1154,34 @@
 </main>
 
 <footer class="site-footer">
-  <div class="container">
-    <div class="footer-grid">
+  <div class="footer-container">
+    <!-- Main Footer Grid -->
+    <div class="footer-main">
+      <!-- Brand Section -->
       <div class="footer-brand">
         <a href="index.html" class="logo">BTH<span>Education</span></a>
-        <p>Global Education Investment Organization specializing in Family Education, Professional Early Child Education, Occupational Education, Investment Education and Education Franchises. Building strong institutions (SDG 16) for supra-national development.</p>
+        <p class="footer-brand-description">
+          Global Education Investment Organization specializing in Family Education, Professional Early Child Education, Occupational Education, Investment Education and Education Franchises. Building strong institutions (SDG 16) for supra-national development.
+        </p>
+        
+        <!-- Social Links -->
+        <div class="footer-social">
+          <a href="#" class="social-link" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="#" class="social-link" aria-label="Twitter">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="mailto:info@btheducationgroup.org" class="social-link" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a href="#" class="social-link" aria-label="YouTube">
+            <i class="fab fa-youtube"></i>
+          </a>
+        </div>
       </div>
 
+      <!-- Core Programs -->
       <div class="footer-section">
         <h4>Core Programs</h4>
         <ul class="footer-links">
@@ -1022,9 +1190,12 @@
           <li><a href="programs.html">All Industry Programs</a></li>
           <li><a href="https://invest.btheducationgroup.org">Investment Education</a></li>
           <li><a href="#">PECE Family Education</a></li>
+          <li><a href="#">Family Maturation Programs</a></li>
+          <li><a href="#">Education Franchises</a></li>
         </ul>
       </div>
 
+      <!-- Industries -->
       <div class="footer-section">
         <h4>Industries</h4>
         <ul class="footer-links">
@@ -1032,29 +1203,54 @@
           <li><a href="programs.html#government">Government & Public</a></li>
           <li><a href="programs.html#healthcare">Healthcare & Medical</a></li>
           <li><a href="programs.html#manufacturing">Manufacturing</a></li>
+          <li><a href="programs.html#business">Business & Finance</a></li>
+          <li><a href="programs.html#energy">Energy & Utilities</a></li>
           <li><a href="programs.html">All 25+ Sectors</a></li>
         </ul>
       </div>
 
+      <!-- Resources -->
+      <div class="footer-section">
+        <h4>Resources</h4>
+        <ul class="footer-links">
+          <li><a href="/frontend/payment.html?sku=career-assessment">Free Career Assessment</a></li>
+          <li><a href="catalog.html">Program Catalog</a></li>
+          <li><a href="roi-calculator.html">ROI Calculator</a></li>
+          <li><a href="partners.html">Global Partners</a></li>
+          <li><a href="industry-solutions.html">Industry Solutions</a></li>
+          <li><a href="#">Success Stories</a></li>
+          <li><a href="#">Certification Pathways</a></li>
+        </ul>
+      </div>
+
+      <!-- Company -->
       <div class="footer-section">
         <h4>Company</h4>
         <ul class="footer-links">
           <li><a href="about.html">About BTH</a></li>
-          <li><a href="partners.html">Global Partners</a></li>
           <li><a href="contact.html">Contact Us</a></li>
           <li><a href="apply.html">Partnership Inquiry</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Press Releases</a></li>
+          <li><a href="#">Legal</a></li>
+          <li><a href="#">Privacy Policy</a></li>
         </ul>
       </div>
     </div>
 
+    <!-- Footer Divider -->
+    <div class="footer-divider"></div>
+
+    <!-- Footer Bottom -->
     <div class="footer-bottom">
-      <div class="footer-bottom-content">
+      <div class="footer-copyright">
         <p>&copy; 2025 BTH Education Group. All rights reserved.</p>
-        <div class="footer-badges">
-          <span class="footer-badge">🏛️ Global Education Investment Organization</span>
-          <span class="footer-badge">🎯 Building Strong Institutions (SDG 16)</span>
-          <span class="footer-badge">📜 Education Must Be Directed (UDHR Article 26:2)</span>
-        </div>
+      </div>
+      
+      <div class="footer-credentials">
+        <span class="credential-badge">🏛️ Global Education Investment</span>
+        <span class="credential-badge">🎯 SDG 16 Strong Institutions</span>
+        <span class="credential-badge">📜 UDHR Article 26:2</span>
       </div>
     </div>
   </div>
