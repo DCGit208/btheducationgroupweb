@@ -1,23 +1,57 @@
-name: Deploy Website via FTP
+name: Deploy Website to FTP
 
 on:
   push:
     branches:
-      - main # Change if using a different branch
+      - main
+  workflow_dispatch: # Allows manual triggering from GitHub UI
 
 jobs:
-  ftp-deploy:
+  deploy:
+    name: Deploy to FTP Server
     runs-on: ubuntu-latest
+    
     steps:
-      - name: Checkout code
+      - name: Checkout repository
         uses: actions/checkout@v4
-
-      - name: FTP Deploy
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.3
         with:
-          server: ${{ secrets.ftp.btheducationgroup.com }}
-          username: ${{ secrets.btheducationgrouporg }}
+          fetch-depth: 0 # Get full history for better sync
+      
+      - name: Setup Node.js (if needed for build steps)
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+        # Uncomment if you have a package.json and need to build
+        # - name: Install dependencies
+        #   run: npm ci
+        # - name: Build project
+        #   run: npm run build
+      
+      - name: Deploy to FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          port: ${{ secrets.FTP_PORT }} # Omit if using default port 21
-          local-dir: .
+          port: ${{ secrets.FTP_PORT }}
+          protocol: ftp
+          local-dir: ./
           server-dir: /Revised/
+          exclude: |
+            **/.git**
+            **/.github**
+            **/node_modules/**
+            **/.DS_Store
+            **/Thumbs.db
+            **/*.log
+            **/README.md
+            **/TESTING_*.md
+            **/ROLLBACK_*.md
+            **/backup*/**
+            **/COMPLETE_BACKUP/**
+            **/*backup*.html
+            **/*test*.js
+            **/*TEST*.js
+          dangerous-clean-slate: false
+          dry-run: false
