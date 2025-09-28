@@ -467,6 +467,7 @@
             padding: 28px 20px;
             border-radius: 12px;
             text-align: center;
+            -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.2);
         }
@@ -531,6 +532,7 @@
             padding: 24px 16px;
             border-radius: 12px;
             text-align: center;
+            -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.2);
         }
@@ -560,6 +562,7 @@
             padding: 20px 16px;
             border-radius: 10px;
             text-align: center;
+            -webkit-backdrop-filter: blur(5px);
             backdrop-filter: blur(5px);
             border: 1px solid rgba(255, 255, 255, 0.2);
         }
@@ -600,8 +603,8 @@
             padding: 18px 12px;
             border-radius: 10px;
             text-align: center;
-            backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.2);
         }
         
@@ -622,8 +625,8 @@
             background: rgba(255, 255, 255, 0.1);
             padding: 20px 16px;
             border-radius: 10px;
-            backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.2);
         }
         
@@ -658,8 +661,8 @@
             background: rgba(255, 255, 255, 0.1);
             padding: 18px 16px;
             border-radius: 10px;
-            backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.2);
         }
         
@@ -770,6 +773,7 @@
             font-size: 20px;
             font-weight: bold;
             transition: all 0.3s ease;
+            -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
         }
         
@@ -792,6 +796,7 @@
             justify-content: center;
             width: 36px;
             height: 36px;
+            -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
         }
         
@@ -1819,26 +1824,15 @@
         }
         
         .cta-content h3 {
-            font-size: 36px;
-            font-weight: 800;
-            margin-bottom: 20px;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            background: linear-gradient(135deg, #ffffff, #f0f9ff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 16px;
         }
         
         .cta-content p {
-            font-size: 19px;
+            font-size: 18px;
             margin-bottom: 32px;
-            color: #1e293b;
-            line-height: 1.6;
-            font-weight: 500;
-            background: white;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+            opacity: 0.9;
         }
         
         .cta-buttons {
@@ -1907,46 +1901,6 @@
             font-size: 14px;
             opacity: 0.8;
             text-transform: uppercase;
-        }
-
-        /* Horizontal Stats Layout */
-        .cta-stats-horizontal {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            gap: 30px;
-            margin-top: 30px;
-            padding: 25px;
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-        }
-
-        .cta-stats-horizontal .stat-item {
-            text-align: center;
-            flex: 1;
-            padding: 15px 10px;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        .cta-stats-horizontal .stat-number {
-            font-size: 36px;
-            font-weight: 800;
-            display: block;
-            margin-bottom: 8px;
-            color: #1e293b;
-            text-shadow: none;
-        }
-
-        .cta-stats-horizontal .stat-label {
-            font-size: 13px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            color: #64748b;
-            font-weight: 500;
         }
         
         /* Responsive Design */
@@ -2042,16 +1996,6 @@
             .cta-buttons {
                 flex-direction: column;
                 align-items: stretch;
-            }
-
-            .cta-stats-horizontal {
-                flex-direction: column;
-                gap: 20px;
-                padding: 20px;
-            }
-
-            .cta-stats-horizontal .stat-number {
-                font-size: 28px;
             }
         }
         
@@ -3115,6 +3059,7 @@
             background: rgba(255, 255, 255, 0.12);
             border-radius: 16px;
             padding: 32px 24px;
+            -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.2);
             transition: all 0.3s ease;
@@ -3533,301 +3478,6 @@
                 gap: 8px;
             }
         }
-
-        /* Featured Industries Section */
-        .featured-industries-section {
-            padding: 80px 0;
-            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-        }
-
-        .featured-industry-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-            margin-bottom: 60px;
-        }
-
-        /* Sector Card Styling - Matching program.html */
-        .sector-card {
-            background: white;
-            border: 1px solid #e2e8f0;
-            border-radius: 16px;
-            padding: 2rem;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-        }
-
-        .sector-card:hover {
-            transform: translateY(-5px);
-            border-color: #3b82f6;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
-        }
-
-        .sector-header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 1rem;
-        }
-
-        .sector-icon {
-            font-size: 2.5rem;
-            margin-right: 1rem;
-            width: 60px;
-            height: 60px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
-            border-radius: 12px;
-            color: white;
-        }
-
-        .sector-title {
-            font-size: 1.4rem;
-            color: #1e293b;
-            margin: 0 0 0.5rem 0;
-            font-weight: 600;
-        }
-
-        .sector-subtitle {
-            font-size: 0.9rem;
-            color: #64748b;
-            margin: 0;
-            font-weight: 400;
-        }
-
-        .sector-description {
-            color: #475569;
-            line-height: 1.6;
-            margin-bottom: 1.5rem;
-            font-size: 0.95rem;
-        }
-
-        .sector-cta {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: auto;
-        }
-
-        .explore-btn {
-            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
-            color: white;
-            padding: 0.75rem 1.5rem;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            border: none;
-        }
-
-        .explore-btn:hover {
-            background: linear-gradient(135deg, #1d4ed8 0%, #3b82f6 100%);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 16px rgba(59, 130, 246, 0.3);
-            color: white;
-            text-decoration: none;
-        }
-
-        .vendor-count {
-            color: #64748b;
-            font-size: 0.85rem;
-            font-weight: 500;
-            background: #f1f5f9;
-            padding: 0.4rem 0.8rem;
-            border-radius: 6px;
-        }
-
-        /* Industry CTA Section */
-        .industry-cta-section {
-            background: white;
-            border-radius: 20px;
-            padding: 50px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 40px;
-            align-items: center;
-            border: 1px solid rgba(226, 232, 240, 0.5);
-        }
-
-        /* FORCE HIGH CONTRAST TEXT - INDUSTRY CTA SECTION */
-        .industry-cta-section h3,
-        .industry-cta-section .cta-content h3 {
-            font-size: 32px !important;
-            font-weight: 800 !important;
-            color: #000000 !important;
-            margin-bottom: 16px !important;
-            line-height: 1.2 !important;
-            text-shadow: none !important;
-            opacity: 1 !important;
-        }
-
-        .industry-cta-section p,
-        .industry-cta-section .cta-content p {
-            font-size: 18px !important;
-            color: #333333 !important;
-            line-height: 1.6 !important;
-            margin-bottom: 32px !important;
-            opacity: 1 !important;
-            text-shadow: none !important;
-        }
-
-        .cta-content h3 {
-            font-size: 32px;
-            font-weight: 800;
-            color: #1e293b;
-            margin-bottom: 16px;
-            line-height: 1.2;
-        }
-
-        .cta-content p {
-            font-size: 18px;
-            color: #64748b;
-            line-height: 1.6;
-            margin-bottom: 32px;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 20px;
-            align-items: center;
-        }
-
-        .btn-primary-cta {
-            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
-            color: white;
-            padding: 16px 32px;
-            border-radius: 12px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 16px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 20px rgba(59, 130, 246, 0.3);
-        }
-
-        .btn-primary-cta:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 30px rgba(59, 130, 246, 0.4);
-            color: white;
-            text-decoration: none;
-        }
-
-        .btn-secondary-cta {
-            background: transparent;
-            color: #3b82f6;
-            padding: 16px 32px;
-            border: 2px solid #3b82f6;
-            border-radius: 12px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 16px;
-            transition: all 0.3s ease;
-        }
-
-        .btn-secondary-cta:hover {
-            background: #3b82f6;
-            color: white;
-            text-decoration: none;
-            transform: translateY(-2px);
-        }
-
-        .cta-stats {
-            display: flex;
-            flex-direction: column;
-            gap: 24px;
-        }
-
-        .stat-item {
-            text-align: center;
-            padding: 20px;
-            background: linear-gradient(135deg, #f8fafc, #e2e8f0);
-            border-radius: 16px;
-            border-left: 4px solid #3b82f6;
-        }
-
-        .stat-number {
-            display: block;
-            font-size: 32px;
-            font-weight: 800;
-            color: #1e293b;
-            margin-bottom: 8px;
-        }
-
-        .stat-label {
-            font-size: 14px;
-            color: #64748b;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        /* Responsive Design for Featured Industries */
-        @media (max-width: 768px) {
-            .featured-industries-section {
-                padding: 60px 0;
-            }
-
-            .featured-industry-grid {
-                grid-template-columns: 1fr;
-                gap: 24px;
-                margin-bottom: 40px;
-            }
-
-            .sector-card {
-                padding: 1.5rem;
-            }
-
-            .sector-icon {
-                width: 50px;
-                height: 50px;
-                font-size: 2rem;
-            }
-
-            .sector-title {
-                font-size: 1.2rem;
-            }
-
-            .industry-cta-section {
-                grid-template-columns: 1fr;
-                padding: 40px 30px;
-                gap: 30px;
-            }
-
-            .cta-content h3 {
-                font-size: 24px;
-            }
-
-            .cta-content p {
-                font-size: 16px;
-            }
-
-            .cta-buttons {
-                flex-direction: column;
-                width: 100%;
-            }
-
-            .btn-primary-cta,
-            .btn-secondary-cta {
-                width: 100%;
-                text-align: center;
-            }
-
-            .cta-stats {
-                flex-direction: row;
-                justify-content: space-around;
-            }
-
-            .stat-item {
-                flex: 1;
-                margin: 0 5px;
-            }
-
-            .stat-number {
-                font-size: 24px;
-            }
-        }
     </style>
 </head>
 <body>
@@ -3838,7 +3488,7 @@
                 <a href="index.html" class="logo">BTH Education</a>
                 <nav class="nav">
                     <a href="about.html">About</a>
-                    <a href="program.html">Programs</a>
+                    <a href="programs.html">Programs</a>
                     <a href="oedp.html" class="active">OEDP</a>
                     <a href="contact.html">Contact</a>
                 </nav>
@@ -5128,8 +4778,8 @@
             <!-- Call to Action -->
             <div class="methodology-cta">
                 <div class="cta-content">
-                    <h3>🚀 Transform Your Career with AWIS Technology</h3>
-                    <p>Advance your career with our Adaptive Workforce Intelligence System (AWIS) - a comprehensive framework that provides personalized certification pathways, skills assessment, and career development strategies tailored to your industry and goals.</p>
+                    <h3>Experience the Future of Workforce Development</h3>
+                    <p>Join the AWIS revolution and transform your career with personalized, intelligent, and outcome-focused learning experiences.</p>
                     <div class="cta-buttons">
                         <a href="/frontend/payment.html?sku=awis-corporate-program" class="btn-primary-methodology">
                             <span class="btn-icon">🚀</span>
@@ -5141,7 +4791,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="cta-stats-horizontal">
+                <div class="cta-stats">
                     <div class="stat-item">
                         <span class="stat-number">95%</span>
                         <span class="stat-label">Success Rate</span>
@@ -5159,91 +4809,1028 @@
         </div>
     </section>
 
-    <!-- REMOVED: HEXAD Methodology Section -->
-    <!-- Featured Industry Sectors -->
-    <section class="featured-industries-section" id="industries">
+
+
+
+    </section>
+
+    <!-- Filter Section -->
+    <section class="filter-section">
+        <div class="container">
+            <div class="filter-header">
+                <h2>Find Your Certification Path</h2>
+                    <button class="nav-tab active" data-level="level1">
+                        <span class="tab-icon">🌱</span>
+                        <span class="tab-label">Level 1</span>
+                        <span class="tab-sublabel">Foundation Pack</span>
+                    </button>
+                    <button class="nav-tab" data-level="level2">
+                        <span class="tab-icon">📈</span>
+                        <span class="tab-label">Level 2</span>
+                        <span class="tab-sublabel">Development Pack</span>
+                    </button>
+                    <button class="nav-tab" data-level="level3">
+                        <span class="tab-icon">⚡</span>
+                        <span class="tab-label">Level 3</span>
+                        <span class="tab-sublabel">Competency Pack</span>
+                    </button>
+                    <button class="nav-tab" data-level="level4">
+                        <span class="tab-icon">🚀</span>
+                        <span class="tab-label">Level 4</span>
+                        <span class="tab-sublabel">Advanced Pack</span>
+                    </button>
+                    <button class="nav-tab" data-level="level5">
+                        <span class="tab-icon">👑</span>
+                        <span class="tab-label">Level 5</span>
+                        <span class="tab-sublabel">Expert Pack</span>
+                    </button>
+                    <button class="nav-tab" data-level="journeyman">
+                        <span class="tab-icon">🏆</span>
+                        <span class="tab-label">Journeyman</span>
+                        <span class="tab-sublabel">Master Certification</span>
+                    </button>
+                </div>
+
+                <!-- Level Content Panels -->
+                <div class="dimension-content">
+                    <!-- Level 1 Foundation Pack -->
+                    <div class="dimension-panel active" id="level1-panel">
+                        <h3>Level 1 - Foundation Development Pack</h3>
+                        <div class="level-description">
+                            <p class="level-intro">Comprehensive Personal Development and Professional Development foundation across all six dimensions. Essential foundation for complete workforce transformation journey with industry-specific certifications.</p>
+                            <div class="level-stats">
+                                <div class="level-stat">
+                                    <span class="stat-number">7.5M FCFA</span>
+                                    <span class="stat-label">Complete Investment</span>
+                                </div>
+                                <div class="level-stat">
+                                    <span class="stat-number">1-2 years</span>
+                                    <span class="stat-label">Duration</span>
+                                </div>
+                                <div class="level-stat">
+                                    <span class="stat-number">500,000 FCFA</span>
+                                    <span class="stat-label">Per Dimension</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Personal Development Section -->
+                        <div class="development-section">
+                            <h4 class="section-title">
+                                <span class="section-icon">🧘‍♂️</span>Personal Development (3 Dimensions)
+                                <span class="section-price">2.25M FCFA</span>
+                            </h4>
+                            <div class="dimensions-grid">
+                                <div class="dimension-module personal">
+                                    <div class="module-header">
+                                        <span class="module-icon">🧠</span>
+                                        <h4>Cognitive Excellence Foundation</h4>
+                                        <span class="module-price">500,000 FCFA</span>
+                                    </div>
+                                    <div class="module-content">
+                                        <ul class="module-skills">
+                                            <li>✓ Critical Thinking Systems</li>
+                                            <li>✓ Problem-Solving Methodologies</li>
+                                            <li>✓ Information Processing Mastery</li>
+                                            <li>✓ Decision-Making Frameworks</li>
+                                            <li>✓ Mental Model Development</li>
+                                        </ul>
+                                        <div class="module-outcomes">
+                                            <span class="outcome">Foundation Certificate</span>
+                                            <span class="outcome">120-180 hours training</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="dimension-module personal">
+                                    <div class="module-header">
+                                        <span class="module-icon">❤️</span>
+                                        <h4>Emotional Intelligence Foundation</h4>
+                                        <span class="module-price">500,000 FCFA</span>
+                                    </div>
+                                    <div class="module-content">
+                                        <ul class="module-skills">
+                                            <li>✓ Self-Awareness Development</li>
+                                            <li>✓ Emotional Regulation Systems</li>
+                                            <li>✓ Empathy & Social Awareness</li>
+                                            <li>✓ Relationship Management</li>
+                                            <li>✓ Emotional Leadership Foundations</li>
+                                        </ul>
+                                        <div class="module-outcomes">
+                                            <span class="outcome">Foundation Certificate</span>
+                                            <span class="outcome">120-180 hours training</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="dimension-module personal">
+                                    <div class="module-header">
+                                        <span class="module-icon">🌟</span>
+                                        <h4>Spiritual & Character Foundation</h4>
+                                        <span class="module-price">500,000 FCFA</span>
+                                    </div>
+                                    <div class="module-content">
+                                        <ul class="module-skills">
+                                            <li>✓ Values-Based Decision Making</li>
+                                            <li>✓ Purpose & Meaning Development</li>
+                                            <li>✓ Ethical Leadership Frameworks</li>
+                                            <li>✓ Integrity & Character Building</li>
+                                            <li>✓ Inner Wisdom Cultivation</li>
+                                        </ul>
+                                        <div class="module-outcomes">
+                                            <span class="outcome">Foundation Certificate</span>
+                                            <span class="outcome">120-180 hours training</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Professional Development Section -->
+                        <div class="development-section">
+                            <h4 class="section-title">
+                                <span class="section-icon">💼</span>Professional Development (3 Dimensions)
+                                <span class="section-price">2.25M FCFA</span>
+                            </h4>
+                            <div class="dimensions-grid">
+                                <div class="dimension-module professional">
+                                    <div class="module-header">
+                                        <span class="module-icon">🤝</span>
+                                        <h4>Social & Communication Mastery</h4>
+                                        <span class="module-price">500,000 FCFA</span>
+                                    </div>
+                                    <div class="module-content">
+                                        <ul class="module-skills">
+                                            <li>✓ Advanced Communication Systems</li>
+                                            <li>✓ Leadership Presence Development</li>
+                                            <li>✓ Conflict Resolution Mastery</li>
+                                            <li>✓ Team Building & Collaboration</li>
+                                            <li>✓ Cross-Cultural Communication</li>
+                                        </ul>
+                                        <div class="module-outcomes">
+                                            <span class="outcome">Foundation Certificate</span>
+                                            <span class="outcome">120-180 hours training</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="dimension-module professional">
+                                    <div class="module-header">
+                                        <span class="module-icon">💪</span>
+                                        <h4>Physical & Performance Excellence</h4>
+                                        <span class="module-price">500,000 FCFA</span>
+                                    </div>
+                                    <div class="module-content">
+                                        <ul class="module-skills">
+                                            <li>✓ Executive Wellness Systems</li>
+                                            <li>✓ Stress Management Mastery</li>
+                                            <li>✓ Energy Optimization</li>
+                                            <li>✓ Performance Enhancement</li>
+                                            <li>✓ Resilience & Recovery</li>
+                                        </ul>
+                                        <div class="module-outcomes">
+                                            <span class="outcome">Foundation Certificate</span>
+                                            <span class="outcome">120-180 hours training</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="dimension-module professional">
+                                    <div class="module-header">
+                                        <span class="module-icon">�</span>
+                                        <h4>Financial & Strategic Foundation</h4>
+                                        <span class="module-price">500,000 FCFA</span>
+                                    </div>
+                                    <div class="module-content">
+                                        <ul class="module-skills">
+                                            <li>✓ Financial Literacy Mastery</li>
+                                            <li>✓ Strategic Planning Systems</li>
+                                            <li>✓ Resource Management</li>
+                                            <li>✓ Investment & Growth Strategies</li>
+                                            <li>✓ Wealth Building Foundations</li>
+                                        </ul>
+                                        <div class="module-outcomes">
+                                            <span class="outcome">Foundation Certificate</span>
+                                            <span class="outcome">120-180 hours training</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Industry-Specific Certification Pathways -->
+                        <div class="certification-pathways">
+                            <h4 class="pathways-title">
+                                <span class="pathways-icon">🏆</span>Industry-Specific Certification Pathways
+                                <span class="pathways-price">3M FCFA (Additional)</span>
+                            </h4>
+                            <div class="pathway-selector">
+                                <div class="pathway-tabs">
+                                    <button class="pathway-tab active" data-industry="technology">Technology</button>
+                                    <button class="pathway-tab" data-industry="healthcare">Healthcare</button>
+                                    <button class="pathway-tab" data-industry="finance">Finance</button>
+                                    <button class="pathway-tab" data-industry="manufacturing">Manufacturing</button>
+                                    <button class="pathway-tab" data-industry="education">Education</button>
+                                    <button class="pathway-tab" data-industry="consulting">Consulting</button>
+                                </div>
+                                
+                                <div class="pathway-content active" id="technology-pathway">
+                                    <div class="certification-grid">
+                                        <div class="cert-module">
+                                            <span class="cert-icon">💻</span>
+                                            <h5>CompTIA Certifications</h5>
+                                            <p>A+, Security+, Network+, Cloud+</p>
+                                        </div>
+                                        <div class="cert-module">
+                                            <span class="cert-icon">☁️</span>
+                                            <h5>Cloud Platforms</h5>
+                                            <p>AWS, Microsoft Azure, Google Cloud</p>
+                                        </div>
+                                        <div class="cert-module">
+                                            <span class="cert-icon">🛡️</span>
+                                            <h5>Cybersecurity</h5>
+                                            <p>CISSP, CEH, CISM, GCIH</p>
+                                        </div>
+                                        <div class="cert-module">
+                                            <span class="cert-icon">📊</span>
+                                            <h5>Data Science</h5>
+                                            <p>Python, R, Machine Learning, AI</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="pathway-content" id="healthcare-pathway">
+                                    <div class="certification-grid">
+                                        <div class="cert-module">
+                                            <span class="cert-icon">🏥</span>
+                                            <h5>Healthcare IT</h5>
+                                            <p>EPIC, Cerner, HL7, FHIR</p>
+                                        </div>
+                                        <div class="cert-module">
+                                            <span class="cert-icon">⚕️</span>
+                                            <h5>Medical Equipment</h5>
+                                            <p>Biomedical Engineering, ETA International</p>
+                                        </div>
+                                        <div class="cert-module">
+                                            <span class="cert-icon">📋</span>
+                                            <h5>Healthcare Management</h5>
+                                            <p>CHAM, CHFP, CPHIMS</p>
+                                        </div>
+                                        <div class="cert-module">
+                                            <span class="cert-icon">🔬</span>
+                                            <h5>Clinical Research</h5>
+                                            <p>GCP, CCRA, CCRP</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="level-cta">
+                            <div class="cta-content">
+                                <h4>Start Your Complete Transformation Journey</h4>
+                                <p>Begin with comprehensive Personal Development + Professional Development + Industry Certifications. Complete Level 1 across all six dimensions with your chosen industry specialization pathway.</p>
+                                <div class="cta-buttons">
+                                    <a href="/frontend/payment.html?sku=hexad-level1-complete" class="btn-primary-methodology">
+                                        <span class="btn-icon">🚀</span>
+                                        Complete Level 1 Package
+                                    </a>
+                                    <a href="/frontend/payment.html?sku=hexad-assessment" class="btn-secondary-methodology">
+                                        <span class="btn-icon">📊</span>
+                                        Industry Assessment First
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="cta-stats">
+                                <div class="stat-item">
+                                    <span class="stat-number">7.5M</span>
+                                    <span class="stat-label">FCFA Complete</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-number">1-2</span>
+                                    <span class="stat-label">Years Duration</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-number">6+</span>
+                                    <span class="stat-label">Certifications</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Level 2 Development Pack -->
+                    <div class="dimension-panel" id="level2-panel">
+                        <h3>Level 2 - Development Enhancement Pack</h3>
+                        <div class="level-description">
+                            <p class="level-intro">Advanced Personal Development and Professional Development with specialized industry applications. Deep competency building and mastery across all six dimensions with executive-level certification pathways.</p>
+                            <div class="level-stats">
+                                <div class="level-stat">
+                                    <span class="stat-number">15M FCFA</span>
+                                    <span class="stat-label">Complete Investment</span>
+                                </div>
+                                <div class="level-stat">
+                                    <span class="stat-number">2-3 years</span>
+                                    <span class="stat-label">Duration</span>
+                                </div>
+                                <div class="level-stat">
+                                    <span class="stat-number">Level 1 Required</span>
+                                    <span class="stat-label">Prerequisites</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="dimensions-grid">
+                            <div class="dimension-module enhanced">
+                                <div class="module-header">
+                                    <span class="module-icon">🧠</span>
+                                    <h4>Cognitive Excellence Development</h4>
+                                </div>
+                                <div class="module-content">
+                                    <ul class="module-skills">
+                                        <li>✓ Advanced Problem-Solving</li>
+                                        <li>✓ Systems Thinking</li>
+                                        <li>✓ Decision-Making Frameworks</li>
+                                        <li>✓ Knowledge Integration</li>
+                                        <li>✓ Creative Thinking Methods</li>
+                                    </ul>
+                                    <div class="module-outcomes">
+                                        <span class="outcome">Development Certificate</span>
+                                        <span class="outcome">16-20 hours training</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="dimension-module enhanced">
+                                <div class="module-header">
+                                    <span class="module-icon">💪</span>
+                                    <h4>Physical Vitality Development</h4>
+                                </div>
+                                <div class="module-content">
+                                    <ul class="module-skills">
+                                        <li>✓ Advanced Wellness Strategies</li>
+                                        <li>✓ Performance Optimization</li>
+                                        <li>✓ Stress Management Systems</li>
+                                        <li>✓ Energy Enhancement</li>
+                                        <li>✓ Recovery Protocols</li>
+                                    </ul>
+                                    <div class="module-outcomes">
+                                        <span class="outcome">Development Certificate</span>
+                                        <span class="outcome">16-20 hours training</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="dimension-module enhanced">
+                                <div class="module-header">
+                                    <span class="module-icon">❤️</span>
+                                    <h4>Emotional Intelligence Development</h4>
+                                </div>
+                                <div class="module-content">
+                                    <ul class="module-skills">
+                                        <li>✓ Emotional Regulation Mastery</li>
+                                        <li>✓ Advanced Empathy Skills</li>
+                                        <li>✓ Relationship Management</li>
+                                        <li>✓ Conflict Resolution</li>
+                                        <li>✓ Emotional Leadership</li>
+                                    </ul>
+                                    <div class="module-outcomes">
+                                        <span class="outcome">Development Certificate</span>
+                                        <span class="outcome">16-20 hours training</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="dimension-module enhanced">
+                                <div class="module-header">
+                                    <span class="module-icon">🤝</span>
+                                    <h4>Social Mastery Development</h4>
+                                </div>
+                                <div class="module-content">
+                                    <ul class="module-skills">
+                                        <li>✓ Advanced Communication</li>
+                                        <li>✓ Team Collaboration Excellence</li>
+                                        <li>✓ Leadership Presence</li>
+                                        <li>✓ Influence & Persuasion</li>
+                                        <li>✓ Cultural Intelligence</li>
+                                    </ul>
+                                    <div class="module-outcomes">
+                                        <span class="outcome">Development Certificate</span>
+                                        <span class="outcome">16-20 hours training</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="dimension-module enhanced">
+                                <div class="module-header">
+                                    <span class="module-icon">🎯</span>
+                                    <h4>Purpose & Values Development</h4>
+                                </div>
+                                <div class="module-content">
+                                    <ul class="module-skills">
+                                        <li>✓ Purpose Clarification</li>
+                                        <li>✓ Values-Based Decision Making</li>
+                                        <li>✓ Mission Development</li>
+                                        <li>✓ Ethical Leadership</li>
+                                        <li>✓ Legacy Planning</li>
+                                    </ul>
+                                    <div class="module-outcomes">
+                                        <span class="outcome">Development Certificate</span>
+                                        <span class="outcome">16-20 hours training</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="dimension-module enhanced">
+                                <div class="module-header">
+                                    <span class="module-icon">🌟</span>
+                                    <h4>Spiritual Growth Development</h4>
+                                </div>
+                                <div class="module-content">
+                                    <ul class="module-skills">
+                                        <li>✓ Advanced Self-Reflection</li>
+                                        <li>✓ Mindfulness Integration</li>
+                                        <li>✓ Inner Peace Cultivation</li>
+                                        <li>✓ Wisdom Development</li>
+                                        <li>✓ Transcendent Perspective</li>
+                                    </ul>
+                                    <div class="module-outcomes">
+                                        <span class="outcome">Development Certificate</span>
+                                        <span class="outcome">16-20 hours training</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="level-cta">
+                            <div class="cta-content">
+                                <h4>Advance Your Development</h4>
+                                <p>Build on your foundation with deeper skills and practical applications. Level 2 transforms basic awareness into functional competency.</p>
+                                <div class="cta-buttons">
+                                    <a href="/frontend/payment.html?sku=hexad-level2" class="btn-primary-methodology">
+                                        <span class="btn-icon">📈</span>
+                                        Enroll Level 2 Development Pack
+                                    </a>
+                                    <a href="/frontend/payment.html?sku=hexad-bundle-1-2" class="btn-secondary-methodology">
+                                        <span class="btn-icon">📦</span>
+                                        Bundle Level 1 + 2
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="cta-stats">
+                                <div class="stat-item">
+                                    <span class="stat-number">$2,400</span>
+                                    <span class="stat-label">USD Investment</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-number">3-4</span>
+                                    <span class="stat-label">Months Duration</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-number">Level 1</span>
+                                    <span class="stat-label">Prerequisite</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Compressed Level 3-5 and Journeyman for space -->
+                    <!-- Level 3 Competency Pack -->
+                    <div class="dimension-panel" id="level3-panel">
+                        <h3>Level 3 - Competency Mastery Pack</h3>
+                        <div class="level-description">
+                            <p class="level-intro">Advanced mastery across Personal Development and Professional Development with teaching capability and executive-level industry certifications. Ready to mentor others and lead organizational transformation.</p>
+                            <div class="level-stats">
+                                <div class="level-stat">
+                                    <span class="stat-number">25M FCFA</span>
+                                    <span class="stat-label">Complete Investment</span>
+                                </div>
+                                <div class="level-stat">
+                                    <span class="stat-number">3 years</span>
+                                    <span class="stat-label">Duration</span>
+                                </div>
+                                <div class="level-stat">
+                                    <span class="stat-number">Teaching Certified</span>
+                                    <span class="stat-label">Master Level</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="competency-overview">
+                            <h4>Comprehensive Competency Development</h4>
+                            <p>Master all six dimensions with teaching capability, mentorship skills, and consistent demonstration of advanced competencies.</p>
+                            
+                            <div class="competency-grid">
+                                <div class="competency-module">
+                                    <span class="competency-icon">🎓</span>
+                                    <h5>Teaching Certification</h5>
+                                    <p>Ability to teach and mentor others in all six dimensions</p>
+                                </div>
+                                <div class="competency-module">
+                                    <span class="competency-icon">💼</span>
+                                    <h5>Professional Application</h5>
+                                    <p>Real-world implementation and workplace integration</p>
+                                </div>
+                                <div class="competency-module">
+                                    <span class="competency-icon">🔄</span>
+                                    <h5>Continuous Improvement</h5>
+                                    <p>Self-directed development and skill refinement systems</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="level-cta">
+                            <div class="cta-content">
+                                <h4>Achieve Teaching Competency</h4>
+                                <p>Master all dimensions with certification to teach and mentor others. Level 3 graduates can lead development programs.</p>
+                                <div class="cta-buttons">
+                                    <a href="/frontend/payment.html?sku=hexad-level3" class="btn-primary-methodology">
+                                        <span class="btn-icon">⚡</span>
+                                        Enroll Level 3 Competency Pack
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="cta-stats">
+                                <div class="stat-item">
+                                    <span class="stat-number">25M</span>
+                                    <span class="stat-label">FCFA Complete</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-number">3</span>
+                                    <span class="stat-label">Years Duration</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-number">Teaching</span>
+                                    <span class="stat-label">Master Certified</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Level 4 Advanced Pack -->
+                    <div class="dimension-panel" id="level4-panel">
+                        <h3>Level 4 - Advanced Leadership Pack</h3>
+                        <div class="level-description">
+                            <p class="level-intro">Executive-level Personal Development and Professional Development with advanced leadership capabilities and industry expertise. Ready for C-suite roles and organizational transformation leadership.</p>
+                            <div class="level-stats">
+                                <div class="level-stat">
+                                    <span class="stat-number">40M FCFA</span>
+                                    <span class="stat-label">Complete Investment</span>
+                                </div>
+                                <div class="level-stat">
+                                    <span class="stat-number">4 years</span>
+                                    <span class="stat-label">Duration</span>
+                                </div>
+                                <div class="level-stat">
+                                    <span class="stat-number">Executive Certified</span>
+                                    <span class="stat-label">Leadership Level</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="leadership-overview">
+                            <h4>Advanced Leadership Development</h4>
+                            <p>Transform organizations and communities through advanced dimensional leadership and systematic mentoring capabilities.</p>
+                            
+                            <div class="leadership-modules">
+                                <div class="leadership-module">
+                                    <span class="module-icon">🏢</span>
+                                    <h5>Organizational Transformation</h5>
+                                    <p>Lead six-dimensional development initiatives across entire organizations</p>
+                                </div>
+                                <div class="leadership-module">
+                                    <span class="module-icon">👥</span>
+                                    <h5>Systematic Mentoring</h5>
+                                    <p>Develop and implement comprehensive mentorship programs</p>
+                                </div>
+                                <div class="leadership-module">
+                                    <span class="module-icon">🎯</span>
+                                    <h5>Strategic Integration</h5>
+                                    <p>Integrate all six dimensions into strategic planning and execution</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="level-cta">
+                            <div class="cta-content">
+                                <h4>Lead Organizational Transformation</h4>
+                                <p>Advanced leadership with organizational change capabilities. Level 4 graduates lead enterprise-wide development initiatives.</p>
+                                <div class="cta-buttons">
+                                    <a href="/frontend/payment.html?sku=hexad-level4" class="btn-primary-methodology">
+                                        <span class="btn-icon">🚀</span>
+                                        Enroll Level 4 Leadership Pack
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="cta-stats">
+                                <div class="stat-item">
+                                    <span class="stat-number">$5,400</span>
+                                    <span class="stat-label">USD Investment</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-number">6-8</span>
+                                    <span class="stat-label">Months Duration</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-number">Leadership</span>
+                                    <span class="stat-label">Certification</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Level 5 Expert Pack -->
+                    <div class="dimension-panel" id="level5-panel">
+                        <h3>Level 5 - Expert Innovation Pack</h3>
+                        <div class="level-description">
+                            <p class="level-intro">Master-level Personal Development and Professional Development with innovation capability across all industries. Prepare for ultimate Journeyman certification with breakthrough methodologies and global industry leadership.</p>
+                            <div class="level-stats">
+                                <div class="level-stat">
+                                    <span class="stat-number">65M FCFA</span>
+                                    <span class="stat-label">Complete Investment</span>
+                                </div>
+                                <div class="level-stat">
+                                    <span class="stat-number">4-5 years</span>
+                                    <span class="stat-label">Duration</span>
+                                </div>
+                                <div class="level-stat">
+                                    <span class="stat-number">Innovation Master</span>
+                                    <span class="stat-label">Expert Level</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="expert-overview">
+                            <h4>Innovation & Mastery Development</h4>
+                            <p>Create breakthrough applications and new methodologies. Prepare for ultimate Journeyman certification with innovation projects.</p>
+                            
+                            <div class="innovation-projects">
+                                <div class="project-module">
+                                    <span class="project-icon">💡</span>
+                                    <h5>Innovation Projects</h5>
+                                    <p>Develop new applications and breakthrough methodologies</p>
+                                </div>
+                                <div class="project-module">
+                                    <span class="project-icon">🔬</span>
+                                    <h5>Research Contribution</h5>
+                                    <p>Contribute to dimensional development research and knowledge base</p>
+                                </div>
+                                <div class="project-module">
+                                    <span class="project-icon">🏆</span>
+                                    <h5>Journeyman Preparation</h5>
+                                    <p>Complete preparation for ultimate master certification</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="level-cta">
+                            <div class="cta-content">
+                                <h4>Achieve Innovation Mastery</h4>
+                                <p>Expert-level innovation with breakthrough capability. Level 5 prepares you for the ultimate Journeyman certification.</p>
+                                <div class="cta-buttons">
+                                    <a href="/frontend/payment.html?sku=hexad-level5" class="btn-primary-methodology">
+                                        <span class="btn-icon">👑</span>
+                                        Enroll Level 5 Expert Pack
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="cta-stats">
+                                <div class="stat-item">
+                                    <span class="stat-number">$5,400</span>
+                                    <span class="stat-label">USD Investment</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-number">8-12</span>
+                                    <span class="stat-label">Months Duration</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-number">Innovation</span>
+                                    <span class="stat-label">Certification</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Journeyman Master Certification -->
+                    <div class="dimension-panel" id="journeyman-panel">
+                        <h3>Journeyman - Master Certification</h3>
+                        <div class="level-description">
+                            <p class="level-intro">Ultimate master certification representing complete maturation across all six dimensions. Lifetime achievement recognition.</p>
+                            <div class="level-stats">
+                                <div class="level-stat">
+                                    <span class="stat-number">Level 5 Required</span>
+                                    <span class="stat-label">Prerequisites</span>
+                                </div>
+                                <div class="level-stat">
+                                    <span class="stat-number">Lifetime</span>
+                                    <span class="stat-label">Achievement</span>
+                                </div>
+                                <div class="level-stat">
+                                    <span class="stat-number">Master</span>
+                                    <span class="stat-label">Recognition</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="journeyman-overview">
+                            <h4>Complete Six-Dimensional Mastery</h4>
+                            <p>The ultimate achievement in personal development - complete mastery and maturation across all six dimensions of human development.</p>
+                            
+                            <div class="mastery-dimensions">
+                                <div class="mastery-dimension">
+                                    <span class="mastery-icon">🧠</span>
+                                    <h5>Cognitive Mastery</h5>
+                                    <p>Complete intellectual excellence and innovation capability</p>
+                                </div>
+                                <div class="mastery-dimension">
+                                    <span class="mastery-icon">💪</span>
+                                    <h5>Physical Mastery</h5>
+                                    <p>Optimal vitality and performance in all physical dimensions</p>
+                                </div>
+                                <div class="mastery-dimension">
+                                    <span class="mastery-icon">❤️</span>
+                                    <h5>Emotional Mastery</h5>
+                                    <p>Complete emotional intelligence and relationship excellence</p>
+                                </div>
+                                <div class="mastery-dimension">
+                                    <span class="mastery-icon">🤝</span>
+                                    <h5>Social Mastery</h5>
+                                    <p>Leadership excellence and social transformation capability</p>
+                                </div>
+                                <div class="mastery-dimension">
+                                    <span class="mastery-icon">🎯</span>
+                                    <h5>Purpose Mastery</h5>
+                                    <p>Complete alignment of values, purpose, and meaningful action</p>
+                                </div>
+                                <div class="mastery-dimension">
+                                    <span class="mastery-icon">🌟</span>
+                                    <h5>Spiritual Mastery</h5>
+                                    <p>Transcendent wisdom and complete inner development</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="level-cta journeyman-cta">
+                            <div class="cta-content">
+                                <h4>The Ultimate Achievement</h4>
+                                <p>Journeyman certification represents the pinnacle of human development - complete mastery across all six dimensions.</p>
+                                <div class="cta-buttons">
+                                    <a href="/frontend/payment.html?sku=journeyman-application" class="btn-primary-methodology journeyman-btn">
+                                        <span class="btn-icon">🏆</span>
+                                        Apply for Journeyman Certification
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="cta-stats journeyman-stats">
+                                <div class="stat-item">
+                                    <span class="stat-number">$18,000</span>
+                                    <span class="stat-label">Total Investment</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-number">2-5 Years</span>
+                                    <span class="stat-label">Complete Journey</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-number">Lifetime</span>
+                                    <span class="stat-label">Achievement</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="filter-section">
+        <div class="container">
+            <div class="filter-header">
+                <h2>Find Your Certification Path</h2>
+                <p>Filter by industry, role, level, or search directly to discover your ideal certification pathway</p>
+            </div>
+            
+            <div class="filter-controls">
+                <div class="filter-group">
+                    <label for="industry-filter">Industry</label>
+                    <select class="filter-select" id="industry-filter" title="Select industry to filter certifications">
+                        <option>All Industries</option>
+                        <option>Information Technology</option>
+                        <option>Cybersecurity</option>
+                        <option>Healthcare</option>
+                        <option>Manufacturing</option>
+                        <option>Automotive</option>
+                        <option>Energy</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="role-filter">Career Role</label>
+                    <select class="filter-select" id="role-filter" title="Select career role to filter certifications">
+                        <option>All Roles</option>
+                        <option>Technician</option>
+                        <option>Administrator</option>
+                        <option>Engineer</option>
+                        <option>Analyst</option>
+                        <option>Manager</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="level-filter">Skill Level</label>
+                    <select class="filter-select" id="level-filter" title="Select skill level to filter certifications">
+                        <option>All Levels</option>
+                        <option>Foundation</option>
+                        <option>Associate</option>
+                        <option>Professional</option>
+                        <option>Expert</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="partner-filter">Certification Partner</label>
+                    <select class="filter-select" id="partner-filter" title="Select certification partner to filter programs">
+                        <option>All Partners</option>
+                        <option>CompTIA</option>
+                        <option>Microsoft</option>
+                        <option>Cisco</option>
+                        <option>AWS</option>
+                        <option>EC-Council</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="search-row">
+                <input type="text" class="search-input" id="certification-search" placeholder="Search certifications, providers, or exam codes..." aria-label="Search for certifications, providers, or exam codes">
+                <button type="button" class="cta-btn" onclick="findCertificationPath()">Find My Path</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industry Solutions -->
+    <section class="industry-section" id="industries">
         <div class="container">
             <div class="section-header">
-                <h2>Featured Industry Sectors</h2>
-                <p>Discover high-demand career pathways with world-class certification programs. Explore our featured sectors below, then visit our comprehensive program catalog for all available industries.</p>
+                <h2>Choose Your Industry Path</h2>
+                <p>Comprehensive workforce development across key industries with world-class certification programs from leading providers.</p>
             </div>
             
-            <div class="featured-industry-grid">
-                <!-- 1. Information Technology -->
-                <div class="sector-card">
-                    <div class="sector-header">
-                        <div class="sector-icon">�️</div>
-                        <div>
-                            <h3 class="sector-title">Information Technology</h3>
-                            <p class="sector-subtitle">Core Infrastructure & Development</p>
-                        </div>
+            <div class="industry-grid">
+                <!-- Information Technology -->
+                <div class="industry-card" data-industry="technology">
+                    <div class="card-image">
+                        <div class="card-icon">💻</div>
+                        <div class="cert-badge">50+ Certs</div>
                     </div>
-                    <p class="sector-description">Cloud, Cybersecurity, Networking, Software Development - Complete IT infrastructure foundation with comprehensive sub-domains covering all aspects of modern technology.</p>
-                    <div class="sector-cta">
-                        <a href="programs/technology.html" class="explore-btn">Explore IT Certifications</a>
-                        <span class="vendor-count">50+ Certifications</span>
+                    <div class="card-content">
+                        <h3 class="card-title">Information Technology</h3>
+                        <p class="card-description">Enterprise infrastructure, cloud architecture, and IT operations with comprehensive certification pathways from foundation to expert level.</p>
+                        <div class="cert-tags">
+                            <span class="cert-tag">CompTIA A+, Network+, Security+</span>
+                            <span class="cert-tag">Microsoft Azure</span>
+                            <span class="cert-tag">Cisco CCNA</span>
+                            <span class="cert-tag">VMware VCP</span>
+                        </div>
+                        <a href="programs/technology.html" class="card-link">Explore IT Certifications →</a>
                     </div>
                 </div>
 
-                <!-- 2. Healthcare Technology -->
-                <div class="sector-card">
-                    <div class="sector-header">
-                        <div class="sector-icon">🏥</div>
-                        <div>
-                            <h3 class="sector-title">Healthcare Technology</h3>
-                            <p class="sector-subtitle">Digital Health Systems</p>
-                        </div>
+                <!-- Cybersecurity -->
+                <div class="industry-card" data-industry="cybersecurity">
+                    <div class="card-image">
+                        <div class="card-icon">🔒</div>
+                        <div class="cert-badge">35+ Certs</div>
                     </div>
-                    <p class="sector-description">Health IT, EHR Systems, Medical Devices, Telemedicine - Transform healthcare delivery with comprehensive technology solutions and certification pathways.</p>
-                    <div class="sector-cta">
-                        <a href="programs/healthcare.html" class="explore-btn">Explore Healthcare Certifications</a>
-                        <span class="vendor-count">45+ Certifications</span>
+                    <div class="card-content">
+                        <h3 class="card-title">Cybersecurity & Information Security</h3>
+                        <p class="card-description">Advanced security operations, ethical hacking, and compliance with industry-leading certifications from premier security organizations.</p>
+                        <div class="cert-tags">
+                            <span class="cert-tag">CEH, CISSP, CISM</span>
+                            <span class="cert-tag">GIAC GSEC</span>
+                            <span class="cert-tag">Security+</span>
+                            <span class="cert-tag">Fortinet NSE</span>
+                        </div>
+                        <a href="programs/cybersecurity.html" class="card-link">Explore Security Certifications →</a>
                     </div>
                 </div>
 
-                <!-- 19. Government & Civic Technology -->
-                <div class="sector-card">
-                    <div class="sector-header">
-                        <div class="sector-icon">�️</div>
-                        <div>
-                            <h3 class="sector-title">Government & Civic Technology</h3>
-                            <p class="sector-subtitle">Public Sector Innovation</p>
+                <!-- Healthcare -->
+                <div class="industry-card" data-industry="healthcare">
+                    <div class="card-image">
+                        <div class="card-icon">🏥</div>
+                        <div class="cert-badge">15+ Certs</div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Healthcare Technology</h3>
+                        <p class="card-description">Medical device technology, health informatics, and biomedical equipment with AHIMA and specialized healthcare IT certifications.</p>
+                        <div class="cert-tags">
+                            <span class="cert-tag">AHIMA RHIA, RHIT</span>
+                            <span class="cert-tag">Biomedical Equipment</span>
+                            <span class="cert-tag">Healthcare IT</span>
                         </div>
-                    </div>
-                    <p class="sector-description">GovTech, Civic Platforms, Digital Identity, Public Sector IT - Government technology solutions and civic engagement platforms for digital transformation.</p>
-                    <div class="sector-cta">
-                        <a href="#govtech" class="explore-btn">Explore GovTech Certifications</a>
-                        <span class="vendor-count">25+ Certifications</span>
+                        <a href="programs/healthcare.html" class="card-link">Explore Healthcare Certifications →</a>
                     </div>
                 </div>
-            </div>
 
-            <!-- Strong CTA Section -->
-            <div style="background: white; padding: 50px; border-radius: 20px; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1); display: grid; grid-template-columns: 2fr 1fr; gap: 40px; align-items: center; border: 1px solid rgba(226, 232, 240, 0.5); margin-bottom: 60px;">
-                <div>
-                    <h3 style="color: #000000; font-weight: 900; font-size: 42px; margin-bottom: 20px; line-height: 1.2;">Ready to Explore All Industry Options?</h3>
-                    <p style="color: #444444; font-weight: 500; font-size: 20px; line-height: 1.6; margin-bottom: 32px;">Discover our complete catalog of certification programs across <strong style="color: #000000;">25+ industries</strong> including Manufacturing, Automotive, Renewable Energy, and more.</p>
-                    <div style="display: flex; gap: 20px; align-items: center;">
-                        <a href="program.html" style="background: linear-gradient(135deg, #3b82f6, #8b5cf6); color: white; padding: 16px 32px; border-radius: 12px; text-decoration: none; font-weight: 700; font-size: 16px; transition: all 0.3s ease; box-shadow: 0 4px 20px rgba(59, 130, 246, 0.3);">View All Programs & Industries →</a>
-                        <a href="career-assessment.html" style="background: transparent; color: #3b82f6; padding: 16px 32px; border: 2px solid #3b82f6; border-radius: 12px; text-decoration: none; font-weight: 600; font-size: 16px; transition: all 0.3s ease;">Take Career Assessment</a>
+                <!-- Manufacturing -->
+                <div class="industry-card" data-industry="manufacturing">
+                    <div class="card-image">
+                        <div class="card-icon">🏭</div>
+                        <div class="cert-badge">22+ Certs</div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Manufacturing & Industrial Systems</h3>
+                        <p class="card-description">Industry 4.0, lean manufacturing, and supply chain optimization with APICS and Six Sigma professional certifications.</p>
+                        <div class="cert-tags">
+                            <span class="cert-tag">APICS SCOR, CSCP</span>
+                            <span class="cert-tag">Six Sigma</span>
+                            <span class="cert-tag">Lean Manufacturing</span>
+                        </div>
+                        <a href="programs/manufacturing.html" class="card-link">Explore Manufacturing Certifications →</a>
                     </div>
                 </div>
-                <div class="cta-stats">
-                    <div class="stat-item">
-                        <span class="stat-number">200+</span>
-                        <span class="stat-label">Certifications</span>
+
+                <!-- Automotive -->
+                <div class="industry-card" data-industry="automotive">
+                    <div class="card-image">
+                        <div class="card-icon">🚗</div>
+                        <div class="cert-badge">18+ Certs</div>
                     </div>
-                    <div class="stat-item">
-                        <span class="stat-number">25+</span>
-                        <span class="stat-label">Industries</span>
+                    <div class="card-content">
+                        <h3 class="card-title">Automotive Technology</h3>
+                        <p class="card-description">Complete ASE certification pathway from engine repair to advanced diagnostics, including electric and hybrid vehicle technology.</p>
+                        <div class="cert-tags">
+                            <span class="cert-tag">ASE A1-A9 Master</span>
+                            <span class="cert-tag">Electric Vehicle</span>
+                            <span class="cert-tag">Hybrid Systems</span>
+                        </div>
+                        <a href="programs/automotive.html" class="card-link">Explore Automotive Certifications →</a>
                     </div>
-                    <div class="stat-item">
-                        <span class="stat-number">95%</span>
-                        <span class="stat-label">Success Rate</span>
+                </div>
+
+                <!-- Renewable Energy -->
+                <div class="industry-card" data-industry="energy">
+                    <div class="card-image">
+                        <div class="card-icon">🌱</div>
+                        <div class="cert-badge">12+ Certs</div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Renewable Energy</h3>
+                        <p class="card-description">Solar, wind, and sustainable technology systems with NABCEP and renewable energy professional certifications.</p>
+                        <div class="cert-tags">
+                            <span class="cert-tag">NABCEP Solar PV</span>
+                            <span class="cert-tag">Wind Technician</span>
+                            <span class="cert-tag">Energy Storage</span>
+                        </div>
+                        <a href="programs/renewable-energy.html" class="card-link">Explore Energy Certifications →</a>
                     </div>
                 </div>
             </div>
             
+            <!-- Additional Industries -->
+            <div class="additional-industries">
+                <div class="section-header">
+                    <h3>Additional Industry Specializations</h3>
+                </div>
+                <div class="additional-grid">
+                    <div class="additional-card">
+                        <span class="additional-icon">🏗️</span>
+                        <h4 class="additional-title">Construction & Engineering</h4>
+                        <p class="additional-desc">Building technology, project management, and construction systems</p>
+                        <a href="programs/construction.html" class="card-link">View Programs</a>
+                    </div>
+                    
+                    <div class="additional-card">
+                        <span class="additional-icon">📡</span>
+                        <h4 class="additional-title">Communications & 5G</h4>
+                        <p class="additional-desc">Telecommunications, fiber optics, and next-generation networks</p>
+                        <a href="programs/communications.html" class="card-link">View Programs</a>
+                    </div>
+                    
+                    <div class="additional-card">
+                        <span class="additional-icon">🏠</span>
+                        <h4 class="additional-title">Smart Home & IoT</h4>
+                        <p class="additional-desc">Connected devices, home automation, and IoT systems</p>
+                        <a href="programs/smart-home.html" class="card-link">View Programs</a>
+                    </div>
+                    
+                    <div class="additional-card">
+                        <span class="additional-icon">💼</span>
+                        <h4 class="additional-title">Business & Management</h4>
+                        <p class="additional-desc">Project management, business analysis, and leadership</p>
+                        <a href="programs/business.html" class="card-link">View Programs</a>
+                    </div>
+                </div>
+                
+                <div class="view-all-container">
+                    <a href="all-industries.html" class="view-all-btn">
+                        <span>View All Industries & Programs</span>
+                        <span class="btn-icon">→</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Pearson VUE Authorization -->
     <section class="pearson-section">
         <div class="container">

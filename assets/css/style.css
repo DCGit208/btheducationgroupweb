@@ -128,25 +128,99 @@ p {
 }
 
 /* ============================================ */
-/* LAYOUT SYSTEM */
+/* WORLD-CLASS LAYOUT SYSTEM */
 /* ============================================ */
 
+/* Base container - optimized for readability and modern displays */
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-
-.container-wide {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 clamp(1rem, 4vw, 3rem);
+  width: 100%;
 }
 
-.container-narrow {
-  max-width: 800px;
+/* Extra wide container for hero sections and full-width content */
+.container-wide {
+  max-width: 1600px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 clamp(1rem, 3vw, 2.5rem);
+  width: 100%;
+}
+
+/* Content container - perfect for text-heavy sections */
+.container-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 clamp(1rem, 4vw, 3rem);
+  width: 100%;
+}
+
+/* Narrow container - only for specific use cases like forms */
+.container-narrow {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 clamp(1rem, 5vw, 3rem);
+  width: 100%;
+}
+
+/* ============================================ */
+/* PROFESSIONAL GRID SYSTEMS */
+/* ============================================ */
+
+/* Responsive grid for cards and content blocks */
+.grid-auto {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+  width: 100%;
+}
+
+/* 2-column grid for desktop, 1-column for mobile */
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(2rem, 4vw, 3rem);
+  width: 100%;
+}
+
+/* 3-column grid with responsive breakpoints */
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+  width: 100%;
+}
+
+/* 4-column grid for statistics and info cards */
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(1rem, 2.5vw, 2rem);
+  width: 100%;
+}
+
+/* Responsive breakpoints for grid systems */
+@media (max-width: 1024px) {
+  .grid-4 { grid-template-columns: repeat(2, 1fr); }
+  .grid-3 { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .grid-4,
+  .grid-3,
+  .grid-2 { 
+    grid-template-columns: 1fr;
+    gap: clamp(1rem, 2vw, 1.5rem);
+  }
+}
+
+/* Content spacing utilities */
+.content-spacing {
+  padding: clamp(2rem, 5vw, 4rem) 0;
+}
+
+.content-spacing-large {
+  padding: clamp(4rem, 8vw, 8rem) 0;
 }
 
 .section {
@@ -1509,6 +1583,7 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -1819,6 +1894,7 @@ p {
   background: rgba(255, 255, 255, 0.1);
   padding: var(--space-lg);
   border-radius: var(--radius-md);
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
 }

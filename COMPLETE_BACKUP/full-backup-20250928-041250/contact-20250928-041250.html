@@ -36,13 +36,7 @@
         --text-primary: #0f172a;
         --text-secondary: #64748b;
         --white: #ffffff;
-        
-        /* WORLD-CLASS SPACING SYSTEM */
-        --section-padding: clamp(4rem, 8vw, 8rem) 0;
-        --content-spacing: clamp(2rem, 5vw, 4rem);
-        --grid-gap: clamp(1.5rem, 3vw, 2.5rem);
-        
-        /* PROFESSIONAL DESIGN SYSTEM */
+        --section-padding: 8rem 0;
         --border-radius: 20px;
         --card-radius: 24px;
         --button-radius: 12px;
@@ -544,7 +538,6 @@
 /* Enhanced Navigation Styles */
 .site-header {
     background: rgba(255, 255, 255, 0.95);
-    -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
     border-bottom: 1px solid rgba(59, 130, 246, 0.1);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
@@ -690,16 +683,14 @@
 .contact-hero .container {
     position: relative;
     z-index: 3;
-    padding: 0 clamp(1rem, 3vw, 2.5rem);
 }
 
 .hero-content {
     text-align: center;
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
     position: relative;
     z-index: 2;
-    padding: 0 clamp(1rem, 2vw, 2rem);
 }
 
 .breadcrumb {
@@ -795,14 +786,13 @@
 .contact-stats {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: var(--grid-gap);
-    margin-top: var(--content-spacing);
-    max-width: 1400px;
+    gap: 2.5rem;
+    margin-top: 5rem;
+    max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
     position: relative;
     z-index: 2;
-    padding: 0 clamp(1rem, 2vw, 2rem);
 }
 
 .stat-item {
@@ -921,11 +911,6 @@
     background: var(--light-color);
 }
 
-.contact-departments .container {
-    max-width: 1400px;
-    padding: 0 clamp(1rem, 3vw, 2.5rem);
-}
-
 .section-header {
     text-align: center;
     margin-bottom: 4rem;
@@ -948,10 +933,8 @@
 
 .departments-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-    gap: var(--grid-gap);
-    max-width: 1400px;
-    margin: 0 auto;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
 }
 
 .department-card {
@@ -1078,9 +1061,8 @@
 }
 
 .form-container {
-    max-width: min(900px, 90vw);
+    max-width: 800px;
     margin: 0 auto;
-    padding: 0 clamp(1rem, 4vw, 3rem);
 }
 
 .form-header {
@@ -1110,13 +1092,13 @@
 
 .form-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: clamp(1rem, 2.5vw, 2rem);
-    margin-bottom: clamp(1rem, 2.5vw, 2rem);
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
 }
 
 .form-group {
-    margin-bottom: clamp(1rem, 2.5vw, 1.5rem);
+    margin-bottom: 1.5rem;
 }
 
 .form-group label {
@@ -1263,7 +1245,6 @@
         left: 0;
         width: 100%;
         background: rgba(255, 255, 255, 0.98);
-        -webkit-backdrop-filter: blur(20px);
         backdrop-filter: blur(20px);
         flex-direction: column;
         padding: 2rem 1.5rem;
@@ -1382,12 +1363,10 @@
 
 .contact-info-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: var(--grid-gap);
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.5rem;
     position: relative;
     z-index: 2;
-    max-width: 1400px;
-    margin: 0 auto;
 }
 
 .info-card {
