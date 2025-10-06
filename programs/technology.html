@@ -49,50 +49,213 @@
             overflow-x: hidden;
         }
 
-        /* Navigation Override */
-        .navbar {
-            background: rgba(255, 255, 255, 0.95);
-            -webkit-backdrop-filter: blur(10px);
-            backdrop-filter: blur(10px);
-            padding: 1rem 0;
-            position: sticky;
+        /* TECH NAVIGATION */
+        .tech-navbar {
+            position: fixed;
             top: 0;
+            left: 0;
+            right: 0;
             z-index: 1000;
+            background: rgba(15, 23, 42, 0.95);
+            -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 2rem;
-        }
-        
-        .nav-logo img {
-            height: 40px;
-            width: auto;
-        }
-        
-        .nav-menu {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-        
-        .nav-link {
-            color: #374151;
-            text-decoration: none;
-            font-weight: 500;
             transition: all 0.3s ease;
         }
-        
-        .nav-link:hover,
-        .nav-link.active {
-            color: #2563eb;
+
+        .tech-navbar.scrolled {
+            background: rgba(15, 23, 42, 0.98);
+            border-bottom: 1px solid rgba(102, 126, 234, 0.2);
+        }
+
+        .tech-nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 80px;
+        }
+
+        .tech-nav-logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 700;
+            transition: all 0.3s ease;
+        }
+
+        .tech-nav-logo:hover {
+            color: #4facfe;
+            transform: scale(1.05);
+        }
+
+        .tech-nav-logo .logo-icon {
+            width: 40px;
+            height: 40px;
+            margin-right: 1rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: white;
+        }
+
+        .tech-nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+        }
+
+        .tech-nav-link {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            padding: 0.75rem 0;
+            position: relative;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .tech-nav-link::before {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            transition: width 0.3s ease;
+        }
+
+        .tech-nav-link:hover,
+        .tech-nav-link.active {
+            color: white;
+        }
+
+        .tech-nav-link:hover::before,
+        .tech-nav-link.active::before {
+            width: 100%;
+        }
+
+        .tech-nav-cta {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tech-nav-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.6s;
+        }
+
+        .tech-nav-cta:hover::before {
+            left: 100%;
+        }
+
+        .tech-nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .tech-nav-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 0.5rem;
+        }
+
+        .tech-nav-toggle span {
+            width: 25px;
+            height: 3px;
+            background: white;
+            margin: 3px 0;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .tech-nav-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .tech-nav-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .tech-nav-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -6px);
+        }
+
+        @media (max-width: 968px) {
+            .tech-nav-container {
+                padding: 0 1rem;
+            }
+
+            .tech-nav-menu {
+                position: fixed;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background: rgba(15, 23, 42, 0.98);
+                -webkit-backdrop-filter: blur(20px);
+                backdrop-filter: blur(20px);
+                flex-direction: column;
+                justify-content: flex-start;
+                padding-top: 2rem;
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+                gap: 0;
+            }
+
+            .tech-nav-menu.active {
+                transform: translateX(0);
+            }
+
+            .tech-nav-link {
+                padding: 1rem 2rem;
+                width: 100%;
+                text-align: center;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                font-size: 1.1rem;
+            }
+
+            .tech-nav-cta {
+                margin: 2rem 2rem 0;
+                text-align: center;
+                padding: 1rem 2rem;
+            }
+
+            .tech-nav-toggle {
+                display: flex;
+            }
         }
 
         /* FLAGSHIP IT HERO SECTION */
@@ -1007,21 +1170,30 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <a href="../index.html">
-                    <img src="../assets/images/bthlogo.png" alt="BTH Education Group" />
-                </a>
+    <!-- TECH NAVIGATION -->
+    <nav class="tech-navbar" id="techNavbar">
+        <div class="tech-nav-container">
+            <a href="../index.html" class="tech-nav-logo">
+                <div class="logo-icon">
+                    <i class="fas fa-microchip"></i>
+                </div>
+                BTH Education Group
+            </a>
+            
+            <div class="tech-nav-menu" id="techNavMenu">
+                <a href="../index.html" class="tech-nav-link">Home</a>
+                <a href="../program.html" class="tech-nav-link active">Programs</a>
+                <a href="../about.html" class="tech-nav-link">About</a>
+                <a href="../contact.html" class="tech-nav-link">Contact</a>
+                <a href="../apply.html" class="tech-nav-link">Apply</a>
+                <a href="../hexad-mastery.html" class="tech-nav-cta">HEXAD Framework</a>
             </div>
-            <ul class="nav-menu">
-                <li><a href="../index.html" class="nav-link">Home</a></li>
-                <li><a href="../about.html" class="nav-link">About</a></li>
-                <li><a href="../program.html" class="nav-link">Programs</a></li>
-                <li><a href="../oedp.html" class="nav-link">OEDP</a></li>
-                <li><a href="../hexad-mastery.html" class="nav-link">Professional Development</a></li>
-                <li><a href="../contact.html" class="nav-link">Contact</a></li>
-            </ul>
+            
+            <button class="tech-nav-toggle" id="techNavToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
 
@@ -1839,6 +2011,29 @@
             // Initialize both systems
             window.itLevelSystem = new ITLevelSystem();
             window.itCrossPageSync = new ITCrossPageSyncManager();
+            
+            // Mobile menu toggle
+            const techNavToggle = document.getElementById('techNavToggle');
+            const techNavMenu = document.getElementById('techNavMenu');
+            
+            if (techNavToggle && techNavMenu) {
+                techNavToggle.addEventListener('click', function() {
+                    techNavToggle.classList.toggle('active');
+                    techNavMenu.classList.toggle('active');
+                });
+            }
+            
+            // Navbar scroll effect
+            const techNavbar = document.getElementById('techNavbar');
+            if (techNavbar) {
+                window.addEventListener('scroll', function() {
+                    if (window.scrollY > 50) {
+                        techNavbar.classList.add('scrolled');
+                    } else {
+                        techNavbar.classList.remove('scrolled');
+                    }
+                });
+            }
         });
 
         // Close modal on outside click
