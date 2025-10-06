@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Functionality Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .test-result { margin: 10px 0; padding: 10px; border-radius: 5px; }
+        .pass { background-color: #d4edda; color: #155724; }
+        .fail { background-color: #f8d7da; color: #721c24; }
+        .info { background-color: #d1ecf1; color: #0c5460; }
+    </style>
+</head>
+<body>
+    <h1>IT Technology Page JavaScript Testing</h1>
+    <div id="testResults"></div>
+
+    <script src="assets/js/it-sector-data.js"></script>
+    <script src="assets/js/it-filter-manager.js"></script>
+    <script>
+        const results = [];
+        
+        function addResult(test, result, details = '') {
+            results.push({ test, result, details });
+            console.log(`${test}: ${result ? 'PASS' : 'FAIL'} ${details}`);
+        }
+
+        function runTests() {
+            // Test 1: ITSectorData exists and has expected structure
+            addResult(
+                'ITSectorData object exists',
+                typeof ITSectorData !== 'undefined',
+                typeof ITSectorData
+            );
+
+            // Test 2: Categories exist
+            addResult(
+                'ITSectorData has categories',
+                ITSectorData.categories && Object.keys(ITSectorData.categories).length > 0,
+                `Found ${ITSectorData.categories ? Object.keys(ITSectorData.categories).length : 0} categories`
+            );
+
+            // Test 3: Certifications exist
+            addResult(
+                'ITSectorData has certifications',
+                ITSectorData.certifications && ITSectorData.certifications.length > 0,
+                `Found ${ITSectorData.certifications ? ITSectorData.certifications.length : 0} certifications`
+            );
+
+            // Test 4: Level structure is correct
+            const levelCounts = {};
+            if (ITSectorData.certifications) {
+                ITSectorData.certifications.forEach(cert => {
+                    levelCounts[cert.level] = (levelCounts[cert.level] || 0) + 1;
+                });
+            }
+            
+            addResult(
+                'Level 1 has 3 certifications',
+                levelCounts['Level 1'] === 3,
+                `Level 1 has ${levelCounts['Level 1'] || 0} certifications`
+            );
+            
+            addResult(
+                'Level 2 has 4 certifications',
+                levelCounts['Level 2'] === 4,
+                `Level 2 has ${levelCounts['Level 2'] || 0} certifications`
+            );
+            
+            addResult(
+                'Level 3 has 5 certifications',
+                levelCounts['Level 3'] === 5,
+                `Level 3 has ${levelCounts['Level 3'] || 0} certifications`
+            );
+            
+            addResult(
+                'Level 4 has 6 certifications',
+                levelCounts['Level 4'] === 6,
+                `Level 4 has ${levelCounts['Level 4'] || 0} certifications`
+            );
+            
+            addResult(
+                'Level 5 has 7-10 certifications',
+                levelCounts['Level 5'] >= 7 && levelCounts['Level 5'] <= 10,
+                `Level 5 has ${levelCounts['Level 5'] || 0} certifications`
+            );
+
+            // Test 5: ITFilterManager class exists
+            addResult(
+                'ITFilterManager class exists',
+                typeof ITFilterManager !== 'undefined',
+                typeof ITFilterManager
+            );
+
+            // Test 6: Create a mock DOM element to test if ITFilterManager can initialize
+            const mockCategoryGrid = document.createElement('div');
+            mockCategoryGrid.id = 'categoryGrid';
+            document.body.appendChild(mockCategoryGrid);
+            
+            try {
+                const filterManager = new ITFilterManager();
+                addResult(
+                    'ITFilterManager can be instantiated',
+                    filterManager instanceof ITFilterManager,
+                    'Successfully created instance'
+                );
+            } catch (error) {
+                addResult(
+                    'ITFilterManager can be instantiated',
+                    false,
+                    `Error: ${error.message}`
+                );
+            }
+
+            // Test 7: Bundle pricing exists
+            addResult(
+                'Bundle pricing data exists',
+                ITSectorData.bundlePricing && Object.keys(ITSectorData.bundlePricing).length > 0,
+                `Found ${ITSectorData.bundlePricing ? Object.keys(ITSectorData.bundlePricing).length : 0} bundle pricing tiers`
+            );
+
+            // Display results
+            displayResults();
+        }
+
+        function displayResults() {
+            const container = document.getElementById('testResults');
+            container.innerHTML = results.map(result => `
+                <div class="test-result ${result.result ? 'pass' : 'fail'}">
+                    <strong>${result.test}:</strong> ${result.result ? 'PASS' : 'FAIL'}
+                    ${result.details ? `<br><em>${result.details}</em>` : ''}
+                </div>
+            `).join('');
+
+            const passCount = results.filter(r => r.result).length;
+            const totalCount = results.length;
+            
+            container.innerHTML += `
+                <div class="test-result info">
+                    <strong>Summary:</strong> ${passCount}/${totalCount} tests passed (${Math.round(passCount/totalCount*100)}%)
+                </div>
+            `;
+        }
+
+        // Run tests when page loads
+        document.addEventListener('DOMContentLoaded', runTests);
+    </script>
+</body>
+</html>

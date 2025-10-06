@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BTH Filtering Systems - Interactive Demo</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .demo-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        .demo-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .demo-header h1 {
+            color: #1e293b;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        .demo-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 30px;
+            margin: 40px 0;
+        }
+        .system-card {
+            border: 2px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 30px;
+            background: #f8fafc;
+            transition: all 0.3s ease;
+        }
+        .system-card:hover {
+            border-color: #3b82f6;
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.15);
+        }
+        .system-card h3 {
+            color: #1e293b;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        .system-stats {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+            border-left: 4px solid #3b82f6;
+        }
+        .test-button {
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            width: 100%;
+            margin: 10px 0;
+            transition: all 0.3s ease;
+        }
+        .test-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+        }
+        .test-result {
+            margin: 15px 0;
+            padding: 15px;
+            border-radius: 8px;
+            font-weight: 500;
+        }
+        .success {
+            background: #d1fae5;
+            color: #065f46;
+            border: 1px solid #a7f3d0;
+        }
+        .error {
+            background: #fee2e2;
+            color: #991b1b;
+            border: 1px solid #fca5a5;
+        }
+        .warning {
+            background: #fef3c7;
+            color: #92400e;
+            border: 1px solid #fde68a;
+        }
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+        .feature-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        .live-demo {
+            background: #1e293b;
+            color: white;
+            padding: 30px;
+            border-radius: 16px;
+            margin: 40px 0;
+        }
+        .live-demo h3 {
+            color: #f1f5f9;
+            margin-bottom: 20px;
+        }
+        .demo-controls {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+        .demo-input {
+            padding: 10px 15px;
+            border: 1px solid #475569;
+            border-radius: 8px;
+            background: #334155;
+            color: white;
+            flex: 1;
+            min-width: 200px;
+        }
+        .demo-output {
+            background: #0f172a;
+            border: 1px solid #475569;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            font-family: 'Courier New', monospace;
+            color: #e2e8f0;
+            min-height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="demo-container">
+        <div class="demo-header">
+            <h1>🚀 BTH Advanced Filtering Systems</h1>
+            <p style="font-size: 1.2rem; color: #64748b;">Interactive functionality test and demonstration</p>
+        </div>
+
+        <!-- System Overview -->
+        <div class="demo-grid">
+            <div class="system-card">
+                <h3>🖥️ Technology System</h3>
+                <div class="system-stats">
+                    <strong>Categories:</strong> 7<br>
+                    <strong>Vendors:</strong> 53+<br>
+                    <strong>Features:</strong> Advanced filtering
+                </div>
+                <ul class="feature-list">
+                    <li>✅ Multi-tier filtering</li>
+                    <li>✅ Cross-category vendors</li>
+                    <li>✅ Domain pathways</li>
+                    <li>✅ Real-time search</li>
+                </ul>
+                <button class="test-button" onclick="testSystem('technology')">Test Technology System</button>
+                <div id="tech-result"></div>
+            </div>
+
+            <div class="system-card">
+                <h3>🏥 Healthcare System</h3>
+                <div class="system-stats">
+                    <strong>Categories:</strong> 7<br>
+                    <strong>Vendors:</strong> 57+<br>
+                    <strong>Features:</strong> Advanced filtering
+                </div>
+                <ul class="feature-list">
+                    <li>✅ Clinical specializations</li>
+                    <li>✅ EHR vendor integration</li>
+                    <li>✅ Compliance pathways</li>
+                    <li>✅ Level progression</li>
+                </ul>
+                <button class="test-button" onclick="testSystem('healthcare')">Test Healthcare System</button>
+                <div id="healthcare-result"></div>
+            </div>
+
+            <div class="system-card">
+                <h3>🏭 Manufacturing System</h3>
+                <div class="system-stats">
+                    <strong>Categories:</strong> 7<br>
+                    <strong>Vendors:</strong> 56+<br>
+                    <strong>Features:</strong> Advanced filtering
+                </div>
+                <ul class="feature-list">
+                    <li>✅ Quality control focus</li>
+                    <li>✅ Automation vendors</li>
+                    <li>✅ Safety compliance</li>
+                    <li>✅ Industry 4.0 ready</li>
+                </ul>
+                <button class="test-button" onclick="testSystem('manufacturing')">Test Manufacturing System</button>
+                <div id="manufacturing-result"></div>
+            </div>
+        </div>
+
+        <!-- Live Functionality Demo -->
+        <div class="live-demo">
+            <h3>🧪 Live Functionality Test</h3>
+            <p>Test specific features of the filtering systems:</p>
+            
+            <div class="demo-controls">
+                <input type="text" id="searchTest" placeholder="Search for vendors (e.g., Microsoft, Epic, Siemens)" class="demo-input">
+                <select id="categoryTest" class="demo-input">
+                    <option value="">Select Category</option>
+                    <option value="cloud">Cloud Platforms</option>
+                    <option value="cybersecurity">Cybersecurity</option>
+                    <option value="clinical">Clinical Excellence</option>
+                    <option value="automation">Industrial Automation</option>
+                </select>
+                <button class="test-button" onclick="runLiveTest()" style="width: auto; padding: 10px 20px;">Run Test</button>
+            </div>
+            
+            <div id="liveTestOutput" class="demo-output">
+                Ready to test... Enter search terms or select categories above.
+            </div>
+        </div>
+
+        <!-- Manual Testing Instructions -->
+        <div style="background: #f1f5f9; padding: 30px; border-radius: 16px; margin: 40px 0;">
+            <h3 style="color: #1e293b;">📋 Manual Testing Instructions</h3>
+            <p><strong>To verify the systems work manually, try these steps:</strong></p>
+            
+            <div class="demo-grid">
+                <div>
+                    <h4>1. Technology System Test</h4>
+                    <ol>
+                        <li>Navigate to <code>programs/technology.html</code></li>
+                        <li>Look for the "Advanced IT Certification Filtering" section</li>
+                        <li>Click between Categories/Vendors/Domains tabs</li>
+                        <li>Use the search box to filter certifications</li>
+                        <li>Select different partnership levels</li>
+                    </ol>
+                </div>
+                
+                <div>
+                    <h4>2. Healthcare System Test</h4>
+                    <ol>
+                        <li>Navigate to <code>programs/healthcare.html</code></li>
+                        <li>Look for the "Advanced Healthcare Certification Filtering" section</li>
+                        <li>Test filtering by clinical specializations</li>
+                        <li>Search for EHR vendors (Epic, Cerner)</li>
+                        <li>Test level progression system</li>
+                    </ol>
+                </div>
+                
+                <div>
+                    <h4>3. Manufacturing System Test</h4>
+                    <ol>
+                        <li>Navigate to <code>programs/manufacturing.html</code></li>
+                        <li>Look for the "Advanced Manufacturing Certification Filtering" section</li>
+                        <li>Filter by quality control vendors</li>
+                        <li>Search for automation companies (Siemens, ABB)</li>
+                        <li>Test domain expertise pathways</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Navigation -->
+        <div style="text-align: center; margin: 40px 0;">
+            <h3>🔗 Quick Navigation to Test Live Systems</h3>
+            <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                <a href="programs/technology.html" target="_blank" class="test-button" style="text-decoration: none; display: inline-block;">Open Technology System</a>
+                <a href="programs/healthcare.html" target="_blank" class="test-button" style="text-decoration: none; display: inline-block;">Open Healthcare System</a>
+                <a href="programs/manufacturing.html" target="_blank" class="test-button" style="text-decoration: none; display: inline-block;">Open Manufacturing System</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        async function testSystem(systemType) {
+            const resultDiv = document.getElementById(`${systemType}-result`);
+            resultDiv.innerHTML = '<div class="warning">Testing system...</div>';
+            
+            try {
+                const response = await fetch(`programs/${systemType}.html`);
+                const html = await response.text();
+                
+                // Test for key components
+                const tests = {
+                    'Advanced Class': html.includes(`${systemType.charAt(0).toUpperCase() + systemType.slice(1)}AdvancedFilteringSystemComplete`),
+                    'Filter Tabs': html.includes('filter-tab'),
+                    'Search Input': html.includes('advancedSearch'),
+                    'Vendor Filtering': html.includes('vendorFilterContainer'),
+                    'Domain Pathways': html.includes('domainFilterContainer'),
+                    'Level Integration': html.includes('levelPricing'),
+                    'Cross-Page Sync': html.includes('sessionStorage')
+                };
+                
+                const passedTests = Object.values(tests).filter(Boolean).length;
+                const totalTests = Object.keys(tests).length;
+                const percentage = Math.round((passedTests / totalTests) * 100);
+                
+                let resultClass = 'success';
+                if (percentage < 70) resultClass = 'error';
+                else if (percentage < 90) resultClass = 'warning';
+                
+                resultDiv.innerHTML = `
+                    <div class="${resultClass}">
+                        <strong>${percentage}% Functional</strong><br>
+                        ${passedTests}/${totalTests} tests passed<br>
+                        <small>Status: ${percentage === 100 ? 'Fully Operational' : percentage >= 90 ? 'Nearly Complete' : percentage >= 70 ? 'Partially Working' : 'Needs Attention'}</small>
+                    </div>
+                `;
+                
+            } catch (error) {
+                resultDiv.innerHTML = `<div class="error">Failed to load system: ${error.message}</div>`;
+            }
+        }
+        
+        async function runLiveTest() {
+            const searchTerm = document.getElementById('searchTest').value;
+            const category = document.getElementById('categoryTest').value;
+            const output = document.getElementById('liveTestOutput');
+            
+            output.innerHTML = 'Running live test...\n\n';
+            
+            try {
+                // Test all three systems
+                const systems = ['technology', 'healthcare', 'manufacturing'];
+                const results = [];
+                
+                for (const system of systems) {
+                    const response = await fetch(`programs/${system}.html`);
+                    const html = await response.text();
+                    
+                    let found = [];
+                    
+                    if (searchTerm) {
+                        const searchRegex = new RegExp(searchTerm, 'gi');
+                        const matches = html.match(searchRegex);
+                        if (matches) {
+                            found.push(`"${searchTerm}" appears ${matches.length} times`);
+                        }
+                    }
+                    
+                    if (category) {
+                        if (html.toLowerCase().includes(category.toLowerCase())) {
+                            found.push(`Category "${category}" found`);
+                        }
+                    }
+                    
+                    results.push({
+                        system: system.charAt(0).toUpperCase() + system.slice(1),
+                        found: found.length > 0 ? found : ['No matches found']
+                    });
+                }
+                
+                let outputText = `LIVE TEST RESULTS:\n${'='.repeat(40)}\n\n`;
+                
+                results.forEach(result => {
+                    outputText += `${result.system} System:\n`;
+                    result.found.forEach(item => {
+                        outputText += `  • ${item}\n`;
+                    });
+                    outputText += '\n';
+                });
+                
+                outputText += `\nTest completed at ${new Date().toLocaleTimeString()}`;
+                
+                output.innerHTML = outputText;
+                
+            } catch (error) {
+                output.innerHTML = `ERROR: ${error.message}`;
+            }
+        }
+        
+        // Auto-run tests when page loads
+        window.addEventListener('load', () => {
+            console.log('🚀 Interactive demo loaded. Click buttons to test systems!');
+        });
+    </script>
+</body>
+</html>

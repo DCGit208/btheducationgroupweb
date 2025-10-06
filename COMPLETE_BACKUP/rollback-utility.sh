@@ -2,8 +2,8 @@
 # SEAMLESS ROLLBACK UTILITY
 # BTH Website Redesign Project
 
-BACKUP_ROOT="/Users/achugustave/Desktop/BTH Website Redesign/btheducationgroupweb/COMPLETE_BACKUP"
-PROJECT_ROOT="/Users/achugustave/Desktop/BTH Website Redesign/btheducationgroupweb"
+BACKUP_ROOT="/Users/achugustave/btheducationgroupweb/COMPLETE_BACKUP"
+PROJECT_ROOT="/Users/achugustave/btheducationgroupweb"
 GUARDRAIL_FILE="$PROJECT_ROOT/PROJECT_ROLLBACK_GUARDRAIL.md"
 
 # Function: Automatic rollback to specific step

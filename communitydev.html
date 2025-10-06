@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Development Trade School Programs | BTH Education Group</title>
+    <meta name="description" content="Comprehensive trade school programmes that empower African communities with practical skills across agriculture, energy, health, construction, digital literacy, entrepreneurship and more. Connect via Starlink and learn anywhere.">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pP5tyXcVmfoMTYsA7OzsxFrTGk+LlM/6E5Vd2hRSBhP9rHLtRz5LQ7uMlMJEaoYvs/ltXecN90W9Kltpzfj8qg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Optional external stylesheet if present in the project -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <style>
+        /* Base resets and smooth animations */
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            background-color: #f7f8fa;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+        h1, h2, h3 {
+            margin: 0;
+        }
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* Advanced Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 0.8;
+            }
+            50% {
+                transform: scale(1.05);
+                opacity: 1;
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes shimmer {
+            0% {
+                background-position: -200% 0;
+            }
+            100% {
+                background-position: 200% 0;
+            }
+        }
+        /* World-Class Animated Hero Section */
+        header {
+            background: 
+                linear-gradient(135deg, rgba(184, 134, 11, 0.75), rgba(217, 119, 6, 0.65)),
+                url('assets/images/hero_communitydev.jpg') center/cover no-repeat;
+            background-attachment: fixed;
+            color: white;
+            padding: 80px 20px 100px;
+            text-align: center;
+            position: relative;
+            min-height: 75vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(251, 191, 36, 0.1), rgba(245, 158, 11, 0.05));
+            z-index: 1;
+        }
+        
+        /* Floating animation elements */
+        .hero-floating-elements {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 2;
+        }
+        
+        .floating-icon {
+            position: absolute;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 24px;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .floating-icon:nth-child(1) {
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+        
+        .floating-icon:nth-child(2) {
+            top: 30%;
+            right: 15%;
+            animation-delay: 2s;
+        }
+        
+        .floating-icon:nth-child(3) {
+            bottom: 25%;
+            left: 20%;
+            animation-delay: 4s;
+        }
+        
+        .floating-icon:nth-child(4) {
+            bottom: 30%;
+            right: 10%;
+            animation-delay: 1s;
+        }
+        header > * {
+            position: relative;
+            z-index: 2;
+        }
+        .hero-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .hero-title {
+            font-size: 3.2rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            color: #FFFFFF;
+            text-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+            animation: fadeInUp 1.2s ease-out;
+        }
+        .hero-subtitle {
+            font-size: 1.8rem;
+            font-weight: 500;
+            margin-bottom: 24px;
+            color: #FEF3C7;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+            animation: fadeInUp 1.4s ease-out;
+        }
+        .hero-description {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            color: #FFFBEB;
+            text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+            animation: fadeInUp 1.6s ease-out;
+        }
+        .hero-tagline {
+            font-size: 1.1rem;
+            font-style: italic;
+            color: #FEF9C3;
+            margin-top: 16px;
+            text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+            animation: fadeInUp 1.8s ease-out;
+        }
+        
+        /* Statistics Section */
+        .stats-section {
+            background: linear-gradient(145deg, #f8fafc, #e2e8f0);
+            padding: 60px 20px;
+            margin: 0;
+        }
+        
+        .stats-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            text-align: center;
+        }
+        
+        .stat-item {
+            background: white;
+            padding: 30px 20px;
+            border-radius: 16px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+        }
+        
+        .stat-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: #f59e0b;
+            margin-bottom: 8px;
+            text-shadow: 0 2px 4px rgba(245, 158, 11, 0.2);
+        }
+        
+        .stat-label {
+            font-size: 1rem;
+            color: #64748b;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        /* Card grid */
+        .section {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .section h2 {
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+        }
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background: linear-gradient(145deg, #ffffff, #f8fafc);
+            border-radius: 16px;
+            padding: 28px;
+            box-shadow: 
+                0 4px 20px rgba(0, 0, 0, 0.08),
+                0 1px 3px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(226, 232, 240, 0.5);
+            backdrop-filter: blur(10px);
+        }
+        
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #f59e0b, transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .card:hover::before {
+            left: 100%;
+        }
+        
+        .card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 
+                0 20px 40px rgba(0, 0, 0, 0.15),
+                0 10px 20px rgba(245, 158, 11, 0.1);
+            border-color: rgba(245, 158, 11, 0.3);
+        }
+        
+        .card .icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #f59e0b;
+            transition: all 0.3s ease;
+            text-shadow: 0 2px 8px rgba(245, 158, 11, 0.3);
+        }
+        
+        .card:hover .icon {
+            transform: scale(1.1) rotate(5deg);
+            color: #d97706;
+            text-shadow: 0 4px 16px rgba(217, 119, 6, 0.4);
+        }
+        
+        .card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+            color: #1e293b;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        
+        .card:hover h3 {
+            color: #0f172a;
+        }
+        
+        .card p {
+            font-size: 0.95rem;
+            color: #64748b;
+            flex-grow: 1;
+            line-height: 1.6;
+            transition: color 0.3s ease;
+        }
+        
+        .card:hover p {
+            color: #475569;
+        }
+        
+        .card .cta {
+            margin-top: 20px;
+            align-self: flex-start;
+            display: inline-block;
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+            color: #ffffff;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+        }
+        
+        .card .cta:hover {
+            background: linear-gradient(135deg, #d97706, #b45309);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(217, 119, 6, 0.4);
+        }
+        /* Responsive Hero Section */
+        @media (max-width: 1024px) {
+            .hero-title {
+                font-size: 2.8rem;
+            }
+            .hero-subtitle {
+                font-size: 1.6rem;
+            }
+            .hero-description {
+                font-size: 1.1rem;
+            }
+        }
+        @media (max-width: 768px) {
+            header {
+                padding: 60px 20px 80px;
+                min-height: 60vh;
+            }
+            .hero-title {
+                font-size: 2.4rem;
+                margin-bottom: 16px;
+            }
+            .hero-subtitle {
+                font-size: 1.4rem;
+                margin-bottom: 20px;
+            }
+            .hero-description {
+                font-size: 1.05rem;
+                margin-bottom: 16px;
+            }
+            .hero-tagline {
+                font-size: 1rem;
+            }
+        }
+        @media (max-width: 640px) {
+            header {
+                padding: 50px 15px 70px;
+                min-height: 55vh;
+            }
+            .hero-title {
+                font-size: 2rem;
+            }
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+            .hero-description {
+                font-size: 1rem;
+            }
+            .hero-tagline {
+                font-size: 0.95rem;
+            }
+            .section h2 {
+                font-size: 1.5rem;
+            }
+        }
+
+        /* Professional Footer Styles */
+        .site-footer {
+            background: #f8fafc;
+            border-top: 1px solid #e2e8f0;
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .footer-main {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-brand {
+            max-width: 400px;
+        }
+
+        .footer-brand .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #1e293b;
+            text-decoration: none;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .footer-brand .logo span {
+            color: #3b82f6;
+        }
+
+        .footer-brand-description {
+            color: #64748b;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        .footer-section h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #1e293b;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-links a {
+            color: #64748b;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            display: block;
+            padding: 0.25rem 0;
+        }
+
+        .footer-links a:hover {
+            color: #3b82f6;
+            transform: translateX(3px);
+        }
+
+        .footer-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #e2e8f0, transparent);
+            margin: 2rem 0;
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .footer-copyright {
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+
+        .footer-credentials {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .credential-badge {
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            background: #e2e8f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #64748b;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            background: #3b82f6;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .footer-main {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="hero-floating-elements">
+            <div class="floating-icon"><i class="fas fa-satellite-dish"></i></div>
+            <div class="floating-icon"><i class="fas fa-wifi"></i></div>
+            <div class="floating-icon"><i class="fas fa-users"></i></div>
+            <div class="floating-icon"><i class="fas fa-globe-africa"></i></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">Community Development Trade School Programmes</h1>
+            <h2 class="hero-subtitle">Transforming Communities Through Skills & Connectivity</h2>
+            <p class="hero-description">Practical, multi‑sector training designed to empower rural & underserved communities across Africa - via high-speed, low-latency broadband internet-space-connectivity!</p>
+            <p class="hero-tagline">Together we can build self‑sustaining hubs of innovation and opportunity.</p>
+        </div>
+    </header>
+    
+    <!-- Statistics Section -->
+    <section class="stats-section">
+        <div class="stats-container">
+            <div class="stat-item">
+                <div class="stat-number" data-target="22">0</div>
+                <div class="stat-label">Training Sectors</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-target="1000">0</div>
+                <div class="stat-label">Communities Served</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-target="50000">0</div>
+                <div class="stat-label">Lives Transformed</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number" data-target="95">0</div>
+                <div class="stat-label">Success Rate %</div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section">
+        <h2>Explore Our Programmes</h2>
+        <div class="card-grid">
+            <!-- Agriculture & Food Security -->
+            <div class="card">
+                <div class="icon"><i class="fas fa-seedling"></i></div>
+                <h3>Agriculture & Food Security</h3>
+                <p>Learn sustainable farming, livestock care, agro‑processing and irrigation to strengthen food security and boost incomes.</p>
+                <a href="lms.html?sector=agriculture" class="cta">Start Learning</a>
+            </div>
+            <!-- Water & Sanitation -->
+            <div class="card">
+                <div class="icon"><i class="fas fa-tint"></i></div>
+                <h3>Water & Sanitation</h3>
+                <p>Get hands‑on training in well drilling, water system installation, sanitation, latrine construction and hygiene promotion.</p>
+                <a href="lms.html?sector=water" class="cta">Start Learning</a>
+            </div>
+            <!-- Renewable Energy -->
+            <div class="card">
+                <div class="icon"><i class="fas fa-solar-panel"></i></div>
+                <h3>Renewable Energy</h3>
+                <p>Design, install and maintain solar panels, mini‑grids, solar pumping and energy storage systems for off‑grid electrification.</p>
+                <a href="lms.html?sector=energy" class="cta">Start Learning</a>
+            </div>
+            <!-- Construction & Infrastructure -->
+            <div class="card">
+                <div class="icon"><i class="fas fa-hard-hat"></i></div>
+                <h3>Construction & Infrastructure</h3>
+                <p>Master masonry, carpentry, plumbing, electrics and project management to build safe, resilient homes and community buildings.</p>
+                <a href="lms.html?sector=construction" class="cta">Start Learning</a>
+            </div>
+            <!-- Healthcare & Community Health -->
+            <div class="card">
+                <div class="icon"><i class="fas fa-heartbeat"></i></div>
+                <h3>Healthcare & Community Health</h3>
+                <p>Train as a community health worker: learn health promotion, maternal and child care, disease prevention and basic diagnostics.</p>
+                <a href="lms.html?sector=health" class="cta">Start Learning</a>
+            </div>
+            <!-- Digital Skills & Connectivity -->
+            <div class="card">
+                <div class="icon"><i class="fas fa-wifi"></i></div>
+                <h3>Digital Skills & Connectivity</h3>
+                <p>Gain essential computer literacy, mobile repair, digital marketing and remote teaching skills to bridge the digital divide.</p>
+                <a href="lms.html?sector=digital" class="cta">Start Learning</a>
+            </div>
+            <!-- Business, Finance & Entrepreneurship -->
+            <div class="card">
+                <div class="icon"><i class="fas fa-chart-line"></i></div>
+                <h3>Business, Finance & Entrepreneurship</h3>
+                <p>Develop entrepreneurial thinking, financial literacy, cooperative management and micro‑enterprise skills for thriving ventures.</p>
+                <a href="lms.html?sector=business" class="cta">Start Learning</a>
+            </div>
+            <!-- Manufacturing & Industrial Technology -->
+            <div class="card">
+                <div class="icon"><i class="fas fa-industry"></i></div>
+                <h3>Manufacturing & Industrial Technology</h3>
+                <p>Learn welding, fabrication, machining, maintenance and industrial safety to support local industry and repairs.</p>
+                <a href="lms.html?sector=manufacturing" class="cta">Start Learning</a>
+            </div>
+            <!-- Small‑Scale Manufacturing & Crafts -->
+            <div class="card">
+                <div class="icon"><i class="fas fa-scissors"></i></div>
+                <h3>Small‑Scale Manufacturing & Crafts</h3>
+                <p>Master tailoring, carpentry, sewing machine maintenance and handcraft skills to create products for local and regional markets.</p>
+                <a href="lms.html?sector=crafts" class="cta">Start Learning</a>
+            </div>
+            <!-- Environment & Sustainability -->
+            <div class="card">
+                <div class="icon"><i class "fas fa-leaf"></i></div>
+                <h3>Environment & Sustainability</h3>
+                <p>Train in waste management, recycling, agro‑forestry and climate‑resilient farming to safeguard ecosystems and livelihoods.</p>
+                <a href="lms.html?sector=environment" class="cta">Start Learning</a>
+            </div>
+            <!-- Transportation & Mechanics -->
+            <div class="card">
+                <div class="icon"><i class="fas fa-tools"></i></div>
+                <h3>Transportation & Mechanics</h3>
+                <p>Acquire skills to repair bicycles, motorcycles and small engines, maintain generators and manage local transport fleets.</p>
+                <a href="lms.html?sector=transport" class="cta">Start Learning</a>
+            </div>
+            <!-- Public Safety & Emergency Services -->
+            <div class="card">
+                <div class="icon"><i class="fas fa-first-aid"></i></div>
+                <h3>Public Safety & Emergency Services</h3>
+                <p>Learn first aid, firefighting, disaster preparedness and community policing to protect and save lives.</p>
+                <a href="lms.html?sector=safety" class="cta">Start Learning</a>
+            </div>
+            <!-- Communications & Telecommunications -->
+            <div class="card">
+                <div class="icon"><i class="fas fa-broadcast-tower"></i></div>
+                <h3>Communications & Telecommunications</h3>
+                <p>Install and maintain telecom equipment, manage radio networks, set up satellite dishes and troubleshoot connectivity.</p>
+                <a href="lms.html?sector=communications" class="cta">Start Learning</a>
+            </div>
+            <!-- Research & Data Science -->
+            <div class="card">
+                <div class="icon"><i class="fas fa-microscope"></i></div>
+                <h3>Research & Data Science</h3>
+                <p>Develop skills in survey design, data collection, basic statistics and digital tools for community‑based research.</p>
+                <a href="lms.html?sector=research" class="cta">Start Learning</a>
+            </div>
+            <!-- Education & EdTech -->
+            <div class="card">
+                <div class="icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                <h3>Education & EdTech</h3>
+                <p>Become a digital educator: integrate technology into classrooms, manage e‑learning platforms and facilitate adult literacy.</p>
+                <a href="lms.html?sector=education" class="cta">Start Learning</a>
+            </div>
+            <!-- Government & Civic Technology -->
+            <div class="card">
+                <div class="icon"><i class="fas fa-landmark"></i></div>
+                <h3>Government & Civic Technology</h3>
+                <p>Learn public administration, e‑government services, participatory budgeting and community leadership skills.</p>
+                <a href="lms.html?sector=government" class="cta">Start Learning</a>
+            </div>
+            <!-- Biotechnology & Life Sciences -->
+            <div class="card">
+                <div class="icon"><i class="fas fa-dna"></i></div>
+                <h3>Biotechnology & Life Sciences</h3>
+                <p>Explore lab basics, genetics, food microbiology and bio‑innovation to improve agriculture and health outcomes.</p>
+                <a href="lms.html?sector=biotech" class="cta">Start Learning</a>
+            </div>
+            <!-- Automotive Technology -->
+            <div class="card">
+                <div class="icon"><i class="fas fa-car"></i></div>
+                <h3>Automotive Technology</h3>
+                <p>Gain expertise in diagnostics and maintenance of petrol, diesel and electric vehicles, and manage a small auto workshop.</p>
+                <a href="lms.html?sector=automotive" class="cta">Start Learning</a>
+            </div>
+            <!-- Web Development & Software Engineering -->
+            <div class="card">
+                <div class="icon"><i class="fas fa-code"></i></div>
+                <h3>Web Development & Software Engineering</h3>
+                <p>Learn coding fundamentals, build websites and applications, manage databases and practise digital security.</p>
+                <a href="lms.html?sector=web" class="cta">Start Learning</a>
+            </div>
+            <!-- AgriTech & Smart Farming -->
+            <div class="card">
+                <div class="icon"><i class="fas fa-tractor"></i></div>
+                <h3>AgriTech & Smart Farming</h3>
+                <p>Use sensors, drones and analytics to monitor crops, automate irrigation and make data‑driven farm decisions.</p>
+                <a href="lms.html?sector=agritech" class="cta">Start Learning</a>
+            </div>
+            <!-- ISP & Connectivity Services -->
+            <div class="card">
+                <div class="icon"><i class="fas fa-satellite-dish"></i></div>
+                <h3>ISP & Connectivity Services</h3>
+                <p>Become a connectivity technician: install Starlink or other satellite broadband, configure networks and maintain equipment.</p>
+                <a href="lms.html?sector=isp" class="cta">Start Learning</a>
+            </div>
+            <!-- Aerospace & Drone Operation -->
+            <div class="card">
+                <div class="icon"><i class="fas fa-plane"></i></div>
+                <h3>Aerospace & Drone Operation</h3>
+                <p>Train to pilot drones for agriculture, logistics and environmental monitoring, and learn UAV maintenance and mapping.</p>
+                <a href="lms.html?sector=aerospace" class="cta">Start Learning</a>
+            </div>
+        </div>
+    </section>
+    <!-- Investment & Sponsorship Section -->
+    <section class="section" id="community-partners">
+        <h2>Investment & Sponsorship Opportunities</h2>
+        <div class="card-grid">
+            <!-- Investor Program -->
+            <div class="card">
+                <h3>Investor Programme</h3>
+                <p>Help us scale these vocational programmes by funding the tools, equipment and infrastructure needed for each sector. Rather than donating outright, investors purchase or lease assets – tractors, solar panels, water‑purification units and other critical gear – and earn residual revenue from their long‑term use in our training centres.</p>
+                <p><strong>Examples of investment needs:</strong></p>
+                <ul style="font-size:0.9rem; color:#475569; padding-left: 16px;">
+                    <li><strong>Agriculture:</strong> small tractors, irrigation pumps, seeders and threshers</li>
+                    <li><strong>Water & Sanitation:</strong> borehole drilling rigs, water filters and composting latrine kits</li>
+                    <li><strong>Renewable Energy:</strong> solar panels, batteries, inverters and mini‑grid controllers</li>
+                    <li><strong>Construction:</strong> block‑making machines, scaffolding and power tools</li>
+                    <li><strong>Healthcare:</strong> basic medical kits, diagnostic devices and training mannequins</li>
+                    <li><strong>Digital & Connectivity:</strong> laptops, routers and networking gear</li>
+                    <li><strong>Manufacturing & Crafts:</strong> welding sets, sewing machines and woodworking tools</li>
+                    <li><strong>Transportation:</strong> toolkits for bicycle/motorcycle repair and small engines</li>
+                    <li><strong>Public Safety:</strong> first‑aid kits, fire extinguishers and training props</li>
+                    <li><strong>ISP & Connectivity:</strong> Starlink terminals, antennas and power systems</li>
+                </ul>
+                <p>Returns are generated through rental fees paid by training centres and cooperatives; investors retain ownership while communities build capacity. Contact us to discuss a tailored investment package for your preferred sector.</p>
+                <a href="investors.html" class="cta">Become an Investor</a>
+            </div>
+            <!-- Sponsorship Program -->
+            <div class="card">
+                <h3>Sponsorship Programme</h3>
+                <p>Support learners directly by covering course fees and materials. Each sponsorship pack funds training, mentorship and community projects for groups of young people. Your contribution transforms lives and builds resilient communities.</p>
+                <p><strong>Available packs (approximate USD cost):</strong></p>
+                <ul style="font-size:0.9rem; color:#475569; padding-left: 16px;">
+                    <li><strong>Bronze:</strong> Train 10 learners – around <span style="white-space:nowrap;">$1,700</span></li>
+                    <li><strong>Silver:</strong> Train 50 learners – around <span style="white-space:nowrap;">$8,500</span></li>
+                    <li><strong>Gold:</strong> Train 100 learners – around <span style="white-space:nowrap;">$17,000</span></li>
+                </ul>
+                <p>Sponsors may direct their gift to any of our sectors – from agriculture to aerospace. We provide progress reports and recognition for every package. Help us create the next generation of skilled professionals.</p>
+                <a href="sponsorship.html" class="cta">Sponsor a Training</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <!-- Main Footer Grid -->
+            <div class="footer-main">
+                <!-- Brand Section -->
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">BTH<span>Education</span></a>
+                    <p class="footer-brand-description">
+                        Global Education Investment Organization specializing in Family Education, Professional Early Child Education, Occupational Education, Investment Education and Education Franchises. Building strong institutions (SDG 16) for supra-national development.
+                    </p>
+                    
+                    <!-- Social Links -->
+                    <div class="footer-social">
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="mailto:info@btheducationgroup.org" class="social-link" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Core Programs -->
+                <div class="footer-section">
+                    <h4>Core Programs</h4>
+                    <ul class="footer-links">
+                        <li><a href="oedp.html">OEDP HEXAD & AWIS</a></li>
+                        <li><a href="hexad-mastery.html">HEXAD Mastery Framework</a></li>
+                        <li><a href="program.html">All Industry Programs</a></li>
+                        <li><a href="https://invest.btheducationgroup.com" target="_blank" rel="noopener">Investment Education</a></li>
+                        <li><a href="pece.html">PECE Family Education</a></li>
+                        <li><a href="family-maturation-programs.html">Family Maturation Programs</a></li>
+                        <li><a href="communitydev.html">Community Development</a></li>
+                    </ul>
+                </div>
+
+                <!-- Industries -->
+                <div class="footer-section">
+                    <h4>Industries</h4>
+                    <ul class="footer-links">
+                        <li><a href="programs/technology.html">Technology Sector</a></li>
+                        <li><a href="programs/business-development.html">Government & Public</a></li>
+                        <li><a href="programs/healthcare.html">Healthcare & Medical</a></li>
+                        <li><a href="programs/manufacturing.html">Manufacturing</a></li>
+                        <li><a href="programs/business-development.html">Business & Finance</a></li>
+                        <li><a href="programs/renewable-energy.html">Energy & Utilities</a></li>
+                        <li><a href="program.html">All 22+ Sectors</a></li>
+                    </ul>
+                </div>
+
+                <!-- Resources -->
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="career-assessment.html">Free Career Assessment</a></li>
+                        <li><a href="program-catalog.html">Program Catalog</a></li>
+                        <li><a href="roi-calculator.html">ROI Calculator</a></li>
+                        <li><a href="partners.html">Global Partners</a></li>
+                        <li><a href="industry-solutions.html">Industry Solutions</a></li>
+                        <li><a href="catalog-thank-you.html">Success Stories</a></li>
+                        <li><a href="program.html">Certification Pathways</a></li>
+                    </ul>
+                </div>
+
+                <!-- Company -->
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About BTH</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="partners.html">Partnership Inquiry</a></li>
+                        <li><a href="apply.html">Careers</a></li>
+                        <li><a href="contact.html">Press Releases</a></li>
+                        <li><a href="about.html">Legal</a></li>
+                        <li><a href="about.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Footer Divider -->
+            <div class="footer-divider"></div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; 2025 BTH Education Group. All rights reserved.</p>
+                </div>
+                
+                <div class="footer-credentials">
+                    <span class="credential-badge">🏛️ Global Education Investment</span>
+                    <span class="credential-badge">🎯 SDG 16 Strong Institutions</span>
+                    <span class="credential-badge">📜 UDHR Article 26:2</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Statistics Animation -->
+    <script>
+        // Animated Counter Function
+        function animateCounter(element, target, duration = 2000) {
+            const start = 0;
+            const increment = target / (duration / 16);
+            let current = start;
+            
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    current = target;
+                    clearInterval(timer);
+                }
+                element.textContent = Math.floor(current).toLocaleString();
+            }, 16);
+        }
+
+        // Intersection Observer for triggering animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const target = parseInt(entry.target.dataset.target);
+                    animateCounter(entry.target, target);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.5
+        });
+
+        // Observe all stat numbers
+        document.querySelectorAll('.stat-number').forEach(stat => {
+            observer.observe(stat);
+        });
+
+        // Add scroll-triggered animations for cards
+        const cardObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.style.animation = `fadeInUp 0.6s ease-out forwards`;
+                    }, index * 100);
+                    cardObserver.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.2
+        });
+
+        // Observe all cards
+        document.querySelectorAll('.card').forEach(card => {
+            card.style.opacity = '0';
+            cardObserver.observe(card);
+        });
+    </script>
+</body>
+</html>

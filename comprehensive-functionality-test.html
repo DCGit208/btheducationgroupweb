@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Comprehensive Functionality Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .test-section { margin: 20px 0; padding: 15px; border: 1px solid #ccc; }
+        .pass { background: #d4edda; border-color: #28a745; }
+        .fail { background: #f8d7da; border-color: #dc3545; }
+        .warning { background: #fff3cd; border-color: #ffc107; }
+        .score { font-size: 24px; font-weight: bold; margin: 20px 0; }
+        iframe { width: 100%; height: 600px; border: 1px solid #ccc; margin: 10px 0; }
+        button { margin: 5px; padding: 8px 16px; }
+    </style>
+</head>
+<body>
+    <h1>Technology Page Comprehensive Test</h1>
+    <div class="score" id="scoreDisplay">Loading...</div>
+    <div id="testResults"></div>
+    
+    <h2>Live Technology Page</h2>
+    <iframe id="techFrame" src="/programs/technology.html"></iframe>
+    
+    <h2>Manual Tests</h2>
+    <button onclick="testFrameworkSwitch()">Test Framework Selection</button>
+    <button onclick="testFiltering()">Test Filtering</button>
+    <button onclick="testSearch()">Test Search</button>
+
+    <script>
+        let testResults = [];
+        let passedTests = 0;
+        let totalTests = 0;
+        
+        function addTest(name, passed, message, details = null) {
+            totalTests++;
+            if (passed) passedTests++;
+            
+            testResults.push({name, passed, message, details});
+            
+            const div = document.createElement('div');
+            div.className = `test-section ${passed ? 'pass' : 'fail'}`;
+            div.innerHTML = `
+                <h3>${passed ? '✅' : '❌'} ${name}</h3>
+                <p>${message}</p>
+                ${details ? `<pre>${JSON.stringify(details, null, 2)}</pre>` : ''}
+            `;
+            
+            document.getElementById('testResults').appendChild(div);
+            updateScore();
+        }
+        
+        function updateScore() {
+            const percentage = totalTests > 0 ? Math.round((passedTests / totalTests) * 100) : 0;
+            document.getElementById('scoreDisplay').textContent = 
+                `Overall Score: ${passedTests}/${totalTests} tests passed (${percentage}%)`;
+                
+            if (percentage < 40) {
+                document.getElementById('scoreDisplay').style.color = 'red';
+            } else if (percentage < 70) {
+                document.getElementById('scoreDisplay').style.color = 'orange';
+            } else {
+                document.getElementById('scoreDisplay').style.color = 'green';
+            }
+        }
+
+        // Wait for iframe to load
+        document.getElementById('techFrame').onload = function() {
+            setTimeout(() => {
+                const iframe = document.getElementById('techFrame');
+                const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+                const iframeWindow = iframe.contentWindow;
+                
+                // Test 1: Data Loading
+                const hasITSectorData = iframeWindow.ITSectorData !== undefined;
+                addTest('ITSectorData Loading', hasITSectorData, 
+                    hasITSectorData ? 'ITSectorData object loaded' : 'ITSectorData not found');
+                
+                if (hasITSectorData) {
+                    const certArray = iframeWindow.ITSectorData.certifications;
+                    addTest('Certifications Array', Array.isArray(certArray) && certArray.length > 0,
+                        Array.isArray(certArray) ? `Found ${certArray.length} certifications` : 'Certifications array missing or empty');
+                        
+                    const categories = iframeWindow.ITSectorData.categories;
+                    addTest('Categories Data', categories && Object.keys(categories).length > 0,
+                        categories ? `Found ${Object.keys(categories).length} categories` : 'Categories missing');
+                }
+                
+                // Test 2: ITFilterManager
+                const hasFilterManager = iframeWindow.filterManager !== undefined;
+                addTest('ITFilterManager Instance', hasFilterManager,
+                    hasFilterManager ? 'Filter manager instance created' : 'Filter manager instance not found');
+                
+                // Test 3: DOM Elements
+                const certGrid = iframeDoc.getElementById('certificationGrid');
+                const categoryGrid = iframeDoc.getElementById('categoryGrid');
+                
+                addTest('Certification Grid Element', certGrid !== null,
+                    certGrid ? 'Certification grid element exists' : 'Certification grid element missing');
+                    
+                addTest('Category Grid Element', categoryGrid !== null,
+                    categoryGrid ? 'Category grid element exists' : 'Category grid element missing');
+                
+                // Test 4: Content Rendering
+                if (certGrid) {
+                    const hasContent = certGrid.innerHTML.trim().length > 0;
+                    const childCount = certGrid.children.length;
+                    addTest('Certification Content Rendering', hasContent && childCount > 0,
+                        `${childCount} certification cards rendered`,
+                        hasContent ? {
+                            contentLength: certGrid.innerHTML.length,
+                            childElements: childCount,
+                            firstChildClass: certGrid.children[0]?.className || 'none'
+                        } : null);
+                }
+                
+                if (categoryGrid) {
+                    const hasContent = categoryGrid.innerHTML.trim().length > 0;
+                    const childCount = categoryGrid.children.length;
+                    addTest('Category Content Rendering', hasContent && childCount > 0,
+                        `${childCount} category cards rendered`,
+                        hasContent ? {
+                            contentLength: categoryGrid.innerHTML.length,
+                            childElements: childCount
+                        } : null);
+                }
+                
+                // Test 5: Framework Selection
+                const frameworkBtns = iframeDoc.querySelectorAll('button[onclick*="selectFramework"]');
+                addTest('Framework Selection Buttons', frameworkBtns.length >= 2,
+                    frameworkBtns.length >= 2 ? `Found ${frameworkBtns.length} framework buttons` : 'Framework selection buttons missing');
+                
+                // Test 6: Search Input
+                const searchInput = iframeDoc.getElementById('searchInput');
+                addTest('Search Input', searchInput !== null,
+                    searchInput ? 'Search input exists' : 'Search input missing');
+                
+                // Test 7: Filter Controls
+                const filterControls = iframeDoc.querySelectorAll('select[data-filter]');
+                addTest('Filter Controls', filterControls.length > 0,
+                    `Found ${filterControls.length} filter controls`);
+                
+                // Test 8: JavaScript Errors
+                let jsErrors = [];
+                const originalError = iframeWindow.console.error;
+                iframeWindow.console.error = function(...args) {
+                    jsErrors.push(args.join(' '));
+                    originalError.apply(console, args);
+                };
+                
+                setTimeout(() => {
+                    addTest('JavaScript Errors', jsErrors.length === 0,
+                        jsErrors.length === 0 ? 'No JavaScript errors detected' : `${jsErrors.length} errors found`,
+                        jsErrors.length > 0 ? jsErrors : null);
+                }, 1000);
+                
+            }, 3000); // Wait 3 seconds for everything to load
+        };
+        
+        // Manual test functions
+        function testFrameworkSwitch() {
+            const iframe = document.getElementById('techFrame');
+            const iframeDoc = iframe.contentDocument;
+            
+            // Try clicking HEXAD framework button
+            const hexadBtn = Array.from(iframeDoc.querySelectorAll('button')).find(btn => 
+                btn.textContent.includes('HEXAD') || btn.onclick?.toString().includes('hexad')
+            );
+            
+            if (hexadBtn) {
+                hexadBtn.click();
+                setTimeout(() => {
+                    addTest('Framework Switch Test', true, 'Successfully clicked HEXAD framework button');
+                }, 500);
+            } else {
+                addTest('Framework Switch Test', false, 'Could not find HEXAD framework button');
+            }
+        }
+        
+        function testFiltering() {
+            const iframe = document.getElementById('techFrame');
+            const iframeDoc = iframe.contentDocument;
+            
+            const filterSelect = iframeDoc.querySelector('select[data-filter]');
+            if (filterSelect && filterSelect.options.length > 1) {
+                const originalLength = iframeDoc.getElementById('certificationGrid')?.children.length || 0;
+                filterSelect.selectedIndex = 1;
+                filterSelect.dispatchEvent(new Event('change'));
+                
+                setTimeout(() => {
+                    const newLength = iframeDoc.getElementById('certificationGrid')?.children.length || 0;
+                    addTest('Filter Functionality Test', originalLength !== newLength,
+                        `Filter changed results from ${originalLength} to ${newLength} items`);
+                }, 500);
+            } else {
+                addTest('Filter Functionality Test', false, 'No filter controls found or they have no options');
+            }
+        }
+        
+        function testSearch() {
+            const iframe = document.getElementById('techFrame');
+            const iframeDoc = iframe.contentDocument;
+            
+            const searchInput = iframeDoc.getElementById('searchInput');
+            if (searchInput) {
+                const originalLength = iframeDoc.getElementById('certificationGrid')?.children.length || 0;
+                searchInput.value = 'AWS';
+                searchInput.dispatchEvent(new Event('input'));
+                
+                setTimeout(() => {
+                    const newLength = iframeDoc.getElementById('certificationGrid')?.children.length || 0;
+                    addTest('Search Functionality Test', newLength > 0 && newLength !== originalLength,
+                        `Search for 'AWS' returned ${newLength} results (was ${originalLength})`);
+                }, 500);
+            } else {
+                addTest('Search Functionality Test', false, 'Search input not found');
+            }
+        }
+    </script>
+</body>
+</html>

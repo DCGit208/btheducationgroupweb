@@ -411,6 +411,61 @@
             margin: 0 auto;
         }
 
+        /* HEXAD Context Banner Styles */
+        .hexad-context-banner {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 20px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            color: white;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+        }
+
+        .hexad-banner-content {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .hexad-banner-icon {
+            font-size: 3rem;
+            flex-shrink: 0;
+        }
+
+        .hexad-banner-text h3 {
+            margin: 0 0 0.5rem 0;
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+
+        .hexad-banner-text p {
+            margin: 0;
+            opacity: 0.9;
+            font-size: 0.95rem;
+            line-height: 1.4;
+        }
+
+        .hexad-banner-level {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 0.5rem;
+            flex-shrink: 0;
+        }
+
+        .level-badge {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .pricing-info {
+            font-size: 0.85rem;
+            opacity: 0.8;
+        }
+
         .sectors-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -548,9 +603,77 @@
                 margin-bottom: 1rem;
             }
         }
+        /* Utilities injected for validation fixes */
+        .checkout-flow-indicator {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1001;
+        }
+        .is-hidden { display: none; }
+        /* Level restrictions panel */
+        .level-restrictions {
+            background: rgba(59, 130, 246, 0.1);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 2rem auto;
+            max-width: 800px;
+        }
+        .level-restrictions-title {
+            color: #3b82f6;
+            margin-bottom: 1rem;
+        }
+        .selection-counter { margin-top: 1rem; display: flex; gap: 2rem; flex-wrap: wrap; }
+        .selection-cost { margin-left: 0; }
+        /* Return to checkout floating button */
+        .return-to-checkout {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 1000;
+        }
+        .return-to-checkout-btn {
+            background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+            border: none;
+            border-radius: 12px;
+            padding: 1rem 2rem;
+            color: white;
+            font-weight: 700;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        /* Search input styles */
+        .sector-search-wrap { text-align: center; margin: 2rem 0; }
+        .sector-search {
+            padding: 1rem 2rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 50px;
+            font-size: 1rem;
+            width: 100%;
+            max-width: 400px;
+            outline: none;
+        }
+        /* Back to top button */
+        .back-to-top {
+            position: fixed; bottom: 2rem; right: 2rem;
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+            color: white; border: none; padding: 1rem; border-radius: 50%;
+            cursor: pointer; opacity: 0; transition: all 0.3s ease;
+            z-index: 1000; box-shadow: 0 4px 20px rgba(59, 130, 246, 0.3);
+            width: 60px; height: 60px; font-size: 1.2rem;
+        }
     </style>
 </head>
 <body>
+    <!-- Checkout Flow Indicator -->
+    <div id="checkoutFlowIndicator" class="checkout-flow-indicator is-hidden">
+        <h4>🛒 HEXAD Checkout Flow - Level <span id="checkoutLevel"></span> Professional Selection</h4>
+        <p>Select your professional certifications below, then return to complete your purchase.</p>
+    </div>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -656,9 +779,25 @@
                 <h2>Professional Certification Pathways</h2>
                 <p>Choose your industry sector and begin your certification journey</p>
             </div>
+            
+            <!-- HEXAD Context Banner (Hidden by default, shown when coming from HEXAD) -->
+            <div id="hexadContextBanner" class="hexad-context-banner is-hidden">
+                <div class="hexad-banner-content">
+                    <div class="hexad-banner-icon">🎯</div>
+                    <div class="hexad-banner-text">
+                        <h3>HEXAD Professional Development Journey</h3>
+                        <p>You're continuing your HEXAD journey with professional certifications. Select an industry sector to explore certification pathways that align with your career goals.</p>
+                    </div>
+                    <div class="hexad-banner-level">
+                        <span class="level-badge">Level <span id="hexadLevel">1</span></span>
+                        <span class="pricing-info">Starting at $<span id="hexadPrice">8,100</span></span>
+                    </div>
+                </div>
+            </div>
+            
             <div class="sectors-grid">
                 <!-- 1. Information Technology -->
-                <div class="sector-card">
+                <div class="sector-card" data-sector="technology" onclick="navigateToSector('technology')">
                     <div class="sector-header">
                         <div class="sector-icon">🖥️</div>
                         <div>
@@ -668,13 +807,13 @@
                     </div>
                     <p class="sector-description">Cloud, Cybersecurity, Networking, Software Development - Complete IT infrastructure foundation with comprehensive sub-domains covering all aspects of modern technology.</p>
                     <div class="sector-cta">
-                        <a href="programs/technology.html" class="explore-btn">Explore IT Certifications</a>
+                        <a href="programs/technology.html" class="explore-btn" onclick="event.stopPropagation();">Explore IT Certifications</a>
                         <span class="vendor-count">50+ Certifications</span>
                     </div>
                 </div>
 
                 <!-- 2. Healthcare Technology -->
-                <div class="sector-card">
+                <div class="sector-card" data-sector="healthcare" onclick="navigateToSector('healthcare')">
                     <div class="sector-header">
                         <div class="sector-icon">🏥</div>
                         <div>
@@ -684,13 +823,13 @@
                     </div>
                     <p class="sector-description">Health IT, EHR Systems, Medical Devices, Telemedicine - Transform healthcare delivery with comprehensive technology solutions and certification pathways.</p>
                     <div class="sector-cta">
-                        <a href="programs/healthcare.html" class="explore-btn">Explore Healthcare Certifications</a>
+                        <a href="programs/healthcare.html" class="explore-btn" onclick="event.stopPropagation();">Explore Healthcare Certifications</a>
                         <span class="vendor-count">45+ Certifications</span>
                     </div>
                 </div>
 
                 <!-- 3. Manufacturing & Industrial -->
-                <div class="sector-card">
+                <div class="sector-card" data-sector="manufacturing" onclick="navigateToSector('manufacturing')">
                     <div class="sector-header">
                         <div class="sector-icon">🏭</div>
                         <div>
@@ -700,15 +839,15 @@
                     </div>
                     <p class="sector-description">Automation, Quality Control, Lean Six Sigma, Welding - Advanced manufacturing processes with Industry 4.0 technologies and quality management systems.</p>
                     <div class="sector-cta">
-                        <a href="programs/manufacturing.html" class="explore-btn">Explore Manufacturing Certifications</a>
+                        <a href="programs/manufacturing.html" class="explore-btn" onclick="event.stopPropagation();">Explore Manufacturing Certifications</a>
                         <span class="vendor-count">55+ Certifications</span>
                     </div>
                 </div>
 
                 <!-- 4. Automotive Technology -->
-                <div class="sector-card">
+                <div class="sector-card" data-sector="automotive" onclick="navigateToSector('automotive')">
                     <div class="sector-header">
-                        <div class="sector-icon">�</div>
+                        <div class="sector-icon">🚗</div>
                         <div>
                             <h3 class="sector-title">Automotive Technology</h3>
                             <p class="sector-subtitle">Future Mobility</p>
@@ -716,13 +855,13 @@
                     </div>
                     <p class="sector-description">ICE, Electric Vehicles, Autonomous Systems, Collision Repair - Complete automotive technology stack from traditional service to cutting-edge EV and autonomous systems.</p>
                     <div class="sector-cta">
-                        <a href="programs/automotive.html" class="explore-btn">Explore Automotive Certifications</a>
+                        <a href="programs/automotive.html" class="explore-btn" onclick="event.stopPropagation();">Explore Automotive Certifications</a>
                         <span class="vendor-count">60+ Certifications</span>
                     </div>
                 </div>
 
                 <!-- 5. Energy & Renewable Systems -->
-                <div class="sector-card">
+                <div class="sector-card" data-sector="renewable-energy" onclick="navigateToSector('renewable-energy')">
                     <div class="sector-header">
                         <div class="sector-icon">⚡</div>
                         <div>
@@ -732,13 +871,13 @@
                     </div>
                     <p class="sector-description">Solar, Wind, Storage, Smart Grid, Energy Efficiency - Leading the clean energy transition with comprehensive renewable energy technology certifications.</p>
                     <div class="sector-cta">
-                        <a href="programs/renewable-energy.html" class="explore-btn">Explore Energy Certifications</a>
+                        <a href="programs/renewable-energy.html" class="explore-btn" onclick="event.stopPropagation();">Explore Energy Certifications</a>
                         <span class="vendor-count">52+ Certifications</span>
                     </div>
                 </div>
 
                 <!-- 6. Construction & Infrastructure -->
-                <div class="sector-card">
+                <div class="sector-card" data-sector="architecture-engineering" onclick="navigateToSector('architecture-engineering')">
                     <div class="sector-header">
                         <div class="sector-icon">🏗️</div>
                         <div>
@@ -748,13 +887,13 @@
                     </div>
                     <p class="sector-description">General Construction, LEED, Electrical, Plumbing - Comprehensive construction and infrastructure development with green building and sustainable design focus.</p>
                     <div class="sector-cta">
-                        <a href="programs/architecture-engineering.html" class="explore-btn">Explore Construction Certifications</a>
+                        <a href="programs/architecture-engineering.html" class="explore-btn" onclick="event.stopPropagation();">Explore Construction Certifications</a>
                         <span class="vendor-count">48+ Certifications</span>
                     </div>
                 </div>
 
                 <!-- 7. Communications & Telecommunications -->
-                <div class="sector-card">
+                <div class="sector-card" data-sector="telecommunications" onclick="navigateToSector('telecommunications')">
                     <div class="sector-header">
                         <div class="sector-icon">📡</div>
                         <div>
@@ -764,13 +903,13 @@
                     </div>
                     <p class="sector-description">5G, Fiber Optics, Wireless Systems, Network Optimization - Advanced telecommunications infrastructure and next-generation communication systems.</p>
                     <div class="sector-cta">
-                        <a href="#telecommunications" class="explore-btn">Explore Telecom Certifications</a>
+                        <a href="programs/telecommunications.html" class="explore-btn" onclick="event.stopPropagation();">Explore Telecom Certifications</a>
                         <span class="vendor-count">42+ Certifications</span>
                     </div>
                 </div>
 
                 <!-- 8. Creative Arts & Digital Design -->
-                <div class="sector-card">
+                <div class="sector-card" data-sector="creative-arts" onclick="navigateToSector('creative-arts')">
                     <div class="sector-header">
                         <div class="sector-icon">🎨</div>
                         <div>
@@ -780,15 +919,15 @@
                     </div>
                     <p class="sector-description">Graphic Design, Digital Media, UX/UI, Adobe, Multimedia - Creative technology platforms and digital content creation with industry-standard tools and techniques.</p>
                     <div class="sector-cta">
-                        <a href="#creative-arts" class="explore-btn">Explore Creative Certifications</a>
+                        <a href="programs/creative-arts.html" class="explore-btn" onclick="event.stopPropagation();">Explore Creative Certifications</a>
                         <span class="vendor-count">38+ Certifications</span>
                     </div>
                 </div>
 
                 <!-- 9. Finance & Accounting -->
-                <div class="sector-card">
+                <div class="sector-card" data-sector="finance" onclick="navigateToSector('finance')">
                     <div class="sector-header">
-                        <div class="sector-icon">�</div>
+                        <div class="sector-icon">💰</div>
                         <div>
                             <h3 class="sector-title">Finance & Accounting</h3>
                             <p class="sector-subtitle">Financial Technology</p>
@@ -796,15 +935,15 @@
                     </div>
                     <p class="sector-description">FinTech, Banking, Risk, Investment, Accounting - Modern financial systems, digital banking, and comprehensive accounting and investment management solutions.</p>
                     <div class="sector-cta">
-                        <a href="#finance" class="explore-btn">Explore Finance Certifications</a>
+                        <a href="programs/finance.html" class="explore-btn" onclick="event.stopPropagation();">Explore Finance Certifications</a>
                         <span class="vendor-count">44+ Certifications</span>
                     </div>
                 </div>
 
                 <!-- 10. Business & Management -->
-                <div class="sector-card">
+                <div class="sector-card" data-sector="business-development" onclick="navigateToSector('business-development')">
                     <div class="sector-header">
-                        <div class="sector-icon">�</div>
+                        <div class="sector-icon">📊</div>
                         <div>
                             <h3 class="sector-title">Business & Management</h3>
                             <p class="sector-subtitle">Strategic Leadership</p>
@@ -812,7 +951,7 @@
                     </div>
                     <p class="sector-description">Project Management, Business Analysis, Operations, Leadership - Comprehensive management methodologies and strategic business development frameworks.</p>
                     <div class="sector-cta">
-                        <a href="programs/business-development.html" class="explore-btn">Explore Business Certifications</a>
+                        <a href="programs/business-development.html" class="explore-btn" onclick="event.stopPropagation();">Explore Business Certifications</a>
                         <span class="vendor-count">60+ Certifications</span>
                     </div>
                 </div>
@@ -981,7 +1120,36 @@
     </section>
 
     <!-- JavaScript for Enhanced Interactions -->
+    <!-- Session Management and Database Scripts -->
+    <script src="assets/js/bth-session-manager.js"></script>
+    <script src="assets/js/bth-certification-database.js"></script>
+    
     <script>
+        // Initialize HEXAD context banner on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeHexadContext();
+            initializeCheckoutFlow();
+        });
+
+        function initializeHexadContext() {
+            // Use BTH Session Manager for enhanced context management
+            const checkoutContext = window.BTHSession.getCheckoutContext();
+            const urlParams = new URLSearchParams(window.location.search);
+            
+            if (urlParams.get('flow') === 'checkout' && checkoutContext?.source === 'hexad-checkout') {
+                // Show HEXAD checkout flow indicator
+                showCheckoutFlowUI(checkoutContext.selectedLevel);
+                
+                // Add comprehensive level restrictions
+                applyLevelRestrictionsToSectors(checkoutContext.selectedLevel);
+                
+                // Add return to checkout functionality
+                addReturnToCheckoutButton();
+                
+                console.log('🎓 HEXAD Professional Development Flow Initialized:', checkoutContext);
+            }
+        }
+
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -1109,10 +1277,8 @@
         // Search functionality for sectors
         function createSearchFilter() {
             const searchHTML = `
-                <div style="text-align: center; margin: 2rem 0;">
-                    <input type="text" id="sectorSearch" placeholder="Search industry sectors..." 
-                           style="padding: 1rem 2rem; border: 2px solid #e2e8f0; border-radius: 50px; 
-                                  font-size: 1rem; width: 100%; max-width: 400px; outline: none;">
+                <div class="sector-search-wrap">
+                    <input type="text" id="sectorSearch" class="sector-search" placeholder="Search industry sectors...">
                 </div>
             `;
             
@@ -1146,14 +1312,7 @@
         // Back to top button
         function createBackToTop() {
             const backToTopHTML = `
-                <button id="backToTop" style="
-                    position: fixed; bottom: 2rem; right: 2rem; 
-                    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
-                    color: white; border: none; padding: 1rem; border-radius: 50%;
-                    cursor: pointer; opacity: 0; transition: all 0.3s ease;
-                    z-index: 1000; box-shadow: 0 4px 20px rgba(59, 130, 246, 0.3);
-                    width: 60px; height: 60px; font-size: 1.2rem;
-                ">↑</button>
+                <button id="backToTop" class="back-to-top">↑</button>
             `;
             
             document.body.insertAdjacentHTML('beforeend', backToTopHTML);
@@ -1175,6 +1334,170 @@
 
         // Initialize back to top button
         document.addEventListener('DOMContentLoaded', createBackToTop);
+
+        // HEXAD Checkout Integration
+        let checkoutContext = null;
+        let selectedCertifications = [];
+        let currentSelectedSector = '';
+        let currentSelectedIndustry = '';
+        let currentSelectedVendor = '';
+
+        // Detect checkout flow on page load
+        window.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            checkoutContext = JSON.parse(sessionStorage.getItem('checkoutContext') || '{}');
+            
+            if (urlParams.get('flow') === 'checkout' && checkoutContext.source === 'hexad-checkout') {
+                initializeCheckoutFlow(checkoutContext);
+            }
+        });
+
+        function initializeCheckoutFlow(context) {
+            const selectedLevel = context.selectedLevel;
+            
+            // Show checkout flow indicator
+            showCheckoutFlowUI(selectedLevel);
+            
+            // Apply level restrictions to all sectors
+            applyLevelRestrictionsToSectors(selectedLevel);
+            
+            // Add return to checkout button
+            addReturnToCheckoutButton();
+        }
+
+        function showCheckoutFlowUI(level) {
+            const indicator = document.getElementById('checkoutFlowIndicator');
+            const levelSpan = document.getElementById('checkoutLevel');
+            
+            indicator.style.display = 'block';
+            levelSpan.textContent = level;
+        }
+
+        function applyLevelRestrictionsToSectors(level) {
+            const levelRestrictions = {
+                1: { maxCerts: 3, allowedTiers: ['foundation'], maxCost: 500, description: 'Foundation level - up to 3 basic certifications' },
+                2: { maxCerts: 5, allowedTiers: ['foundation', 'intermediate'], maxCost: 800, description: 'Intermediate level - up to 5 certifications' },
+                3: { maxCerts: 7, allowedTiers: ['foundation', 'intermediate', 'advanced'], maxCost: 1200, description: 'Advanced level - up to 7 certifications' },
+                4: { maxCerts: 9, allowedTiers: ['all'], maxCost: 1800, description: 'Leadership level - up to 9 certifications' },
+                5: { maxCerts: 12, allowedTiers: ['all'], maxCost: 2500, description: 'Mastery level - up to 12 certifications' }
+            };
+            
+            const restrictions = levelRestrictions[level];
+            
+            // Show level restriction info
+            showLevelRestrictionInfo(restrictions, level);
+        }
+
+        function showLevelRestrictionInfo(restrictions, level) {
+            const restrictionHtml = `
+                <div id="levelRestrictions" class="level-restrictions">
+                    <h4 class="level-restrictions-title">📋 Level ${level} Restrictions</h4>
+                    <p><strong>Description:</strong> ${restrictions.description}</p>
+                    <p><strong>Maximum Certifications:</strong> ${restrictions.maxCerts}</p>
+                    <p><strong>Budget Limit:</strong> $${restrictions.maxCost} total</p>
+                    <div id="selectionCounter" class="selection-counter">
+                        <span>Selected: <span id="certCount">0</span>/${restrictions.maxCerts} certifications</span>
+                        <span class="selection-cost">Cost: $<span id="totalCost">0</span>/$${restrictions.maxCost}</span>
+                    </div>
+                </div>
+            `;
+            
+            // Insert after checkout indicator
+            const indicator = document.getElementById('checkoutFlowIndicator');
+            indicator.insertAdjacentHTML('afterend', restrictionHtml);
+        }
+
+        function addReturnToCheckoutButton() {
+            const returnButtonHtml = `
+                <div id="returnToCheckout" class="return-to-checkout">
+                    <button onclick="returnToCheckout()" class="return-to-checkout-btn">
+                        🛒 Back to Checkout (<span id="returnCertCount">0</span> selected)
+                    </button>
+                </div>
+            `;
+            
+            document.body.insertAdjacentHTML('beforeend', returnButtonHtml);
+        }
+
+        function returnToCheckout() {
+            if (selectedCertifications.length === 0) {
+                alert('Please select at least one certification before returning to checkout.');
+                return;
+            }
+
+            const totalCost = selectedCertifications.reduce((sum, cert) => sum + cert.cost, 0);
+            
+            // Create professional selections object
+            const professionalSelections = {
+                sector: currentSelectedSector,
+                industryFocus: currentSelectedIndustry,
+                vendor: currentSelectedVendor,
+                certifications: selectedCertifications,
+                level: checkoutContext.selectedLevel,
+                totalCost: totalCost,
+                returnToCheckout: true,
+                timestamp: new Date().toISOString()
+            };
+            
+            sessionStorage.setItem('professionalSelections', JSON.stringify(professionalSelections));
+            window.location.href = 'hexad-checkout-system.html?resume=professional';
+        }
+
+        // Certification selection handlers (to be called when user selects certifications)
+        function toggleCertificationSelection(certElement, certData) {
+            const level = checkoutContext?.selectedLevel || 1;
+            const restrictions = {
+                1: { maxCerts: 3, maxCost: 500 },
+                2: { maxCerts: 5, maxCost: 800 },
+                3: { maxCerts: 7, maxCost: 1200 },
+                4: { maxCerts: 9, maxCost: 1800 },
+                5: { maxCerts: 12, maxCost: 2500 }
+            }[level];
+
+            const index = selectedCertifications.findIndex(cert => cert.id === certData.id);
+            
+            if (index > -1) {
+                // Remove certification
+                selectedCertifications.splice(index, 1);
+                certElement.classList.remove('selected');
+            } else {
+                // Check restrictions before adding
+                if (selectedCertifications.length >= restrictions.maxCerts) {
+                    alert(`Level ${level} allows maximum ${restrictions.maxCerts} certifications.`);
+                    return;
+                }
+                
+                const currentCost = selectedCertifications.reduce((sum, cert) => sum + cert.cost, 0);
+                if (currentCost + certData.cost > restrictions.maxCost) {
+                    alert(`Adding this certification would exceed your Level ${level} budget of $${restrictions.maxCost}.`);
+                    return;
+                }
+                
+                // Add certification
+                selectedCertifications.push(certData);
+                certElement.classList.add('selected');
+            }
+            
+            updateSelectionCounters();
+        }
+
+        function updateSelectionCounters() {
+            const certCountElement = document.getElementById('certCount');
+            const totalCostElement = document.getElementById('totalCost');
+            const returnCountElement = document.getElementById('returnCertCount');
+            
+            if (certCountElement) certCountElement.textContent = selectedCertifications.length;
+            if (returnCountElement) returnCountElement.textContent = selectedCertifications.length;
+            
+            const totalCost = selectedCertifications.reduce((sum, cert) => sum + cert.cost, 0);
+            if (totalCostElement) totalCostElement.textContent = totalCost;
+        }
+
+        // Enhanced sector navigation with BTH Session Management
+        function navigateToSector(sectorName) {
+            // Use BTH Session Manager for enhanced navigation
+            window.BTHSession.navigateToSector(sectorName);
+        }
     </script>
 </body>
 </html>

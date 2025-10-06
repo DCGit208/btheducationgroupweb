@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fast-Track Deployment Programs | BTH Education Group - Rapid Workforce Solutions</title>
+    <meta name="description" content="48-hour accelerated training programs for rapid workforce deployment. Skill validation, emergency placement services, and corporate partnership programs.">
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #323130;
+            background: #f8f9fa;
+        }
+        
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #d13438 0%, #a52a2e 100%);
+            color: white;
+            padding: 2rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"><defs><pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="2" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="60" height="60" fill="url(%23dots)"/></svg>');
+            opacity: 0.4;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .header-content {
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .breadcrumb {
+            font-size: 14px;
+            margin-bottom: 1rem;
+            opacity: 0.9;
+        }
+        
+        .breadcrumb a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+        }
+        
+        .breadcrumb a:hover {
+            color: white;
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .subtitle {
+            font-size: 1.4rem;
+            opacity: 0.95;
+            margin-bottom: 2rem;
+            line-height: 1.4;
+        }
+        
+        .deployment-metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .metric {
+            background: rgba(255,255,255,0.15);
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .metric-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        
+        .metric-label {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+        
+        /* Navigation */
+        .nav-bar {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .nav-content {
+            display: flex;
+            align-items: center;
+            padding: 1rem 0;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #d13438;
+            text-decoration: none;
+            margin-right: 2rem;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            margin-left: auto;
+        }
+        
+        .nav-links a {
+            color: #323130;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        
+        .nav-links a:hover {
+            color: #d13438;
+        }
+        
+        /* Main Content */
+        .main-content {
+            padding: 3rem 0;
+        }
+        
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 400px;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+        
+        .course-content {
+            background: white;
+            border-radius: 8px;
+            padding: 2.5rem;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+        }
+        
+        .sidebar {
+            position: sticky;
+            top: 100px;
+            height: fit-content;
+        }
+        
+        /* Deployment Tracks */
+        .deployment-tracks {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .track {
+            background: white;
+            border-radius: 12px;
+            padding: 2.5rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            border-top: 5px solid #d13438;
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .track:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+        }
+        
+        .track.featured {
+            border-top-color: #0078d4;
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9ff 100%);
+        }
+        
+        .track.premium {
+            border-top-color: #107c10;
+            background: linear-gradient(135deg, #ffffff 0%, #f8fff8 100%);
+        }
+        
+        .track-badge {
+            position: absolute;
+            top: -12px;
+            right: 20px;
+            background: #d13438;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        .featured .track-badge {
+            background: #0078d4;
+        }
+        
+        .premium .track-badge {
+            background: #107c10;
+        }
+        
+        .track-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .track-title {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #323130;
+        }
+        
+        .track-duration {
+            background: #f8f9fa;
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #d13438;
+            margin-bottom: 1.5rem;
+        }
+        
+        .featured .track-duration {
+            color: #0078d4;
+        }
+        
+        .premium .track-duration {
+            color: #107c10;
+        }
+        
+        .track-features {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+        
+        .track-features li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.75rem;
+            font-size: 0.95rem;
+        }
+        
+        .track-features li::before {
+            content: '⚡';
+            margin-right: 0.75rem;
+            font-size: 1.1rem;
+        }
+        
+        .track-price {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #d13438;
+            margin-bottom: 1.5rem;
+        }
+        
+        .featured .track-price {
+            color: #0078d4;
+        }
+        
+        .premium .track-price {
+            color: #107c10;
+        }
+        
+        .track-btn {
+            width: 100%;
+            background: #d13438;
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .featured .track-btn {
+            background: #0078d4;
+        }
+        
+        .premium .track-btn {
+            background: #107c10;
+        }
+        
+        .track-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        
+        /* Success Stories */
+        .success-section {
+            background: linear-gradient(135deg, #f8f9fa 0%, #fff5f5 100%);
+            padding: 4rem 0;
+            margin: 4rem 0;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            color: #323130;
+            text-align: center;
+        }
+        
+        .success-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .success-story {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            position: relative;
+        }
+        
+        .success-story::before {
+            content: '"';
+            font-size: 4rem;
+            color: #d13438;
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            font-family: serif;
+        }
+        
+        .story-text {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            padding-top: 1rem;
+        }
+        
+        .story-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #d13438;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .author-info h5 {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+        
+        .author-info p {
+            font-size: 0.9rem;
+            color: #605e5c;
+        }
+        
+        /* Partnership Section */
+        .partnership-section {
+            background: white;
+            padding: 3rem 0;
+            border-top: 1px solid #e1e4e8;
+        }
+        
+        .partner-logos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 2rem;
+            align-items: center;
+            opacity: 0.7;
+            margin-top: 2rem;
+        }
+        
+        .partner-logo {
+            text-align: center;
+            padding: 1rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #605e5c;
+        }
+        
+        /* Sidebar Components */
+        .info-card {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            margin-bottom: 2rem;
+        }
+        
+        .info-card h4 {
+            margin-bottom: 1rem;
+            color: #323130;
+        }
+        
+        .contact-btn {
+            width: 100%;
+            background: #d13438;
+            color: white;
+            border: none;
+            padding: 1rem;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            margin: 0.5rem 0;
+            transition: background 0.2s;
+        }
+        
+        .contact-btn:hover {
+            background: #a52a2e;
+        }
+        
+        .contact-btn.secondary {
+            background: #f8f9fa;
+            color: #d13438;
+            border: 1px solid #d13438;
+        }
+        
+        .contact-btn.secondary:hover {
+            background: #fff5f5;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .deployment-metrics {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+            
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .deployment-tracks {
+                grid-template-columns: 1fr;
+            }
+            
+            .success-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a> / <a href="oedp.html">OEDP</a> / <a href="oedp.html#crisis-skills">Crisis Skills</a> / Fast-Track Deployment
+                </div>
+                <h1>Fast-Track Deployment</h1>
+                <p class="subtitle">Accelerated workforce mobilization programs designed for rapid skill validation and emergency placement in critical positions</p>
+                <div class="deployment-metrics">
+                    <div class="metric">
+                        <span class="metric-number">48HR</span>
+                        <span class="metric-label">Average Deployment</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-number">92%</span>
+                        <span class="metric-label">Placement Success</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-number">2,500+</span>
+                        <span class="metric-label">Professionals Deployed</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-number">24/7</span>
+                        <span class="metric-label">Support Available</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="nav-bar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="logo">BTH Education Group</a>
+                <ul class="nav-links">
+                    <li><a href="#overview">Overview</a></li>
+                    <li><a href="#tracks">Deployment Tracks</a></li>
+                    <li><a href="#success">Success Stories</a></li>
+                    <li><a href="#partnerships">Partnerships</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="content-grid">
+                <div class="course-content">
+                    <section id="overview">
+                        <h2 class="section-title">Program Overview</h2>
+                        <p>Our Fast-Track Deployment Programs are engineered for organizations facing critical workforce gaps and professionals seeking rapid career advancement. Through intensive skill validation and accelerated placement services, we mobilize qualified talent in record time.</p>
+                        
+                        <div style="background: linear-gradient(135deg, #fff5f5 0%, #f8f9fa 100%); padding: 2rem; border-radius: 8px; margin: 2rem 0; border-left: 4px solid #d13438;">
+                            <h3 style="color: #d13438; margin-bottom: 1rem;">⚡ Emergency Deployment Process</h3>
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem;">
+                                <div>
+                                    <h4 style="color: #323130; margin-bottom: 0.5rem;">🎯 Skills Assessment</h4>
+                                    <p style="font-size: 0.9rem; color: #605e5c;">Rapid competency evaluation and gap analysis</p>
+                                </div>
+                                <div>
+                                    <h4 style="color: #323130; margin-bottom: 0.5rem;">⚡ Accelerated Training</h4>
+                                    <p style="font-size: 0.9rem; color: #605e5c;">Intensive skill development and certification</p>
+                                </div>
+                                <div>
+                                    <h4 style="color: #323130; margin-bottom: 0.5rem;">🚀 Immediate Placement</h4>
+                                    <p style="font-size: 0.9rem; color: #605e5c;">Direct deployment to critical positions</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <section id="tracks" class="deployment-tracks">
+                            <div class="track">
+                                <div class="track-badge">Standard</div>
+                                <div class="track-icon">⚡</div>
+                                <h3 class="track-title">Rapid Response Deployment</h3>
+                                <div class="track-duration">48-72 Hours</div>
+                                <ul class="track-features">
+                                    <li>Emergency skills assessment</li>
+                                    <li>Accelerated competency training</li>
+                                    <li>Basic certification validation</li>
+                                    <li>Direct employer matching</li>
+                                    <li>2-week placement guarantee</li>
+                                    <li>Performance monitoring</li>
+                                    <li>30-day success tracking</li>
+                                </ul>
+                                <div class="track-price">$1,997</div>
+                                <button class="track-btn" onclick="enrollTrack('rapid-response')">Deploy Now</button>
+                            </div>
+
+                            <div class="track featured">
+                                <div class="track-badge">Most Requested</div>
+                                <div class="track-icon">🚀</div>
+                                <h3 class="track-title">Executive Fast-Track</h3>
+                                <div class="track-duration">24-48 Hours</div>
+                                <ul class="track-features">
+                                    <li>C-suite readiness assessment</li>
+                                    <li>Leadership competency validation</li>
+                                    <li>Executive coaching session</li>
+                                    <li>Premium employer network access</li>
+                                    <li>Guaranteed placement within 24hrs</li>
+                                    <li>6-month success guarantee</li>
+                                    <li>Executive mentorship program</li>
+                                    <li>Performance bonus eligibility</li>
+                                </ul>
+                                <div class="track-price">$4,997</div>
+                                <button class="track-btn" onclick="enrollTrack('executive-track')">Apply for Executive Track</button>
+                            </div>
+
+                            <div class="track premium">
+                                <div class="track-badge">Enterprise</div>
+                                <div class="track-icon">🏢</div>
+                                <h3 class="track-title">Corporate Workforce Solution</h3>
+                                <div class="track-duration">Custom Timeline</div>
+                                <ul class="track-features">
+                                    <li>Bulk workforce assessment</li>
+                                    <li>Custom training program development</li>
+                                    <li>Team deployment coordination</li>
+                                    <li>On-site training delivery</li>
+                                    <li>Dedicated account management</li>
+                                    <li>Performance analytics dashboard</li>
+                                    <li>Multi-location deployment support</li>
+                                    <li>Volume pricing discounts</li>
+                                </ul>
+                                <div class="track-price">Custom</div>
+                                <button class="track-btn" onclick="enrollTrack('corporate-solution')">Request Enterprise Quote</button>
+                            </div>
+                        </section>
+                    </section>
+                </div>
+
+                <div class="sidebar">
+                    <div class="info-card">
+                        <h4>🚨 Emergency Deployment</h4>
+                        <p>Critical workforce shortage? Our emergency deployment service can mobilize qualified professionals within 12-24 hours.</p>
+                        <button class="contact-btn" onclick="emergencyDeploy()">Request Emergency Deployment</button>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h4>📊 Deployment Analytics</h4>
+                        <ul style="list-style: none; font-size: 0.9rem;">
+                            <li style="margin-bottom: 0.75rem;"><strong>Average Deployment:</strong> 48 hours</li>
+                            <li style="margin-bottom: 0.75rem;"><strong>Success Rate:</strong> 92% placement</li>
+                            <li style="margin-bottom: 0.75rem;"><strong>Retention Rate:</strong> 89% at 6 months</li>
+                            <li style="margin-bottom: 0.75rem;"><strong>Salary Increase:</strong> Average 34%</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h4>🤝 Employer Partners</h4>
+                        <p>Access to our exclusive network of 1,200+ corporate partners actively seeking qualified professionals.</p>
+                        <button class="contact-btn secondary" onclick="viewPartners()">View Partner Network</button>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h4>💡 Need Consultation?</h4>
+                        <p>Speak with our deployment specialists to determine the best track for your situation.</p>
+                        <button class="contact-btn" onclick="scheduleConsult()">Schedule Free Consultation</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Success Stories -->
+    <section id="success" class="success-section">
+        <div class="container">
+            <h2 class="section-title">Deployment Success Stories</h2>
+            <div class="success-grid">
+                <div class="success-story">
+                    <p class="story-text">BTH's Fast-Track program deployed our entire crisis management team in 36 hours during a critical system failure. Their rapid response saved our company millions in downtime.</p>
+                    <div class="story-author">
+                        <div class="author-avatar">MJ</div>
+                        <div class="author-info">
+                            <h5>Maria Johnson</h5>
+                            <p>VP Operations, TechCorp Industries</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="success-story">
+                    <p class="story-text">From unemployed to executive director in 48 hours. BTH's validation process and employer network made the impossible happen. My salary increased by 60%.</p>
+                    <div class="story-author">
+                        <div class="author-avatar">DK</div>
+                        <div class="author-info">
+                            <h5>David Kim</h5>
+                            <p>Executive Director, Emergency Services</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="success-story">
+                    <p class="story-text">When our disaster recovery team was compromised, BTH deployed certified professionals within 24 hours. Their expertise helped us maintain business continuity.</p>
+                    <div class="story-author">
+                        <div class="author-avatar">SL</div>
+                        <div class="author-info">
+                            <h5>Sarah Lee</h5>
+                            <p>Chief Risk Officer, Global Financial Services</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partnership Section -->
+    <section id="partnerships" class="partnership-section">
+        <div class="container">
+            <h2 class="section-title">Corporate Partnership Network</h2>
+            <p style="text-align: center; font-size: 1.1rem; margin-bottom: 2rem; color: #605e5c;">Trusted by industry leaders for rapid workforce solutions</p>
+            <div class="partner-logos">
+                <div class="partner-logo">🏢 Fortune 500 Companies</div>
+                <div class="partner-logo">🏛️ Government Agencies</div>
+                <div class="partner-logo">⚕️ Healthcare Systems</div>
+                <div class="partner-logo">🏭 Manufacturing Giants</div>
+                <div class="partner-logo">💻 Technology Leaders</div>
+                <div class="partner-logo">🛡️ Defense Contractors</div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function enrollTrack(track) {
+            const prices = {
+                'rapid-response': 1997,
+                'executive-track': 4997,
+                'corporate-solution': 'custom'
+            };
+            
+            if (track === 'corporate-solution') {
+                window.location.href = 'corporate-inquiry.html?program=fast-track-deployment';
+            } else {
+                window.location.href = `enrollment.html?course=fast-track-${track}&price=${prices[track]}`;
+            }
+        }
+        
+        function emergencyDeploy() {
+            window.location.href = 'emergency-deployment-request.html';
+        }
+        
+        function viewPartners() {
+            window.location.href = 'partner-network.html';
+        }
+        
+        function scheduleConsult() {
+            window.location.href = 'consultation-booking.html?program=fast-track-deployment';
+        }
+    </script>
+</body>
+</html>

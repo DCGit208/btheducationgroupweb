@@ -437,90 +437,392 @@
             </div>
         </section>
 
-        <!-- Certification Categories -->
-        <section class="certification-categories">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Automotive Certification Categories</h2>
-                    <p class="section-description">Choose from four specialized automotive tracks, each designed to advance your career in critical areas of automotive technology and transportation systems.</p>
-                </div>
-                
-                <div class="categories-grid">
-                    <!-- Traditional Automotive Technology -->
-                    <div class="category-card" data-category="traditional-automotive">
-                        <div class="category-header">
-                            <div class="category-icon">🔧</div>
-                            <h3 class="category-title">Traditional Automotive Technology</h3>
-                        </div>
-                        <p class="category-description">Master internal combustion engines with certifications in automotive diagnostics, repair, maintenance, and advanced mechanical systems.</p>
-                        <span class="cert-count">18+ Traditional Certifications</span>
-                    </div>
-                    
-                    <!-- Electric Vehicle Technology -->
-                    <div class="category-card" data-category="electric-vehicle">
-                        <div class="category-header">
-                            <div class="category-icon">⚡</div>
-                            <h3 class="category-title">Electric Vehicle Technology</h3>
-                        </div>
-                        <p class="category-description">Excel in EV systems with certifications in battery technology, charging infrastructure, electric drivetrain, and high-voltage safety.</p>
-                        <span class="cert-count">16+ Electric Vehicle Certifications</span>
-                    </div>
-                    
-                    <!-- Hybrid & Advanced Systems -->
-                    <div class="category-card" data-category="hybrid-systems">
-                        <div class="category-header">
-                            <div class="category-icon">🔋</div>
-                            <h3 class="category-title">Hybrid & Advanced Systems</h3>
-                        </div>
-                        <p class="category-description">Lead hybrid technology with certifications in dual-power systems, regenerative braking, advanced electronics, and autonomous features.</p>
-                        <span class="cert-count">14+ Hybrid Certifications</span>
-                    </div>
-                    
-                    <!-- Automotive Business & Management -->
-                    <div class="category-card" data-category="automotive-business">
-                        <div class="category-header">
-                            <div class="category-icon">💼</div>
-                            <h3 class="category-title">Automotive Business & Management</h3>
-                        </div>
-                        <p class="category-description">Drive business success with certifications in service management, parts operations, dealership management, and automotive sales.</p>
-                        <span class="cert-count">12+ Business Certifications</span>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <!-- Professional Development System Section -->
+    <section class="professional-system-section">
+        <div class="system-header">
+            <h2>Level 1-5 Professional System</h2>
+            <p>Select your current level to view appropriate certifications, pricing, and progression paths</p>
+        </div>
 
-        <!-- Level Integration Section -->
-        <section class="level-integration">
-            <div class="level-display">
-                <div class="current-level-info" id="levelInfo">
-                    <div class="level-info-content">
-                        <div class="level-badge" id="levelBadge">Level 1</div>
-                        <h2 class="level-title" id="levelTitle">Foundation Automotive Professional</h2>
-                        <p class="level-description" id="levelDesc">Begin your automotive career journey with essential certifications and fundamental skills in traditional and modern automotive systems.</p>
-                        
-                        <div class="level-stats">
-                            <div class="stat-item">
-                                <span class="stat-number" id="maxCerts">3</span>
-                                <div class="stat-label">Maximum Certifications</div>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-number" id="totalBudget">$13,902.66</span>
-                                <div class="stat-label">Total Investment</div>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-number">60+</span>
-                                <div class="stat-label">Available Certifications</div>
-                            </div>
-                        </div>
-                    </div>
+        <!-- Filter Tabs -->
+        <div class="filter-tabs">
+            <div class="filter-tab active" data-filter="industry">Industry Focus</div>
+            <div class="filter-tab" data-filter="domain">Domain Expertise</div>
+        </div>
+
+        <!-- Level Selector -->
+        <div class="level-selector">
+            <div class="level-button level-1 active" data-level="1">Level 1<br><small>Foundation</small></div>
+            <div class="level-button level-2" data-level="2">Level 2<br><small>Intermediate</small></div>
+            <div class="level-button level-3" data-level="3">Level 3<br><small>Advanced</small></div>
+            <div class="level-button level-4" data-level="4">Level 4<br><small>Expert</small></div>
+            <div class="level-button level-5" data-level="5">Level 5<br><small>Master</small></div>
+        </div>
+
+        <!-- Level Information Display -->
+        <div class="level-info-display">
+            <div class="level-info-grid">
+                <div class="level-info-card">
+                    <h4>Maximum Certifications</h4>
+                    <div class="info-value" id="maxCerts">3</div>
                 </div>
-                
-                <div class="cta-buttons">
-                    <button class="btn-primary-large" onclick="selectCertifications()">Select Your Certifications</button>
-                    <a href="../hexad-mastery.html" class="btn-secondary">Return to HEXAD Assessment</a>
+                <div class="level-info-card">
+                    <h4>Investment Level</h4>
+                    <div class="info-value" id="investmentLevel">$967.11</div>
+                </div>
+                <div class="level-info-card">
+                    <h4>Duration</h4>
+                    <div class="info-value" id="duration">8-12 Months</div>
+                </div>
+                <div class="level-info-card">
+                    <h4>Complexity</h4>
+                    <div class="info-value" id="complexity">Foundation</div>
                 </div>
             </div>
-        </section>
+
+            <!-- Pricing Display -->
+            <div class="pricing-display">
+                <div class="pricing-header">
+                    <h3>Current Level Investment</h3>
+                    <div class="pricing-value" id="currentPrice">$967.11</div>
+                    <p>Per dimension professional development pathway</p>
+                </div>
+                <div class="pricing-details">
+                    <div class="pricing-detail">
+                        <h4>Total Investment</h4>
+                        <p id="totalInvestment">$5,802.66</p>
+                        <small>All 6 dimensions</small>
+                    </div>
+                    <div class="pricing-detail">
+                        <h4>Certification Cost</h4>
+                        <p id="certificationCost">$8,100</p>
+                        <small>Professional credentials</small>
+                    </div>
+                    <div class="pricing-detail">
+                        <h4>Total Program Value</h4>
+                        <p id="programValue">$13,902.66</p>
+                        <small>Complete pathway</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AUTOMOTIVE CATEGORIES GRID -->
+    <section id="automotive-categories" class="categories-section">
+        <div class="automotive-categories-grid">
+        <!-- 1. Traditional Automotive Systems -->
+        <div class="category-card">
+            <div class="category-header">
+                <div class="category-icon">
+                    <i class="fas fa-wrench"></i>
+                </div>
+                <div>
+                    <h3 class="category-title">Traditional Automotive Systems</h3>
+                    <p class="category-subtitle">6 industry partners • Engine systems, Diagnostics, Repair, Maintenance</p>
+                </div>
+                <div class="category-info-icon" onclick="showLevelInfo('traditional-automotive')">
+                    <i class="fas fa-info-circle"></i>
+                </div>
+            </div>
+            <div class="vendors-grid">
+                <div class="vendor-badge bth-partner">ASE</div>
+                <div class="vendor-badge bth-partner">SAE</div>
+                <div class="vendor-badge">NATEF</div>
+                <div class="vendor-badge">NAPA</div>
+                <div class="vendor-badge">Snap-on</div>
+                <div class="vendor-badge">Bosch</div>
+            </div>
+        </div>
+
+        <!-- 2. Electric Vehicle Technology -->
+        <div class="category-card">
+            <div class="category-header">
+                <div class="category-icon">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <div>
+                    <h3 class="category-title">Electric Vehicle Technology</h3>
+                    <p class="category-subtitle">7 EV manufacturers • Battery systems, Charging, High-voltage safety</p>
+                </div>
+                <div class="category-info-icon" onclick="showLevelInfo('electric-vehicle')">
+                    <i class="fas fa-info-circle"></i>
+                </div>
+            </div>
+            <div class="vendors-grid">
+                <div class="vendor-badge bth-partner">Tesla</div>
+                <div class="vendor-badge bth-partner">Ford</div>
+                <div class="vendor-badge bth-partner">GM</div>
+                <div class="vendor-badge">BMW</div>
+                <div class="vendor-badge">Mercedes</div>
+                <div class="vendor-badge">Nissan</div>
+                <div class="vendor-badge">Hyundai</div>
+            </div>
+        </div>
+
+        <!-- 3. Hybrid & Advanced Systems -->
+        <div class="category-card">
+            <div class="category-header">
+                <div class="category-icon">
+                    <i class="fas fa-battery-half"></i>
+                </div>
+                <div>
+                    <h3 class="category-title">Hybrid & Advanced Systems</h3>
+                    <p class="category-subtitle">5 hybrid specialists • Dual-power systems, ADAS, Autonomous tech</p>
+                </div>
+                <div class="category-info-icon" onclick="showLevelInfo('hybrid-systems')">
+                    <i class="fas fa-info-circle"></i>
+                </div>
+            </div>
+            <div class="vendors-grid">
+                <div class="vendor-badge bth-partner">Toyota</div>
+                <div class="vendor-badge">Honda</div>
+                <div class="vendor-badge">Prius</div>
+                <div class="vendor-badge">Lexus</div>
+                <div class="vendor-badge">Acura</div>
+            </div>
+        </div>
+
+        <!-- 4. Automotive Service Management -->
+        <div class="category-card">
+            <div class="category-header">
+                <div class="category-icon">
+                    <i class="fas fa-clipboard-list"></i>
+                </div>
+                <div>
+                    <h3 class="category-title">Automotive Service Management</h3>
+                    <p class="category-subtitle">5 business organizations • Service operations, Parts management, Customer relations</p>
+                </div>
+                <div class="category-info-icon" onclick="showLevelInfo('service-management')">
+                    <i class="fas fa-info-circle"></i>
+                </div>
+            </div>
+            <div class="vendors-grid">
+                <div class="vendor-badge">NADA</div>
+                <div class="vendor-badge">ASA</div>
+                <div class="vendor-badge">SEMA</div>
+                <div class="vendor-badge">AIAG</div>
+                <div class="vendor-badge">MEMA</div>
+            </div>
+        </div>
+
+        <!-- 5. Automotive Manufacturing -->
+        <div class="category-card">
+            <div class="category-header">
+                <div class="category-icon">
+                    <i class="fas fa-industry"></i>
+                </div>
+                <div>
+                    <h3 class="category-title">Automotive Manufacturing</h3>
+                    <p class="category-subtitle">6 manufacturers • Production systems, Quality control, Assembly processes</p>
+                </div>
+                <div class="category-info-icon" onclick="showLevelInfo('automotive-manufacturing')">
+                    <i class="fas fa-info-circle"></i>
+                </div>
+            </div>
+            <div class="vendors-grid">
+                <div class="vendor-badge bth-partner">Ford</div>
+                <div class="vendor-badge bth-partner">GM</div>
+                <div class="vendor-badge">Toyota</div>
+                <div class="vendor-badge">BMW</div>
+                <div class="vendor-badge">Mercedes</div>
+                <div class="vendor-badge">AIAG</div>
+            </div>
+        </div>
+
+        <!-- Get Started Card -->
+        <div class="get-started-card">
+            <div class="get-started-header">
+                <div class="get-started-icon">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <h3>Ready to Begin?</h3>
+            </div>
+            <p>Start your automotive certification journey with a customized pathway based on your current level and career goals.</p>
+            <button class="btn-get-started" onclick="openCertificationModal()">
+                Select Certifications
+                <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+        </div>
+    </section>
+
+    <!-- DOMAIN EXPERTISE PATHWAYS (Hidden by default) -->
+    <section id="domain-pathways" class="categories-section">
+        <div class="domain-header">
+            <div class="domain-header-content">
+                <h2>Domain Expertise Pathways</h2>
+                <p>Specialized automotive domains combining multiple technologies and industry standards</p>
+            </div>
+        </div>
+
+        <div class="domain-categories-grid">
+            <!-- Vehicle Technology -->
+            <div class="domain-card" data-domain="vehicle-technology">
+                <div class="domain-header-card">
+                    <div class="domain-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3 class="domain-title">Vehicle Technology</h3>
+                    <p class="domain-subtitle">Advanced automotive systems and diagnostics</p>
+                </div>
+                <div class="domain-description">
+                    <p>Master comprehensive vehicle technology from traditional engines to electric drivetrains and autonomous systems.</p>
+                </div>
+                <div class="domain-vendors">
+                    <div class="vendor-tag">ASE</div>
+                    <div class="vendor-tag">SAE</div>
+                    <div class="vendor-tag">Ford</div>
+                    <div class="vendor-tag">GM</div>
+                </div>
+                <div class="domain-stats">
+                    <div class="stat">
+                        <span class="stat-number">18</span>
+                        <span class="stat-label">Certifications</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">12-18</span>
+                        <span class="stat-label">Months</span>
+                    </div>
+                </div>
+                <button class="btn-domain-select" onclick="selectDomainPath('vehicle-technology')">
+                    Explore Pathway
+                </button>
+            </div>
+
+            <!-- Electric Vehicles -->
+            <div class="domain-card" data-domain="electric-vehicles">
+                <div class="domain-header-card">
+                    <div class="domain-icon">
+                        <i class="fas fa-charging-station"></i>
+                    </div>
+                    <h3 class="domain-title">Electric Vehicles</h3>
+                    <p class="domain-subtitle">EV technology and infrastructure</p>
+                </div>
+                <div class="domain-description">
+                    <p>Specialize in electric vehicle technology, battery systems, charging infrastructure, and high-voltage safety.</p>
+                </div>
+                <div class="domain-vendors">
+                    <div class="vendor-tag">Tesla</div>
+                    <div class="vendor-tag">Ford</div>
+                    <div class="vendor-tag">GM</div>
+                    <div class="vendor-tag">BMW</div>
+                </div>
+                <div class="domain-stats">
+                    <div class="stat">
+                        <span class="stat-number">16</span>
+                        <span class="stat-label">Certifications</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">10-14</span>
+                        <span class="stat-label">Months</span>
+                    </div>
+                </div>
+                <button class="btn-domain-select" onclick="selectDomainPath('electric-vehicles')">
+                    Explore Pathway
+                </button>
+            </div>
+
+            <!-- Automotive Service -->
+            <div class="domain-card" data-domain="automotive-service">
+                <div class="domain-header-card">
+                    <div class="domain-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3 class="domain-title">Automotive Service</h3>
+                    <p class="domain-subtitle">Service excellence and customer satisfaction</p>
+                </div>
+                <div class="domain-description">
+                    <p>Excel in automotive service operations, customer relations, parts management, and service quality.</p>
+                </div>
+                <div class="domain-vendors">
+                    <div class="vendor-tag">ASE</div>
+                    <div class="vendor-tag">NADA</div>
+                    <div class="vendor-tag">ASA</div>
+                    <div class="vendor-tag">NAPA</div>
+                </div>
+                <div class="domain-stats">
+                    <div class="stat">
+                        <span class="stat-number">12</span>
+                        <span class="stat-label">Certifications</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">8-12</span>
+                        <span class="stat-label">Months</span>
+                    </div>
+                </div>
+                <button class="btn-domain-select" onclick="selectDomainPath('automotive-service')">
+                    Explore Pathway
+                </button>
+            </div>
+
+            <!-- Manufacturing Processes -->
+            <div class="domain-card" data-domain="manufacturing-processes">
+                <div class="domain-header-card">
+                    <div class="domain-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3 class="domain-title">Manufacturing Processes</h3>
+                    <p class="domain-subtitle">Automotive production and quality systems</p>
+                </div>
+                <div class="domain-description">
+                    <p>Master automotive manufacturing processes, quality control, lean production, and assembly optimization.</p>
+                </div>
+                <div class="domain-vendors">
+                    <div class="vendor-tag">Ford</div>
+                    <div class="vendor-tag">GM</div>
+                    <div class="vendor-tag">Toyota</div>
+                    <div class="vendor-tag">AIAG</div>
+                </div>
+                <div class="domain-stats">
+                    <div class="stat">
+                        <span class="stat-number">14</span>
+                        <span class="stat-label">Certifications</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">10-16</span>
+                        <span class="stat-label">Months</span>
+                    </div>
+                </div>
+                <button class="btn-domain-select" onclick="selectDomainPath('manufacturing-processes')">
+                    Explore Pathway
+                </button>
+            </div>
+
+            <!-- Quality Control -->
+            <div class="domain-card" data-domain="quality-control">
+                <div class="domain-header-card">
+                    <div class="domain-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3 class="domain-title">Quality Control</h3>
+                    <p class="domain-subtitle">Automotive quality assurance and standards</p>
+                </div>
+                <div class="domain-description">
+                    <p>Ensure automotive quality excellence with testing, inspection, quality systems, and continuous improvement.</p>
+                </div>
+                <div class="domain-vendors">
+                    <div class="vendor-tag">AIAG</div>
+                    <div class="vendor-tag">SAE</div>
+                    <div class="vendor-tag">ASQ</div>
+                    <div class="vendor-tag">ISO</div>
+                </div>
+                <div class="domain-stats">
+                    <div class="stat">
+                        <span class="stat-number">10</span>
+                        <span class="stat-label">Certifications</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">8-14</span>
+                        <span class="stat-label">Months</span>
+                    </div>
+                </div>
+                <button class="btn-domain-select" onclick="selectDomainPath('quality-control')">
+                    Explore Pathway
+                </button>
+            </div>
+        </div>
+    </section>
 
         <!-- Call to Action -->
         <section class="cta-section">

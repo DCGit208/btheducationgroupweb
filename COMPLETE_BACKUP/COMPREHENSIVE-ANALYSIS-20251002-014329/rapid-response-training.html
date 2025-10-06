@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rapid Response Training | BTH Education Group - Crisis Management Excellence</title>
+    <meta name="description" content="Professional rapid response training programs for critical incidents. Master crisis management, emergency protocols, and rapid deployment strategies. Industry-certified programs for workforce development.">
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #323130;
+            background: #f8f9fa;
+        }
+        
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #0078d4 0%, #106ebe 100%);
+            color: white;
+            padding: 2rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .header-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .breadcrumb {
+            font-size: 14px;
+            margin-bottom: 1rem;
+            opacity: 0.9;
+        }
+        
+        .breadcrumb a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+        }
+        
+        .breadcrumb a:hover {
+            color: white;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            margin-bottom: 2rem;
+        }
+        
+        .header-stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        /* Navigation */
+        .nav-bar {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .nav-content {
+            display: flex;
+            align-items: center;
+            padding: 1rem 0;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #0078d4;
+            text-decoration: none;
+            margin-right: 2rem;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            margin-left: auto;
+        }
+        
+        .nav-links a {
+            color: #323130;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        
+        .nav-links a:hover {
+            color: #0078d4;
+        }
+        
+        /* Main Content */
+        .main-content {
+            padding: 3rem 0;
+        }
+        
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 350px;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+        
+        .course-content {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .sidebar {
+            position: sticky;
+            top: 100px;
+            height: fit-content;
+        }
+        
+        .enrollment-card {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            margin-bottom: 2rem;
+        }
+        
+        .price {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #0078d4;
+            margin-bottom: 1rem;
+        }
+        
+        .enroll-btn {
+            width: 100%;
+            background: #0078d4;
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+            margin-bottom: 1rem;
+        }
+        
+        .enroll-btn:hover {
+            background: #106ebe;
+        }
+        
+        .course-includes {
+            list-style: none;
+            margin-top: 1rem;
+        }
+        
+        .course-includes li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+        
+        .course-includes li::before {
+            content: '✓';
+            color: #107c10;
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+        
+        /* Course Modules */
+        .modules-section {
+            margin: 3rem 0;
+        }
+        
+        .section-title {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            color: #323130;
+        }
+        
+        .module {
+            background: white;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .module-header {
+            padding: 1.5rem;
+            background: #f8f9fa;
+            border-bottom: 1px solid #e1e4e8;
+            cursor: pointer;
+            display: flex;
+            justify-content: between;
+            align-items: center;
+        }
+        
+        .module-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .module-meta {
+            font-size: 0.9rem;
+            color: #605e5c;
+        }
+        
+        .module-content {
+            padding: 1.5rem;
+            display: none;
+        }
+        
+        .lesson-list {
+            list-style: none;
+        }
+        
+        .lesson-item {
+            display: flex;
+            align-items: center;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .lesson-item:last-child {
+            border-bottom: none;
+        }
+        
+        .lesson-icon {
+            margin-right: 0.75rem;
+            font-size: 1.1rem;
+        }
+        
+        .lesson-title {
+            flex: 1;
+            font-weight: 500;
+        }
+        
+        .lesson-duration {
+            font-size: 0.85rem;
+            color: #605e5c;
+        }
+        
+        /* Certifications */
+        .certification-section {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e3f2fd 100%);
+            padding: 3rem 0;
+            margin: 3rem 0;
+        }
+        
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .cert-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+        
+        .cert-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .cert-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #323130;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .header-stats {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .nav-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .nav-links {
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a> / <a href="oedp.html">OEDP</a> / <a href="oedp.html#crisis-skills">Crisis Skills</a> / Rapid Response Training
+                </div>
+                <h1>Rapid Response Training</h1>
+                <p class="subtitle">Master critical incident management and emergency response protocols with industry-leading certification programs</p>
+                <div class="header-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">24HR</span>
+                        <span class="stat-label">Response Time</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">95%</span>
+                        <span class="stat-label">Success Rate</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Companies Trained</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="nav-bar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="logo">BTH Education Group</a>
+                <ul class="nav-links">
+                    <li><a href="#overview">Overview</a></li>
+                    <li><a href="#modules">Modules</a></li>
+                    <li><a href="#certifications">Certifications</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="content-grid">
+                <div class="course-content">
+                    <section id="overview">
+                        <h2 class="section-title">Program Overview</h2>
+                        <p style="font-size: 1.1rem; margin-bottom: 2rem; color: #605e5c;">
+                            Our Rapid Response Training program is designed for organizations and professionals who need to respond effectively to critical incidents. This comprehensive program combines theoretical knowledge with practical, hands-on simulation exercises.
+                        </p>
+                        
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin: 2rem 0;">
+                            <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 6px;">
+                                <h4 style="color: #0078d4; margin-bottom: 0.5rem;">🎯 Target Audience</h4>
+                                <p style="font-size: 0.9rem;">Emergency managers, security professionals, HR leaders, facility managers, and incident response teams</p>
+                            </div>
+                            <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 6px;">
+                                <h4 style="color: #0078d4; margin-bottom: 0.5rem;">⏱️ Duration</h4>
+                                <p style="font-size: 0.9rem;">40 hours of comprehensive training over 5 days, with optional extended programs available</p>
+                            </div>
+                            <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 6px;">
+                                <h4 style="color: #0078d4; margin-bottom: 0.5rem;">🏆 Certification</h4>
+                                <p style="font-size: 0.9rem;">ISO 22301 Business Continuity Management and FEMA ICS certification included</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="modules" class="modules-section">
+                        <h2 class="section-title">Training Modules</h2>
+                        
+                        <div class="module">
+                            <div class="module-header" onclick="toggleModule(this)">
+                                <div>
+                                    <div class="module-title">Module 1: Crisis Assessment & Classification</div>
+                                    <div class="module-meta">8 lessons • 45 min each • Hands-on exercises</div>
+                                </div>
+                                <span style="font-size: 1.2rem;">▼</span>
+                            </div>
+                            <div class="module-content">
+                                <ul class="lesson-list">
+                                    <li class="lesson-item">
+                                        <span class="lesson-icon">📹</span>
+                                        <span class="lesson-title">Incident Classification Systems</span>
+                                        <span class="lesson-duration">45 min</span>
+                                    </li>
+                                    <li class="lesson-item">
+                                        <span class="lesson-icon">📋</span>
+                                        <span class="lesson-title">Risk Assessment Frameworks</span>
+                                        <span class="lesson-duration">45 min</span>
+                                    </li>
+                                    <li class="lesson-item">
+                                        <span class="lesson-icon">🎯</span>
+                                        <span class="lesson-title">Priority Matrix Development</span>
+                                        <span class="lesson-duration">45 min</span>
+                                    </li>
+                                    <li class="lesson-item">
+                                        <span class="lesson-icon">🧪</span>
+                                        <span class="lesson-title">Simulation: Multi-Crisis Scenario</span>
+                                        <span class="lesson-duration">90 min</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="module">
+                            <div class="module-header" onclick="toggleModule(this)">
+                                <div>
+                                    <div class="module-title">Module 2: Incident Command Systems (ICS)</div>
+                                    <div class="module-meta">10 lessons • FEMA certified • Practical implementation</div>
+                                </div>
+                                <span style="font-size: 1.2rem;">▼</span>
+                            </div>
+                            <div class="module-content">
+                                <ul class="lesson-list">
+                                    <li class="lesson-item">
+                                        <span class="lesson-icon">📹</span>
+                                        <span class="lesson-title">ICS Structure & Hierarchy</span>
+                                        <span class="lesson-duration">60 min</span>
+                                    </li>
+                                    <li class="lesson-item">
+                                        <span class="lesson-icon">👥</span>
+                                        <span class="lesson-title">Command Staff Roles</span>
+                                        <span class="lesson-duration">45 min</span>
+                                    </li>
+                                    <li class="lesson-item">
+                                        <span class="lesson-icon">📊</span>
+                                        <span class="lesson-title">Resource Management</span>
+                                        <span class="lesson-duration">45 min</span>
+                                    </li>
+                                    <li class="lesson-item">
+                                        <span class="lesson-icon">🧪</span>
+                                        <span class="lesson-title">Live Exercise: ICS Implementation</span>
+                                        <span class="lesson-duration">180 min</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="module">
+                            <div class="module-header" onclick="toggleModule(this)">
+                                <div>
+                                    <div class="module-title">Module 3: Crisis Communication Protocols</div>
+                                    <div class="module-meta">6 lessons • Media training • Stakeholder management</div>
+                                </div>
+                                <span style="font-size: 1.2rem;">▼</span>
+                            </div>
+                            <div class="module-content">
+                                <ul class="lesson-list">
+                                    <li class="lesson-item">
+                                        <span class="lesson-icon">📢</span>
+                                        <span class="lesson-title">Crisis Communication Strategy</span>
+                                        <span class="lesson-duration">45 min</span>
+                                    </li>
+                                    <li class="lesson-item">
+                                        <span class="lesson-icon">📱</span>
+                                        <span class="lesson-title">Multi-Channel Communication</span>
+                                        <span class="lesson-duration">45 min</span>
+                                    </li>
+                                    <li class="lesson-item">
+                                        <span class="lesson-icon">🎤</span>
+                                        <span class="lesson-title">Media Relations & Press Conferences</span>
+                                        <span class="lesson-duration">60 min</span>
+                                    </li>
+                                    <li class="lesson-item">
+                                        <span class="lesson-icon">🧪</span>
+                                        <span class="lesson-title">Mock Press Conference Exercise</span>
+                                        <span class="lesson-duration">120 min</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <div class="sidebar">
+                    <div class="enrollment-card">
+                        <div class="price">$2,497<span style="font-size: 1rem; color: #605e5c;">/person</span></div>
+                        <p style="margin-bottom: 1rem; font-size: 0.9rem; color: #605e5c;">Full certification program with materials</p>
+                        <button class="enroll-btn" onclick="enrollNow()">Enroll Now</button>
+                        <button class="enroll-btn" style="background: #f8f9fa; color: #0078d4; border: 1px solid #0078d4;" onclick="requestDemo()">Request Demo</button>
+                        
+                        <ul class="course-includes">
+                            <li>40 hours of expert instruction</li>
+                            <li>All course materials & resources</li>
+                            <li>Hands-on simulation exercises</li>
+                            <li>ISO 22301 certification exam</li>
+                            <li>FEMA ICS certification</li>
+                            <li>1-year course access</li>
+                            <li>24/7 instructor support</li>
+                            <li>Corporate group discounts</li>
+                        </ul>
+                    </div>
+                    
+                    <div style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                        <h4 style="margin-bottom: 1rem; color: #323130;">Corporate Training</h4>
+                        <p style="font-size: 0.9rem; margin-bottom: 1rem; color: #605e5c;">Train your entire workforce with customized programs.</p>
+                        <button style="width: 100%; background: #107c10; color: white; border: none; padding: 0.75rem; border-radius: 4px; cursor: pointer;">Get Corporate Quote</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="certification-section">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center;">Professional Certifications</h2>
+            <div class="cert-grid">
+                <div class="cert-card">
+                    <div class="cert-icon">🏆</div>
+                    <h3 class="cert-title">ISO 22301 Business Continuity</h3>
+                    <p>International standard for business continuity management systems certification.</p>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon">🚨</div>
+                    <h3 class="cert-title">FEMA ICS Certification</h3>
+                    <p>Federal Emergency Management Agency Incident Command System certification.</p>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon">⚡</div>
+                    <h3 class="cert-title">Rapid Response Specialist</h3>
+                    <p>BTH proprietary certification for crisis response excellence and deployment readiness.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function toggleModule(header) {
+            const content = header.nextElementSibling;
+            const arrow = header.querySelector('span:last-child');
+            
+            if (content.style.display === 'block') {
+                content.style.display = 'none';
+                arrow.textContent = '▼';
+            } else {
+                content.style.display = 'block';
+                arrow.textContent = '▲';
+            }
+        }
+        
+        function enrollNow() {
+            // Integration with payment processor
+            window.location.href = 'enrollment.html?course=rapid-response-training&price=2497';
+        }
+        
+        function requestDemo() {
+            // Demo request functionality
+            window.location.href = 'demo-request.html?course=rapid-response-training';
+        }
+    </script>
+</body>
+</html>

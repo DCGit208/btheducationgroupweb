@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Competency Certification | BTH Education Group - Professional Crisis Leadership</title>
+    <meta name="description" content="Earn ISO-certified emergency competency credentials. Professional certification programs for crisis leadership, emergency management, and rapid deployment authorization.">
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #323130;
+            background: #f8f9fa;
+        }
+        
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #107c10 0%, #0b5d0b 100%);
+            color: white;
+            padding: 2rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="8" height="8" patternUnits="userSpaceOnUse"><path d="M 8 0 L 0 0 0 8" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.2;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .header-content {
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .breadcrumb {
+            font-size: 14px;
+            margin-bottom: 1rem;
+            opacity: 0.9;
+        }
+        
+        .breadcrumb a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+        }
+        
+        .breadcrumb a:hover {
+            color: white;
+        }
+        
+        h1 {
+            font-size: 3.2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .subtitle {
+            font-size: 1.3rem;
+            opacity: 0.95;
+            margin-bottom: 2rem;
+            line-height: 1.5;
+        }
+        
+        .credential-badges {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .badge {
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .badge-title {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin-bottom: 0.5rem;
+        }
+        
+        .badge-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        
+        /* Navigation */
+        .nav-bar {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .nav-content {
+            display: flex;
+            align-items: center;
+            padding: 1rem 0;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #107c10;
+            text-decoration: none;
+            margin-right: 2rem;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            margin-left: auto;
+        }
+        
+        .nav-links a {
+            color: #323130;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        
+        .nav-links a:hover {
+            color: #107c10;
+        }
+        
+        /* Main Content */
+        .main-content {
+            padding: 3rem 0;
+        }
+        
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 380px;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+        
+        .course-content {
+            background: white;
+            border-radius: 8px;
+            padding: 2.5rem;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+        }
+        
+        .sidebar {
+            position: sticky;
+            top: 100px;
+            height: fit-content;
+        }
+        
+        /* Certification Levels */
+        .cert-levels {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .cert-level {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            border-top: 4px solid #107c10;
+            position: relative;
+        }
+        
+        .cert-level.premium {
+            border-top-color: #d13438;
+            transform: scale(1.05);
+        }
+        
+        .cert-level.enterprise {
+            border-top-color: #0078d4;
+        }
+        
+        .level-badge {
+            position: absolute;
+            top: -12px;
+            right: 20px;
+            background: #107c10;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        .premium .level-badge {
+            background: #d13438;
+        }
+        
+        .enterprise .level-badge {
+            background: #0078d4;
+        }
+        
+        .level-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #323130;
+        }
+        
+        .level-price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #107c10;
+            margin-bottom: 0.5rem;
+        }
+        
+        .premium .level-price {
+            color: #d13438;
+        }
+        
+        .enterprise .level-price {
+            color: #0078d4;
+        }
+        
+        .level-duration {
+            font-size: 0.9rem;
+            color: #605e5c;
+            margin-bottom: 2rem;
+        }
+        
+        .level-features {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+        
+        .level-features li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.75rem;
+            font-size: 0.95rem;
+        }
+        
+        .level-features li::before {
+            content: '✓';
+            color: #107c10;
+            font-weight: bold;
+            margin-right: 0.75rem;
+            font-size: 1.1rem;
+        }
+        
+        .premium .level-features li::before {
+            color: #d13438;
+        }
+        
+        .enterprise .level-features li::before {
+            color: #0078d4;
+        }
+        
+        .level-btn {
+            width: 100%;
+            background: #107c10;
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .premium .level-btn {
+            background: #d13438;
+        }
+        
+        .enterprise .level-btn {
+            background: #0078d4;
+        }
+        
+        .level-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        
+        /* Assessment Preview */
+        .assessment-preview {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e8f5e8 100%);
+            padding: 3rem 0;
+            margin: 3rem 0;
+        }
+        
+        .assessment-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .section-title {
+            font-size: 2.2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #323130;
+        }
+        
+        .assessment-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .step {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: relative;
+        }
+        
+        .step-number {
+            position: absolute;
+            top: -15px;
+            left: 20px;
+            background: #107c10;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        
+        .step-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #323130;
+        }
+        
+        .step-desc {
+            font-size: 0.9rem;
+            color: #605e5c;
+        }
+        
+        /* Prerequisites */
+        .prerequisites {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            margin: 2rem 0;
+            border-left: 4px solid #d13438;
+        }
+        
+        .prereq-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #d13438;
+        }
+        
+        .prereq-list {
+            list-style: none;
+        }
+        
+        .prereq-list li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.75rem;
+            font-size: 0.95rem;
+        }
+        
+        .prereq-list li::before {
+            content: '⚠️';
+            margin-right: 0.75rem;
+        }
+        
+        /* Sidebar Components */
+        .info-card {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            margin-bottom: 2rem;
+        }
+        
+        .info-card h4 {
+            margin-bottom: 1rem;
+            color: #323130;
+        }
+        
+        .contact-btn {
+            width: 100%;
+            background: #0078d4;
+            color: white;
+            border: none;
+            padding: 1rem;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            margin: 0.5rem 0;
+            transition: background 0.2s;
+        }
+        
+        .contact-btn:hover {
+            background: #106ebe;
+        }
+        
+        .contact-btn.secondary {
+            background: #f8f9fa;
+            color: #0078d4;
+            border: 1px solid #0078d4;
+        }
+        
+        .contact-btn.secondary:hover {
+            background: #e3f2fd;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .credential-badges {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .cert-levels {
+                grid-template-columns: 1fr;
+            }
+            
+            .cert-level.premium {
+                transform: none;
+            }
+            
+            .assessment-steps {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a> / <a href="oedp.html">OEDP</a> / <a href="oedp.html#crisis-skills">Crisis Skills</a> / Emergency Competency Certification
+                </div>
+                <h1>Emergency Competency Certification</h1>
+                <p class="subtitle">Earn internationally recognized credentials in emergency management, crisis leadership, and rapid deployment authorization</p>
+                <div class="credential-badges">
+                    <div class="badge">
+                        <div class="badge-title">ISO Certification</div>
+                        <div class="badge-value">22301</div>
+                    </div>
+                    <div class="badge">
+                        <div class="badge-title">Success Rate</div>
+                        <div class="badge-value">98%</div>
+                    </div>
+                    <div class="badge">
+                        <div class="badge-title">Global Recognition</div>
+                        <div class="badge-value">150+ Countries</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="nav-bar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="logo">BTH Education Group</a>
+                <ul class="nav-links">
+                    <li><a href="#overview">Overview</a></li>
+                    <li><a href="#levels">Certification Levels</a></li>
+                    <li><a href="#assessment">Assessment</a></li>
+                    <li><a href="#recognition">Recognition</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="content-grid">
+                <div class="course-content">
+                    <section id="overview">
+                        <h2 class="section-title">Certification Overview</h2>
+                        <p>Our Emergency Competency Certification program is the gold standard for crisis management professionals. Recognized by international organizations, government agencies, and Fortune 500 companies worldwide.</p>
+                        
+                        <div class="prerequisites">
+                            <h3 class="prereq-title">Prerequisites & Requirements</h3>
+                            <ul class="prereq-list">
+                                <li>Minimum 2 years of professional experience in related field</li>
+                                <li>Completion of basic emergency management training</li>
+                                <li>Current CPR/First Aid certification</li>
+                                <li>Security clearance (for government contractors)</li>
+                                <li>English proficiency (TOEFL 80+ for international candidates)</li>
+                            </ul>
+                        </div>
+
+                        <section id="levels" class="cert-levels">
+                            <div class="cert-level">
+                                <div class="level-badge">Essential</div>
+                                <h3 class="level-title">Emergency Coordinator</h3>
+                                <div class="level-price">$3,497</div>
+                                <div class="level-duration">6 weeks • Online + 2-day practicum</div>
+                                <ul class="level-features">
+                                    <li>Basic incident command principles</li>
+                                    <li>Emergency response protocols</li>
+                                    <li>Risk assessment fundamentals</li>
+                                    <li>Communication strategies</li>
+                                    <li>Digital certificate</li>
+                                    <li>CPE credits (24 hours)</li>
+                                </ul>
+                                <button class="level-btn" onclick="enroll('coordinator')">Begin Certification</button>
+                            </div>
+
+                            <div class="cert-level premium">
+                                <div class="level-badge">Most Popular</div>
+                                <h3 class="level-title">Crisis Management Leader</h3>
+                                <div class="level-price">$5,997</div>
+                                <div class="level-duration">12 weeks • Hybrid learning + simulations</div>
+                                <ul class="level-features">
+                                    <li>Advanced incident command systems</li>
+                                    <li>Multi-agency coordination</li>
+                                    <li>Resource management & logistics</li>
+                                    <li>Media relations & public communication</li>
+                                    <li>Live crisis simulations</li>
+                                    <li>ISO 22301 certification exam</li>
+                                    <li>Professional networking access</li>
+                                    <li>CPE credits (48 hours)</li>
+                                </ul>
+                                <button class="level-btn" onclick="enroll('leader')">Start Advanced Program</button>
+                            </div>
+
+                            <div class="cert-level enterprise">
+                                <div class="level-badge">Executive</div>
+                                <h3 class="level-title">Emergency Management Executive</h3>
+                                <div class="level-price">$9,497</div>
+                                <div class="level-duration">16 weeks • Executive format + mentorship</div>
+                                <ul class="level-features">
+                                    <li>Strategic emergency planning</li>
+                                    <li>Board-level crisis communication</li>
+                                    <li>Business continuity leadership</li>
+                                    <li>Global crisis coordination</li>
+                                    <li>Executive coaching sessions</li>
+                                    <li>C-suite simulation exercises</li>
+                                    <li>International certification recognition</li>
+                                    <li>Alumni executive network</li>
+                                    <li>CPE credits (72 hours)</li>
+                                </ul>
+                                <button class="level-btn" onclick="enroll('executive')">Apply for Executive Track</button>
+                            </div>
+                        </section>
+                    </section>
+                </div>
+
+                <div class="sidebar">
+                    <div class="info-card">
+                        <h4>Certification Authority</h4>
+                        <p>BTH Education Group is an ISO 17024 accredited certification body, ensuring our credentials meet international standards for personnel certification.</p>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h4>Recognition Partners</h4>
+                        <ul style="list-style: none; font-size: 0.9rem;">
+                            <li style="margin-bottom: 0.5rem;">🏛️ FEMA (Federal Emergency Management)</li>
+                            <li style="margin-bottom: 0.5rem;">🌍 UN Office for Disaster Risk Reduction</li>
+                            <li style="margin-bottom: 0.5rem;">🏢 International Association of Emergency Managers</li>
+                            <li style="margin-bottom: 0.5rem;">⚕️ World Health Organization</li>
+                            <li style="margin-bottom: 0.5rem;">🛡️ Department of Homeland Security</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h4>Need Guidance?</h4>
+                        <p>Speak with our certification advisors to determine the right level for your career goals.</p>
+                        <button class="contact-btn" onclick="scheduleConsult()">Schedule Consultation</button>
+                        <button class="contact-btn secondary" onclick="downloadGuide()">Download Certification Guide</button>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h4>Corporate Programs</h4>
+                        <p>Certify your entire emergency management team with customized corporate packages and volume discounts.</p>
+                        <button class="contact-btn" onclick="corporateInquiry()">Get Corporate Pricing</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Assessment Preview -->
+    <section id="assessment" class="assessment-preview">
+        <div class="container">
+            <div class="assessment-content">
+                <h2 class="section-title">Certification Assessment Process</h2>
+                <p>Our rigorous assessment ensures certified professionals meet the highest standards of emergency management competency.</p>
+                
+                <div class="assessment-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h4 class="step-title">Knowledge Exam</h4>
+                        <p class="step-desc">Comprehensive written examination covering emergency management principles, regulations, and best practices.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h4 class="step-title">Practical Simulation</h4>
+                        <p class="step-desc">Live crisis scenario simulation testing decision-making, leadership, and coordination skills under pressure.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h4 class="step-title">Portfolio Review</h4>
+                        <p class="step-desc">Professional portfolio assessment including case studies, experience documentation, and peer evaluations.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <h4 class="step-title">Certification Award</h4>
+                        <p class="step-desc">Upon successful completion, receive your internationally recognized emergency competency certification.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function enroll(level) {
+            const prices = {
+                'coordinator': 3497,
+                'leader': 5997,
+                'executive': 9497
+            };
+            window.location.href = `enrollment.html?course=emergency-competency-${level}&price=${prices[level]}`;
+        }
+        
+        function scheduleConsult() {
+            window.location.href = 'consultation-booking.html?program=emergency-competency';
+        }
+        
+        function downloadGuide() {
+            // Trigger PDF download
+            window.open('assets/documents/emergency-competency-certification-guide.pdf', '_blank');
+        }
+        
+        function corporateInquiry() {
+            window.location.href = 'corporate-training-inquiry.html?program=emergency-competency';
+        }
+    </script>
+</body>
+</html>

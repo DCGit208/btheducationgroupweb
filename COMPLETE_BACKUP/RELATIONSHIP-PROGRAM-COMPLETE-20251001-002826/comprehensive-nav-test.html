@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🧪 HEXAD Navigation Test - ALL LEVELS</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; background: #f5f5f5; }
+        .test-container { max-width: 1200px; margin: 0 auto; }
+        .test-section { margin: 20px 0; padding: 20px; background: white; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .test-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; margin: 20px 0; }
+        .test-button { background: #007cba; color: white; padding: 10px 15px; border: none; cursor: pointer; border-radius: 5px; transition: all 0.3s; }
+        .test-button:hover { background: #005a87; transform: translateY(-1px); }
+        .test-button.level { background: #28a745; }
+        .test-button.level:hover { background: #1e7e34; }
+        .status { margin: 10px 0; font-family: monospace; }
+        .pass { color: #28a745; font-weight: bold; }
+        .fail { color: #dc3545; font-weight: bold; }
+        .info { color: #17a2b8; }
+        .results { background: #f8f9fa; padding: 15px; border-radius: 5px; margin: 10px 0; max-height: 300px; overflow-y: auto; }
+        .clear-btn { background: #6c757d; color: white; padding: 5px 10px; border: none; border-radius: 3px; cursor: pointer; margin: 10px 0; }
+        h1 { color: #007cba; text-align: center; }
+        h2 { color: #343a40; border-bottom: 2px solid #007cba; padding-bottom: 5px; }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1>🧪 HEXAD NAVIGATION TEST SUITE - ALL LEVELS</h1>
+        
+        <div class="test-section">
+            <h2>🔍 Quick Status Check</h2>
+            <button class="test-button" onclick="runQuickCheck()">🚀 Run Quick System Check</button>
+            <div id="quick-results" class="results"></div>
+        </div>
+        
+        <div class="test-section">
+            <h2>📊 Level 1 Dimension Toggle Tests</h2>
+            <div class="test-grid">
+                <button class="test-button" onclick="testDimension('personal-dev-l1', 'Personal Development L1')">
+                    Personal Dev L1
+                </button>
+                <button class="test-button" onclick="testDimension('professional-dev-l1', 'Professional Dev L1')">
+                    Professional Dev L1
+                </button>
+                <button class="test-button" onclick="testDimension('occupational-dev-l1', 'Occupational Dev L1')">
+                    Occupational Dev L1
+                </button>
+                <button class="test-button" onclick="testDimension('financial-dev-l1', 'Financial Dev L1')">
+                    Financial Dev L1
+                </button>
+                <button class="test-button" onclick="testDimension('relationship-dev-l1', 'Relationship Dev L1')">
+                    Relationship Dev L1
+                </button>
+                <button class="test-button" onclick="testDimension('truth-education-l1', 'Truth Education L1')">
+                    Truth Education L1
+                </button>
+            </div>
+            <div id="l1-results" class="results"></div>
+            <button class="clear-btn" onclick="clearResults('l1-results')">Clear Results</button>
+        </div>
+        
+        <div class="test-section">
+            <h2>📊 Level 2-5 Dimension Toggle Tests</h2>
+            <div class="test-grid">
+                <button class="test-button" onclick="testAllLevel(2)">Test All Level 2</button>
+                <button class="test-button" onclick="testAllLevel(3)">Test All Level 3</button>
+                <button class="test-button" onclick="testAllLevel(4)">Test All Level 4</button>
+                <button class="test-button" onclick="testAllLevel(5)">Test All Level 5</button>
+            </div>
+            <div id="multi-level-results" class="results"></div>
+            <button class="clear-btn" onclick="clearResults('multi-level-results')">Clear Results</button>
+        </div>
+        
+        <div class="test-section">
+            <h2>🎛️ Level Navigation Tests</h2>
+            <div class="test-grid">
+                <button class="test-button level" onclick="testLevelSwitch(1)">Switch to Level 1</button>
+                <button class="test-button level" onclick="testLevelSwitch(2)">Switch to Level 2</button>
+                <button class="test-button level" onclick="testLevelSwitch(3)">Switch to Level 3</button>
+                <button class="test-button level" onclick="testLevelSwitch(4)">Switch to Level 4</button>
+                <button class="test-button level" onclick="testLevelSwitch(5)">Switch to Level 5</button>
+            </div>
+            <div id="level-results" class="results"></div>
+            <button class="clear-btn" onclick="clearResults('level-results')">Clear Results</button>
+        </div>
+        
+        <div class="test-section">
+            <h2>🚀 Live System Access</h2>
+            <a href="hexad-mastery.html" target="_blank" class="test-button" style="display: inline-block; text-decoration: none;">
+                🔗 Open HEXAD Mastery System
+            </a>
+            <div class="status">
+                <div class="info">💡 Use browser console (F12) to see detailed logs</div>
+                <div class="info">🔧 Test both clicking arrows and checking content expansion</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function log(message, type = 'info') {
+            const timestamp = new Date().toLocaleTimeString();
+            const color = type === 'pass' ? '#28a745' : type === 'fail' ? '#dc3545' : '#17a2b8';
+            return `<div style="color: ${color}">[${timestamp}] ${message}</div>`;
+        }
+        
+        function clearResults(elementId) {
+            document.getElementById(elementId).innerHTML = '';
+        }
+        
+        function runQuickCheck() {
+            const resultsDiv = document.getElementById('quick-results');
+            resultsDiv.innerHTML = log('🔍 Running quick system check...', 'info');
+            
+            // Check if main page is accessible
+            fetch('hexad-mastery.html')
+                .then(response => {
+                    if (response.ok) {
+                        resultsDiv.innerHTML += log('✅ Main page accessible', 'pass');
+                        resultsDiv.innerHTML += log('🔧 Navigation fixes should be active', 'info');
+                        resultsDiv.innerHTML += log('📊 All dimensions should start closed', 'info');
+                        resultsDiv.innerHTML += log('🔽 All chevrons should point down', 'info');
+                    } else {
+                        resultsDiv.innerHTML += log('❌ Main page not accessible', 'fail');
+                    }
+                })
+                .catch(error => {
+                    resultsDiv.innerHTML += log('❌ Error accessing main page: ' + error.message, 'fail');
+                });
+        }
+        
+        function testDimension(dimensionId, name) {
+            const resultsDiv = document.getElementById('l1-results');
+            resultsDiv.innerHTML += log(`🔧 Testing ${name}...`, 'info');
+            
+            // Create iframe to test the actual functionality
+            const iframe = document.createElement('iframe');
+            iframe.src = 'hexad-mastery.html';
+            iframe.style.width = '1px';
+            iframe.style.height = '1px';
+            iframe.style.opacity = '0';
+            iframe.style.position = 'absolute';
+            iframe.style.top = '-1000px';
+            
+            iframe.onload = function() {
+                try {
+                    const doc = iframe.contentDocument || iframe.contentWindow.document;
+                    const element = doc.getElementById(dimensionId);
+                    
+                    if (element) {
+                        resultsDiv.innerHTML += log(`✅ ${name} element found`, 'pass');
+                        
+                        // Check if element starts closed
+                        const isActive = element.classList.contains('active');
+                        if (isActive) {
+                            resultsDiv.innerHTML += log(`⚠️ ${name} starts open (should be closed)`, 'fail');
+                        } else {
+                            resultsDiv.innerHTML += log(`✅ ${name} starts closed correctly`, 'pass');
+                        }
+                        
+                        // Check if toggle function exists
+                        if (iframe.contentWindow.toggleDimension) {
+                            resultsDiv.innerHTML += log(`✅ ${name} toggle function available`, 'pass');
+                            
+                            // Try to toggle
+                            iframe.contentWindow.toggleDimension(dimensionId);
+                            resultsDiv.innerHTML += log(`🔧 ${name} toggle executed`, 'pass');
+                            
+                            // Check if state changed after a delay
+                            setTimeout(() => {
+                                const newState = element.classList.contains('active');
+                                if (newState !== isActive) {
+                                    resultsDiv.innerHTML += log(`✅ ${name} state changed successfully`, 'pass');
+                                } else {
+                                    resultsDiv.innerHTML += log(`❌ ${name} state did not change`, 'fail');
+                                }
+                            }, 500);
+                            
+                        } else {
+                            resultsDiv.innerHTML += log(`❌ ${name} toggle function not found`, 'fail');
+                        }
+                    } else {
+                        resultsDiv.innerHTML += log(`❌ ${name} element not found`, 'fail');
+                    }
+                } catch (error) {
+                    resultsDiv.innerHTML += log(`❌ ${name} error: ${error.message}`, 'fail');
+                }
+                
+                // Clean up
+                setTimeout(() => {
+                    document.body.removeChild(iframe);
+                }, 2000);
+            };
+            
+            document.body.appendChild(iframe);
+        }
+        
+        function testAllLevel(level) {
+            const resultsDiv = document.getElementById('multi-level-results');
+            resultsDiv.innerHTML += log(`🔧 Testing all Level ${level} dimensions...`, 'info');
+            
+            const dimensions = ['personal-dev', 'professional-dev', 'occupational-dev', 'financial-dev', 'relationship-dev', 'truth-education'];
+            
+            dimensions.forEach(dim => {
+                const dimensionId = `${dim}-l${level}`;
+                setTimeout(() => testDimension(dimensionId, `${dim} L${level}`), 100);
+            });
+        }
+        
+        function testLevelSwitch(level) {
+            const resultsDiv = document.getElementById('level-results');
+            resultsDiv.innerHTML += log(`🎛️ Testing switch to Level ${level}...`, 'info');
+            
+            const iframe = document.createElement('iframe');
+            iframe.src = 'hexad-mastery.html';
+            iframe.style.width = '1px';
+            iframe.style.height = '1px';
+            iframe.style.opacity = '0';
+            iframe.style.position = 'absolute';
+            iframe.style.top = '-1000px';
+            
+            iframe.onload = function() {
+                try {
+                    if (iframe.contentWindow.showLevel) {
+                        iframe.contentWindow.showLevel(level);
+                        resultsDiv.innerHTML += log(`✅ Level ${level} switch executed`, 'pass');
+                        
+                        // Check if correct level content is visible
+                        setTimeout(() => {
+                            const doc = iframe.contentDocument || iframe.contentWindow.document;
+                            const levelContent = doc.querySelector(`.level-content[data-level="${level}"]`);
+                            
+                            if (levelContent && levelContent.classList.contains('active')) {
+                                resultsDiv.innerHTML += log(`✅ Level ${level} content is active`, 'pass');
+                            } else {
+                                resultsDiv.innerHTML += log(`❌ Level ${level} content not properly activated`, 'fail');
+                            }
+                        }, 500);
+                        
+                    } else {
+                        resultsDiv.innerHTML += log(`❌ showLevel function not found`, 'fail');
+                    }
+                } catch (error) {
+                    resultsDiv.innerHTML += log(`❌ Level ${level} switch error: ${error.message}`, 'fail');
+                }
+                
+                // Clean up
+                setTimeout(() => {
+                    document.body.removeChild(iframe);
+                }, 2000);
+            };
+            
+            document.body.appendChild(iframe);
+        }
+    </script>
+</body>
+</html>

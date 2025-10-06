@@ -2429,9 +2429,9 @@
                 <a href="#dimensions" class="nav-link">6 Dimensions</a>
                 <a href="#levels" class="nav-link">Levels</a>
                 <a href="#pricing" class="nav-link">Investment</a>
-                <a href="#enrollment" class="nav-link">Enroll</a>
+                <a href="hexad-checkout-system.html" class="nav-link">Enroll</a>
             </nav>
-            <a href="#enrollment" class="cta-button">Start Your Journey</a>
+            <a href="hexad-checkout-system.html" class="cta-button">Start Your Journey</a>
         </div>
     </header>
 
@@ -10568,9 +10568,14 @@
                 </div>
 
                 <div class="enrollment-cta">
-                    <button class="enrollment-button" id="enrollButton">
-                        <i class="fas fa-graduation-cap"></i>
-                        Enroll Now - Direct to LMS
+                    <button class="enrollment-button" id="enrollButton" onclick="window.location.href='hexad-checkout-system.html'">
+                        <i class="fas fa-shopping-cart"></i>
+                        Configure & Checkout
+                    </button>
+                    
+                    <button class="enrollment-button" id="professionalBtn" onclick="selectProfessionalDirect()" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); margin-left: 1rem;">
+                        <i class="fas fa-certificate"></i>
+                        Professional Certifications Only
                     </button>
                     
                     <div class="enrollment-security">
@@ -11590,22 +11595,41 @@
                 }
 
                 const pricing = this.levelPricing[this.currentLevel];
-                const totalInvestment = (this.selectedDimensions.size * pricing.perDimension) + pricing.certification;
-
+                
+                // For now, redirect to first dimension checkout
+                // Later we'll implement full multi-dimension selection
+                const firstDimension = Array.from(this.selectedDimensions)[0];
+                
                 // Create enrollment data
                 const enrollmentData = {
                     selectedDimensions: Array.from(this.selectedDimensions),
                     level: this.currentLevel,
+                    dimension: firstDimension, // Start with first selected dimension
                     duration: pricing.duration,
-                    totalInvestment: totalInvestment,
                     timestamp: new Date().toISOString()
                 };
 
-                // Store enrollment data
-                localStorage.setItem('hexad_enrollment', JSON.stringify(enrollmentData));
+                // Store enrollment data for checkout system
+                sessionStorage.setItem('hexad_enrollment', JSON.stringify(enrollmentData));
 
-                // Simulate payment process (replace with actual payment integration)
-                this.showPaymentModal(enrollmentData);
+                // Redirect to new checkout system
+                window.location.href = 'hexad-checkout-system.html';
+            }
+
+            // Direct professional certification enrollment
+            selectProfessionalDirect() {
+                const professionalEnrollment = {
+                    selectedDimensions: ['professional'],
+                    level: 1,
+                    dimension: 'professional',
+                    duration: this.levelPricing[1].duration,
+                    isProfessionalOnly: true,
+                    source: 'hexad-mastery-professional-direct',
+                    timestamp: new Date().toISOString()
+                };
+                
+                sessionStorage.setItem('hexad_enrollment', JSON.stringify(professionalEnrollment));
+                window.location.href = 'hexad-checkout-system.html';
             }
 
             showPaymentModal(enrollmentData) {
@@ -15799,8 +15823,40 @@
             setTimeout(() => {
                 initializeProfessionalFilters();
                 initializeITSystem();
+                
+                // CRITICAL: Initialize the HEXAD Mastery System
+                window.hexadSystem = new HEXADMasterySystem();
             }, 500);
         });
+
+        // Global function for professional direct enrollment - redirect to program.html
+        function selectProfessionalDirect() {
+            // Create proper checkout context for program.html sector navigation
+            const checkoutContext = {
+                source: 'hexad-professional-direct',
+                level: 1, // Professional Development Level 1 as default
+                dimension: 'professional',
+                isProfessionalOnly: true,
+                pricing: {
+                    level1: 8100,
+                    level2: 10500,
+                    level3: 13500,
+                    level4: 17000,
+                    level5: 26865
+                },
+                selectedDimensions: ['professional'],
+                timestamp: new Date().toISOString(),
+                fromHexad: true
+            };
+            
+            // Store both old and new context formats for compatibility
+            sessionStorage.setItem('checkoutContext', JSON.stringify(checkoutContext));
+            sessionStorage.setItem('referralSource', 'hexad-professional-direct');
+            sessionStorage.setItem('professionalEnrollmentIntent', 'true');
+            
+            // Redirect to the comprehensive professional certification page
+            window.location.href = 'program.html';
+        }
     </script>
 </body>
 </html>

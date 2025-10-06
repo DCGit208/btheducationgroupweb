@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Comprehensive Technology Page Test</title>
+    <script src="assets/js/certification-database.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 2rem; }
+        .test-section { margin: 2rem 0; padding: 1rem; border: 1px solid #ddd; border-radius: 8px; }
+        .pass { color: green; font-weight: bold; }
+        .fail { color: red; font-weight: bold; }
+        .info { color: blue; }
+        ul { margin: 0.5rem 0; }
+        li { margin: 0.25rem 0; }
+    </style>
+</head>
+<body>
+    <h1>Comprehensive Technology Certification System Test</h1>
+    <div id="results"></div>
+    
+    <script>
+        function runComprehensiveTest() {
+            const results = document.getElementById('results');
+            let output = '';
+            let totalTests = 0;
+            let passedTests = 0;
+            
+            function addTest(name, condition, details = '') {
+                totalTests++;
+                if (condition) {
+                    passedTests++;
+                    output += `<div class="pass">✅ ${name}</div>`;
+                } else {
+                    output += `<div class="fail">❌ ${name}</div>`;
+                }
+                if (details) {
+                    output += `<div class="info">${details}</div>`;
+                }
+            }
+            
+            // Test 1: Database Loading
+            output += '<div class="test-section"><h2>Database Loading Tests</h2>';
+            
+            addTest('Certification Database Loaded', 
+                typeof window.ALL_CERTIFICATIONS !== 'undefined',
+                window.ALL_CERTIFICATIONS ? `${window.ALL_CERTIFICATIONS.length} certifications loaded` : 'Database not found');
+            
+            addTest('Vendor Database Loaded', 
+                typeof window.VENDOR_DATABASE !== 'undefined',
+                window.VENDOR_DATABASE ? `${Object.keys(window.VENDOR_DATABASE).length} vendors loaded` : 'Vendor database not found');
+            
+            addTest('Category Database Loaded', 
+                typeof window.CATEGORY_DATABASE !== 'undefined',
+                window.CATEGORY_DATABASE ? `${Object.keys(window.CATEGORY_DATABASE).length} categories loaded` : 'Category database not found');
+                
+            addTest('Pricing Matrix Loaded', 
+                typeof window.TECHNOLOGY_PRICING_MATRIX !== 'undefined',
+                window.TECHNOLOGY_PRICING_MATRIX ? `${Object.keys(window.TECHNOLOGY_PRICING_MATRIX.levels).length} levels defined` : 'Pricing matrix not found');
+            
+            output += '</div>';
+            
+            // Test 2: Data Integrity
+            output += '<div class="test-section"><h2>Data Integrity Tests</h2>';
+            
+            if (window.ALL_CERTIFICATIONS) {
+                const total = window.ALL_CERTIFICATIONS.length;
+                addTest('Minimum 500+ Certifications', 
+                    total >= 500,
+                    `Found ${total} certifications`);
+                
+                // Test for required fields
+                let missingFields = 0;
+                const requiredFields = ['id', 'name', 'vendor', 'category', 'level', 'price', 'description', 'specialization', 'partnershipTier'];
+                
+                window.ALL_CERTIFICATIONS.forEach((cert, index) => {
+                    requiredFields.forEach(field => {
+                        if (!cert[field] && cert[field] !== 0) {
+                            missingFields++;
+                        }
+                    });
+                });
+                
+                addTest('All Required Fields Present', 
+                    missingFields === 0,
+                    missingFields > 0 ? `${missingFields} missing field instances found` : 'All certifications have required fields');
+                
+                // Test categories distribution
+                const categories = {};
+                window.ALL_CERTIFICATIONS.forEach(cert => {
+                    categories[cert.category] = (categories[cert.category] || 0) + 1;
+                });
+                
+                addTest('Multiple Categories Represented', 
+                    Object.keys(categories).length >= 10,
+                    `${Object.keys(categories).length} categories found: ${Object.keys(categories).join(', ')}`);
+                
+                // Test vendor distribution
+                const vendors = {};
+                window.ALL_CERTIFICATIONS.forEach(cert => {
+                    vendors[cert.vendor] = (vendors[cert.vendor] || 0) + 1;
+                });
+                
+                addTest('Multiple Vendors Represented', 
+                    Object.keys(vendors).length >= 25,
+                    `${Object.keys(vendors).length} vendors found`);
+                
+                // Test level distribution
+                const levels = {};
+                window.ALL_CERTIFICATIONS.forEach(cert => {
+                    levels[cert.level] = (levels[cert.level] || 0) + 1;
+                });
+                
+                addTest('All Skill Levels Represented', 
+                    Object.keys(levels).length >= 4,
+                    `Levels found: ${Object.keys(levels).sort().join(', ')}`);
+            }
+            
+            output += '</div>';
+            
+            // Test 3: Category Coverage
+            output += '<div class="test-section"><h2>Category Coverage Analysis</h2>';
+            
+            if (window.ALL_CERTIFICATIONS) {
+                const categoryStats = {};
+                window.ALL_CERTIFICATIONS.forEach(cert => {
+                    if (!categoryStats[cert.category]) {
+                        categoryStats[cert.category] = {
+                            count: 0,
+                            vendors: new Set(),
+                            levels: new Set(),
+                            minPrice: Infinity,
+                            maxPrice: 0
+                        };
+                    }
+                    const stats = categoryStats[cert.category];
+                    stats.count++;
+                    stats.vendors.add(cert.vendor);
+                    stats.levels.add(cert.level);
+                    stats.minPrice = Math.min(stats.minPrice, cert.price);
+                    stats.maxPrice = Math.max(stats.maxPrice, cert.price);
+                });
+                
+                output += '<ul>';
+                Object.entries(categoryStats).forEach(([category, stats]) => {
+                    output += `<li><strong>${category}</strong>: ${stats.count} certifications, `;
+                    output += `${stats.vendors.size} vendors, `;
+                    output += `levels ${Array.from(stats.levels).sort().join('-')}, `;
+                    output += `price range $${stats.minPrice}-$${stats.maxPrice}</li>`;
+                });
+                output += '</ul>';
+            }
+            
+            output += '</div>';
+            
+            // Test 4: Vendor Partnership Analysis
+            output += '<div class="test-section"><h2>Vendor Partnership Analysis</h2>';
+            
+            if (window.ALL_CERTIFICATIONS) {
+                const partnershipTiers = {};
+                window.ALL_CERTIFICATIONS.forEach(cert => {
+                    partnershipTiers[cert.partnershipTier] = (partnershipTiers[cert.partnershipTier] || 0) + 1;
+                });
+                
+                addTest('Premier Partnership Certifications', 
+                    partnershipTiers.premier >= 100,
+                    `${partnershipTiers.premier || 0} premier certifications`);
+                
+                addTest('Strategic Partnership Certifications', 
+                    partnershipTiers.strategic >= 50,
+                    `${partnershipTiers.strategic || 0} strategic certifications`);
+                
+                output += '<h3>Partnership Distribution:</h3><ul>';
+                Object.entries(partnershipTiers).forEach(([tier, count]) => {
+                    output += `<li>${tier}: ${count} certifications</li>`;
+                });
+                output += '</ul>';
+            }
+            
+            output += '</div>';
+            
+            // Test 5: Advanced Features
+            output += '<div class="test-section"><h2>Advanced Features Test</h2>';
+            
+            if (window.ALL_CERTIFICATIONS) {
+                let hasExamCodes = 0;
+                let hasCareerPaths = 0;
+                let hasDurations = 0;
+                let hasPassingScores = 0;
+                
+                window.ALL_CERTIFICATIONS.forEach(cert => {
+                    if (cert.examCode) hasExamCodes++;
+                    if (cert.careerPath && cert.careerPath.length > 0) hasCareerPaths++;
+                    if (cert.duration) hasDurations++;
+                    if (cert.passingScore) hasPassingScores++;
+                });
+                
+                addTest('Exam Codes Provided', 
+                    hasExamCodes >= 400,
+                    `${hasExamCodes} certifications have exam codes`);
+                
+                addTest('Career Paths Defined', 
+                    hasCareerPaths >= 500,
+                    `${hasCareerPaths} certifications have career paths`);
+                
+                addTest('Exam Durations Specified', 
+                    hasDurations >= 400,
+                    `${hasDurations} certifications have duration info`);
+                
+                addTest('Passing Scores Available', 
+                    hasPassingScores >= 400,
+                    `${hasPassingScores} certifications have passing score info`);
+            }
+            
+            output += '</div>';
+            
+            // Test 6: Price Analysis
+            output += '<div class="test-section"><h2>Price Analysis</h2>';
+            
+            if (window.ALL_CERTIFICATIONS) {
+                const prices = window.ALL_CERTIFICATIONS.map(cert => cert.price).filter(p => p !== undefined);
+                const minPrice = Math.min(...prices);
+                const maxPrice = Math.max(...prices);
+                const avgPrice = prices.reduce((sum, price) => sum + price, 0) / prices.length;
+                
+                addTest('Realistic Price Range', 
+                    minPrice >= 0 && maxPrice <= 2000,
+                    `Price range: $${minPrice} - $${maxPrice}, Average: $${Math.round(avgPrice)}`);
+                
+                const freeCerts = window.ALL_CERTIFICATIONS.filter(cert => cert.price === 0).length;
+                addTest('Free Certifications Available', 
+                    freeCerts >= 5,
+                    `${freeCerts} free certifications found`);
+            }
+            
+            output += '</div>';
+            
+            // Final Summary
+            output += '<div class="test-section"><h2>Test Summary</h2>';
+            const passRate = (passedTests / totalTests * 100).toFixed(1);
+            if (passRate >= 90) {
+                output += `<div class="pass">🎉 EXCELLENT: ${passedTests}/${totalTests} tests passed (${passRate}%)</div>`;
+                output += '<div class="info">Database is comprehensive and ready for production!</div>';
+            } else if (passRate >= 80) {
+                output += `<div class="info">✅ GOOD: ${passedTests}/${totalTests} tests passed (${passRate}%)</div>`;
+                output += '<div class="info">Database meets most requirements with minor issues.</div>';
+            } else {
+                output += `<div class="fail">⚠️ NEEDS WORK: ${passedTests}/${totalTests} tests passed (${passRate}%)</div>`;
+                output += '<div class="info">Database requires additional work before production.</div>';
+            }
+            output += '</div>';
+            
+            results.innerHTML = output;
+        }
+        
+        // Run tests when page loads
+        window.addEventListener('load', runComprehensiveTest);
+    </script>
+</body>
+</html>

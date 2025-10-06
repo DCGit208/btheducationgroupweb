@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HEXAD Mastery Checkout System - BTH Education Group</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --success-gradient: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+            --accent-blue: #3b82f6;
+            --accent-green: #059669;
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: white;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .checkout-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .checkout-header h1 {
+            font-size: 3rem;
+            font-weight: 900;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
+        }
+
+        .checkout-flow {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .flow-step {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .step-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .step-number {
+            width: 40px;
+            height: 40px;
+            background: var(--primary-gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+        }
+
+        .step-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        /* Level Selection */
+        .level-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .level-card {
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid transparent;
+            border-radius: 12px;
+            padding: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .level-card:hover {
+            border-color: var(--accent-blue);
+            transform: translateY(-2px);
+        }
+
+        .level-card.selected {
+            border-color: var(--accent-green);
+            background: rgba(5, 150, 105, 0.1);
+        }
+
+        .level-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .level-price {
+            font-size: 2rem;
+            font-weight: 900;
+            color: var(--accent-green);
+            margin: 1rem 0;
+        }
+
+        /* Dimension Selection */
+        .dimension-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .dimension-card {
+            background: rgba(255, 255, 255, 0.08);
+            border: 2px solid transparent;
+            border-radius: 12px;
+            padding: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .dimension-card:hover {
+            border-color: var(--accent-blue);
+            transform: translateY(-2px);
+        }
+
+        .dimension-card.selected {
+            border-color: var(--accent-green);
+            background: rgba(5, 150, 105, 0.1);
+        }
+
+        .dimension-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .dimension-card h4 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .dimension-price {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent-green);
+            margin-top: 1rem;
+        }
+
+        /* Professional Development Integration */
+        .cert-selector {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: rgba(59, 130, 246, 0.1);
+            border-radius: 12px;
+            border: 1px solid rgba(59, 130, 246, 0.3);
+        }
+
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .cert-item {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            padding: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .cert-item:hover {
+            border-color: var(--accent-blue);
+        }
+
+        .cert-item.selected {
+            border-color: var(--accent-green);
+            background: rgba(5, 150, 105, 0.1);
+        }
+
+        /* Order Summary */
+        .order-summary {
+            position: sticky;
+            top: 2rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 2rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .summary-header {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .summary-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .summary-total {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--accent-green);
+            border-top: 2px solid rgba(5, 150, 105, 0.3);
+            padding-top: 1rem;
+            margin-top: 1rem;
+        }
+
+        .payment-options {
+            margin-top: 2rem;
+        }
+
+        .payment-option {
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid transparent;
+            border-radius: 12px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .payment-option:hover {
+            border-color: var(--accent-blue);
+        }
+
+        .payment-option.selected {
+            border-color: var(--accent-green);
+            background: rgba(5, 150, 105, 0.1);
+        }
+
+        .checkout-btn {
+            width: 100%;
+            background: var(--success-gradient);
+            border: none;
+            border-radius: 12px;
+            padding: 1rem 2rem;
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: white;
+            cursor: pointer;
+            margin-top: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .checkout-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .checkout-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .progress-bar {
+            height: 4px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 2px;
+            margin-bottom: 2rem;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: var(--primary-gradient);
+            transition: width 0.3s ease;
+        }
+
+        @media (max-width: 768px) {
+            .checkout-flow {
+                grid-template-columns: 1fr;
+            }
+            
+            .level-grid,
+            .dimension-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="checkout-header">
+            <h1>HEXAD Mastery System</h1>
+            <p>Configure your personalized learning path</p>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill" style="width: 20%"></div>
+            </div>
+        </div>
+
+        <div class="checkout-flow">
+            <div class="flow-main">
+                <!-- Step 1: Level Selection -->
+                <div class="flow-step" id="step1">
+                    <div class="step-header">
+                        <div class="step-number">1</div>
+                        <div class="step-title">Choose Your Level</div>
+                    </div>
+                    <div class="level-grid">
+                        <div class="level-card" data-level="1" onclick="selectLevel(1)">
+                            <h3>Level 1 - Foundation</h3>
+                            <div class="level-price">$967.11</div>
+                            <p>per dimension</p>
+                            <p class="duration">12-24 months</p>
+                        </div>
+                        <div class="level-card" data-level="2" onclick="selectLevel(2)">
+                            <h3>Level 2 - Intermediate</h3>
+                            <div class="level-price">$1,302.33</div>
+                            <p>per dimension</p>
+                            <p class="duration">24-36 months</p>
+                        </div>
+                        <div class="level-card" data-level="3" onclick="selectLevel(3)">
+                            <h3>Level 3 - Advanced</h3>
+                            <div class="level-price">$1,928.35</div>
+                            <p>per dimension</p>
+                            <p class="duration">36 months</p>
+                        </div>
+                        <div class="level-card" data-level="4" onclick="selectLevel(4)">
+                            <h3>Level 4 - Leadership</h3>
+                            <div class="level-price">$2,408.15</div>
+                            <p>per dimension</p>
+                            <p class="duration">36-48 months</p>
+                        </div>
+                        <div class="level-card" data-level="5" onclick="selectLevel(5)">
+                            <h3>Level 5 - Wisdom/Mastery</h3>
+                            <div class="level-price">$3,101.94</div>
+                            <p>per dimension</p>
+                            <p class="duration">60 months</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2: Dimension Selection -->
+                <div class="flow-step" id="step2" style="display: none;">
+                    <div class="step-header">
+                        <div class="step-number">2</div>
+                        <div class="step-title">Select Your First Dimension</div>
+                    </div>
+                    <div class="dimension-grid">
+                        <div class="dimension-card" data-dimension="personal" onclick="selectDimension('personal')">
+                            <div class="dimension-icon">🧠</div>
+                            <h4>Personal Development</h4>
+                            <p>Skills, capacities, behavioral development</p>
+                            <div class="dimension-price" id="personalPrice">$967.11</div>
+                        </div>
+                        <div class="dimension-card" data-dimension="professional" onclick="selectDimension('professional')">
+                            <div class="dimension-icon">💼</div>
+                            <h4>Professional Development</h4>
+                            <p>Industry certifications, career skills</p>
+                            <div class="dimension-price" id="professionalPrice">$8,100.00</div>
+                        </div>
+                        <div class="dimension-card" data-dimension="occupational" onclick="selectDimension('occupational')">
+                            <div class="dimension-icon">🔧</div>
+                            <h4>Occupational Development</h4>
+                            <p>Technical training, production skills</p>
+                            <div class="dimension-price" id="occupationalPrice">$967.11</div>
+                        </div>
+                        <div class="dimension-card" data-dimension="financial" onclick="selectDimension('financial')">
+                            <div class="dimension-icon">💰</div>
+                            <h4>Financial Development</h4>
+                            <p>Investment education, wealth building</p>
+                            <div class="dimension-price" id="financialPrice">$967.11</div>
+                        </div>
+                        <div class="dimension-card" data-dimension="relationship" onclick="selectDimension('relationship')">
+                            <div class="dimension-icon">❤️</div>
+                            <h4>Relationship Development</h4>
+                            <p>Interpersonal skills, communication</p>
+                            <div class="dimension-price" id="relationshipPrice">$967.11</div>
+                        </div>
+                        <div class="dimension-card" data-dimension="truth" onclick="selectDimension('truth')">
+                            <div class="dimension-icon">📚</div>
+                            <h4>Truth Education</h4>
+                            <p>Critical analysis, research methods</p>
+                            <div class="dimension-price" id="truthPrice">$967.11</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3: Professional Certifications (if Professional Development selected) -->
+                <div class="flow-step" id="step3" style="display: none;">
+                    <div class="step-header">
+                        <div class="step-number">3</div>
+                        <div class="step-title">Add Professional Certifications</div>
+                    </div>
+                    <div class="cert-selector">
+                        <h4>Choose your certification pathway:</h4>
+                        <div class="cert-grid">
+                            <div class="cert-item" data-cert="comptia" onclick="toggleCert('comptia')">
+                                <h5>CompTIA A+</h5>
+                                <p>+$320</p>
+                            </div>
+                            <div class="cert-item" data-cert="microsoft" onclick="toggleCert('microsoft')">
+                                <h5>Microsoft Azure</h5>
+                                <p>+$165</p>
+                            </div>
+                            <div class="cert-item" data-cert="aws" onclick="toggleCert('aws')">
+                                <h5>AWS Cloud</h5>
+                                <p>+$150</p>
+                            </div>
+                            <div class="cert-item" data-cert="cisco" onclick="toggleCert('cisco')">
+                                <h5>Cisco CCNA</h5>
+                                <p>+$300</p>
+                            </div>
+                        </div>
+                        <button onclick="skipCertifications()" style="margin-top: 1rem; background: transparent; border: 1px solid rgba(255,255,255,0.3); color: white; padding: 0.5rem 1rem; border-radius: 6px; cursor: pointer;">
+                            Skip for now
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Step 4: Payment Method -->
+                <div class="flow-step" id="step4" style="display: none;">
+                    <div class="step-header">
+                        <div class="step-number">4</div>
+                        <div class="step-title">Choose Payment Method</div>
+                    </div>
+                    <div class="payment-options">
+                        <div class="payment-option" data-payment="full" onclick="selectPayment('full')">
+                            <h4>💳 Pay in Full</h4>
+                            <p>Complete payment now - 5% discount applied</p>
+                        </div>
+                        <div class="payment-option" data-payment="monthly" onclick="selectPayment('monthly')">
+                            <h4>📅 Monthly Payments</h4>
+                            <p>Split into 12 monthly payments</p>
+                        </div>
+                        <div class="payment-option" data-payment="dimension" onclick="selectPayment('dimension')">
+                            <h4>🎯 Dimension-by-Dimension</h4>
+                            <p>Pay for each dimension as you complete it</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Order Summary Sidebar -->
+            <div class="order-summary">
+                <div class="summary-header">Order Summary</div>
+                <div id="summaryContent">
+                    <p style="text-align: center; color: rgba(255,255,255,0.6);">Select a level to begin</p>
+                </div>
+                <button class="checkout-btn" id="checkoutBtn" disabled onclick="proceedToCheckout()">
+                    Complete Purchase
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Checkout System State
+        let checkoutState = {
+            selectedLevel: null,
+            selectedDimension: null,
+            selectedCertifications: [],
+            paymentMethod: null,
+            professionalSelections: null,
+            pricing: {
+                1: { perDimension: 967.11, certification: 8100 },
+                2: { perDimension: 1302.33, certification: 10500 },
+                3: { perDimension: 1928.35, certification: 13500 },
+                4: { perDimension: 2408.15, certification: 17000 },
+                5: { perDimension: 3101.94, certification: 26865 }
+            },
+            certPricing: {
+                comptia: 320,
+                microsoft: 165,
+                aws: 150,
+                cisco: 300
+            }
+        };
+
+        function selectLevel(level) {
+            checkoutState.selectedLevel = level;
+            
+            // Update UI
+            document.querySelectorAll('.level-card').forEach(card => {
+                card.classList.remove('selected');
+            });
+            document.querySelector(`[data-level="${level}"]`).classList.add('selected');
+            
+            // Update dimension prices
+            const pricing = checkoutState.pricing[level];
+            document.getElementById('personalPrice').textContent = `$${pricing.perDimension.toFixed(2)}`;
+            document.getElementById('occupationalPrice').textContent = `$${pricing.perDimension.toFixed(2)}`;
+            document.getElementById('financialPrice').textContent = `$${pricing.perDimension.toFixed(2)}`;
+            document.getElementById('relationshipPrice').textContent = `$${pricing.perDimension.toFixed(2)}`;
+            document.getElementById('truthPrice').textContent = `$${pricing.perDimension.toFixed(2)}`;
+            document.getElementById('professionalPrice').textContent = `$${pricing.certification.toFixed(2)}`;
+            
+            // Show dimension selection
+            document.getElementById('step2').style.display = 'block';
+            document.getElementById('progressFill').style.width = '40%';
+            updateSummary();
+        }
+
+        function selectDimension(dimension) {
+            if (dimension === 'professional') {
+                // Store checkout context for program.html
+                const checkoutContext = {
+                    source: 'hexad-checkout',
+                    selectedLevel: checkoutState.selectedLevel,
+                    checkoutState: checkoutState,
+                    timestamp: new Date().toISOString(),
+                    returnUrl: 'hexad-checkout-system.html'
+                };
+                
+                sessionStorage.setItem('checkoutContext', JSON.stringify(checkoutContext));
+                
+                // Redirect to program.html for professional certification selection
+                window.location.href = 'program.html?flow=checkout&level=' + checkoutState.selectedLevel;
+                return;
+            }
+            
+            // Normal dimension selection for non-professional dimensions
+            checkoutState.selectedDimension = dimension;
+            
+            // Update UI
+            document.querySelectorAll('.dimension-card').forEach(card => {
+                card.classList.remove('selected');
+            });
+            document.querySelector(`[data-dimension="${dimension}"]`).classList.add('selected');
+            
+            // Show payment method selection for non-professional dimensions
+            document.getElementById('step4').style.display = 'block';
+            document.getElementById('progressFill').style.width = '80%';
+            
+            updateSummary();
+        }
+
+        function toggleCert(cert) {
+            const index = checkoutState.selectedCertifications.indexOf(cert);
+            const element = document.querySelector(`[data-cert="${cert}"]`);
+            
+            if (index > -1) {
+                checkoutState.selectedCertifications.splice(index, 1);
+                element.classList.remove('selected');
+            } else {
+                checkoutState.selectedCertifications.push(cert);
+                element.classList.add('selected');
+            }
+            
+            updateSummary();
+        }
+
+        function skipCertifications() {
+            document.getElementById('step4').style.display = 'block';
+            document.getElementById('progressFill').style.width = '80%';
+        }
+
+        function selectPayment(method) {
+            checkoutState.paymentMethod = method;
+            
+            // Update UI
+            document.querySelectorAll('.payment-option').forEach(option => {
+                option.classList.remove('selected');
+            });
+            document.querySelector(`[data-payment="${method}"]`).classList.add('selected');
+            
+            document.getElementById('checkoutBtn').disabled = false;
+            document.getElementById('progressFill').style.width = '100%';
+            updateSummary();
+        }
+
+        function updateSummary() {
+            const content = document.getElementById('summaryContent');
+            
+            if (!checkoutState.selectedLevel) return;
+            
+            let html = '';
+            let total = 0;
+            
+            if (checkoutState.selectedLevel && checkoutState.selectedDimension) {
+                const level = checkoutState.selectedLevel;
+                const dimension = checkoutState.selectedDimension;
+                
+                if (dimension === 'professional') {
+                    const price = checkoutState.pricing[level].certification;
+                    html += `<div class="summary-item"><span>Professional Development L${level}</span><span>$${price.toFixed(2)}</span></div>`;
+                    total += price;
+                } else {
+                    const price = checkoutState.pricing[level].perDimension;
+                    html += `<div class="summary-item"><span>${dimension.charAt(0).toUpperCase() + dimension.slice(1)} Development L${level}</span><span>$${price.toFixed(2)}</span></div>`;
+                    total += price;
+                }
+                
+                // Add certifications
+                checkoutState.selectedCertifications.forEach(cert => {
+                    const price = checkoutState.certPricing[cert];
+                    html += `<div class="summary-item"><span>${cert.toUpperCase()} Certification</span><span>$${price.toFixed(2)}</span></div>`;
+                    total += price;
+                });
+                
+                // Apply discounts based on payment method
+                if (checkoutState.paymentMethod === 'full') {
+                    const discount = total * 0.05;
+                    html += `<div class="summary-item"><span>Full Payment Discount (5%)</span><span>-$${discount.toFixed(2)}</span></div>`;
+                    total -= discount;
+                }
+                
+                html += `<div class="summary-item summary-total"><span>Total</span><span>$${total.toFixed(2)}</span></div>`;
+                
+                if (checkoutState.paymentMethod === 'monthly') {
+                    const monthly = total / 12;
+                    html += `<div style="text-align: center; margin-top: 1rem; color: rgba(255,255,255,0.8);">
+                        <small>12 monthly payments of $${monthly.toFixed(2)}</small>
+                    </div>`;
+                }
+            } else if (checkoutState.selectedLevel) {
+                html = '<p style="text-align: center; color: rgba(255,255,255,0.6);">Select a dimension to continue</p>';
+            }
+            
+            content.innerHTML = html;
+        }
+
+        function proceedToCheckout() {
+            if (!checkoutState.selectedLevel || !checkoutState.selectedDimension || !checkoutState.paymentMethod) {
+                alert('Please complete all steps before checkout');
+                return;
+            }
+            
+            // Calculate final amount
+            let total = 0;
+            const level = checkoutState.selectedLevel;
+            const dimension = checkoutState.selectedDimension;
+            
+            if (dimension === 'professional') {
+                total += checkoutState.pricing[level].certification;
+            } else {
+                total += checkoutState.pricing[level].perDimension;
+            }
+            
+            checkoutState.selectedCertifications.forEach(cert => {
+                total += checkoutState.certPricing[cert];
+            });
+            
+            if (checkoutState.paymentMethod === 'full') {
+                total *= 0.95; // 5% discount
+            }
+            
+            // Generate SKU for Stripe
+            const sku = `hexad-l${level}-${dimension}-${checkoutState.selectedCertifications.join('-')}`;
+            
+            // Redirect to Stripe checkout
+            const checkoutUrl = `assets/stripe-starter-bth-advanced/frontend/payment.html?sku=${sku}&amount=${(total * 100).toFixed(0)}&description=HEXAD Level ${level} ${dimension.charAt(0).toUpperCase() + dimension.slice(1)} Development`;
+            
+            // Store order details in sessionStorage for success page
+            sessionStorage.setItem('hexadOrder', JSON.stringify({
+                level: level,
+                dimension: dimension,
+                certifications: checkoutState.selectedCertifications,
+                paymentMethod: checkoutState.paymentMethod,
+                total: total
+            }));
+            
+            window.location.href = checkoutUrl;
+        }
+
+        // Professional flow resume handler
+        function resumeProfessionalCheckout(professionalData) {
+            // Restore previous checkout state
+            const checkoutContext = JSON.parse(sessionStorage.getItem('checkoutContext') || '{}');
+            if (checkoutContext.checkoutState) {
+                checkoutState = checkoutContext.checkoutState;
+            }
+            
+            // Mark Professional dimension as selected
+            checkoutState.selectedDimension = 'professional';
+            checkoutState.professionalSelections = professionalData;
+            
+            // Update UI to show professional selections
+            document.querySelector('[data-dimension="professional"]').classList.add('selected');
+            
+            // Show professional summary step
+            showProfessionalSummaryStep(professionalData);
+            
+            // Proceed to payment method selection
+            document.getElementById('step4').style.display = 'block';
+            document.getElementById('progressFill').style.width = '80%';
+            
+            updateSummary();
+        }
+
+        function showProfessionalSummaryStep(data) {
+            // Remove existing step 3 if it exists
+            const existingStep3 = document.getElementById('step3');
+            if (existingStep3) {
+                existingStep3.style.display = 'none';
+            }
+            
+            const step3Html = `
+                <div class="flow-step" id="step3-professional">
+                    <div class="step-header">
+                        <div class="step-number">3</div>
+                        <div class="step-title">Professional Development Package</div>
+                    </div>
+                    <div class="professional-summary">
+                        <div class="selection-summary">
+                            <h4>📂 Sector: ${data.sector || 'Selected'}</h4>
+                            <h4>🎯 Industry Focus: ${data.industryFocus || 'Selected'}</h4>
+                            <h4>🏢 Vendor: ${data.vendor || 'Selected'}</h4>
+                            <h4>📚 Level ${data.level} Certifications:</h4>
+                            <div class="cert-list">
+                                ${(data.certifications || []).map(cert => `
+                                    <div class="cert-summary-item" style="display: flex; justify-content: space-between; padding: 0.5rem; background: rgba(255,255,255,0.1); margin: 0.5rem 0; border-radius: 6px;">
+                                        <span>${cert.name}</span>
+                                        <span>$${cert.cost}</span>
+                                    </div>
+                                `).join('')}
+                            </div>
+                            <button onclick="modifyProfessionalSelections()" style="margin-top: 1rem; background: rgba(59, 130, 246, 0.2); border: 1px solid rgba(59, 130, 246, 0.5); color: white; padding: 0.5rem 1rem; border-radius: 6px; cursor: pointer;">
+                                📝 Modify Selections
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            // Insert after step 2
+            document.getElementById('step2').insertAdjacentHTML('afterend', step3Html);
+        }
+
+        function modifyProfessionalSelections() {
+            // Return to program.html to modify selections
+            window.location.href = 'program.html?flow=checkout&level=' + checkoutState.selectedLevel + '&modify=true';
+        }
+
+        // Check for professional resume on page load
+        window.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const professionalData = JSON.parse(sessionStorage.getItem('professionalSelections') || '{}');
+            
+            if (urlParams.get('resume') === 'professional' && professionalData.returnToCheckout) {
+                resumeProfessionalCheckout(professionalData);
+            }
+        });
+    </script>
+</body>
+</html>

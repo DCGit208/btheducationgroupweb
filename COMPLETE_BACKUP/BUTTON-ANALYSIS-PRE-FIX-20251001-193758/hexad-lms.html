@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HEXAD Learning Management System - BTH Education Group</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --success-gradient: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+            --accent-blue: #3b82f6;
+            --accent-green: #059669;
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            --sidebar-width: 280px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f8fafc;
+            color: #1e293b;
+            overflow-x: hidden;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: var(--sidebar-width);
+            height: 100vh;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: white;
+            z-index: 1000;
+            overflow-y: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .sidebar-header {
+            padding: 2rem 1.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .sidebar-header h2 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .sidebar-nav {
+            padding: 1rem 0;
+        }
+
+        .nav-section {
+            margin-bottom: 2rem;
+        }
+
+        .nav-section-title {
+            padding: 0 1.5rem 0.5rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.6);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .nav-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.75rem 1.5rem;
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-left: 3px solid transparent;
+        }
+
+        .nav-item:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+        }
+
+        .nav-item.active {
+            background: rgba(59, 130, 246, 0.2);
+            color: white;
+            border-left-color: var(--accent-blue);
+        }
+
+        .nav-item i {
+            width: 20px;
+            text-align: center;
+        }
+
+        .progress-indicator {
+            margin-left: auto;
+            font-size: 0.75rem;
+            background: var(--accent-green);
+            color: white;
+            padding: 0.25rem 0.5rem;
+            border-radius: 10px;
+        }
+
+        /* Main Content */
+        .main-content {
+            margin-left: var(--sidebar-width);
+            min-height: 100vh;
+        }
+
+        .top-bar {
+            background: white;
+            border-bottom: 1px solid #e2e8f0;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #64748b;
+            font-size: 0.875rem;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .user-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--primary-gradient);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+        }
+
+        .content-area {
+            padding: 2rem;
+            max-width: 1200px;
+        }
+
+        .content-header {
+            margin-bottom: 2rem;
+        }
+
+        .content-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 0.5rem;
+        }
+
+        .content-subtitle {
+            color: #64748b;
+            font-size: 1.125rem;
+        }
+
+        /* Module Grid */
+        .module-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .module-card {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .module-card:hover {
+            border-color: var(--accent-blue);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .module-card.completed {
+            border-color: var(--accent-green);
+            background: rgba(5, 150, 105, 0.05);
+        }
+
+        .module-card.locked {
+            opacity: 0.6;
+            cursor: not-allowed;
+            background: #f8fafc;
+        }
+
+        .module-header {
+            display: flex;
+            justify-content: between;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+
+        .module-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .module-status {
+            margin-left: auto;
+            font-size: 1.25rem;
+        }
+
+        .module-status.completed {
+            color: var(--accent-green);
+        }
+
+        .module-status.locked {
+            color: #94a3b8;
+        }
+
+        .module-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #1e293b;
+            margin-bottom: 0.5rem;
+        }
+
+        .module-description {
+            color: #64748b;
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .module-progress {
+            background: #f1f5f9;
+            border-radius: 6px;
+            height: 8px;
+            overflow: hidden;
+            margin-bottom: 1rem;
+        }
+
+        .module-progress-fill {
+            height: 100%;
+            background: var(--accent-green);
+            transition: width 0.3s ease;
+        }
+
+        .module-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.75rem;
+            color: #64748b;
+        }
+
+        .module-duration {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        .module-difficulty {
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+
+        .module-difficulty.foundation {
+            background: rgba(59, 130, 246, 0.1);
+            color: var(--accent-blue);
+        }
+
+        .module-difficulty.intermediate {
+            background: rgba(245, 158, 11, 0.1);
+            color: #f59e0b;
+        }
+
+        .module-difficulty.advanced {
+            background: rgba(239, 68, 68, 0.1);
+            color: #ef4444;
+        }
+
+        /* Dashboard Stats */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .stat-card {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent-blue);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: #64748b;
+            font-size: 0.875rem;
+        }
+
+        /* Video Player */
+        .video-container {
+            background: black;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 2rem;
+            aspect-ratio: 16/9;
+        }
+
+        .video-player {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Certification Progress */
+        .cert-progress {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .cert-progress h3 {
+            color: #1e293b;
+            margin-bottom: 1rem;
+        }
+
+        .cert-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        .cert-item:last-child {
+            border-bottom: none;
+        }
+
+        .cert-badge {
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        .cert-badge.not-started {
+            background: #f1f5f9;
+            color: #64748b;
+        }
+
+        .cert-badge.in-progress {
+            background: rgba(245, 158, 11, 0.1);
+            color: #f59e0b;
+        }
+
+        .cert-badge.completed {
+            background: rgba(5, 150, 105, 0.1);
+            color: var(--accent-green);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .sidebar {
+                transform: translateX(-100%);
+            }
+
+            .sidebar.open {
+                transform: translateX(0);
+            }
+
+            .main-content {
+                margin-left: 0;
+            }
+
+            .content-area {
+                padding: 1rem;
+            }
+
+            .module-grid,
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar -->
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h2>HEXAD Mastery System</h2>
+            <p style="font-size: 0.875rem; color: rgba(255,255,255,0.6); margin-top: 0.5rem;" id="userLevel">Level 1 - Personal Development</p>
+        </div>
+
+        <div class="sidebar-nav">
+            <div class="nav-section">
+                <div class="nav-section-title">Learning</div>
+                <a href="#" class="nav-item active" onclick="showSection('dashboard')">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="#" class="nav-item" onclick="showSection('modules')">
+                    <i class="fas fa-book-open"></i>
+                    <span>Modules</span>
+                    <span class="progress-indicator" id="moduleProgress">3/18</span>
+                </a>
+                <a href="#" class="nav-item" onclick="showSection('certifications')">
+                    <i class="fas fa-certificate"></i>
+                    <span>Certifications</span>
+                    <span class="progress-indicator" id="certProgress">1/3</span>
+                </a>
+                <a href="#" class="nav-item" onclick="showSection('assignments')">
+                    <i class="fas fa-tasks"></i>
+                    <span>Assignments</span>
+                </a>
+            </div>
+
+            <div class="nav-section">
+                <div class="nav-section-title">Progress</div>
+                <a href="#" class="nav-item" onclick="showSection('progress')">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Progress Tracker</span>
+                </a>
+                <a href="#" class="nav-item" onclick="showSection('achievements')">
+                    <i class="fas fa-trophy"></i>
+                    <span>Achievements</span>
+                </a>
+                <a href="#" class="nav-item" onclick="showSection('leaderboard')">
+                    <i class="fas fa-users"></i>
+                    <span>Leaderboard</span>
+                </a>
+            </div>
+
+            <div class="nav-section">
+                <div class="nav-section-title">Support</div>
+                <a href="#" class="nav-item" onclick="showSection('resources')">
+                    <i class="fas fa-download"></i>
+                    <span>Resources</span>
+                </a>
+                <a href="#" class="nav-item" onclick="showSection('support')">
+                    <i class="fas fa-headset"></i>
+                    <span>Support</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="top-bar">
+            <div class="breadcrumb">
+                <i class="fas fa-home"></i>
+                <span>/</span>
+                <span id="currentSection">Dashboard</span>
+            </div>
+            
+            <div class="user-info">
+                <div class="user-avatar" id="userAvatar">JS</div>
+                <div>
+                    <div style="font-weight: 600; font-size: 0.875rem;">John Smith</div>
+                    <div style="font-size: 0.75rem; color: #64748b;">Level 1 Student</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-area">
+            <!-- Dashboard Section -->
+            <div id="dashboard-section" class="section active">
+                <div class="content-header">
+                    <h1 class="content-title">Welcome Back, John! 👋</h1>
+                    <p class="content-subtitle">Continue your HEXAD Personal Development journey</p>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-value">3</div>
+                        <div class="stat-label">Modules Completed</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">17%</div>
+                        <div class="stat-label">Overall Progress</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">1</div>
+                        <div class="stat-label">Certifications Earned</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">45</div>
+                        <div class="stat-label">Study Hours</div>
+                    </div>
+                </div>
+
+                <div class="cert-progress">
+                    <h3>Active Certifications</h3>
+                    <div class="cert-item">
+                        <span>CompTIA A+ Core 1</span>
+                        <span class="cert-badge completed">Completed</span>
+                    </div>
+                    <div class="cert-item">
+                        <span>CompTIA A+ Core 2</span>
+                        <span class="cert-badge in-progress">In Progress</span>
+                    </div>
+                    <div class="cert-item">
+                        <span>Microsoft Azure Fundamentals</span>
+                        <span class="cert-badge not-started">Not Started</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modules Section -->
+            <div id="modules-section" class="section" style="display: none;">
+                <div class="content-header">
+                    <h1 class="content-title">Learning Modules</h1>
+                    <p class="content-subtitle">Personal Development - Level 1 Foundation</p>
+                </div>
+
+                <div class="module-grid" id="moduleGrid">
+                    <!-- Modules populated by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Other sections would be implemented similarly -->
+            <div id="certifications-section" class="section" style="display: none;">
+                <div class="content-header">
+                    <h1 class="content-title">Certification Pathways</h1>
+                    <p class="content-subtitle">Track your professional certification progress</p>
+                </div>
+                <!-- Certification content -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // LMS Application State
+        const lmsState = {
+            currentUser: {
+                name: 'John Smith',
+                email: 'john@example.com',
+                level: 1,
+                dimension: 'personal',
+                completedModules: [1, 2, 3],
+                totalModules: 18,
+                certifications: ['comptia-core1']
+            },
+            modules: [
+                {
+                    id: 1,
+                    title: 'Critical Thinking Foundations',
+                    description: 'Master the fundamentals of critical thinking and logical reasoning.',
+                    icon: '🧠',
+                    duration: '45 min',
+                    difficulty: 'foundation',
+                    progress: 100,
+                    status: 'completed'
+                },
+                {
+                    id: 2,
+                    title: 'Skills Development Framework',
+                    description: 'Develop essential skills for personal and professional growth.',
+                    icon: '🛠️',
+                    duration: '60 min',
+                    difficulty: 'foundation',
+                    progress: 100,
+                    status: 'completed'
+                },
+                {
+                    id: 3,
+                    title: 'Behavioral Mastery',
+                    description: 'Understanding and controlling behavioral patterns for success.',
+                    icon: '🎯',
+                    duration: '90 min',
+                    difficulty: 'foundation',
+                    progress: 100,
+                    status: 'completed'
+                },
+                {
+                    id: 4,
+                    title: 'Etymology & Language Origins',
+                    description: 'Explore the origins and evolution of language and communication.',
+                    icon: '📚',
+                    duration: '75 min',
+                    difficulty: 'intermediate',
+                    progress: 65,
+                    status: 'in-progress'
+                },
+                {
+                    id: 5,
+                    title: 'Epistemology: Theory of Knowledge',
+                    description: 'Understand how we acquire, validate, and use knowledge.',
+                    icon: '🔍',
+                    duration: '90 min',
+                    difficulty: 'intermediate',
+                    progress: 0,
+                    status: 'locked'
+                }
+            ]
+        };
+
+        // Initialize LMS
+        function initializeLMS() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const level = urlParams.get('level') || '1';
+            const dimension = urlParams.get('dimension') || 'personal';
+            
+            // Update user info
+            document.getElementById('userLevel').textContent = `Level ${level} - ${dimension.charAt(0).toUpperCase() + dimension.slice(1)} Development`;
+            
+            // Update progress indicators
+            updateProgressIndicators();
+            
+            // Render modules
+            renderModules();
+        }
+
+        function updateProgressIndicators() {
+            const completed = lmsState.currentUser.completedModules.length;
+            const total = lmsState.currentUser.totalModules;
+            
+            document.getElementById('moduleProgress').textContent = `${completed}/${total}`;
+            
+            // Update stats
+            document.querySelector('.stat-value').textContent = completed;
+            document.querySelectorAll('.stat-value')[1].textContent = `${Math.round((completed / total) * 100)}%`;
+        }
+
+        function renderModules() {
+            const container = document.getElementById('moduleGrid');
+            
+            const modulesHTML = lmsState.modules.map(module => `
+                <div class="module-card ${module.status}" onclick="openModule(${module.id})">
+                    <div class="module-header">
+                        <div class="module-icon">${module.icon}</div>
+                        <div class="module-status ${module.status}">
+                            ${module.status === 'completed' ? '<i class="fas fa-check-circle"></i>' : 
+                              module.status === 'in-progress' ? '<i class="fas fa-play-circle"></i>' : 
+                              '<i class="fas fa-lock"></i>'}
+                        </div>
+                    </div>
+                    <h3 class="module-title">${module.title}</h3>
+                    <p class="module-description">${module.description}</p>
+                    <div class="module-progress">
+                        <div class="module-progress-fill" style="width: ${module.progress}%"></div>
+                    </div>
+                    <div class="module-meta">
+                        <div class="module-duration">
+                            <i class="fas fa-clock"></i>
+                            <span>${module.duration}</span>
+                        </div>
+                        <div class="module-difficulty ${module.difficulty}">${module.difficulty}</div>
+                    </div>
+                </div>
+            `).join('');
+            
+            container.innerHTML = modulesHTML;
+        }
+
+        function showSection(sectionName) {
+            // Hide all sections
+            document.querySelectorAll('.section').forEach(section => {
+                section.style.display = 'none';
+            });
+            
+            // Show selected section
+            document.getElementById(`${sectionName}-section`).style.display = 'block';
+            
+            // Update nav
+            document.querySelectorAll('.nav-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            event.target.closest('.nav-item').classList.add('active');
+            
+            // Update breadcrumb
+            document.getElementById('currentSection').textContent = sectionName.charAt(0).toUpperCase() + sectionName.slice(1);
+        }
+
+        function openModule(moduleId) {
+            const module = lmsState.modules.find(m => m.id === moduleId);
+            
+            if (module.status === 'locked') {
+                alert('Complete previous modules to unlock this content.');
+                return;
+            }
+            
+            // Create module learning interface
+            const moduleWindow = window.open('', '_blank', 'width=1200,height=800');
+            moduleWindow.document.write(`
+                <!DOCTYPE html>
+                <html>
+                <head>
+                    <title>${module.title} - HEXAD LMS</title>
+                    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+                    <style>
+                        body { font-family: 'Inter', sans-serif; margin: 0; padding: 2rem; background: #f8fafc; }
+                        .module-header { background: white; padding: 2rem; border-radius: 12px; margin-bottom: 2rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+                        .module-title { font-size: 2rem; font-weight: 700; margin-bottom: 0.5rem; color: #1e293b; }
+                        .module-meta { color: #64748b; margin-bottom: 1rem; }
+                        .video-container { background: black; border-radius: 12px; aspect-ratio: 16/9; margin-bottom: 2rem; display: flex; align-items: center; justify-content: center; color: white; }
+                        .content-section { background: white; padding: 2rem; border-radius: 12px; margin-bottom: 2rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+                        .complete-btn { background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); color: white; border: none; padding: 1rem 2rem; border-radius: 8px; font-weight: 600; cursor: pointer; }
+                    </style>
+                </head>
+                <body>
+                    <div class="module-header">
+                        <h1 class="module-title">${module.title}</h1>
+                        <div class="module-meta">
+                            <span>${module.icon} ${module.duration} • ${module.difficulty}</span>
+                        </div>
+                        <div style="background: #f1f5f9; height: 8px; border-radius: 4px; overflow: hidden;">
+                            <div style="background: #059669; height: 100%; width: ${module.progress}%; transition: width 0.3s ease;"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="video-container">
+                        <div>📹 Video Content: ${module.title}</div>
+                    </div>
+                    
+                    <div class="content-section">
+                        <h3>Learning Objectives</h3>
+                        <ul>
+                            <li>Understand core concepts of ${module.title.toLowerCase()}</li>
+                            <li>Apply knowledge through practical exercises</li>
+                            <li>Demonstrate mastery through assessments</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="content-section">
+                        <h3>Module Content</h3>
+                        <p>${module.description}</p>
+                        <p>This comprehensive module covers all essential aspects of the topic with interactive content, assessments, and practical applications.</p>
+                    </div>
+                    
+                    <div style="text-align: center; padding: 2rem;">
+                        <button class="complete-btn" onclick="completeModule(${moduleId})">Mark as Complete</button>
+                    </div>
+                    
+                    <script>
+                        function completeModule(id) {
+                            // Update parent window
+                            if (window.opener) {
+                                window.opener.markModuleComplete(id);
+                            }
+                            alert('Module completed! Well done!');
+                            window.close();
+                        }
+                    </script>
+                </body>
+                </html>
+            `);
+        }
+
+        function markModuleComplete(moduleId) {
+            // Update module status
+            const module = lmsState.modules.find(m => m.id === moduleId);
+            if (module) {
+                module.status = 'completed';
+                module.progress = 100;
+            }
+            
+            // Update user progress
+            if (!lmsState.currentUser.completedModules.includes(moduleId)) {
+                lmsState.currentUser.completedModules.push(moduleId);
+            }
+            
+            // Unlock next module
+            const nextModule = lmsState.modules.find(m => m.id === moduleId + 1);
+            if (nextModule && nextModule.status === 'locked') {
+                nextModule.status = 'available';
+            }
+            
+            // Re-render
+            updateProgressIndicators();
+            renderModules();
+            
+            // Track progress
+            trackProgress(moduleId);
+        }
+
+        function trackProgress(moduleId) {
+            fetch('/api/track-progress', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    email: lmsState.currentUser.email,
+                    level: lmsState.currentUser.level,
+                    dimension: lmsState.currentUser.dimension,
+                    module: moduleId
+                })
+            }).catch(console.error);
+        }
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', initializeLMS);
+    </script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"name": "btheducationgroupweb",
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.port": 5501
+	}
+}

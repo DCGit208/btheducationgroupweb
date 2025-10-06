@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technology Filtering System Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .test-section { margin: 20px 0; padding: 15px; border: 1px solid #ddd; }
+        .success { color: green; }
+        .error { color: red; }
+        .test-result { margin: 10px 0; }
+    </style>
+</head>
+<body>
+    <h1>Technology.html Advanced Filtering System Test</h1>
+    
+    <div class="test-section">
+        <h2>System Load Test</h2>
+        <div id="loadTest" class="test-result">Testing...</div>
+    </div>
+    
+    <div class="test-section">
+        <h2>Category Database Test</h2>
+        <div id="categoryTest" class="test-result">Testing...</div>
+    </div>
+    
+    <div class="test-section">
+        <h2>Vendor Database Test</h2>
+        <div id="vendorTest" class="test-result">Testing...</div>
+    </div>
+    
+    <div class="test-section">
+        <h2>Cross-Category Vendor Test</h2>
+        <div id="crossVendorTest" class="test-result">Testing...</div>
+    </div>
+
+    <script>
+        // Load the filtering system from technology.html
+        fetch('./programs/technology.html')
+            .then(response => response.text())
+            .then(html => {
+                // Extract the ITAdvancedFilteringSystemComplete class
+                const scriptMatch = html.match(/class ITAdvancedFilteringSystemComplete[\s\S]*?(?=<\/script>)/);
+                if (scriptMatch) {
+                    // Execute the class definition
+                    eval(scriptMatch[0]);
+                    
+                    // Initialize the system
+                    const testSystem = new ITAdvancedFilteringSystemComplete();
+                    
+                    runTests(testSystem);
+                } else {
+                    document.getElementById('loadTest').innerHTML = '<span class="error">❌ Failed to extract ITAdvancedFilteringSystemComplete class</span>';
+                }
+            })
+            .catch(error => {
+                document.getElementById('loadTest').innerHTML = '<span class="error">❌ Failed to load technology.html: ' + error.message + '</span>';
+            });
+
+        function runTests(system) {
+            // Test 1: System Load
+            try {
+                document.getElementById('loadTest').innerHTML = '<span class="success">✅ ITAdvancedFilteringSystemComplete loaded successfully</span>';
+            } catch (error) {
+                document.getElementById('loadTest').innerHTML = '<span class="error">❌ System load failed: ' + error.message + '</span>';
+                return;
+            }
+
+            // Test 2: Category Database
+            try {
+                const categories = Object.keys(system.categoryDatabase);
+                const expectedCategories = ['core-it', 'cloud-platforms', 'cybersecurity', 'data-analytics', 'devops-automation', 'emerging-tech', 'business-systems'];
+                
+                if (categories.length === 7 && expectedCategories.every(cat => categories.includes(cat))) {
+                    document.getElementById('categoryTest').innerHTML = '<span class="success">✅ All 7 categories loaded: ' + categories.join(', ') + '</span>';
+                } else {
+                    document.getElementById('categoryTest').innerHTML = '<span class="error">❌ Category count mismatch. Found: ' + categories.length + ' categories</span>';
+                }
+            } catch (error) {
+                document.getElementById('categoryTest').innerHTML = '<span class="error">❌ Category test failed: ' + error.message + '</span>';
+            }
+
+            // Test 3: Vendor Database
+            try {
+                let totalVendors = 0;
+                const vendorCounts = {};
+                
+                Object.keys(system.categoryDatabase).forEach(categoryId => {
+                    const category = system.categoryDatabase[categoryId];
+                    const premium = category.vendors.premium.length;
+                    const standard = category.vendors.standard.length;
+                    totalVendors += premium + standard;
+                    vendorCounts[categoryId] = { premium, standard };
+                });
+                
+                if (totalVendors >= 51) {
+                    document.getElementById('vendorTest').innerHTML = '<span class="success">✅ ' + totalVendors + ' vendors loaded across 7 categories</span>';
+                } else {
+                    document.getElementById('vendorTest').innerHTML = '<span class="error">❌ Vendor count too low: ' + totalVendors + ' (expected 51+)</span>';
+                }
+            } catch (error) {
+                document.getElementById('vendorTest').innerHTML = '<span class="error">❌ Vendor test failed: ' + error.message + '</span>';
+            }
+
+            // Test 4: Cross-Category Vendors
+            try {
+                const crossCategoryVendors = system.crossCategoryVendors;
+                const microsoftCategories = crossCategoryVendors['Microsoft'] || [];
+                const vmwareCategories = crossCategoryVendors['VMware/Omnissa'] || [];
+                const redhatCategories = crossCategoryVendors['Red Hat'] || [];
+                
+                if (microsoftCategories.length >= 3 && vmwareCategories.length >= 3 && redhatCategories.length >= 2) {
+                    document.getElementById('crossVendorTest').innerHTML = '<span class="success">✅ Cross-category vendors mapped: Microsoft (' + microsoftCategories.length + '), VMware/Omnissa (' + vmwareCategories.length + '), Red Hat (' + redhatCategories.length + ')</span>';
+                } else {
+                    document.getElementById('crossVendorTest').innerHTML = '<span class="error">❌ Cross-category mapping incomplete</span>';
+                }
+            } catch (error) {
+                document.getElementById('crossVendorTest').innerHTML = '<span class="error">❌ Cross-vendor test failed: ' + error.message + '</span>';
+            }
+        }
+    </script>
+</body>
+</html>
