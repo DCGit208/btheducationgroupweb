@@ -1634,8 +1634,8 @@
             }
         }
 
-    // Certification database (sample, replace with real data)
-        const certifications = [
+    // Certification database (will be replaced by external JSON if available)
+        let certifications = [
             { id: 1, name: 'CompTIA Tech+', vendor: 'CompTIA', category: 'core-it', focus: 'Foundations', level: 1, retired: false, logo: 'https://www.comptia.org/_next/image/?url=https%3A%2F%2Fimages.cmp.optimizely.com%2F84c2ddbcb71111ef888eca5646afc7d8&w=256&q=90', premium: true, exam: 'FC0-U71' },
             { id: 2, name: 'CompTIA A+', vendor: 'CompTIA', category: 'core-it', focus: 'Foundations', level: 1, retired: false, logo: 'assets/logos/comptia-aplus.png', premium: true, exam: '220-1101/220-1102' },
             { id: 3, name: 'CompTIA Network+', vendor: 'CompTIA', category: 'core-it', focus: 'Foundations', level: 1, retired: false, logo: 'assets/logos/comptia-networkplus.png', premium: true, exam: 'N10-009' },
@@ -1795,7 +1795,7 @@
                     card.style.display = 'flex';
                     card.style.flexDirection = 'column';
                     card.style.alignItems = 'center';
-                    const logoSrc = vendorLogoMap[cert.vendor] || cert.logo || '../assets/images/vendor-logos/default-logo.svg';
+                    const logoSrc = (cert.logo && cert.logo.trim()) || vendorLogoMap[cert.vendor] || '../assets/images/vendor-logos/default-logo.svg';
                     card.innerHTML = `
                         <img src='${logoSrc}' alt='${cert.vendor} logo' style='height:56px;margin-bottom:1rem;' onerror="this.onerror=null;this.src='../assets/images/vendor-logos/default-logo.svg';">
                         <h4 style='font-size:1.2rem;color:#1e293b;margin-bottom:0.5rem;'>${cert.name}</h4>
@@ -1848,7 +1848,8 @@
                 checkoutBtn.className = 'cta-button cta-standard';
                 checkoutBtn.textContent = 'Proceed to Checkout';
                 checkoutBtn.onclick = function() { alert('Proceeding to checkout...'); };
-                resultsDiv.appendChild(checkoutBtn);
+                // Insert checkout after modules section to ensure modules appear before it
+                modulesDiv.appendChild(checkoutBtn);
             }
         }
 
@@ -1863,8 +1864,19 @@
             document.getElementById('level-modules').innerHTML = '';
         }
 
-        // Auto-apply on select changes and Enter in search
+        // Load external certifications dataset (if available), then auto-apply on filter inputs
         document.addEventListener('DOMContentLoaded', function() {
+            // Try to load external dataset
+            fetch('../assets/data/certifications.json', { cache: 'no-store' })
+                .then(r => r.ok ? r.json() : Promise.reject(new Error('No dataset')))
+                .then(data => {
+                    if (Array.isArray(data) && data.length) {
+                        certifications = data;
+                        try { applyFilters(); } catch(_){}
+                    }
+                })
+                .catch(() => {/* keep inline sample */});
+
             const selects = ['levelFilter','categoryFilter','focusFilter','vendorFilter','partnershipFilter']
                 .map(id => document.getElementById(id))
                 .filter(Boolean);
