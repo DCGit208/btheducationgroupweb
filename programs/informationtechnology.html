@@ -1692,6 +1692,53 @@
             ]
         };
 
+        // Rich module metadata (icon + description)
+        const moduleInfo = {
+            'Professional Ethics': { icon: 'fa-scale-balanced', desc: 'Build integrity, accountability, and ethical decision-making.' },
+            'Communication Skills': { icon: 'fa-comments', desc: 'Master clear, effective written and verbal communication.' },
+            'Career Skills': { icon: 'fa-briefcase', desc: 'Develop resumes, interviewing, and workplace success skills.' },
+            'AI Integration': { icon: 'fa-robot', desc: 'Apply practical AI tools and workflows to daily tasks.' },
+            'Industry Mentor Network': { icon: 'fa-people-group', desc: 'Access guidance and feedback from industry mentors.' },
+            'Advanced Ethics': { icon: 'fa-scale-balanced', desc: 'Navigate complex ethical challenges with sound judgment.' },
+            'Leadership': { icon: 'fa-chess-king', desc: 'Lead teams with vision, empathy, and accountability.' },
+            'Project Management': { icon: 'fa-diagram-project', desc: 'Plan, execute, and deliver projects effectively.' },
+            'Emerging Technologies': { icon: 'fa-microchip', desc: 'Explore and apply cutting-edge technologies.' },
+            'Mentor Network Expansion': { icon: 'fa-user-plus', desc: 'Grow your professional network and influence.' },
+            'Professional Mastery': { icon: 'fa-medal', desc: 'Elevate your craft through deliberate practice.' },
+            'Strategic Leadership': { icon: 'fa-sitemap', desc: 'Drive long-term outcomes with strategy and alignment.' },
+            'Innovation': { icon: 'fa-lightbulb', desc: 'Design creative solutions to high-impact problems.' },
+            'Global Collaboration': { icon: 'fa-globe', desc: 'Work effectively across cultures and time zones.' },
+            'Advanced AI': { icon: 'fa-brain', desc: 'Build intelligent systems and leverage ML responsibly.' },
+            'Executive Mentorship': { icon: 'fa-user-tie', desc: 'Learn directly from executive-level leaders.' },
+            'Expert Ethics': { icon: 'fa-scale-balanced', desc: 'Set ethical standards for teams and organizations.' },
+            'Expert Leadership': { icon: 'fa-chess-queen', desc: 'Lead high-performing teams and complex programs.' },
+            'Expert Project Management': { icon: 'fa-timeline', desc: 'Deliver at scale with advanced PM practices.' },
+            'Expert Technologies': { icon: 'fa-server', desc: 'Architect and operate advanced technical systems.' },
+            'Expert Mentorship': { icon: 'fa-handshake', desc: 'Uplift others through structured mentorship.' },
+            'Expert Communication': { icon: 'fa-comments', desc: 'Influence stakeholders with clarity and precision.' },
+            'Expert Career Skills': { icon: 'fa-compass', desc: 'Optimize career trajectory and senior opportunities.' },
+            'Master Ethics': { icon: 'fa-scale-balanced', desc: 'Institutionalize ethics across the enterprise.' },
+            'Master Leadership': { icon: 'fa-crown', desc: 'Steer organizations through transformation.' },
+            'Master Project Management': { icon: 'fa-diagram-project', desc: 'Portfolio-level execution and governance.' },
+            'Master Technologies': { icon: 'fa-cloud', desc: 'Set technical direction that compounds advantage.' },
+            'Master Mentorship': { icon: 'fa-people-group', desc: 'Build mentorship cultures and communities.' },
+            'Master Communication': { icon: 'fa-bullhorn', desc: 'Public speaking and org-wide messaging.' },
+            'Master Career Skills': { icon: 'fa-rocket', desc: 'Navigate executive landscapes with confidence.' },
+            'Master Innovation': { icon: 'fa-flask', desc: 'Institutionalize innovation pipelines.' },
+            'Master Collaboration': { icon: 'fa-people-arrows', desc: 'Partner ecosystems and strategic alliances.' },
+            'Master AI': { icon: 'fa-brain', desc: 'Governance and scaling of AI initiatives.' }
+        };
+
+        // Vendor logo mapping (fallbacks to default)
+        const vendorLogoMap = {
+            'AWS': '../assets/images/vendor-logos/aws.svg',
+            'Amazon AWS': '../assets/images/vendor-logos/aws.svg',
+            'Microsoft': '../assets/images/vendor-logos/microsoft.svg',
+            'Azure': '../assets/images/vendor-logos/azure.svg',
+            'CompTIA': '../assets/images/vendor-logos/comptia.svg',
+            'Cisco': '../assets/images/vendor-logos/cisco.svg'
+        };
+
         // Level restrictions
         const levelLimits = {
             1: 3,
@@ -1748,8 +1795,9 @@
                     card.style.display = 'flex';
                     card.style.flexDirection = 'column';
                     card.style.alignItems = 'center';
+                    const logoSrc = vendorLogoMap[cert.vendor] || cert.logo || '../assets/images/vendor-logos/default-logo.svg';
                     card.innerHTML = `
-                        <img src='${cert.logo}' alt='${cert.name} logo' style='height:56px;margin-bottom:1rem;' onerror="this.onerror=null;this.src='../assets/images/vendor-logos/default-logo.svg';">
+                        <img src='${logoSrc}' alt='${cert.vendor} logo' style='height:56px;margin-bottom:1rem;' onerror="this.onerror=null;this.src='../assets/images/vendor-logos/default-logo.svg';">
                         <h4 style='font-size:1.2rem;color:#1e293b;margin-bottom:0.5rem;'>${cert.name}</h4>
                         <div style='color:#64748b;font-size:1rem;margin-bottom:0.5rem;'>Vendor: <strong>${cert.vendor}</strong></div>
                         <div style='color:#64748b;font-size:0.98rem;margin-bottom:0.5rem;'>Category: ${cert.category.replace(/-/g,' ').replace(/\b\w/g, l => l.toUpperCase())}</div>
@@ -1782,10 +1830,11 @@
                 hexadModules[level].forEach(mod => {
                     const m = document.createElement('div');
                     m.className = 'module-card';
+                    const meta = moduleInfo[mod] || { icon: 'fa-check-circle', desc: `Included professional development module for Level ${level}.` };
                     m.innerHTML = `
-                        <div class='module-icon'><i class="fas fa-check-circle"></i></div>
+                        <div class='module-icon'><i class="fas ${meta.icon}"></i></div>
                         <div class='module-title'>${mod}</div>
-                        <div class='module-desc'>Included professional development module for Level ${level}.</div>
+                        <div class='module-desc'>${meta.desc}</div>
                     `;
                     grid.appendChild(m);
                 });
