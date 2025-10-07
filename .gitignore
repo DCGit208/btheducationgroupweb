@@ -1,0 +1,30 @@
+# OS cruft
+.DS_Store
+
+# Node & build artifacts
+node_modules/
+dist/
+.tmp/
+
+# Editor/extension state
+.vscode/
+.continue/
+
+# Logs
+*.log
+
+# Large backup folders not intended for source control
+COMPLETE_BACKUP/
+backup of program html/
+backup technology html/
+mirror/
+content-materials/
+
+# Binary assets
+*.pdf
+*.docx
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.zip
