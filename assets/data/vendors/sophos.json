@@ -1,0 +1,4 @@
+[
+  {"name":"Sophos Certified Engineer","vendor":"Sophos","category":"cybersecurity","focus":"Endpoint & Network Security","level":2,"retired":false,"premium":true,"exam":"Sophos Engineer"},
+  {"name":"Sophos Certified Architect","vendor":"Sophos","category":"cybersecurity","focus":"Security Architecture","level":3,"retired":false,"premium":true,"exam":"Sophos Architect"}
+]

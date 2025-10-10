@@ -1,0 +1,29 @@
+{
+  "name": "btheducationgroupweb",
+  "version": "1.0.0",
+  "private": true,
+  "description": "BTH Education Group website",
+  "scripts": {
+    "validate:data": "node scripts/validate-certifications.js",
+    "merge:data": "node scripts/merge-certs.js",
+    "coverage": "node scripts/report-coverage.js",
+    "reconcile": "node scripts/report-reconcile.js",
+    "sync:vendors": "node scripts/sync-merged-to-vendors.js",
+  "sync:vendors:min": "node scripts/sync-merged-to-vendors.js --no-extras",
+  "sync:vendors:augment": "node scripts/sync-merged-to-vendors.js --augment",
+    "sync:all": "npm run sync:vendors && npm run merge:data && npm run validate:data && npm run coverage && npm run reconcile",
+    "report:missing-exams": "node scripts/report-missing-exams.js",
+    "fill:exams": "node scripts/fill-exams-from-csv.js && npm run merge:data && npm run validate:data",
+    "check:logos": "node scripts/check-logos.js",
+    "optimize:logos": "svgo -f assets/images/vendor-logos --config=svgo.config.js",
+    "replace:logos": "node scripts/ingest-logos.js",
+    "logos": "npm run replace:logos && npm run check:logos",
+    "fetch:logos": "node scripts/fetch-logos.js",
+    "update:logos": "npm run fetch:logos && npm run logos"
+  },
+  "devDependencies": {
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "svgo": "^3.3.2"
+  }
+}

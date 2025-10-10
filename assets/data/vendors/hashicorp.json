@@ -1,0 +1,33 @@
+[
+  {
+    "name": "Terraform Associate",
+    "vendor": "HashiCorp",
+    "category": "software-devops",
+    "focus": "CI/CD",
+    "level": 2,
+    "retired": false,
+    "premium": false,
+    "exam": "Terraform Associate"
+  },
+  {
+    "name": "Terraform Associate (003)",
+    "vendor": "HashiCorp",
+    "category": "software-devops",
+    "focus": "Infrastructure as Code",
+    "level": 2,
+    "retired": false,
+    "exam": "Terraform Associate",
+    "logo": "../assets/images/vendor-logos/hashicorp.svg",
+    "url": "https://www.hashicorp.com/certification/terraform-associate"
+  },
+  {
+    "name": "Vault Associate",
+    "vendor": "HashiCorp",
+    "category": "cybersecurity",
+    "focus": "Cloud Security",
+    "level": 2,
+    "retired": false,
+    "premium": false,
+    "exam": "Vault Associate"
+  }
+]

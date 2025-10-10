@@ -1,0 +1,33 @@
+[
+  {
+    "name": "Certificate of Cloud Security Knowledge (CCSK)",
+    "vendor": "CSA",
+    "category": "cybersecurity",
+    "focus": "Cloud Security",
+    "level": 1,
+    "retired": false,
+    "exam": "CCSK",
+    "logo": "../assets/images/vendor-logos/csa.svg",
+    "url": "https://cloudsecurityalliance.org/education/ccsk"
+  },
+  {
+    "name": "CSA Certificate of Cloud Security Knowledge (CCSK)",
+    "vendor": "CSA",
+    "category": "cybersecurity",
+    "focus": "Cloud Security",
+    "level": 2,
+    "retired": false,
+    "premium": false,
+    "exam": "CCSK"
+  },
+  {
+    "name": "CSA Cloud Controls Matrix Assessor (CCAK)",
+    "vendor": "CSA",
+    "category": "cybersecurity",
+    "focus": "Cloud Security",
+    "level": 3,
+    "retired": false,
+    "premium": false,
+    "exam": "CCAK"
+  }
+]

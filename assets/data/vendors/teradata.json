@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Teradata Vantage Associate",
+    "vendor": "Teradata",
+    "category": "cloud-platforms",
+    "focus": "Data Platforms",
+    "level": 2,
+    "retired": false,
+    "premium": false,
+    "exam": "Teradata Vantage Associate"
+  }
+]

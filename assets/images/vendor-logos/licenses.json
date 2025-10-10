@@ -1,0 +1,52 @@
+{
+  "_meta": {
+    "note": "Record your authorization details for each vendor logo. This file is for internal tracking only.",
+    "fields": ["source", "grantedBy", "licenseType", "scope", "expires", "guidelinesUrl", "notes"]
+  },
+  "cisco.svg": {
+    "source": "",
+    "grantedBy": "",
+    "licenseType": "partner/press",
+    "scope": "website use",
+    "expires": "",
+    "guidelinesUrl": "https://newsroom.cisco.com/c/r/newsroom/en/us/press-room/logo-guidelines.html",
+    "notes": ""
+  },
+  "googlecloud.svg": {
+    "source": "",
+    "grantedBy": "",
+    "licenseType": "brand resource center",
+    "scope": "website use",
+    "expires": "",
+    "guidelinesUrl": "https://about.google/brand-resource-center/",
+    "notes": ""
+  },
+  "redhat.svg": {
+    "source": "",
+    "grantedBy": "",
+    "licenseType": "brand kit",
+    "scope": "website use",
+    "expires": "",
+    "guidelinesUrl": "https://www.redhat.com/en/about/brand/standards",
+    "notes": ""
+  },
+  "vmware.svg": {"source":"","grantedBy":"","licenseType":"brand/press","scope":"website use","expires":"","guidelinesUrl":"https://news.broadcom.com/media-library/vmware-logo-guidelines","notes":"Omnissa branding info: https://www.omnissa.com/"},
+  "oracle.svg": {"source":"","grantedBy":"","licenseType":"brand/press","scope":"website use","expires":"","guidelinesUrl":"https://www.oracle.com/legal/logos/","notes":""},
+  "suse.svg": {"source":"","grantedBy":"","licenseType":"brand","scope":"website use","expires":"","guidelinesUrl":"https://brand.suse.com/","notes":""},
+  "fortinet.svg": {"source":"","grantedBy":"brand@fortinet.com","licenseType":"partner","scope":"website use","expires":"","guidelinesUrl":"","notes":"Request artwork via email or partner portal"},
+  "splunk.svg": {"source":"","grantedBy":"","licenseType":"brand","scope":"website use","expires":"","guidelinesUrl":"https://www.splunk.com/en_us/legal/trademark-usage-guidelines.html","notes":""},
+  "isc2.svg": {"source":"","grantedBy":"","licenseType":"brand","scope":"website use","expires":"","guidelinesUrl":"https://www.isc2.org/","notes":""},
+  "pmi.svg": {"source":"","grantedBy":"","licenseType":"brand","scope":"website use","expires":"","guidelinesUrl":"https://www.pmi.org/","notes":""},
+  "isaca.svg": {"source":"","grantedBy":"","licenseType":"brand","scope":"website use","expires":"","guidelinesUrl":"https://brand.isaca.org/","notes":""},
+  "linuxfoundation.svg": {"source":"","grantedBy":"","licenseType":"brand","scope":"website use","expires":"","guidelinesUrl":"https://www.linuxfoundation.org/legal/trademark-usage","notes":""},
+  "citrix.svg": {"source":"","grantedBy":"","licenseType":"brand","scope":"website use","expires":"","guidelinesUrl":"https://www.citrix.com/news/media-resources.html","notes":""},
+  "juniper.svg": {"source":"","grantedBy":"","licenseType":"brand","scope":"website use","expires":"","guidelinesUrl":"https://www.juniper.net/us/en/company/images/image-library-logos-and-product-photos/logos.html","notes":"HPE Juniper branding changes"},
+  "netapp.svg": {"source":"","grantedBy":"","licenseType":"brand","scope":"website use","expires":"","guidelinesUrl":"https://www.netapp.com/company/legal/trademarks/","notes":""},
+  "veeam.svg": {"source":"","grantedBy":"","licenseType":"brand","scope":"website use","expires":"","guidelinesUrl":"https://www.veeam.com/company/brand-resource-center.html","notes":""},
+  "nokia.svg": {"source":"","grantedBy":"","licenseType":"brand","scope":"website use","expires":"","guidelinesUrl":"https://www.nokia.com/about-us/newsroom/media-resources/media-library/nokia-logo/","notes":""},
+  "unity.svg": {"source":"","grantedBy":"","licenseType":"brand","scope":"website use","expires":"","guidelinesUrl":"https://support.unity.com/hc/en-us/articles/30238757069332-Are-there-guidelines-for-using-the-Unity-Logo","notes":""},
+  "csa.svg": {"source":"","grantedBy":"","licenseType":"brand","scope":"website use","expires":"","guidelinesUrl":"https://cloudsecurityalliance.org/","notes":""},
+  "giac.svg": {"source":"","grantedBy":"","licenseType":"brand","scope":"website use","expires":"","guidelinesUrl":"https://www.giac.org/","notes":""},
+  "iapp.svg": {"source":"","grantedBy":"","licenseType":"brand","scope":"website use","expires":"","guidelinesUrl":"https://iapp.org/resources/","notes":""},
+  "peoplecert.svg": {"source":"","grantedBy":"","licenseType":"brand","scope":"website use","expires":"","guidelinesUrl":"https://www.peoplecert.org/","notes":""}
+}

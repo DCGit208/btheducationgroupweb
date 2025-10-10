@@ -1,0 +1,26 @@
+[
+  {"name":"Nutanix Certified Professional - Multicloud Infrastructure (NCP-MCI)","vendor":"Nutanix","category":"cloud-platforms","focus":"HCI / Multicloud","level":3,"retired":false,"premium":true,"exam":"NCP-MCI"},
+  {"name":"Nutanix Certified Advanced Professional - Multicloud Infrastructure (NCAP-MCI)","vendor":"Nutanix","category":"cloud-platforms","focus":"HCI / Multicloud","level":4,"retired":false,"premium":true,"exam":"NCAP-MCI"},
+  {"name":"Nutanix Certified Professional - Multicloud Automation (NCP-MCA)","vendor":"Nutanix","category":"cloud-platforms","focus":"Automation","level":3,"retired":false,"premium":true,"exam":"NCP-MCA"},
+  {"name":"Nutanix Certified Advanced Professional - Multicloud Automation (NCAP-MCA)","vendor":"Nutanix","category":"cloud-platforms","focus":"Automation","level":4,"retired":false,"premium":true,"exam":"NCAP-MCA"},
+  {"name":"Nutanix Certified Professional - Database Administration (NCP-DBA)","vendor":"Nutanix","category":"specialized-tech","focus":"Database Administration","level":3,"retired":false,"premium":true,"exam":"NCP-DBA"},
+  {"name":"Nutanix Certified Advanced Professional - Database Administration (NCAP-DBA)","vendor":"Nutanix","category":"specialized-tech","focus":"Database Administration","level":4,"retired":false,"premium":true,"exam":"NCAP-DBA"},
+  {"name":"Nutanix Certified Master - Database Administration (NCM-DBA)","vendor":"Nutanix","category":"specialized-tech","focus":"Database Administration","level":5,"retired":false,"premium":true,"exam":"NCM-DBA"},
+  {"name":"Nutanix Certified Master - Multicloud Infrastructure (NCM-MCI)","vendor":"Nutanix","category":"cloud-platforms","focus":"HCI / Multicloud","level":5,"retired":false,"premium":true,"exam":"NCM-MCI"},
+  {"name":"Nutanix Certified Master - Multicloud Automation (NCM-MCA)","vendor":"Nutanix","category":"cloud-platforms","focus":"Automation","level":5,"retired":false,"premium":true,"exam":"NCM-MCA"}
+  ,
+  {"name":"Nutanix Certified Professional - Security (NCP-Sec)","vendor":"Nutanix","category":"cybersecurity","focus":"Microsegmentation & Flow Security","level":3,"retired":false,"premium":true,"exam":"NCP-Sec"},
+  {"name":"Nutanix Certified Professional - Files & Objects (NCP-FO)","vendor":"Nutanix","category":"specialized-tech","focus":"Files, Objects & Data Services","level":3,"retired":false,"premium":true,"exam":"NCP-FO"}
+  ,
+  {"name":"Nutanix Certified Professional - Karbon (Kubernetes) Administration","vendor":"Nutanix","category":"software-devops","focus":"Kubernetes on Nutanix Karbon","level":3,"retired":false,"premium":true,"exam":"NCP-Karbon"},
+  {"name":"Nutanix Certified Professional - Prism Central Administration","vendor":"Nutanix","category":"cloud-platforms","focus":"Prism Central Management","level":3,"retired":false,"premium":true,"exam":"NCP-Prism Central"},
+  {"name":"Nutanix Certified Advanced Professional - Objects (NCAP-Objects)","vendor":"Nutanix","category":"specialized-tech","focus":"Object Storage & Data Services","level":4,"retired":false,"premium":true,"exam":"NCAP-Objects"},
+  {"name":"Nutanix Certified Master - Objects (NCM-Objects)","vendor":"Nutanix","category":"specialized-tech","focus":"Object Storage & Data Services","level":5,"retired":false,"premium":true,"exam":"NCM-Objects"}
+  ,
+  {"name":"Nutanix Certified Advanced Professional - Security (NCAP-Sec)","vendor":"Nutanix","category":"cybersecurity","focus":"Microsegmentation & Flow Security","level":4,"retired":false,"premium":true,"exam":"NCAP-Sec"},
+  {"name":"Nutanix Certified Master - Security (NCM-Sec)","vendor":"Nutanix","category":"cybersecurity","focus":"Microsegmentation & Flow Security","level":5,"retired":false,"premium":true,"exam":"NCM-Sec"},
+  {"name":"Nutanix Certified Advanced Professional - Karbon (Kubernetes)","vendor":"Nutanix","category":"software-devops","focus":"Kubernetes on Nutanix Karbon","level":4,"retired":false,"premium":true,"exam":"NCAP-Karbon"},
+  {"name":"Nutanix Certified Master - Karbon (Kubernetes)","vendor":"Nutanix","category":"software-devops","focus":"Kubernetes on Nutanix Karbon","level":5,"retired":false,"premium":true,"exam":"NCM-Karbon"},
+  {"name":"Nutanix Certified Advanced Professional - Prism Central","vendor":"Nutanix","category":"cloud-platforms","focus":"Prism Central Management","level":4,"retired":false,"premium":true,"exam":"NCAP-Prism Central"},
+  {"name":"Nutanix Certified Master - Prism Central","vendor":"Nutanix","category":"cloud-platforms","focus":"Prism Central Management","level":5,"retired":false,"premium":true,"exam":"NCM-Prism Central"}
+]

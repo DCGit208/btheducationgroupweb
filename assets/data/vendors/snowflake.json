@@ -1,0 +1,63 @@
+[
+  {
+    "name": "SnowPro Core Certification",
+    "vendor": "Snowflake",
+    "category": "data-analytics",
+    "focus": "Data Engineering",
+    "level": 2,
+    "retired": false,
+    "exam": "SnowPro Core",
+    "logo": "../assets/images/vendor-logos/snowflake.svg",
+    "url": "https://www.snowflake.com/en/certifications/"
+  },
+  {
+    "name": "SnowPro Advanced: Architect",
+    "vendor": "Snowflake",
+    "category": "cloud-platforms",
+    "focus": "Data Platforms",
+    "level": 3,
+    "retired": false,
+    "premium": false,
+    "exam": "SnowPro Advanced: Architect"
+  },
+  {
+    "name": "SnowPro Advanced: Data Analyst",
+    "vendor": "Snowflake",
+    "category": "cloud-platforms",
+    "focus": "Data Platforms",
+    "level": 3,
+    "retired": false,
+    "premium": false,
+    "exam": "SnowPro Advanced: Data Analyst"
+  },
+  {
+    "name": "SnowPro Advanced: Data Engineer",
+    "vendor": "Snowflake",
+    "category": "cloud-platforms",
+    "focus": "Data Platforms",
+    "level": 3,
+    "retired": false,
+    "premium": false,
+    "exam": "SnowPro Advanced: Data Engineer"
+  },
+  {
+    "name": "SnowPro Advanced: Data Scientist",
+    "vendor": "Snowflake",
+    "category": "cloud-platforms",
+    "focus": "Data Platforms",
+    "level": 3,
+    "retired": false,
+    "premium": false,
+    "exam": "SnowPro Advanced: Data Scientist"
+  },
+  {
+    "name": "SnowPro Advanced: Database Administrator",
+    "vendor": "Snowflake",
+    "category": "cloud-platforms",
+    "focus": "Data Platforms",
+    "level": 3,
+    "retired": false,
+    "premium": false,
+    "exam": "SnowPro Advanced: Database Administrator"
+  }
+]

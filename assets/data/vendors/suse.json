@@ -1,0 +1,86 @@
+[
+  {
+    "name": "SCA in Longhorn",
+    "vendor": "SUSE",
+    "category": "specialized-tech",
+    "focus": "Storage & Data Protection",
+    "level": 2,
+    "retired": false,
+    "premium": false,
+    "exam": "sca_lhn1_5"
+  },
+  {
+    "name": "SCA in Rancher Manager 2.7 & 2.8 (Rancher Prime)",
+    "vendor": "SUSE",
+    "category": "software-devops",
+    "focus": "Kubernetes",
+    "level": 2,
+    "retired": false,
+    "premium": false,
+    "exam": "sca_ran2_7"
+  },
+  {
+    "name": "SCA in SUSE NeuVector 5",
+    "vendor": "SUSE",
+    "category": "cybersecurity",
+    "focus": "Cloud Security",
+    "level": 2,
+    "retired": false,
+    "premium": false,
+    "exam": "sca_neu5"
+  },
+  {
+    "name": "SUSE Certified Administrator (SCA) in Enterprise Linux",
+    "vendor": "SUSE",
+    "category": "specialized-tech",
+    "focus": "Linux Administration",
+    "level": 2,
+    "retired": false,
+    "premium": true,
+    "exam": "SCA in SUSE Linux Enterprise Server 15",
+    "logo": "../assets/images/vendor-logos/suse.svg"
+  },
+  {
+    "name": "SUSE Certified Administrator (SCA) in SUSE Rancher",
+    "vendor": "SUSE",
+    "category": "software-devops",
+    "focus": "Kubernetes Platform (Rancher)",
+    "level": 2,
+    "retired": false,
+    "premium": true,
+    "exam": "SCA in SUSE Rancher",
+    "logo": "../assets/images/vendor-logos/suse.svg"
+  },
+  {
+    "name": "SCDS in Rancher Kubernetes Engine 2 (RKE2)",
+    "vendor": "SUSE",
+    "category": "software-devops",
+    "focus": "Kubernetes",
+    "level": 3,
+    "retired": false,
+    "premium": false,
+    "exam": "scds_rke2"
+  },
+  {
+    "name": "SUSE Certified Engineer (SCE) in Enterprise Linux",
+    "vendor": "SUSE",
+    "category": "specialized-tech",
+    "focus": "Linux Engineering",
+    "level": 3,
+    "retired": false,
+    "premium": true,
+    "exam": "SCE in SUSE Linux Enterprise Server 15",
+    "logo": "../assets/images/vendor-logos/suse.svg"
+  },
+  {
+    "name": "SUSE Certified Engineer (SCE) in SUSE Rancher",
+    "vendor": "SUSE",
+    "category": "software-devops",
+    "focus": "Kubernetes Platform Engineering",
+    "level": 3,
+    "retired": false,
+    "premium": true,
+    "exam": "SCE in SUSE Rancher",
+    "logo": "../assets/images/vendor-logos/suse.svg"
+  }
+]

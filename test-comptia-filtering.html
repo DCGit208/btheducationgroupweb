@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CompTIA Filtering Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .filters { margin-bottom: 20px; padding: 20px; border: 1px solid #ddd; }
+        .results { margin-top: 20px; }
+        .certification-card { border: 1px solid #ccc; margin: 10px 0; padding: 15px; border-radius: 5px; }
+        .cert-name { font-weight: bold; font-size: 1.1em; }
+        .cert-meta { color: #666; margin: 5px 0; }
+        .no-results { text-align: center; padding: 20px; color: #999; }
+        select { padding: 5px; margin: 5px; }
+    </style>
+</head>
+<body>
+    <h1>CompTIA Bundle Filtering Test</h1>
+    
+    <div class="filters">
+        <label>Vendor:
+            <select id="vendorFilter">
+                <option value="all">All Vendors</option>
+                <option value="CompTIA">CompTIA</option>
+                <option value="Microsoft">Microsoft</option>
+                <option value="AWS">AWS</option>
+            </select>
+        </label>
+        
+        <label>Level:
+            <select id="levelFilter">
+                <option value="">All Levels</option>
+                <option value="1">Level 1</option>
+                <option value="2">Level 2</option>
+                <option value="3">Level 3</option>
+                <option value="4">Level 4</option>
+                <option value="5">Level 5</option>
+            </select>
+        </label>
+        
+        <button onclick="applyFilters()">Apply Filters</button>
+    </div>
+    
+    <div class="results">
+        <div class="results-count" id="resultsCount">Loading...</div>
+        <div id="dynamic-results">Loading certifications...</div>
+    </div>
+
+    <script>
+        // Sample certification data - CompTIA only for testing
+        const certifications = [
+            { id: 2960832630, name: 'CompTIA Tech+', vendor: 'CompTIA', category: 'core-it', focus: 'Foundations', level: 1, retired: false, exam: 'FC0-U71' },
+            { id: 1445690541, name: 'CompTIA A+', vendor: 'CompTIA', category: 'core-it', focus: 'Foundations', level: 1, retired: false, exam: '220-1201/220-1202' },
+            { id: 545852962, name: 'CompTIA Network+', vendor: 'CompTIA', category: 'core-it', focus: 'Foundations', level: 1, retired: false, exam: 'N10-009' },
+            { id: 2295459720, name: 'CompTIA Security+', vendor: 'CompTIA', category: 'security', focus: 'Security', level: 2, retired: false, exam: 'SY0-701' },
+            { id: 3120865962, name: 'CompTIA Linux+', vendor: 'CompTIA', category: 'core-it', focus: 'Infrastructure', level: 3, retired: false, exam: 'XK0-005' },
+            { id: 3936326711, name: 'CompTIA Cloud+', vendor: 'CompTIA', category: 'cloud-platforms', focus: 'Cloud', level: 3, retired: false, exam: 'CV0-004' },
+            { id: 2684878034, name: 'CompTIA CySA+', vendor: 'CompTIA', category: 'security', focus: 'Security', level: 3, retired: false, exam: 'CS0-003' },
+            { id: 4059495557, name: 'CompTIA PenTest+', vendor: 'CompTIA', category: 'security', focus: 'Security', level: 4, retired: false, exam: 'PT0-002' },
+            { id: 1108003638, name: 'CompTIA CASP+', vendor: 'CompTIA', category: 'security', focus: 'Security', level: 4, retired: false, exam: 'CAS-004' },
+            { id: 2041385651, name: 'CompTIA Server+', vendor: 'CompTIA', category: 'core-it', focus: 'Infrastructure', level: 3, retired: false, exam: 'SK0-005' }
+        ];
+
+        // CompTIA IDs mapping
+        const COMPTIA_IDS = Object.freeze({
+            tech: 2960832630,   // Tech+ (ITF+)
+            a: 1445690541,      // A+
+            net: 545852962,     // Network+
+            sec: 2295459720,    // Security+
+            linux: 3120865962,  // Linux+
+            cloud: 3936326711,  // Cloud+
+            cysa: 2684878034,   // CySA+
+            pentest: 4059495557,// PenTest+
+            casp: 1108003638,   // CASP+
+            server: 2041385651  // Server+
+        });
+
+        // CompTIA Bundle Definitions
+        const COMPTIA_BUNDLES = {
+            1: {
+                name: "Level 1 Bundle",
+                certifications: ["Tech+", "A+", "Network+"],
+                ids: [COMPTIA_IDS.tech, COMPTIA_IDS.a, COMPTIA_IDS.net],
+                focus: "Foundation"
+            },
+            2: {
+                name: "Level 2 Bundle", 
+                certifications: ["Tech+", "A+", "Network+", "Security+"],
+                ids: [COMPTIA_IDS.tech, COMPTIA_IDS.a, COMPTIA_IDS.net, COMPTIA_IDS.sec],
+                focus: "Core Skills"
+            },
+            3: {
+                cybersecurity: {
+                    name: "Level 3 Cybersecurity Bundle",
+                    certifications: ["Security+", "CySA+", "CASP+"],
+                    ids: [COMPTIA_IDS.sec, COMPTIA_IDS.cysa, COMPTIA_IDS.casp],
+                    focus: "Cybersecurity"
+                },
+                infrastructure: {
+                    name: "Level 3 Infrastructure Bundle", 
+                    certifications: ["Security+", "Server+", "Linux+"],
+                    ids: [COMPTIA_IDS.sec, COMPTIA_IDS.server, COMPTIA_IDS.linux],
+                    focus: "Infrastructure"
+                }
+            },
+            4: {
+                cybersecurity: {
+                    name: "Level 4 Cybersecurity Bundle",
+                    certifications: ["CySA+", "PenTest+", "CASP+"],
+                    ids: [COMPTIA_IDS.cysa, COMPTIA_IDS.pentest, COMPTIA_IDS.casp],
+                    focus: "Advanced Cybersecurity"
+                },
+                infrastructure: {
+                    name: "Level 4 Infrastructure Bundle",
+                    certifications: ["Server+", "Cloud+", "Linux+"],
+                    ids: [COMPTIA_IDS.server, COMPTIA_IDS.cloud, COMPTIA_IDS.linux],
+                    focus: "Advanced Infrastructure"
+                }
+            },
+            5: {
+                cybersecurity: {
+                    name: "Level 5 Cybersecurity Bundle",
+                    certifications: ["PenTest+", "CASP+", "Security+"],
+                    ids: [COMPTIA_IDS.pentest, COMPTIA_IDS.casp, COMPTIA_IDS.sec],
+                    focus: "Expert Cybersecurity"
+                },
+                infrastructure: {
+                    name: "Level 5 Infrastructure Bundle",
+                    certifications: ["Cloud+", "Linux+", "Server+"],
+                    ids: [COMPTIA_IDS.cloud, COMPTIA_IDS.linux, COMPTIA_IDS.server],
+                    focus: "Expert Infrastructure"
+                }
+            }
+        };
+
+        function getCompTIABundle(level) {
+            if (!level || level < 1 || level > 5) return null;
+            
+            if (level <= 2) {
+                return COMPTIA_BUNDLES[level];
+            } else {
+                // For levels 3-5, default to cybersecurity path
+                return COMPTIA_BUNDLES[level].cybersecurity;
+            }
+        }
+
+        function displayResults(certifications) {
+            const resultsDiv = document.getElementById('dynamic-results');
+            if (!resultsDiv) return;
+            
+            if (!certifications || certifications.length === 0) {
+                resultsDiv.innerHTML = '<div class="no-results">No certifications match your criteria.</div>';
+                return;
+            }
+            
+            const html = certifications.map(cert => `
+                <div class="certification-card" data-id="${cert.id}">
+                    <div class="cert-name">${cert.name}</div>
+                    <div class="cert-meta">
+                        <strong>Vendor:</strong> ${cert.vendor} | 
+                        <strong>Level:</strong> ${cert.level} | 
+                        <strong>Focus:</strong> ${cert.focus}
+                    </div>
+                    <div class="cert-details">
+                        <strong>Category:</strong> ${cert.category}<br>
+                        <strong>Exam Code:</strong> ${cert.exam || 'N/A'}
+                    </div>
+                </div>
+            `).join('');
+            
+            resultsDiv.innerHTML = html;
+        }
+
+        function updateResultCounts(total) {
+            const countElement = document.getElementById('resultsCount');
+            if (countElement) {
+                if (total === 0) {
+                    countElement.textContent = 'No results found';
+                } else {
+                    countElement.textContent = `Showing ${total} certification${total !== 1 ? 's' : ''}`;
+                }
+            }
+        }
+
+        function applyFilters() {
+            const level = parseInt(document.getElementById('levelFilter').value);
+            const vendor = document.getElementById('vendorFilter').value;
+            
+            console.log('Applying filters:', { level, vendor });
+
+            // Handle CompTIA bundles
+            if (vendor === 'CompTIA' && level >= 1 && level <= 5) {
+                const bundle = getCompTIABundle(level);
+                console.log('CompTIA bundle for level', level, ':', bundle);
+                
+                if (!bundle) {
+                    displayResults([]);
+                    updateResultCounts(0);
+                    return;
+                }
+                
+                // Filter certifications to match bundle IDs  
+                const filtered = certifications.filter(cert => 
+                    bundle.ids.includes(cert.id) && !cert.retired
+                );
+                
+                console.log('Filtered certifications:', filtered);
+                
+                displayResults(filtered);
+                updateResultCounts(filtered.length);
+                return;
+            }
+            
+            // Handle non-CompTIA vendors or no specific level
+            let filtered = [...certifications];
+            filtered = filtered.filter(cert => !cert.retired);
+            
+            // Apply vendor filter
+            if (vendor && vendor !== 'all') {
+                filtered = filtered.filter(cert => cert.vendor === vendor);
+            }
+            
+            // Apply level filter
+            if (level && level !== -1) {
+                filtered = filtered.filter(cert => cert.level === level);
+            }
+            
+            displayResults(filtered);
+            updateResultCounts(filtered.length);
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('levelFilter').addEventListener('change', applyFilters);
+            document.getElementById('vendorFilter').addEventListener('change', applyFilters);
+            
+            // Initial load
+            applyFilters();
+        });
+    </script>
+</body>
+</html>

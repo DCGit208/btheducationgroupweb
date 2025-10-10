@@ -1,0 +1,25 @@
+[
+  {
+    "name": "MongoDB Certified Developer Associate",
+    "vendor": "MongoDB",
+    "category": "software-devops",
+    "focus": "Databases",
+    "level": 2,
+    "retired": false,
+    "premium": false,
+    "exam": "MongoDB Certified Developer Associate",
+    "vendor_stage": "Associate",
+    "tracks": ["databases","programming"],
+    "prereqTags": ["Programming-Fundamentals"]
+  },
+  {
+    "name": "MongoDB Certified DBA Associate",
+    "vendor": "MongoDB",
+    "category": "software-devops",
+    "focus": "Databases",
+    "level": 3,
+    "retired": false,
+    "premium": false,
+    "exam": "MongoDB Certified DBA Associate"
+  }
+]

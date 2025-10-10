@@ -20,3 +20,27 @@
 | 2025-10-02 20:13:19 | BACKUP | index-community-dev-footer-20251002-201319 | Reason: Before adding Community Development link to homepage footer core programs section | ✅ COMPLETED |
 | 2025-10-02 20:13:47 | IMPLEMENTATION | index-community-dev-footer-20251002-201347 | Reason: COMPLETED - Added Community Development link to homepage footer core programs section | ✅ COMPLETED |
 | 2025-10-07 12:00:00 | BACKUP | informationtechnology-vendor-update-20251007-120000 | Reason: Updated Hero section to display correct vendor count and expanded Vendor filter dropdown | ✅ COMPLETED |
+| 2025-10-08 16:40:50 | BACKUP | informationtechnology-20251008-164059 | Reason: Stable IT page with restored hero/nav, per-level bundle pricing, quote/export/print verified | ✅ COMPLETED |
+| 2025-10-08 16:40:50 | BACKUP | certifications-20251008-164059 | Reason: Snapshot alongside IT page backup | ✅ COMPLETED |
+| 2025-10-08 16:40:50 | IMPLEMENTATION | rollback-script-20251008-164059 | Reason: Added one-click rollback helper script | ✅ COMPLETED |
+| 2025-10-08 16:40:50 | IMPLEMENTATION | manifest-20251008-164059 | Reason: Wrote auditable manifest for snapshot (sizes + checksums) | ✅ COMPLETED |
+| 2025-10-08 16:51:55 | BACKUP | informationtechnology-20251008-165155 | Reason: Pre-change snapshot | ✅ COMPLETED |
+| 2025-10-08 16:51:55 | BACKUP | pricing-20251008-165155 | Reason: Snapshot alongside IT page backup | ✅ COMPLETED |
+| 2025-10-08 16:51:55 | BACKUP | certifications-20251008-165155 | Reason: Snapshot alongside IT page backup | ✅ COMPLETED |
+| 2025-10-08 16:51:55 | IMPLEMENTATION | manifest-20251008-165155 | Reason: Wrote auditable manifest for snapshot (sizes + checksums) | ✅ COMPLETED |
+| 2025-10-08 17:14:51 | BACKUP | informationtechnology-20251008-171451 | Reason: Pre-change snapshot | ✅ COMPLETED |
+| 2025-10-08 17:14:51 | BACKUP | pricing-20251008-171451 | Reason: Snapshot alongside IT page backup | ✅ COMPLETED |
+| 2025-10-08 17:14:51 | BACKUP | certifications-20251008-171451 | Reason: Snapshot alongside IT page backup | ✅ COMPLETED |
+| 2025-10-08 17:14:51 | IMPLEMENTATION | manifest-20251008-171451 | Reason: Wrote auditable manifest for snapshot (sizes + checksums) | ✅ COMPLETED |
+| 2025-10-08 18:17:02 | BACKUP | informationtechnology-20251008-181702 | Reason: Pre-change snapshot | ✅ COMPLETED |
+| 2025-10-08 18:17:02 | BACKUP | pricing-20251008-181702 | Reason: Snapshot alongside IT page backup | ✅ COMPLETED |
+| 2025-10-08 18:17:02 | BACKUP | certifications-20251008-181702 | Reason: Snapshot alongside IT page backup | ✅ COMPLETED |
+| 2025-10-08 18:17:02 | IMPLEMENTATION | manifest-20251008-181702 | Reason: Wrote auditable manifest for snapshot (sizes + checksums) | ✅ COMPLETED |
+| 2025-10-08 18:39:50 | BACKUP | informationtechnology-20251008-183950 | Reason: Pre-change snapshot | ✅ COMPLETED |
+| 2025-10-08 18:39:50 | BACKUP | pricing-20251008-183950 | Reason: Snapshot alongside IT page backup | ✅ COMPLETED |
+| 2025-10-08 18:39:50 | BACKUP | certifications-20251008-183950 | Reason: Snapshot alongside IT page backup | ✅ COMPLETED |
+| 2025-10-08 18:39:50 | IMPLEMENTATION | manifest-20251008-183950 | Reason: Wrote auditable manifest for snapshot (sizes + checksums) | ✅ COMPLETED |
+| 2025-10-10 23:27:41 | BACKUP | IT-RESTORATION-20251010-232741 | Reason: CRITICAL RESTORATION BACKUP - Post data recovery following accidental deletion, implementing proper backup protocol before any future changes | ✅ COMPLETED |
+| 2025-10-10 23:27:41 | BACKUP | informationtechnology-20251010-232741 | Reason: Comprehensive IT page backup (3961 lines) with full vendor list and advanced filtering restored | ✅ COMPLETED |
+| 2025-10-10 23:27:41 | BACKUP | certifications-20251010-232741 | Reason: Complete certifications database backup (4968 lines) with all vendor data intact | ✅ COMPLETED |
+| 2025-10-10 23:27:41 | IMPLEMENTATION | manifest-20251010-232741 | Reason: Wrote complete auditable manifest with file sizes, checksums, and verification data | ✅ COMPLETED |

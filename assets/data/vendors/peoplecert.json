@@ -1,0 +1,94 @@
+[
+  {
+    "name": "ITIL 4 Foundation",
+    "vendor": "PeopleCert",
+    "category": "governance-agile",
+    "focus": "Service Management",
+    "level": 1,
+    "retired": false,
+    "premium": true,
+    "exam": "ITIL 4 Foundation"
+  },
+  {
+    "name": "ITIL Foundation",
+    "vendor": "PeopleCert",
+    "category": "it-service-management",
+    "focus": "IT Service Management",
+    "level": 1,
+    "retired": false,
+    "exam": "ITILFND",
+    "logo": "../assets/images/vendor-logos/peoplecert.svg",
+    "url": "https://www.peoplecert.org/itil"
+  },
+  {
+    "name": "ITIL 4 Managing Professional (MP)",
+    "vendor": "PeopleCert",
+    "category": "it-service-management",
+    "focus": "IT Service Management",
+    "level": 3,
+    "retired": false,
+    "exam": "ITIL 4 MP",
+    "logo": "../assets/images/vendor-logos/peoplecert.svg",
+    "url": "https://www.peoplecert.org/itil"
+  },
+  {
+    "name": "ITIL 4 Managing Professional: Create, Deliver and Support (CDS)",
+    "vendor": "PeopleCert",
+    "category": "governance-agile",
+    "focus": "Service Management",
+    "level": 3,
+    "retired": false,
+    "premium": true,
+    "exam": "ITIL 4 MP: CDS"
+  },
+  {
+    "name": "ITIL 4 Managing Professional: Direct, Plan and Improve (DPI)",
+    "vendor": "PeopleCert",
+    "category": "governance-agile",
+    "focus": "Service Management",
+    "level": 3,
+    "retired": false,
+    "premium": true,
+    "exam": "ITIL 4 MP: DPI"
+  },
+  {
+    "name": "ITIL 4 Managing Professional: Drive Stakeholder Value (DSV)",
+    "vendor": "PeopleCert",
+    "category": "governance-agile",
+    "focus": "Service Management",
+    "level": 3,
+    "retired": false,
+    "premium": true,
+    "exam": "ITIL 4 MP: DSV"
+  },
+  {
+    "name": "ITIL 4 Managing Professional: High-velocity IT (HVIT)",
+    "vendor": "PeopleCert",
+    "category": "governance-agile",
+    "focus": "Service Management",
+    "level": 3,
+    "retired": false,
+    "premium": true,
+    "exam": "ITIL 4 MP: HVIT"
+  },
+  {
+    "name": "ITIL 4 Strategic Leader: Digital and IT Strategy (DITS)",
+    "vendor": "PeopleCert",
+    "category": "governance-agile",
+    "focus": "Service Management",
+    "level": 4,
+    "retired": false,
+    "premium": true,
+    "exam": "ITIL 4 SL: DITS"
+  },
+  {
+    "name": "ITIL 4 Master",
+    "vendor": "PeopleCert",
+    "category": "governance-agile",
+    "focus": "Service Management",
+    "level": 5,
+    "retired": false,
+    "premium": true,
+    "exam": "ITIL 4 Master"
+  }
+]

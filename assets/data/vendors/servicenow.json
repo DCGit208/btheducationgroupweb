@@ -1,0 +1,3 @@
+[
+  { "name": "ServiceNow Certified System Administrator (CSA)", "vendor": "ServiceNow", "category": "it-service-management", "focus": "IT Service Management", "level": 2, "retired": false, "exam": "CSA", "logo": "../assets/images/vendor-logos/servicenow.svg", "url": "https://www.servicenow.com/services/training-and-certification/certification.html" }
+]

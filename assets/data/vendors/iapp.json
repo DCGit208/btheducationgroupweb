@@ -1,0 +1,54 @@
+[
+  {
+    "name": "Certified Information Privacy Manager (CIPM)",
+    "vendor": "IAPP",
+    "category": "governance-agile",
+    "focus": "Privacy",
+    "level": 3,
+    "retired": false,
+    "exam": "CIPM",
+    "logo": "../assets/images/vendor-logos/iapp.svg",
+    "url": "https://iapp.org/certify/cipm/"
+  },
+  {
+    "name": "Certified Information Privacy Professional (CIPP/US)",
+    "vendor": "IAPP",
+    "category": "governance-agile",
+    "focus": "Privacy",
+    "level": 3,
+    "retired": false,
+    "exam": "CIPP/US",
+    "logo": "../assets/images/vendor-logos/iapp.svg",
+    "url": "https://iapp.org/certify/cippus/"
+  },
+  {
+    "name": "IAPP CIPM",
+    "vendor": "IAPP",
+    "category": "cybersecurity",
+    "focus": "Privacy",
+    "level": 3,
+    "retired": false,
+    "premium": false,
+    "exam": "CIPM"
+  },
+  {
+    "name": "IAPP CIPP/E",
+    "vendor": "IAPP",
+    "category": "cybersecurity",
+    "focus": "Privacy",
+    "level": 3,
+    "retired": false,
+    "premium": false,
+    "exam": "CIPP/E"
+  },
+  {
+    "name": "IAPP CIPT",
+    "vendor": "IAPP",
+    "category": "cybersecurity",
+    "focus": "Privacy",
+    "level": 3,
+    "retired": false,
+    "premium": false,
+    "exam": "CIPT"
+  }
+]

@@ -1,0 +1,54 @@
+[
+  {
+    "name": "Splunk Core Certified User",
+    "vendor": "Splunk",
+    "category": "specialized-tech",
+    "focus": "Observability & SIEM",
+    "level": 1,
+    "retired": false,
+    "premium": false,
+    "exam": "SPLK-1001"
+  },
+  {
+    "name": "Splunk Core Certified Power User",
+    "vendor": "Splunk",
+    "category": "data-analytics",
+    "focus": "SIEM / Log Analytics",
+    "level": 2,
+    "retired": false,
+    "exam": "SPLK-1002",
+    "logo": "../assets/images/vendor-logos/splunk.svg",
+    "url": "https://www.splunk.com/en_us/training/certifications.html"
+  },
+  {
+    "name": "Splunk Observability Cloud Certified User",
+    "vendor": "Splunk",
+    "category": "specialized-tech",
+    "focus": "Observability & SIEM",
+    "level": 2,
+    "retired": false,
+    "premium": false,
+    "exam": "Splunk Observability Cloud Certified User"
+  },
+  {
+    "name": "Splunk Enterprise Certified Admin",
+    "vendor": "Splunk",
+    "category": "security",
+    "focus": "SIEM Administration",
+    "level": 3,
+    "retired": false,
+    "exam": "SPLK-1003",
+    "logo": "../assets/images/vendor-logos/splunk.svg",
+    "url": "https://www.splunk.com/en_us/training/certifications.html"
+  },
+  {
+    "name": "Splunk Enterprise Security Certified Admin",
+    "vendor": "Splunk",
+    "category": "specialized-tech",
+    "focus": "Observability & SIEM",
+    "level": 4,
+    "retired": false,
+    "premium": false,
+    "exam": "SPLK-3001"
+  }
+]

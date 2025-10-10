@@ -1,0 +1,54 @@
+[
+  {
+    "name": "Citrix Certified Associate - Virtualization (CCA-V)",
+    "vendor": "Citrix",
+    "category": "specialized-tech",
+    "focus": "Virtual Apps & Desktops",
+    "level": 2,
+    "retired": false,
+    "exam": "CCA-V",
+    "logo": "../assets/images/vendor-logos/citrix.svg",
+    "url": "https://training.citrix.com/cms/en/certifications/citrix-certified-associate---virtualization/"
+  },
+  {
+    "name": "Citrix Certified Associate – Virtualization (CCA-V)",
+    "vendor": "Citrix",
+    "category": "specialized-tech",
+    "focus": "Virtualization & EUC",
+    "level": 2,
+    "retired": false,
+    "premium": false,
+    "exam": "1Y0-204"
+  },
+  {
+    "name": "Citrix Certified Professional - Virtualization (CCP-V)",
+    "vendor": "Citrix",
+    "category": "specialized-tech",
+    "focus": "Virtual Apps & Desktops",
+    "level": 3,
+    "retired": false,
+    "exam": "CCP-V",
+    "logo": "../assets/images/vendor-logos/citrix.svg",
+    "url": "https://training.citrix.com/cms/en/certifications/citrix-certified-professional---virtualization/"
+  },
+  {
+    "name": "Citrix Certified Professional – Virtualization (CCP-V)",
+    "vendor": "Citrix",
+    "category": "specialized-tech",
+    "focus": "Virtualization & EUC",
+    "level": 3,
+    "retired": false,
+    "premium": false,
+    "exam": "1Y0-312"
+  },
+  {
+    "name": "Citrix Certified Expert – Virtualization (CCE-V)",
+    "vendor": "Citrix",
+    "category": "specialized-tech",
+    "focus": "Virtualization & EUC",
+    "level": 4,
+    "retired": false,
+    "premium": false,
+    "exam": "1Y0-403"
+  }
+]

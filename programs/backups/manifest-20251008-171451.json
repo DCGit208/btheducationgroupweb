@@ -1,0 +1,21 @@
+{
+  "timestamp": "2025-10-08 17:14:51",
+  "tag": "informationtechnology-20251008-171451",
+  "files": [
+    {
+      "path": "programs/backups/informationtechnology-20251008-171451.html",
+      "size": 124124,
+      "sha256": "234ea030cd4230dcd0dff302f8929a735b7f7f451e6b1ae0dd02b8d078ba0bcf"
+    }
+    ,{
+      "path": "assets/data/backups/pricing-20251008-171451.json",
+      "size": 126,
+      "sha256": "40718a56e068faf734bcef9eac51005be9063a04f632d7dfda18e5e55eb44eca"
+    }
+    ,{
+      "path": "assets/data/backups/certifications-20251008-171451.json",
+      "size": 46390,
+      "sha256": "13dd54b27a61d075e43eb2375a3398c8493fe3214d78c768dd36382cc8a53187"
+    }
+  ]
+}

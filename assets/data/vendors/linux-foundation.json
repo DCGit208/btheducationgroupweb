@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Linux Foundation Certified IT Associate (LFCA)",
+    "vendor": "Linux Foundation",
+    "category": "core-it",
+    "focus": "Linux",
+    "level": 1,
+    "retired": false,
+    "exam": "LFCA",
+    "logo": "../assets/images/vendor-logos/linuxfoundation.svg",
+    "url": "https://training.linuxfoundation.org/certification/lfca/"
+  },
+  {
+    "name": "Linux Foundation Certified System Administrator (LFCS)",
+    "vendor": "Linux Foundation",
+    "category": "core-it",
+    "focus": "Linux",
+    "level": 2,
+    "retired": false,
+    "exam": "LFCS",
+    "logo": "../assets/images/vendor-logos/linuxfoundation.svg",
+    "url": "https://training.linuxfoundation.org/certification/lfcs/"
+  },
+  {
+    "name": "Certified Kubernetes Administrator (CKA)",
+    "vendor": "Linux Foundation",
+    "category": "software-devops",
+    "focus": "Kubernetes",
+    "level": 3,
+    "retired": false,
+    "premium": false,
+    "exam": "CKA"
+  },
+  {
+    "name": "Certified Kubernetes Application Developer (CKAD)",
+    "vendor": "Linux Foundation",
+    "category": "software-devops",
+    "focus": "Kubernetes",
+    "level": 3,
+    "retired": false,
+    "premium": false,
+    "exam": "CKAD"
+  }
+]

@@ -1,0 +1,6 @@
+[
+  {"name":"Dell Technologies Certified Associate (DTCA)","vendor":"Dell Technologies","category":"core-it","focus":"Infrastructure Fundamentals","level":1,"retired":false,"premium":true,"exam":"DTCA"},
+  {"name":"Dell Technologies Certified Professional - Data Center","vendor":"Dell Technologies","category":"core-it","focus":"Data Center Infrastructure","level":3,"retired":false,"premium":true,"exam":"DTC Professional - Data Center"},
+  {"name":"Dell Technologies Certified Specialist - PowerEdge Server","vendor":"Dell Technologies","category":"core-it","focus":"Server Administration","level":3,"retired":false,"premium":true,"exam":"DTC Specialist - Server"},
+  {"name":"Dell Technologies Certified Specialist - PowerStore Storage","vendor":"Dell Technologies","category":"specialized-tech","focus":"Storage Administration","level":3,"retired":false,"premium":true,"exam":"DTC Specialist - Storage"}
+]

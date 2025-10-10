@@ -1,0 +1,52 @@
+[
+  {
+    "name": "(ISC)² CC – Certified in Cybersecurity",
+    "vendor": "(ISC)²",
+    "category": "cybersecurity",
+    "focus": "Blue Team",
+    "level": 1,
+    "retired": false,
+    "premium": true,
+    "exam": "CC"
+  },
+  {
+    "name": "(ISC)² SSCP",
+    "vendor": "(ISC)²",
+    "category": "cybersecurity",
+    "focus": "Blue Team",
+    "level": 2,
+    "retired": false,
+    "premium": true,
+    "exam": "SSCP"
+  },
+  {
+    "name": "(ISC)² CCSP",
+    "vendor": "(ISC)²",
+    "category": "cybersecurity",
+    "focus": "Cloud Security",
+    "level": 3,
+    "retired": false,
+    "premium": true,
+    "exam": "CCSP"
+  },
+  {
+    "name": "(ISC)² CSSLP",
+    "vendor": "(ISC)²",
+    "category": "cybersecurity",
+    "focus": "GRC & Audit",
+    "level": 3,
+    "retired": false,
+    "premium": true,
+    "exam": "CSSLP"
+  },
+  {
+    "name": "(ISC)² CISSP",
+    "vendor": "(ISC)²",
+    "category": "cybersecurity",
+    "focus": "GRC & Audit",
+    "level": 4,
+    "retired": false,
+    "premium": true,
+    "exam": "CISSP"
+  }
+]

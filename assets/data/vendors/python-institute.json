@@ -1,0 +1,27 @@
+[
+  {
+    "name": "PCEP - Certified Entry-Level Python Programmer",
+    "vendor": "Python Institute",
+    "category": "software-devops",
+    "focus": "Programming",
+    "level": 1,
+    "retired": false,
+    "premium": true,
+    "exam": "PCEP-30-02",
+    "tags": ["Programming-Fundamentals", "Python"],
+    "vendor_stage": "Foundational"
+  },
+  {
+    "name": "PCAP - Certified Associate Python Programmer",
+    "vendor": "Python Institute",
+    "category": "software-devops",
+    "focus": "Programming",
+    "level": 2,
+    "retired": false,
+    "premium": true,
+    "exam": "PCAP-31",
+    "prereqTags": ["Programming-Fundamentals"],
+    "tags": ["Python", "Programming"],
+    "vendor_stage": "Associate"
+  }
+]

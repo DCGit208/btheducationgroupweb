@@ -1,0 +1,2405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information Technology Certifications | BTH Education Group - Professional Development & HEXAD Framework</title>
+    <meta name="description" content="Choose from 500+ technology certifications across 15+ industry sectors. Professional development pathway or complete HEXAD framework.">
+    
+    <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* Technology Sector Specific Styling - minimal rebuild to fix corrupted block */
+    :root { --focus-primary-color: #667eea; --it-primary: #667eea; --container-max: 1400px; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Arial, sans-serif; color: #0f172a; background: #ffffff; line-height: 1.5; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+        /* Navigation */
+        .tech-navbar { position: sticky; top: 0; z-index: 1000; background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); color: #fff; }
+    .tech-nav-container { max-width: var(--container-max); margin: 0 auto; padding: 0 2rem; height: 80px; display: flex; align-items: center; justify-content: space-between; }
+    .tech-nav-menu { display: flex; gap: 1rem; }
+    .tech-nav-logo { display:flex; align-items:center; gap:10px; color:#e2e8f0; text-decoration:none; font-weight:800; }
+    .tech-navbar.scrolled { backdrop-filter: saturate(140%) blur(8px); background: rgba(15,23,42,0.9); border-bottom:1px solid rgba(148,163,184,0.15); }
+        .tech-nav-link { color: #e2e8f0; text-decoration: none; position: relative; padding: 0.5rem 0.75rem; }
+        .tech-nav-link:hover, .tech-nav-link.active { color: #ffffff; }
+        .tech-nav-cta { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 0.75rem 1.5rem; border-radius: 25px; text-decoration: none; font-weight: 600; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px; border: 2px solid transparent; }
+        .tech-nav-toggle { display: none; flex-direction: column; cursor: pointer; background: none; border: none; padding: 0.5rem; }
+        .tech-nav-toggle span { width: 25px; height: 3px; background: white; margin: 3px 0; border-radius: 2px; transition: all 0.3s ease; }
+        @media (max-width: 968px) {
+          .tech-nav-menu { position: fixed; top: 80px; left: 0; width: 100%; height: calc(100vh - 80px); background: rgba(15, 23, 42, 0.98); -webkit-backdrop-filter: blur(20px); backdrop-filter: blur(20px); flex-direction: column; justify-content: flex-start; padding-top: 2rem; transform: translateX(-100%); transition: transform 0.3s ease; gap: 0; }
+          .tech-nav-menu.active { transform: translateX(0); }
+          .tech-nav-toggle { display: flex; }
+        }
+
+                /* WORLD-CLASS HERO SECTION (restored) */
+                .programs-hero { position: relative; background: linear-gradient(135deg, #0f172a 0%, #1e293b 25%, #334155 50%, #475569 75%, #64748b 100%); color: white; padding: 120px 0 160px; text-align: center; overflow: hidden; min-height: 80vh; display: flex; align-items: center; }
+                .programs-hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 20% 20%, rgba(59, 130, 246, 0.3) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(16, 185, 129, 0.2) 0%, transparent 50%), radial-gradient(circle at 40% 60%, rgba(139, 92, 246, 0.2) 0%, transparent 50%); animation: backgroundShift 20s ease-in-out infinite; }
+                .programs-hero::after { content: ''; position: absolute; inset: 0; background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M30 30c0-16.569 13.431-30 30-30v60c-16.569 0-30-13.431-30-30z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); animation: patternFloat 25s linear infinite; }
+                @keyframes backgroundShift { 0%, 100% { background: radial-gradient(circle at 20% 20%, rgba(59, 130, 246, 0.3) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(16, 185, 129, 0.2) 0%, transparent 50%), radial-gradient(circle at 40% 60%, rgba(139, 92, 246, 0.2) 0%, transparent 50%);} 33% { background: radial-gradient(circle at 80% 20%, rgba(16, 185, 129, 0.2) 0%, transparent 50%), radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0.3) 0%, transparent 50%), radial-gradient(circle at 60% 40%, rgba(59, 130, 246, 0.2) 0%, transparent 50%);} 66% { background: radial-gradient(circle at 40% 80%, rgba(139, 92, 246, 0.2) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(59, 130, 246, 0.3) 0%, transparent 50%), radial-gradient(circle at 20% 40%, rgba(16, 185, 129, 0.2) 0%, transparent 50%);} }
+                @keyframes patternFloat { 0% { transform: translateY(0px) rotate(0deg);} 100% { transform: translateY(-60px) rotate(360deg);} }
+                .hero-content { position: relative; z-index: 10; width: 100%; max-width: var(--container-max); margin: 0 auto; padding: 0 2rem; }
+                .hero-badge { display: inline-flex; align-items: center; background: rgba(255, 255, 255, 0.1); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 50px; padding: 0.75rem 1.5rem; margin-bottom: 2rem; font-size: 0.9rem; font-weight: 600; color: #e2e8f0; animation: fadeInUp 1s ease-out 0.2s both; }
+                .hero-badge .badge-icon { width: 20px; height: 20px; margin-right: 0.5rem; background: linear-gradient(135deg, #3b82f6, #8b5cf6); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; }
+                .programs-hero h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); font-weight: 800; margin-bottom: 1.5rem; line-height: 1.1; background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 50%, #cbd5e1 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; animation: fadeInUp 1s ease-out 0.4s both; }
+                .programs-hero .subtitle { font-size: 1.25rem; opacity: 0.9; margin-bottom: 3rem; max-width: 700px; margin-left: auto; margin-right: auto; line-height: 1.6; color: #cbd5e1; animation: fadeInUp 1s ease-out 0.6s both; }
+                @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px);} to { opacity: 1; transform: translateY(0);} }
+                .hero-cta-section { margin: 3rem 0; animation: fadeInUp 1s ease-out 0.8s both; }
+                .hero-cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2rem; }
+                .hero-primary-btn { background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%); color: white; padding: 1rem 2.5rem; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 1.1rem; transition: all 0.3s ease; border: 2px solid transparent; position: relative; overflow: hidden; }
+                .hero-primary-btn::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent); transition: left 0.5s; }
+                .hero-primary-btn:hover::before { left: 100%; }
+                .hero-primary-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(59, 130, 246, 0.4); }
+                .hero-secondary-btn { background: transparent; color: white; padding: 1rem 2.5rem; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 1.1rem; border: 2px solid rgba(255, 255, 255, 0.3); transition: all 0.3s ease; -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); }
+                .hero-secondary-btn:hover { background: rgba(255, 255, 255, 0.1); border-color: rgba(255, 255, 255, 0.5); transform: translateY(-2px); }
+
+            /* Hero stats and badges (fix distortions) */
+            .programs-hero .level-system-badge { background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); color: #e2e8f0; margin: 0.75rem 0 0.75rem; }
+            .partner-badge { display:inline-flex; align-items:center; gap:0.5rem; background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.18); color:#e2e8f0; border-radius: 50px; padding: 0.5rem 1rem; font-size: 0.9rem; font-weight: 600; margin-top: 0.5rem; }
+            .partner-badge i { color: #fbbf24; }
+            .programs-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 2rem; margin-top: 4rem; max-width: 1000px; margin-left: auto; margin-right: auto; animation: fadeInUp 1s ease-out 1s both; }
+            .stat-card { background: rgba(255, 255, 255, 0.1); -webkit-backdrop-filter: blur(15px); backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 20px; padding: 2rem 1.5rem; text-align: center; transition: all 0.3s ease; position: relative; overflow: hidden; }
+            .stat-number { font-size: 2.5rem; font-weight: 800; margin-bottom: 0.5rem; background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+            .stat-label { font-size: 0.9rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; color: #cbd5e1; }
+        /* Filters & modal */
+    .filter-section { background: #f8fafc; padding: 60px 0; margin: 3rem 0; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0; position: static; top: auto; z-index: auto; }
+    @media (max-width: 768px) { .filter-section { position: static; top: auto; } }
+        .modal-backdrop { position: fixed; inset: 0; background: rgba(15,23,42,0.55); display: none; align-items: center; justify-content: center; z-index: 2000; }
+        .modal-backdrop.active { display: flex; }
+        .modal-card { background: #fff; border-radius: 14px; box-shadow: 0 20px 60px rgba(15,23,42,0.3); width: min(720px, 92vw); max-height: 85vh; overflow: auto; border: 1px solid #e2e8f0; }
+        .modal-header { display: flex; align-items: center; justify-content: space-between; padding: 1rem 1.25rem; border-bottom: 1px solid #e2e8f0; }
+        .modal-title { font-size: 1.05rem; font-weight: 700; color: #1e293b; }
+        .modal-close { background: transparent; border: none; font-size: 1.1rem; cursor: pointer; color: #64748b; }
+        .modal-body { padding: 1rem 1.25rem; color: #334155; }
+        .kv { display: grid; grid-template-columns: 160px 1fr; gap: 0.4rem 1rem; }
+        .kv .k { color: #64748b; }
+        .kv .v { color: #1f2937; }
+        .info-button { background: #eef2ff; color: #3730a3; border: 1px solid #c7d2fe; border-radius: 8px; padding: 0.35rem 0.6rem; font-size: 0.85rem; cursor: pointer; }
+    /* Rich modal sections */
+    .modal-sections { display: grid; gap: 1rem; }
+    .modal-section { background:#f8fafc; border:1px solid #e2e8f0; border-radius:10px; padding:0.9rem 1rem; }
+    .modal-section h3 { margin:0 0 0.25rem; font-size:1rem; color:#0f172a; }
+    .modal-section p { margin:0.25rem 0; color:#334155; line-height:1.6; }
+    .modal-section ul { margin:0.25rem 0 0.25rem 1.25rem; color:#334155; }
+    .modal-meta { display:grid; grid-template-columns: repeat(auto-fit, minmax(180px,1fr)); gap:0.6rem; margin-top:0.75rem; }
+    .modal-chip { background:#eef2ff; border:1px solid #c7d2fe; color:#1e3a8a; border-radius:999px; padding:0.25rem 0.6rem; font-weight:600; font-size:0.85rem; display:inline-flex; align-items:center; gap:0.4rem; }
+    /* Premium meta grid (labels in one row, values below) */
+    .meta-grid { border:1px solid #e2e8f0; border-radius:12px; overflow:hidden; margin-bottom:0.75rem; }
+    .meta-grid .row { display:grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); }
+    .meta-grid .row.labels { background:#f1f5f9; border-bottom:1px solid #e2e8f0; }
+    .meta-grid .cell { padding:0.6rem 0.8rem; font-size:0.92rem; }
+    .meta-grid .labels .cell { color:#475569; font-weight:700; text-transform:uppercase; letter-spacing:0.02em; font-size:0.8rem; }
+    .meta-grid .values .cell { color:#0f172a; font-weight:600; }
+        /* Footer */
+    .main-footer { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); color: #e2e8f0; padding: 0; margin-top: 4rem; }
+    .main-footer .container { max-width: var(--container-max); margin: 0 auto; padding: 0 2rem; }
+
+        /* Level System Badge */
+        .level-system-badge {
+            display: inline-flex;
+            align-items: center;
+            background: rgba(139, 92, 246, 0.15);
+            -webkit-backdrop-filter: blur(15px);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            border-radius: 50px;
+            color: #5b21b6;
+            padding: 0.35rem 0.75rem;
+            gap: 0.5rem;
+            font-weight: 700;
+        }
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(79, 172, 254, 0.1) 100%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .stat-card:hover::before {
+            opacity: 1;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-8px);
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 255, 255, 0.3);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 0.75rem;
+            background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            position: relative;
+            z-index: 2;
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #cbd5e1;
+            opacity: 0.9;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Framework Selection */
+        .framework-selection {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            padding: 80px 0;
+            margin-bottom: 2rem;
+        }
+
+        .framework-selection .container {
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .framework-selection h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #1e293b;
+            margin-bottom: 1rem;
+        }
+
+        .framework-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #64748b;
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .framework-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .framework-card {
+            background: white;
+            border-radius: 16px;
+            padding: 3rem;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(102, 126, 234, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .framework-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--it-primary);
+        }
+
+        .framework-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 30px 80px rgba(102, 126, 234, 0.2);
+        }
+
+        .framework-card.premium::before {
+            background: linear-gradient(135deg, #ffd700, #ffed4e);
+        }
+        /* Framework Features List */
+        .framework-features { list-style: none; margin: 1.5rem 0; padding: 0; }
+        .framework-features li { padding: 0.75rem 0; display: flex; align-items: center; border-bottom: 1px solid #f1f5f9; }
+        .framework-features li:last-child { border-bottom: none; }
+        .framework-features i { color: #10b981; margin-right: 1rem; width: 20px; }
+
+        /* Modules cards styling */
+        #level-modules { margin-top: 2rem; }
+        #level-modules h3 { text-align: center; color: #1e293b; margin-bottom: 1rem; }
+    .modules-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; max-width: var(--container-max); margin: 0 auto; }
+        .module-card { background: white; border: 1px solid #e2e8f0; border-radius: 16px; padding: 1.25rem; box-shadow: 0 8px 24px rgba(0,0,0,0.06); display: flex; flex-direction: column; align-items: center; text-align: center; }
+        .module-icon { font-size: 1.8rem; color: #10b981; margin-bottom: 0.5rem; }
+        .module-title { font-weight: 700; color: #1e293b; margin-bottom: 0.25rem; }
+        .module-desc { color: #64748b; font-size: 0.95rem; }
+
+        .cta-button {
+            width: 100%;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .cta-standard {
+            background: var(--it-primary);
+            color: white;
+        }
+
+        .cta-premium {
+            background: linear-gradient(135deg, #ffd700, #ffed4e);
+            color: #1e293b;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Category Overview */
+        .category-overview {
+            padding: 60px 0;
+        }
+
+        .category-overview .container {
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .category-overview h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            color: #1e293b;
+            margin-bottom: 3rem;
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .category-card {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: 1px solid rgba(102, 126, 234, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .category-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--focus-primary-color);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .category-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .category-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 16px 48px rgba(102, 126, 234, 0.2);
+        }
+
+        .category-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .category-header i {
+            font-size: 2rem;
+            margin-right: 1rem;
+            color: var(--focus-primary-color);
+        }
+
+        .category-header h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #1e293b;
+            margin: 0;
+        }
+
+        .category-description {
+            color: #64748b;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .focus-areas {
+            margin: 1rem 0;
+        }
+
+        .focus-areas strong {
+            color: #1e293b;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .focus-area-tag {
+            display: inline-block;
+            background: #f1f5f9;
+            color: #475569;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin: 0.25rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: 1px solid transparent;
+        }
+
+        .focus-area-tag:hover {
+            background: var(--focus-primary-color);
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .vendors-list {
+            margin: 1rem 0;
+        }
+
+        .vendors-list strong {
+            color: #1e293b;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .vendor-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+            padding: 0.4rem 0.8rem;
+            border-radius: 8px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            margin: 0.25rem;
+            border: 1px solid;
+        }
+
+        .vendor-badge.premium {
+            background: #fef3c7;
+            color: #92400e;
+            border-color: #fcd34d;
+        }
+
+        .vendor-badge.standard {
+            background: #f1f5f9;
+            color: #475569;
+            border-color: #cbd5e1;
+        }
+
+        /* Advanced Filtering System */
+        .filter-section {
+            background: #f8fafc;
+            padding: 60px 0;
+            margin: 3rem 0;
+            border-top: 1px solid #e2e8f0;
+            border-bottom: 1px solid #e2e8f0;
+            position: static;
+            top: auto;
+            z-index: auto;
+        }
+        @media (max-width: 768px) {
+            .filter-section { position: static; top: auto; }
+        }
+        /* Pagination controls */
+        .pagination { display:flex; gap:0.5rem; justify-content:center; align-items:center; margin: 1.25rem 0; flex-wrap: wrap; }
+        .page-btn { background:#fff; border:1px solid #e2e8f0; color:#334155; padding:0.5rem 0.9rem; border-radius:8px; cursor:pointer; font-weight:600; }
+        .page-btn:hover { background:#f8fafc; }
+        .page-btn[disabled] { opacity:0.5; cursor:not-allowed; }
+        .page-indicator { color:#64748b; font-size:0.95rem; margin:0 0.5rem; }
+
+        .filter-section .container {
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .filter-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #1e293b;
+            margin-bottom: 1rem;
+        }
+
+        .filter-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #64748b;
+            margin-bottom: 3rem;
+        }
+
+        .search-container {
+            position: relative;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 1rem 1.5rem 1rem 3rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 50px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            background: white;
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: var(--focus-primary-color);
+            box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 1.2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #94a3b8;
+            font-size: 1.1rem;
+        }
+
+        .filter-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            max-width: var(--container-max);
+            margin: 0 auto;
+        }
+
+        .filter-group {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e2e8f0;
+        }
+
+        .filter-group h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #1e293b;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .filter-group select {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            font-size: 1rem;
+            background: white;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .filter-group select:focus {
+            outline: none;
+            border-color: var(--focus-primary-color);
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .filter-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-secondary, .btn-primary {
+            padding: 0.75rem 2rem;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .btn-secondary {
+            background: #f1f5f9;
+            color: #475569;
+            border: 1px solid #d1d5db;
+        }
+
+        .btn-primary {
+            background: var(--it-primary);
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: #e2e8f0;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(102, 126, 234, 0.3);
+        }
+
+        /* Lightweight modal overlay */
+        .modal-backdrop { position: fixed; inset: 0; background: rgba(15,23,42,0.55); display: none; align-items: center; justify-content: center; z-index: 2000; }
+        .modal-backdrop.active { display: flex; }
+        .modal-card { background: #fff; border-radius: 14px; box-shadow: 0 20px 60px rgba(15,23,42,0.3); width: min(720px, 92vw); max-height: 85vh; overflow: auto; border: 1px solid #e2e8f0; }
+        .modal-header { display: flex; align-items: center; justify-content: space-between; padding: 1rem 1.25rem; border-bottom: 1px solid #e2e8f0; }
+        .modal-title { font-size: 1.05rem; font-weight: 700; color: #1e293b; }
+        .modal-close { background: transparent; border: none; font-size: 1.1rem; cursor: pointer; color: #64748b; }
+        .modal-body { padding: 1rem 1.25rem; color: #334155; }
+        .kv { display: grid; grid-template-columns: 160px 1fr; gap: 0.4rem 1rem; }
+        .kv .k { color: #64748b; }
+        .kv .v { color: #1f2937; }
+        .info-button { background: #eef2ff; color: #3730a3; border: 1px solid #c7d2fe; border-radius: 8px; padding: 0.35rem 0.6rem; font-size: 0.85rem; cursor: pointer; }
+
+        /* Footer Styling */
+        .main-footer {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #e2e8f0;
+            padding: 0;
+            margin-top: 4rem;
+        }
+        .main-footer .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 60px 0 30px;
+            gap: 2rem;
+        }
+        @media (min-width: 1024px) {
+            .footer-content {
+                display: grid;
+                grid-template-columns: minmax(320px, 420px) 1fr;
+                align-items: flex-start;
+                gap: 3rem;
+            }
+        }
+        .footer-brand {
+            flex: 1 1 260px;
+            margin-bottom: 2rem;
+        }
+        .footer-brand .logo-text {
+            font-size: 1.3rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+            color: #e2e8f0;
+        }
+        .footer-brand .logo-text:hover { color:#ffffff; }
+        .footer-brand p { color:#cbd5e1; margin: 0.75rem 0 1rem; line-height: 1.6; }
+        .footer-contact { color:#cbd5e1; font-size:0.98rem; }
+        .footer-contact a { color:#a5b4fc; text-decoration:none; }
+        .footer-contact a:hover { color:#4facfe; }
+        .footer-social { display:flex; gap:0.6rem; margin-top:0.75rem; }
+        .footer-social a { display:inline-flex; align-items:center; justify-content:center; width:36px; height:36px; border-radius:50%; border:1px solid rgba(255,255,255,0.18); color:#e2e8f0; text-decoration:none; transition:all 0.2s; }
+        .footer-social a:hover { background:rgba(255,255,255,0.08); color:#ffffff; border-color:rgba(255,255,255,0.3); transform: translateY(-1px); }
+        .footer-links {
+            display: flex;
+            flex: 2 1 500px;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+        @media (min-width: 1024px) {
+            .footer-links { display:grid; grid-template-columns: repeat(4, minmax(220px, 1fr)); align-items:flex-start; column-gap: 2rem; }
+        }
+        .footer-column {
+            min-width: 220px;
+        }
+        .footer-column h4 {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: #a5b4fc;
+        }
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .footer-column ul li {
+            margin-bottom: 0.7rem;
+        }
+        .footer-column ul li a {
+            color: #e2e8f0;
+            text-decoration: none;
+            font-size: 0.98rem;
+            transition: color 0.2s;
+        }
+        @media (min-width: 1024px) {
+            .footer-column ul li a { white-space: nowrap; }
+        }
+        .footer-column ul li a:hover,
+        .footer-column ul li a.active {
+            color: #4facfe;
+        }
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.08);
+            padding: 18px 0 10px;
+            text-align: center;
+            font-size: 0.95rem;
+            color: #cbd5e1;
+        }
+        .footer-legal {
+            margin-top: 0.5rem;
+        }
+        .footer-legal a {
+            color: #a5b4fc;
+            margin: 0 0.7rem;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+        .footer-legal a:hover {
+            color: #4facfe;
+        }
+        @media (max-width: 900px) {
+            .footer-content {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 2rem;
+            }
+            .footer-links {
+                gap: 2rem;
+            }
+        }
+        @media (max-width: 600px) {
+            .main-footer .container {
+                padding: 0 1rem;
+            }
+            .footer-content {
+                padding: 40px 0 20px;
+            }
+            .footer-links {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+            .footer-column {
+                min-width: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <!-- NAVIGATION - COPIED FROM technology-old.html -->
+<nav class="tech-navbar" id="techNavbar">
+    <div class="tech-nav-container">
+        <a href="../index.html" class="tech-nav-logo">
+            <div class="logo-icon">
+                <i class="fas fa-microchip"></i>
+            </div>
+            BTH Education Group
+        </a>
+        
+        <div class="tech-nav-menu" id="techNavMenu">
+            <a href="../index.html" class="tech-nav-link">Home</a>
+            <a href="../program.html" class="tech-nav-link active">Programs</a>
+            <a href="../about.html" class="tech-nav-link">About</a>
+            <a href="../contact.html" class="tech-nav-link">Contact</a>
+            <a href="../apply.html" class="tech-nav-link">Apply</a>
+            <a href="../hexad-mastery.html" class="tech-nav-cta">HEXAD Framework</a>
+        </div>
+        
+        <button class="tech-nav-toggle" id="techNavToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+</nav>
+
+    <!-- FLAGSHIP IT HERO SECTION - EXACT COPY FROM technology-old.html -->
+    <section class="programs-hero">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <div class="badge-icon">
+                    <i class="fas fa-microchip"></i>
+                </div>
+                Information Technology Excellence
+            </div>
+            <div class="level-system-badge">
+                <i class="fas fa-layer-group"></i>
+                Level 1-5 Professional System
+            </div>
+            <div class="partner-badge" title="Authorized Pearson VUE Exam Delivery Partner">
+                <i class="fas fa-certificate"></i>
+                Authorized Pearson VUE Exam Delivery Partner (Site ID: 89828)
+            </div>
+            
+            <h1>IT Professional Certification Pathways</h1>
+            <p class="subtitle">Master the complete Information Technology landscape through our comprehensive Level 1-5 certification system across 6 major domains and 47 industry-leading vendor partnerships.</p>
+            
+            <div class="hero-cta-section">
+                <div class="hero-cta-buttons">
+                    <a href="#framework-selection" class="hero-primary-btn">
+                        <i class="fas fa-rocket"></i> Choose Your Framework
+                    </a>
+                    <a href="#certification-filtering" class="hero-secondary-btn">
+                        <i class="fas fa-sitemap"></i> Browse Certifications
+                    </a>
+                </div>
+            </div>
+
+            <!-- IT Statistics -->
+            <div class="programs-stats">
+                <div class="stat-card">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Certifications</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">Industry Sectors</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">39</div>
+                    <div class="stat-label">Vendor Partners</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">2</div>
+                    <div class="stat-label">Framework Options</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Framework Selection -->
+    <section id="framework-selection" class="framework-selection">
+        <div class="container">
+            <h2>Choose Your Learning Framework</h2>
+            <p class="framework-subtitle">Select the pathway that aligns with your development goals</p>
+            
+            <div class="framework-cards">
+                <!-- Standard Professional Pathway -->
+                <div class="framework-card standard" data-framework="standard">
+                    <div class="framework-title">Standard Professional Pathway</div>
+                    <div class="framework-description">Professional development focused certification pathway for career advancement in technology sectors.</div>
+                    
+                    <div class="framework-price">
+                        <span class="price-range">$8,100 - $26,865</span>
+                        <span class="price-label">Professional development focused</span>
+                    </div>
+                    
+                    <ul class="framework-features">
+                        <li><i class="fas fa-check"></i> Industry Certifications (CompTIA, Microsoft, AWS, Cisco)</li>
+                        <li><i class="fas fa-check"></i> Professional Ethics & Communication Skills</li>
+                        <li><i class="fas fa-check"></i> Career Skills & Leadership Development</li>
+                        <li><i class="fas fa-check"></i> AI Integration & Emerging Technologies</li>
+                        <li><i class="fas fa-check"></i> Level 1-5 Progression System</li>
+                        <li><i class="fas fa-check"></i> Industry Mentor Network Access</li>
+                    </ul>
+                    
+                    <button class="cta-button cta-standard" onclick="selectFramework('standard')">
+                        Choose Standard Pathway
+                    </button>
+                </div>
+                
+                <!-- HEXAD Complete Framework -->
+                <div class="framework-card premium" data-framework="hexad">
+                    <div class="framework-title">HEXAD Complete Framework</div>
+                    <div class="framework-description">Complete human development system including career, personal growth, financial success, and relationship mastery.</div>
+                    
+                    <div class="framework-price">
+                        <span class="price-range">$12,936.65 - $41,371.65</span>
+                        <span class="price-label">6-dimensional complete development</span>
+                    </div>
+                    
+                    <ul class="framework-features">
+                        <li><i class="fas fa-check"></i> <strong>Professional Development:</strong> All Standard features included</li>
+                        <li><i class="fas fa-check"></i> <strong>Personal Development:</strong> Character, Skills & Wisdom</li>
+                        <li><i class="fas fa-check"></i> <strong>Occupational Development:</strong> Work Excellence & Leadership</li>
+                        <li><i class="fas fa-check"></i> <strong>Financial Development:</strong> Wealth Building & Investment</li>
+                        <li><i class="fas fa-check"></i> <strong>Relationship Development:</strong> Communication & Social Mastery</li>
+                        <li><i class="fas fa-check"></i> <strong>Truth Education:</strong> Critical Thinking & Wisdom</li>
+                    </ul>
+                    
+                    <button class="cta-button cta-premium" onclick="selectFramework('hexad')">
+                        Choose HEXAD Framework
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Category Overview -->
+    <section class="category-overview">
+        <div class="container">
+            <h2>Technology Certification Categories</h2>
+            
+            <div class="category-grid">
+                <!-- Core IT Foundations & Networking -->
+                <div class="category-card" data-category="core-it">
+                    <div class="category-header">
+                        <i class="fas fa-network-wired"></i>
+                        <h3>Core IT Foundations & Networking</h3>
+                    </div>
+                    <div class="category-description">
+                        Build fundamental IT skills and advanced networking expertise for enterprise environments.
+                    </div>
+                    <div class="focus-areas">
+                        <strong>Focus Areas:</strong>
+                        <span class="focus-area-tag">Foundations</span>
+                        <span class="focus-area-tag">OS</span>
+                        <span class="focus-area-tag">Enterprise R&S</span>
+                        <span class="focus-area-tag">Wireless</span>
+                        <span class="focus-area-tag">5G/SP</span>
+                    </div>
+                    <div class="vendors-list">
+                        <strong>Vendor Partners:</strong>
+                        <span class="vendor-badge premium">CompTIA</span>
+                        <span class="vendor-badge premium">Cisco</span>
+                        <span class="vendor-badge standard">Juniper</span>
+                        <span class="vendor-badge standard">Aruba</span>
+                        <span class="vendor-badge premium">CWNP</span>
+                        <span class="vendor-badge standard">Nokia</span>
+                        <span class="vendor-badge standard">Huawei</span>
+                        <span class="vendor-badge standard">ZTE</span>
+                        <span class="vendor-badge standard">Fortinet</span>
+                    </div>
+                </div>
+
+                <!-- Cloud & Platforms -->
+                <div class="category-card" data-category="cloud-platforms">
+                    <div class="category-header">
+                        <i class="fas fa-cloud"></i>
+                        <h3>Cloud & Platforms</h3>
+                    </div>
+                    <div class="category-description">
+                        Master cloud computing, virtualization, and modern platform technologies.
+                    </div>
+                    <div class="focus-areas">
+                        <strong>Focus Areas:</strong>
+                        <span class="focus-area-tag">Public Cloud</span>
+                        <span class="focus-area-tag">Virtualization</span>
+                        <span class="focus-area-tag">Linux</span>
+                        <span class="focus-area-tag">Data Platforms</span>
+                        <span class="focus-area-tag">Modern Workplace</span>
+                    </div>
+                    <div class="vendors-list">
+                        <strong>Vendor Partners:</strong>
+                        <span class="vendor-badge premium">AWS</span>
+                        <span class="vendor-badge premium">Microsoft</span>
+                        <span class="vendor-badge premium">Google Cloud</span>
+                        <span class="vendor-badge standard">Red Hat</span>
+                        <span class="vendor-badge standard">SUSE</span>
+                        <span class="vendor-badge premium">VMware/Omnissa</span>
+                        <span class="vendor-badge standard">Snowflake</span>
+                        <span class="vendor-badge standard">MongoDB</span>
+                        <span class="vendor-badge standard">NetApp</span>
+                        <span class="vendor-badge standard">Oracle</span>
+                    </div>
+                </div>
+
+                <!-- Cybersecurity & Privacy -->
+                <div class="category-card" data-category="cybersecurity">
+                    <div class="category-header">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Cybersecurity & Privacy</h3>
+                    </div>
+                    <div class="category-description">
+                        Comprehensive cybersecurity training from blue team defense to offensive security.
+                    </div>
+                    <div class="focus-areas">
+                        <strong>Focus Areas:</strong>
+                        <span class="focus-area-tag">Blue Team</span>
+                        <span class="focus-area-tag">Offensive Security</span>
+                        <span class="focus-area-tag">Cloud Security</span>
+                        <span class="focus-area-tag">GRC & Audit</span>
+                        <span class="focus-area-tag">Privacy</span>
+                    </div>
+                    <div class="vendors-list">
+                        <strong>Vendor Partners:</strong>
+                        <span class="vendor-badge premium">CompTIA</span>
+                        <span class="vendor-badge premium">(ISC)²</span>
+                        <span class="vendor-badge premium">ISACA</span>
+                        <span class="vendor-badge standard">EC-Council</span>
+                        <span class="vendor-badge standard">GIAC</span>
+                        <span class="vendor-badge standard">IAPP</span>
+                        <span class="vendor-badge standard">CSA</span>
+                        <span class="vendor-badge standard">Fortinet</span>
+                    </div>
+                </div>
+
+                <!-- Software Development & DevOps -->
+                <div class="category-card" data-category="software-devops">
+                    <div class="category-header">
+                        <i class="fas fa-code"></i>
+                        <h3>Software Development & DevOps</h3>
+                    </div>
+                    <div class="category-description">
+                        Modern software development, CI/CD, containers, and DevOps methodologies.
+                    </div>
+                    <div class="focus-areas">
+                        <strong>Focus Areas:</strong>
+                        <span class="focus-area-tag">Programming</span>
+                        <span class="focus-area-tag">CI/CD</span>
+                        <span class="focus-area-tag">Containers</span>
+                        <span class="focus-area-tag">Kubernetes</span>
+                        <span class="focus-area-tag">Application Platforms</span>
+                        <span class="focus-area-tag">Databases</span>
+                    </div>
+                    <div class="vendors-list">
+                        <strong>Vendor Partners:</strong>
+                        <span class="vendor-badge premium">Microsoft</span>
+                        <span class="vendor-badge standard">Red Hat</span>
+                        <span class="vendor-badge standard">SUSE</span>
+                        <span class="vendor-badge premium">VMware/Omnissa</span>
+                        <span class="vendor-badge standard">MongoDB</span>
+                        <span class="vendor-badge standard">Zend</span>
+                        <span class="vendor-badge standard">Qt</span>
+                        <span class="vendor-badge standard">CNCF</span>
+                    </div>
+                </div>
+
+                <!-- IT Governance & Agile -->
+                <div class="category-card" data-category="governance-agile">
+                    <div class="category-header">
+                        <i class="fas fa-tasks"></i>
+                        <h3>IT Governance & Agile</h3>
+                    </div>
+                    <div class="category-description">
+                        IT service management, project management, and agile methodologies.
+                    </div>
+                    <div class="focus-areas">
+                        <strong>Focus Areas:</strong>
+                        <span class="focus-area-tag">Service Management</span>
+                        <span class="focus-area-tag">Project/Program/Portfolio</span>
+                        <span class="focus-area-tag">Agile Frameworks</span>
+                        <span class="focus-area-tag">IT Governance & Audit</span>
+                    </div>
+                    <div class="vendors-list">
+                        <strong>Vendor Partners:</strong>
+                        <span class="vendor-badge premium">PeopleCert</span>
+                        <span class="vendor-badge premium">PMI</span>
+                        <span class="vendor-badge premium">ISACA</span>
+                        <span class="vendor-badge standard">Scrum Alliance</span>
+                    </div>
+                </div>
+
+                <!-- Specialized Technical -->
+                <div class="category-card" data-category="specialized-tech">
+                    <div class="category-header">
+                        <i class="fas fa-cogs"></i>
+                        <h3>Specialized Technical</h3>
+                    </div>
+                    <div class="category-description">
+                        Advanced technical specializations in data protection, observability, and enterprise platforms.
+                    </div>
+                    <div class="focus-areas">
+                        <strong>Focus Areas:</strong>
+                        <span class="focus-area-tag">Storage & Data Protection</span>
+                        <span class="focus-area-tag">Observability & SIEM</span>
+                        <span class="focus-area-tag">Virtualization & EUC</span>
+                        <span class="focus-area-tag">Data Platforms</span>
+                    </div>
+                    <div class="vendors-list">
+                        <strong>Vendor Partners:</strong>
+                        <span class="vendor-badge standard">Veeam</span>
+                        <span class="vendor-badge standard">Splunk</span>
+                        <span class="vendor-badge standard">Citrix</span>
+                        <span class="vendor-badge standard">NetApp</span>
+                        <span class="vendor-badge standard">Teradata</span>
+                        <span class="vendor-badge premium">VMware/Omnissa</span>
+                        <span class="vendor-badge standard">ForgeRock</span>
+                        <span class="vendor-badge standard">ETA International</span>
+                    </div>
+                </div>
+
+                <!-- Emerging Technologies -->
+                <div class="category-card" data-category="emerging-tech">
+                    <div class="category-header">
+                        <i class="fas fa-rocket"></i>
+                        <h3>Emerging Technologies</h3>
+                    </div>
+                    <div class="category-description">
+                        Cutting-edge technologies including AI, blockchain, IoT, and quantum computing.
+                    </div>
+                    <div class="focus-areas">
+                        <strong>Focus Areas:</strong>
+                        <span class="focus-area-tag">AI & ML</span>
+                        <span class="focus-area-tag">IoT</span>
+                        <span class="focus-area-tag">Blockchain</span>
+                        <span class="focus-area-tag">AR/VR & Metaverse</span>
+                        <span class="focus-area-tag">Quantum Computing</span>
+                    </div>
+                    <div class="vendors-list">
+                        <strong>Vendor Partners:</strong>
+                        <span class="vendor-badge premium">Microsoft</span>
+                        <span class="vendor-badge premium">AWS</span>
+                        <span class="vendor-badge premium">Google Cloud</span>
+                        <span class="vendor-badge standard">Linux Foundation</span>
+                        <span class="vendor-badge standard">Unity</span>
+                        <span class="vendor-badge standard">NVIDIA</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advanced Filtering System -->
+    <section id="certification-filtering" class="filter-section">
+        <div class="container">
+            <h2>Advanced Certification Filtering</h2>
+            <div style="text-align:center;margin-top:0.5rem;">
+                <img src="../assets/badges/dataset-health.svg" alt="Dataset Health" style="height:20px;vertical-align:middle;" onerror="this.style.display='none'">
+            </div>
+            <p class="filter-subtitle">Find the perfect certifications for your career goals with our intelligent filtering system</p>
+            
+            <div class="search-container">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" class="search-input" placeholder="Search certifications, vendors, or technologies..." />
+            </div>
+            
+            <div class="filter-grid">
+                <div class="filter-group">
+                    <h4><i class="fas fa-layer-group"></i> Level</h4>
+                    <select id="levelFilter">
+                        <option value="">All Levels</option>
+                        <option value="1">Level 1 - Foundation</option>
+                        <option value="2">Level 2 - Associate</option>
+                        <option value="3">Level 3 - Professional</option>
+                        <option value="4">Level 4 - Expert</option>
+                        <option value="5">Level 5 - Master</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <h4><i class="fas fa-tags"></i> Category</h4>
+                    <select id="categoryFilter">
+                        <option value="">All Categories</option>
+                        <option value="core-it">Core IT Foundations & Networking</option>
+                        <option value="cloud-platforms">Cloud & Platforms</option>
+                        <option value="cybersecurity">Cybersecurity & Privacy</option>
+                        <option value="software-devops">Software Development & DevOps</option>
+                        <option value="governance-agile">IT Governance & Agile</option>
+                        <option value="specialized-tech">Specialized Technical</option>
+                        <option value="emerging-tech">Emerging Technologies</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <h4><i class="fas fa-filter"></i> Focus Area</h4>
+                    <select id="focusFilter">
+                        <option value="">All Focus Areas</option>
+                        <option value="Foundations">Foundations</option>
+                        <option value="Enterprise R&S">Enterprise R&S</option>
+                        <option value="Wireless">Wireless</option>
+                        <option value="Public Cloud">Public Cloud</option>
+                        <option value="Virtualization">Virtualization</option>
+                        <option value="AI & ML">AI & ML</option>
+                        <option value="Cybersecurity">Cybersecurity</option>
+                        <option value="DevOps">DevOps</option>
+                        <!-- Add more as needed -->
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <h4><i class="fas fa-building"></i> Vendor <span class="vendor-count">(39)</span></h4>
+                    <select id="vendorFilter">
+                        <option value="">All Vendors</option>
+                        <option value="CompTIA">CompTIA</option>
+                        <option value="Cisco">Cisco</option>
+                        <option value="Juniper">Juniper</option>
+                        <option value="Aruba">Aruba</option>
+                        <option value="CWNP">CWNP</option>
+                        <option value="Nokia">Nokia</option>
+                        <option value="Huawei">Huawei</option>
+                        <option value="ZTE">ZTE</option>
+                        <option value="Fortinet">Fortinet</option>
+                        <option value="AWS">Amazon AWS</option>
+                        <option value="Microsoft">Microsoft</option>
+                        <option value="Google Cloud">Google Cloud</option>
+                        <option value="Red Hat">Red Hat</option>
+                        <option value="SUSE">SUSE</option>
+                        <option value="VMware/Omnissa">VMware/Omnissa</option>
+                        <option value="Snowflake">Snowflake</option>
+                        <option value="MongoDB">MongoDB</option>
+                        <option value="NetApp">NetApp</option>
+                        <option value="Oracle">Oracle</option>
+                        <option value="(ISC)²">(ISC)²</option>
+                        <option value="ISACA">ISACA</option>
+                        <option value="EC-Council">EC-Council</option>
+                        <option value="GIAC">GIAC</option>
+                        <option value="IAPP">IAPP</option>
+                        <option value="CSA">CSA</option>
+                        <option value="PeopleCert">PeopleCert</option>
+                        <option value="PMI">PMI</option>
+                        <option value="Scrum Alliance">Scrum Alliance</option>
+                        <option value="Veeam">Veeam</option>
+                        <option value="Splunk">Splunk</option>
+                        <option value="Citrix">Citrix</option>
+                        <option value="Teradata">Teradata</option>
+                        <option value="ForgeRock">ForgeRock</option>
+                        <option value="ETA International">ETA International</option>
+                        <option value="Linux Foundation">Linux Foundation</option>
+                        <option value="Unity">Unity</option>
+                        <option value="NVIDIA">NVIDIA</option>
+                        <option value="Zend">Zend</option>
+                        <option value="Qt">Qt</option>
+                        <option value="CNCF">CNCF</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <h4><i class="fas fa-star"></i> Partnership</h4>
+                    <select id="partnershipFilter">
+                        <option value="">All Partners</option>
+                        <option value="premium">Premium Partners</option>
+                        <option value="standard">Standard Partners</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <h4><i class="fas fa-sort"></i> Sort</h4>
+                    <select id="sortFilter">
+                        <option value="relevance">Relevance</option>
+                        <option value="name-asc">Name A→Z</option>
+                        <option value="name-desc">Name Z→A</option>
+                        <option value="level-asc">Level ↑</option>
+                        <option value="level-desc">Level ↓</option>
+                        <option value="vendor-asc">Vendor A→Z</option>
+                        <option value="vendor-desc">Vendor Z→A</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="filter-actions">
+                <button class="btn-secondary" onclick="clearFilters()">Clear Filters</button>
+                <button class="btn-secondary" onclick="clearUrlState()">Clear URL State</button>
+                <button class="btn-primary" onclick="applyFilters()">Apply Filters</button>
+                <button class="btn-secondary" onclick="exportSelected('json')"><i class="fas fa-file-export"></i> Export Selected (JSON)</button>
+                <button class="btn-secondary" onclick="exportSelected('csv')"><i class="fas fa-file-csv"></i> Export Selected (CSV)</button>
+                <button class="btn-secondary" onclick="exportResults('json')"><i class="fas fa-list"></i> Export Results (JSON)</button>
+                <button class="btn-secondary" onclick="exportResults('csv')"><i class="fas fa-file-csv"></i> Export Results (CSV)</button>
+            </div>
+            <div class="filter-actions" style="margin-top:0.75rem; gap:0.75rem;">
+                <label style="display:flex; gap:0.4rem; align-items:center; background:#fff; border:1px solid #e2e8f0; padding:0.4rem 0.6rem; border-radius:8px;">
+                    <input id="toggleVendorAnchor" type="checkbox" checked>
+                    <span>Vendor-anchored pathway</span>
+                </label>
+                <label style="display:flex; gap:0.4rem; align-items:center; background:#fff; border:1px solid #e2e8f0; padding:0.4rem 0.6rem; border-radius:8px;">
+                    <input id="toggleEligibleOnly" type="checkbox" checked>
+                    <span>Only show eligible additions for this level</span>
+                </label>
+            </div>
+            <div id="results-summary" class="results-summary" style="text-align:center;color:#475569;margin-top:1rem;" aria-live="polite"></div>
+            <details id="vendor-counts" style="max-width: 900px; margin: 0.5rem auto 1rem; background:#ffffff; border:1px solid #e2e8f0; border-radius:12px; padding:0.75rem 1rem;">
+                <summary style="cursor:pointer;color:#334155;font-weight:600;">Vendor counts overview</summary>
+                <div class="vendor-counts-body" style="margin-top:0.5rem; color:#475569; font-size:0.95rem;"></div>
+            </details>
+            <details id="quote-panel" open style="max-width: var(--container-max); margin: 0.5rem auto 1rem; background:#ffffff; border:1px solid #e2e8f0; border-radius:12px; padding:0.75rem 1rem;">
+                <summary style="cursor:pointer;color:#334155;font-weight:700;">Your Level Quotes</summary>
+                <div id="quote-content" style="margin-top:0.5rem; color:#475569; font-size:0.95rem;"></div>
+            </details>
+            <!-- Pagination (top) -->
+            <div id="results-pagination-top" class="pagination" aria-label="Results pagination (top)" style="display:none;"></div>
+
+            <!-- Dynamic Results: Certifications & Modules -->
+            <div id="dynamic-results">
+                <!-- Certification cards will be rendered here based on filters -->
+            </div>
+            <!-- Pagination (bottom) -->
+            <div id="results-pagination-bottom" class="pagination" aria-label="Results pagination (bottom)" style="display:none;"></div>
+            <div id="level-modules">
+                <!-- Professional development modules for selected level will be rendered here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="../index.html" class="logo-text"><i class="fas fa-microchip"></i> BTH Education Group</a>
+                    <p>Transforming lives through comprehensive education and professional development.</p>
+                    <div class="footer-contact">
+                        <div><i class="fas fa-envelope"></i> <a href="mailto:info@btheducationgroup.com">info@btheducationgroup.com</a></div>
+                        <div style="margin-top:4px;"><i class="fas fa-globe"></i> <a href="https://www.btheducationgroup.com" target="_blank" rel="noopener">www.btheducationgroup.com</a></div>
+                    </div>
+                    <div class="footer-social" aria-label="Social links">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="X / Twitter"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Programs</h4>
+                        <ul>
+                            <li><a href="informationtechnology.html" class="active">Information Technology</a></li>
+                            <li><a href="../program.html#healthcare">Healthcare Technology</a></li>
+                            <li><a href="../program.html#manufacturing">Manufacturing</a></li>
+                            <li><a href="../program.html">All Programs</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Frameworks</h4>
+                        <ul>
+                            <li><a href="../hexad-mastery.html">HEXAD Complete Framework</a></li>
+                            <li><a href="../program.html">Standard Pathway</a></li>
+                            <li><a href="../about.html">About HEXAD</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Support</h4>
+                        <ul>
+                            <li><a href="../index.html">Home</a></li>
+                            <li><a href="../contact.html">Contact Us</a></li>
+                            <li><a href="../apply.html">Apply Now</a></li>
+                            <li><a href="../faq.html">FAQ</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="../about.html">About Us</a></li>
+                            <li><a href="../partners.html">Partners</a></li>
+                            <li><a href="../contact.html#locations">Locations</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 BTH Education Group. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="../privacy.html">Privacy Policy</a>
+                    <a href="../terms.html">Terms of Service</a>
+                </div>
+                <p style="margin-top:8px;font-size:0.9rem;color:#94a3b8;max-width:900px;margin-left:auto;margin-right:auto;">
+                    All product names, logos, and brands are property of their respective owners. Use of these names, logos, and brands does not imply endorsement. Logos displayed are used under brand guidelines and authorized exam delivery partnerships.
+                </p>
+                <p style="margin-top:6px;font-size:0.92rem;color:#a5b4fc;">Authorized Pearson VUE Testing Center & Exam Delivery Partner (Site ID: 89828)</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Navigation + Navbar Effects
+        document.addEventListener('DOMContentLoaded', function() {
+            const navToggle = document.querySelector('#techNavToggle');
+            const navMenu = document.querySelector('#techNavMenu');
+            const navbar = document.querySelector('#techNavbar');
+
+            if (navToggle && navMenu) {
+                navToggle.addEventListener('click', () => {
+                    navToggle.classList.toggle('active');
+                    navMenu.classList.toggle('active');
+                });
+
+                document.querySelectorAll('.tech-nav-link').forEach(link => link.addEventListener('click', () => {
+                    navToggle.classList.remove('active');
+                    navMenu.classList.remove('active');
+                }));
+            }
+
+            const onScroll = () => {
+                if (!navbar) return;
+                if (window.scrollY > 10) navbar.classList.add('scrolled'); else navbar.classList.remove('scrolled');
+            };
+            onScroll();
+            window.addEventListener('scroll', onScroll, { passive: true });
+        });
+
+        // Framework Selection
+        function selectFramework(framework) {
+            sessionStorage.setItem('selectedFramework', framework);
+            sessionStorage.setItem('selectedSector', 'information-technology');
+            if (framework === 'standard') {
+                sessionStorage.setItem('maxLevel', '3');
+                document.getElementById('certification-filtering').scrollIntoView({ behavior: 'smooth' });
+            } else {
+                sessionStorage.setItem('maxLevel', '5');
+                window.location.href = '../hexad-checkout-system.html?sector=information-technology&framework=' + framework;
+            }
+        }
+
+    // Certification database (will be replaced by external JSON if available)
+        let certifications = [
+            { id: 1, name: 'CompTIA Tech+', vendor: 'CompTIA', category: 'core-it', focus: 'Foundations', level: 1, retired: false, logo: 'https://www.comptia.org/_next/image/?url=https%3A%2F%2Fimages.cmp.optimizely.com%2F84c2ddbcb71111ef888eca5646afc7d8&w=256&q=90', premium: true, exam: 'FC0-U71' },
+            { id: 2, name: 'CompTIA A+', vendor: 'CompTIA', category: 'core-it', focus: 'Foundations', level: 1, retired: false, logo: 'assets/logos/comptia-aplus.png', premium: true, exam: '220-1101/220-1102' },
+            { id: 3, name: 'CompTIA Network+', vendor: 'CompTIA', category: 'core-it', focus: 'Foundations', level: 1, retired: false, logo: 'assets/logos/comptia-networkplus.png', premium: true, exam: 'N10-009' },
+            { id: 4, name: 'Microsoft Azure Fundamentals', vendor: 'Microsoft', category: 'cloud-platforms', focus: 'Public Cloud', level: 1, retired: false, logo: 'assets/logos/azure-fundamentals.png', premium: true },
+            { id: 5, name: 'AWS Cloud Practitioner', vendor: 'AWS', category: 'cloud-platforms', focus: 'Public Cloud', level: 1, retired: false, logo: 'assets/logos/aws-cloud-practitioner.png', premium: true },
+            { id: 6, name: 'Cisco CCNA', vendor: 'Cisco', category: 'core-it', focus: 'Enterprise R&S', level: 2, retired: false, logo: 'assets/logos/cisco-ccna.png', premium: true },
+            { id: 7, name: 'Red Hat Certified System Admin', vendor: 'Red Hat', category: 'cloud-platforms', focus: 'Virtualization', level: 2, retired: false, logo: 'assets/logos/redhat-rhcsa.png', premium: false },
+        ];
+
+        // Level duration guidance (overall per level)
+        const levelDuration = {
+            1: '2–3 years',
+            2: '3 years',
+            3: '3 years',
+            4: '3–4 years',
+            5: '4–5 years'
+        };
+
+        // Professional Development Modules by Level (updated counts: L1:12, L2:15, L3:18, L4:22, L5:28)
+        // Each module: { code, title, hours, levelLabel, desc, icon }
+        const pdModules = {
+            1: [
+                { code: 'PR-L1-01', title: 'Professional Ethics Foundations', hours: '24h', levelLabel: 'Foundation', desc: 'Integrity, accountability, ethical decision-making.', icon: 'fa-scale-balanced' },
+                { code: 'PR-L1-02', title: 'Communication Skills I', hours: '24h', levelLabel: 'Foundation', desc: 'Clear written and verbal communication.', icon: 'fa-comments' },
+                { code: 'PR-L1-03', title: 'Career Skills I', hours: '24h', levelLabel: 'Foundation', desc: 'Resume, interviewing, workplace success.', icon: 'fa-briefcase' },
+                { code: 'PR-L1-04', title: 'Team Collaboration Basics', hours: '24h', levelLabel: 'Foundation', desc: 'Tools and practices for effective teamwork.', icon: 'fa-people-group' },
+                { code: 'PR-L1-05', title: 'Time and Focus Management', hours: '16h', levelLabel: 'Foundation', desc: 'Prioritization and personal productivity.', icon: 'fa-clock' },
+                { code: 'PR-L1-06', title: 'AI Integration I', hours: '16h', levelLabel: 'Foundation', desc: 'Practical AI tools for daily tasks.', icon: 'fa-robot' },
+                { code: 'PR-L1-07', title: 'Customer-Centric Mindset', hours: '16h', levelLabel: 'Foundation', desc: 'Delivering value and service excellence.', icon: 'fa-handshake' },
+                { code: 'PR-L1-08', title: 'Critical Thinking I', hours: '16h', levelLabel: 'Foundation', desc: 'Reasoning and problem-solving basics.', icon: 'fa-lightbulb' },
+                { code: 'PR-L1-09', title: 'Digital Professionalism', hours: '12h', levelLabel: 'Foundation', desc: 'Online presence and workplace etiquette.', icon: 'fa-user-tie' },
+                { code: 'PR-L1-10', title: 'Security Awareness I', hours: '12h', levelLabel: 'Foundation', desc: 'Secure habits and organizational policies.', icon: 'fa-shield-halved' },
+                { code: 'PR-L1-11', title: 'Industry Mentor Network I', hours: '12h', levelLabel: 'Foundation', desc: 'Mentor engagement and feedback loops.', icon: 'fa-user-group' },
+                { code: 'PR-L1-12', title: 'Professional Tools Bootcamp', hours: '12h', levelLabel: 'Foundation', desc: 'Productivity suites and collaboration tools.', icon: 'fa-toolbox' },
+            ],
+            2: [
+                { code: 'PR-L2-01', title: 'Advanced Ethics', hours: '36h', levelLabel: 'Intermediate', desc: 'Complex ethical challenges & sound judgment.', icon: 'fa-scale-balanced' },
+                { code: 'PR-L2-02', title: 'Communication Skills II', hours: '32h', levelLabel: 'Intermediate', desc: 'Influencing and stakeholder communication.', icon: 'fa-comments' },
+                { code: 'PR-L2-03', title: 'Project Management I', hours: '36h', levelLabel: 'Intermediate', desc: 'Planning, execution, and delivery.', icon: 'fa-diagram-project' },
+                { code: 'PR-L2-04', title: 'Team Leadership Development', hours: '48h', levelLabel: 'Intermediate', desc: 'Team collaboration, basic management skills, mentoring fundamentals.', icon: 'fa-chess-king' },
+                { code: 'PR-L2-05', title: 'AI Integration II', hours: '24h', levelLabel: 'Intermediate', desc: 'Workflow automation and copilots.', icon: 'fa-robot' },
+                { code: 'PR-L2-06', title: 'Career Strategy II', hours: '24h', levelLabel: 'Intermediate', desc: 'Role positioning and growth plans.', icon: 'fa-route' },
+                { code: 'PR-L2-07', title: 'Security Awareness II', hours: '18h', levelLabel: 'Intermediate', desc: 'Threat awareness and risk basics.', icon: 'fa-shield' },
+                { code: 'PR-L2-08', title: 'Mentor Network II', hours: '18h', levelLabel: 'Intermediate', desc: 'Expanding and leveraging mentors.', icon: 'fa-user-plus' },
+                { code: 'PR-L2-09', title: 'Data Literacy I', hours: '18h', levelLabel: 'Intermediate', desc: 'Data fundamentals and storytelling.', icon: 'fa-chart-column' },
+                { code: 'PR-L2-10', title: 'Modern Tools II', hours: '12h', levelLabel: 'Intermediate', desc: 'Advanced collaboration & PM tools.', icon: 'fa-screwdriver-wrench' },
+                { code: 'PR-L2-11', title: 'Problem Solving II', hours: '18h', levelLabel: 'Intermediate', desc: 'Root-cause analysis and facilitation.', icon: 'fa-magnifying-glass' },
+                { code: 'PR-L2-12', title: 'Writing for Impact', hours: '18h', levelLabel: 'Intermediate', desc: 'Business cases and executive briefs.', icon: 'fa-pen-to-square' },
+                { code: 'PR-L2-13', title: 'Negotiation Basics', hours: '12h', levelLabel: 'Intermediate', desc: 'Principled negotiation techniques.', icon: 'fa-scale-balanced' },
+                { code: 'PR-L2-14', title: 'Customer Discovery', hours: '12h', levelLabel: 'Intermediate', desc: 'Interviewing and requirement elicitation.', icon: 'fa-user-check' },
+                { code: 'PR-L2-15', title: 'Business Fundamentals I', hours: '12h', levelLabel: 'Intermediate', desc: 'Finance and value creation basics.', icon: 'fa-briefcase' },
+            ],
+            3: Array.from({length:18}).map((_,i)=>({ code:`PR-L3-${String(i+1).padStart(2,'0')}`, title:`Professional Mastery ${i+1}`, hours: `${18+ (i%3)*6}h`, levelLabel:'Advanced', desc:'Advanced leadership, innovation, global collaboration, and AI.', icon: 'fa-medal' })),
+            4: Array.from({length:22}).map((_,i)=>({ code:`PR-L4-${String(i+1).padStart(2,'0')}`, title:`Expert Development ${i+1}`, hours: `${20+ (i%3)*8}h`, levelLabel:'Expert', desc:'Expert leadership, program delivery at scale, and communication.', icon: 'fa-chess-queen' })),
+            5: Array.from({length:28}).map((_,i)=>({ code:`PR-L5-${String(i+1).padStart(2,'0')}`, title:`Mastery Program ${i+1}`, hours: `${24+ (i%3)*10}h`, levelLabel:'Master', desc:'Enterprise governance, strategic innovation, and AI at scale.', icon: 'fa-crown' })),
+        };
+
+        // Vendor logo mapping (fallbacks to default)
+        const vendorLogoMap = {
+            'AWS': '../assets/images/vendor-logos/aws.svg',
+            'Amazon AWS': '../assets/images/vendor-logos/aws.svg',
+            'Microsoft': '../assets/images/vendor-logos/microsoft.svg',
+            'Azure': '../assets/images/vendor-logos/azure.svg',
+            'CompTIA': '../assets/images/vendor-logos/comptia.svg',
+            'Cisco': '../assets/images/vendor-logos/cisco.svg',
+            'Linux Foundation': '../assets/images/vendor-logos/linuxfoundation.svg',
+            'Red Hat': '../assets/images/vendor-logos/redhat.svg',
+            'VMware/Omnissa': '../assets/images/vendor-logos/vmware.svg',
+            'Google Cloud': '../assets/images/vendor-logos/googlecloud.svg',
+            'ISACA': '../assets/images/vendor-logos/isaca.svg',
+            '(ISC)²': '../assets/images/vendor-logos/isc2.svg',
+            'PMI': '../assets/images/vendor-logos/pmi.svg',
+            'PeopleCert': '../assets/images/vendor-logos/peoplecert.svg',
+            'GIAC': '../assets/images/vendor-logos/giac.svg',
+            'IAPP': '../assets/images/vendor-logos/iapp.svg',
+            'CSA': '../assets/images/vendor-logos/csa.svg',
+            'NetApp': '../assets/images/vendor-logos/netapp.svg',
+            'Veeam': '../assets/images/vendor-logos/veeam.svg',
+            'Splunk': '../assets/images/vendor-logos/splunk.svg',
+            'Citrix': '../assets/images/vendor-logos/citrix.svg',
+            'Juniper': '../assets/images/vendor-logos/juniper.svg',
+            'SUSE': '../assets/images/vendor-logos/suse.svg',
+            'Fortinet': '../assets/images/vendor-logos/fortinet.svg',
+            'Oracle': '../assets/images/vendor-logos/oracle.svg',
+            'Snowflake': '../assets/images/vendor-logos/snowflake.svg',
+            'MongoDB': '../assets/images/vendor-logos/mongodb.svg',
+            'EC-Council': '../assets/images/vendor-logos/eccouncil.svg',
+            'Aruba': '../assets/images/vendor-logos/aruba.svg',
+            'Nokia': '../assets/images/vendor-logos/nokia.svg',
+            'CWNP': '../assets/images/vendor-logos/cwnp.svg',
+            'Unity': '../assets/images/vendor-logos/unity.svg',
+            'NVIDIA': '../assets/images/vendor-logos/nvidia.svg',
+            'CNCF': '../assets/images/vendor-logos/cncf.svg',
+            'Teradata': '../assets/images/vendor-logos/teradata.svg',
+            'ForgeRock': '../assets/images/vendor-logos/forgerock.svg',
+            'ETA International': '../assets/images/vendor-logos/eta.svg',
+            'Scrum Alliance': '../assets/images/vendor-logos/scrumalliance.svg',
+            'Zend': '../assets/images/vendor-logos/zend.svg',
+            'Qt': '../assets/images/vendor-logos/qt.svg',
+            'HashiCorp': '../assets/images/vendor-logos/hashicorp.svg',
+        };
+
+        // Salary guide (indicative averages in USD)
+        const salaryGuide = {
+            byName: {
+                'CompTIA Tech+': 45000,
+                'CompTIA A+': 52000,
+                'CompTIA Network+': 65000,
+                'Cisco CCNA': 78000,
+                'AWS Cloud Practitioner': 90000,
+                'Microsoft Azure Fundamentals': 85000,
+                'Red Hat Certified System Admin': 95000
+            },
+            byVendor: {
+                'CompTIA': 60000,
+                'Cisco': 80000,
+                'AWS': 95000,
+                'Microsoft': 90000,
+                'Red Hat': 95000,
+                'Google Cloud': 92000,
+                'Juniper': 82000,
+                'Fortinet': 88000
+            },
+            byLevelBase: { 1: 50000, 2: 70000, 3: 90000, 4: 110000, 5: 130000 }
+        };
+
+        function estimateSalary(cert){
+            if (!cert) return null;
+            if (typeof cert.salary === 'number' && cert.salary > 0) return cert.salary;
+            if (salaryGuide.byName[cert.name]) return salaryGuide.byName[cert.name];
+            const vendorBase = salaryGuide.byVendor[cert.vendor] || 0;
+            const levelBase = salaryGuide.byLevelBase[cert.level] || 0;
+            // Blend vendor and level base (simple average if both exist, else fallback)
+            if (vendorBase && levelBase) return Math.round((vendorBase + levelBase) / 2);
+            return vendorBase || levelBase || null;
+        }
+
+        function suggestRoles(cert){
+            const map = {
+                'core-it': ['IT Support Specialist', 'Network Support Technician', 'Systems Technician'],
+                'cloud-platforms': ['Cloud Support Associate', 'Cloud Administrator', 'DevOps Associate'],
+                'cybersecurity': ['Security Analyst (Blue Team)', 'SOC Analyst', 'Vulnerability Analyst'],
+                'software-devops': ['Software Engineer (Jr.)', 'DevOps Engineer (Associate)', 'Platform Engineer'],
+                'governance-agile': ['ITSM Analyst', 'Project Coordinator', 'Scrum Master (Associate)'],
+                'specialized-tech': ['Systems Engineer', 'Storage Administrator', 'Observability Analyst'],
+                'emerging-tech': ['AI/ML Associate', 'Data Engineer (Associate)', 'IoT Specialist']
+            };
+            return map[cert.category] || ['Associate Professional', 'Analyst / Engineer (Level-aligned)'];
+        }
+
+        // Estimate per-certification duration from level duration (proportional heuristic)
+        function estimateCertDuration(cert){
+            const level = cert?.level || 1;
+            const ld = levelDuration[level];
+            if (!ld) return 'Varies';
+            // Convert level duration band to months
+            const band = String(ld);
+            let minY = 0, maxY = 0;
+            if (band.includes('–')) {
+                const parts = band.split('–');
+                minY = parseFloat(parts[0]);
+                maxY = parseFloat(parts[1]);
+            } else if (band.includes('-')) {
+                const parts = band.split('-');
+                minY = parseFloat(parts[0]);
+                maxY = parseFloat(parts[1]);
+            } else {
+                minY = maxY = parseFloat(band);
+            }
+            if (!isFinite(minY) || !isFinite(maxY) || !minY) return 'Varies';
+            const avgYears = (minY + maxY) / 2;
+            const totalMonths = avgYears * 12;
+            // Assume per-level workload split: certifications ~55%, PD modules ~45%
+            const certMonths = totalMonths * 0.55;
+            // Estimated certifications count target per level (avg of min/max rule if defined)
+            const rule = levelRules[level];
+            const targetCount = rule ? (rule.min + (rule.max || rule.min)) / 2 : 5;
+            const perCertMonths = certMonths / Math.max(1, targetCount);
+            // Clamp between 1 and 8 months for reasonableness
+            const clamped = Math.min(8, Math.max(1, perCertMonths));
+            if (clamped < 2) return `${Math.round(clamped*4)/4} months`;
+            return `${Math.round(clamped * 10) / 10} months`;
+        }
+
+        // Level bundle pricing (all-inclusive per level)
+        const pricingConfig = {
+            currency: 'USD',
+            levelBundle: { 1: 8100, 2: 12000, 3: 16000, 4: 20000, 5: 26865 }
+        };
+
+        function computeSubtotal(level){
+            return Number(pricingConfig.levelBundle?.[level]) || 0;
+        }
+
+        // Level selection rules (min/max certifications allowed per level)
+        // Pattern: L1: 3, L2: 4, L3: 5-6, L4: 7, L5: 8-10
+        const levelRules = {
+            1: { min: 3, max: 3 },
+            2: { min: 4, max: 4 },
+            3: { min: 5, max: 6 },
+            4: { min: 7, max: 7 },
+            5: { min: 8, max: 10 }
+        };
+
+        // Track user-selected certifications per level
+        const selectedByLevel = {
+            1: new Set(),
+            2: new Set(),
+            3: new Set(),
+            4: new Set(),
+            5: new Set()
+        };
+
+        function getCumulativeSelection(level){
+            const ids = new Set();
+            for (let l=1; l<=level; l++) {
+                if (selectedByLevel[l]) selectedByLevel[l].forEach(id=>ids.add(id));
+            }
+            return ids;
+        }
+        function getSelectedCount(level) {
+            if (!level) return 0;
+            return getCumulativeSelection(level).size;
+        }
+
+        function rulesTextFor(level) {
+            if (!level || !levelRules[level]) return '';
+            const { min, max } = levelRules[level];
+            return min === max
+                ? `Select ${min} certifications for Level ${level}.`
+                : `Select ${min}-${max} certifications for Level ${level}.`;
+        }
+
+        function renderSelectionSummary(level, hostEl) {
+            // Create/replace a compact summary banner under results
+            const existing = hostEl.querySelector('.selection-summary');
+            if (existing) existing.remove();
+            if (!level || !levelRules[level]) return;
+            const { min, max } = levelRules[level];
+            const count = getSelectedCount(level);
+            const summary = document.createElement('div');
+            summary.className = 'selection-summary';
+            summary.style.marginTop = '0.75rem';
+            summary.style.padding = '0.75rem 1rem';
+            summary.style.border = '1px solid #e2e8f0';
+            summary.style.borderRadius = '12px';
+            summary.style.background = '#f8fafc';
+            summary.style.color = count < min ? '#b45309' : '#0f766e';
+            summary.textContent = `${rulesTextFor(level)} Selected: ${count}${max ? `/${max}` : ''}.`;
+            hostEl.appendChild(summary);
+        }
+
+        // Build Focus filter options and update vendor count dynamically from dataset
+        function buildFiltersFromDataset() {
+            try {
+                const focusSelect = document.getElementById('focusFilter');
+                if (focusSelect) {
+                    const current = focusSelect.value;
+                    // Clear and rebuild focus options
+                    while (focusSelect.firstChild) focusSelect.removeChild(focusSelect.firstChild);
+                    const all = document.createElement('option');
+                    all.value = '';
+                    all.textContent = 'All Focus Areas';
+                    focusSelect.appendChild(all);
+                    const focusSet = new Set();
+                    certifications.forEach(c => { if (c.focus) focusSet.add(c.focus); });
+                    Array.from(focusSet).sort().forEach(f => {
+                        const opt = document.createElement('option');
+                        opt.value = f;
+                        opt.textContent = f;
+                        focusSelect.appendChild(opt);
+                    });
+                    // Restore selection if still present
+                    if ([...focusSet, ''].includes(current)) focusSelect.value = current;
+                }
+
+                // Rebuild Vendor options from dataset and update count
+                const vendorSelect = document.getElementById('vendorFilter');
+                const vendorSet = new Set();
+                certifications.forEach(c => { if (c.vendor) vendorSet.add(c.vendor); });
+                if (vendorSelect) {
+                    const currentVendor = vendorSelect.value;
+                    while (vendorSelect.firstChild) vendorSelect.removeChild(vendorSelect.firstChild);
+                    const allV = document.createElement('option');
+                    allV.value = '';
+                    allV.textContent = 'All Vendors';
+                    vendorSelect.appendChild(allV);
+                    Array.from(vendorSet).sort((a,b)=>a.localeCompare(b)).forEach(v => {
+                        const opt = document.createElement('option');
+                        opt.value = v;
+                        opt.textContent = v;
+                        vendorSelect.appendChild(opt);
+                    });
+                    if ([...vendorSet, ''].includes(currentVendor)) vendorSelect.value = currentVendor;
+                }
+
+                const vendorCountEl = document.querySelector('.vendor-count');
+                if (vendorCountEl) vendorCountEl.textContent = `(${vendorSet.size})`;
+
+                // Render vendor counts panel
+                try {
+                    const counts = Array.from(vendorSet).reduce((acc, v) => { acc[v] = 0; return acc; }, {});
+                    certifications.forEach(c => { if (c.vendor && counts.hasOwnProperty(c.vendor) && !c.retired) counts[c.vendor]++; });
+                    const items = Object.entries(counts).sort((a,b)=>{
+                        if (b[1] !== a[1]) return b[1]-a[1];
+                        return a[0].localeCompare(b[0]);
+                    });
+                    const body = document.querySelector('#vendor-counts .vendor-counts-body');
+                    if (body) {
+                        body.innerHTML = items.map(([v,c])=>`${v}: ${c}`).join(' • ');
+                    }
+                } catch (_) {}
+            } catch (_) { /* no-op */ }
+        }
+
+        // Pagination state
+        let PAGE_SIZE = 12; // cards per page
+        let currentPage = 1; // 1-based
+
+        function setPage(n){ currentPage = Math.max(1, n); }
+
+        function renderPagination(total, onPageChange){
+            const totalPages = Math.max(1, Math.ceil(total / PAGE_SIZE));
+            if (currentPage > totalPages) currentPage = totalPages;
+            const top = document.getElementById('results-pagination-top');
+            const bot = document.getElementById('results-pagination-bottom');
+            const make = () => {
+                const prevDisabled = currentPage <= 1;
+                const nextDisabled = currentPage >= totalPages;
+                return `
+                    <button class="page-btn" ${prevDisabled?'disabled':''} data-act="prev">Prev</button>
+                    <span class="page-indicator">Page ${currentPage} of ${totalPages}</span>
+                    <button class="page-btn" ${nextDisabled?'disabled':''} data-act="next">Next</button>
+                `;
+            };
+            [top, bot].forEach(el => {
+                if (!el) return;
+                if (totalPages <= 1) { el.style.display = 'none'; el.innerHTML = ''; return; }
+                el.style.display = 'flex';
+                el.innerHTML = make();
+                el.querySelector('[data-act="prev"]')?.addEventListener('click', ()=>{ if (currentPage>1){ setPage(currentPage-1); onPageChange(); window.requestAnimationFrame(()=>{ el.scrollIntoView({behavior:'smooth', block:'nearest'}); }); } });
+                el.querySelector('[data-act="next"]')?.addEventListener('click', ()=>{ if (currentPage<totalPages){ setPage(currentPage+1); onPageChange(); window.requestAnimationFrame(()=>{ el.scrollIntoView({behavior:'smooth', block:'nearest'}); }); } });
+            });
+        }
+
+        function applyFilters() {
+            const level = parseInt(document.getElementById('levelFilter').value);
+            const category = document.getElementById('categoryFilter').value;
+            const focus = document.getElementById('focusFilter').value;
+            const vendor = document.getElementById('vendorFilter').value;
+            const partnership = document.getElementById('partnershipFilter').value;
+            const sort = document.getElementById('sortFilter')?.value || 'relevance';
+            const search = (document.querySelector('.search-input')?.value || '').toLowerCase();
+            const vendorAnchored = !!document.getElementById('toggleVendorAnchor')?.checked;
+            const eligibleOnly = !!document.getElementById('toggleEligibleOnly')?.checked;
+
+            // Filter certifications
+            const active = certifications.filter(c => !c.retired);
+            let filtered = active.filter(cert => {
+                if (cert.retired) return false;
+                if (level && cert.level !== level) return false;
+                if (category && cert.category !== category) return false;
+                if (focus && cert.focus !== focus) return false;
+                if (vendor && cert.vendor !== vendor) return false;
+                if (partnership === 'premium' && !cert.premium) return false;
+                if (partnership === 'standard' && cert.premium) return false;
+                if (search && !cert.name.toLowerCase().includes(search) && !cert.vendor.toLowerCase().includes(search) && !cert.focus.toLowerCase().includes(search)) return false;
+                return true;
+            });
+
+            // Determine locked previous selections and possible anchor vendor
+            const lockedPrev = level ? getCumulativeSelection(level-1) : new Set();
+            let anchorVendor = null;
+            if (vendorAnchored && level) {
+                const counts = {};
+                lockedPrev.forEach(id => {
+                    const found = certifications.find(c=>c.id===id);
+                    if (found?.vendor) counts[found.vendor] = (counts[found.vendor]||0)+1;
+                });
+                const top = Object.entries(counts).sort((a,b)=>b[1]-a[1])[0];
+                anchorVendor = top ? top[0] : (vendor || null);
+            }
+
+            // Eligible-only: constrain additions to anchorVendor
+            if (eligibleOnly && level && anchorVendor) {
+                filtered = filtered.filter(c=>c.vendor===anchorVendor);
+            }
+            // Always ensure locked previous selections are visible in results
+            if (level) {
+                const present = new Set(filtered.map(c=>c.id));
+                lockedPrev.forEach(id => {
+                    if (!present.has(id)){
+                        const cc = certifications.find(c=>c.id===id);
+                        if (cc) filtered.push(cc);
+                    }
+                });
+            }
+
+            // Sorting
+            const collator = new Intl.Collator('en', { sensitivity: 'base' });
+            const sorters = {
+                'name-asc': (a,b)=>collator.compare(a.name,b.name),
+                'name-desc': (a,b)=>collator.compare(b.name,a.name),
+                'level-asc': (a,b)=>a.level-b.level || collator.compare(a.name,b.name),
+                'level-desc': (a,b)=>b.level-a.level || collator.compare(a.name,b.name),
+                'vendor-asc': (a,b)=>collator.compare(a.vendor,b.vendor) || collator.compare(a.name,b.name),
+                'vendor-desc': (a,b)=>collator.compare(b.vendor,a.vendor) || collator.compare(a.name,b.name),
+            };
+            if (sort !== 'relevance' && sorters[sort]) filtered = filtered.sort(sorters[sort]);
+
+            // Save filters to URL
+            try {
+                const params = new URLSearchParams();
+                if (level) params.set('level', String(level));
+                if (category) params.set('category', category);
+                if (focus) params.set('focus', focus);
+                if (vendor) params.set('vendor', vendor);
+                if (partnership) params.set('partner', partnership);
+                if (search) params.set('q', search);
+                if (sort && sort !== 'relevance') params.set('sort', sort);
+                const newUrl = `${location.pathname}?${params.toString()}`;
+                history.replaceState(null, '', newUrl);
+            } catch (_) {}
+
+            // Render compact results summary
+            try {
+                const summaryEl = document.getElementById('results-summary');
+                if (summaryEl) {
+                    summaryEl.textContent = `${filtered.length} result${filtered.length===1?'':'s'} • ${active.length} active total`;
+                }
+            } catch(_) {}
+
+            // Keep last filtered for exporting
+            window.__lastFiltered = filtered.slice();
+
+            // Render certification cards
+            const resultsDiv = document.getElementById('dynamic-results');
+            resultsDiv.innerHTML = '';
+            if (filtered.length === 0) {
+                resultsDiv.innerHTML = '<p>No certifications found for selected filters.</p>';
+                renderPagination(0, ()=>{});
+            } else {
+                // Pagination slice
+                const total = filtered.length;
+                const start = (currentPage - 1) * PAGE_SIZE;
+                const end = start + PAGE_SIZE;
+                const pageItems = filtered.slice(start, end);
+
+                const grid = document.createElement('div');
+                grid.style.display = 'grid';
+                grid.style.gridTemplateColumns = 'repeat(auto-fit, minmax(320px, 1fr))';
+                grid.style.gap = '2rem';
+
+                const currentRules = level ? levelRules[level] : null;
+                const currentSelected = level ? selectedByLevel[level] : null;
+                const lockedPrev = level ? getCumulativeSelection(level-1) : new Set();
+
+                pageItems.forEach(cert => {
+                    const card = document.createElement('div');
+                    card.className = 'cert-card-premium';
+                    card.style.background = cert.premium ? 'linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%)' : '#fff';
+                    card.style.border = cert.premium ? '2px solid #667eea' : '1px solid #cbd5e1';
+                    card.style.borderRadius = '18px';
+                    card.style.boxShadow = '0 8px 32px rgba(102,126,234,0.08)';
+                    card.style.padding = '2rem';
+                    card.style.display = 'flex';
+                    card.style.flexDirection = 'column';
+                    card.style.alignItems = 'center';
+
+                    const logoSrc = (cert.logo && String(cert.logo).trim()) || vendorLogoMap[cert.vendor] || '../assets/images/vendor-logos/default-logo.svg';
+                    card.innerHTML = `
+                        <img src='${logoSrc}' alt='${cert.vendor} logo' style='height:56px;margin-bottom:1rem;' loading='lazy' onerror="this.onerror=null;this.src='../assets/images/vendor-logos/default-logo.svg';">
+                        <h4 style='font-size:1.2rem;color:#1e293b;margin-bottom:0.5rem;'>${cert.name}</h4>
+                        <div style='color:#64748b;font-size:1rem;margin-bottom:0.5rem;'>Vendor: <strong>${cert.vendor}</strong></div>
+                        <div style='color:#64748b;font-size:0.98rem;margin-bottom:0.5rem;'>Category: ${cert.category.replace(/-/g,' ').replace(/\b\w/g, l => l.toUpperCase())}</div>
+                        <div style='color:#64748b;font-size:0.98rem;margin-bottom:0.5rem;'>Focus Area: ${cert.focus}</div>
+                        <div style='color:#3b82f6;font-size:0.98rem;margin-bottom:0.5rem;'>Level ${cert.level}</div>
+                        <div style='color:#059669;font-size:0.98rem;margin-bottom:1rem;'>Exam: ${cert.exam || 'N/A'} ${cert.exam ? `<button class='copy-exam-btn' title='Copy exam' style='margin-left:0.5rem; padding:0.2rem 0.5rem; font-size:0.8rem; border:1px solid #10b981; color:#065f46; background:#ecfdf5; border-radius:6px; cursor:pointer;'><i class='fas fa-copy'></i> Copy</button>` : ''}</div>
+                        <div style='display:flex; gap:0.5rem; width:100%;'>
+                          <button class='info-button' title='More information'><i class='fas fa-circle-info'></i> Info</button>
+                          <button class='select-cert-btn cta-button cta-standard' style='margin-left:auto;'>Select</button>
+                        </div>
+                    `;
+
+                    const btn = card.querySelector('.select-cert-btn');
+                    const isLockedPrev = !!(level && lockedPrev.has(cert.id));
+                    let isSelected = isLockedPrev || !!(level && currentSelected && currentSelected.has(cert.id));
+
+                    function updateButtonUI() {
+                        if (!level) {
+                            btn.textContent = 'Select (choose a Level first)';
+                            btn.disabled = true;
+                            btn.style.opacity = '0.6';
+                            return;
+                        }
+                        const count = getSelectedCount(level);
+                        const atMax = currentRules && count >= currentRules.max;
+                        if (isSelected) {
+                            btn.textContent = isLockedPrev ? 'Locked (Prev Level)' : 'Selected';
+                            btn.classList.add('selected');
+                            btn.style.background = '#059669';
+                            btn.style.borderColor = '#059669';
+                            btn.style.color = '#fff';
+                            btn.disabled = isLockedPrev ? true : false;
+                            btn.style.opacity = '1';
+                        } else {
+                            btn.textContent = 'Select';
+                            btn.classList.remove('selected');
+                            btn.style.background = '';
+                            btn.style.borderColor = '';
+                            btn.style.color = '';
+                            btn.disabled = !!(currentRules && atMax);
+                            btn.style.opacity = btn.disabled ? '0.6' : '1';
+                        }
+                    }
+
+                    updateButtonUI();
+
+                    btn.addEventListener('click', () => {
+                        if (!level || !currentRules) return;
+                        if (isLockedPrev) return; // cannot deselect prior-level items
+                        const set = selectedByLevel[level];
+                        if (set.has(cert.id)) {
+                            set.delete(cert.id);
+                        } else {
+                            const total = getSelectedCount(level);
+                            if (total < currentRules.max) set.add(cert.id);
+                        }
+                        applyFilters();
+                    });
+
+                    // Info modal handler
+                    const infoBtn = card.querySelector('.info-button');
+                    if (infoBtn) {
+                        infoBtn.addEventListener('click', (e)=>{
+                            e.stopPropagation();
+                            const avgSalary = estimateSalary(cert);
+                            const roles = suggestRoles(cert);
+                            openInfoModal({
+                                title: cert.name,
+                                meta: [
+                                    ['Vendor', cert.vendor],
+                                    ['Category', cert.category.replace(/-/g,' ')],
+                                    ['Focus', cert.focus],
+                                    ['Level', String(cert.level)],
+                                    ['Exam Code', cert.exam || 'N/A']
+                                ],
+                                sections: [
+                                    { heading: 'Primary Focus', body: `Become proficient in ${cert.focus} within ${cert.vendor} ecosystem, aligning skills with industry-standard practices.` },
+                                    { heading: 'Deeper Purpose', body: 'Establish rigorous technical foundations and validated competencies to operate confidently in professional environments.' },
+                                    { heading: 'Professional Impact', points: [
+                                        'Role Readiness: Build capabilities for roles aligned to this certification focus',
+                                        'Execution Quality: Apply best practices to real-world workloads',
+                                        'Career Mobility: Gain a portable credential recognized by employers'
+                                    ] },
+                                    { heading: 'Use Cases', points: [
+                                        'Hands-on lab implementation and troubleshooting',
+                                        'Project delivery in enterprise environments',
+                                        'Operational excellence and continuous improvement'
+                                    ] },
+                                    { heading: 'Common Roles', points: roles },
+                                    avgSalary ? { heading: 'Compensation (Indicative)', body: `Estimated average annual salary: USD ${avgSalary.toLocaleString()} (varies by region, role, and experience).` } : null
+                                ],
+                                chips: [
+                                    `<i class=\"fas fa-layer-group\"></i> Level ${cert.level}`,
+                                    `<i class=\"fas fa-clock\"></i> Est. Level Duration: ${levelDuration[cert.level] || 'Varies'}`,
+                                    `<i class=\"fas fa-hourglass-half\"></i> Est. Cert Duration: ${estimateCertDuration(cert)}`,
+                                    cert.premium ? '<i class="fas fa-star"></i> Premium Vendor' : '<i class="fas fa-badge-check"></i> Standard Vendor'
+                                ].filter(Boolean)
+                            });
+                        });
+                    }
+
+                    // Copy exam button handler
+                    const copyBtn = card.querySelector('.copy-exam-btn');
+                    if (copyBtn && cert.exam) {
+                        copyBtn.addEventListener('click', (e)=>{
+                            e.stopPropagation();
+                            try { navigator.clipboard.writeText(String(cert.exam)); } catch(_) {}
+                            copyBtn.textContent = 'Copied!';
+                            setTimeout(()=>{ copyBtn.innerHTML = `<i class='fas fa-copy'></i> Copy`; }, 1200);
+                        });
+                    }
+
+                    grid.appendChild(card);
+                });
+
+                resultsDiv.appendChild(grid);
+
+                // Pagination controls (top/bottom)
+                renderPagination(total, ()=>applyFilters());
+
+                if (level) {
+                    const note = document.createElement('p');
+                    note.style.color = '#64748b';
+                    note.style.marginTop = '0.5rem';
+                    const cum = getSelectedCount(level);
+                    note.textContent = `${rulesTextFor(level)} Cumulative selected across L1-${level}: ${cum}.`;
+                    resultsDiv.appendChild(note);
+                    renderSelectionSummary(level, resultsDiv);
+
+                    // Current Level Price badge
+                    try {
+                        const priceWrap = document.createElement('div');
+                        priceWrap.style.marginTop = '0.5rem';
+                        priceWrap.innerHTML = `<span style="display:inline-block; background:#f1f5f9; border:1px solid #e2e8f0; color:#334155; padding:0.4rem 0.6rem; border-radius:8px; font-weight:600;">Level Price: ${pricingConfig.currency} ${computeSubtotal(level).toLocaleString()}</span>`;
+                        resultsDiv.appendChild(priceWrap);
+                    } catch(_) {}
+                }
+            }
+
+            // Render professional development modules for selected level as cards
+            const modulesDiv = document.getElementById('level-modules');
+            modulesDiv.innerHTML = '';
+            if (level && pdModules[level]) {
+                const header = document.createElement('h3');
+                header.textContent = `Level ${level} Professional Development Modules`;
+                const mgrid = document.createElement('div');
+                mgrid.className = 'modules-grid';
+                pdModules[level].forEach(mod => {
+                    const m = document.createElement('div');
+                    m.className = 'module-card';
+                    const meta = mod;
+                    m.innerHTML = `
+                        <div class='module-icon'><i class="fas ${meta.icon || 'fa-check-circle'}"></i></div>
+                        <div class='module-title'>${meta.code}: ${meta.title}</div>
+                        <div class='module-desc'>${meta.desc} • ${meta.hours} • ${meta.levelLabel}</div>
+                    `;
+                    // Modal for module info
+                    m.style.cursor = 'pointer';
+                    m.addEventListener('click', ()=>{
+                        openInfoModal({
+                            title: `${meta.code}: ${meta.title}`,
+                            meta: [
+                                ['Level', meta.levelLabel],
+                                ['Hours', meta.hours]
+                            ],
+                            sections: [
+                                { heading: 'Primary Focus', body: meta.desc },
+                                { heading: 'Professional Impact', points: [
+                                    'Improves execution quality and collaboration',
+                                    'Enhances leadership readiness and communication',
+                                    'Strengthens workplace performance and delivery'
+                                ] },
+                                { heading: 'Personal Development Benefits', points: [
+                                    'Builds confidence through mastery',
+                                    'Accelerates learning and adaptability',
+                                    'Supports ethical, customer-centric behavior'
+                                ] }
+                            ],
+                            chips: [
+                                `<i class=\"fas fa-layer-group\"></i> ${meta.levelLabel}`,
+                                `<i class=\"fas fa-clock\"></i> Est. Level Duration: ${levelDuration[parseInt(document.getElementById('levelFilter').value) || 1] || 'Varies'}`
+                            ]
+                        });
+                    });
+                    mgrid.appendChild(m);
+                });
+                modulesDiv.appendChild(header);
+                modulesDiv.appendChild(mgrid);
+            }
+
+            // Checkout CTA gated by min rule
+            if (level && levelRules[level]) {
+                const { min } = levelRules[level];
+                const count = getSelectedCount(level);
+                const checkoutBtn = document.createElement('button');
+                checkoutBtn.className = 'cta-button cta-standard';
+                checkoutBtn.style.marginTop = '1rem';
+                checkoutBtn.textContent = count >= min ? 'Proceed to Checkout' : `Select at least ${min} to proceed`;
+                checkoutBtn.disabled = count < min;
+                checkoutBtn.style.opacity = checkoutBtn.disabled ? '0.6' : '1';
+                checkoutBtn.onclick = function () {
+                    if (checkoutBtn.disabled) return;
+                    alert('Proceeding to checkout...');
+                };
+                modulesDiv.appendChild(checkoutBtn);
+            }
+
+                        // Render Quote panel rows
+            try {
+                const qc = document.getElementById('quote-content');
+                if (qc) {
+                    const rows = [];
+                    for (let l=1; l<=5; l++) {
+                        const ids = getCumulativeSelection(l);
+                                                const count = ids.size;
+                                                const subtotal = computeSubtotal(l);
+                                                                                                rows.push(`<div style='display:flex; align-items:center; gap:0.75rem; padding:0.4rem 0; border-bottom:1px dashed #e2e8f0;'>
+                          <strong style='min-width:70px;'>Level ${l}</strong>
+                                                                            <span style='color:#64748b;'>${count} selected cumulative • Level Price ${pricingConfig.currency} ${subtotal.toLocaleString()}</span>
+                          <span style='margin-left:auto;'>
+                            <button class='btn-secondary' onclick="exportQuote(${l}, 'json')">Export L${l} (JSON)</button>
+                            <button class='btn-secondary' onclick="exportQuote(${l}, 'csv')">Export L${l} (CSV)</button>
+                                                                                                        <button class='btn-secondary' onclick="printQuote(${l})">Print L${l}</button>
+                          </span>
+                        </div>`);
+                    }
+                                                                qc.innerHTML = rows.join('') + `<div style='color:#94a3b8; font-size:0.85rem; margin-top:0.5rem;'>Prices reflect all-inclusive level bundles (certifications + professional development). You can override amounts in <code>assets/data/pricing.json</code>.</div>`;
+                }
+            } catch(_) {}
+        }
+
+        function clearFilters() {
+            setPage(1);
+            document.getElementById('levelFilter').value = '';
+            document.getElementById('categoryFilter').value = '';
+            const focusEl = document.getElementById('focusFilter'); if (focusEl) focusEl.value = '';
+            document.getElementById('vendorFilter').value = '';
+            document.getElementById('partnershipFilter').value = '';
+            const sortEl = document.getElementById('sortFilter'); if (sortEl) sortEl.value = 'relevance';
+            document.querySelector('.search-input').value = '';
+            sessionStorage.removeItem('appliedFilters');
+            document.getElementById('dynamic-results').innerHTML = '';
+            document.getElementById('level-modules').innerHTML = '';
+        }
+
+        function clearUrlState(){
+            try {
+                history.replaceState(null, '', location.pathname);
+            } catch(_) {}
+        }
+
+        // Load external certifications dataset (if available), then auto-apply on filter inputs
+        document.addEventListener('DOMContentLoaded', function () {
+            // Try to load external dataset
+            fetch('../assets/data/certifications.json', { cache: 'no-store' })
+                .then(r => (r.ok ? r.json() : Promise.reject(new Error('No dataset'))))
+                .then(data => {
+                    if (Array.isArray(data) && data.length) {
+                        certifications = data;
+                    }
+                    buildFiltersFromDataset();
+                    try { applyFilters(); } catch (_) {}
+                })
+                .catch(() => {
+                    buildFiltersFromDataset();
+                    try { applyFilters(); } catch (_) {}
+                });
+
+                                                // Load optional pricing overrides
+                                fetch('../assets/data/pricing.json', { cache: 'no-store' })
+                                    .then(r => (r.ok ? r.json() : Promise.resolve(null)))
+                                    .then(p => {
+                                        if (p && typeof p === 'object') {
+                                                                if (p.currency) pricingConfig.currency = p.currency;
+                                                                if (p.levelBundle && typeof p.levelBundle === 'object') pricingConfig.levelBundle = Object.assign({}, pricingConfig.levelBundle, p.levelBundle);
+                                        }
+                                        try { applyFilters(); } catch(_) {}
+                                    })
+                                    .catch(()=>{});
+
+                const selects = ['levelFilter', 'categoryFilter', 'focusFilter', 'vendorFilter', 'partnershipFilter', 'sortFilter']
+                .map(id => document.getElementById(id))
+                .filter(Boolean);
+            selects.forEach(sel => sel.addEventListener('change', () => { try { setPage(1); applyFilters(); } catch (_) {} }));
+            const searchInput = document.querySelector('.search-input');
+            if (searchInput) searchInput.addEventListener('keydown', (e) => { if (e.key === 'Enter') { try { setPage(1); applyFilters(); } catch (_) {} } });
+            // Toggle listeners
+            document.getElementById('toggleVendorAnchor')?.addEventListener('change', ()=>{ try { setPage(1); applyFilters(); } catch(_){} });
+            document.getElementById('toggleEligibleOnly')?.addEventListener('change', ()=>{ try { setPage(1); applyFilters(); } catch(_){} });
+
+            // Restore from URL params on load
+            try {
+                const params = new URLSearchParams(location.search);
+                const map = new Map([
+                    ['level','levelFilter'],
+                    ['category','categoryFilter'],
+                    ['focus','focusFilter'],
+                    ['vendor','vendorFilter'],
+                    ['partner','partnershipFilter'],
+                    ['sort','sortFilter'],
+                    ['q','.search-input']
+                ]);
+                for (const [key, target] of map.entries()) {
+                    if (!params.has(key)) continue;
+                    const val = params.get(key);
+                    if (target === '.search-input') {
+                        const si = document.querySelector('.search-input');
+                        if (si) si.value = val || '';
+                    } else {
+                        const el = document.getElementById(target);
+                        if (el) el.value = val;
+                    }
+                }
+            } catch (_) {}
+        });
+
+        // Category Selection
+        document.querySelectorAll('.category-card').forEach(card => {
+            card.addEventListener('click', function() {
+                const category = this.dataset.category;
+                document.getElementById('categoryFilter').value = category;
+                
+                // Smooth scroll to filter section
+                document.getElementById('certification-filtering').scrollIntoView({
+                    behavior: 'smooth'
+                });
+                try { setPage(1); applyFilters(); } catch(_){}
+            });
+        });
+
+        // Focus Area Tag Selection
+        document.querySelectorAll('.focus-area-tag').forEach(tag => {
+            tag.addEventListener('click', function(e) {
+                e.stopPropagation();
+                const focusArea = this.textContent;
+                document.querySelector('.search-input').value = focusArea;
+                
+                document.getElementById('certification-filtering').scrollIntoView({
+                    behavior: 'smooth'
+                });
+                try { setPage(1); applyFilters(); } catch(_){}
+            });
+        });
+
+        // Export selected helper
+        function exportSelected(format='json'){
+            // Determine current level in UI
+            const levelVal = parseInt(document.getElementById('levelFilter').value);
+            const ids = levelVal && selectedByLevel[levelVal] ? Array.from(selectedByLevel[levelVal]) : [];
+            const items = certifications.filter(c => ids.includes(c.id));
+            if (!items.length) { alert('No certifications selected for current level.'); return; }
+            if (format === 'csv') {
+                const headers = ['id','name','vendor','category','focus','level','retired','premium','exam','url'];
+                const rows = [headers.join(',')].concat(items.map(c=>headers.map(h=>JSON.stringify(c[h] ?? '')).join(',')));
+                const blob = new Blob([rows.join('\n')], { type: 'text/csv;charset=utf-8;' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url; a.download = `selected-level${levelVal}.csv`; a.click(); URL.revokeObjectURL(url);
+            } else {
+                const blob = new Blob([JSON.stringify(items,null,2)], { type: 'application/json' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url; a.download = `selected-level${levelVal}.json`; a.click(); URL.revokeObjectURL(url);
+            }
+        }
+
+        // Export current results helper
+        function exportResults(format='json'){
+            try { if (!Array.isArray(window.__lastFiltered)) applyFilters(); } catch(_) {}
+            const items = Array.isArray(window.__lastFiltered) ? window.__lastFiltered : certifications.filter(c=>!c.retired);
+            if (!items.length) { alert('No results to export. Try applying filters first.'); return; }
+            if (format === 'csv') {
+                const headers = ['id','name','vendor','category','focus','level','retired','premium','exam','url'];
+                const rows = [headers.join(',')].concat(items.map(c=>headers.map(h=>JSON.stringify(c[h] ?? '')).join(',')));
+                const blob = new Blob([rows.join('\n')], { type: 'text/csv;charset=utf-8;' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url; a.download = `results-${Date.now()}.csv`; a.click(); URL.revokeObjectURL(url);
+            } else {
+                const blob = new Blob([JSON.stringify(items,null,2)], { type: 'application/json' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url; a.download = `results-${Date.now()}.json`; a.click(); URL.revokeObjectURL(url);
+            }
+        }
+
+        // Simple info modal (clean)
+        function openInfoModal(payload){
+            let backdrop = document.getElementById('modal-backdrop');
+            if (!backdrop){
+                backdrop = document.createElement('div');
+                backdrop.id = 'modal-backdrop';
+                backdrop.className = 'modal-backdrop';
+                backdrop.innerHTML = `
+                    <div class='modal-card' role='dialog' aria-modal='true' aria-labelledby='modal-title'>
+                        <div class='modal-header'>
+                            <div id='modal-title' class='modal-title'></div>
+                            <button class='modal-close' aria-label='Close'><i class="fas fa-times"></i></button>
+                        </div>
+                        <div class='modal-body'>
+                            <div class='kv'></div>
+                            <div class='modal-sections'></div>
+                            <div class='modal-meta'></div>
+                        </div>
+                    </div>`;
+                document.body.appendChild(backdrop);
+                backdrop.addEventListener('click', (e)=>{ if (e.target === backdrop) backdrop.classList.remove('active'); });
+                backdrop.querySelector('.modal-close').addEventListener('click', ()=> backdrop.classList.remove('active'));
+            }
+            backdrop.querySelector('#modal-title').textContent = payload.title || 'Details';
+            const kv = backdrop.querySelector('.kv');
+            kv.innerHTML = '';
+            // Premium meta grid if provided as columns
+            if (payload.meta && payload.meta.length) {
+                const grid = document.createElement('div');
+                grid.className = 'meta-grid';
+                const labels = document.createElement('div'); labels.className = 'row labels';
+                const values = document.createElement('div'); values.className = 'row values';
+                payload.meta.forEach(([k,v])=>{
+                    const lc = document.createElement('div'); lc.className='cell'; lc.textContent=k;
+                    const vc = document.createElement('div'); vc.className='cell'; vc.textContent=v;
+                    labels.appendChild(lc); values.appendChild(vc);
+                });
+                grid.appendChild(labels); grid.appendChild(values);
+                kv.appendChild(grid);
+            }
+
+            const sectionsEl = backdrop.querySelector('.modal-sections');
+            sectionsEl.innerHTML = '';
+            (payload.sections || []).forEach(sec => {
+                const s = document.createElement('div'); s.className='modal-section';
+                const h = document.createElement('h3'); h.textContent = sec.heading || '';
+                s.appendChild(h);
+                if (Array.isArray(sec.points)) {
+                    const ul = document.createElement('ul');
+                    sec.points.forEach(p=>{ const li=document.createElement('li'); li.textContent=p; ul.appendChild(li); });
+                    s.appendChild(ul);
+                } else if (sec.body) {
+                    const p = document.createElement('p'); p.textContent = sec.body; s.appendChild(p);
+                }
+                sectionsEl.appendChild(s);
+            });
+
+            const metaEl = backdrop.querySelector('.modal-meta');
+            metaEl.innerHTML='';
+            (payload.chips || []).forEach(ch=>{
+                const c = document.createElement('span'); c.className='modal-chip'; c.innerHTML = ch; metaEl.appendChild(c);
+            });
+            backdrop.classList.add('active');
+        }
+
+        // Print-friendly quote for a level (branded, clean)
+        function printQuote(level){
+            try {
+                const ids = Array.from(getCumulativeSelection(level));
+                const items = certifications.filter(c => ids.includes(c.id));
+                const price = computeSubtotal(level);
+                const when = new Date();
+                const htmlRows = items.map(c => `<tr><td>${c.name}</td><td>${c.vendor}</td><td>${c.category}</td><td>${c.focus}</td><td>L${c.level}</td><td>${c.exam || ''}</td></tr>`).join('');
+                const mods = (pdModules && pdModules[level]) ? pdModules[level].map(m=>`<li><strong>${m.code}</strong> — ${m.title} (${m.hours})</li>`).join('') : '';
+                const baseHref = location.href.slice(0, location.href.lastIndexOf('/') + 1);
+
+                const w = window.open('', '_blank');
+                w.document.write(`<!doctype html>
+                <html>
+                    <head>
+                        <meta charset="utf-8">
+                        <meta name="viewport" content="width=device-width, initial-scale=1">
+                        <title>BTH Education Group — Quote L${level}</title>
+                        <base href="${baseHref}">
+                        <style>
+                            :root { --border: #e2e8f0; --muted:#64748b; --ink:#0f172a; --bg:#ffffff; }
+                            body { font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Arial, sans-serif; color: var(--ink); background: var(--bg); padding: 28px; }
+                            .header { display:flex; justify-content:space-between; align-items:flex-start; border-bottom:1px solid var(--border); padding-bottom:12px; }
+                            .brand { display:flex; align-items:center; gap:12px; font-weight:800; font-size:20px; letter-spacing:0.2px; }
+                            .brand img.logo { height: 42px; width:auto; border-radius:6px; border:1px solid var(--border); background:#fff; padding:4px; }
+                            .brand small { display:block; color: var(--muted); font-weight:600; margin-top:2px; }
+                            .quote-box { text-align:right; }
+                            .quote-title { font-size:24px; font-weight:800; margin:0; }
+                            .quote-price { display:inline-block; margin-top:6px; background:#f1f5f9; border:1px solid var(--border); padding:6px 10px; border-radius:8px; font-weight:700; }
+                            .meta { color: var(--muted); margin-top:8px; }
+                            h2 { margin:18px 0 8px; font-size:16px; }
+                            table { width:100%; border-collapse:collapse; margin-top:8px; }
+                            th, td { border:1px solid var(--border); padding:8px; text-align:left; font-size:13px; }
+                            th { background:#f8fafc; }
+                            .two-col { display:flex; gap:24px; align-items:flex-start; }
+                            .box { flex:1; border:1px solid var(--border); border-radius:8px; padding:12px; background:#fafafa; }
+                            .siggrid { display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:18px; }
+                            .sig { border:1px dashed var(--border); border-radius:8px; padding:12px; min-height:100px; }
+                            .sig label { display:block; color:var(--muted); font-size:12px; margin-bottom:6px; }
+                            .legal { margin-top:18px; color:#475569; font-size:12px; border-top:1px solid var(--border); padding-top:12px; }
+                            .footer { position: fixed; left: 0; right: 0; bottom: 0; border-top: 1px solid var(--border); padding: 8px 28px; display:flex; justify-content:space-between; align-items:center; background:#fff; }
+                            .footer .left { display:flex; align-items:center; gap:10px; color:#334155; font-size:12px; }
+                            .footer img { height: 26px; width:auto; border-radius:4px; border:1px solid var(--border); background:#fff; padding:2px; }
+                            .footer .right { color:#64748b; font-size:12px; }
+                            @page { margin: 18mm; }
+                            @media print { body { padding-bottom: 40mm; } .no-print{ display:none } .footer .right::after { content: 'Page ' counter(page) ' of ' counter(pages); } }
+                        </style>
+                    </head>
+                    <body>
+                        <div class="header">
+                            <div class="brand">
+                                <img class="logo" src="../assets/images/bthlogo.png" alt="BTH Logo" />
+                                <div>
+                                    BTH Education Group
+                                    <small>Information Technology — Standard Professional Pathway</small>
+                                </div>
+                            </div>
+                            <div class="quote-box">
+                                <div class="quote-title">Quote: Level ${level}</div>
+                                <div class="quote-price">Bundle Price: ${pricingConfig.currency} ${price.toLocaleString()}</div>
+                                <div class="meta">Generated: ${when.toLocaleString()}</div>
+                            </div>
+                        </div>
+
+                        <h2>Included Certifications (cumulative up to L${level})</h2>
+                        <table>
+                            <thead><tr><th>Certification</th><th>Vendor</th><th>Category</th><th>Focus</th><th>Level</th><th>Exam</th></tr></thead>
+                            <tbody>${htmlRows || '<tr><td colspan=6>No certifications selected yet.</td></tr>'}</tbody>
+                        </table>
+
+                        <div class="two-col" style="margin-top:16px;">
+                            <div class="box">
+                                <h2 style="margin-top:0;">Professional Development Modules (L${level})</h2>
+                                <ul style="margin:6px 0 0 16px;">${mods || '<li>See program outline for module details.</li>'}</ul>
+                            </div>
+                            <div class="box">
+                                <h2 style="margin-top:0;">Summary</h2>
+                                <div class="meta">Cumulative certifications: ${items.length}</div>
+                                    <div class="meta">Estimated Overall Level Duration: ${levelDuration[level] || 'Varies'}</div>
+                                <div class="meta">Bundle includes: Certifications, Exams (as applicable), and Level ${level} Professional Development modules.</div>
+                                <div class="meta">Currency: ${pricingConfig.currency}</div>
+                            </div>
+                        </div>
+
+                        <div class="siggrid">
+                            <div class="sig"><label>Prepared For</label>Organization / Name: __________________________<br>Date: __________________________<br>Signature: __________________________</div>
+                            <div class="sig"><label>Prepared By</label>BTH Representative: __________________________<br>Date: __________________________<br>Signature: __________________________</div>
+                        </div>
+
+                        <div class="legal">
+                            <div>All product names, logos, and brands are property of their respective owners. Use of these names, logos, and brands does not imply endorsement. Logos displayed are used under brand guidelines and authorized exam delivery partnerships.</div>
+                            <div style="margin-top:6px;">Authorized Pearson VUE Testing Center & Exam Delivery Partner (Site ID: 89828)</div>
+                            <div style="margin-top:6px; color:#64748b;">This quote reflects level-based bundle pricing (certifications + professional development). Unless otherwise specified, pricing is subject to change and may be valid for a limited time.</div>
+                        </div>
+
+                        <div class="no-print" style="margin-top:18px;"><button onclick="window.print()">Print</button></div>
+
+                        <div class="footer">
+                            <div class="left">
+                                <img src="../assets/images/bthlogo.png" alt="BTH Logo" />
+                                <div>BTH Education Group • www.btheducationgroup.com • info@btheducationgroup.com</div>
+                            </div>
+                            <div class="right"></div>
+                        </div>
+                    </body>
+                </html>`);
+                w.document.close();
+            } catch(e){ console.error(e); }
+        }
+
+    // Export cumulative selections up to a level for quoting (bundle pricing)
+        function exportQuote(level, format='json'){
+            try {
+                const ids = Array.from(getCumulativeSelection(level));
+                const items = certifications.filter(c => ids.includes(c.id));
+                if (!items.length) { alert(`No selections for Level ${level} yet.`); return; }
+                if (format === 'csv') {
+                    const bundleHeaders = ['level','currency','bundlePrice'];
+                    const bundleRow = [JSON.stringify(level), JSON.stringify(pricingConfig.currency), JSON.stringify(computeSubtotal(level))].join(',');
+                    const itemHeaders = ['id','name','vendor','category','focus','level','retired','premium','exam','url'];
+                    const itemRows = [itemHeaders.join(',')].concat(items.map(c=>itemHeaders.map(h=>JSON.stringify(c[h] ?? '')).join(',')));
+                    const content = [bundleHeaders.join(','), bundleRow, '', ...itemRows].join('\n');
+                    const blob = new Blob([content], { type: 'text/csv;charset=utf-8;' });
+                    const url = URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.href = url; a.download = `quote-level${level}.csv`; a.click(); URL.revokeObjectURL(url);
+                } else {
+                    const payload = { level, currency: pricingConfig.currency, bundlePrice: computeSubtotal(level), items };
+                    const blob = new Blob([JSON.stringify(payload,null,2)], { type: 'application/json' });
+                    const url = URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.href = url; a.download = `quote-level${level}.json`; a.click(); URL.revokeObjectURL(url);
+                }
+            } catch (e) { console.error(e); }
+        }
+    </script>
+</body>
+</html>

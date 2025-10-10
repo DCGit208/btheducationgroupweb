@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Veeam Certified Engineer (VMCE)",
+    "vendor": "Veeam",
+    "category": "data-storage",
+    "focus": "Data Protection",
+    "level": 3,
+    "retired": false,
+    "exam": "VMCE",
+    "logo": "../assets/images/vendor-logos/veeam.svg",
+    "url": "https://www.veeam.com/services-training/certification.html"
+  },
+  {
+    "name": "Veeam Certified Architect (VMCA)",
+    "vendor": "Veeam",
+    "category": "specialized-tech",
+    "focus": "Storage & Data Protection",
+    "level": 4,
+    "retired": false,
+    "premium": false,
+    "exam": "VMCA"
+  }
+]

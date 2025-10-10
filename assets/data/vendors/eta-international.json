@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Certified Electronics Technician (CET)",
+    "vendor": "ETA International",
+    "category": "specialized-tech",
+    "focus": "Hardware",
+    "level": 2,
+    "retired": false,
+    "premium": false,
+    "exam": "CET"
+  }
+]

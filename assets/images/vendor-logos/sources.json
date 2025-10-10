@@ -1,0 +1,40 @@
+{
+  "cisco.svg": "https://commons.wikimedia.org/wiki/Special:FilePath/Cisco_logo_blue_2016.svg",
+  "isc2.svg": "https://commons.wikimedia.org/wiki/Special:FilePath/ISC2_Logo.svg",
+  "pmi.svg": [
+    "https://commons.wikimedia.org/wiki/Special:FilePath/Project_Management_Institute_logo.svg",
+    "https://commons.wikimedia.org/wiki/Special:FilePath/PMI_logo.svg"
+  ],
+  "peoplecert.svg": "",
+  "vmware.svg": "https://commons.wikimedia.org/wiki/Special:FilePath/Vmware.svg",
+  "googlecloud.svg": "https://commons.wikimedia.org/wiki/Special:FilePath/Google_Cloud_logo.svg",
+  "isaca.svg": [
+    "https://commons.wikimedia.org/wiki/Special:FilePath/ISACA_logo.svg",
+    "https://commons.wikimedia.org/wiki/Special:FilePath/ISACA_logo_2017.svg"
+  ],
+  "giac.svg": "",
+  "iapp.svg": "https://commons.wikimedia.org/wiki/Special:FilePath/IAPP_logo.svg",
+  "csa.svg": [
+    "https://commons.wikimedia.org/wiki/Special:FilePath/Cloud_Security_Alliance_logo.svg",
+    "https://commons.wikimedia.org/wiki/Special:FilePath/Cloud_Security_Alliance_logo_2010.svg"
+  ],
+  "redhat.svg": "https://commons.wikimedia.org/wiki/Special:FilePath/Red_Hat_logo.svg",
+  "linuxfoundation.svg": "https://commons.wikimedia.org/wiki/Special:FilePath/Linux_Foundation_logo_2013.svg",
+  "netapp.svg": "https://commons.wikimedia.org/wiki/Special:FilePath/NetApp_(2020).svg",
+  "veeam.svg": "https://commons.wikimedia.org/wiki/Special:FilePath/Veeam_logo.svg",
+  "splunk.svg": "https://commons.wikimedia.org/wiki/Special:FilePath/Splunk_logo.svg",
+  "citrix.svg": "https://commons.wikimedia.org/wiki/Special:FilePath/Citrix_Systems_logo.svg",
+  "juniper.svg": "https://commons.wikimedia.org/wiki/Special:FilePath/Juniper_Networks_logo.svg",
+  "suse.svg": [
+    "https://commons.wikimedia.org/wiki/Special:FilePath/SUSE_logo.svg",
+    "https://commons.wikimedia.org/wiki/Special:FilePath/Suse_logo.svg"
+  ],
+  "fortinet.svg": "https://commons.wikimedia.org/wiki/Special:FilePath/Fortinet_logo.svg",
+  "oracle.svg": "https://commons.wikimedia.org/wiki/Special:FilePath/Oracle_Corporation_logo.svg",
+  "nokia.svg": [
+    "https://commons.wikimedia.org/wiki/Special:FilePath/Nokia_logo_2023.svg",
+    "https://commons.wikimedia.org/wiki/Special:FilePath/Nokia_logo_(2023).svg",
+    "https://commons.wikimedia.org/wiki/Special:FilePath/Nokia_logo.svg"
+  ],
+  "unity.svg": "https://commons.wikimedia.org/wiki/Special:FilePath/Unity_logo.svg"
+}

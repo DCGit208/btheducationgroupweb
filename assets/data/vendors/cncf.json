@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Kubernetes and Cloud Native Associate (KCNA)",
+    "vendor": "CNCF",
+    "category": "software-devops",
+    "focus": "Kubernetes",
+    "level": 1,
+    "retired": false,
+    "premium": false,
+    "exam": "KCNA"
+  }
+]

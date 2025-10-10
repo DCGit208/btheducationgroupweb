@@ -1,0 +1,44 @@
+[
+  {
+    "name": "NetApp Certified Data Administrator, ONTAP (NCDA)",
+    "vendor": "NetApp",
+    "category": "data-storage",
+    "focus": "Storage Administration",
+    "level": 3,
+    "retired": false,
+    "exam": "NS0-162",
+    "logo": "../assets/images/vendor-logos/netapp.svg",
+    "url": "https://www.netapp.com/services-and-support/netapp-university/certification/ncda/"
+  },
+  {
+    "name": "NetApp Certified Hybrid Cloud Administrator",
+    "vendor": "NetApp",
+    "category": "cloud",
+    "focus": "Hybrid Cloud",
+    "level": 3,
+    "retired": false,
+    "exam": "NS0-603",
+    "logo": "../assets/images/vendor-logos/netapp.svg",
+    "url": "https://www.netapp.com/services-and-support/netapp-university/certification/"
+  },
+  {
+    "name": "NetApp ONTAP Specialist",
+    "vendor": "NetApp",
+    "category": "specialized-tech",
+    "focus": "Storage & Data Protection",
+    "level": 3,
+    "retired": false,
+    "premium": false,
+    "exam": "NetApp ONTAP Specialist"
+  },
+  {
+    "name": "NetApp Certified Implementation Engineer – SAN, ONTAP (NCIE-SAN)",
+    "vendor": "NetApp",
+    "category": "specialized-tech",
+    "focus": "Storage & Data Protection",
+    "level": 4,
+    "retired": false,
+    "premium": false,
+    "exam": "NCIE-SAN (ONTAP)"
+  }
+]

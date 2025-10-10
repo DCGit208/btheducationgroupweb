@@ -1,0 +1,43 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://btheducationgroupweb.local/schemas/certifications.schema.json",
+  "title": "Certifications Dataset",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["id", "name", "vendor", "category", "focus", "level", "retired", "premium"],
+    "additionalProperties": false,
+    "properties": {
+      "id": { "type": "integer", "minimum": 1 },
+      "name": { "type": "string", "minLength": 1 },
+      "vendor": { "type": "string", "minLength": 1 },
+      "category": {
+        "type": "string",
+        "enum": [
+          "core-it",
+          "cloud-platforms",
+          "cybersecurity",
+          "software-devops",
+          "governance-agile",
+          "specialized-tech",
+          "emerging-tech"
+        ]
+      },
+      "focus": { "type": "string", "minLength": 1 },
+      "level": { "type": "integer", "minimum": 1, "maximum": 5 },
+      "retired": { "type": "boolean" },
+      "premium": { "type": "boolean" },
+      "exam": { "type": "string" },
+      "logo": { "type": "string" },
+      "url": { "type": ["string", "null"] , "format": "uri" },
+      "vendor_area": { "type": "string" },
+      "vendor_stage": { "type": "string" },
+      "tracks": { "type": "array", "items": { "type": "string" } },
+      "solution_area": { "type": "string" },
+      "prereqTags": { "type": "array", "items": { "type": "string" } },
+      "tags": { "type": "array", "items": { "type": "string" } },
+      "neutral": { "type": "boolean" },
+      "time_estimate_months": { "type": "number", "minimum": 0 }
+    }
+  }
+}
