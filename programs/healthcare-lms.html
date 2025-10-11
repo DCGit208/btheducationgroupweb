@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Healthcare Training & Certifications (Pearson VUE Partner) | BTH Education Group</title>
+  <meta name="description" content="Dedicated LMS for healthcare technology training and certifications. Pearson VUE Partner & Exam Delivery Partner. Epic certifications (Ambulatory, Inpatient, Resolute, Willow, ASAP, Cadence, Radiant, Cupid, and more)." />
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    .navbar { background: rgba(255, 255, 255, 0.95); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); padding: 1rem 0; position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 2rem; }
+    .nav-logo img { height: 40px; width: auto; }
+    .nav-menu { display: flex; gap: 2rem; list-style: none; margin: 0; padding: 0; }
+    .nav-link { color: #374151; text-decoration: none; font-weight: 500; transition: all 0.3s ease; }
+    .nav-link:hover, .nav-link.active { color: #2563eb; }
+
+    body { background: #f8fafc; color: #0f172a; }
+
+    .hero { position: relative; background: linear-gradient(135deg, #0f172a 0%, #1e293b 25%, #334155 50%, #475569 75%, #64748b 100%); color: white; padding: 110px 0 130px; overflow: hidden; text-align: center; }
+    .hero .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+    .hero h1 { font-size: clamp(2.2rem, 4.5vw, 3.6rem); font-weight: 800; margin: 8px 0 10px; background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 50%, #cbd5e1 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .hero p { color: #cbd5e1; max-width: 900px; margin: 0 auto; }
+    .hero-badges { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin: 14px 0 0; }
+    .badge { display: inline-flex; align-items: center; gap: 8px; padding: 8px 12px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.25); background: rgba(255,255,255,0.08); color: #e2e8f0; font-size: 13px; }
+    .badge i { color: #93c5fd; }
+
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+    section { padding: 28px 0; }
+
+    .filters { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; background: #fff; padding: 12px; border: 1px solid #e2e8f0; border-radius: 12px; }
+    .input, .select { padding: 10px 12px; border-radius: 10px; border: 1px solid #e2e8f0; background: #fff; }
+
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
+    .card { background: #fff; border: 1px solid #e2e8f0; border-radius: 16px; padding: 16px; box-shadow: 0 10px 30px rgba(2,6,23,0.06); }
+    .card h3, .card h4 { margin: 0 0 8px; }
+    .muted { color: #475569; font-size: 14px; }
+    .pill { border: 1px solid #e2e8f0; background:#fff; color:#0f172a; padding:6px 10px; border-radius:999px; font-size:12px; }
+    .cta-row { display:flex; gap:8px; flex-wrap:wrap; margin-top: 8px; }
+    .cta { display:inline-block; padding:8px 12px; border-radius:999px; border:1px solid #e2e8f0; background:#fff; color:#0f172a; text-decoration:none; font-weight:600; font-size:13px; }
+    .cta.primary { border-color:#2563eb; color:#2563eb; }
+    .cta:hover { border-color:#3b82f6; color:#1d4ed8; }
+
+    .section-title { display:flex; align-items:center; justify-content:space-between; gap: 10px; margin-bottom: 10px; }
+    .section-title h2 { margin: 0; font-size: clamp(1.4rem, 3vw, 2rem); }
+
+    .catalog-group + .catalog-group { margin-top: 12px; }
+    .catalog-group h3 { margin: 0 0 6px; font-size: 1rem; color: #0f172a; }
+    .meta-row { display:flex; gap:8px; flex-wrap: wrap; color:#475569; font-size:13px; }
+    .meta-row .item { display:inline-flex; align-items:center; gap:6px; padding: 6px 10px; border-radius: 999px; background: #f1f5f9; border: 1px solid #e2e8f0; }
+
+    .notice { display:flex; gap:8px; align-items:flex-start; background:#f0fdf4; border:1px solid #bbf7d0; color:#166534; padding: 10px 12px; border-radius: 12px; font-size: 13px; }
+  .partner { display:flex; gap:8px; align-items:center; font-size: 13px; color:#334155; }
+  /* Collections (domains) switcher */
+  .collections { display:flex; gap:8px; flex-wrap:wrap; margin:10px 0; }
+  .collections .pill { cursor: pointer; }
+  .collections .pill.active { border-color:#2563eb; color:#2563eb; box-shadow:0 0 0 3px rgba(37,99,235,.12); }
+
+    /* Drawer for course details */
+    .drawer-overlay { position: fixed; inset: 0; background: rgba(15, 23, 42, 0.4); opacity: 0; pointer-events: none; transition: opacity .2s ease; }
+    .drawer { position: fixed; top: 0; right: 0; height: 100%; width: min(560px, 100%); background: #fff; box-shadow: -10px 0 30px rgba(2,6,23,0.1); transform: translateX(100%); transition: transform .25s ease; display: grid; grid-template-rows: auto 1fr; z-index: 1001; }
+    .drawer.open { transform: translateX(0); }
+    .drawer-overlay.open { opacity: 1; pointer-events: auto; z-index: 1000; }
+    .drawer-head { display:flex; align-items:center; justify-content: space-between; padding: 14px 16px; border-bottom: 1px solid #e2e8f0; }
+    .drawer-body { padding: 16px; overflow: auto; }
+    .drawer h3 { margin: 0; font-size: 1.2rem; }
+    .drawer .meta-row { margin: 8px 0 12px; }
+    .drawer .list { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; color: #334155; }
+    .drawer .list li { display: flex; gap: 8px; align-items: flex-start; }
+    .drawer .close-btn { border: 1px solid #e2e8f0; background:#fff; border-radius: 10px; padding: 6px 10px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo"><a href="../index.html"><img src="../assets/images/bthlogo.png" alt="BTH Education Group" /></a></div>
+      <ul class="nav-menu">
+        <li><a href="../index.html" class="nav-link">Home</a></li>
+        <li><a href="../about.html" class="nav-link">About</a></li>
+        <li><a href="../program.html" class="nav-link">Programs</a></li>
+        <li><a href="../contact.html" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container">
+      <h1>Healthcare Training & Certifications</h1>
+      <p>We are a Pearson VUE Partner and Exam Delivery Partner. Train, schedule, and earn healthcare certifications—including Epic—through one dedicated LMS experience.</p>
+      <div class="hero-badges">
+        <span class="badge"><i class="fa-solid fa-certificate"></i> Pearson VUE Partner</span>
+        <span class="badge"><i class="fa-solid fa-shield"></i> Exam Delivery Partner</span>
+        <span class="badge"><i class="fa-solid fa-globe"></i> Global Healthcare Certifications</span>
+      </div>
+    </div>
+  </header>
+
+  <section id="catalog">
+    <div class="container">
+      <div class="section-title">
+        <h2>Catalog & Filters</h2>
+        <div class="partner"><i class="fa-solid fa-handshake"></i> Exams delivered via Pearson VUE</div>
+      </div>
+      <div class="filters">
+        <input id="q" class="input" placeholder="Search (e.g., Inpatient, Cadence, Radiant, HL7, Billing)" />
+        <select id="role" class="select">
+          <option value="">Role</option>
+          <option>Analyst/Builder</option>
+          <option>Clinician/Nurse</option>
+          <option>Interoperability Engineer</option>
+          <option>Revenue Cycle Analyst</option>
+          <option>Imaging/Ancillary</option>
+          <option>Data/Reporting</option>
+        </select>
+        <select id="modality" class="select">
+          <option value="">Modality</option>
+          <option>Self‑paced</option>
+          <option>Live Virtual</option>
+          <option>Bootcamp</option>
+        </select>
+        <select id="level" class="select">
+          <option value="">Level</option>
+          <option>Foundation</option>
+          <option>Associate</option>
+          <option>Professional</option>
+          <option>Expert</option>
+        </select>
+        <button id="clearFilters" class="cta" type="button"><i class="fa-solid fa-xmark"></i> Clear</button>
+      </div>
+      <div class="collections" id="collections" aria-label="Collections">
+        <button class="pill" data-col="ehr" type="button">EHR</button>
+        <button class="pill" data-col="interop" type="button">Interoperability</button>
+        <button class="pill" data-col="analytics" type="button">Analytics</button>
+        <button class="pill" data-col="devices" type="button">Devices</button>
+        <button class="pill" data-col="telemedicine" type="button">Telemedicine</button>
+        <button class="pill" data-col="payer" type="button">Payer / RCM</button>
+        <button class="pill" data-col="standards" type="button">Standards</button>
+      </div>
+      <div id="myPlan" class="card" style="margin-top:10px; display:none;">
+        <h3>My Plan</h3>
+        <p class="muted">Saved courses for quick access.</p>
+        <div id="myPlanList" class="grid"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="epic">
+    <div class="container">
+      <div class="section-title">
+        <h2><i class="fa-solid fa-star"></i> Epic Certifications & Training</h2>
+        <a class="cta primary" href="#epic-cert">Schedule Exam</a>
+      </div>
+      <div class="notice" style="margin-bottom:10px;">
+        <i class="fa-solid fa-circle-info" style="color:#16a34a; margin-top:2px;"></i>
+        <div>
+          We deliver Epic certifications via Pearson VUE. Below is a curated, role‑based catalog. Select a module to see details, prerequisites, outcomes, and to enroll.
+        </div>
+      </div>
+      <div id="epicCatalog" class="grid" aria-live="polite"></div>
+      <div style="display:flex; justify-content:center; margin-top:10px;">
+        <button id="showMore" class="cta" type="button" style="display:none;"><i class="fa-solid fa-angles-down"></i> Show more</button>
+      </div>
+
+      <div id="epic-train" class="card" style="margin-top:12px;">
+        <h3>Epic Training Experience</h3>
+        <p class="muted">Role‑aligned learning paths: Foundations → Practitioner → Advanced → Capstone. Hands‑on labs, governance and safety, portfolio packaging, and interview coaching.</p>
+        <div class="meta-row" style="margin-top:6px;"><span class="item"><i class="fa-solid fa-user-graduate"></i> Mentored cohorts</span><span class="item"><i class="fa-solid fa-chalkboard-user"></i> Live labs</span><span class="item"><i class="fa-solid fa-laptop"></i> Sandbox practice</span></div>
+        <div class="cta-row"><a class="cta primary" href="../apply.html?interest=epic-training">Enroll Now</a><a class="cta" href="#support">Request Corporate Cohort</a></div>
+      </div>
+
+      <div id="epic-cert" class="card" style="margin-top:12px;">
+        <h3>Epic Certification Exams (Pearson VUE)</h3>
+        <p class="muted">Schedule and sit for Epic module certifications with Pearson VUE. We support prep, scheduling, and remediation pathways.</p>
+        <div class="meta-row" style="margin-top:6px;"><span class="item"><i class="fa-solid fa-id-card"></i> Pearson VUE delivery</span><span class="item"><i class="fa-solid fa-shield"></i> Secure test centers</span><span class="item"><i class="fa-solid fa-globe"></i> Worldwide availability</span></div>
+        <div class="cta-row"><a class="cta primary" href="https://home.pearsonvue.com/" target="_blank" rel="noopener">Go to Pearson VUE</a><a class="cta" href="../apply.html?interest=epic-cert">Talk to an Advisor</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="more-vendors">
+    <div class="container">
+      <div class="section-title">
+        <h2>Beyond Epic: Global Healthcare Certifications</h2>
+      </div>
+      <div class="card">
+        <p class="muted">We deliver certifications across EHRs, imaging, lab, pharmacy, interoperability, and analytics including Oracle Cerner, MEDITECH, Allscripts/Veradigm, NextGen, athenahealth, eClinicalWorks, and more. Contact us for your specific stack.</p>
+        <div class="cta-row"><a class="cta primary" href="#support">Request Full Catalog</a><a class="cta" href="../apply.html?interest=healthcare-certifications">Contact Sales</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="exam-delivery">
+    <div class="container">
+      <div class="section-title">
+        <h2>Exam Delivery & Support</h2>
+      </div>
+      <div class="grid">
+        <div class="card"><h3>Pearson VUE Delivery</h3><p class="muted">We coordinate exam registration and scheduling with Pearson VUE. Onsite and online proctored options may be available depending on credential.</p></div>
+        <div class="card"><h3>Prerequisites</h3><p class="muted">We verify role experience and pre‑work readiness to ensure the best outcomes. Bridge courses available for newcomers.</p></div>
+        <div class="card"><h3>Corporate Programs</h3><p class="muted">Custom cohorts, role‑based tracks, and outcome‑aligned KPIs. Ask about cross‑vendor upskilling.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="support">
+    <div class="container">
+      <div class="section-title"><h2>Need Help?</h2></div>
+      <div class="grid">
+        <div class="card">
+          <h3>Talk to an Advisor</h3>
+          <p class="muted">Map your role to the right module, confirm prerequisites, and get a timeline and budget.</p>
+          <div class="cta-row"><a class="cta primary" href="../apply.html?interest=advisor">Book a Call</a></div>
+        </div>
+        <div class="card">
+          <h3>Request a Quote</h3>
+          <p class="muted">Volume discounts for teams and organizations. Flexible invoicing options available.</p>
+          <div class="cta-row"><a class="cta" href="../apply.html?interest=quote">Request Pricing</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer" style="border-top: 1px solid #e2e8f0; padding: 28px 0; color: #64748b; font-size: 14px; background: #fff;">
+    <div class="container">© <span id="year"></span> BTH Education Group · Healthcare LMS</div>
+  </footer>
+
+  <!-- Drawer containers -->
+  <div id="drawerOverlay" class="drawer-overlay" aria-hidden="true"></div>
+  <aside id="courseDrawer" class="drawer" role="dialog" aria-modal="true" aria-labelledby="drawerTitle" aria-hidden="true">
+    <div class="drawer-head">
+      <h3 id="drawerTitle">Course</h3>
+      <button id="drawerClose" class="close-btn" type="button" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="drawer-body">
+      <p id="drawerDesc" class="muted"></p>
+      <div class="meta-row" id="drawerMeta"></div>
+      <div class="cta-row" style="margin-bottom:10px;"><a class="cta primary" id="drawerEnroll" href="#epic-train">Enroll</a><a class="cta" id="drawerCert" href="#epic-cert">Schedule Exam</a></div>
+      <div id="drawerSections"></div>
+    </div>
+  </aside>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Dynamic Epic catalog rendering from JSON
+  const q = document.getElementById('q');
+    const role = document.getElementById('role');
+    const modality = document.getElementById('modality');
+    const level = document.getElementById('level');
+    const clearFilters = document.getElementById('clearFilters');
+    const epicCatalog = document.getElementById('epicCatalog');
+    const showMoreBtn = document.getElementById('showMore');
+    const myPlan = document.getElementById('myPlan');
+    const myPlanList = document.getElementById('myPlanList');
+    const collectionsEl = document.getElementById('collections');
+
+    let DATA = [];
+    let VISIBLE_COUNT = 9; // show first N groups cards, then lazy reveal
+    let filtered = [];
+    let saved = new Set(JSON.parse(localStorage.getItem('bth.myplan') || '[]'));
+    let currentCollection = 'ehr';
+
+    function norm(s){ return (s||'').toLowerCase(); }
+    function icon(name){
+      const map = {
+        'Clinical & Departmental': 'fa-notes-medical',
+        'Revenue Cycle & Administrative': 'fa-file-invoice-dollar',
+        'Specialized & Platform': 'fa-layer-group'
+      };
+      return map[name] || 'fa-graduation-cap';
+    }
+    function pill(txt){ return `<span class="item"><i class="fa-solid fa-tag"></i> ${txt}</span>`; }
+    // Infer collection(s) for a course when not provided in data
+    function inferCollections(d){
+      const name = norm(d.name||'');
+      const vendor = norm(d.vendor||'');
+      const tags = (d.tags||[]).map(norm);
+      const group = norm(d.group||'');
+      const text = [name,vendor,group,...tags].join(' ');
+      const col = new Set();
+      if (vendor.includes('epic') || text.includes('inpatient') || text.includes('ambulatory') || text.includes('resolute') || text.includes('mychart') || text.includes('caboodle')) col.add('ehr');
+      if (text.includes('hl7') || text.includes('fhir') || text.includes('interface') || name.includes('bridges')) col.add('interop');
+      if (text.includes('analytics') || text.includes('reporting') || name.includes('caboodle') || name.includes('reporting workbench')) col.add('analytics');
+      if (text.includes('pacs') || text.includes('vna') || text.includes('device') || text.includes('radiology') || name.includes('radiant') || name.includes('cupid')) col.add('devices');
+      if (text.includes('telehealth') || text.includes('virtual') || text.includes('remote monitoring')) col.add('telemedicine');
+      if (text.includes('billing') || text.includes('rcm') || text.includes('claims') || name.includes('resolute') || name.includes('cadence') || name.includes('prelude')) col.add('payer');
+      if (text.includes('hipaa') || text.includes('tefca') || text.includes('uscdi') || text.includes('iso') || text.includes('security')) col.add('standards');
+      return Array.from(col);
+    }
+
+    function renderMyPlan(){
+      const items = DATA.filter(d=>saved.has(d.id));
+      myPlan.style.display = items.length ? 'block' : 'none';
+      myPlanList.innerHTML = items.map(d=>
+        `<div class="card"><h4>${d.name}</h4><div class="muted">${d.description}</div>
+          <div class="meta-row" style="margin-top:6px;">${pill(d.duration)}${d.levels?.[0]?pill(d.levels.join(' / ')):''}</div>
+          <div class="cta-row"><a class="cta" href="#epic-train">Enroll</a><a class="cta" href="#epic-cert">Schedule Exam</a>
+          <button class="cta" data-remove="${d.id}" type="button"><i class="fa-solid fa-bookmark"></i> Remove</button></div></div>`
+      ).join('');
+    }
+
+    function groupBy(arr, key){
+      return arr.reduce((acc, it)=>{ (acc[it[key]] ||= []).push(it); return acc; }, {});
+    }
+
+    function cardHTML(d){
+      const isSaved = saved.has(d.id);
+      const levelTxt = d.levels?.length ? d.levels.join('–') : '';
+      const modTxt = d.modalities?.length ? d.modalities.join(' / ') : '';
+      const rolesTxt = d.roles?.join(', ');
+      return `
+        <div class="card track" data-id="${d.id}" data-tags="${(d.tags||[]).join(' ')} ${rolesTxt||''}">
+          <h4>${d.name}</h4>
+          <div class="muted">${d.description}</div>
+          <div class="meta-row"><span class="item"><i class="fa-solid fa-clock"></i> ${d.duration||''}</span>${levelTxt?`<span class="item"><i class="fa-solid fa-signal"></i> ${levelTxt}</span>`:''}${modTxt?`<span class="item"><i class="fa-solid fa-laptop"></i> ${modTxt}</span>`:''}</div>
+          <div class="cta-row">
+            <a class="cta primary" href="#epic-train">Enroll</a>
+            <a class="cta" href="#epic-cert">Schedule Exam</a>
+            <button class="cta" data-save="${d.id}" type="button">${isSaved?'<i class="fa-solid fa-bookmark"></i> Saved':'<i class="fa-regular fa-bookmark"></i> Save'}</button>
+            <button class="cta" data-open="${d.id}" type="button"><i class="fa-solid fa-circle-info"></i> Details</button>
+          </div>
+        </div>`;
+    }
+
+    function sectionHTML(title, items){
+      const iconCls = icon(title);
+      return `
+        <div class="card" data-section>
+          <h3><i class="fa-solid ${iconCls}"></i> ${title}</h3>
+          <div class="grid">${items.map(cardHTML).join('')}</div>
+        </div>`;
+    }
+
+    function applyFilters(){
+      const text = norm(q.value);
+      const r = norm(role.value);
+      const m = norm(modality.value);
+      const l = norm(level.value);
+      filtered = DATA.filter(d => {
+        const bag = norm([d.name, d.vendor, d.description, ...(d.tags||[]), ...(d.roles||[]), ...(d.levels||[]), ...(d.modalities||[])].join(' '));
+        const passText = !text || bag.includes(text);
+        const passRole = !r || bag.includes(r);
+        const passMod = !m || bag.includes(m);
+        const passLvl = !l || bag.includes(l);
+        const cols = (d.collections && d.collections.length) ? d.collections.map(norm) : inferCollections(d);
+        const passCol = !currentCollection || cols.includes(currentCollection);
+        return passText && passRole && passMod && passLvl && passCol;
+      });
+      renderCatalog();
+    }
+
+    function renderCatalog(){
+      if (!filtered.length){ epicCatalog.innerHTML = '<div class="card"><p class="muted">No matches. Try adjusting filters.</p></div>'; showMoreBtn.style.display='none'; return; }
+      // group by parent group -> subgroup
+      const byGroup = groupBy(filtered, 'group');
+      const sections = [];
+      Object.keys(byGroup).forEach(g => {
+        // within, group by subgroup but keep order
+        const bySub = groupBy(byGroup[g], 'subgroup');
+        const ordered = [].concat(...Object.keys(bySub).map(k=>bySub[k]));
+        sections.push({ title:g, items: ordered });
+      });
+      // flatten and cap by visible count
+      const flatCards = sections.flatMap(s => s.items.map(d => ({section:s.title, item:d})));
+      const toShow = flatCards.slice(0, VISIBLE_COUNT);
+      const leftover = flatCards.length - toShow.length;
+
+      // reconstruct sections with only shown items
+      const shownBySection = {};
+      toShow.forEach(({section, item}) => { (shownBySection[section] ||= []).push(item); });
+      epicCatalog.innerHTML = Object.keys(shownBySection).map(sec => sectionHTML(sec, shownBySection[sec])).join('');
+      showMoreBtn.style.display = leftover > 0 ? 'inline-block' : 'none';
+    }
+
+    function savePlan(){
+      localStorage.setItem('bth.myplan', JSON.stringify(Array.from(saved)));
+      renderMyPlan();
+    }
+
+    // Drawer helpers
+    const drawer = document.getElementById('courseDrawer');
+    const overlay = document.getElementById('drawerOverlay');
+    const drawerTitle = document.getElementById('drawerTitle');
+    const drawerDesc = document.getElementById('drawerDesc');
+    const drawerMeta = document.getElementById('drawerMeta');
+    const drawerSections = document.getElementById('drawerSections');
+    const drawerClose = document.getElementById('drawerClose');
+
+    function openDrawer(data){
+      drawerTitle.textContent = data.name;
+      drawerDesc.textContent = data.description || '';
+      const lvl = data.levels?.length ? `<span class="item"><i class="fa-solid fa-signal"></i> ${data.levels.join('–')}</span>` : '';
+      const mod = data.modalities?.length ? `<span class="item"><i class="fa-solid fa-laptop"></i> ${data.modalities.join(' / ')}</span>` : '';
+      const dur = data.duration ? `<span class="item"><i class="fa-solid fa-clock"></i> ${data.duration}</span>` : '';
+      drawerMeta.innerHTML = [dur,lvl,mod].filter(Boolean).join('');
+      const sec = [];
+      if (data.prerequisites?.length){
+        sec.push(`<div class="card"><h4>Prerequisites</h4><ul class="list">${data.prerequisites.map(x=>`<li><i class='fa-solid fa-check'></i><span>${x}</span></li>`).join('')}</ul></div>`);
+      }
+      if (data.outcomes?.length){
+        sec.push(`<div class="card"><h4>Outcomes</h4><ul class="list">${data.outcomes.map(x=>`<li><i class='fa-solid fa-bullseye'></i><span>${x}</span></li>`).join('')}</ul></div>`);
+      }
+      if (data.syllabus?.length){
+        sec.push(`<div class="card"><h4>Syllabus</h4><ul class="list">${data.syllabus.map(x=>`<li><i class='fa-solid fa-book'></i><span>${x}</span></li>`).join('')}</ul></div>`);
+      }
+      drawerSections.innerHTML = sec.join('');
+      drawer.setAttribute('aria-hidden', 'false');
+      overlay.setAttribute('aria-hidden', 'false');
+      drawer.classList.add('open');
+      overlay.classList.add('open');
+      drawerClose.focus();
+    }
+    function closeDrawer(){
+      drawer.classList.remove('open');
+      overlay.classList.remove('open');
+      drawer.setAttribute('aria-hidden', 'true');
+      overlay.setAttribute('aria-hidden', 'true');
+    }
+
+    function attachDelegates(){
+      epicCatalog.addEventListener('click', (e)=>{
+        const btn = e.target.closest('[data-save]');
+        const openBtn = e.target.closest('[data-open]');
+        if (btn){
+          const id = btn.getAttribute('data-save');
+          if (saved.has(id)) saved.delete(id); else saved.add(id);
+          savePlan();
+          applyFilters();
+          return;
+        }
+        if (openBtn){
+          const id = openBtn.getAttribute('data-open');
+          const data = DATA.find(d=>d.id===id);
+          if (data) openDrawer(data);
+          return;
+        }
+      });
+      myPlan.addEventListener('click', (e)=>{
+        const btn = e.target.closest('[data-remove]');
+        if (!btn) return;
+        const id = btn.getAttribute('data-remove');
+        saved.delete(id); savePlan(); applyFilters();
+      });
+      showMoreBtn.addEventListener('click', ()=>{ VISIBLE_COUNT += 12; renderCatalog(); });
+      clearFilters.addEventListener('click', ()=>{ q.value=''; role.value=''; modality.value=''; level.value=''; VISIBLE_COUNT = 9; applyFilters(); });
+      [q, role, modality, level].forEach(el => el && el.addEventListener('input', ()=>{ VISIBLE_COUNT = 9; applyFilters(); }));
+      [role, modality, level].forEach(el => el && el.addEventListener('change', ()=>{ VISIBLE_COUNT = 9; applyFilters(); }));
+      overlay.addEventListener('click', closeDrawer);
+      drawerClose.addEventListener('click', closeDrawer);
+      document.addEventListener('keydown', (e)=>{ if (e.key === 'Escape') closeDrawer(); });
+      // Collections switcher
+      if (collectionsEl){
+        collectionsEl.addEventListener('click', (e)=>{
+          const b = e.target.closest('[data-col]');
+          if (!b) return;
+          currentCollection = b.getAttribute('data-col');
+          collectionsEl.querySelectorAll('.pill').forEach(p=>p.classList.toggle('active', p===b));
+          VISIBLE_COUNT = 9; applyFilters();
+        });
+      }
+    }
+
+    async function load(){
+      try {
+        const res = await fetch('../assets/data/healthcare-lms-catalog.json', { cache: 'no-cache' });
+        DATA = await res.json();
+      } catch (e) {
+        // Fallback: derive from any static .track cards if JSON fails
+        DATA = Array.from(document.querySelectorAll('.track')).map((el,i)=>({
+          id: el.dataset.id || `track-${i}`,
+          vendor: 'Epic',
+          name: el.querySelector('h4')?.textContent?.trim() || 'Course',
+          group: 'General',
+          subgroup: 'General',
+          description: el.querySelector('.muted')?.textContent?.trim() || '',
+          duration: el.querySelector('.fa-clock')?.parentElement?.textContent?.trim() || '',
+          levels: [], modalities: [], roles: [], tags: (el.dataset.tags||'').split(/\s+/)
+        }));
+      }
+      attachDelegates();
+      renderMyPlan();
+      // Hash routing: #collection=interop&vendor=epic&q=FHIR&course=bridges
+      const params = new URLSearchParams(location.hash.replace('#',''));
+      const col = params.get('collection');
+      const vendor = params.get('vendor');
+      const textQ = params.get('q');
+      const slug = params.get('course');
+      currentCollection = col || currentCollection;
+      if (collectionsEl){
+        collectionsEl.querySelectorAll('.pill').forEach(p=>{
+          p.classList.toggle('active', p.getAttribute('data-col')===currentCollection);
+        });
+      }
+      if (textQ){ q.value = textQ; }
+      if (vendor){ q.value = (q.value? q.value+' ' : '') + vendor; }
+      applyFilters();
+      if (slug){
+        const match = DATA.find(d=>d.slug===slug);
+        if (match){ saved.add(match.id); savePlan(); openDrawer(match); }
+      }
+    }
+    load();
+
+    // If URL has a hash like #epic-cert or #epic-train, scroll into view after load
+    window.addEventListener('load', () => {
+      const h = location.hash; if (!h) return;
+      const el = document.querySelector(h); if (el) el.scrollIntoView({ behavior:'smooth', block:'start' });
+    });
+  </script>
+</body>
+</html>

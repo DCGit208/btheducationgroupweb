@@ -110,6 +110,9 @@
   .vendor-badges { display: flex; gap: 6px; flex-wrap: wrap; }
   .badge { font-size: 11px; padding: 4px 8px; border-radius: 999px; background: #f1f5f9; color: #334155; border: 1px solid #e2e8f0; }
 
+  /* Info callout for EMR vs EHR clarification */
+  .info-callout { display: flex; gap: 8px; align-items: flex-start; background: #eff6ff; border: 1px solid #bfdbfe; color: #1e3a8a; padding: 10px 12px; border-radius: 10px; font-size: 12px; }
+
   /* Partners slider */
   .partners { padding: 40px 0; background: #ffffff; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0; margin-top: 40px; }
   .partners .container h3 { margin: 0 0 12px; font-size: 18px; color: #0f172a; }
@@ -221,6 +224,12 @@
                   <button class="pill" data-ehrview="ambulatory" type="button">Ambulatory</button>
                   <button class="pill" data-ehrview="core" type="button">Core EMR</button>
                 </div>
+                <div class="info-callout" style="margin:6px 0 8px;">
+                  <i class="fa-solid fa-circle-info" style="margin-top:2px; color:#2563eb;"></i>
+                  <div>
+                    <strong>EMR vs EHR:</strong> EMR typically refers to core clinical documentation inside one organization (notes, orders, results). EHR is broader and includes interoperability, patient engagement, population health, and analytics across organizations.
+                  </div>
+                </div>
                 <!-- Vendor groups: Inpatient (source: Definitive Healthcare, May 2025) and Ambulatory (source: PraxisEMR Top 10, Oct 2025) -->
                 <div class="subcard" data-ehr="inpatient" style="margin-top:10px;">
                   <div class="subcard-head"><div class="subcard-title">Top Inpatient EHR Vendors (US Hospitals)</div><i class="fa-solid fa-chevron-down"></i></div>
@@ -230,7 +239,7 @@
                         <h4 class="vendor-name">Epic Systems</h4>
                         <div class="vendor-meta">Market share leader in US hospitals</div>
                         <div class="vendor-tags"><span class="tag">Inpatient</span><span class="tag">Interoperability</span></div>
-                        <div class="cta-row"><a class="cta" href="/hexad-mastery.html#epic-training">Train</a><a class="cta" href="/program.html#cert-epic">Get Certified</a><a class="cta" href="/apply.html?vendor=epic">Hire Talent</a></div>
+                        <div class="cta-row"><a class="cta" href="/programs/healthcare-lms.html#collection=ehr&vendor=epic">Train</a><a class="cta" href="/programs/healthcare-lms.html#collection=ehr&vendor=epic">Get Certified</a><a class="cta" href="/apply.html?vendor=epic">Hire Talent</a></div>
                         <button class="vendor-toggle" aria-expanded="false"><i class="fa-solid fa-chevron-down"></i> Details</button>
                         <div class="vendor-details"><div class="vendor-details-inner"><div class="vendor-badges"><span class="badge">MyChart</span><span class="badge">FHIR</span><span class="badge">Cogito</span></div><div>Common modules: EpicCare Inpatient/Outpatient, Orders, Results, Radiant, Willow.</div></div></div>
                       </div>
@@ -238,7 +247,7 @@
                         <h4 class="vendor-name">Oracle Cerner</h4>
                         <div class="vendor-meta">Second by market share</div>
                         <div class="vendor-tags"><span class="tag">Inpatient</span><span class="tag">Analytics</span></div>
-                        <div class="cta-row"><a class="cta" href="/hexad-mastery.html#cerner-training">Train</a><a class="cta" href="/program.html#cert-cerner">Get Certified</a><a class="cta" href="/apply.html?vendor=cerner">Hire Talent</a></div>
+                        <div class="cta-row"><a class="cta" href="/programs/healthcare-lms.html#collection=ehr&vendor=cerner">Train</a><a class="cta" href="/programs/healthcare-lms.html#collection=ehr&vendor=cerner">Get Certified</a><a class="cta" href="/apply.html?vendor=cerner">Hire Talent</a></div>
                         <button class="vendor-toggle" aria-expanded="false"><i class="fa-solid fa-chevron-down"></i> Details</button>
                         <div class="vendor-details"><div class="vendor-details-inner"><div class="vendor-badges"><span class="badge">HealtheIntent</span><span class="badge">FHIR</span></div><div>Common modules: PowerChart, Orders, PharmNet, RadNet.</div></div></div>
                       </div>
@@ -246,7 +255,7 @@
                         <h4 class="vendor-name">MEDITECH</h4>
                         <div class="vendor-meta">Expanse platform</div>
                         <div class="vendor-tags"><span class="tag">Inpatient</span></div>
-                        <div class="cta-row"><a class="cta" href="/hexad-mastery.html#meditech-training">Train</a><a class="cta" href="/program.html#cert-meditech">Get Certified</a><a class="cta" href="/apply.html?vendor=meditech">Hire Talent</a></div>
+                        <div class="cta-row"><a class="cta" href="/programs/healthcare-lms.html#collection=ehr&vendor=meditech">Train</a><a class="cta" href="/programs/healthcare-lms.html#collection=ehr&vendor=meditech">Get Certified</a><a class="cta" href="/apply.html?vendor=meditech">Hire Talent</a></div>
                         <button class="vendor-toggle" aria-expanded="false"><i class="fa-solid fa-chevron-down"></i> Details</button>
                         <div class="vendor-details"><div class="vendor-details-inner"><div class="vendor-badges"><span class="badge">Expanse</span><span class="badge">Interoperability</span></div><div>Common modules: Orders, Results, Pharmacy, Imaging Integration.</div></div></div>
                       </div>
@@ -254,7 +263,7 @@
                         <h4 class="vendor-name">TruBridge (CPSI)</h4>
                         <div class="vendor-meta">Community and rural hospitals</div>
                         <div class="vendor-tags"><span class="tag">Inpatient</span><span class="tag">Community</span></div>
-                        <div class="cta-row"><a class="cta" href="/hexad-mastery.html#cpsi-training">Train</a><a class="cta" href="/program.html#cert-cpsi">Get Certified</a><a class="cta" href="/apply.html?vendor=cpsi">Hire Talent</a></div>
+                        <div class="cta-row"><a class="cta" href="/programs/healthcare-lms.html#collection=ehr&vendor=cpsi">Train</a><a class="cta" href="/programs/healthcare-lms.html#collection=ehr&vendor=cpsi">Get Certified</a><a class="cta" href="/apply.html?vendor=cpsi">Hire Talent</a></div>
                         <button class="vendor-toggle" aria-expanded="false"><i class="fa-solid fa-chevron-down"></i> Details</button>
                         <div class="vendor-details"><div class="vendor-details-inner"><div class="vendor-badges"><span class="badge">Evident Thrive</span></div><div>Modules oriented to small acute facilities and clinics.</div></div></div>
                       </div>
@@ -262,7 +271,7 @@
                         <h4 class="vendor-name">WellSky</h4>
                         <div class="vendor-meta">Post-acute and care coordination</div>
                         <div class="vendor-tags"><span class="tag">Inpatient</span><span class="tag">Post‑acute</span></div>
-                        <div class="cta-row"><a class="cta" href="/hexad-mastery.html#wellsky-training">Train</a><a class="cta" href="/program.html#cert-wellsky">Get Certified</a><a class="cta" href="/apply.html?vendor=wellsky">Hire Talent</a></div>
+                        <div class="cta-row"><a class="cta" href="/programs/healthcare-lms.html#collection=ehr&vendor=wellsky">Train</a><a class="cta" href="/programs/healthcare-lms.html#collection=ehr&vendor=wellsky">Get Certified</a><a class="cta" href="/apply.html?vendor=wellsky">Hire Talent</a></div>
                         <button class="vendor-toggle" aria-expanded="false"><i class="fa-solid fa-chevron-down"></i> Details</button>
                         <div class="vendor-details"><div class="vendor-details-inner"><div class="vendor-badges"><span class="badge">Care Coordination</span></div><div>Focus across home health, hospice, rehab.</div></div></div>
                       </div>
@@ -270,7 +279,7 @@
                         <h4 class="vendor-name">MEDHOST</h4>
                         <div class="vendor-meta">Acute care focus</div>
                         <div class="vendor-tags"><span class="tag">Inpatient</span></div>
-                        <div class="cta-row"><a class="cta" href="/hexad-mastery.html#medhost-training">Train</a><a class="cta" href="/program.html#cert-medhost">Get Certified</a><a class="cta" href="/apply.html?vendor=medhost">Hire Talent</a></div>
+                        <div class="cta-row"><a class="cta" href="/programs/healthcare-lms.html#collection=ehr&vendor=medhost">Train</a><a class="cta" href="/programs/healthcare-lms.html#collection=ehr&vendor=medhost">Get Certified</a><a class="cta" href="/apply.html?vendor=medhost">Hire Talent</a></div>
                         <button class="vendor-toggle" aria-expanded="false"><i class="fa-solid fa-chevron-down"></i> Details</button>
                         <div class="vendor-details"><div class="vendor-details-inner"><div class="vendor-badges"><span class="badge">Acute</span></div><div>Core inpatient documentation and orders.</div></div></div>
                       </div>
@@ -278,7 +287,7 @@
                         <h4 class="vendor-name">Netsmart</h4>
                         <div class="vendor-meta">Behavioral health and human services</div>
                         <div class="vendor-tags"><span class="tag">Inpatient</span><span class="tag">Behavioral</span></div>
-                        <div class="cta-row"><a class="cta" href="/hexad-mastery.html#netsmart-training">Train</a><a class="cta" href="/program.html#cert-netsmart">Get Certified</a><a class="cta" href="/apply.html?vendor=netsmart">Hire Talent</a></div>
+                        <div class="cta-row"><a class="cta" href="/programs/healthcare-lms.html#collection=ehr&vendor=netsmart">Train</a><a class="cta" href="/programs/healthcare-lms.html#collection=ehr&vendor=netsmart">Get Certified</a><a class="cta" href="/apply.html?vendor=netsmart">Hire Talent</a></div>
                         <button class="vendor-toggle" aria-expanded="false"><i class="fa-solid fa-chevron-down"></i> Details</button>
                         <div class="vendor-details"><div class="vendor-details-inner"><div class="vendor-badges"><span class="badge">Behavioral</span></div><div>Behavioral workflows and interoperability.</div></div></div>
                       </div>
@@ -286,7 +295,7 @@
                         <h4 class="vendor-name">VistA</h4>
                         <div class="vendor-meta">VA legacy platform footprint</div>
                         <div class="vendor-tags"><span class="tag">Inpatient</span><span class="tag">Government</span></div>
-                        <div class="cta-row"><a class="cta" href="/hexad-mastery.html#vista-training">Train</a><a class="cta" href="/program.html#cert-vista">Get Certified</a><a class="cta" href="/apply.html?vendor=vista">Hire Talent</a></div>
+                        <div class="cta-row"><a class="cta" href="/programs/healthcare-lms.html#collection=ehr&vendor=vista">Train</a><a class="cta" href="/programs/healthcare-lms.html#collection=ehr&vendor=vista">Get Certified</a><a class="cta" href="/apply.html?vendor=vista">Hire Talent</a></div>
                         <button class="vendor-toggle" aria-expanded="false"><i class="fa-solid fa-chevron-down"></i> Details</button>
                         <div class="vendor-details"><div class="vendor-details-inner"><div class="vendor-badges"><span class="badge">VA</span></div><div>Legacy deployments; transitions ongoing.</div></div></div>
                       </div>
@@ -294,7 +303,7 @@
                         <h4 class="vendor-name">Altera Digital Health</h4>
                         <div class="vendor-meta">Sunrise/Paragon heritage</div>
                         <div class="vendor-tags"><span class="tag">Inpatient</span></div>
-                        <div class="cta-row"><a class="cta" href="/hexad-mastery.html#altera-training">Train</a><a class="cta" href="/program.html#cert-altera">Get Certified</a><a class="cta" href="/apply.html?vendor=altera">Hire Talent</a></div>
+                        <div class="cta-row"><a class="cta" href="/programs/healthcare-lms.html#collection=ehr&vendor=altera">Train</a><a class="cta" href="/programs/healthcare-lms.html#collection=ehr&vendor=altera">Get Certified</a><a class="cta" href="/apply.html?vendor=altera">Hire Talent</a></div>
                         <button class="vendor-toggle" aria-expanded="false"><i class="fa-solid fa-chevron-down"></i> Details</button>
                         <div class="vendor-details"><div class="vendor-details-inner"><div class="vendor-badges"><span class="badge">Sunrise</span></div><div>Inpatient documentation and ancillary integrations.</div></div></div>
                       </div>
@@ -302,7 +311,7 @@
                         <h4 class="vendor-name">athenahealth</h4>
                         <div class="vendor-meta">Presence across care settings</div>
                         <div class="vendor-tags"><span class="tag">Inpatient</span><span class="tag">Ambulatory</span></div>
-                        <div class="cta-row"><a class="cta" href="/hexad-mastery.html#athena-training">Train</a><a class="cta" href="/program.html#cert-athena">Get Certified</a><a class="cta" href="/apply.html?vendor=athena">Hire Talent</a></div>
+                        <div class="cta-row"><a class="cta" href="/programs/healthcare-lms.html#collection=ehr&vendor=athenahealth">Train</a><a class="cta" href="/programs/healthcare-lms.html#collection=ehr&vendor=athenahealth">Get Certified</a><a class="cta" href="/apply.html?vendor=athena">Hire Talent</a></div>
                         <button class="vendor-toggle" aria-expanded="false"><i class="fa-solid fa-chevron-down"></i> Details</button>
                         <div class="vendor-details"><div class="vendor-details-inner"><div class="vendor-badges"><span class="badge">RCM</span><span class="badge">Cloud</span></div><div>Outpatient strength with broader integrations.</div></div></div>
                       </div>
@@ -318,7 +327,7 @@
                         <h4 class="vendor-name">Praxis EMR</h4>
                         <div class="vendor-meta">AI‑driven, template‑free; small to mid‑sized practices</div>
                         <div class="vendor-tags"><span class="tag">Ambulatory</span><span class="tag">AI</span></div>
-                        <div class="cta-row"><a class="cta" href="/hexad-mastery.html#praxis-training">Train</a><a class="cta" href="/program.html#cert-praxis">Get Certified</a><a class="cta" href="/apply.html?vendor=praxis">Hire Talent</a></div>
+                        <div class="cta-row"><a class="cta" href="/programs/healthcare-lms.html#collection=ehr&vendor=praxis">Train</a><a class="cta" href="/programs/healthcare-lms.html#collection=ehr&vendor=praxis">Get Certified</a><a class="cta" href="/apply.html?vendor=praxis">Hire Talent</a></div>
                         <button class="vendor-toggle" aria-expanded="false"><i class="fa-solid fa-chevron-down"></i> Details</button>
                         <div class="vendor-details"><div class="vendor-details-inner"><div class="vendor-badges"><span class="badge">Concept Processing</span></div><div>Template‑free charting; accelerates documentation over time.</div></div></div>
                       </div>
@@ -326,7 +335,7 @@
                         <h4 class="vendor-name">Epic</h4>
                         <div class="vendor-meta">Comprehensive suite; MyChart portal</div>
                         <div class="vendor-tags"><span class="tag">Ambulatory</span><span class="tag">Inpatient</span></div>
-                        <div class="cta-row"><a class="cta" href="/hexad-mastery.html#epic-training">Train</a><a class="cta" href="/program.html#cert-epic">Get Certified</a><a class="cta" href="/apply.html?vendor=epic">Hire Talent</a></div>
+                        <div class="cta-row"><a class="cta" href="/programs/healthcare-lms.html#collection=ehr&vendor=epic">Train</a><a class="cta" href="/programs/healthcare-lms.html#collection=ehr&vendor=epic">Get Certified</a><a class="cta" href="/apply.html?vendor=epic">Hire Talent</a></div>
                         <button class="vendor-toggle" aria-expanded="false"><i class="fa-solid fa-chevron-down"></i> Details</button>
                         <div class="vendor-details"><div class="vendor-details-inner"><div class="vendor-badges"><span class="badge">MyChart</span><span class="badge">FHIR</span></div><div>Strong outpatient workflows with tight inpatient ties.</div></div></div>
                       </div>
@@ -334,7 +343,7 @@
                         <h4 class="vendor-name">Oracle Cerner</h4>
                         <div class="vendor-meta">Ambulatory and population health</div>
                         <div class="vendor-tags"><span class="tag">Ambulatory</span></div>
-                        <div class="cta-row"><a class="cta" href="/hexad-mastery.html#cerner-training">Train</a><a class="cta" href="/program.html#cert-cerner">Get Certified</a><a class="cta" href="/apply.html?vendor=cerner">Hire Talent</a></div>
+                        <div class="cta-row"><a class="cta" href="/programs/healthcare-lms.html#collection=ehr&vendor=cerner">Train</a><a class="cta" href="/programs/healthcare-lms.html#collection=ehr&vendor=cerner">Get Certified</a><a class="cta" href="/apply.html?vendor=cerner">Hire Talent</a></div>
                         <button class="vendor-toggle" aria-expanded="false"><i class="fa-solid fa-chevron-down"></i> Details</button>
                         <div class="vendor-details"><div class="vendor-details-inner"><div class="vendor-badges"><span class="badge">Population Health</span></div><div>Ambulatory modules and care management.</div></div></div>
                       </div>
@@ -342,7 +351,7 @@
                         <h4 class="vendor-name">CPSI</h4>
                         <div class="vendor-meta">Evident Thrive for smaller facilities</div>
                         <div class="vendor-tags"><span class="tag">Ambulatory</span><span class="tag">Community</span></div>
-                        <div class="cta-row"><a class="cta" href="/hexad-mastery.html#cpsi-training">Train</a><a class="cta" href="/program.html#cert-cpsi">Get Certified</a><a class="cta" href="/apply.html?vendor=cpsi">Hire Talent</a></div>
+                        <div class="cta-row"><a class="cta" href="/programs/healthcare-lms.html#collection=ehr&vendor=cpsi">Train</a><a class="cta" href="/programs/healthcare-lms.html#collection=ehr&vendor=cpsi">Get Certified</a><a class="cta" href="/apply.html?vendor=cpsi">Hire Talent</a></div>
                         <button class="vendor-toggle" aria-expanded="false"><i class="fa-solid fa-chevron-down"></i> Details</button>
                         <div class="vendor-details"><div class="vendor-details-inner"><div class="vendor-badges"><span class="badge">Thrive</span></div><div>Ambulatory options for community care.</div></div></div>
                       </div>
@@ -350,7 +359,7 @@
                         <h4 class="vendor-name">eClinicalWorks</h4>
                         <div class="vendor-meta">Telehealth and patient engagement</div>
                         <div class="vendor-tags"><span class="tag">Ambulatory</span></div>
-                        <div class="cta-row"><a class="cta" href="/hexad-mastery.html#ecw-training">Train</a><a class="cta" href="/program.html#cert-ecw">Get Certified</a><a class="cta" href="/apply.html?vendor=ecw">Hire Talent</a></div>
+                        <div class="cta-row"><a class="cta" href="/programs/healthcare-lms.html#collection=ehr&vendor=eclinicalworks">Train</a><a class="cta" href="/programs/healthcare-lms.html#collection=ehr&vendor=eclinicalworks">Get Certified</a><a class="cta" href="/apply.html?vendor=ecw">Hire Talent</a></div>
                         <button class="vendor-toggle" aria-expanded="false"><i class="fa-solid fa-chevron-down"></i> Details</button>
                         <div class="vendor-details"><div class="vendor-details-inner"><div class="vendor-badges"><span class="badge">Telehealth</span></div><div>Strong patient portal & virtual care tools.</div></div></div>
                       </div>
@@ -358,7 +367,7 @@
                         <h4 class="vendor-name">Athenahealth</h4>
                         <div class="vendor-meta">Cloud‑based; strong RCM</div>
                         <div class="vendor-tags"><span class="tag">Ambulatory</span></div>
-                        <div class="cta-row"><a class="cta" href="/hexad-mastery.html#athena-training">Train</a><a class="cta" href="/program.html#cert-athena">Get Certified</a><a class="cta" href="/apply.html?vendor=athena">Hire Talent</a></div>
+                        <div class="cta-row"><a class="cta" href="/programs/healthcare-lms.html#collection=ehr&vendor=athenahealth">Train</a><a class="cta" href="/programs/healthcare-lms.html#collection=ehr&vendor=athenahealth">Get Certified</a><a class="cta" href="/apply.html?vendor=athena">Hire Talent</a></div>
                         <button class="vendor-toggle" aria-expanded="false"><i class="fa-solid fa-chevron-down"></i> Details</button>
                         <div class="vendor-details"><div class="vendor-details-inner"><div class="vendor-badges"><span class="badge">RCM</span><span class="badge">Cloud</span></div><div>End‑to‑end practice management & connectivity.</div></div></div>
                       </div>
@@ -366,7 +375,7 @@
                         <h4 class="vendor-name">Allscripts Veradigm</h4>
                         <div class="vendor-meta">Open platform; analytics</div>
                         <div class="vendor-tags"><span class="tag">Ambulatory</span></div>
-                        <div class="cta-row"><a class="cta" href="/hexad-mastery.html#veradigm-training">Train</a><a class="cta" href="/program.html#cert-veradigm">Get Certified</a><a class="cta" href="/apply.html?vendor=veradigm">Hire Talent</a></div>
+                        <div class="cta-row"><a class="cta" href="/programs/healthcare-lms.html#collection=ehr&vendor=veradigm">Train</a><a class="cta" href="/programs/healthcare-lms.html#collection=ehr&vendor=veradigm">Get Certified</a><a class="cta" href="/apply.html?vendor=veradigm">Hire Talent</a></div>
                         <button class="vendor-toggle" aria-expanded="false"><i class="fa-solid fa-chevron-down"></i> Details</button>
                         <div class="vendor-details"><div class="vendor-details-inner"><div class="vendor-badges"><span class="badge">Open Platform</span></div><div>Interoperability and analytics focus.</div></div></div>
                       </div>
@@ -374,7 +383,7 @@
                         <h4 class="vendor-name">NextGen Healthcare</h4>
                         <div class="vendor-meta">Specialty‑focused workflows</div>
                         <div class="vendor-tags"><span class="tag">Ambulatory</span></div>
-                        <div class="cta-row"><a class="cta" href="/hexad-mastery.html#nextgen-training">Train</a><a class="cta" href="/program.html#cert-nextgen">Get Certified</a><a class="cta" href="/apply.html?vendor=nextgen">Hire Talent</a></div>
+                        <div class="cta-row"><a class="cta" href="/programs/healthcare-lms.html#collection=ehr&vendor=nextgen">Train</a><a class="cta" href="/programs/healthcare-lms.html#collection=ehr&vendor=nextgen">Get Certified</a><a class="cta" href="/apply.html?vendor=nextgen">Hire Talent</a></div>
                         <button class="vendor-toggle" aria-expanded="false"><i class="fa-solid fa-chevron-down"></i> Details</button>
                         <div class="vendor-details"><div class="vendor-details-inner"><div class="vendor-badges"><span class="badge">Specialty</span></div><div>Customizable specialty templates and flows.</div></div></div>
                       </div>
@@ -382,7 +391,7 @@
                         <h4 class="vendor-name">Meditech</h4>
                         <div class="vendor-meta">Ambulatory extensions to Expanse</div>
                         <div class="vendor-tags"><span class="tag">Ambulatory</span></div>
-                        <div class="cta-row"><a class="cta" href="/hexad-mastery.html#meditech-training">Train</a><a class="cta" href="/program.html#cert-meditech">Get Certified</a><a class="cta" href="/apply.html?vendor=meditech">Hire Talent</a></div>
+                        <div class="cta-row"><a class="cta" href="/programs/healthcare-lms.html#collection=ehr&vendor=meditech">Train</a><a class="cta" href="/programs/healthcare-lms.html#collection=ehr&vendor=meditech">Get Certified</a><a class="cta" href="/apply.html?vendor=meditech">Hire Talent</a></div>
                         <button class="vendor-toggle" aria-expanded="false"><i class="fa-solid fa-chevron-down"></i> Details</button>
                         <div class="vendor-details"><div class="vendor-details-inner"><div class="vendor-badges"><span class="badge">Expanse Ambulatory</span></div><div>Integrated ambulatory module with inpatient Expanse.</div></div></div>
                       </div>
@@ -390,7 +399,7 @@
                         <h4 class="vendor-name">Practice Fusion</h4>
                         <div class="vendor-meta">Cloud EHR for small practices</div>
                         <div class="vendor-tags"><span class="tag">Ambulatory</span></div>
-                        <div class="cta-row"><a class="cta" href="/hexad-mastery.html#pf-training">Train</a><a class="cta" href="/program.html#cert-practice-fusion">Get Certified</a><a class="cta" href="/apply.html?vendor=practice-fusion">Hire Talent</a></div>
+                        <div class="cta-row"><a class="cta" href="/programs/healthcare-lms.html#collection=ehr&vendor=practice%20fusion">Train</a><a class="cta" href="/programs/healthcare-lms.html#collection=ehr&vendor=practice%20fusion">Get Certified</a><a class="cta" href="/apply.html?vendor=practice-fusion">Hire Talent</a></div>
                         <button class="vendor-toggle" aria-expanded="false"><i class="fa-solid fa-chevron-down"></i> Details</button>
                         <div class="vendor-details"><div class="vendor-details-inner"><div class="vendor-badges"><span class="badge">Cloud</span></div><div>Lightweight, easy onboarding for independents.</div></div></div>
                       </div>
@@ -405,7 +414,7 @@
                         <h4 class="vendor-name">Clinical Documentation</h4>
                         <div class="vendor-meta">Progress notes, H&P, discharge summaries; template‑free and templated workflows</div>
                         <div class="vendor-tags"><span class="tag">Notes</span><span class="tag">SmartTools</span><span class="tag">Scribes</span></div>
-                        <div class="cta-row"><a class="cta" href="/hexad-mastery.html#doc-training">Train</a><a class="cta" href="/program.html#cert-docs">Get Certified</a><a class="cta" href="/apply.html?vendor=docs">Hire Talent</a></div>
+                        <div class="cta-row"><a class="cta" href="/programs/healthcare-lms.html#collection=ehr&q=clinical%20documentation">Train</a><a class="cta" href="/programs/healthcare-lms.html#collection=ehr&q=clinical%20documentation">Get Certified</a><a class="cta" href="/apply.html?vendor=docs">Hire Talent</a></div>
                         <button class="vendor-toggle" aria-expanded="false"><i class="fa-solid fa-chevron-down"></i> Details</button>
                         <div class="vendor-details"><div class="vendor-details-inner"><div>Capabilities: problem lists, macros, dictation/voice, ambient AI; compliance prompts.</div></div></div>
                       </div>
@@ -413,7 +422,7 @@
                         <h4 class="vendor-name">Orders & CPOE</h4>
                         <div class="vendor-meta">Order entry for labs, imaging, medications with clinical decision support</div>
                         <div class="vendor-tags"><span class="tag">CPOE</span><span class="tag">Order Sets</span><span class="tag">CDS</span></div>
-                        <div class="cta-row"><a class="cta" href="/hexad-mastery.html#cpoe-training">Train</a><a class="cta" href="/program.html#cert-cpoe">Get Certified</a><a class="cta" href="/apply.html?vendor=cpoe">Hire Talent</a></div>
+                        <div class="cta-row"><a class="cta" href="/programs/healthcare-lms.html#collection=ehr&q=cpoe">Train</a><a class="cta" href="/programs/healthcare-lms.html#collection=ehr&q=cpoe">Get Certified</a><a class="cta" href="/apply.html?vendor=cpoe">Hire Talent</a></div>
                         <button class="vendor-toggle" aria-expanded="false"><i class="fa-solid fa-chevron-down"></i> Details</button>
                         <div class="vendor-details"><div class="vendor-details-inner"><div>Includes ePrescribing, formulary checks, drug interactions, lab/radiology protocols.</div></div></div>
                       </div>
@@ -421,7 +430,7 @@
                         <h4 class="vendor-name">Results & Imaging</h4>
                         <div class="vendor-meta">Lab results, radiology reports, cardiology waveforms with trending and flags</div>
                         <div class="vendor-tags"><span class="tag">Lab/Rad</span><span class="tag">Trending</span><span class="tag">Notifications</span></div>
-                        <div class="cta-row"><a class="cta" href="/hexad-mastery.html#results-training">Train</a><a class="cta" href="/program.html#cert-results">Get Certified</a><a class="cta" href="/apply.html?vendor=results">Hire Talent</a></div>
+                        <div class="cta-row"><a class="cta" href="/programs/healthcare-lms.html#collection=ehr&q=results">Train</a><a class="cta" href="/programs/healthcare-lms.html#collection=ehr&q=results">Get Certified</a><a class="cta" href="/apply.html?vendor=results">Hire Talent</a></div>
                         <button class="vendor-toggle" aria-expanded="false"><i class="fa-solid fa-chevron-down"></i> Details</button>
                         <div class="vendor-details"><div class="vendor-details-inner"><div>Result acknowledgment, abnormal result notifications, image viewers and links to PACS/VNA.</div></div></div>
                       </div>
@@ -433,21 +442,203 @@
                 </div>
               </div>
             </div>
-            <div class="subcard"><div class="subcard-head"><div class="subcard-title">Population Health Management Services</div><i class="fa-solid fa-chevron-down"></i></div><div class="subcard-body"><ul class="list"><li><i class="fa-solid fa-check"></i><span>Care gaps, risk stratification</span></li></ul></div></div>
-            <div class="subcard"><div class="subcard-head"><div class="subcard-title">Specialty Information Management Systems</div><i class="fa-solid fa-chevron-down"></i></div><div class="subcard-body"><ul class="list"><li><i class="fa-solid fa-check"></i><span>Oncology, cardiology, behavioral health</span></li></ul></div></div>
-            <div class="subcard"><div class="subcard-head"><div class="subcard-title">PACS & VNA</div><i class="fa-solid fa-chevron-down"></i></div><div class="subcard-body"><ul class="list"><li><i class="fa-solid fa-check"></i><span>DICOM routing, imaging archives</span></li></ul></div></div>
-            <div class="subcard"><div class="subcard-head"><div class="subcard-title">Mobile Health Applications</div><i class="fa-solid fa-chevron-down"></i></div><div class="subcard-body"><ul class="list"><li><i class="fa-solid fa-check"></i><span>Clinician mobility, patient apps</span></li></ul></div></div>
-            <div class="subcard"><div class="subcard-head"><div class="subcard-title">HCIT Integration Systems</div><i class="fa-solid fa-chevron-down"></i></div><div class="subcard-body"><ul class="list"><li><i class="fa-solid fa-check"></i><span>Interfaces, HL7, FHIR APIs</span></li></ul></div></div>
-            <div class="subcard"><div class="subcard-head"><div class="subcard-title">Telehealth Solutions</div><i class="fa-solid fa-chevron-down"></i></div><div class="subcard-body"><ul class="list"><li><i class="fa-solid fa-check"></i><span>Virtual visits, RPM, billing</span></li></ul></div></div>
-            <div class="subcard"><div class="subcard-head"><div class="subcard-title">Medical Image Analysis Systems</div><i class="fa-solid fa-chevron-down"></i></div><div class="subcard-body"><ul class="list"><li><i class="fa-solid fa-check"></i><span>AI/ML diagnostics</span></li></ul></div></div>
-            <div class="subcard"><div class="subcard-head"><div class="subcard-title">Laboratory Information Systems</div><i class="fa-solid fa-chevron-down"></i></div><div class="subcard-body"><ul class="list"><li><i class="fa-solid fa-check"></i><span>Specimen, analyzers, results</span></li></ul></div></div>
-            <div class="subcard"><div class="subcard-head"><div class="subcard-title">Practice Management Systems</div><i class="fa-solid fa-chevron-down"></i></div><div class="subcard-body"><ul class="list"><li><i class="fa-solid fa-check"></i><span>Scheduling, charge capture</span></li></ul></div></div>
-            <div class="subcard"><div class="subcard-head"><div class="subcard-title">Clinical Decision Support Systems</div><i class="fa-solid fa-chevron-down"></i></div><div class="subcard-body"><ul class="list"><li><i class="fa-solid fa-check"></i><span>Guidelines, alerts, order sets</span></li></ul></div></div>
-            <div class="subcard"><div class="subcard-head"><div class="subcard-title">Computerized Physician Order Entry Systems</div><i class="fa-solid fa-chevron-down"></i></div><div class="subcard-body"><ul class="list"><li><i class="fa-solid fa-check"></i><span>Inpatient/outpatient orders</span></li></ul></div></div>
-            <div class="subcard"><div class="subcard-head"><div class="subcard-title">Cardiovascular Information Systems</div><i class="fa-solid fa-chevron-down"></i></div><div class="subcard-body"><ul class="list"><li><i class="fa-solid fa-check"></i><span>Echo, cath lab</span></li></ul></div></div>
-            <div class="subcard"><div class="subcard-head"><div class="subcard-title">Patient Registry Software</div><i class="fa-solid fa-chevron-down"></i></div><div class="subcard-body"><ul class="list"><li><i class="fa-solid fa-check"></i><span>Quality outcomes tracking</span></li></ul></div></div>
-            <div class="subcard"><div class="subcard-head"><div class="subcard-title">Infection Surveillance Solutions</div><i class="fa-solid fa-chevron-down"></i></div><div class="subcard-body"><ul class="list"><li><i class="fa-solid fa-check"></i><span>HAI detection & alerts</span></li></ul></div></div>
-            <div class="subcard"><div class="subcard-head"><div class="subcard-title">Radiation Dose Management Solutions</div><i class="fa-solid fa-chevron-down"></i></div><div class="subcard-body"><ul class="list"><li><i class="fa-solid fa-check"></i><span>Dose capture & analytics</span></li></ul></div></div>
+            <div class="subcard">
+              <div class="subcard-head"><div class="subcard-title">Population Health Management Services</div><i class="fa-solid fa-chevron-down"></i></div>
+              <div class="subcard-body">
+                <div class="switch-row" style="margin:2px 0 10px; display:flex; gap:8px; flex-wrap:wrap; align-items:center;">
+                  <span style="font-size:12px; color:#64748b;">View:</span>
+                  <button class="pill active" data-popview="gaps" type="button">Care Gaps</button>
+                  <button class="pill" data-popview="attribution" type="button">Attribution & Registries</button>
+                  <button class="pill" data-popview="quality" type="button">Quality Measures & SDOH</button>
+                  <button class="pill" data-popview="outcomes" type="button">Outcomes</button>
+                  <button class="pill" data-popview="admin" type="button">Admin Simplification</button>
+                </div>
+
+                <div class="subcard" data-pop="gaps" style="margin-top:8px;">
+                  <div class="subcard-head"><div class="subcard-title">Care Gaps & Risk Stratification</div><i class="fa-solid fa-chevron-down"></i></div>
+                  <div class="subcard-body">
+                    <div class="vendor-grid">
+                      <div class="vendor-card">
+                        <h4 class="vendor-name">Gap Identification</h4>
+                        <div class="vendor-meta">Evidence‑based gap lists by patient panel and condition</div>
+                        <div class="vendor-tags"><span class="tag">Population Health</span><span class="tag">Analytics</span></div>
+                        <div class="cta-row"><a class="cta" href="/programs/healthcare-lms.html#collection=analytics&q=care%20gaps">Train</a><a class="cta" href="/programs/healthcare-lms.html#collection=analytics&q=care%20gaps">Get Certified</a><a class="cta" href="/apply.html?vendor=ph-gaps">Hire Talent</a></div>
+                        <button class="vendor-toggle" aria-expanded="false"><i class="fa-solid fa-chevron-down"></i> Details</button>
+                        <div class="vendor-details"><div class="vendor-details-inner"><ul class="list"><li><i class="fa-solid fa-check"></i><span>Preventive care gaps (vaccines, screenings), chronic care gaps</span></li><li><i class="fa-solid fa-check"></i><span>Panel‑level views with drill‑down to patient outreach lists</span></li><li><i class="fa-solid fa-check"></i><span>Outcome impact: higher prevention rates, early detection</span></li><li><i class="fa-solid fa-check"></i><span>Admin simplification: auto‑refreshed measures, exportable lists</span></li></ul></div></div>
+                      </div>
+                      <div class="vendor-card">
+                        <h4 class="vendor-name">Risk Stratification</h4>
+                        <div class="vendor-meta">Risk models to prioritize outreach (e.g., HCC, LACE, readmission)</div>
+                        <div class="vendor-tags"><span class="tag">Risk</span><span class="tag">Models</span></div>
+                        <div class="cta-row"><a class="cta" href="/programs/healthcare-lms.html#collection=analytics&q=risk%20stratification">Train</a><a class="cta" href="/programs/healthcare-lms.html#collection=analytics&q=risk%20stratification">Get Certified</a><a class="cta" href="/apply.html?vendor=ph-risk">Hire Talent</a></div>
+                        <button class="vendor-toggle" aria-expanded="false"><i class="fa-solid fa-chevron-down"></i> Details</button>
+                        <div class="vendor-details"><div class="vendor-details-inner"><ul class="list"><li><i class="fa-solid fa-check"></i><span>Segment by risk tier and assign care management</span></li><li><i class="fa-solid fa-check"></i><span>Social risk factors and utilization patterns</span></li><li><i class="fa-solid fa-check"></i><span>Outcome impact: targeted interventions, fewer avoidable ED visits</span></li><li><i class="fa-solid fa-check"></i><span>Admin simplification: standardized risk engines, documented criteria</span></li></ul></div></div>
+                      </div>
+                      <div class="vendor-card">
+                        <h4 class="vendor-name">Care Pathways & Outreach</h4>
+                        <div class="vendor-meta">Automated outreach by gap and risk tier; multi‑channel</div>
+                        <div class="vendor-tags"><span class="tag">Outreach</span><span class="tag">Automation</span></div>
+                        <div class="cta-row"><a class="cta" href="/programs/healthcare-lms.html#collection=analytics&q=outreach">Train</a><a class="cta" href="/programs/healthcare-lms.html#collection=analytics&q=outreach">Get Certified</a><a class="cta" href="/apply.html?vendor=ph-outreach">Hire Talent</a></div>
+                        <button class="vendor-toggle" aria-expanded="false"><i class="fa-solid fa-chevron-down"></i> Details</button>
+                        <div class="vendor-details"><div class="vendor-details-inner"><ul class="list"><li><i class="fa-solid fa-check"></i><span>Text/email/IVR; scheduling links and closed‑loop documentation</span></li><li><i class="fa-solid fa-check"></i><span>Outcome impact: faster closure of gaps</span></li><li><i class="fa-solid fa-check"></i><span>Admin simplification: templates, batch campaigns, audit trails</span></li></ul></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="subcard" data-pop="attribution" style="margin-top:8px;">
+                  <div class="subcard-head"><div class="subcard-title">Attribution, Registries & Panel Management</div><i class="fa-solid fa-chevron-down"></i></div>
+                  <div class="subcard-body">
+                    <div class="vendor-grid">
+                      <div class="vendor-card">
+                        <h4 class="vendor-name">Attribution Models</h4>
+                        <div class="vendor-meta">ACO, payer contract, and primary‑care attribution</div>
+                        <div class="vendor-tags"><span class="tag">Attribution</span><span class="tag">Contracts</span></div>
+                        <div class="cta-row"><a class="cta" href="/programs/healthcare-lms.html#collection=analytics&q=attribution">Train</a><a class="cta" href="/programs/healthcare-lms.html#collection=analytics&q=attribution">Get Certified</a><a class="cta" href="/apply.html?vendor=ph-attribution">Hire Talent</a></div>
+                        <button class="vendor-toggle" aria-expanded="false"><i class="fa-solid fa-chevron-down"></i> Details</button>
+                        <div class="vendor-details"><div class="vendor-details-inner"><ul class="list"><li><i class="fa-solid fa-check"></i><span>Rule sets, look‑back periods, plurality logic</span></li><li><i class="fa-solid fa-check"></i><span>Outcome impact: clearer accountability, contract alignment</span></li><li><i class="fa-solid fa-check"></i><span>Admin simplification: versioned rules, auditability</span></li></ul></div></div>
+                      </div>
+                      <div class="vendor-card">
+                        <h4 class="vendor-name">Registries</h4>
+                        <div class="vendor-meta">Condition and specialty registries for monitoring and reporting</div>
+                        <div class="vendor-tags"><span class="tag">Registries</span><span class="tag">Monitoring</span></div>
+                        <div class="cta-row"><a class="cta" href="/programs/healthcare-lms.html#collection=analytics&q=registry">Train</a><a class="cta" href="/programs/healthcare-lms.html#collection=analytics&q=registry">Get Certified</a><a class="cta" href="/apply.html?vendor=ph-registries">Hire Talent</a></div>
+                        <button class="vendor-toggle" aria-expanded="false"><i class="fa-solid fa-chevron-down"></i> Details</button>
+                        <div class="vendor-details"><div class="vendor-details-inner"><ul class="list"><li><i class="fa-solid fa-check"></i><span>Case finding, longitudinal tracking, submissions</span></li><li><i class="fa-solid fa-check"></i><span>Outcome impact: transparency, targeted improvement</span></li><li><i class="fa-solid fa-check"></i><span>Admin simplification: mappings, automation</span></li></ul></div></div>
+                      </div>
+                      <div class="vendor-card">
+                        <h4 class="vendor-name">Panel Management</h4>
+                        <div class="vendor-meta">Roster integrity and PCP assignment management</div>
+                        <div class="vendor-tags"><span class="tag">Panels</span><span class="tag">Integrity</span></div>
+                        <div class="cta-row"><a class="cta" href="/programs/healthcare-lms.html#collection=analytics&q=panel%20management">Train</a><a class="cta" href="/programs/healthcare-lms.html#collection=analytics&q=panel%20management">Get Certified</a><a class="cta" href="/apply.html?vendor=ph-panels">Hire Talent</a></div>
+                        <button class="vendor-toggle" aria-expanded="false"><i class="fa-solid fa-chevron-down"></i> Details</button>
+                        <div class="vendor-details"><div class="vendor-details-inner"><ul class="list"><li><i class="fa-solid fa-check"></i><span>Merge/cleanse, leakage analysis</span></li><li><i class="fa-solid fa-check"></i><span>Outcome impact: accurate denominators, fair benchmarking</span></li><li><i class="fa-solid fa-check"></i><span>Admin simplification: feeds, stewardship workflows</span></li></ul></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="subcard" data-pop="quality" style="margin-top:8px;">
+                  <div class="subcard-head"><div class="subcard-title">Quality Measures & SDOH Integration</div><i class="fa-solid fa-chevron-down"></i></div>
+                  <div class="subcard-body">
+                    <div class="vendor-grid">
+                      <div class="vendor-card">
+                        <h4 class="vendor-name">HEDIS & MIPS Measure Engines</h4>
+                        <div class="vendor-meta">Standardized definitions with transparent logic</div>
+                        <div class="vendor-tags"><span class="tag">HEDIS</span><span class="tag">MIPS</span></div>
+                        <div class="cta-row"><a class="cta" href="/programs/healthcare-lms.html#collection=analytics&q=hedis">Train</a><a class="cta" href="/programs/healthcare-lms.html#collection=analytics&q=MIPS">Get Certified</a><a class="cta" href="/apply.html?vendor=ph-measures">Hire Talent</a></div>
+                        <button class="vendor-toggle" aria-expanded="false"><i class="fa-solid fa-chevron-down"></i> Details</button>
+                        <div class="vendor-details"><div class="vendor-details-inner"><ul class="list"><li><i class="fa-solid fa-check"></i><span>Versioned specs, numerator/denominator tracing</span></li><li><i class="fa-solid fa-check"></i><span>Outcome impact: reliable reporting and incentives</span></li><li><i class="fa-solid fa-check"></i><span>Admin simplification: automated runs, exports</span></li></ul></div></div>
+                      </div>
+                      <div class="vendor-card">
+                        <h4 class="vendor-name">SDOH Integration</h4>
+                        <div class="vendor-meta">Ingest and apply social determinants in risk and outreach</div>
+                        <div class="vendor-tags"><span class="tag">SDOH</span><span class="tag">FHIR</span></div>
+                        <div class="cta-row"><a class="cta" href="/programs/healthcare-lms.html#collection=interop&q=SDOH">Train</a><a class="cta" href="/programs/healthcare-lms.html#collection=analytics&q=SDOH">Get Certified</a><a class="cta" href="/apply.html?vendor=ph-sdoh">Hire Talent</a></div>
+                        <button class="vendor-toggle" aria-expanded="false"><i class="fa-solid fa-chevron-down"></i> Details</button>
+                        <div class="vendor-details"><div class="vendor-details-inner"><ul class="list"><li><i class="fa-solid fa-check"></i><span>Screening tools, coding (Z codes), community resource referrals</span></li><li><i class="fa-solid fa-check"></i><span>Outcome impact: targeted social support</span></li><li><i class="fa-solid fa-check"></i><span>Admin simplification: interoperable intake and documentation</span></li></ul></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="subcard" data-pop="outcomes" style="margin-top:8px;">
+                  <div class="subcard-head"><div class="subcard-title">Outcomes Improvement</div><i class="fa-solid fa-chevron-down"></i></div>
+                  <div class="subcard-body">
+                    <div class="vendor-grid">
+                      <div class="vendor-card">
+                        <h4 class="vendor-name">Outcomes Dashboards</h4>
+                        <div class="vendor-meta">KPIs across populations and contracts</div>
+                        <div class="vendor-tags"><span class="tag">Dashboards</span><span class="tag">KPIs</span></div>
+                        <div class="cta-row"><a class="cta" href="/programs/healthcare-lms.html#collection=analytics&q=outcomes">Train</a><a class="cta" href="/programs/healthcare-lms.html#collection=analytics&q=outcomes">Get Certified</a><a class="cta" href="/apply.html?vendor=ph-dash">Hire Talent</a></div>
+                        <button class="vendor-toggle" aria-expanded="false"><i class="fa-solid fa-chevron-down"></i> Details</button>
+                        <div class="vendor-details"><div class="vendor-details-inner"><ul class="list"><li><i class="fa-solid fa-check"></i><span>Trend lines, benchmarks, drill‑downs</span></li><li><i class="fa-solid fa-check"></i><span>Outcome impact: transparent performance and faster course‑correction</span></li><li><i class="fa-solid fa-check"></i><span>Admin simplification: scheduled reports, governance prompts</span></li></ul></div></div>
+                      </div>
+                      <div class="vendor-card">
+                        <h4 class="vendor-name">Readmissions Reduction</h4>
+                        <div class="vendor-meta">30‑day readmission tracking and drivers</div>
+                        <div class="vendor-tags"><span class="tag">Readmissions</span><span class="tag">Transitions</span></div>
+                        <div class="cta-row"><a class="cta" href="/programs/healthcare-lms.html#collection=analytics&q=readmissions">Train</a><a class="cta" href="/programs/healthcare-lms.html#collection=analytics&q=readmissions">Get Certified</a><a class="cta" href="/apply.html?vendor=ph-readmit">Hire Talent</a></div>
+                        <button class="vendor-toggle" aria-expanded="false"><i class="fa-solid fa-chevron-down"></i> Details</button>
+                        <div class="vendor-details"><div class="vendor-details-inner"><ul class="list"><li><i class="fa-solid fa-check"></i><span>Risk flags, hot‑spot units, post‑discharge outreach</span></li><li><i class="fa-solid fa-check"></i><span>Outcome impact: fewer avoidable readmissions</span></li><li><i class="fa-solid fa-check"></i><span>Admin simplification: care pathway templates</span></li></ul></div></div>
+                      </div>
+                      <div class="vendor-card">
+                        <h4 class="vendor-name">Preventive Care Uptake</h4>
+                        <div class="vendor-meta">Track uptake by program and demographic</div>
+                        <div class="vendor-tags"><span class="tag">Prevention</span><span class="tag">Equity</span></div>
+                        <div class="cta-row"><a class="cta" href="/programs/healthcare-lms.html#collection=analytics&q=prevention">Train</a><a class="cta" href="/programs/healthcare-lms.html#collection=analytics&q=prevention">Get Certified</a><a class="cta" href="/apply.html?vendor=ph-prevent">Hire Talent</a></div>
+                        <button class="vendor-toggle" aria-expanded="false"><i class="fa-solid fa-chevron-down"></i> Details</button>
+                        <div class="vendor-details"><div class="vendor-details-inner"><ul class="list"><li><i class="fa-solid fa-check"></i><span>Vaccinations, screenings, care gap closure rate</span></li><li><i class="fa-solid fa-check"></i><span>Outcome impact: healthier populations</span></li><li><i class="fa-solid fa-check"></i><span>Admin simplification: automated reminders</span></li></ul></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="subcard" data-pop="admin" style="margin-top:8px;">
+                  <div class="subcard-head"><div class="subcard-title">Administrative Simplification</div><i class="fa-solid fa-chevron-down"></i></div>
+                  <div class="subcard-body">
+                    <div class="vendor-grid">
+                      <div class="vendor-card">
+                        <h4 class="vendor-name">Automated Outreach</h4>
+                        <div class="vendor-meta">Campaigns with templated content and scheduling</div>
+                        <div class="vendor-tags"><span class="tag">Automation</span><span class="tag">Outreach</span></div>
+                        <div class="cta-row"><a class="cta" href="/programs/healthcare-lms.html#collection=telemedicine&q=outreach">Train</a><a class="cta" href="/programs/healthcare-lms.html#collection=telemedicine&q=outreach">Get Certified</a><a class="cta" href="/apply.html?vendor=ph-automation">Hire Talent</a></div>
+                        <button class="vendor-toggle" aria-expanded="false"><i class="fa-solid fa-chevron-down"></i> Details</button>
+                        <div class="vendor-details"><div class="vendor-details-inner"><ul class="list"><li><i class="fa-solid fa-check"></i><span>Templates, throttling, multilingual content</span></li><li><i class="fa-solid fa-check"></i><span>Outcome impact: higher response rates</span></li><li><i class="fa-solid fa-check"></i><span>Admin simplification: batch send, tracking, escalation</span></li></ul></div></div>
+                      </div>
+                      <div class="vendor-card">
+                        <h4 class="vendor-name">Measure Calculation Automation</h4>
+                        <div class="vendor-meta">Scheduled compute with stateful versioning</div>
+                        <div class="vendor-tags"><span class="tag">Compute</span><span class="tag">Versioning</span></div>
+                        <div class="cta-row"><a class="cta" href="/programs/healthcare-lms.html#collection=analytics&q=measure%20automation">Train</a><a class="cta" href="/programs/healthcare-lms.html#collection=analytics&q=measure%20automation">Get Certified</a><a class="cta" href="/apply.html?vendor=ph-automation-measures">Hire Talent</a></div>
+                        <button class="vendor-toggle" aria-expanded="false"><i class="fa-solid fa-chevron-down"></i> Details</button>
+                        <div class="vendor-details"><div class="vendor-details-inner"><ul class="list"><li><i class="fa-solid fa-check"></i><span>Re‑runs on new data, immutable historical snapshots</span></li><li><i class="fa-solid fa-check"></i><span>Outcome impact: auditability, trust</span></li><li><i class="fa-solid fa-check"></i><span>Admin simplification: less manual recalculation</span></li></ul></div></div>
+                      </div>
+                      <div class="vendor-card">
+                        <h4 class="vendor-name">Governance & Stewardship</h4>
+                        <div class="vendor-meta">Data definitions, ownership, and change control</div>
+                        <div class="vendor-tags"><span class="tag">Governance</span><span class="tag">Stewardship</span></div>
+                        <div class="cta-row"><a class="cta" href="/programs/healthcare-lms.html#collection=analytics&q=governance">Train</a><a class="cta" href="/programs/healthcare-lms.html#collection=analytics&q=stewardship">Get Certified</a><a class="cta" href="/apply.html?vendor=ph-governance">Hire Talent</a></div>
+                        <button class="vendor-toggle" aria-expanded="false"><i class="fa-solid fa-chevron-down"></i> Details</button>
+                        <div class="vendor-details"><div class="vendor-details-inner"><ul class="list"><li><i class="fa-solid fa-check"></i><span>Data dictionaries, change logs, approval workflows</span></li><li><i class="fa-solid fa-check"></i><span>Outcome impact: consistent reporting, fewer disputes</span></li><li><i class="fa-solid fa-check"></i><span>Admin simplification: centralized stewardship playbooks</span></li></ul></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="subcard"><div class="subcard-head"><div class="subcard-title">Specialty Information Management Systems</div><i class="fa-solid fa-chevron-down"></i></div><div class="subcard-body"><ul class="list"><li><i class="fa-solid fa-check"></i><span>Oncology, cardiology, behavioral health</span></li><li><i class="fa-solid fa-check"></i><span>Subspecialty workflows and registries</span></li><li><i class="fa-solid fa-check"></i><span>Outcome impact: standardized pathways, fewer variation-induced errors</span></li><li><i class="fa-solid fa-check"></i><span>Administrative simplification: prebuilt templates, structured data capture</span></li></ul><div class="cta-row"><a class="cta" href="/programs/healthcare-lms.html#collection=ehr&q=specialty">Train</a><a class="cta" href="/programs/healthcare-lms.html#collection=ehr&q=specialty">Get Certified</a><a class="cta" href="/apply.html?vendor=specialty">Hire Talent</a></div></div></div>
+            <div class="subcard"><div class="subcard-head"><div class="subcard-title">PACS & VNA</div><i class="fa-solid fa-chevron-down"></i></div><div class="subcard-body"><ul class="list"><li><i class="fa-solid fa-check"></i><span>DICOM routing, imaging archives</span></li><li><i class="fa-solid fa-check"></i><span>Zero-footprint viewers, diagnostic workflows</span></li><li><i class="fa-solid fa-check"></i><span>Outcome impact: faster reads, enterprise image access</span></li><li><i class="fa-solid fa-check"></i><span>Administrative simplification: storage lifecycle, de-duplication</span></li></ul><div class="cta-row"><a class="cta" href="/programs/healthcare-lms.html#collection=devices&q=PACS">Train</a><a class="cta" href="/programs/healthcare-lms.html#collection=devices&q=VNA">Get Certified</a><a class="cta" href="/apply.html?vendor=pacs-vna">Hire Talent</a></div></div></div>
+            <div class="subcard"><div class="subcard-head"><div class="subcard-title">Mobile Health Applications</div><i class="fa-solid fa-chevron-down"></i></div><div class="subcard-body"><ul class="list"><li><i class="fa-solid fa-check"></i><span>Clinician mobility, patient apps</span></li><li><i class="fa-solid fa-check"></i><span>Secure messaging, offline workflows</span></li><li><i class="fa-solid fa-check"></i><span>Outcome impact: reduced delays, better patient engagement</span></li><li><i class="fa-solid fa-check"></i><span>Administrative simplification: fewer phone tags, task routing</span></li></ul><div class="cta-row"><a class="cta" href="/programs/healthcare-lms.html#collection=telemedicine&q=mobile">Train</a><a class="cta" href="/programs/healthcare-lms.html#collection=telemedicine&q=mobile">Get Certified</a><a class="cta" href="/apply.html?vendor=mobile-health">Hire Talent</a></div></div></div>
+            <div class="subcard"><div class="subcard-head"><div class="subcard-title">HCIT Integration Systems</div><i class="fa-solid fa-chevron-down"></i></div><div class="subcard-body"><ul class="list"><li><i class="fa-solid fa-check"></i><span>Interfaces, HL7, FHIR APIs</span></li><li><i class="fa-solid fa-check"></i><span>Engine routing, monitoring, error handling</span></li><li><i class="fa-solid fa-check"></i><span>Outcome impact: fewer data silos, safer handoffs</span></li><li><i class="fa-solid fa-check"></i><span>Administrative simplification: self‑service onboarding kits</span></li></ul><div class="cta-row"><a class="cta" href="/programs/healthcare-lms.html#collection=interop&q=HL7%20FHIR">Train</a><a class="cta" href="/programs/healthcare-lms.html#collection=interop&q=HL7%20FHIR">Get Certified</a><a class="cta" href="/apply.html?vendor=integration">Hire Talent</a></div></div></div>
+            <div class="subcard"><div class="subcard-head"><div class="subcard-title">Telehealth Solutions</div><i class="fa-solid fa-chevron-down"></i></div><div class="subcard-body"><ul class="list"><li><i class="fa-solid fa-check"></i><span>Virtual visits, RPM, billing</span></li><li><i class="fa-solid fa-check"></i><span>Device kits, consent, documentation</span></li><li><i class="fa-solid fa-check"></i><span>Outcome impact: increased access, fewer no‑shows</span></li><li><i class="fa-solid fa-check"></i><span>Administrative simplification: integrated scheduling & coding</span></li></ul><div class="cta-row"><a class="cta" href="/programs/healthcare-lms.html#collection=telemedicine&q=telehealth">Train</a><a class="cta" href="/programs/healthcare-lms.html#collection=telemedicine&q=telehealth">Get Certified</a><a class="cta" href="/apply.html?vendor=telehealth">Hire Talent</a></div></div></div>
+            <div class="subcard"><div class="subcard-head"><div class="subcard-title">Medical Image Analysis Systems</div><i class="fa-solid fa-chevron-down"></i></div><div class="subcard-body"><ul class="list"><li><i class="fa-solid fa-check"></i><span>AI/ML diagnostics</span></li><li><i class="fa-solid fa-check"></i><span>Radiomics, workflow triage</span></li><li><i class="fa-solid fa-check"></i><span>Outcome impact: earlier detection, faster reads</span></li><li><i class="fa-solid fa-check"></i><span>Administrative simplification: auto‑measurements, structured reporting</span></li></ul><div class="cta-row"><a class="cta" href="/programs/healthcare-lms.html#collection=analytics&q=image%20analysis">Train</a><a class="cta" href="/programs/healthcare-lms.html#collection=analytics&q=image%20analysis">Get Certified</a><a class="cta" href="/apply.html?vendor=image-ai">Hire Talent</a></div></div></div>
+            <div class="subcard"><div class="subcard-head"><div class="subcard-title">Laboratory Information Systems</div><i class="fa-solid fa-chevron-down"></i></div><div class="subcard-body"><ul class="list"><li><i class="fa-solid fa-check"></i><span>Specimen, analyzers, results</span></li><li><i class="fa-solid fa-check"></i><span>Microbiology, anatomic pathology</span></li><li><i class="fa-solid fa-check"></i><span>Outcome impact: turnaround times, fewer manual steps</span></li><li><i class="fa-solid fa-check"></i><span>Administrative simplification: instrument interfaces, auto‑resulting</span></li></ul><div class="cta-row"><a class="cta" href="/programs/healthcare-lms.html#collection=ehr&q=LIS">Train</a><a class="cta" href="/programs/healthcare-lms.html#collection=ehr&q=LIS">Get Certified</a><a class="cta" href="/apply.html?vendor=lis">Hire Talent</a></div></div></div>
+            <div class="subcard"><div class="subcard-head"><div class="subcard-title">Practice Management Systems</div><i class="fa-solid fa-chevron-down"></i></div><div class="subcard-body"><ul class="list"><li><i class="fa-solid fa-check"></i><span>Scheduling, charge capture</span></li><li><i class="fa-solid fa-check"></i><span>Eligibility, authorizations, recalls</span></li><li><i class="fa-solid fa-check"></i><span>Outcome impact: higher throughput, fewer denials</span></li><li><i class="fa-solid fa-check"></i><span>Administrative simplification: automated reminders, batch workflows</span></li></ul><div class="cta-row"><a class="cta" href="/programs/healthcare-lms.html#collection=payer&q=practice%20management">Train</a><a class="cta" href="/programs/healthcare-lms.html#collection=payer&q=practice%20management">Get Certified</a><a class="cta" href="/apply.html?vendor=practice-management">Hire Talent</a></div></div></div>
+            <div class="subcard"><div class="subcard-head"><div class="subcard-title">Clinical Decision Support Systems</div><i class="fa-solid fa-chevron-down"></i></div><div class="subcard-body"><ul class="list">
+              <li><i class="fa-solid fa-check"></i><span>Evidence-based guidelines, best-practice advisories, order sets</span></li>
+              <li><i class="fa-solid fa-check"></i><span>Medication safety: dosing checks, interactions, allergies, contraindications</span></li>
+              <li><i class="fa-solid fa-check"></i><span>Duplicate test alerts, care gap detection, risk scores (e.g., VTE, sepsis)</span></li>
+              <li><i class="fa-solid fa-check"></i><span>Contextual prompts in workflow (at chart, order, result review)</span></li>
+              <li><i class="fa-solid fa-check"></i><span>Outcome impact: fewer adverse events, reduced redundant testing, faster time-to-therapy</span></li>
+              <li><i class="fa-solid fa-check"></i><span>Administrative simplification: standardized content, auto-documentation of rationale</span></li>
+            </ul>
+            <div class="cta-row"><a class="cta" href="/programs/healthcare-lms.html#collection=ehr&q=CDS">Train</a><a class="cta" href="/programs/healthcare-lms.html#collection=ehr&q=CDS">Get Certified</a><a class="cta" href="/apply.html?vendor=cds">Hire Talent</a></div>
+            </div></div>
+            <div class="subcard"><div class="subcard-head"><div class="subcard-title">Computerized Physician Order Entry Systems</div><i class="fa-solid fa-chevron-down"></i></div><div class="subcard-body"><ul class="list">
+              <li><i class="fa-solid fa-check"></i><span>Structured order entry for labs, imaging, medications, procedures</span></li>
+              <li><i class="fa-solid fa-check"></i><span>Smart order sets with CDS integration and evidence-linked pathways</span></li>
+              <li><i class="fa-solid fa-check"></i><span>ePrescribing with formulary checks, prior auth support, substitution guidance</span></li>
+              <li><i class="fa-solid fa-check"></i><span>Order routing, STAT prioritization, turnaround tracking and acknowledgments</span></li>
+              <li><i class="fa-solid fa-check"></i><span>Outcome impact: reduced med errors, fewer delays, improved throughput</span></li>
+              <li><i class="fa-solid fa-check"></i><span>Administrative simplification: standardized templates, fewer phone/fax loops</span></li>
+            </ul>
+            <div class="cta-row"><a class="cta" href="/programs/healthcare-lms.html#collection=ehr&q=CPOE">Train</a><a class="cta" href="/programs/healthcare-lms.html#collection=ehr&q=CPOE">Get Certified</a><a class="cta" href="/apply.html?vendor=cpoe">Hire Talent</a></div>
+            </div></div>
+            <div class="subcard"><div class="subcard-head"><div class="subcard-title">Cardiovascular Information Systems</div><i class="fa-solid fa-chevron-down"></i></div><div class="subcard-body"><ul class="list"><li><i class="fa-solid fa-check"></i><span>Echo, cath lab</span></li><li><i class="fa-solid fa-check"></i><span>Structured reporting, modality integrations</span></li><li><i class="fa-solid fa-check"></i><span>Outcome impact: faster turnaround, fewer repeats</span></li><li><i class="fa-solid fa-check"></i><span>Administrative simplification: template libraries, auto‑measurements</span></li></ul><div class="cta-row"><a class="cta" href="/programs/healthcare-lms.html#collection=devices&q=CVIS">Train</a><a class="cta" href="/programs/healthcare-lms.html#collection=devices&q=CVIS">Get Certified</a><a class="cta" href="/apply.html?vendor=cvis">Hire Talent</a></div></div></div>
+            <div class="subcard"><div class="subcard-head"><div class="subcard-title">Patient Registry Software</div><i class="fa-solid fa-chevron-down"></i></div><div class="subcard-body"><ul class="list"><li><i class="fa-solid fa-check"></i><span>Quality outcomes tracking</span></li><li><i class="fa-solid fa-check"></i><span>Case finding, submission automation</span></li><li><i class="fa-solid fa-check"></i><span>Outcome impact: transparent performance, targeted improvement</span></li><li><i class="fa-solid fa-check"></i><span>Administrative simplification: prebuilt measure mappings</span></li></ul><div class="cta-row"><a class="cta" href="/programs/healthcare-lms.html#collection=analytics&q=registry">Train</a><a class="cta" href="/programs/healthcare-lms.html#collection=analytics&q=registry">Get Certified</a><a class="cta" href="/apply.html?vendor=registry">Hire Talent</a></div></div></div>
+            <div class="subcard"><div class="subcard-head"><div class="subcard-title">Infection Surveillance Solutions</div><i class="fa-solid fa-chevron-down"></i></div><div class="subcard-body"><ul class="list"><li><i class="fa-solid fa-check"></i><span>HAI detection & alerts</span></li><li><i class="fa-solid fa-check"></i><span>Antimicrobial stewardship</span></li><li><i class="fa-solid fa-check"></i><span>Outcome impact: reduced HAIs, antibiotic resistance</span></li><li><i class="fa-solid fa-check"></i><span>Administrative simplification: automated case finding/reporting</span></li></ul><div class="cta-row"><a class="cta" href="/programs/healthcare-lms.html#collection=analytics&q=infection%20surveillance">Train</a><a class="cta" href="/programs/healthcare-lms.html#collection=analytics&q=infection%20surveillance">Get Certified</a><a class="cta" href="/apply.html?vendor=infection">Hire Talent</a></div></div></div>
+            <div class="subcard"><div class="subcard-head"><div class="subcard-title">Radiation Dose Management Solutions</div><i class="fa-solid fa-chevron-down"></i></div><div class="subcard-body"><ul class="list"><li><i class="fa-solid fa-check"></i><span>Dose capture & analytics</span></li><li><i class="fa-solid fa-check"></i><span>Protocol optimization, alerting</span></li><li><i class="fa-solid fa-check"></i><span>Outcome impact: safer imaging, regulatory compliance</span></li><li><i class="fa-solid fa-check"></i><span>Administrative simplification: centralized dashboards, reporting</span></li></ul><div class="cta-row"><a class="cta" href="/programs/healthcare-lms.html#collection=devices&q=dose%20management">Train</a><a class="cta" href="/programs/healthcare-lms.html#collection=devices&q=dose%20management">Get Certified</a><a class="cta" href="/apply.html?vendor=dose-management">Hire Talent</a></div></div></div>
           </div>
         </div>
 
@@ -476,6 +667,7 @@
   <div id="s5" class="panel hidden"><div class="panel-head"><div class="panel-title"><i class="fa-solid fa-prescription-bottle-medical"></i> Section 5. Pharmacy Information Systems</div><i class="fa-solid fa-chevron-down"></i></div><div class="panel-body"><div class="subcard"><div class="subcard-head"><div class="subcard-title">Pharmacy IS</div><i class="fa-solid fa-chevron-down"></i></div><div class="subcard-body"><ul class="list"><li><i class="fa-solid fa-check"></i><span>Order verification, dispensing</span></li></ul></div></div></div></div>
 
   <div id="s6" class="panel hidden"><div class="panel-head"><div class="panel-title"><i class="fa-solid fa-share-nodes"></i> Section 6. Healthcare Interoperability Solutions</div><i class="fa-solid fa-chevron-down"></i></div><div class="panel-body"><div class="subcard"><div class="subcard-head"><div class="subcard-title">Interoperability</div><i class="fa-solid fa-chevron-down"></i></div><div class="subcard-body"><ul class="list"><li><i class="fa-solid fa-check"></i><span>HL7, FHIR, IHE, TEFCA</span></li></ul></div></div></div></div>
+  <div id="s6" class="panel hidden"><div class="panel-head"><div class="panel-title"><i class="fa-solid fa-share-nodes"></i> Section 6. Healthcare Interoperability Solutions</div><i class="fa-solid fa-chevron-down"></i></div><div class="panel-body"><div class="subcard"><div class="subcard-head"><div class="subcard-title">Interoperability</div><i class="fa-solid fa-chevron-down"></i></div><div class="subcard-body"><ul class="list"><li><i class="fa-solid fa-check"></i><span>HL7, FHIR, IHE, TEFCA</span></li></ul></div></div><div class="cta-row"><a class="cta" href="/programs/healthcare-lms.html#collection=interop&q=FHIR">Train</a><a class="cta" href="/programs/healthcare-lms.html#collection=interop&q=FHIR">Get Certified</a><a class="cta" href="/apply.html?vendor=interop">Hire Talent</a></div></div></div>
 
   <div id="s7" class="panel hidden"><div class="panel-head"><div class="panel-title"><i class="fa-solid fa-medal"></i> Section 7. Healthcare Quality Management Solutions</div><i class="fa-solid fa-chevron-down"></i></div><div class="panel-body"><div class="subcard"><div class="subcard-head"><div class="subcard-title">Quality Management</div><i class="fa-solid fa-chevron-down"></i></div><div class="subcard-body"><ul class="list"><li><i class="fa-solid fa-check"></i><span>Accreditation, incidents</span></li></ul></div></div></div></div>
 
@@ -517,9 +709,9 @@
 
   <div id="s24" class="panel hidden"><div class="panel-head"><div class="panel-title"><i class="fa-solid fa-user-injured"></i> Section 24. End User</div><i class="fa-solid fa-chevron-down"></i></div><div class="panel-body"><div class="subcard"><div class="subcard-head"><div class="subcard-title">Healthcare Providers</div><i class="fa-solid fa-chevron-down"></i></div><div class="subcard-body"><ul class="list"><li><i class="fa-regular fa-circle"></i><span>Hospitals</span></li><li><i class="fa-regular fa-circle"></i><span>Ambulatory Care Centers</span></li><li><i class="fa-regular fa-circle"></i><span>Home Healthcare Agencies & Assisted Living Facilities</span></li><li><i class="fa-regular fa-circle"></i><span>Diagnostic & Imaging Centers</span></li><li><i class="fa-regular fa-circle"></i><span>Pharmacies</span></li></ul></div></div><div class="subcard"><div class="subcard-head"><div class="subcard-title">Healthcare Payers</div><i class="fa-solid fa-chevron-down"></i></div><div class="subcard-body"><ul class="list"><li><i class="fa-regular fa-circle"></i><span>Private Payers</span></li><li><i class="fa-regular fa-circle"></i><span>Public Payers</span></li></ul></div></div></div></div>
 
-  <div id="s25" class="panel hidden"><div class="panel-head"><div class="panel-title"><i class="fa-solid fa-stethoscope"></i> Section 25. Medical Devices</div><i class="fa-solid fa-chevron-down"></i></div><div class="panel-body"><div class="subcard"><div class="subcard-head"><div class="subcard-title">Devices Informatics & Imaging</div><i class="fa-solid fa-chevron-down"></i></div><div class="subcard-body"><ul class="list"><li><i class="fa-solid fa-check"></i><span>DICOM & IHE</span></li><li><i class="fa-solid fa-check"></i><span>PACS/VNA & Imaging AI</span></li><li><i class="fa-solid fa-check"></i><span>Point-of-Care Connectivity</span></li><li><i class="fa-solid fa-check"></i><span>Regulatory & Quality (FDA, MDR, ISO 13485)</span></li></ul></div></div></div></div>
+  <div id="s25" class="panel hidden"><div class="panel-head"><div class="panel-title"><i class="fa-solid fa-stethoscope"></i> Section 25. Medical Devices</div><i class="fa-solid fa-chevron-down"></i></div><div class="panel-body"><div class="subcard"><div class="subcard-head"><div class="subcard-title">Devices Informatics & Imaging</div><i class="fa-solid fa-chevron-down"></i></div><div class="subcard-body"><ul class="list"><li><i class="fa-solid fa-check"></i><span>DICOM & IHE</span></li><li><i class="fa-solid fa-check"></i><span>PACS/VNA & Imaging AI</span></li><li><i class="fa-solid fa-check"></i><span>Point-of-Care Connectivity</span></li><li><i class="fa-solid fa-check"></i><span>Regulatory & Quality (FDA, MDR, ISO 13485)</span></li></ul></div></div><div class="cta-row"><a class="cta" href="/programs/healthcare-lms.html#collection=devices&q=PACS">Train</a><a class="cta" href="/programs/healthcare-lms.html#collection=devices&q=PACS">Get Certified</a><a class="cta" href="/apply.html?vendor=devices">Hire Talent</a></div></div></div>
 
-  <div id="s26" class="panel hidden"><div class="panel-head"><div class="panel-title"><i class="fa-solid fa-video"></i> Section 26. Telemedicine</div><i class="fa-solid fa-chevron-down"></i></div><div class="panel-body"><div class="subcard"><div class="subcard-head"><div class="subcard-title">Virtual Care Stack</div><i class="fa-solid fa-chevron-down"></i></div><div class="subcard-body"><ul class="list"><li><i class="fa-solid fa-check"></i><span>Video & Remote Monitoring</span></li><li><i class="fa-solid fa-check"></i><span>Telehealth Workflows & Billing</span></li><li><i class="fa-solid fa-check"></i><span>Licensure, Privacy & Cross‑border Compliance</span></li><li><i class="fa-solid fa-check"></i><span>Device Integration & RPM Programs</span></li></ul></div></div></div></div>
+  <div id="s26" class="panel hidden"><div class="panel-head"><div class="panel-title"><i class="fa-solid fa-video"></i> Section 26. Telemedicine</div><i class="fa-solid fa-chevron-down"></i></div><div class="panel-body"><div class="subcard"><div class="subcard-head"><div class="subcard-title">Virtual Care Stack</div><i class="fa-solid fa-chevron-down"></i></div><div class="subcard-body"><ul class="list"><li><i class="fa-solid fa-check"></i><span>Video & Remote Monitoring</span></li><li><i class="fa-solid fa-check"></i><span>Telehealth Workflows & Billing</span></li><li><i class="fa-solid fa-check"></i><span>Licensure, Privacy & Cross‑border Compliance</span></li><li><i class="fa-solid fa-check"></i><span>Device Integration & RPM Programs</span></li></ul></div></div><div class="cta-row"><a class="cta" href="/programs/healthcare-lms.html#collection=telemedicine&q=telehealth">Train</a><a class="cta" href="/programs/healthcare-lms.html#collection=telemedicine&q=telehealth">Get Certified</a><a class="cta" href="/apply.html?vendor=telemedicine">Hire Talent</a></div></div></div>
 
   <div id="s27" class="panel hidden"><div class="panel-head"><div class="panel-title"><i class="fa-solid fa-scale-balanced"></i> Section 27. Standards & Compliance</div><i class="fa-solid fa-chevron-down"></i></div><div class="panel-body"><div class="subcard"><div class="subcard-head"><div class="subcard-title">Healthcare & Data Standards</div><i class="fa-solid fa-chevron-down"></i></div><div class="subcard-body"><ul class="list"><li><i class="fa-solid fa-check"></i><span>HL7, FHIR (R4/R5), CDA</span></li><li><i class="fa-solid fa-check"></i><span>DICOM & IHE Profiles</span></li><li><i class="fa-solid fa-check"></i><span>USCDI, TEFCA, ONC Certification</span></li><li><i class="fa-solid fa-check"></i><span>HIPAA, HITECH, 42 CFR Part 2</span></li><li><i class="fa-solid fa-check"></i><span>GDPR, ISO 27001/27701, NIST CSF</span></li><li><i class="fa-solid fa-check"></i><span>FDA, EU MDR, ISO 13485 (Devices)</span></li></ul></div></div></div></div>
 
@@ -555,7 +747,15 @@
             <div class="subcard"><div class="subcard-head"><div class="subcard-title">Core Clinical Documentation & CPOE</div><i class="fa-solid fa-chevron-down"></i></div><div class="subcard-body"><ul class="list"><li><i class="fa-solid fa-check"></i><span>Notes, orders, results, decision support</span></li></ul></div></div>
             <div class="subcard"><div class="subcard-head"><div class="subcard-title">Medication Management & eMAR</div><i class="fa-solid fa-chevron-down"></i></div><div class="subcard-body"><ul class="list"><li><i class="fa-solid fa-check"></i><span>Orders, verification, administration</span></li></ul></div></div>
             <div class="subcard"><div class="subcard-head"><div class="subcard-title">Interoperability (HL7/FHIR/IHE)</div><i class="fa-solid fa-chevron-down"></i></div><div class="subcard-body"><ul class="list"><li><i class="fa-solid fa-check"></i><span>Interfaces, APIs, IHE profiles</span></li></ul></div></div>
-            <div class="subcard"><div class="subcard-head"><div class="subcard-title">Patient Portals & Engagement</div><i class="fa-solid fa-chevron-down"></i></div><div class="subcard-body"><ul class="list"><li><i class="fa-solid fa-check"></i><span>Messaging, access, self‑service</span></li></ul></div></div>
+            <div class="subcard"><div class="subcard-head"><div class="subcard-title">Patient Portals & Engagement</div><i class="fa-solid fa-chevron-down"></i></div><div class="subcard-body"><ul class="list">
+              <li><i class="fa-solid fa-check"></i><span>Secure messaging, visit summaries, results access, proxy support</span></li>
+              <li><i class="fa-solid fa-check"></i><span>Self‑service scheduling, check‑in, refill requests, online payments</span></li>
+              <li><i class="fa-solid fa-check"></i><span>Education content, PROMs, remote monitoring enrollment</span></li>
+              <li><i class="fa-solid fa-check"></i><span>Outcome impact: improved adherence, fewer no‑shows, higher satisfaction</span></li>
+              <li><i class="fa-solid fa-check"></i><span>Administrative simplification: lower call volume, automated reminders and forms</span></li>
+            </ul>
+            <div class="cta-row"><a class="cta" href="/programs/healthcare-lms.html#collection=ehr&q=mychart">Train</a><a class="cta" href="/programs/healthcare-lms.html#collection=ehr&q=mychart">Get Certified</a><a class="cta" href="/apply.html?vendor=portal">Hire Talent</a></div>
+            </div></div>
             <div class="subcard"><div class="subcard-head"><div class="subcard-title">Analytics & Quality Reporting</div><i class="fa-solid fa-chevron-down"></i></div><div class="subcard-body"><ul class="list"><li><i class="fa-solid fa-check"></i><span>Measures, dashboards, registries</span></li></ul></div></div>
             <div class="subcard"><div class="subcard-head"><div class="subcard-title">Privacy, Security & Audit</div><i class="fa-solid fa-chevron-down"></i></div><div class="subcard-body"><ul class="list"><li><i class="fa-solid fa-check"></i><span>RBAC, auditing, access control</span></li></ul></div></div>
           </div>
@@ -613,28 +813,28 @@
       <div class="logo-slider">
         <div class="logo-track" id="logoTrack">
           <!-- Duplicate sequence for seamless loop -->
-          <div class="brand-item"><img class="brand-img" alt="Epic" src="assets/logos/epic.svg" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="brand-fallback">EPIC</div></div>
-          <div class="brand-item"><img class="brand-img" alt="Oracle Cerner" src="assets/logos/cerner.svg" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="brand-fallback">CERNER</div></div>
-          <div class="brand-item"><img class="brand-img" alt="Meditech" src="assets/logos/meditech.svg" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="brand-fallback">MEDITECH</div></div>
-          <div class="brand-item"><img class="brand-img" alt="CPSI" src="assets/logos/cpsi.svg" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="brand-fallback">CPSI</div></div>
-          <div class="brand-item"><img class="brand-img" alt="WellSky" src="assets/logos/wellsky.svg" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="brand-fallback">WELLSKY</div></div>
-          <div class="brand-item"><img class="brand-img" alt="MEDHOST" src="assets/logos/medhost.svg" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="brand-fallback">MEDHOST</div></div>
-          <div class="brand-item"><img class="brand-img" alt="Netsmart" src="assets/logos/netsmart.svg" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="brand-fallback">NETSMART</div></div>
-          <div class="brand-item"><img class="brand-img" alt="VistA" src="assets/logos/vista.svg" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="brand-fallback">VISTA</div></div>
-          <div class="brand-item"><img class="brand-img" alt="Altera Digital Health" src="assets/logos/altera.svg" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="brand-fallback">ALTERA</div></div>
-          <div class="brand-item"><img class="brand-img" alt="athenahealth" src="assets/logos/athenahealth.svg" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="brand-fallback">ATHENA</div></div>
+          <div class="brand-item"><img class="brand-img" alt="Epic" src="../assets/logos/epic.svg" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="brand-fallback">EPIC</div></div>
+          <div class="brand-item"><img class="brand-img" alt="Oracle Cerner" src="../assets/logos/cerner.svg" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="brand-fallback">CERNER</div></div>
+          <div class="brand-item"><img class="brand-img" alt="Meditech" src="../assets/logos/meditech.svg" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="brand-fallback">MEDITECH</div></div>
+          <div class="brand-item"><img class="brand-img" alt="CPSI" src="../assets/logos/cpsi.svg" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="brand-fallback">CPSI</div></div>
+          <div class="brand-item"><img class="brand-img" alt="WellSky" src="../assets/logos/wellsky.svg" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="brand-fallback">WELLSKY</div></div>
+          <div class="brand-item"><img class="brand-img" alt="MEDHOST" src="../assets/logos/medhost.svg" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="brand-fallback">MEDHOST</div></div>
+          <div class="brand-item"><img class="brand-img" alt="Netsmart" src="../assets/logos/netsmart.svg" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="brand-fallback">NETSMART</div></div>
+          <div class="brand-item"><img class="brand-img" alt="VistA" src="../assets/logos/vista.svg" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="brand-fallback">VISTA</div></div>
+          <div class="brand-item"><img class="brand-img" alt="Altera Digital Health" src="../assets/logos/altera.svg" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="brand-fallback">ALTERA</div></div>
+          <div class="brand-item"><img class="brand-img" alt="athenahealth" src="../assets/logos/athenahealth.svg" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="brand-fallback">ATHENA</div></div>
 
           <!-- repeat to create infinite loop feel -->
-          <div class="brand-item"><img class="brand-img" alt="Epic" src="assets/logos/epic.svg" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="brand-fallback">EPIC</div></div>
-          <div class="brand-item"><img class="brand-img" alt="Oracle Cerner" src="assets/logos/cerner.svg" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="brand-fallback">CERNER</div></div>
-          <div class="brand-item"><img class="brand-img" alt="Meditech" src="assets/logos/meditech.svg" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="brand-fallback">MEDITECH</div></div>
-          <div class="brand-item"><img class="brand-img" alt="CPSI" src="assets/logos/cpsi.svg" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="brand-fallback">CPSI</div></div>
-          <div class="brand-item"><img class="brand-img" alt="WellSky" src="assets/logos/wellsky.svg" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="brand-fallback">WELLSKY</div></div>
-          <div class="brand-item"><img class="brand-img" alt="MEDHOST" src="assets/logos/medhost.svg" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="brand-fallback">MEDHOST</div></div>
-          <div class="brand-item"><img class="brand-img" alt="Netsmart" src="assets/logos/netsmart.svg" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="brand-fallback">NETSMART</div></div>
-          <div class="brand-item"><img class="brand-img" alt="VistA" src="assets/logos/vista.svg" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="brand-fallback">VISTA</div></div>
-          <div class="brand-item"><img class="brand-img" alt="Altera Digital Health" src="assets/logos/altera.svg" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="brand-fallback">ALTERA</div></div>
-          <div class="brand-item"><img class="brand-img" alt="athenahealth" src="assets/logos/athenahealth.svg" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="brand-fallback">ATHENA</div></div>
+          <div class="brand-item"><img class="brand-img" alt="Epic" src="../assets/logos/epic.svg" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="brand-fallback">EPIC</div></div>
+          <div class="brand-item"><img class="brand-img" alt="Oracle Cerner" src="../assets/logos/cerner.svg" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="brand-fallback">CERNER</div></div>
+          <div class="brand-item"><img class="brand-img" alt="Meditech" src="../assets/logos/meditech.svg" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="brand-fallback">MEDITECH</div></div>
+          <div class="brand-item"><img class="brand-img" alt="CPSI" src="../assets/logos/cpsi.svg" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="brand-fallback">CPSI</div></div>
+          <div class="brand-item"><img class="brand-img" alt="WellSky" src="../assets/logos/wellsky.svg" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="brand-fallback">WELLSKY</div></div>
+          <div class="brand-item"><img class="brand-img" alt="MEDHOST" src="../assets/logos/medhost.svg" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="brand-fallback">MEDHOST</div></div>
+          <div class="brand-item"><img class="brand-img" alt="Netsmart" src="../assets/logos/netsmart.svg" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="brand-fallback">NETSMART</div></div>
+          <div class="brand-item"><img class="brand-img" alt="VistA" src="../assets/logos/vista.svg" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="brand-fallback">VISTA</div></div>
+          <div class="brand-item"><img class="brand-img" alt="Altera Digital Health" src="../assets/logos/altera.svg" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="brand-fallback">ALTERA</div></div>
+          <div class="brand-item"><img class="brand-img" alt="athenahealth" src="../assets/logos/athenahealth.svg" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"><div class="brand-fallback">ATHENA</div></div>
         </div>
       </div>
     </div>
@@ -757,7 +957,7 @@
       a.addEventListener('click', () => setTimeout(() => wireVendors(), 50));
     });
 
-    // EHR view switching (Inpatient vs Ambulatory)
+  // EHR view switching (Inpatient vs Ambulatory)
     function initEhrView(){
       document.querySelectorAll('[data-ehr]')?.forEach(el => {
         const group = el.getAttribute('data-ehr');
@@ -769,38 +969,88 @@
         if (body instanceof HTMLElement) body.style.display = show ? 'block' : 'none';
         el.classList.toggle('open', show);
       });
+      let ehrSwitchTimer = null;
       document.querySelectorAll('.pill[data-ehrview]')?.forEach(btn => {
         btn.addEventListener('click', () => {
-          const target = btn.getAttribute('data-ehrview');
-          // pills active state
-          btn.parentElement?.querySelectorAll('.pill')?.forEach(p => p.classList.remove('active'));
-          btn.classList.add('active');
-          // show/hide groups; ensure the active group is open to reveal its body once; collapse vendor details in hidden groups
-          document.querySelectorAll('[data-ehr]')?.forEach(el => {
-            const group = el.getAttribute('data-ehr');
-            if (!(el instanceof HTMLElement)) return;
-            const isTarget = (group === target);
-            el.style.display = isTarget ? 'block' : 'none';
-            // Set body display state for target vs hidden
-            const body = el.querySelector(':scope > .subcard-body');
-            if (body instanceof HTMLElement) body.style.display = isTarget ? 'block' : 'none';
-            el.classList.toggle('open', isTarget);
-            if (!isTarget) {
-              el.querySelectorAll('.vendor-card.open').forEach(card => {
-                if (card instanceof HTMLElement) {
-                  card.classList.remove('open');
-                  const details = card.querySelector('.vendor-details');
-                  if (details instanceof HTMLElement) details.style.maxHeight = '0px';
-                }
-              });
-            }
-          });
-          // ensure vendor toggles are wired for the now-visible section
-          setTimeout(() => wireVendors(), 0);
+          // debounce rapid switching
+          if (ehrSwitchTimer) clearTimeout(ehrSwitchTimer);
+          ehrSwitchTimer = setTimeout(() => {
+            const target = btn.getAttribute('data-ehrview');
+            // pills active state
+            btn.parentElement?.querySelectorAll('.pill')?.forEach(p => p.classList.remove('active'));
+            btn.classList.add('active');
+            // show/hide groups; ensure the active group is open to reveal its body once; collapse vendor details in hidden groups
+            document.querySelectorAll('[data-ehr]')?.forEach(el => {
+              const group = el.getAttribute('data-ehr');
+              if (!(el instanceof HTMLElement)) return;
+              const isTarget = (group === target);
+              el.style.display = isTarget ? 'block' : 'none';
+              // Set body display state for target vs hidden
+              const body = el.querySelector(':scope > .subcard-body');
+              if (body instanceof HTMLElement) body.style.display = isTarget ? 'block' : 'none';
+              el.classList.toggle('open', isTarget);
+              if (!isTarget) {
+                el.querySelectorAll('.vendor-card.open').forEach(card => {
+                  if (card instanceof HTMLElement) {
+                    card.classList.remove('open');
+                    const details = card.querySelector('.vendor-details');
+                    if (details instanceof HTMLElement) details.style.maxHeight = '0px';
+                  }
+                });
+              }
+            });
+            // ensure vendor toggles are wired for the now-visible section
+            setTimeout(() => wireVendors(), 0);
+          }, 150);
         });
       });
     }
     initEhrView();
+
+    // Population Health view switching (Care Gaps, Attribution, Quality, Outcomes, Admin)
+    function initPopView(){
+      // initialize default visibility
+      document.querySelectorAll('[data-pop]')?.forEach(el => {
+        if (!(el instanceof HTMLElement)) return;
+        const show = el.getAttribute('data-pop') === 'gaps';
+        el.style.display = show ? 'block' : 'none';
+        const body = el.querySelector(':scope > .subcard-body');
+        if (body instanceof HTMLElement) body.style.display = show ? 'block' : 'none';
+        el.classList.toggle('open', show);
+      });
+      let popSwitchTimer = null;
+      document.querySelectorAll('.pill[data-popview]')?.forEach(btn => {
+        btn.addEventListener('click', () => {
+          if (popSwitchTimer) clearTimeout(popSwitchTimer);
+          popSwitchTimer = setTimeout(() => {
+            const target = btn.getAttribute('data-popview');
+            // pills active state
+            btn.parentElement?.querySelectorAll('.pill')?.forEach(p => p.classList.remove('active'));
+            btn.classList.add('active');
+            // show/hide groups; make sure vendor toggles wire in visible section
+            document.querySelectorAll('[data-pop]')?.forEach(el => {
+              if (!(el instanceof HTMLElement)) return;
+              const isTarget = el.getAttribute('data-pop') === target;
+              el.style.display = isTarget ? 'block' : 'none';
+              const body = el.querySelector(':scope > .subcard-body');
+              if (body instanceof HTMLElement) body.style.display = isTarget ? 'block' : 'none';
+              el.classList.toggle('open', isTarget);
+              if (!isTarget) {
+                el.querySelectorAll('.vendor-card.open').forEach(card => {
+                  if (card instanceof HTMLElement) {
+                    card.classList.remove('open');
+                    const details = card.querySelector('.vendor-details');
+                    if (details instanceof HTMLElement) details.style.maxHeight = '0px';
+                  }
+                });
+              }
+            });
+            setTimeout(() => wireVendors(), 0);
+          }, 150);
+        });
+      });
+    }
+    initPopView();
 
     // Year footer
     document.getElementById('year').textContent = new Date().getFullYear();

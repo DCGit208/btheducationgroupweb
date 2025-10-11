@@ -2126,28 +2126,63 @@
                 }
                 return list;
             };
-            let filtered = active.filter(cert => {
-                if (cert.retired) return false;
-                if (level && strictChronology && !inLevelWindow(cert)) return false;
-                if (category && cert.category !== category) return false;
-                if (focus && cert.focus !== focus) return false;
-                if (trackSelections.length > 0) {
-                    const ct = Array.isArray(cert.tracks) ? cert.tracks : [];
-                    if (!ct.some(t => trackSelections.includes(t))) return false;
+            let filtered;
+            // CompTIA bundle override
+            if (vendor === 'CompTIA' && level) {
+                // Hardcode Level 1 bundle for reliability
+                let bundleCertIds = [];
+                if (level === 1) {
+                    // Tech+, A+, Network+ (use actual IDs from certifications list)
+                    bundleCertIds = active.filter(c => ['CompTIA Tech+','CompTIA A+','CompTIA Network+'].includes(c.name)).map(c => c.id);
+                } else {
+                    // For other levels, use bundle data
+                    try {
+                        if (!window._comptiaBundles) {
+                            const req = new XMLHttpRequest();
+                            req.open('GET', 'assets/data/comptia-bundles.json', false); // sync
+                            req.send(null);
+                            if (req.status === 200) {
+                                window._comptiaBundles = JSON.parse(req.responseText);
+                            }
+                        }
+                        const bundles = window._comptiaBundles || [];
+                        const bundle = bundles.find(b => b.vendor === 'CompTIA' && b.level === level);
+                        if (bundle && Array.isArray(bundle.certifications)) {
+                            bundleCertIds = bundle.certifications.map(c => c.certification_id);
+                        }
+                    } catch (e) { bundleCertIds = []; }
                 }
-                if (vendor && cert.vendor !== vendor) return false;
-                if (vendor && vendorArea) {
-                    const areas = Array.isArray(cert.vendor_area) ? cert.vendor_area : (cert.vendor_area ? [cert.vendor_area] : (cert.vendor==='Microsoft' && cert.solution_area ? [cert.solution_area] : []));
-                    if (!areas.includes(vendorArea)) return false;
-                }
-                if (partnership === 'premium' && !cert.premium) return false;
-                if (partnership === 'standard' && cert.premium) return false;
-                if (search && !cert.name.toLowerCase().includes(search) && !cert.vendor.toLowerCase().includes(search) && !cert.focus.toLowerCase().includes(search)) return false;
-                if (strictChronology && level && !prereqsMet(cert) && !isCiscoL1AssociateStarter(cert)) return false; // only enforce prereqs when a level is selected (with Cisco L1 associate starters allowed)
-                // Apply stage-to-level mapping for all vendors when level is selected
-                if (strictChronology && level && !stageFitsLevel(cert) && !isCiscoL1AssociateStarter(cert)) return false;
-                return true;
-            });
+                filtered = active.filter(cert => bundleCertIds.includes(cert.id));
+                // TEST LOG: Show filtered CompTIA bundle results
+                console.log('CompTIA bundle filter applied:', {
+                    vendor, level, bundleCertIds,
+                    filteredNames: filtered.map(c => c.name),
+                    filteredIds: filtered.map(c => c.id)
+                });
+            } else {
+                filtered = active.filter(cert => {
+                    if (cert.retired) return false;
+                    if (level && strictChronology && !inLevelWindow(cert)) return false;
+                    if (category && cert.category !== category) return false;
+                    if (focus && cert.focus !== focus) return false;
+                    if (trackSelections.length > 0) {
+                        const ct = Array.isArray(cert.tracks) ? cert.tracks : [];
+                        if (!ct.some(t => trackSelections.includes(t))) return false;
+                    }
+                    if (vendor && cert.vendor !== vendor) return false;
+                    if (vendor && vendorArea) {
+                        const areas = Array.isArray(cert.vendor_area) ? cert.vendor_area : (cert.vendor_area ? [cert.vendor_area] : (cert.vendor==='Microsoft' && cert.solution_area ? [cert.solution_area] : []));
+                        if (!areas.includes(vendorArea)) return false;
+                    }
+                    if (partnership === 'premium' && !cert.premium) return false;
+                    if (partnership === 'standard' && cert.premium) return false;
+                    if (search && !cert.name.toLowerCase().includes(search) && !cert.vendor.toLowerCase().includes(search) && !cert.focus.toLowerCase().includes(search)) return false;
+                    if (strictChronology && level && !prereqsMet(cert) && !isCiscoL1AssociateStarter(cert)) return false; // only enforce prereqs when a level is selected (with Cisco L1 associate starters allowed)
+                    // Apply stage-to-level mapping for all vendors when level is selected
+                    if (strictChronology && level && !stageFitsLevel(cert) && !isCiscoL1AssociateStarter(cert)) return false;
+                    return true;
+                });
+            }
 
             // Business rule: At Level 1, show foundational items and allow at most K Associate items overall.
             // We keep explicit Cisco L1 Associate starters regardless of stage.
