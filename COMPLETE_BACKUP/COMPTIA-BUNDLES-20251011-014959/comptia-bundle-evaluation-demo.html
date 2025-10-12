@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CompTIA Bundle Evaluation System - Demo</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+        }
+
+        .container {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        h1 {
+            color: #4a5568;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+        }
+
+        h2 {
+            color: #2d3748;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+
+        h3 {
+            color: #4a5568;
+            margin-top: 25px;
+        }
+
+        .user-input {
+            background: #f7fafc;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            border: 2px solid #e2e8f0;
+        }
+
+        .cert-checkbox {
+            display: inline-block;
+            margin: 10px 15px 10px 0;
+            background: white;
+            padding: 8px 15px;
+            border-radius: 8px;
+            border: 2px solid #e2e8f0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .cert-checkbox:hover {
+            border-color: #667eea;
+            background: #f1f5f9;
+        }
+
+        .cert-checkbox.selected {
+            background: #667eea;
+            color: white;
+            border-color: #667eea;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 8px;
+        }
+
+        button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            transition: transform 0.3s ease;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+        }
+
+        .bundle-card {
+            background: #f8fafc;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 20px 0;
+            border-left: 5px solid #667eea;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .bundle-card:hover {
+            transform: translateX(5px);
+        }
+
+        .bundle-title {
+            font-size: 1.4em;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 10px;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 25px;
+            background: #e2e8f0;
+            border-radius: 12px;
+            overflow: hidden;
+            margin: 15px 0;
+            position: relative;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #48bb78, #38a169);
+            border-radius: 12px;
+            transition: width 0.5s ease;
+            position: relative;
+        }
+
+        .progress-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-weight: 600;
+            color: #2d3748;
+            font-size: 14px;
+        }
+
+        .cert-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 15px 0;
+        }
+
+        .cert-badge {
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .cert-completed {
+            background: #c6f6d5;
+            color: #22543d;
+        }
+
+        .cert-remaining {
+            background: #fed7d7;
+            color: #742a2a;
+        }
+
+        .cert-next {
+            background: #ffd89b;
+            color: #744210;
+            border: 2px solid #d69e2e;
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .status-complete {
+            background: #c6f6d5;
+            color: #22543d;
+        }
+
+        .status-progress {
+            background: #bee3f8;
+            color: #2a4365;
+        }
+
+        .status-blocked {
+            background: #fed7d7;
+            color: #742a2a;
+        }
+
+        .status-available {
+            background: #faf089;
+            color: #744210;
+        }
+
+        .recommendation {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .recommendation h3 {
+            color: white;
+            margin-top: 0;
+        }
+
+        .career-outcomes {
+            background: #f0fff4;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 15px;
+            border-left: 4px solid #38a169;
+        }
+
+        .specialization-options {
+            background: #f7fafc;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 15px;
+            border-left: 4px solid #667eea;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 50px;
+            font-size: 18px;
+            color: #4a5568;
+        }
+
+        .error {
+            background: #fed7d7;
+            color: #742a2a;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .cert-checkbox {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎓 CompTIA Bundle Evaluation System</h1>
+        
+        <div class="user-input">
+            <h3>Select Your Current CompTIA Certifications:</h3>
+            <div id="certification-selector">
+                <div class="loading">Loading CompTIA certifications...</div>
+            </div>
+            <button onclick="evaluateBundles()" style="margin-top: 20px;">Evaluate My Progress</button>
+        </div>
+
+        <div id="evaluation-results"></div>
+    </div>
+
+    <script src="../assets/js/comptia-bundle-evaluator.js"></script>
+    <script>
+        let bundleEvaluator;
+        let compTIACertifications = [];
+        
+        // Initialize the system
+        async function initializeSystem() {
+            try {
+                bundleEvaluator = new CompTIABundleEvaluator();
+                await bundleEvaluator.loadBundles();
+                await bundleEvaluator.loadCertifications();
+                
+                // Load CompTIA certifications for selection
+                const response = await fetch('/assets/data/certifications.json');
+                const allCertifications = await response.json();
+                compTIACertifications = allCertifications.filter(cert => cert.vendor === 'CompTIA');
+                
+                displayCertificationSelector();
+            } catch (error) {
+                console.error('Error initializing system:', error);
+                document.getElementById('certification-selector').innerHTML = 
+                    '<div class="error">Error loading certifications. Please refresh the page.</div>';
+            }
+        }
+
+        function displayCertificationSelector() {
+            const selector = document.getElementById('certification-selector');
+            selector.innerHTML = compTIACertifications.map(cert => `
+                <label class="cert-checkbox" onclick="toggleCertification(${cert.id})">
+                    <input type="checkbox" id="cert-${cert.id}" value="${cert.id}">
+                    ${cert.name} (${cert.exam})
+                </label>
+            `).join('');
+        }
+
+        function toggleCertification(certId) {
+            const checkbox = document.getElementById(`cert-${certId}`);
+            const label = checkbox.parentElement;
+            
+            setTimeout(() => {
+                if (checkbox.checked) {
+                    label.classList.add('selected');
+                } else {
+                    label.classList.remove('selected');
+                }
+            }, 10);
+        }
+
+        function getSelectedCertifications() {
+            const checkboxes = document.querySelectorAll('#certification-selector input[type="checkbox"]:checked');
+            return Array.from(checkboxes).map(cb => parseInt(cb.value));
+        }
+
+        function evaluateBundles() {
+            const selectedCerts = getSelectedCertifications();
+            bundleEvaluator.setUserCertifications(selectedCerts);
+            
+            const report = bundleEvaluator.generateProgressReport();
+            displayResults(report);
+        }
+
+        function displayResults(report) {
+            const resultsDiv = document.getElementById('evaluation-results');
+            
+            let html = `
+                <h2>📊 Your CompTIA Certification Progress</h2>
+                
+                <div class="bundle-card">
+                    <div class="bundle-title">Overall Summary</div>
+                    <p><strong>Total Bundles:</strong> ${report.summary.total_bundles}</p>
+                    <p><strong>Completed Bundles:</strong> ${report.summary.completed_bundles}</p>
+                    <p><strong>In Progress:</strong> ${report.summary.in_progress_bundles}</p>
+                    <p><strong>Available to Start:</strong> ${report.summary.available_bundles}</p>
+                </div>
+            `;
+
+            // Add recommendation
+            if (report.recommendation) {
+                html += `
+                    <div class="recommendation">
+                        <h3>🎯 Recommended Next Step</h3>
+                        <p><strong>${report.recommendation.reason}</strong></p>
+                        ${report.recommendation.bundle ? `
+                            <p>Focus on: <strong>${report.recommendation.bundle.bundle_name}</strong></p>
+                        ` : ''}
+                    </div>
+                `;
+            }
+
+            // Add bundle evaluations
+            html += '<h2>📋 Bundle Progress Details</h2>';
+            
+            report.bundle_evaluations.forEach(bundle => {
+                const statusClass = bundle.is_complete ? 'status-complete' :
+                                  bundle.progress_percentage > 0 ? 'status-progress' :
+                                  bundle.can_start ? 'status-available' : 'status-blocked';
+                
+                const statusText = bundle.is_complete ? '✅ Complete' :
+                                 bundle.progress_percentage > 0 ? '🔄 In Progress' :
+                                 bundle.can_start ? '🟢 Available' : '🔒 Locked';
+
+                html += `
+                    <div class="bundle-card">
+                        <div class="bundle-title">
+                            ${bundle.bundle_name}
+                            <span class="status-badge ${statusClass}">${statusText}</span>
+                        </div>
+                        
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: ${bundle.progress_percentage}%"></div>
+                            <div class="progress-text">${bundle.progress_percentage}% Complete (${bundle.completed_certifications}/${bundle.total_certifications})</div>
+                        </div>
+
+                        <p><strong>Level:</strong> ${bundle.level} ${bundle.focus_area ? `| <strong>Focus:</strong> ${bundle.focus_area}` : ''}</p>
+                        <p><strong>Estimated Time:</strong> ${bundle.estimated_time_remaining} months remaining</p>
+
+                        ${bundle.completed_certs.length > 0 ? `
+                            <div>
+                                <strong>✅ Completed Certifications:</strong>
+                                <div class="cert-list">
+                                    ${bundle.completed_certs.map(cert => `
+                                        <span class="cert-badge cert-completed">${cert.name}</span>
+                                    `).join('')}
+                                </div>
+                            </div>
+                        ` : ''}
+
+                        ${bundle.next_certification ? `
+                            <div>
+                                <strong>🎯 Next Certification:</strong>
+                                <div class="cert-list">
+                                    <span class="cert-badge cert-next">${bundle.next_certification.name} (${bundle.next_certification.exam})</span>
+                                </div>
+                            </div>
+                        ` : ''}
+
+                        ${bundle.remaining_certs.length > 0 && !bundle.next_certification ? `
+                            <div>
+                                <strong>📋 Remaining Certifications:</strong>
+                                <div class="cert-list">
+                                    ${bundle.remaining_certs.map(cert => `
+                                        <span class="cert-badge cert-remaining">${cert.name}</span>
+                                    `).join('')}
+                                </div>
+                            </div>
+                        ` : ''}
+
+                        ${bundle.missing_prerequisites.length > 0 ? `
+                            <div class="error">
+                                <strong>🔒 Prerequisites Required:</strong>
+                                <ul>
+                                    ${bundle.missing_prerequisites.map(prereq => `
+                                        <li>${prereq.bundle_name} (${prereq.progress}% complete)</li>
+                                    `).join('')}
+                                </ul>
+                            </div>
+                        ` : ''}
+
+                        <div class="career-outcomes">
+                            <strong>🚀 Career Outcomes:</strong>
+                            <ul>
+                                ${bundle.career_outcomes.map(outcome => `<li>${outcome}</li>`).join('')}
+                            </ul>
+                        </div>
+
+                        ${bundle.specialization_options.length > 0 ? `
+                            <div class="specialization-options">
+                                <strong>🎖️ Specialization Options:</strong>
+                                <ul>
+                                    ${bundle.specialization_options.map(spec => `
+                                        <li><strong>${spec.path}:</strong> ${spec.description}</li>
+                                    `).join('')}
+                                </ul>
+                            </div>
+                        ` : ''}
+                    </div>
+                `;
+            });
+
+            resultsDiv.innerHTML = html;
+        }
+
+        // Initialize when page loads
+        document.addEventListener('DOMContentLoaded', initializeSystem);
+    </script>
+</body>
+</html>

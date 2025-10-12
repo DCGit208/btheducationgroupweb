@@ -1,0 +1,12 @@
+total 760
+drwxr-xr-x@   6 achugustave  staff     192 Oct 10 23:35 .
+drwxr-xr-x@ 128 achugustave  staff    4096 Oct 10 23:35 ..
+-rw-r--r--@   1 achugustave  staff  126724 Oct 10 23:35 certifications-20251010-232741-backup.json
+-rw-r--r--@   1 achugustave  staff  252681 Oct 10 23:35 informationtechnology-20251010-232741-backup.html
+-rw-r--r--@   1 achugustave  staff       0 Oct 10 23:35 manifest-20251010-232741.txt
+-rw-r--r--@   1 achugustave  staff    6935 Oct 10 23:35 ROLLBACK_LOG-20251010-232741-backup.txt
+=== CHECKSUMS ===
+MD5 (certifications-20251010-232741-backup.json) = 6e8391e134240a53a05c701c7d3f921f
+MD5 (informationtechnology-20251010-232741-backup.html) = d0c7079e1bc47053adb6f8cc3e0a2f69
+MD5 (manifest-20251010-232741.txt) = c5a50f157cab92d8dea5655dd2af084e
+MD5 (ROLLBACK_LOG-20251010-232741-backup.txt) = 2e6a057e21f6980bb254ab275599a37d

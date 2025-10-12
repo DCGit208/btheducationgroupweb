@@ -1,0 +1,21 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Pre-change Backup",
+			"type": "shell",
+			"command": "./scripts/backup.sh",
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "Pre-change Backup",
+			"type": "shell",
+			"command": "./scripts/backup.sh",
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "build"
+		}
+	]
+}
