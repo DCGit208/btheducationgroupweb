@@ -1,0 +1,1592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information Technology Certifications | BTH Education Group - Professional Development & HEXAD Framework</title>
+    <meta name="description" content="Choose from 500+ technology certifications across 15+ industry sectors. Professional development pathway or complete HEXAD framework.">
+    
+    <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* Technology Sector Specific Styling - minimal rebuild to fix corrupted block */
+    :root { --focus-primary-color: #667eea; --it-primary: #667eea; --container-max: 1400px; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Arial, sans-serif; color: #0f172a; background: #ffffff; line-height: 1.5; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+        /* Navigation */
+        .tech-navbar { position: sticky; top: 0; z-index: 1000; background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); color: #fff; }
+    .tech-nav-container { max-width: var(--container-max); margin: 0 auto; padding: 0 2rem; height: 80px; display: flex; align-items: center; justify-content: space-between; }
+    .tech-nav-menu { display: flex; gap: 1rem; }
+    .tech-nav-logo { display:flex; align-items:center; gap:10px; color:#e2e8f0; text-decoration:none; font-weight:800; }
+    .tech-navbar.scrolled { backdrop-filter: saturate(140%) blur(8px); background: rgba(15,23,42,0.9); border-bottom:1px solid rgba(148,163,184,0.15); }
+        .tech-nav-link { color: #e2e8f0; text-decoration: none; position: relative; padding: 0.5rem 0.75rem; }
+        .tech-nav-link:hover, .tech-nav-link.active { color: #ffffff; }
+        .tech-nav-cta { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 0.75rem 1.5rem; border-radius: 25px; text-decoration: none; font-weight: 600; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.5px; border: 2px solid transparent; }
+        .tech-nav-toggle { display: none; flex-direction: column; cursor: pointer; background: none; border: none; padding: 0.5rem; }
+        .tech-nav-toggle span { width: 25px; height: 3px; background: white; margin: 3px 0; border-radius: 2px; transition: all 0.3s ease; }
+        @media (max-width: 968px) {
+          .tech-nav-menu { position: fixed; top: 80px; left: 0; width: 100%; height: calc(100vh - 80px); background: rgba(15, 23, 42, 0.98); -webkit-backdrop-filter: blur(20px); backdrop-filter: blur(20px); flex-direction: column; justify-content: flex-start; padding-top: 2rem; transform: translateX(-100%); transition: transform 0.3s ease; gap: 0; }
+          .tech-nav-menu.active { transform: translateX(0); }
+          .tech-nav-toggle { display: flex; }
+        }
+
+                /* WORLD-CLASS HERO SECTION (restored) */
+                .programs-hero { position: relative; background: linear-gradient(135deg, #0f172a 0%, #1e293b 25%, #334155 50%, #475569 75%, #64748b 100%); color: white; padding: 120px 0 160px; text-align: center; overflow: hidden; min-height: 80vh; display: flex; align-items: center; }
+                .programs-hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 20% 20%, rgba(59, 130, 246, 0.3) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(16, 185, 129, 0.2) 0%, transparent 50%), radial-gradient(circle at 40% 60%, rgba(139, 92, 246, 0.2) 0%, transparent 50%); animation: backgroundShift 20s ease-in-out infinite; }
+                .programs-hero::after { content: ''; position: absolute; inset: 0; background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M30 30c0-16.569 13.431-30 30-30v60c-16.569 0-30-13.431-30-30z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); animation: patternFloat 25s linear infinite; }
+                @keyframes backgroundShift { 0%, 100% { background: radial-gradient(circle at 20% 20%, rgba(59, 130, 246, 0.3) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(16, 185, 129, 0.2) 0%, transparent 50%), radial-gradient(circle at 40% 60%, rgba(139, 92, 246, 0.2) 0%, transparent 50%);} 33% { background: radial-gradient(circle at 80% 20%, rgba(16, 185, 129, 0.2) 0%, transparent 50%), radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0.3) 0%, transparent 50%), radial-gradient(circle at 60% 40%, rgba(59, 130, 246, 0.2) 0%, transparent 50%);} 66% { background: radial-gradient(circle at 40% 80%, rgba(139, 92, 246, 0.2) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(59, 130, 246, 0.3) 0%, transparent 50%), radial-gradient(circle at 20% 40%, rgba(16, 185, 129, 0.2) 0%, transparent 50%);} }
+                @keyframes patternFloat { 0% { transform: translateY(0px) rotate(0deg);} 100% { transform: translateY(-60px) rotate(360deg);} }
+                .hero-content { position: relative; z-index: 10; width: 100%; max-width: var(--container-max); margin: 0 auto; padding: 0 2rem; }
+                .hero-badge { display: inline-flex; align-items: center; background: rgba(255, 255, 255, 0.1); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 50px; padding: 0.75rem 1.5rem; margin-bottom: 2rem; font-size: 0.9rem; font-weight: 600; color: #e2e8f0; animation: fadeInUp 1s ease-out 0.2s both; }
+                .hero-badge .badge-icon { width: 20px; height: 20px; margin-right: 0.5rem; background: linear-gradient(135deg, #3b82f6, #8b5cf6); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; }
+                .programs-hero h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); font-weight: 800; margin-bottom: 1.5rem; line-height: 1.1; background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 50%, #cbd5e1 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; animation: fadeInUp 1s ease-out 0.4s both; }
+                .programs-hero .subtitle { font-size: 1.25rem; opacity: 0.9; margin-bottom: 3rem; max-width: 700px; margin-left: auto; margin-right: auto; line-height: 1.6; color: #cbd5e1; animation: fadeInUp 1s ease-out 0.6s both; }
+                @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px);} to { opacity: 1; transform: translateY(0);} }
+                .hero-cta-section { margin: 3rem 0; animation: fadeInUp 1s ease-out 0.8s both; }
+                .hero-cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2rem; }
+                .hero-primary-btn { background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%); color: white; padding: 1rem 2.5rem; border-radius: 50px; text-decoration: none; font-weight: 700; font-size: 1.1rem; transition: all 0.3s ease; border: 2px solid transparent; position: relative; overflow: hidden; }
+                .hero-primary-btn::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent); transition: left 0.5s; }
+                .hero-primary-btn:hover::before { left: 100%; }
+                .hero-primary-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(59, 130, 246, 0.4); }
+                .hero-secondary-btn { background: transparent; color: white; padding: 1rem 2.5rem; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 1.1rem; border: 2px solid rgba(255, 255, 255, 0.3); transition: all 0.3s ease; -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); }
+                .hero-secondary-btn:hover { background: rgba(255, 255, 255, 0.1); border-color: rgba(255, 255, 255, 0.5); transform: translateY(-2px); }
+
+            /* Hero stats and badges (fix distortions) */
+            .programs-hero .level-system-badge { background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); color: #e2e8f0; margin: 0.75rem 0 0.75rem; }
+            .partner-badge { display:inline-flex; align-items:center; gap:0.5rem; background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.18); color:#e2e8f0; border-radius: 50px; padding: 0.5rem 1rem; font-size: 0.9rem; font-weight: 600; margin-top: 0.5rem; }
+            .partner-badge i { color: #fbbf24; }
+            .programs-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 2rem; margin-top: 4rem; max-width: 1000px; margin-left: auto; margin-right: auto; animation: fadeInUp 1s ease-out 1s both; }
+            .stat-card { background: rgba(255, 255, 255, 0.1); -webkit-backdrop-filter: blur(15px); backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 20px; padding: 2rem 1.5rem; text-align: center; transition: all 0.3s ease; position: relative; overflow: hidden; }
+            .stat-number { font-size: 2.5rem; font-weight: 800; margin-bottom: 0.5rem; background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+            .stat-label { font-size: 0.9rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; color: #cbd5e1; }
+        /* Filters & modal */
+    .filter-section { background: #f8fafc; padding: 60px 0; margin: 3rem 0; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0; position: static; top: auto; z-index: auto; }
+    @media (max-width: 768px) { .filter-section { position: static; top: auto; } }
+        .modal-backdrop { position: fixed; inset: 0; background: rgba(15,23,42,0.55); display: none; align-items: center; justify-content: center; z-index: 2000; }
+        .modal-backdrop.active { display: flex; }
+    .modal-card { background: #fff; border-radius: 14px; box-shadow: 0 20px 60px rgba(15,23,42,0.3); width: min(720px, 92vw); max-height: 85vh; overflow: auto; border: 1px solid #e2e8f0; }
+        .modal-header { display: flex; align-items: center; justify-content: space-between; padding: 1rem 1.25rem; border-bottom: 1px solid #e2e8f0; }
+        .modal-title { font-size: 1.05rem; font-weight: 700; color: #1e293b; }
+        .modal-close { background: transparent; border: none; font-size: 1.1rem; cursor: pointer; color: #64748b; }
+    .modal-body { padding: 0.85rem 1rem; color: #334155; }
+        .kv { display: grid; grid-template-columns: 160px 1fr; gap: 0.4rem 1rem; }
+        .kv .k { color: #64748b; }
+        .kv .v { color: #1f2937; }
+        .info-button { background: #eef2ff; color: #3730a3; border: 1px solid #c7d2fe; border-radius: 8px; padding: 0.35rem 0.6rem; font-size: 0.85rem; cursor: pointer; }
+    /* Rich modal sections */
+    .modal-sections { display: grid; gap: 0.75rem; }
+    .modal-section { background:#f8fafc; border:1px solid #e2e8f0; border-radius:12px; padding:0.75rem 0.9rem; position: relative; }
+    .modal-section h3 { margin:0 0 0.3rem; font-size:1rem; color:#0f172a; display:flex; align-items:center; gap:0.5rem; cursor: pointer; }
+    .modal-section .section-icon { font-size:0.95rem; opacity:0.95; }
+    .modal-section p { margin:0.25rem 0; color:#334155; line-height:1.6; }
+    .modal-section ul { margin:0.25rem 0 0.25rem 1.1rem; color:#334155; }
+    .modal-section .chev { margin-left:auto; color:#64748b; transition: transform 0.18s ease; }
+    .modal-section.collapsed .chev { transform: rotate(-90deg); }
+    .modal-section.collapsed > p, .modal-section.collapsed > ul { display:none; }
+    .modal-section.collapsed { padding-bottom: 0.5rem; }
+    /* Brand-themable section colors */
+    :root {
+        --sec-focus: #2563eb;
+        --sec-purpose: #0ea5e9;
+        --sec-impact: #16a34a;
+        --sec-usecases: #a855f7;
+        --sec-roles: #f59e0b;
+        --sec-comp: #ef4444;
+        --sec-pd: #06b6d4;
+    }
+    /* Section theme modifiers */
+    .modal-section.-focus { border-left:4px solid var(--sec-focus); background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%); }
+    .modal-section.-focus h3 .section-icon { color: var(--sec-focus); }
+    .modal-section.-purpose { border-left:4px solid var(--sec-purpose); background: linear-gradient(180deg, #f8fafc 0%, #f0f9ff 100%); }
+    .modal-section.-purpose h3 .section-icon { color: var(--sec-purpose); }
+    .modal-section.-impact { border-left:4px solid var(--sec-impact); background: linear-gradient(180deg, #f8fafc 0%, #ecfdf5 100%); }
+    .modal-section.-impact h3 .section-icon { color: var(--sec-impact); }
+    .modal-section.-usecases { border-left:4px solid var(--sec-usecases); background: linear-gradient(180deg, #f8fafc 0%, #faf5ff 100%); }
+    .modal-section.-usecases h3 .section-icon { color: var(--sec-usecases); }
+    .modal-section.-roles { border-left:4px solid var(--sec-roles); background: linear-gradient(180deg, #f8fafc 0%, #fffbeb 100%); }
+    .modal-section.-roles h3 .section-icon { color: var(--sec-roles); }
+    .modal-section.-comp { border-left:4px solid var(--sec-comp); background: linear-gradient(180deg, #f8fafc 0%, #fef2f2 100%); }
+    .modal-section.-comp h3 .section-icon { color: var(--sec-comp); }
+    .modal-section.-pd { border-left:4px solid var(--sec-pd); background: linear-gradient(180deg, #f8fafc 0%, #ecfeff 100%); }
+    .modal-section.-pd h3 .section-icon { color: var(--sec-pd); }
+    .modal-meta { display:grid; grid-template-columns: repeat(auto-fit, minmax(180px,1fr)); gap:0.5rem; margin-top:0.6rem; }
+    .modal-chip { background:#eef2ff; border:1px solid #c7d2fe; color:#1e3a8a; border-radius:999px; padding:0.2rem 0.55rem; font-weight:600; font-size:0.83rem; display:inline-flex; align-items:center; gap:0.35rem; }
+    /* Premium meta grid (columns: label over value per column) */
+    .meta-grid { display:grid; grid-template-columns: repeat(5, 1fr); border:1px solid #e2e8f0; border-radius:12px; overflow:hidden; margin-bottom:0.5rem; }
+    .meta-grid .col { display:flex; flex-direction:column; border-right:1px solid #e2e8f0; }
+    .meta-grid .col:last-child { border-right:none; }
+    .meta-grid .label { background:#f1f5f9; color:#475569; font-weight:700; text-transform:uppercase; letter-spacing:0.02em; font-size:0.78rem; padding:0.5rem 0.7rem; border-bottom:1px solid #e2e8f0; }
+    .meta-grid .value { color:#0f172a; font-weight:600; padding:0.5rem 0.7rem; font-size:0.9rem; }
+    /* Ensure meta grid spans full width within kv grid container */
+    .kv .meta-grid { grid-column: 1 / -1; }
+    .kv .meta-divider { height:1px; background:#e2e8f0; margin:0.5rem 0 0.75rem; grid-column: 1 / -1; }
+    @media (max-width: 1024px) {
+        .meta-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 640px) {
+        .meta-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+        /* Footer */
+    .main-footer { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); color: #e2e8f0; padding: 0; margin-top: 4rem; }
+    .main-footer .container { max-width: var(--container-max); margin: 0 auto; padding: 0 2rem; }
+
+        /* Level System Badge */
+        .level-system-badge {
+            display: inline-flex;
+            align-items: center;
+            background: rgba(139, 92, 246, 0.15);
+            -webkit-backdrop-filter: blur(15px);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            border-radius: 50px;
+            color: #5b21b6;
+            padding: 0.35rem 0.75rem;
+            gap: 0.5rem;
+            font-weight: 700;
+        }
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(79, 172, 254, 0.1) 100%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .stat-card:hover::before {
+            opacity: 1;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-8px);
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 255, 255, 0.3);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 0.75rem;
+            background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            position: relative;
+            z-index: 2;
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #cbd5e1;
+            opacity: 0.9;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Framework Selection */
+        .framework-selection {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            padding: 80px 0;
+            margin-bottom: 2rem;
+        }
+
+        .framework-selection .container {
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .framework-selection h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #1e293b;
+            margin-bottom: 1rem;
+        }
+
+        .framework-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #64748b;
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .framework-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .framework-card {
+            background: white;
+            border-radius: 16px;
+            padding: 3rem;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(102, 126, 234, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .framework-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .framework-card:hover::before {
+            left: 100%;
+        }
+
+        .framework-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .framework-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #1e293b;
+        }
+
+        .framework-card p {
+            font-size: 1rem;
+            color: #334155;
+            margin-bottom: 1.5rem;
+        }
+
+        .framework-card .cert-count {
+            display: inline-block;
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 999px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .framework-card .cta-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .framework-card .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.4);
+        }
+
+        /* Applied Filters */
+        .applied-filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-top: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .filter-chip {
+            background: #eef2ff;
+            color: #3730a3;
+            border: 1px solid #c7d2fe;
+            border-radius: 999px;
+            padding: 0.35rem 0.75rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .filter-chip .remove-filter {
+            cursor: pointer;
+            color: #6b7280;
+            transition: color 0.3s ease;
+        }
+
+        .filter-chip .remove-filter:hover {
+            color: #374151;
+        }
+
+        /* Loader */
+        .loader {
+            position: fixed;
+            inset: 0;
+            background: rgba(15, 23, 42, 0.8);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 3000;
+        }
+
+        .loader.active {
+            display: flex;
+        }
+
+        .loader .spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-top: 4px solid rgba(255, 255, 255, 0.7);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Accessibility */
+        [data-reach-dialog-overlay] {
+            background: rgba(15, 23, 42, 0.7);
+        }
+
+        [data-reach-dialog-content] {
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            max-width: 90vw;
+            width: 500px;
+        }
+
+        [data-reach-dialog-header] {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1.5rem;
+        }
+
+        [data-reach-dialog-title] {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #1e293b;
+        }
+
+        [data-reach-dialog-close] {
+            background: transparent;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #64748b;
+        }
+
+        [data-reach-dialog-close]:hover {
+            color: #374151;
+        }
+
+        /* Table */
+        .certification-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1.5rem;
+        }
+
+        .certification-table th, .certification-table td {
+            padding: 1rem;
+            text-align: left;
+            border: 1px solid #e2e8f0;
+        }
+
+        .certification-table th {
+            background: #f1f5f9;
+            color: #1e293b;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+        }
+
+        .certification-table td {
+            background: #ffffff;
+            color: #334155;
+        }
+
+        .certification-table tr:hover td {
+            background: #f9fafb;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .tech-nav-container { flex-direction: column; height: auto; }
+            .tech-nav-menu { position: static; height: auto; background: none; -webkit-backdrop-filter: none; backdrop-filter: none; flex-direction: row; padding: 1rem 0; gap: 1rem; }
+            .tech-nav-toggle { display: flex; }
+            .programs-hero { padding: 80px 0 120px; }
+            .programs-hero h1 { font-size: 2rem; }
+            .programs-hero .subtitle { font-size: 1rem; }
+            .hero-cta-buttons { flex-direction: column; }
+            .hero-primary-btn, .hero-secondary-btn { width: 100%; text-align: center; }
+            .hero-primary-btn { margin-bottom: 1rem; }
+            .programs-stats { grid-template-columns: 1fr 1fr; }
+            .stat-card { padding: 1.5rem 1rem; }
+            .stat-number { font-size: 2rem; }
+            .stat-label { font-size: 0.875rem; }
+            .framework-selection { padding: 60px 0; }
+            .framework-selection h2 { font-size: 2rem; }
+            .framework-subtitle { font-size: 1rem; }
+            .framework-card { padding: 2rem; }
+            .framework-card h3 { font-size: 1.25rem; }
+            .framework-card p { font-size: 0.875rem; }
+            .framework-card .cert-count { font-size: 0.75rem; }
+            .framework-card .cta-button { padding: 0.5rem 1rem; font-size: 0.875rem; }
+            .modal-card { width: 90vw; }
+            .modal-header { flex-direction: column; align-items: flex-start; }
+            .modal-title { font-size: 1.1rem; }
+            .modal-close { margin-top: 0.5rem; }
+            .kv { grid-template-columns: 1fr; }
+            .kv .k { display: inline-block; margin-bottom: 0.5rem; }
+            .kv .v { display: inline-block; }
+        }
+
+        @media (max-width: 480px) {
+            .tech-nav-container { padding: 0 1rem; }
+            .tech-nav-menu { padding: 0.5rem 0; }
+            .programs-hero { padding: 60px 0 100px; }
+            .programs-hero h1 { font-size: 1.75rem; }
+            .programs-hero .subtitle { font-size: 0.875rem; }
+            .hero-primary-btn, .hero-secondary-btn { padding: 0.75rem 1.5rem; font-size: 1rem; }
+            .hero-primary-btn { margin-bottom: 0.5rem; }
+            .programs-stats { grid-template-columns: 1fr; }
+            .stat-card { padding: 1.5rem 0.75rem; }
+            .stat-number { font-size: 2.5rem; }
+            .stat-label { font-size: 0.8rem; }
+            .framework-selection { padding: 40px 0; }
+            .framework-selection h2 { font-size: 1.75rem; }
+            .framework-subtitle { font-size: 0.875rem; }
+            .framework-card { padding: 1.5rem; }
+            .framework-card h3 { font-size: 1.125rem; }
+            .framework-card p { font-size: 0.8125rem; }
+            .framework-card .cert-count { font-size: 0.6875rem; }
+            .framework-card .cta-button { padding: 0.375rem 0.75rem; font-size: 0.8125rem; }
+            .modal-card { width: 95vw; }
+            .modal-header { flex-direction: column; align-items: flex-start; }
+            .modal-title { font-size: 1.1rem; }
+            .modal-close { margin-top: 0.5rem; }
+            .kv { grid-template-columns: 1fr; }
+            .kv .k { display: inline-block; margin-bottom: 0.5rem; }
+            .kv .v { display: inline-block; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <div class="tech-navbar">
+        <div class="tech-nav-container">
+            <a href="../index.html" class="tech-nav-logo">
+                <img src="../assets/images/logo.svg" alt="BTH Education Group Logo" style="height: 40px;">
+                <span style="font-size: 1.5rem;">BTH Education Group</span>
+            </a>
+            <button class="tech-nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="tech-nav-menu">
+                <a href="../index.html" class="tech-nav-link">Home</a>
+                <a href="../about.html" class="tech-nav-link">About</a>
+                <a href="../contact.html" class="tech-nav-link">Contact</a>
+                <a href="../blog.html" class="tech-nav-link">Blog</a>
+                <a href="../certifications.html" class="tech-nav-link active">Certifications</a>
+                <a href="../frameworks.html" class="tech-nav-link">Frameworks</a>
+                <a href="../partners.html" class="tech-nav-link">Partners</a>
+                <a href="../resources.html" class="tech-nav-link">Resources</a>
+                <a href="../login.html" class="tech-nav-link tech-nav-cta">Login</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="programs-hero">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <div class="badge-icon"><i class="fas fa-star"></i></div>
+                <div>World-Class Certifications</div>
+            </div>
+            <h1>Advance Your Career with Top IT Certifications</h1>
+            <div class="subtitle">Choose from 500+ technology certifications across 15+ industry sectors. Professional development pathway or complete HEXAD framework.</div>
+            <div class="hero-cta-section">
+                <div class="hero-cta-buttons">
+                    <a href="#certification-filters" class="hero-primary-btn">Explore Certifications</a>
+                    <a href="../frameworks.html" class="hero-secondary-btn">View Frameworks</a>
+                </div>
+            </div>
+            <div class="programs-stats">
+                <div class="stat-card">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Certifications Available</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">Industry Sectors</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">100+</div>
+                    <div class="stat-label">Partners Worldwide</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">1,000,000+</div>
+                    <div class="stat-label">Successful Candidates</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Certification Filters & Search -->
+    <div class="filter-section" id="certification-filters">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2rem; margin-bottom: 1rem;">Find the Right Certification for You</h2>
+            <div class="subtitle" style="text-align: center; margin-bottom: 2rem;">Select your preferred filters and explore our comprehensive range of IT certifications.</div>
+            <div class="filter-controls" style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
+                <select id="sector-filter" class="filter-select" aria-label="Select Industry Sector">
+                    <option value="">All Industry Sectors</option>
+                    <option value="IT">IT</option>
+                    <option value="Business">Business</option>
+                    <option value="Healthcare">Healthcare</option>
+                    <option value="Finance">Finance</option>
+                    <option value="Education">Education</option>
+                </select>
+                <select id="level-filter" class="filter-select" aria-label="Select Certification Level">
+                    <option value="">All Certification Levels</option>
+                    <option value="Fundamental">Fundamental</option>
+                    <option value="Associate">Associate</option>
+                    <option value="Professional">Professional</option>
+                    <option value="Expert">Expert</option>
+                </select>
+                <div class="filter-actions" style="display: flex; gap: 0.5rem;">
+                    <button id="apply-filters" class="filter-button" style="flex-shrink: 0;">Apply Filters</button>
+                    <button id="reset-filters" class="filter-button" style="flex-shrink: 0;">Reset Filters</button>
+                </div>
+            </div>
+            <div class="applied-filters" id="applied-filters" style="display: none;"></div>
+        </div>
+    </div>
+
+    <!-- Certification Cards (Grid) -->
+    <div class="container" id="certification-cards">
+        <div class="certification-card" data-certification-id="1" data-sector="IT" data-vendor="CompTIA" data-level="Fundamental">
+            <div class="card-inner">
+                <div class="card-front">
+                    <div class="card-header">
+                        <div class="card-title">CompTIA A+</div>
+                        <div class="card-level">Fundamental</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-description">The CompTIA A+ certification is the starting point for a career in IT. It covers essential IT skills and knowledge.</div>
+                        <div class="card-meta">
+                            <div class="meta-item">
+                                <div class="meta-label">Vendor:</div>
+                                <div class="meta-value">CompTIA</div>
+                            </div>
+                            <div class="meta-item">
+                                <div class="meta-label">Duration:</div>
+                                <div class="meta-value">3 months</div>
+                            </div>
+                            <div class="meta-item">
+                                <div class="meta-label">Level:</div>
+                                <div class="meta-value">Fundamental</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="../certification-details.html?id=1" class="card-button">View Details</a>
+                    </div>
+                </div>
+                <div class="card-back">
+                    <div class="card-content">
+                        <div class="badge-wrapper">
+                            <div class="level-system-badge">New</div>
+                        </div>
+                        <div class="card-title">CompTIA A+</div>
+                        <div class="card-description">The CompTIA A+ certification is the starting point for a career in IT. It covers essential IT skills and knowledge.</div>
+                        <div class="card-meta">
+                            <div class="meta-item">
+                                <div class="meta-label">Vendor:</div>
+                                <div class="meta-value">CompTIA</div>
+                            </div>
+                            <div class="meta-item">
+                                <div class="meta-label">Duration:</div>
+                                <div class="meta-value">3 months</div>
+                            </div>
+                            <div class="meta-item">
+                                <div class="meta-label">Level:</div>
+                                <div class="meta-value">Fundamental</div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <a href="../certification-details.html?id=1" class="card-button">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="certification-card" data-certification-id="2" data-sector="IT" data-vendor="CompTIA" data-level="Fundamental">
+            <div class="card-inner">
+                <div class="card-front">
+                    <div class="card-header">
+                        <div class="card-title">CompTIA Network+</div>
+                        <div class="card-level">Fundamental</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-description">The CompTIA Network+ certification validates the skills needed to design, configure, and manage networks.</div>
+                        <div class="card-meta">
+                            <div class="meta-item">
+                                <div class="meta-label">Vendor:</div>
+                                <div class="meta-value">CompTIA</div>
+                            </div>
+                            <div class="meta-item">
+                                <div class="meta-label">Duration:</div>
+                                <div class="meta-value">3 months</div>
+                            </div>
+                            <div class="meta-item">
+                                <div class="meta-label">Level:</div>
+                                <div class="meta-value">Fundamental</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="../certification-details.html?id=2" class="card-button">View Details</a>
+                    </div>
+                </div>
+                <div class="card-back">
+                    <div class="card-content">
+                        <div class="badge-wrapper">
+                            <div class="level-system-badge">New</div>
+                        </div>
+                        <div class="card-title">CompTIA Network+</div>
+                        <div class="card-description">The CompTIA Network+ certification validates the skills needed to design, configure, and manage networks.</div>
+                        <div class="card-meta">
+                            <div class="meta-item">
+                                <div class="meta-label">Vendor:</div>
+                                <div class="meta-value">CompTIA</div>
+                            </div>
+                            <div class="meta-item">
+                                <div class="meta-label">Duration:</div>
+                                <div class="meta-value">3 months</div>
+                            </div>
+                            <div class="meta-item">
+                                <div class="meta-label">Level:</div>
+                                <div class="meta-value">Fundamental</div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <a href="../certification-details.html?id=2" class="card-button">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="certification-card" data-certification-id="3" data-sector="IT" data-vendor="CompTIA" data-level="Fundamental">
+            <div class="card-inner">
+                <div class="card-front">
+                    <div class="card-header">
+                        <div class="card-title">CompTIA Security+</div>
+                        <div class="card-level">Fundamental</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-description">The CompTIA Security+ certification establishes the foundational knowledge required for any cybersecurity role.</div>
+                        <div class="card-meta">
+                            <div class="meta-item">
+                                <div class="meta-label">Vendor:</div>
+                                <div class="meta-value">CompTIA</div>
+                            </div>
+                            <div class="meta-item">
+                                <div class="meta-label">Duration:</div>
+                                <div class="meta-value">3 months</div>
+                            </div>
+                            <div class="meta-item">
+                                <div class="meta-label">Level:</div>
+                                <div class="meta-value">Fundamental</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="../certification-details.html?id=3" class="card-button">View Details</a>
+                    </div>
+                </div>
+                <div class="card-back">
+                    <div class="card-content">
+                        <div class="badge-wrapper">
+                            <div class="level-system-badge">New</div>
+                        </div>
+                        <div class="card-title">CompTIA Security+</div>
+                        <div class="card-description">The CompTIA Security+ certification establishes the foundational knowledge required for any cybersecurity role.</div>
+                        <div class="card-meta">
+                            <div class="meta-item">
+                                <div class="meta-label">Vendor:</div>
+                                <div class="meta-value">CompTIA</div>
+                            </div>
+                            <div class="meta-item">
+                                <div class="meta-label">Duration:</div>
+                                <div class="meta-value">3 months</div>
+                            </div>
+                            <div class="meta-item">
+                                <div class="meta-label">Level:</div>
+                                <div class="meta-value">Fundamental</div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <a href="../certification-details.html?id=3" class="card-button">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="certification-card" data-certification-id="4" data-sector="IT" data-vendor="CompTIA" data-level="Fundamental">
+            <div class="card-inner">
+                <div class="card-front">
+                    <div class="card-header">
+                        <div class="card-title">CompTIA Linux+</div>
+                        <div class="card-level">Fundamental</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-description">The CompTIA Linux+ certification validates the skills required to manage and configure Linux systems.</div>
+                        <div class="card-meta">
+                            <div class="meta-item">
+                                <div class="meta-label">Vendor:</div>
+                                <div class="meta-value">CompTIA</div>
+                            </div>
+                            <div class="meta-item">
+                                <div class="meta-label">Duration:</div>
+                                <div class="meta-value">3 months</div>
+                            </div>
+                            <div class="meta-item">
+                                <div class="meta-label">Level:</div>
+                                <div class="meta-value">Fundamental</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="../certification-details.html?id=4" class="card-button">View Details</a>
+                    </div>
+                </div>
+                <div class="card-back">
+                    <div class="card-content">
+                        <div class="badge-wrapper">
+                            <div class="level-system-badge">New</div>
+                        </div>
+                        <div class="card-title">CompTIA Linux+</div>
+                        <div class="card-description">The CompTIA Linux+ certification validates the skills required to manage and configure Linux systems.</div>
+                        <div class="card-meta">
+                            <div class="meta-item">
+                                <div class="meta-label">Vendor:</div>
+                                <div class="meta-value">CompTIA</div>
+                            </div>
+                            <div class="meta-item">
+                                <div class="meta-label">Duration:</div>
+                                <div class="meta-value">3 months</div>
+                            </div>
+                            <div class="meta-item">
+                                <div class="meta-label">Level:</div>
+                                <div class="meta-value">Fundamental</div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <a href="../certification-details.html?id=4" class="card-button">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="certification-card" data-certification-id="5" data-sector="IT" data-vendor="CompTIA" data-level="Fundamental">
+            <div class="card-inner">
+                <div class="card-front">
+                    <div class="card-header">
+                        <div class="card-title">CompTIA Cloud+</div>
+                        <div class="card-level">Fundamental</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-description">The CompTIA Cloud+ certification validates the skills needed to secure and manage cloud environments.</div>
+                        <div class="card-meta">
+                            <div class="meta-item">
+                                <div class="meta-label">Vendor:</div>
+                                <div class="meta-value">CompTIA</div>
+                            </div>
+                            <div class="meta-item">
+                                <div class="meta-label">Duration:</div>
+                                <div class="meta-value">3 months</div>
+                            </div>
+                            <div class="meta-item">
+                                <div class="meta-label">Level:</div>
+                                <div class="meta-value">Fundamental</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="../certification-details.html?id=5" class="card-button">View Details</a>
+                    </div>
+                </div>
+                <div class="card-back">
+                    <div class="card-content">
+                        <div class="badge-wrapper">
+                            <div class="level-system-badge">New</div>
+                        </div>
+                        <div class="card-title">CompTIA Cloud+</div>
+                        <div class="card-description">The CompTIA Cloud+ certification validates the skills needed to secure and manage cloud environments.</div>
+                        <div class="card-meta">
+                            <div class="meta-item">
+                                <div class="meta-label">Vendor:</div>
+                                <div class="meta-value">CompTIA</div>
+                            </div>
+                            <div class="meta-item">
+                                <div class="meta-label">Duration:</div>
+                                <div class="meta-value">3 months</div>
+                            </div>
+                            <div class="meta-item">
+                                <div class="meta-label">Level:</div>
+                                <div class="meta-value">Fundamental</div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <a href="../certification-details.html?id=5" class="card-button">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="certification-card" data-certification-id="6" data-sector="IT" data-vendor="CompTIA" data-level="Associate">
+            <div class="card-inner">
+                <div class="card-front">
+                    <div class="card-header">
+                        <div class="card-title">CompTIA PenTest+</div>
+                        <div class="card-level">Associate</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-description">The CompTIA PenTest+ certification validates the skills needed to perform penetration testing and vulnerability assessment.</div>
+                        <div class="card-meta">
+                            <div class="meta-item">
+                                <div class="meta-label">Vendor:</div>
+                                <div class="meta-value">CompTIA</div>
+                            </div>
+                            <div class="meta-item">
+                                <div class="meta-label">Duration:</div>
+                                <div class="meta-value">3 months</div>
+                            </div>
+                            <div class="meta-item">
+                                <div class="meta-label">Level:</div>
+                                <div class="meta-value">Associate</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="../certification-details.html?id=6" class="card-button">View Details</a>
+                    </div>
+                </div>
+                <div class="card-back">
+                    <div class="card-content">
+                        <div class="badge-wrapper">
+                            <div class="level-system-badge">New</div>
+                        </div>
+                        <div class="card-title">CompTIA PenTest+</div>
+                        <div class="card-description">The CompTIA PenTest+ certification validates the skills needed to perform penetration testing and vulnerability assessment.</div>
+                        <div class="card-meta">
+                            <div class="meta-item">
+                                <div class="meta-label">Vendor:</div>
+                                <div class="meta-value">CompTIA</div>
+                            </div>
+                            <div class="meta-item">
+                                <div class="meta-label">Duration:</div>
+                                <div class="meta-value">3 months</div>
+                            </div>
+                            <div class="meta-item">
+                                <div class="meta-label">Level:</div>
+                                <div class="meta-value">Associate</div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <a href="../certification-details.html?id=6" class="card-button">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="certification-card" data-certification-id="7" data-sector="IT" data-vendor="CompTIA" data-level="Associate">
+            <div class="card-inner">
+                <div class="card-front">
+                    <div class="card-header">
+                        <div class="card-title">CompTIA Cybersecurity Analyst (CySA+)</div>
+                        <div class="card-level">Associate</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-description">The CompTIA Cybersecurity Analyst (CySA+) certification validates the skills needed to analyze and respond to cybersecurity incidents.</div>
+                        <div class="card-meta">
+                            <div class="meta-item">
+                                <div class="meta-label">Vendor:</div>
+                                <div class="meta-value">CompTIA</div>
+                            </div>
+                            <div class="meta-item">
+                                <div class="meta-label">Duration:</div>
+                                <div class="meta-value">3 months</div>
+                            </div>
+                            <div class="meta-item">
+                                <div class="meta-label">Level:</div>
+                                <div class="meta-value">Associate</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="../certification-details.html?id=7" class="card-button">View Details</a>
+                    </div>
+                </div>
+                <div class="card-back">
+                    <div class="card-content">
+                        <div class="badge-wrapper">
+                            <div class="level-system-badge">New</div>
+                        </div>
+                        <div class="card-title">CompTIA Cybersecurity Analyst (CySA+)</div>
+                        <div class="card-description">The CompTIA Cybersecurity Analyst (CySA+) certification validates the skills needed to analyze and respond to cybersecurity incidents.</div>
+                        <div class="card-meta">
+                            <div class="meta-item">
+                                <div class="meta-label">Vendor:</div>
+                                <div class="meta-value">CompTIA</div>
+                            </div>
+                            <div class="meta-item">
+                                <div class="meta-label">Duration:</div>
+                                <div class="meta-value">3 months</div>
+                            </div>
+                            <div class="meta-item">
+                                <div class="meta-label">Level:</div>
+                                <div class="meta-value">Associate</div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <a href="../certification-details.html?id=7" class="card-button">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="certification-card" data-certification-id="8" data-sector="IT" data-vendor="CompTIA" data-level="Expert">
+            <div class="card-inner">
+                <div class="card-front">
+                    <div class="card-header">
+                        <div class="card-title">CompTIA Advanced Security Practitioner (CASP+)</div>
+                        <div class="card-level">Expert</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-description">The CompTIA Advanced Security Practitioner (CASP+) certification validates the advanced skills needed to design and implement cybersecurity solutions.</div>
+                        <div class="card-meta">
+                            <div class="meta-item">
+                                <div class="meta-label">Vendor:</div>
+                                <div class="meta-value">CompTIA</div>
+                            </div>
+                            <div class="meta-item">
+                                <div class="meta-label">Duration:</div>
+                                <div class="meta-value">3 months</div>
+                            </div>
+                            <div class="meta-item">
+                                <div class="meta-label">Level:</div>
+                                <div class="meta-value">Expert</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="../certification-details.html?id=8" class="card-button">View Details</a>
+                    </div>
+                </div>
+                <div class="card-back">
+                    <div class="card-content">
+                        <div class="badge-wrapper">
+                            <div class="level-system-badge">New</div>
+                        </div>
+                        <div class="card-title">CompTIA Advanced Security Practitioner (CASP+)</div>
+                        <div class="card-description">The CompTIA Advanced Security Practitioner (CASP+) certification validates the advanced skills needed to design and implement cybersecurity solutions.</div>
+                        <div class="card-meta">
+                            <div class="meta-item">
+                                <div class="meta-label">Vendor:</div>
+                                <div class="meta-value">CompTIA</div>
+                            </div>
+                            <div class="meta-item">
+                                <div class="meta-label">Duration:</div>
+                                <div class="meta-value">3 months</div>
+                            </div>
+                            <div class="meta-item">
+                                <div class="meta-label">Level:</div>
+                                <div class="meta-value">Expert</div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <a href="../certification-details.html?id=8" class="card-button">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="certification-card" data-certification-id="9" data-sector="IT" data-vendor="CompTIA" data-level="Professional">
+            <div class="card-inner">
+                <div class="card-front">
+                    <div class="card-header">
+                        <div class="card-title">CompTIA Project+</div>
+                        <div class="card-level">Professional</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-description">The CompTIA Project+ certification validates the knowledge and skills needed to manage projects effectively.</div>
+                        <div class="card-meta">
+                            <div class="meta-item">
+                                <div class="meta-label">Vendor:</div>
+                                <div class="meta-value">CompTIA</div>
+                            </div>
+                            <div class="meta-item">
+                                <div class="meta-label">Duration:</div>
+                                <div class="meta-value">3 months</div>
+                            </div>
+                            <div class="meta-item">
+                                <div class="meta-label">Level:</div>
+                                <div class="meta-value">Professional</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="../certification-details.html?id=9" class="card-button">View Details</a>
+                    </div>
+                </div>
+                <div class="card-back">
+                    <div class="card-content">
+                        <div class="badge-wrapper">
+                            <div class="level-system-badge">New</div>
+                        </div>
+                        <div class="card-title">CompTIA Project+</div>
+                        <div class="card-description">The CompTIA Project+ certification validates the knowledge and skills needed to manage projects effectively.</div>
+                        <div class="card-meta">
+                            <div class="meta-item">
+                                <div class="meta-label">Vendor:</div>
+                                <div class="meta-value">CompTIA</div>
+                            </div>
+                            <div class="meta-item">
+                                <div class="meta-label">Duration:</div>
+                                <div class="meta-value">3 months</div>
+                            </div>
+                            <div class="meta-item">
+                                <div class="meta-label">Level:</div>
+                                <div class="meta-value">Professional</div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <a href="../certification-details.html?id=9" class="card-button">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="certification-card" data-certification-id="10" data-sector="IT" data-vendor="CompTIA" data-level="Fundamental">
+            <div class="card-inner">
+                <div class="card-front">
+                    <div class="card-header">
+                        <div class="card-title">CompTIA IT Fundamentals (ITF+)</div>
+                        <div class="card-level">Fundamental</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-description">The CompTIA IT Fundamentals (ITF+) certification is an introduction to basic IT knowledge and skills.</div>
+                        <div class="card-meta">
+                            <div class="meta-item">
+                                <div class="meta-label">Vendor:</div>
+                                <div class="meta-value">CompTIA</div>
+                            </div>
+                            <div class="meta-item">
+                                <div class="meta-label">Duration:</div>
+                                <div class="meta-value">3 months</div>
+                            </div>
+                            <div class="meta-item">
+                                <div class="meta-label">Level:</div>
+                                <div class="meta-value">Fundamental</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="../certification-details.html?id=10" class="card-button">View Details</a>
+                    </div>
+                </div>
+                <div class="card-back">
+                    <div class="card-content">
+                        <div class="badge-wrapper">
+                            <div class="level-system-badge">New</div>
+                        </div>
+                        <div class="card-title">CompTIA IT Fundamentals (ITF+)</div>
+                        <div class="card-description">The CompTIA IT Fundamentals (ITF+) certification is an introduction to basic IT knowledge and skills.</div>
+                        <div class="card-meta">
+                            <div class="meta-item">
+                                <div class="meta-label">Vendor:</div>
+                                <div class="meta-value">CompTIA</div>
+                            </div>
+                            <div class="meta-item">
+                                <div class="meta-label">Duration:</div>
+                                <div class="meta-value">3 months</div>
+                            </div>
+                            <div class="meta-item">
+                                <div class="meta-label">Level:</div>
+                                <div class="meta-value">Fundamental</div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <a href="../certification-details.html?id=10" class="card-button">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Partners Section -->
+    <div class="container" style="margin-top: 4rem;">
+        <h2 style="text-align: center; font-size: 2rem; margin-bottom: 1rem;">Our Esteemed Partners</h2>
+        <div class="subtitle" style="text-align: center; margin-bottom: 2rem;">We are proud to partner with leading organizations to provide you with the best certification programs.</div>
+        <div class="partner-logos" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 2rem;">
+            <div class="partner-logo">
+                <img src="../assets/images/partners/comptia.svg" alt="CompTIA" style="width: 100%; height: auto;">
+            </div>
+            <div class="partner-logo">
+                <img src="../assets/images/partners/microsoft.svg" alt="Microsoft" style="width: 100%; height: auto;">
+            </div>
+            <div class="partner-logo">
+                <img src="../assets/images/partners/cisco.svg" alt="Cisco" style="width: 100%; height: auto;">
+            </div>
+            <div class="partner-logo">
+                <img src="../assets/images/partners/amazon-web-services.svg" alt="AWS" style="width: 100%; height: auto;">
+            </div>
+            <div class="partner-logo">
+                <img src="../assets/images/partners/isc2.svg" alt="ISC2" style="width: 100%; height: auto;">
+            </div>
+            <div class="partner-logo">
+                <img src="../assets/images/partners/red-hat.svg" alt="Red Hat" style="width: 100%; height: auto;">
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="main-footer">
+        <div class="container">
+            <div class="footer-top" style="display: flex; flex-wrap: wrap; gap: 2rem; padding: 2rem 0;">
+                <div class="footer-col" style="flex: 1;">
+                    <h4 style="font-size: 1.25rem; margin-bottom: 1rem;">About Us</h4>
+                    <p style="font-size: 0.875rem; color: #cbd5e1;">BTH Education Group is a leading provider of professional development and certification programs in the IT industry. Our mission is to empower individuals with the skills and knowledge needed to advance their careers and succeed in the digital economy.</p>
+                </div>
+                <div class="footer-col" style="flex: 1;">
+                    <h4 style="font-size: 1.25rem; margin-bottom: 1rem;">Quick Links</h4>
+                    <ul style="list-style: none; padding: 0; font-size: 0.875rem; color: #cbd5e1;">
+                        <li><a href="../index.html" style="color: #cbd5e1; text-decoration: none;">Home</a></li>
+                        <li><a href="../about.html" style="color: #cbd5e1; text-decoration: none;">About</a></li>
+                        <li><a href="../contact.html" style="color: #cbd5e1; text-decoration: none;">Contact</a></li>
+                        <li><a href="../blog.html" style="color: #cbd5e1; text-decoration: none;">Blog</a></li>
+                        <li><a href="../certifications.html" style="color: #cbd5e1; text-decoration: none;">Certifications</a></li>
+                        <li><a href="../frameworks.html" style="color: #cbd5e1; text-decoration: none;">Frameworks</a></li>
+                        <li><a href="../partners.html" style="color: #cbd5e1; text-decoration: none;">Partners</a></li>
+                        <li><a href="../resources.html" style="color: #cbd5e1; text-decoration: none;">Resources</a></li>
+                        <li><a href="../login.html" style="color: #cbd5e1; text-decoration: none;">Login</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col" style="flex: 1;">
+                    <h4 style="font-size: 1.25rem; margin-bottom: 1rem;">Contact Us</h4>
+                    <p style="font-size: 0.875rem; color: #cbd5e1;">1234 Street Name, City, State, 12345</p>
+                    <p style="font-size: 0.875rem; color: #cbd5e1;">Email: info@btheducationgroup.com</p>
+                    <p style="font-size: 0.875rem; color: #cbd5e1;">Phone: (123) 456-7890</p>
+                </div>
+            </div>
+            <div class="footer-bottom" style="border-top: 1px solid #e2e8f0; padding: 1.5rem 0; text-align: center; font-size: 0.875rem; color: #cbd5e1;">
+                <p>&copy; 2023 BTH Education Group. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal: Certification Details -->
+    <div class="modal-backdrop" id="certification-modal">
+        <div class="modal-card">
+            <div class="modal-header">
+                <button class="modal-close" aria-label="Close modal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-sections">
+                    <div class="modal-section -focus">
+                        <h3>
+                            <span class="section-icon"><i class="fas fa-info-circle"></i></span>
+                            Certification Overview
+                            <span class="chev"><i class="fas fa-chevron-down"></i></span>
+                        </h3>
+                        <p>This certification validates the skills and knowledge necessary to perform effectively in an entry-level IT role.</p>
+                        <ul>
+                            <li>Understanding of IT fundamentals</li>
+                            <li>Knowledge of basic networking concepts</li>
+                            <li>Familiarity with security and safety protocols</li>
+                        </ul>
+                    </div>
+                    <div class="modal-section -purpose">
+                        <h3>
+                            <span class="section-icon"><i class="fas fa-bullseye"></i></span>
+                            Purpose & Benefits
+                            <span class="chev"><i class="fas fa-chevron-down"></i></span>
+                        </h3>
+                        <p>The purpose of this certification is to provide individuals with the foundational skills required for a career in IT.</p>
+                        <ul>
+                            <li>Establishes a baseline of IT knowledge</li>
+                            <li>Enhances career prospects in the IT industry</li>
+                            <li>Prepares for more advanced certifications</li>
+                        </ul>
+                    </div>
+                    <div class="modal-section -impact">
+                        <h3>
+                            <span class="section-icon"><i class="fas fa-chart-line"></i></span>
+                            Career Impact
+                            <span class="chev"><i class="fas fa-chevron-down"></i></span>
+                        </h3>
+                        <p>Holders of this certification can expect to find job opportunities in various IT support roles, with a strong foundation for career growth.</p>
+                    </div>
+                    <div class="modal-section -usecases">
+                        <h3>
+                            <span class="section-icon"><i class="fas fa-briefcase"></i></span>
+                            Use Cases
+                            <span class="chev"><i class="fas fa-chevron-down"></i></span>
+                        </h3>
+                        <p>This certification is ideal for individuals seeking to start a career in IT, as well as those looking to validate their foundational IT skills.</p>
+                        <ul>
+                            <li>Technical support specialists</li>
+                            <li>Help desk technicians</li>
+                            <li>Entry-level IT professionals</li>
+                        </ul>
+                    </div>
+
+                    <div class="modal-section -roles">
+                        <h3>
+                            <span class="section-icon"><i class="fas fa-user-tie"></i></span>
+                            Roles & Responsibilities
+                            <span class="chev"><i class="fas fa-chevron-down"></i></span>
+                        </h3>
+                        <p>Professionals with this certification typically handle basic IT support tasks, including troubleshooting hardware and software issues, assisting with network connectivity, and ensuring security protocols are followed.</p>
+                    </div>
+
+                    <div class="modal-section -comp">
+                        <h3>
+                            <span class="section-icon"><i class="fas fa-cogs"></i></span>
+                            Technical Competencies
+                            <span class="chev"><i class="fas fa-chevron-down"></i></span>
+                        </h3>
+                        <p>Key competencies include understanding operating systems, basic networking, security fundamentals, and IT infrastructure.</p>
+                    </div>
+
+                    <div class="modal-section -pd">
+                        <h3>
+                            <span class="section-icon"><i class="fas fa-graduation-cap"></i></span>
+                            Professional Development
+                            <span class="chev"><i class="fas fa-chevron-down"></i></span>
+                        </h3>
+                        <p>This certification lays the groundwork for further professional development in the IT field, including advanced certifications and specialized training.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- End Modal -->
+
+    <script>
+    (function () {
+        // HTML escape helper
+        function escapeHtml(str) {
+            if (str == null) return '';
+            return String(str)
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;')
+                .replace(/'/g, '&#39;');
+        }
+        window.escapeHtml = escapeHtml;
+
+        // Preload CompTIA bundles (async, non-blocking)
+        async function preloadCompTIABundles() {
+            try {
+                const resp = await fetch('../assets/data/comptia-bundles.json', { cache: 'no-store' });
+                if (resp && resp.ok) window._comptiaBundles = await resp.json();
+                else window._comptiaBundles = window._comptiaBundles || [];
+            } catch (e) {
+                window._comptiaBundles = window._comptiaBundles || [];
+                console.debug('CompTIA bundles preload failed (non-fatal):', e);
+            }
+        }
+
+        // Safe history update
+        function replaceUrlFromSearchParams(params) {
+            const query = params.toString();
+            const newUrl = query ? `${location.pathname}?${query}` : location.pathname;
+            try { history.replaceState(null, '', newUrl); } catch (e) { /* ignore */ }
+        }
+        window.replaceUrlFromSearchParams = replaceUrlFromSearchParams;
+
+        // Safe clipboard write with fallback
+        async function safeCopyToClipboard(text) {
+            try {
+                if (navigator.clipboard && navigator.clipboard.writeText) {
+                    await navigator.clipboard.writeText(text);
+                    return true;
+                }
+                const ta = document.createElement('textarea');
+                ta.value = text;
+                ta.style.position = 'fixed';
+                ta.style.left = '-9999px';
+                document.body.appendChild(ta);
+                ta.select();
+                const ok = document.execCommand && document.execCommand('copy');
+                document.body.removeChild(ta);
+                return !!ok;
+            } catch (e) {
+                return false;
+            }
+        }
+        window.safeCopyToClipboard = safeCopyToClipboard;
+
+        // Create filter chip
+        function createFilterChip(label, value, onRemove) {
+            const chip = document.createElement('div');
+            chip.className = 'filter-chip';
+            const text = document.createElement('span');
+            text.textContent = `${label}: ${value}`;
+            text.style.fontWeight = '700';
+            chip.appendChild(text);
+            const rem = document.createElement('span');
+            rem.className = 'remove-filter';
+            rem.style.marginLeft = '0.6rem';
+            rem.style.cursor = 'pointer';
+            rem.setAttribute('role', 'button');
+            rem.setAttribute('aria-label', `Remove ${label} filter`);
+            rem.textContent = '✕';
+            rem.addEventListener('click', onRemove);
+            chip.appendChild(rem);
+            return chip;
+        }
+
+        // Reset filters
+        function resetFilters() {
+            const sectorSel = document.getElementById('sector-filter');
+            const levelSel = document.getElementById('level-filter');
+            if (sectorSel) sectorSel.value = '';
+            if (levelSel) levelSel.value = '';
+            replaceUrlFromSearchParams(new URLSearchParams());
+            document.querySelectorAll('.certification-card').forEach(c => c.style.display = '');
+            const appliedEl = document.getElementById('applied-filters');
+            if (appliedEl) { appliedEl.innerHTML = ''; appliedEl.style.display = 'none'; }
+            const nodata = document.getElementById('no-results-msg'); if (nodata) nodata.remove();
+        }
+
+        // Modal open/close
+        function openCertificationModal(card) {
+            const modal = document.getElementById('certification-modal');
+            if (!modal) return;
+            const header = modal.querySelector('.modal-header');
+            if (!header) return;
+            let titleEl = header.querySelector('.modal-title');
+            if (!titleEl) {
+                titleEl = document.createElement('div');
+                titleEl.className = 'modal-title';
+                header.insertBefore(titleEl, header.firstChild);
+            }
+
+            const titleText = (card.querySelector('.card-title')?.textContent || '').trim();
+            const descText = (card.querySelector('.card-description')?.textContent || '').trim();
+            const vendor = card.dataset.vendor || (card.querySelectorAll('.meta-value')[0]?.textContent || '').trim();
+            const duration = (Array.from(card.querySelectorAll('.meta-item')).find(mi => (mi.querySelector('.meta-label')?.textContent || '').trim().toLowerCase() === 'duration:')?.querySelector('.meta-value')?.textContent || '').trim();
+            const level = card.dataset.level || (card.querySelector('.card-level')?.textContent || '').trim();
+
+            titleEl.textContent = titleText;
+
+            let meta = header.querySelector('.modal-meta');
+            if (!meta) {
+                meta = document.createElement('div');
+                meta.className = 'modal-meta';
+                header.appendChild(meta);
+            }
+            meta.innerHTML = '';
+            const createChip = (label, value) => {
+                const chip = document.createElement('div');
+                chip.className = 'modal-chip';
+                const icon = document.createElement('span');
+                icon.style.opacity = '0.9';
+                icon.style.marginRight = '0.4rem';
+                icon.textContent = label === 'Vendor' ? '🏷️' : label === 'Duration' ? '⏱️' : '🔰';
+                chip.appendChild(icon);
+                const txt = document.createElement('span');
+                txt.textContent = `${value}`;
+                chip.appendChild(txt);
+                return chip;
+            };
+            if (vendor) meta.appendChild(createChip('Vendor', vendor));
+            if (duration) meta.appendChild(createChip('Duration', duration));
+            if (level) meta.appendChild(createChip('Level', level));
+
+            const overview = modal.querySelector('.modal-section.-focus');
+            if (overview) {
+                const p = overview.querySelector('p');
+                if (p) p.textContent = descText || p.textContent;
+            }
+
+            modal.classList.add('active');
+            const closeBtn = modal.querySelector('.modal-close');
+            if (closeBtn) closeBtn.focus();
+        }
+
+        function closeCertificationModal() {
+            const modal = document.getElementById('certification-modal');
+            if (!modal) return;
+            modal.classList.remove('active');
+        }
+
+        // Core: applyFilters - exact matching via data attributes
+        async function applyFilters() {
+            const sectorSel = document.getElementById('sector-filter');
+            const levelSel = document.getElementById('level-filter');
+            const appliedEl = document.getElementById('applied-filters');
+            if (!sectorSel || !levelSel) return;
+
+            const sector = sectorSel.value.trim();
+            const level = levelSel.value.trim();
+
+            // Update URL params
+            const params = new URLSearchParams();
+            if (sector) params.set('sector', sector);
+            if (level) params.set('level', level);
+            replaceUrlFromSearchParams(params);
+
+            const cards = Array.from(document.querySelectorAll('.certification-card'));
+            let anyVisible = false;
+
+            cards.forEach(card => {
+                const cardSector = (card.dataset.sector || '').trim();
+                const cardVendor = (card.dataset.vendor || '').trim();
+                const cardLevel = (card.dataset.level || '').trim();
+
+                let visible = true;
+                if (sector) {
+                    if (!cardSector || cardSector.toLowerCase() !== sector.toLowerCase()) visible = false;
+                }
+                if (level) {
+                    if (!cardLevel || cardLevel.toLowerCase() !== level.toLowerCase()) visible = false;
+                }
+                card.style.display = visible ? '' : 'none';
+                if (visible) anyVisible = true;
+            });
+
+            // Update applied filters UI
+            appliedEl.innerHTML = '';
+            if (!sector && !level) {
+                appliedEl.style.display = 'none';
+            } else {
+                appliedEl.style.display = 'flex';
+                if (sector) {
+                    const chip = createFilterChip('Sector', sector, () => {
+                        sectorSel.value = '';
+                        applyFilters();
+                    });
+                    appliedEl.appendChild(chip);
+                }
+                if (level) {
+                    const chip = createFilterChip('Level', level, () => {
+                        levelSel.value = '';
+                        applyFilters();
+                    });
+                    appliedEl.appendChild(chip);
+                }
+            }
+
+            let nodata = document.getElementById('no-results-msg');
+            if (!anyVisible) {
+                if (!nodata) {
+                    nodata = document.createElement('div');
+                    nodata.id = 'no-results-msg';
+                    nodata.style.textAlign = 'center';
+                    nodata.style.padding = '2rem';
+                    nodata.textContent = 'No certifications match your filters. Try clearing filters.';
+                    document.getElementById('certification-cards').insertAdjacentElement('afterend', nodata);
+                }
+            } else {
+                if (nodata) nodata.remove();
+            }
+
+            return { success: true };
+        }
+        window.applyFilters = applyFilters;
+
+        // Init wiring
+        document.addEventListener('DOMContentLoaded', async function init() {
+            await preloadCompTIABundles();
+
+            const applyBtn = document.getElementById('apply-filters');
+            const resetBtn = document.getElementById('reset-filters');
+            if (applyBtn) applyBtn.addEventListener('click', (e) => { e.preventDefault(); applyFilters(); });
+            if (resetBtn) resetBtn.addEventListener('click', (e) => { e.preventDefault(); resetFilters(); });
+
+            const cardsContainer = document.getElementById('certification-cards');
+            if (cardsContainer) {
+                cardsContainer.addEventListener('click', function (e) {
+                    const card = e.target.closest('.certification-card');
+                    if (!card) return;
+                    const targetLink = e.target.closest('a.card-button, a[href]');
+                    if (targetLink && targetLink.classList.contains('card-button')) {
+                        e.preventDefault();
+                        openCertificationModal(card);
+                        return;
+                    }
+                    openCertificationModal(card);
+                });
+            }
+
+            const modal = document.getElementById('certification-modal');
+            if (modal) {
+                modal.addEventListener('click', function (e) {
+                    if (e.target === modal) closeCertificationModal();
+                });
+                const closeBtn = modal.querySelector('.modal-close');
+                if (closeBtn) closeBtn.addEventListener('click', closeCertificationModal);
+                document.addEventListener('keydown', function (e) {
+                    if (e.key === 'Escape') closeCertificationModal();
+                });
+            }
+
+            if (typeof wireDynamicVendorBadges === 'function') {
+                try { wireDynamicVendorBadges(); } catch (err) { console.debug('wireDynamicVendorBadges failed', err); }
+            }
+            if (typeof wireDynamicFocusAreaTags === 'function') {
+                try { wireDynamicFocusAreaTags(); } catch (err) { console.debug('wireDynamicFocusAreaTags failed', err); }
+            }
+
+            // Restore params from URL
+            try {
+                const params = new URLSearchParams(window.location.search);
+                const s = params.get('sector');
+                const l = params.get('level');
+                const sectorSel = document.getElementById('sector-filter');
+                const levelSel = document.getElementById('level-filter');
+                if (s && sectorSel) sectorSel.value = s;
+                if (l && levelSel) levelSel.value = l;
+                if ((s && s.length) || (l && l.length)) await applyFilters();
+            } catch (e) { /* ignore malformed URL */ }
+        });
+    })();
+    </script>
+
+</body>
+</html>
