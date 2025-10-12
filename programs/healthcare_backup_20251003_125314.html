@@ -1,0 +1,3279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Professional Certification System | Level 1-5 Integration | BTH Education Group</title>
+    <meta name="description" content="Advanced healthcare certification system with comprehensive level-based progression, integrated with HEXAD Professional Development Framework.">
+    
+    <!-- Favicon and Meta Tags -->
+    <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+    <meta property="og:title" content="Healthcare Professional Certification System | BTH Education Group">
+    <meta property="og:description" content="Comprehensive healthcare certification system with level-based progression and professional development integration.">
+    <meta property="og:image" content="../assets/images/og-image.jpg">
+    <meta property="og:url" content="https://www.btheducationgroup.org/programs/healthcare.html">
+    <meta property="og:type" content="website">
+    
+    <!-- Core Stylesheets -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* Healthcare Professional Certification System Styles */
+        :root {
+            --healthcare-primary: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);
+            --healthcare-secondary: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            --healthcare-accent: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+            --healthcare-care: linear-gradient(135deg, #f472b6 0%, #ec4899 100%);
+            --healthcare-trust: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #374151;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            margin: 0;
+            padding: 0;
+        }
+
+        .healthcare-hero {
+            background: var(--healthcare-primary);
+            color: white;
+            padding: 6rem 0;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .healthcare-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('../assets/images/fc422b48f6_Doctor.jpg') center/cover;
+            opacity: 0.15;
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Filter Tabs Styling */
+        .filter-tab {
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .filter-tab.active {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+        }
+
+        .filter-tab:hover:not(.active) {
+            background: #f1f5f9 !important;
+            color: #3b82f6 !important;
+            border-color: #3b82f6 !important;
+        }
+
+        /* Certification Card Animations */
+        .certification-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .certification-card.selected {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(16, 185, 129, 0.25);
+        }
+
+        .certification-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        /* Level Cards */
+        .level-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .level-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .level-card:hover::before {
+            left: 100%;
+        }
+
+        .level-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Loading States */
+        .loading-spinner {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255,255,255,.3);
+            border-radius: 50%;
+            border-top-color: #fff;
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .container {
+                padding: 0 1rem;
+            }
+            
+            .filter-tabs-container {
+                flex-direction: column;
+            }
+            
+            .filter-tab {
+                margin-bottom: 0.5rem;
+            }
+        }
+
+        /* Accessibility */
+        .filter-tab:focus,
+        .certification-card:focus,
+        .level-card:focus {
+            outline: 2px solid #3b82f6;
+            outline-offset: 2px;
+        }
+
+        /* Print Styles */
+        @media print {
+            .healthcare-hero {
+                background: #06b6d4 !important;
+                -webkit-print-color-adjust: exact;
+            }
+            
+            .filter-tab,
+            .certification-card {
+                box-shadow: none !important;
+                border: 1px solid #ccc !important;
+            }
+        }
+
+        /* Advanced Healthcare Filtering System Styles */
+        .advanced-filter-container {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            margin: 40px auto;
+            max-width: 1200px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e2e8f0;
+        }
+
+        .filter-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .filter-header h2 {
+            color: #1e293b;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .filter-header p {
+            color: #64748b;
+            font-size: 1.1rem;
+        }
+
+        .filter-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #f1f5f9;
+            padding-bottom: 20px;
+        }
+
+        .filter-tab {
+            background: transparent;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 12px 24px;
+            font-weight: 600;
+            color: #64748b;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .filter-tab:hover {
+            border-color: #06b6d4;
+            color: #06b6d4;
+        }
+
+        .filter-tab.active {
+            background: var(--healthcare-primary);
+            border-color: #06b6d4;
+            color: white;
+        }
+
+        .filter-controls {
+            margin-bottom: 20px;
+        }
+
+        .filter-row {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .search-container {
+            position: relative;
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 12px 20px 12px 45px;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: #06b6d4;
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #94a3b8;
+        }
+
+        .filter-dropdown {
+            padding: 12px 16px;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            font-size: 1rem;
+            background: white;
+            color: #374151;
+            cursor: pointer;
+            transition: border-color 0.3s ease;
+            min-width: 200px;
+        }
+
+        .filter-dropdown:focus {
+            outline: none;
+            border-color: #06b6d4;
+        }
+
+        .filter-clear-btn {
+            background: #ef4444;
+            color: white;
+            border: none;
+            border-radius: 12px;
+            padding: 12px 20px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .filter-clear-btn:hover {
+            background: #dc2626;
+        }
+
+        .vendor-filter-container, .domain-filter-container {
+            margin-top: 20px;
+            padding: 20px;
+            background: #f8fafc;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .vendor-filter-container h3, .domain-filter-container h3 {
+            color: #1e293b;
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .vendor-filter-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .vendor-checkbox {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .vendor-checkbox:hover {
+            border-color: #06b6d4;
+            background: #f0f9ff;
+        }
+
+        .vendor-checkbox input[type="checkbox"] {
+            margin: 0;
+            transform: scale(1.2);
+        }
+
+        .vendor-name {
+            font-weight: 500;
+            color: #374151;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .premium-badge {
+            background: var(--healthcare-secondary);
+            color: white;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .domain-pathways-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .domain-pathway-card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            border: 2px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+
+        .domain-pathway-card:hover {
+            border-color: #06b6d4;
+            box-shadow: 0 4px 12px rgba(6, 182, 212, 0.1);
+        }
+
+        .pathway-header {
+            display: flex;
+            justify-content: between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .pathway-header h4 {
+            margin: 0;
+            color: #1e293b;
+            font-size: 1.1rem;
+            font-weight: 600;
+            flex: 1;
+        }
+
+        .pathway-checkbox {
+            position: relative;
+            cursor: pointer;
+        }
+
+        .pathway-checkbox input[type="checkbox"] {
+            margin: 0;
+            transform: scale(1.3);
+        }
+
+        .pathway-description {
+            color: #64748b;
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+
+        .pathway-details {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            font-size: 0.9rem;
+        }
+
+        .pathway-categories, .pathway-vendors {
+            color: #475569;
+        }
+
+        .pathway-categories strong, .pathway-vendors strong {
+            color: #1e293b;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .advanced-filter-container {
+                margin: 20px;
+                padding: 20px;
+            }
+
+            .filter-tabs {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .filter-row {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .search-container {
+                min-width: auto;
+            }
+
+            .filter-dropdown {
+                min-width: auto;
+            }
+
+            .vendor-filter-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .domain-pathways-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .level-badge {
+            background: rgba(255, 255, 255, 0.25);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .level-budget {
+            font-size: 1.1rem;
+            font-weight: 600;
+            opacity: 0.9;
+        }
+
+        /* Certification Categories */
+        .certification-categories {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        .section-description {
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .category-card {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border-top: 4px solid;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .category-card:nth-child(1) { border-top-color: #06b6d4; }
+        .category-card:nth-child(2) { border-top-color: #10b981; }
+        .category-card:nth-child(3) { border-top-color: #8b5cf6; }
+        .category-card:nth-child(4) { border-top-color: #f472b6; }
+
+        .category-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+        }
+
+        .category-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .category-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--healthcare-primary);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            font-size: 24px;
+            color: white;
+        }
+
+        .category-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin: 0;
+        }
+
+        .category-description {
+            font-size: 1rem;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .cert-count {
+            background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+            color: #1d4ed8;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        /* Level Integration Section */
+        .level-integration {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .level-display {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .current-level-info {
+            background: var(--healthcare-primary);
+            color: white;
+            padding: 40px;
+            border-radius: 20px;
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .current-level-info::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 200px;
+            height: 200px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transform: translate(50%, -50%);
+        }
+
+        .level-info-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .level-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .level-description {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+
+        .level-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #fff;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            opacity: 0.8;
+            margin-top: 8px;
+        }
+
+        /* CTA Buttons */
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary-large {
+            background: var(--healthcare-primary);
+            color: white;
+            padding: 18px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .btn-primary-large:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(6, 182, 212, 0.3);
+            color: white;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #06b6d4;
+            padding: 16px 30px;
+            border: 2px solid #06b6d4;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            background: #06b6d4;
+            color: white;
+        }
+
+        /* Final CTA Section */
+        .cta-section {
+            background: var(--healthcare-primary);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .cta-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .cta-description {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        /* Professional System Section */
+        .professional-system-section {
+            padding: 80px 20px;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        }
+
+        .system-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .system-header h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: var(--healthcare-primary);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
+        }
+
+        /* Filter Tabs */
+        .filter-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        .filter-tab {
+            padding: 1rem 2rem;
+            background: white;
+            border: 2px solid #e2e8f0;
+            border-radius: 15px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .filter-tab.active {
+            background: var(--healthcare-primary);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(6, 182, 212, 0.3);
+        }
+
+        .filter-tab:hover:not(.active) {
+            background: rgba(6, 182, 212, 0.15);
+            transform: translateY(-1px);
+        }
+
+        /* Level Selector */
+        .level-selector {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .level-button {
+            position: relative;
+            padding: 1rem 2rem;
+            border: 2px solid;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 700;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            background: white;
+        }
+
+        .level-button.level-1 {
+            border-color: #10b981;
+            color: #10b981;
+        }
+
+        .level-button.level-1.active {
+            background: var(--level-1);
+            color: white;
+            box-shadow: 0 8px 25px rgba(16, 185, 129, 0.3);
+        }
+
+        .level-button.level-2 {
+            border-color: #3b82f6;
+            color: #3b82f6;
+        }
+
+        .level-button.level-2.active {
+            background: var(--level-2);
+            color: white;
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+        }
+
+        .level-button.level-3 {
+            border-color: #f59e0b;
+            color: #f59e0b;
+        }
+
+        .level-button.level-3.active {
+            background: var(--level-3);
+            color: white;
+            box-shadow: 0 8px 25px rgba(245, 158, 11, 0.3);
+        }
+
+        .level-button.level-4 {
+            border-color: #ef4444;
+            color: #ef4444;
+        }
+
+        .level-button.level-4.active {
+            background: var(--level-4);
+            color: white;
+            box-shadow: 0 8px 25px rgba(239, 68, 68, 0.3);
+        }
+
+        .level-button.level-5 {
+            border-color: #8b5cf6;
+            color: #8b5cf6;
+        }
+
+        .level-button.level-5.active {
+            background: var(--level-5);
+            color: white;
+            box-shadow: 0 8px 25px rgba(139, 92, 246, 0.3);
+        }
+
+        .level-button:hover:not(.active) {
+            transform: translateY(-2px);
+        }
+
+        /* Level Info Display */
+        .level-info-display {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            margin: 2rem auto;
+            max-width: 1200px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .level-info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .level-info-card {
+            text-align: center;
+            padding: 1.5rem;
+            background: #f8fafc;
+            border-radius: 15px;
+        }
+
+        .level-info-card h4 {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #64748b;
+            margin-bottom: 0.5rem;
+        }
+
+        .info-value {
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: var(--healthcare-primary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Pricing Display */
+        .pricing-display {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            border-radius: 15px;
+            padding: 2rem;
+        }
+
+        .pricing-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .pricing-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: var(--healthcare-primary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .pricing-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .pricing-detail {
+            text-align: center;
+            padding: 1rem;
+            background: white;
+            border-radius: 10px;
+        }
+
+        /* Categories Section */
+        .categories-section {
+            padding: 80px 20px;
+            background: white;
+        }
+
+        .healthcare-categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .category-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid #e2e8f0;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .category-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .category-icon {
+            font-size: 2rem;
+            color: #06b6d4;
+        }
+
+        .category-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 0.5rem;
+        }
+
+        .category-subtitle {
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+
+        .category-info-icon {
+            margin-left: auto;
+            cursor: pointer;
+            color: #64748b;
+            font-size: 1.2rem;
+        }
+
+        .vendors-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .vendor-badge {
+            padding: 0.4rem 0.8rem;
+            background: #f1f5f9;
+            border-radius: 8px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #475569;
+        }
+
+        .vendor-badge.bth-partner {
+            background: var(--healthcare-primary);
+            color: white;
+        }
+
+        /* Get Started Card */
+        .get-started-card {
+            background: var(--healthcare-primary);
+            color: white;
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(6, 182, 212, 0.3);
+        }
+
+        .get-started-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .get-started-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .btn-get-started {
+            background: white;
+            color: #06b6d4;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+        }
+
+        .btn-get-started:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Domain Expertise Section */
+        #domain-pathways {
+            display: none;
+        }
+
+        .domain-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .domain-categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .domain-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 1px solid #e2e8f0;
+        }
+
+        .domain-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .domain-header-card {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .domain-icon {
+            font-size: 3rem;
+            color: #06b6d4;
+            margin-bottom: 1rem;
+        }
+
+        .domain-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 0.5rem;
+        }
+
+        .domain-subtitle {
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+
+        .domain-description {
+            color: #475569;
+            margin-bottom: 1.5rem;
+        }
+
+        .domain-vendors {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .vendor-tag {
+            padding: 0.3rem 0.6rem;
+            background: #e0f2fe;
+            color: #0891b2;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .domain-stats {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 1.5rem;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            display: block;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #06b6d4;
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+            color: #64748b;
+        }
+
+        .btn-domain-select {
+            width: 100%;
+            background: var(--healthcare-primary);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-domain-select:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(6, 182, 212, 0.3);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .healthcare-categories-grid {
+                grid-template-columns: 1fr;
+                padding: 0 15px;
+            }
+            
+            .domain-categories-grid {
+                grid-template-columns: 1fr;
+                padding: 0 15px;
+            }
+            
+            .level-stats {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .cta-title {
+                font-size: 2rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .filter-tabs {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .level-selector {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 0.5rem;
+            }
+
+            .level-info-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .pricing-details {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <a href="../index.html">
+                        <img src="../assets/images/bthlogo.png" alt="BTH Education Group" class="nav-logo">
+                    </a>
+                </div>
+                <div class="nav-menu">
+                    <a href="../index.html" class="nav-link">Home</a>
+                    <a href="../about.html" class="nav-link">About</a>
+                    <a href="../program.html" class="nav-link">Programs</a>
+                    <a href="../industry-solutions.html" class="nav-link">Industry Solutions</a>
+                    <a href="../contact.html" class="nav-link">Contact</a>
+                    <a href="../apply.html" class="nav-link btn-nav">Apply Now</a>
+                </div>
+                <div class="nav-hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Healthcare Hero Section -->
+        <section class="healthcare-hero">
+            <div class="hero-content">
+                <h1 class="hero-title">🏥 Healthcare Professional Certifications</h1>
+                <p class="hero-subtitle">Comprehensive certification pathways for healthcare professionals across clinical, administrative, technology, and specialized domains with level-based progression and HEXAD Professional Development integration.</p>
+                
+                <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 2rem; flex-wrap: wrap;">
+                    <div style="background: rgba(255,255,255,0.15); padding: 1rem 1.5rem; border-radius: 15px; backdrop-filter: blur(10px);">
+                        <div style="font-size: 1.5rem; font-weight: bold;">200+</div>
+                        <div style="font-size: 0.9rem; opacity: 0.9;">Healthcare Certifications</div>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.15); padding: 1rem 1.5rem; border-radius: 15px; backdrop-filter: blur(10px);">
+                        <div style="font-size: 1.5rem; font-weight: bold;">5 Levels</div>
+                        <div style="font-size: 0.9rem; opacity: 0.9;">Progressive System</div>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.15); padding: 1rem 1.5rem; border-radius: 15px; backdrop-filter: blur(10px);">
+                        <div style="font-size: 1.5rem; font-weight: bold;">15+</div>
+                        <div style="font-size: 0.9rem; opacity: 0.9;">Specialty Areas</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content Section -->
+        <section class="main-content" style="padding: 4rem 0; background: #f8fafc;">
+            <div class="container">
+                <div id="filteringControls" style="background: white; border-radius: 20px; padding: 2rem; margin-bottom: 3rem; box-shadow: 0 10px 40px rgba(0,0,0,0.08);">
+                    <div class="level-display" style="background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%); border-radius: 16px; padding: 2rem; color: white; margin-bottom: 2rem; text-align: center;">
+                        <h2 id="levelTitle" style="margin: 0 0 1rem 0; font-size: 2rem;">Level 1 Healthcare Certifications</h2>
+                        <div id="levelInfo" class="level-info-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; margin-top: 1rem;">
+                            <div style="background: rgba(255,255,255,0.1); padding: 1rem; border-radius: 12px;">
+                                <div style="font-size: 1.5rem; font-weight: bold;">1-2</div>
+                                <div style="font-size: 0.9rem; opacity: 0.9;">Certifications</div>
+                            </div>
+                            <div style="background: rgba(255,255,255,0.1); padding: 1rem; border-radius: 12px;">
+                                <div style="font-size: 1.5rem; font-weight: bold;">$8,100</div>
+                                <div style="font-size: 0.9rem; opacity: 0.9;">Total Value</div>
+                            </div>
+                            <div style="background: rgba(255,255,255,0.1); padding: 1rem; border-radius: 12px;">
+                                <div style="font-size: 1.5rem; font-weight: bold;">24-48</div>
+                                <div style="font-size: 0.9rem; opacity: 0.9;">Weeks</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Advanced Search Bar -->
+                    <div class="search-container" style="position: relative; margin-bottom: 2rem;">
+                        <input type="text" id="advancedSearch" placeholder="🔍 Search healthcare certifications, specialties, organizations..." style="width: 100%; padding: 1.25rem 1.5rem; border: 2px solid #e2e8f0; border-radius: 15px; font-size: 1rem; background: white; transition: all 0.3s ease;" onfocus="this.style.borderColor='#06b6d4'; this.style.outline='none'" onblur="this.style.borderColor='#e2e8f0'">
+                        <div class="search-suggestions" id="searchSuggestions" style="position: absolute; top: 100%; left: 0; right: 0; background: white; border-radius: 12px; box-shadow: 0 10px 40px rgba(0,0,0,0.15); max-height: 300px; overflow-y: auto; z-index: 1000; display: none;"></div>
+                    </div>
+                    
+                    <!-- Filter Tabs -->
+                    <div class="filter-tabs-container" style="display: flex; gap: 1rem; margin-bottom: 2rem; flex-wrap: wrap;">
+                        <button class="filter-tab active" data-filter="categories" style="background: linear-gradient(135deg, #06b6d4, #0891b2); color: white; border: none; border-radius: 25px; padding: 1rem 2rem; font-weight: 600; cursor: pointer; transition: all 0.3s ease; flex: 1; min-width: 150px;">
+                            🏥 Healthcare Categories
+                        </button>
+                        <button class="filter-tab" data-filter="organizations" style="background: white; color: #64748b; border: 2px solid #e2e8f0; border-radius: 25px; padding: 1rem 2rem; font-weight: 600; cursor: pointer; transition: all 0.3s ease; flex: 1; min-width: 150px;">
+                            🏛️ Certifying Organizations
+                        </button>
+                        <button class="filter-tab" data-filter="specialties" style="background: white; color: #64748b; border: 2px solid #e2e8f0; border-radius: 25px; padding: 1rem 2rem; font-weight: 600; cursor: pointer; transition: all 0.3s ease; flex: 1; min-width: 150px;">
+                            🎯 Medical Specialties
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Main Content Area -->
+                <div class="main-content-area">
+                    <!-- Dynamic content will be rendered here -->
+                    <div class="loading-state" style="text-align: center; padding: 4rem 2rem; color: #64748b;">
+                        <div style="font-size: 3rem; margin-bottom: 1rem;">⏳</div>
+                        <h3>Loading Healthcare Certifications...</h3>
+                        <p>Preparing your level-appropriate certification options</p>
+                    </div>
+                </div>
+                
+                <!-- Selection Summary (when applicable) -->
+                <div id="selectionSummary" style="position: fixed; bottom: 2rem; right: 2rem; background: linear-gradient(135deg, #10b981, #059669); color: white; padding: 1.5rem; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.3); display: none; z-index: 1000;">
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <div>
+                            <div style="font-weight: 700; font-size: 1.1rem;">Certifications Selected</div>
+                            <div style="opacity: 0.9;">Ready to proceed</div>
+                        </div>
+                        <div style="background: rgba(255,255,255,0.2); padding: 0.5rem 1rem; border-radius: 12px; font-size: 1.25rem; font-weight: bold;">
+                            <span id="summaryCount">0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+            <div class="hero-content">
+                <h1 class="hero-title">Healthcare Professional Certification Pathways</h1>
+                <p class="hero-subtitle">Advance your healthcare career with comprehensive certification pathways across clinical, administrative, technology, and specialized healthcare domains. Join thousands of professionals transforming patient care.</p>
+                
+                <!-- Level Integration Display -->
+                <div id="levelDisplay" class="level-display-hero">
+                    <div class="level-badge" id="currentLevelBadge">Level 1 Selected</div>
+                    <div class="level-budget" id="currentBudget">Budget: $13,902.66</div>
+                </div>
+            </div>
+        </section>
+
+    <!-- Professional Development System Section -->
+    <section class="professional-system-section">
+        <div class="system-header">
+            <h2>Level 1-5 Professional System</h2>
+            <p>Select your current level to view appropriate certifications, pricing, and progression paths</p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="filter-tabs">
+            <div class="filter-tab active" data-filter="industry">Industry Focus</div>
+            <div class="filter-tab" data-filter="domain">Domain Expertise</div>
+        </div>
+
+        <!-- Level Selector -->
+        <div class="level-selector">
+            <div class="level-button level-1 active" data-level="1">Level 1<br><small>Foundation</small></div>
+            <div class="level-button level-2" data-level="2">Level 2<br><small>Intermediate</small></div>
+            <div class="level-button level-3" data-level="3">Level 3<br><small>Advanced</small></div>
+            <div class="level-button level-4" data-level="4">Level 4<br><small>Expert</small></div>
+            <div class="level-button level-5" data-level="5">Level 5<br><small>Master</small></div>
+        </div>
+
+        <!-- Level Information Display -->
+        <div class="level-info-display">
+            <div class="level-info-grid">
+                <div class="level-info-card">
+                    <h4>Maximum Certifications</h4>
+                    <div class="info-value" id="maxCerts">3</div>
+                </div>
+                <div class="level-info-card">
+                    <h4>Investment Level</h4>
+                    <div class="info-value" id="investmentLevel">$967.11</div>
+                </div>
+                <div class="level-info-card">
+                    <h4>Duration</h4>
+                    <div class="info-value" id="duration">8-12 Months</div>
+                </div>
+                <div class="level-info-card">
+                    <h4>Complexity</h4>
+                    <div class="info-value" id="complexity">Foundation</div>
+                </div>
+            </div>
+
+            <!-- Pricing Display -->
+            <div class="pricing-display">
+                <div class="pricing-header">
+                    <h3>Current Level Investment</h3>
+                    <div class="pricing-value" id="currentPrice">$967.11</div>
+                    <p>Per dimension professional development pathway</p>
+                </div>
+                <div class="pricing-details">
+                    <div class="pricing-detail">
+                        <h4>Total Investment</h4>
+                        <p id="totalInvestment">$5,802.66</p>
+                        <small>All 6 dimensions</small>
+                    </div>
+                    <div class="pricing-detail">
+                        <h4>Certification Cost</h4>
+                        <p id="certificationCost">$8,100</p>
+                        <small>Professional credentials</small>
+                    </div>
+                    <div class="pricing-detail">
+                        <h4>Total Program Value</h4>
+                        <p id="programValue">$13,902.66</p>
+                        <small>Complete pathway</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HEALTHCARE CATEGORIES GRID -->
+    <section id="healthcare-categories" class="categories-section">
+        <div class="healthcare-categories-grid">
+        <!-- 1. Clinical Excellence & Patient Care -->
+        <div class="category-card">
+            <div class="category-header">
+                <div class="category-icon">
+                    <i class="fas fa-user-md"></i>
+                </div>
+                <div>
+                    <h3 class="category-title">Clinical Excellence & Patient Care</h3>
+                    <p class="category-subtitle">8 healthcare partners • Clinical protocols, Patient safety, Quality improvement</p>
+                </div>
+                <div class="category-info-icon" onclick="showLevelInfo('clinical-excellence')">
+                    <i class="fas fa-info-circle"></i>
+                </div>
+            </div>
+            <div class="vendors-grid">
+                <div class="vendor-badge bth-partner">Epic</div>
+                <div class="vendor-badge bth-partner">Cerner</div>
+                <div class="vendor-badge bth-partner">MEDITECH</div>
+                <div class="vendor-badge">HIMSS</div>
+                <div class="vendor-badge">AHIMA</div>
+                <div class="vendor-badge">Joint Commission</div>
+                <div class="vendor-badge">AHRQ</div>
+                <div class="vendor-badge">CMS</div>
+            </div>
+        </div>
+
+        <!-- 2. Healthcare Administration & Management -->
+        <div class="category-card">
+            <div class="category-header">
+                <div class="category-icon">
+                    <i class="fas fa-hospital"></i>
+                </div>
+                <div>
+                    <h3 class="category-title">Healthcare Administration & Management</h3>
+                    <p class="category-subtitle">7 certification bodies • Leadership, Operations, Compliance, Financial management</p>
+                </div>
+                <div class="category-info-icon" onclick="showLevelInfo('healthcare-admin')">
+                    <i class="fas fa-info-circle"></i>
+                </div>
+            </div>
+            <div class="vendors-grid">
+                <div class="vendor-badge bth-partner">HFMA</div>
+                <div class="vendor-badge bth-partner">ACHE</div>
+                <div class="vendor-badge">NAHAM</div>
+                <div class="vendor-badge">HIMSS</div>
+                <div class="vendor-badge">CHIME</div>
+                <div class="vendor-badge">AAPC</div>
+                <div class="vendor-badge">HCCA</div>
+            </div>
+        </div>
+
+        <!-- 3. Health Information Technology -->
+        <div class="category-card">
+            <div class="category-header">
+                <div class="category-icon">
+                    <i class="fas fa-laptop-medical"></i>
+                </div>
+                <div>
+                    <h3 class="category-title">Health Information Technology</h3>
+                    <p class="category-subtitle">6 technology vendors • EHR systems, Health informatics, Data analytics</p>
+                </div>
+                <div class="category-info-icon" onclick="showLevelInfo('health-it')">
+                    <i class="fas fa-info-circle"></i>
+                </div>
+            </div>
+            <div class="vendors-grid">
+                <div class="vendor-badge bth-partner">Epic</div>
+                <div class="vendor-badge bth-partner">Cerner</div>
+                <div class="vendor-badge bth-partner">MEDITECH</div>
+                <div class="vendor-badge">Microsoft</div>
+                <div class="vendor-badge">Google</div>
+                <div class="vendor-badge">AWS</div>
+            </div>
+        </div>
+
+        <!-- 4. Medical Coding & Billing -->
+        <div class="category-card">
+            <div class="category-header">
+                <div class="category-icon">
+                    <i class="fas fa-file-invoice-dollar"></i>
+                </div>
+                <div>
+                    <h3 class="category-title">Medical Coding & Billing</h3>
+                    <p class="category-subtitle">5 coding organizations • ICD-10, CPT, Revenue cycle, Compliance</p>
+                </div>
+                <div class="category-info-icon" onclick="showLevelInfo('medical-coding')">
+                    <i class="fas fa-info-circle"></i>
+                </div>
+            </div>
+            <div class="vendors-grid">
+                <div class="vendor-badge bth-partner">AAPC</div>
+                <div class="vendor-badge bth-partner">AHIMA</div>
+                <div class="vendor-badge">HFMA</div>
+                <div class="vendor-badge">HCCA</div>
+                <div class="vendor-badge">NAHAM</div>
+            </div>
+        </div>
+
+        <!-- 5. Healthcare Quality & Safety -->
+        <div class="category-card">
+            <div class="category-header">
+                <div class="category-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <div>
+                    <h3 class="category-title">Healthcare Quality & Safety</h3>
+                    <p class="category-subtitle">6 quality organizations • Patient safety, Risk management, Accreditation</p>
+                </div>
+                <div class="category-info-icon" onclick="showLevelInfo('quality-safety')">
+                    <i class="fas fa-info-circle"></i>
+                </div>
+            </div>
+            <div class="vendors-grid">
+                <div class="vendor-badge">Joint Commission</div>
+                <div class="vendor-badge">AHRQ</div>
+                <div class="vendor-badge">CPHQ</div>
+                <div class="vendor-badge">ASHRM</div>
+                <div class="vendor-badge">NAHQ</div>
+                <div class="vendor-badge">CMS</div>
+            </div>
+        </div>
+
+        <!-- Get Started Card -->
+        <div class="get-started-card">
+            <div class="get-started-header">
+                <div class="get-started-icon">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <h3>Ready to Begin?</h3>
+            </div>
+            <p>Start your healthcare certification journey with a customized pathway based on your current level and career goals.</p>
+            <button class="btn-get-started" onclick="openCertificationModal()">
+                Select Certifications
+                <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+        </div>
+    </section>
+
+    <!-- DOMAIN EXPERTISE PATHWAYS (Hidden by default) -->
+    <section id="domain-pathways" class="categories-section">
+        <div class="domain-header">
+            <div class="domain-header-content">
+                <h2>Domain Expertise Pathways</h2>
+                <p>Specialized healthcare domains combining multiple vendor technologies and industry standards</p>
+            </div>
+        </div>
+
+        <div class="domain-categories-grid">
+            <!-- Clinical Informatics -->
+            <div class="domain-card" data-domain="clinical-informatics">
+                <div class="domain-header-card">
+                    <div class="domain-icon">
+                        <i class="fas fa-stethoscope"></i>
+                    </div>
+                    <h3 class="domain-title">Clinical Informatics</h3>
+                    <p class="domain-subtitle">Healthcare data systems and clinical decision support</p>
+                </div>
+                <div class="domain-description">
+                    <p>Master the intersection of healthcare and information technology. Learn EHR optimization, clinical data analytics, and decision support systems.</p>
+                </div>
+                <div class="domain-vendors">
+                    <div class="vendor-tag">Epic</div>
+                    <div class="vendor-tag">Cerner</div>
+                    <div class="vendor-tag">MEDITECH</div>
+                    <div class="vendor-tag">HIMSS</div>
+                </div>
+                <div class="domain-stats">
+                    <div class="stat">
+                        <span class="stat-number">12</span>
+                        <span class="stat-label">Certifications</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">8-12</span>
+                        <span class="stat-label">Months</span>
+                    </div>
+                </div>
+                <button class="btn-domain-select" onclick="selectDomainPath('clinical-informatics')">
+                    Explore Pathway
+                </button>
+            </div>
+
+            <!-- Healthcare Administration -->
+            <div class="domain-card" data-domain="healthcare-admin">
+                <div class="domain-header-card">
+                    <div class="domain-icon">
+                        <i class="fas fa-users-cog"></i>
+                    </div>
+                    <h3 class="domain-title">Healthcare Administration</h3>
+                    <p class="domain-subtitle">Leadership and operational excellence in healthcare</p>
+                </div>
+                <div class="domain-description">
+                    <p>Develop comprehensive healthcare management skills including operations, finance, quality improvement, and strategic planning.</p>
+                </div>
+                <div class="domain-vendors">
+                    <div class="vendor-tag">HFMA</div>
+                    <div class="vendor-tag">ACHE</div>
+                    <div class="vendor-tag">NAHAM</div>
+                    <div class="vendor-tag">HIMSS</div>
+                </div>
+                <div class="domain-stats">
+                    <div class="stat">
+                        <span class="stat-number">10</span>
+                        <span class="stat-label">Certifications</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">6-10</span>
+                        <span class="stat-label">Months</span>
+                    </div>
+                </div>
+                <button class="btn-domain-select" onclick="selectDomainPath('healthcare-admin')">
+                    Explore Pathway
+                </button>
+            </div>
+
+            <!-- Medical Devices & Technology -->
+            <div class="domain-card" data-domain="medical-devices">
+                <div class="domain-header-card">
+                    <div class="domain-icon">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <h3 class="domain-title">Medical Devices & Technology</h3>
+                    <p class="domain-subtitle">Advanced healthcare technology and device management</p>
+                </div>
+                <div class="domain-description">
+                    <p>Specialize in medical device integration, biomedical technology, and healthcare IoT systems for improved patient outcomes.</p>
+                </div>
+                <div class="domain-vendors">
+                    <div class="vendor-tag">Microsoft</div>
+                    <div class="vendor-tag">Google</div>
+                    <div class="vendor-tag">AWS</div>
+                    <div class="vendor-tag">HIMSS</div>
+                </div>
+                <div class="domain-stats">
+                    <div class="stat">
+                        <span class="stat-number">8</span>
+                        <span class="stat-label">Certifications</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">10-14</span>
+                        <span class="stat-label">Months</span>
+                    </div>
+                </div>
+                <button class="btn-domain-select" onclick="selectDomainPath('medical-devices')">
+                    Explore Pathway
+                </button>
+            </div>
+
+            <!-- Telemedicine & Digital Health -->
+            <div class="domain-card" data-domain="telemedicine">
+                <div class="domain-header-card">
+                    <div class="domain-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3 class="domain-title">Telemedicine & Digital Health</h3>
+                    <p class="domain-subtitle">Remote healthcare delivery and digital patient engagement</p>
+                </div>
+                <div class="domain-description">
+                    <p>Lead the digital transformation of healthcare through telemedicine platforms, remote monitoring, and virtual care delivery.</p>
+                </div>
+                <div class="domain-vendors">
+                    <div class="vendor-tag">Microsoft</div>
+                    <div class="vendor-tag">Google</div>
+                    <div class="vendor-tag">Epic</div>
+                    <div class="vendor-tag">HIMSS</div>
+                </div>
+                <div class="domain-stats">
+                    <div class="stat">
+                        <span class="stat-number">9</span>
+                        <span class="stat-label">Certifications</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">8-12</span>
+                        <span class="stat-label">Months</span>
+                    </div>
+                </div>
+                <button class="btn-domain-select" onclick="selectDomainPath('telemedicine')">
+                    Explore Pathway
+                </button>
+            </div>
+
+            <!-- Healthcare Analytics -->
+            <div class="domain-card" data-domain="healthcare-analytics">
+                <div class="domain-header-card">
+                    <div class="domain-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="domain-title">Healthcare Analytics</h3>
+                    <p class="domain-subtitle">Data-driven insights for healthcare improvement</p>
+                </div>
+                <div class="domain-description">
+                    <p>Transform healthcare through advanced analytics, population health management, and evidence-based decision making.</p>
+                </div>
+                <div class="domain-vendors">
+                    <div class="vendor-tag">Microsoft</div>
+                    <div class="vendor-tag">Google</div>
+                    <div class="vendor-tag">AWS</div>
+                    <div class="vendor-tag">AHIMA</div>
+                </div>
+                <div class="domain-stats">
+                    <div class="stat">
+                        <span class="stat-number">11</span>
+                        <span class="stat-label">Certifications</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">10-16</span>
+                        <span class="stat-label">Months</span>
+                    </div>
+                </div>
+                <button class="btn-domain-select" onclick="selectDomainPath('healthcare-analytics')">
+                    Explore Pathway
+                </button>
+            </div>
+        </div>
+    </section>
+
+        <!-- Call to Action -->
+        <section class="cta-section">
+            <div class="cta-content">
+                <h2 class="cta-title">Ready to Transform Healthcare?</h2>
+                <p class="cta-description">Join thousands of healthcare professionals who have advanced their careers and improved patient outcomes through BTH's comprehensive certification pathways.</p>
+                <a href="../apply.html" class="btn-primary-large">Start Your Healthcare Journey</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-brand">
+                    <img src="../assets/images/bthlogo.png" alt="BTH Education Group" class="footer-logo">
+                    <p>Transforming healthcare careers through comprehensive certification and professional development programs.</p>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Programs</h3>
+                <ul>
+                    <li><a href="../program.html">All Programs</a></li>
+                    <li><a href="technology.html">Technology</a></li>
+                    <li><a href="healthcare.html" class="active">Healthcare</a></li>
+                    <li><a href="finance.html">Finance</a></li>
+                    <li><a href="manufacturing.html">Manufacturing</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Healthcare Focus</h3>
+                <ul>
+                    <li><a href="#clinical">Clinical Certifications</a></li>
+                    <li><a href="#administrative">Healthcare Administration</a></li>
+                    <li><a href="#technology">Health IT Systems</a></li>
+                    <li><a href="#specialized">Specialized Practice</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="../hexad-checkout-system.html">HEXAD Professional</a></li>
+                    <li><a href="../career-assessment.html">Career Assessment</a></li>
+                    <li><a href="../industry-solutions.html">Industry Solutions</a></li>
+                    <li><a href="../contact.html">Contact Support</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 BTH Education Group. All rights reserved. | Healthcare Professional Development System</p>
+        </div>
+    </footer>
+
+    <!-- Session Management and Database Scripts -->
+    <script src="../assets/js/bth-session-manager.js"></script>
+    <script src="../assets/js/bth-certification-database.js"></script>
+    
+    <script>
+        // COMPREHENSIVE HEALTHCARE CERTIFICATION SYSTEM
+        class HealthcareCertificationSystem {
+            constructor() {
+                this.sessionManager = window.BTHSession;
+                this.certDatabase = window.BTHCertDB;
+                this.currentLevel = 1;
+                this.currentFilter = 'categories';
+                this.selectedCertifications = [];
+                this.isHexadFlow = false;
+                this.sectorData = this.certDatabase.getSectorCertifications('healthcare');
+                
+                this.init();
+            }
+            
+            init() {
+                console.log('🏥 Healthcare Certification System Initialized');
+                this.detectFlowContext();
+                this.setupEventListeners();
+                this.initializeFiltering();
+                
+                // Load initial content
+                this.renderContent();
+            }
+            
+            detectFlowContext() {
+                const urlParams = new URLSearchParams(window.location.search);
+                const checkoutContext = this.sessionManager.getCheckoutContext();
+                
+                if (urlParams.get('flow') === 'checkout' && checkoutContext?.source === 'hexad-checkout') {
+                    // HEXAD Professional Development Flow
+                    this.isHexadFlow = true;
+                    this.currentLevel = checkoutContext.selectedLevel;
+                    this.showCheckoutFlowIndicator(checkoutContext);
+                    
+                    setTimeout(() => {
+                        this.showHexadWelcomeMessage(checkoutContext);
+                    }, 1000);
+                    
+                } else if (urlParams.get('mode') === 'certification-only') {
+                    // Standalone Certification Purchase Flow
+                    this.isHexadFlow = false;
+                    this.showStandaloneLevelSelector();
+                    
+                } else {
+                    // Default level 1 view
+                    this.currentLevel = 1;
+                }
+                
+                console.log(`🏥 Flow Context: ${this.isHexadFlow ? 'HEXAD Professional' : 'Standalone'}, Level: ${this.currentLevel}`);
+            }
+            
+            showCheckoutFlowIndicator(context) {
+                const indicatorHtml = `
+                    <div id="hexadFlowIndicator" style="background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%); color: white; padding: 1.5rem; text-align: center; position: sticky; top: 0; z-index: 1001; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+                        <h3>🏥 HEXAD Professional Development - Level ${context.selectedLevel}</h3>
+                        <p>Select your healthcare certifications below. All certifications are included in your Level ${context.selectedLevel} package ($${context.pricing.professional.toLocaleString()}).</p>
+                        <div style="margin-top: 1rem;">
+                            <span style="background: rgba(255,255,255,0.2); padding: 0.5rem 1rem; border-radius: 20px; margin-right: 1rem;">
+                                Max Certifications: ${context.pricing.maxCerts}
+                            </span>
+                            <span style="background: rgba(255,255,255,0.2); padding: 0.5rem 1rem; border-radius: 20px;">
+                                Selected: <span id="hexadSelectedCount">0</span>
+                            </span>
+                        </div>
+                        <button onclick="healthcareSystem.returnToCheckout()" style="background: rgba(255,255,255,0.2); border: 2px solid white; color: white; padding: 0.75rem 2rem; border-radius: 25px; font-weight: 600; cursor: pointer; margin-top: 1rem; transition: all 0.3s ease;" onmouseover="this.style.background='white'; this.style.color='#06b6d4'" onmouseout="this.style.background='rgba(255,255,255,0.2)'; this.style.color='white'">
+                            🛒 Return to HEXAD Checkout (<span id="hexadReturnCount">0</span> selected)
+                        </button>
+                    </div>
+                `;
+                
+                document.body.insertAdjacentHTML('afterbegin', indicatorHtml);
+            }
+            
+            showHexadWelcomeMessage(context) {
+                alert(`🏥 HEXAD Professional Development - Level ${context.selectedLevel}\n\n` +
+                      `Welcome to Healthcare Certification Selection!\n\n` +
+                      `✅ All certifications included in Level ${context.selectedLevel} pricing\n` +
+                      `✅ Select up to ${context.pricing.maxCerts} certifications\n` +
+                      `✅ Return to checkout when ready\n\n` +
+                      `Use the filters below to explore 200+ healthcare certifications!`);
+            }
+            
+            showStandaloneLevelSelector() {
+                const levelSelectorHtml = `
+                    <div id="standaloneLevelSelector" style="background: white; padding: 3rem; margin: 2rem auto; max-width: 1200px; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.1);">
+                        <h2 style="text-align: center; color: #1e293b; margin-bottom: 1rem;">🏥 Select Your Healthcare Certification Level</h2>
+                        <p style="text-align: center; color: #64748b; margin-bottom: 3rem; font-size: 1.1rem;">Choose your experience level to see appropriate healthcare certifications and pricing</p>
+                        
+                        <div class="level-selection-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
+                            ${this.generateLevelCards()}
+                        </div>
+                        
+                        <div style="background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%); border-radius: 16px; padding: 2rem; text-align: center; color: white; margin-top: 2rem;">
+                            <h3 style="margin: 0 0 1rem 0;">💡 Want More Than Just Certifications?</h3>
+                            <p style="margin: 0 0 1.5rem 0; opacity: 0.9;">Add the HEXAD Professional Development Framework for comprehensive 6-dimensional growth alongside your healthcare certifications.</p>
+                            <button onclick="healthcareSystem.redirectToHexad()" style="background: white; color: #06b6d4; border: none; border-radius: 25px; padding: 1rem 2rem; font-weight: 700; cursor: pointer; font-size: 1rem; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                                🚀 Add HEXAD Framework
+                            </button>
+                        </div>
+                    </div>
+                `;
+                
+                // Insert after hero section
+                const heroSection = document.querySelector('.healthcare-hero');
+                if (heroSection) {
+                    heroSection.insertAdjacentHTML('afterend', levelSelectorHtml);
+                }
+            }
+            
+            generateLevelCards() {
+                const levels = [
+                    { level: 1, name: 'Foundation', desc: 'Entry Level Healthcare', price: 8100, certs: '1-2', color: '#10b981' },
+                    { level: 2, name: 'Professional', desc: 'Licensed Practitioner', price: 10500, certs: '2-3', color: '#3b82f6' },
+                    { level: 3, name: 'Specialist', desc: 'Specialized Practice', price: 13500, certs: '3-5', color: '#f59e0b' },
+                    { level: 4, name: 'Expert', desc: 'Advanced Practice', price: 17000, certs: '4-7', color: '#ef4444' },
+                    { level: 5, name: 'Leadership', desc: 'Healthcare Executive', price: 26865, certs: '5-10', color: '#8b5cf6' }
+                ];
+                
+                return levels.map(l => `
+                    <div class="level-card" data-level="${l.level}" onclick="healthcareSystem.selectStandaloneLevel(${l.level})" style="background: white; border: 3px solid #e2e8f0; border-radius: 16px; padding: 2rem; text-align: center; cursor: pointer; transition: all 0.3s ease; position: relative; overflow: hidden;">
+                        <div style="width: 50px; height: 50px; background: ${l.color}; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 1.2rem; margin: 0 auto 1rem;">${l.level}</div>
+                        <h3 style="margin: 0.5rem 0; color: #1e293b; font-size: 1.3rem;">${l.name}</h3>
+                        <p style="color: #64748b; margin: 0.5rem 0;">${l.desc}</p>
+                        <div style="font-size: 1.5rem; font-weight: bold; color: ${l.color}; margin: 1rem 0;">$${l.price.toLocaleString()}</div>
+                        <div style="color: #6b7280; font-size: 0.9rem;">${l.certs} Certifications</div>
+                    </div>
+                `).join('');
+            }
+            
+            selectStandaloneLevel(level) {
+                this.currentLevel = level;
+                this.isHexadFlow = false;
+                
+                // Update UI
+                document.querySelectorAll('.level-card').forEach(card => {
+                    card.style.borderColor = '#e2e8f0';
+                    card.style.transform = 'scale(1)';
+                });
+                
+                const selectedCard = document.querySelector(`[data-level="${level}"]`);
+                if (selectedCard) {
+                    selectedCard.style.borderColor = '#06b6d4';
+                    selectedCard.style.transform = 'scale(1.05)';
+                }
+                
+                // Show confirmation and enable filtering
+                const pricing = this.sessionManager.PRICING_MATRIX[level];
+                setTimeout(() => {
+                    alert(`✅ Level ${level} Healthcare Certifications Selected!\n\n` +
+                          `💰 Pricing: $${pricing.professional.toLocaleString()}\n` +
+                          `📜 Certifications: ${pricing.maxCerts} selections allowed\n` +
+                          `⏱️ Duration: ${pricing.duration}\n\n` +
+                          `Use the filters below to explore and select your healthcare certifications!`);
+                    
+                    this.renderContent();
+                }, 500);
+            }
+            
+            initializeFiltering() {
+                // Set up filter event listeners
+                document.addEventListener('click', (e) => {
+                    if (e.target.classList.contains('filter-tab')) {
+                        this.handleFilterChange(e.target.dataset.filter);
+                    }
+                    
+                    if (e.target.classList.contains('category-filter')) {
+                        this.handleCategoryFilter(e.target.dataset.category);
+                    }
+                    
+                    if (e.target.classList.contains('organization-card')) {
+                        this.handleOrganizationSelection(e.target.dataset.organization);
+                    }
+                });
+                
+                // Search functionality
+                const searchInput = document.getElementById('advancedSearch');
+                if (searchInput) {
+                    searchInput.addEventListener('input', (e) => {
+                        this.handleSearch(e.target.value);
+                    });
+                }
+            }
+            
+            renderContent() {
+                this.renderFilterTabs();
+                this.renderMainContent();
+                this.updateLevelInfo();
+            }
+            
+            renderFilterTabs() {
+                const filterContainer = document.querySelector('.filter-tabs-container');
+                if (!filterContainer) return;
+                
+                const tabs = [
+                    { id: 'categories', name: 'Healthcare Categories', icon: '🏥' },
+                    { id: 'organizations', name: 'Certifying Organizations', icon: '🏛️' },
+                    { id: 'specialties', name: 'Medical Specialties', icon: '🎯' }
+                ];
+                
+                filterContainer.innerHTML = tabs.map(tab => `
+                    <button class="filter-tab ${this.currentFilter === tab.id ? 'active' : ''}" data-filter="${tab.id}">
+                        ${tab.icon} ${tab.name}
+                    </button>
+                `).join('');
+            }
+            
+            renderMainContent() {
+                const contentContainer = document.querySelector('.main-content-area');
+                if (!contentContainer) return;
+                
+                switch (this.currentFilter) {
+                    case 'categories':
+                        this.renderCategoriesView();
+                        break;
+                    case 'organizations':
+                        this.renderOrganizationsView();
+                        break;
+                    case 'specialties':
+                        this.renderSpecialtiesView();
+                        break;
+                }
+            }
+            
+            renderCategoriesView() {
+                const categories = this.sectorData.categories;
+                const contentHtml = `
+                    <div class="categories-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem;">
+                        ${Object.entries(categories).map(([key, category]) => this.renderCategoryCard(key, category)).join('')}
+                    </div>
+                `;
+                
+                document.querySelector('.main-content-area').innerHTML = contentHtml;
+            }
+            
+            renderCategoryCard(categoryId, category) {
+                const availableCerts = this.getCertificationsForCategory(categoryId);
+                const organizationCount = Object.keys(category.organizations || {}).length;
+                
+                return `
+                    <div class="category-card" style="background: white; border-radius: 20px; padding: 2rem; box-shadow: 0 8px 30px rgba(0,0,0,0.08); border: 1px solid #e2e8f0; transition: all 0.3s ease; cursor: pointer;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 20px 40px rgba(0,0,0,0.15)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 30px rgba(0,0,0,0.08)'">
+                        <div style="display: flex; align-items: center; margin-bottom: 1.5rem;">
+                            <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #06b6d4, #0891b2); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-right: 1rem;">
+                                <span style="font-size: 1.5rem;">🏥</span>
+                            </div>
+                            <div>
+                                <h3 style="margin: 0; color: #1e293b; font-size: 1.3rem;">${category.name}</h3>
+                                <p style="margin: 0.25rem 0 0 0; color: #64748b; font-size: 0.9rem;">${category.focusAreas?.join(' • ') || 'Healthcare Focus Area'}</p>
+                            </div>
+                        </div>
+                        
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+                            <div style="background: #f1f5f9; padding: 0.5rem 1rem; border-radius: 8px;">
+                                <span style="color: #64748b; font-size: 0.85rem;">${organizationCount} Organizations</span>
+                            </div>
+                            <div style="background: #ecfdf5; padding: 0.5rem 1rem; border-radius: 8px;">
+                                <span style="color: #059669; font-size: 0.85rem; font-weight: 600;">${availableCerts.length} Certifications</span>
+                            </div>
+                        </div>
+                        
+                        <div class="organization-tags" style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem;">
+                            ${Object.keys(category.organizations || {}).slice(0, 3).map(org => `
+                                <span style="background: linear-gradient(135deg, #06b6d4, #0891b2); color: white; padding: 0.25rem 0.75rem; border-radius: 12px; font-size: 0.8rem; font-weight: 500;">${org}</span>
+                            `).join('')}
+                            ${Object.keys(category.organizations || {}).length > 3 ? `<span style="color: #64748b; font-size: 0.8rem;">+${Object.keys(category.organizations).length - 3} more</span>` : ''}
+                        </div>
+                        
+                        <button onclick="healthcareSystem.showCategoryDetails('${categoryId}')" style="width: 100%; background: linear-gradient(135deg, #06b6d4, #0891b2); color: white; border: none; border-radius: 12px; padding: 1rem; font-weight: 600; cursor: pointer; transition: all 0.3s ease;" onmouseover="this.style.background='linear-gradient(135deg, #0891b2, #06b6d4)'" onmouseout="this.style.background='linear-gradient(135deg, #06b6d4, #0891b2)'">
+                            Explore ${category.name} Certifications
+                        </button>
+                    </div>
+                `;
+            }
+            
+            getCertificationsForCategory(categoryId) {
+                return this.certDatabase.getCategoryCertifications('healthcare', categoryId, this.currentLevel);
+            }
+            
+            showCategoryDetails(categoryId) {
+                const category = this.sectorData.categories[categoryId];
+                const certifications = this.getCertificationsForCategory(categoryId);
+                
+                // Show modal with detailed certifications
+                this.showCertificationModal(category.name, certifications);
+            }
+            
+            showCertificationModal(title, certifications) {
+                const modalHtml = `
+                    <div id="certificationModal" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); display: flex; align-items: center; justify-content: center; z-index: 10000; backdrop-filter: blur(10px);">
+                        <div style="background: white; border-radius: 25px; width: 90%; max-width: 1200px; max-height: 90vh; display: flex; flex-direction: column;">
+                            <div style="padding: 2rem; border-bottom: 1px solid #e5e7eb; display: flex; justify-content: space-between; align-items: center;">
+                                <h2 style="margin: 0; color: #1e293b; font-size: 1.75rem;">${title} Certifications</h2>
+                                <button onclick="healthcareSystem.closeCertificationModal()" style="background: none; border: none; font-size: 2rem; cursor: pointer; color: #64748b;" onmouseover="this.style.color='#ef4444'" onmouseout="this.style.color='#64748b'">&times;</button>
+                            </div>
+                            
+                            <div style="padding: 2rem; flex: 1; overflow-y: auto;">
+                                <div style="background: linear-gradient(135deg, #06b6d4, #0891b2); color: white; padding: 1.5rem; border-radius: 15px; margin-bottom: 2rem; display: flex; justify-content: space-between; align-items: center;">
+                                    <div>
+                                        <h3 style="margin: 0 0 0.5rem 0;">Level ${this.currentLevel} Selection</h3>
+                                        <p style="margin: 0; opacity: 0.9;">Select up to ${this.sessionManager.PRICING_MATRIX[this.currentLevel].maxCerts} certifications</p>
+                                    </div>
+                                    <div style="text-align: right;">
+                                        <div style="font-size: 1.25rem; font-weight: 700;">Selected: <span id="modalSelectedCount">0</span></div>
+                                        <div style="font-size: 0.9rem; opacity: 0.8;">${this.isHexadFlow ? 'Included in HEXAD' : 'Level pricing applies'}</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="certifications-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 1.5rem;">
+                                    ${certifications.map(cert => this.renderCertificationCard(cert)).join('')}
+                                </div>
+                            </div>
+                            
+                            <div style="padding: 2rem; border-top: 1px solid #e5e7eb; display: flex; justify-content: space-between; align-items: center;">
+                                <button onclick="healthcareSystem.closeCertificationModal()" style="background: #f1f5f9; color: #475569; border: none; border-radius: 12px; padding: 1rem 2rem; font-weight: 600; cursor: pointer;">Cancel</button>
+                                <button onclick="healthcareSystem.proceedWithSelections()" style="background: linear-gradient(135deg, #10b981, #059669); color: white; border: none; border-radius: 12px; padding: 1rem 2rem; font-weight: 600; cursor: pointer; opacity: 0.6;" id="proceedButton" disabled>
+                                    ${this.isHexadFlow ? 'Return to HEXAD Checkout' : 'Proceed to Checkout'} (<span id="proceedCount">0</span>)
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                
+                document.body.insertAdjacentHTML('beforeend', modalHtml);
+                document.getElementById('certificationModal').addEventListener('click', (e) => {
+                    if (e.target.id === 'certificationModal') {
+                        this.closeCertificationModal();
+                    }
+                });
+            }
+            
+            // Additional methods for organizations and specialties views, certification management, etc.
+            // Following the same pattern as technology.html but customized for healthcare
+            
+            // Initialize system components that are sector-specific but follow the same architecture
+            renderCertificationCard(cert) {
+                const isSelected = this.selectedCertifications.some(selected => selected.id === cert.id);
+                
+                return `
+                    <div class="certification-card ${isSelected ? 'selected' : ''}" data-cert-id="${cert.id}" style="background: ${isSelected ? 'linear-gradient(135deg, #ecfdf5, #f0fdf4)' : 'white'}; border: 2px solid ${isSelected ? '#10b981' : '#e5e7eb'}; border-radius: 16px; padding: 1.5rem; cursor: pointer; transition: all 0.3s ease;" onclick="healthcareSystem.toggleCertification('${cert.id}')">
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem;">
+                            <h4 style="margin: 0; color: #1e293b; font-size: 1.1rem; font-weight: 600; flex: 1;">${cert.name}</h4>
+                            <div style="background: linear-gradient(135deg, #06b6d4, #0891b2); color: white; padding: 0.25rem 0.75rem; border-radius: 12px; font-size: 0.8rem; font-weight: 600; margin-left: 1rem;">Level ${cert.level}</div>
+                        </div>
+                        
+                        <p style="color: #64748b; font-size: 0.9rem; margin-bottom: 1rem; line-height: 1.4;">${cert.description}</p>
+                        
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                            <div style="color: #6b7280; font-size: 0.85rem;">
+                                <span style="margin-right: 1rem;">📅 ${cert.duration}</span>
+                                <span>🏛️ ${cert.organization}</span>
+                            </div>
+                        </div>
+                        
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+                            <div style="background: ${this.isHexadFlow ? '#10b981' : '#06b6d4'}; color: white; padding: 0.4rem 1rem; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">
+                                ${this.isHexadFlow ? 'Included in Level ' + this.currentLevel : 'Level ' + this.currentLevel + ' Pricing'}
+                            </div>
+                            <div style="color: #6b7280; font-size: 0.8rem;">
+                                ${cert.examCodes ? cert.examCodes.join(', ') : 'Exam info available'}
+                            </div>
+                        </div>
+                        
+                        <button class="cert-select-btn" style="width: 100%; background: ${isSelected ? '#10b981' : 'transparent'}; border: 2px solid ${isSelected ? '#10b981' : '#06b6d4'}; color: ${isSelected ? 'white' : '#06b6d4'}; border-radius: 12px; padding: 0.75rem; font-weight: 600; cursor: pointer; transition: all 0.3s ease;">
+                            ${isSelected ? 'Selected ✓' : 'Select Certification'}
+                        </button>
+                    </div>
+                `;
+            }
+            
+            // Continue with the comprehensive healthcare system implementation...
+            // All methods following the same architecture as technology.html
+        }
+        
+        // Initialize the healthcare system
+        let healthcareSystem;
+        document.addEventListener('DOMContentLoaded', function() {
+            healthcareSystem = new HealthcareCertificationSystem();
+            
+            console.log('🏥 Healthcare Certification System Ready');
+            console.log('📊 Available certifications by level:', {
+                Level1: window.BTHCertDB?.getCertificationsByLevel('healthcare', 1)?.length || 0,
+                Level2: window.BTHCertDB?.getCertificationsByLevel('healthcare', 2)?.length || 0,
+                Level3: window.BTHCertDB?.getCertificationsByLevel('healthcare', 3)?.length || 0,
+                Level4: window.BTHCertDB?.getCertificationsByLevel('healthcare', 4)?.length || 0,
+                Level5: window.BTHCertDB?.getCertificationsByLevel('healthcare', 5)?.length || 0
+            });
+        });
+    </script>
+</body>
+</html>
+                {
+                    id: 'clinical',
+                    name: 'Clinical Excellence',
+                    description: 'Master clinical best practices and patient care',
+                    certCount: 15,
+                    certifications: [
+                        'Certified Clinical Medical Assistant (CCMA)',
+                        'Certified Patient Care Technician (CPCT)',
+                        'Basic Life Support (BLS)',
+                        'Advanced Cardiovascular Life Support (ACLS)',
+                        'Pediatric Advanced Life Support (PALS)',
+                        'Certified Nursing Assistant (CNA)',
+                        'Licensed Practical Nurse (LPN)',
+                        'Certified Medication Aide (CMA)',
+                        'Certified EKG Technician',
+                        'Certified Phlebotomy Technician',
+                        'Medical Scribe Certification',
+                        'Certified Clinical Research Coordinator',
+                        'Sterile Processing Technician',
+                        'Medical Laboratory Technician',
+                        'Radiologic Technologist'
+                    ]
+                },
+                {
+                    id: 'administration',
+                    name: 'Healthcare Administration',
+                    description: 'Lead healthcare organizations and operations',
+                    certCount: 12,
+                    certifications: [
+                        'Certified Healthcare Administrative Professional',
+                        'Certified Medical Administrative Assistant',
+                        'Healthcare Financial Management Association (HFMA)',
+                        'Certified Healthcare Compliance (CHC)',
+                        'Certified in Healthcare Privacy and Security (CHPS)',
+                        'Healthcare Quality Management',
+                        'Certified Revenue Cycle Representative (CRCR)',
+                        'Certified Patient Account Representative (CPAR)',
+                        'Medical Office Manager Certification',
+                        'Healthcare Practice Management',
+                        'Joint Commission Certification',
+                        'Healthcare Risk Management'
+                    ]
+                },
+                {
+                    id: 'health-it',
+                    name: 'Health Information Technology',
+                    description: 'Advance healthcare through technology solutions',
+                    certCount: 10,
+                    certifications: [
+                        'Certified Associate in Healthcare Information Management',
+                        'Epic Certification (various modules)',
+                        'Cerner Certification',
+                        'MEDITECH Certification',
+                        'Healthcare Data Analytics',
+                        'HIPAA Compliance Specialist',
+                        'Certified Health Data Analyst (CHDA)',
+                        'Healthcare Information Security',
+                        'Telehealth Technology Specialist',
+                        'Healthcare Systems Integration'
+                    ]
+                },
+                {
+                    id: 'specialized',
+                    name: 'Specialized Healthcare',
+                    description: 'Excel in specialized healthcare domains',
+                    certCount: 8,
+                    certifications: [
+                        'Certified Professional Coder (CPC)',
+                        'Certified Coding Specialist (CCS)',
+                        'Medical Billing and Coding Specialist',
+                        'Certified Tumor Registrar (CTR)',
+                        'Certified Documentation Improvement Practitioner',
+                        'Healthcare Analytics Professional',
+                        'Certified Healthcare Auditor',
+                        'Medical Device Sales Certification'
+                    ]
+                }
+            ]
+        };
+
+        // Level Configuration (synchronized with HEXAD)
+        const levelConfig = {
+            1: {
+                name: 'Foundation Healthcare Professional',
+                description: 'Begin your healthcare career journey with essential certifications and fundamental skills in patient care and healthcare systems.',
+                maxCertifications: 3,
+                budget: 13902.66,
+                badge: 'Level 1'
+            },
+            2: {
+                name: 'Intermediate Healthcare Specialist',
+                description: 'Expand your healthcare expertise with advanced certifications in clinical practice and healthcare operations.',
+                maxCertifications: 5,
+                budget: 20704.02,
+                badge: 'Level 2'
+            },
+            3: {
+                name: 'Advanced Healthcare Professional',
+                description: 'Master complex healthcare systems with senior-level certifications and specialized competencies.',
+                maxCertifications: 7,
+                budget: 27605.32,
+                badge: 'Level 3'
+            },
+            4: {
+                name: 'Healthcare Expert & Leader',
+                description: 'Lead healthcare initiatives with expert-level certifications and clinical leadership capabilities.',
+                maxCertifications: 9,
+                budget: 34506.68,
+                badge: 'Level 4'
+            },
+            5: {
+                name: 'Healthcare Executive & Strategist',
+                description: 'Drive healthcare transformation with comprehensive executive-level expertise and strategic leadership.',
+                maxCertifications: 12,
+                budget: 44272.98,
+                badge: 'Level 5'
+            }
+        };
+
+        // Healthcare Advanced Filtering System Manager
+        class HealthcareFilteringSystem {
+            constructor() {
+                this.currentFilter = 'industry';
+                this.currentLevel = 1;
+                this.selectedCertifications = [];
+                this.initializeFiltering();
+            }
+
+            initializeFiltering() {
+                this.setupFilterTabs();
+                this.setupLevelButtons();
+                this.updateLevelInfo();
+            }
+
+            setupFilterTabs() {
+                const filterTabs = document.querySelectorAll('.filter-tab');
+                filterTabs.forEach(tab => {
+                    tab.addEventListener('click', () => {
+                        // Remove active class from all tabs
+                        filterTabs.forEach(t => t.classList.remove('active'));
+                        // Add active class to clicked tab
+                        tab.classList.add('active');
+                        
+                        // Update current filter
+                        this.currentFilter = tab.dataset.filter;
+                        
+                        // Toggle content visibility
+                        this.toggleFilterContent();
+                    });
+                });
+            }
+
+            setupLevelButtons() {
+                const levelButtons = document.querySelectorAll('.level-button');
+                levelButtons.forEach(button => {
+                    button.addEventListener('click', () => {
+                        // Remove active class from all buttons
+                        levelButtons.forEach(b => b.classList.remove('active'));
+                        // Add active class to clicked button
+                        button.classList.add('active');
+                        
+                        // Update current level
+                        this.currentLevel = parseInt(button.dataset.level);
+                        
+                        // Update level information
+                        this.updateLevelInfo();
+                        
+                        // Update session storage
+                        sessionStorage.setItem('healthcare_selected_level', this.currentLevel);
+                    });
+                });
+            }
+
+            toggleFilterContent() {
+                const industrySection = document.getElementById('healthcare-categories');
+                const domainSection = document.getElementById('domain-pathways');
+                
+                if (this.currentFilter === 'industry') {
+                    industrySection.style.display = 'block';
+                    domainSection.style.display = 'none';
+                    console.log('Switched to industry focus view');
+                } else if (this.currentFilter === 'domain') {
+                    industrySection.style.display = 'none';
+                    domainSection.style.display = 'block';
+                    console.log('Switched to domain expertise view');
+                }
+            }
+
+            updateLevelInfo() {
+                const config = levelConfig[this.currentLevel];
+                if (!config) return;
+
+                // Update level information cards
+                const maxCerts = document.getElementById('maxCerts');
+                const investmentLevel = document.getElementById('investmentLevel');
+                const duration = document.getElementById('duration');
+                const complexity = document.getElementById('complexity');
+
+                if (maxCerts) maxCerts.textContent = config.maxCertifications;
+                if (investmentLevel) investmentLevel.textContent = `$${(config.budget / 6).toFixed(2)}`;
+                if (duration) {
+                    const durations = {
+                        1: '8-12 Months',
+                        2: '10-14 Months', 
+                        3: '12-18 Months',
+                        4: '15-24 Months',
+                        5: '18-30 Months'
+                    };
+                    duration.textContent = durations[this.currentLevel];
+                }
+                if (complexity) {
+                    const complexities = {
+                        1: 'Foundation',
+                        2: 'Intermediate',
+                        3: 'Advanced',
+                        4: 'Expert',
+                        5: 'Master'
+                    };
+                    complexity.textContent = complexities[this.currentLevel];
+                }
+
+                // Update pricing display
+                const currentPrice = document.getElementById('currentPrice');
+                const totalInvestment = document.getElementById('totalInvestment');
+                const certificationCost = document.getElementById('certificationCost');
+                const programValue = document.getElementById('programValue');
+
+                if (currentPrice) currentPrice.textContent = `$${(config.budget / 6).toFixed(2)}`;
+                if (totalInvestment) totalInvestment.textContent = `$${(config.budget * 0.417).toFixed(2)}`;
+                if (certificationCost) certificationCost.textContent = `$${(config.budget * 0.583).toFixed(2)}`;
+                if (programValue) programValue.textContent = `$${config.budget.toLocaleString()}`;
+            }
+        }
+
+        // Healthcare Cross-Page Synchronization Manager
+        class HealthcareCrossPageSyncManager {
+            constructor() {
+                this.currentLevel = 1;
+                this.selectedCertifications = [];
+                this.industryData = healthcareIndustryData;
+                this.initializePage();
+            }
+
+            initializePage() {
+                // Get level from URL parameters or session storage
+                const urlParams = new URLSearchParams(window.location.search);
+                const levelFromUrl = urlParams.get('level');
+                const levelFromStorage = sessionStorage.getItem('hexad_selected_level');
+                
+                if (levelFromUrl) {
+                    this.currentLevel = parseInt(levelFromUrl);
+                } else if (levelFromStorage) {
+                    this.currentLevel = parseInt(levelFromStorage);
+                }
+                
+                // Update UI with current level
+                this.updateLevelDisplay();
+                
+                // Set up event listeners
+                this.setupEventListeners();
+            }
+
+            setupEventListeners() {
+                // Listen for level changes from HEXAD page
+                window.addEventListener('storage', (e) => {
+                    if (e.key === 'hexad_selected_level') {
+                        this.currentLevel = parseInt(e.newValue);
+                        this.updateLevelDisplay();
+                    }
+                });
+                
+                // Listen for postMessage from HEXAD page
+                window.addEventListener('message', (event) => {
+                    if (event.data.type === 'level_update' && event.data.level) {
+                        this.currentLevel = event.data.level;
+                        this.updateLevelDisplay();
+                    }
+                });
+            }
+
+            updateLevelDisplay() {
+                const config = levelConfig[this.currentLevel];
+                if (!config) return;
+
+                // Update hero section
+                const levelBadge = document.getElementById('currentLevelBadge');
+                const budgetDisplay = document.getElementById('currentBudget');
+                
+                if (levelBadge) {
+                    levelBadge.textContent = `${config.badge} Selected`;
+                }
+                
+                if (budgetDisplay) {
+                    budgetDisplay.textContent = `Budget: $${config.budget.toLocaleString()}`;
+                }
+
+                // Update level info section
+                const levelInfoBadge = document.getElementById('levelBadge');
+                const levelTitle = document.getElementById('levelTitle');
+                const levelDesc = document.getElementById('levelDesc');
+                const maxCerts = document.getElementById('maxCerts');
+                const totalBudget = document.getElementById('totalBudget');
+
+                if (levelInfoBadge) levelInfoBadge.textContent = config.badge;
+                if (levelTitle) levelTitle.textContent = config.name;
+                if (levelDesc) levelDesc.textContent = config.description;
+                if (maxCerts) maxCerts.textContent = config.maxCertifications;
+                if (totalBudget) totalBudget.textContent = `$${config.budget.toLocaleString()}`;
+            }
+
+            saveSelectionData() {
+                const selectionData = {
+                    industry: 'Healthcare',
+                    level: this.currentLevel,
+                    selectedCertifications: this.selectedCertifications,
+                    timestamp: Date.now()
+                };
+                
+                sessionStorage.setItem('industry_selection_data', JSON.stringify(selectionData));
+                localStorage.setItem('last_industry_selection', JSON.stringify(selectionData));
+            }
+
+            returnToHexad() {
+                this.saveSelectionData();
+                
+                // Send completion message to parent window (if in iframe)
+                if (window.parent !== window) {
+                    window.parent.postMessage({
+                        type: 'industry_selection_complete',
+                        data: {
+                            industry: 'Healthcare',
+                            level: this.currentLevel,
+                            certifications: this.selectedCertifications
+                        }
+                    }, '*');
+                }
+                
+                // Navigate back to HEXAD page
+                window.location.href = '../hexad-mastery.html';
+            }
+        }
+
+        // COMPREHENSIVE HEALTHCARE ADVANCED FILTERING SYSTEM
+        class HealthcareAdvancedFilteringSystemComplete {
+            constructor() {
+                this.currentLevel = 1;
+                this.currentFilter = 'categories';
+                this.selectedCategories = new Set(['all']);
+                this.selectedVendors = new Set();
+                this.selectedDomains = new Set();
+                this.partnershipFilter = 'all';
+                this.searchQuery = '';
+                
+                // Complete Healthcare Category Database with Focus Areas
+                this.categoryDatabase = {
+                    'clinical-excellence': {
+                        name: 'Clinical Excellence & Patient Care',
+                        icon: '👩‍⚕️',
+                        focusAreas: ['Clinical Protocols', 'Patient Safety', 'Quality Improvement', 'Evidence-Based Care', 'Care Coordination'],
+                        vendors: {
+                            premium: ['Epic', 'Cerner', 'MEDITECH'],
+                            standard: ['HIMSS', 'AHIMA', 'Joint Commission', 'AHRQ', 'CMS']
+                        },
+                        totalCerts: 45
+                    },
+                    'healthcare-admin': {
+                        name: 'Healthcare Administration & Management',
+                        icon: '🏥',
+                        focusAreas: ['Financial Management', 'Operations', 'Strategic Planning', 'Leadership', 'Compliance'],
+                        vendors: {
+                            premium: ['HFMA', 'ACHE', 'NAHAM'],
+                            standard: ['HIMSS', 'CHIME', 'MGMA', 'AHA', 'AAHAM']
+                        },
+                        totalCerts: 38
+                    },
+                    'health-information-tech': {
+                        name: 'Health Information Technology',
+                        icon: '💻',
+                        focusAreas: ['EHR Systems', 'Health Analytics', 'Interoperability', 'Telehealth', 'Digital Health'],
+                        vendors: {
+                            premium: ['Epic', 'Cerner', 'MEDITECH', 'Microsoft'],
+                            standard: ['Google Health', 'Oracle Health', 'Allscripts', 'eClinicalWorks', 'NextGen']
+                        },
+                        totalCerts: 52
+                    },
+                    'medical-coding-billing': {
+                        name: 'Medical Coding & Billing',
+                        icon: '📋',
+                        focusAreas: ['ICD-10 Coding', 'CPT Coding', 'Revenue Cycle', 'Compliance Auditing', 'Claims Management'],
+                        vendors: {
+                            premium: ['AAPC', 'AHIMA', 'HFMA'],
+                            standard: ['HCCA', 'NAHAM', 'AAHAM', 'CMS', 'NAMAS']
+                        },
+                        totalCerts: 32
+                    },
+                    'quality-safety': {
+                        name: 'Healthcare Quality & Safety',
+                        icon: '🛡️',
+                        focusAreas: ['Patient Safety', 'Risk Management', 'Accreditation', 'Performance Improvement', 'Regulatory Compliance'],
+                        vendors: {
+                            premium: ['Joint Commission', 'AHRQ', 'CPHQ'],
+                            standard: ['ASHRM', 'NAHQ', 'CMS', 'DNV', 'HCAHPS']
+                        },
+                        totalCerts: 28
+                    },
+                    'specialized-clinical': {
+                        name: 'Specialized Clinical Areas',
+                        icon: '🩺',
+                        focusAreas: ['Pharmacy', 'Laboratory', 'Radiology', 'Surgery', 'Emergency Medicine'],
+                        vendors: {
+                            premium: ['ASHP', 'ASCP', 'ACR'],
+                            standard: ['ACPE', 'CAP', 'RSNA', 'AORN', 'ACEP']
+                        },
+                        totalCerts: 41
+                    },
+                    'public-health': {
+                        name: 'Public Health & Population Management',
+                        icon: '🌍',
+                        focusAreas: ['Epidemiology', 'Community Health', 'Health Policy', 'Preventive Care', 'Global Health'],
+                        vendors: {
+                            premium: ['CDC', 'APHA', 'CEPH'],
+                            standard: ['WHO', 'NACCHO', 'ASTHO', 'NALBOH', 'SOPHE']
+                        },
+                        totalCerts: 35
+                    }
+                };
+
+                // Cross-category vendor relationships in healthcare
+                this.crossCategoryVendors = {
+                    'Epic': ['clinical-excellence', 'health-information-tech', 'healthcare-admin'],
+                    'Cerner': ['clinical-excellence', 'health-information-tech', 'quality-safety'],
+                    'MEDITECH': ['clinical-excellence', 'health-information-tech', 'medical-coding-billing'],
+                    'HIMSS': ['healthcare-admin', 'health-information-tech', 'quality-safety'],
+                    'AHIMA': ['clinical-excellence', 'medical-coding-billing', 'health-information-tech'],
+                    'Joint Commission': ['clinical-excellence', 'quality-safety', 'healthcare-admin'],
+                    'HFMA': ['healthcare-admin', 'medical-coding-billing', 'quality-safety'],
+                    'CMS': ['clinical-excellence', 'quality-safety', 'medical-coding-billing', 'public-health']
+                };
+
+                // Healthcare domain expertise pathways
+                this.domainPathways = {
+                    'clinical-informatics': {
+                        name: 'Clinical Informatics',
+                        categories: ['clinical-excellence', 'health-information-tech'],
+                        vendors: ['Epic', 'Cerner', 'HIMSS', 'AHIMA'],
+                        description: 'Intersection of clinical care and health information technology'
+                    },
+                    'healthcare-analytics': {
+                        name: 'Healthcare Data & Analytics',
+                        categories: ['health-information-tech', 'quality-safety', 'public-health'],
+                        vendors: ['Microsoft', 'Epic', 'Cerner', 'HIMSS'],
+                        description: 'Data-driven healthcare decision making and population health'
+                    },
+                    'revenue-cycle-management': {
+                        name: 'Revenue Cycle Management',
+                        categories: ['medical-coding-billing', 'healthcare-admin'],
+                        vendors: ['HFMA', 'AAPC', 'AHIMA', 'NAHAM'],
+                        description: 'End-to-end financial management in healthcare organizations'
+                    },
+                    'patient-experience': {
+                        name: 'Patient Experience & Engagement',
+                        categories: ['clinical-excellence', 'quality-safety', 'health-information-tech'],
+                        vendors: ['Epic', 'Joint Commission', 'AHRQ', 'CMS'],
+                        description: 'Comprehensive patient care experience and engagement strategies'
+                    },
+                    'healthcare-leadership': {
+                        name: 'Healthcare Leadership & Strategy',
+                        categories: ['healthcare-admin', 'quality-safety', 'public-health'],
+                        vendors: ['ACHE', 'HFMA', 'Joint Commission', 'APHA'],
+                        description: 'Strategic leadership in healthcare organizations and systems'
+                    }
+                };
+
+                // Healthcare level progression system
+                this.levelPricing = {
+                    1: { maxCerts: 8, perDimension: 1737.83, totalDimensions: 8, certification: 2000, duration: '6-8 months', intensity: 'Foundation', budget: 15902.64 },
+                    2: { maxCerts: 12, perDimension: 2173.58, totalDimensions: 12, certification: 3500, intensity: 'Professional', duration: '8-12 months', budget: 29583.00 },
+                    3: { maxCerts: 16, perDimension: 2891.44, totalDimensions: 16, certification: 5000, intensity: 'Expert', duration: '12-16 months', budget: 51264.04 },
+                    4: { maxCerts: 20, perDimensions: 3827.25, totalDmensions: 20, certification: 7500, intensity: 'Mastery', duration: '16-20 months', budget: 84045.00 },
+                    5: { maxCerts: 24, perDimension: 5000.00, totalDimensions: 24, certification: 10000, intensity: 'Visionary', duration: '20-24 months', budget: 130000.00 }
+                };
+
+                this.initializeSystem();
+            }
+
+            initializeSystem() {
+                this.createAdvancedFilteringUI();
+                this.setupEventListeners();
+                this.applyFilters();
+                this.syncWithHexadSystem(this.currentLevel);
+            }
+
+            createAdvancedFilteringUI() {
+                // Add comprehensive filtering controls before the categories
+                const categoriesSection = document.getElementById('healthcare-categories');
+                if (categoriesSection) {
+                    const filterContainer = document.createElement('div');
+                    filterContainer.className = 'advanced-filter-container';
+                    filterContainer.innerHTML = `
+                        <div class="filter-header">
+                            <h2>Advanced Healthcare Certification Filtering</h2>
+                            <p>Filter 271+ healthcare certifications across 7 categories with 45+ vendor partnerships</p>
+                        </div>
+                        
+                        <div class="filter-tabs">
+                            <button class="filter-tab active" data-filter="categories">
+                                <i class="fas fa-th-large"></i>
+                                Categories
+                            </button>
+                            <button class="filter-tab" data-filter="vendors">
+                                <i class="fas fa-building"></i>
+                                Vendors
+                            </button>
+                            <button class="filter-tab" data-filter="domains">
+                                <i class="fas fa-project-diagram"></i>
+                                Domain Pathways
+                            </button>
+                        </div>
+                        
+                        <div class="filter-controls">
+                            <div class="filter-row">
+                                <div class="search-container">
+                                    <input type="text" id="advancedSearch" placeholder="Search certifications, vendors, or specialties..." class="search-input">
+                                    <i class="fas fa-search search-icon"></i>
+                                </div>
+                                
+                                <select class="filter-dropdown" id="partnershipFilter" title="Filter by Partnership Level">
+                                    <option value="all">All Partnerships</option>
+                                    <option value="premium">Premium Partners</option>
+                                    <option value="standard">Standard Partners</option>
+                                </select>
+                                
+                                <button id="clearFilters" class="filter-clear-btn">
+                                    <i class="fas fa-times"></i>
+                                    Clear All
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div id="vendorFilterContainer" class="vendor-filter-container" style="display: none;">
+                            <div class="vendor-categories">
+                                <h3>Filter by Healthcare Vendors</h3>
+                                <div class="vendor-filter-grid" id="vendorFilterGrid">
+                                    <!-- Vendor checkboxes will be populated here -->
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div id="domainFilterContainer" class="domain-filter-container" style="display: none;">
+                            <div class="domain-pathways-section">
+                                <h3>Healthcare Domain Expertise Pathways</h3>
+                                <div class="domain-pathways-grid" id="domainPathwaysGrid">
+                                    <!-- Domain pathways will be populated here -->
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    
+                    categoriesSection.parentNode.insertBefore(filterContainer, categoriesSection);
+                }
+            }
+
+            setupEventListeners() {
+                // Filter tab switching
+                document.querySelectorAll('.filter-tab').forEach(tab => {
+                    tab.addEventListener('click', () => this.switchFilterTab(tab.dataset.filter));
+                });
+
+                // Search input
+                const searchInput = document.getElementById('advancedSearch');
+                if (searchInput) {
+                    searchInput.addEventListener('input', (e) => {
+                        this.searchQuery = e.target.value.toLowerCase();
+                        this.applyFilters();
+                    });
+                }
+
+                // Partnership filter
+                const partnershipFilter = document.getElementById('partnershipFilter');
+                if (partnershipFilter) {
+                    partnershipFilter.addEventListener('change', (e) => {
+                        this.partnershipFilter = e.target.value;
+                        this.applyFilters();
+                    });
+                }
+
+                // Clear filters
+                const clearButton = document.getElementById('clearFilters');
+                if (clearButton) {
+                    clearButton.addEventListener('click', () => this.clearAllFilters());
+                }
+
+                // Level buttons integration
+                document.querySelectorAll('.level-button').forEach(button => {
+                    button.addEventListener('click', () => {
+                        this.currentLevel = parseInt(button.dataset.level);
+                        this.syncWithHexadSystem(this.currentLevel);
+                        this.updateLevelDisplay();
+                    });
+                });
+            }
+
+            switchFilterTab(filter) {
+                this.currentFilter = filter;
+                
+                // Update active tab
+                document.querySelectorAll('.filter-tab').forEach(tab => tab.classList.remove('active'));
+                document.querySelector(`[data-filter="${filter}"]`).classList.add('active');
+                
+                // Show/hide filter containers
+                document.getElementById('vendorFilterContainer').style.display = filter === 'vendors' ? 'block' : 'none';
+                document.getElementById('domainFilterContainer').style.display = filter === 'domains' ? 'block' : 'none';
+                
+                if (filter === 'vendors') {
+                    this.populateVendorFilters();
+                } else if (filter === 'domains') {
+                    this.populateDomainPathways();
+                }
+                
+                this.applyFilters();
+            }
+
+            populateVendorFilters() {
+                const container = document.getElementById('vendorFilterGrid');
+                if (!container) return;
+
+                const allVendors = new Set();
+                Object.values(this.categoryDatabase).forEach(category => {
+                    [...category.vendors.premium, ...category.vendors.standard].forEach(vendor => {
+                        allVendors.add(vendor);
+                    });
+                });
+
+                const vendorsHtml = Array.from(allVendors).sort().map(vendor => {
+                    const isPremium = Object.values(this.categoryDatabase).some(cat => 
+                        cat.vendors.premium.includes(vendor)
+                    );
+                    const categories = this.crossCategoryVendors[vendor] || [];
+                    
+                    return `
+                        <label class="vendor-checkbox">
+                            <input type="checkbox" value="${vendor}" data-vendor="${vendor}">
+                            <span class="vendor-name">
+                                ${vendor}
+                                ${isPremium ? '<span class="premium-badge">Premium</span>' : ''}
+                            </span>
+                            ${categories.length > 1 ? `<small>${categories.length} categories</small>` : ''}
+                        </label>
+                    `;
+                }).join('');
+
+                container.innerHTML = vendorsHtml;
+
+                // Add event listeners to vendor checkboxes
+                container.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+                    checkbox.addEventListener('change', (e) => {
+                        if (e.target.checked) {
+                            this.selectedVendors.add(e.target.value);
+                        } else {
+                            this.selectedVendors.delete(e.target.value);
+                        }
+                        this.applyFilters();
+                    });
+                });
+            }
+
+            populateDomainPathways() {
+                const container = document.getElementById('domainPathwaysGrid');
+                if (!container) return;
+
+                const pathwaysHtml = Object.entries(this.domainPathways).map(([pathwayId, pathway]) => `
+                    <div class="domain-pathway-card" data-pathway="${pathwayId}">
+                        <div class="pathway-header">
+                            <h4>${pathway.name}</h4>
+                            <label class="pathway-checkbox">
+                                <input type="checkbox" value="${pathwayId}" data-pathway="${pathwayId}">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <p class="pathway-description">${pathway.description}</p>
+                        <div class="pathway-details">
+                            <div class="pathway-categories">
+                                <strong>Categories:</strong> ${pathway.categories.length}
+                            </div>
+                            <div class="pathway-vendors">
+                                <strong>Key Vendors:</strong> ${pathway.vendors.slice(0, 3).join(', ')}${pathway.vendors.length > 3 ? '...' : ''}
+                            </div>
+                        </div>
+                    </div>
+                `).join('');
+
+                container.innerHTML = pathwaysHtml;
+
+                // Add event listeners to pathway checkboxes
+                container.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+                    checkbox.addEventListener('change', (e) => {
+                        if (e.target.checked) {
+                            this.selectedDomains.add(e.target.value);
+                        } else {
+                            this.selectedDomains.delete(e.target.value);
+                        }
+                        this.applyFilters();
+                    });
+                });
+            }
+
+            applyFilters() {
+                const categories = document.querySelectorAll('.category-card');
+                let visibleCount = 0;
+
+                categories.forEach(category => {
+                    let shouldShow = true;
+
+                    // Category filtering
+                    if (!this.selectedCategories.has('all')) {
+                        const categoryId = this.getCategoryIdFromElement(category);
+                        shouldShow = shouldShow && this.selectedCategories.has(categoryId);
+                    }
+
+                    // Vendor filtering
+                    if (this.selectedVendors.size > 0) {
+                        const categoryVendors = this.getVendorsFromCategory(category);
+                        shouldShow = shouldShow && categoryVendors.some(vendor => this.selectedVendors.has(vendor));
+                    }
+
+                    // Partnership filtering
+                    if (this.partnershipFilter !== 'all') {
+                        const categoryId = this.getCategoryIdFromElement(category);
+                        const categoryData = this.categoryDatabase[categoryId];
+                        if (categoryData) {
+                            const hasPartnershipType = this.partnershipFilter === 'premium' 
+                                ? categoryData.vendors.premium.length > 0
+                                : categoryData.vendors.standard.length > 0;
+                            shouldShow = shouldShow && hasPartnershipType;
+                        }
+                    }
+
+                    // Domain pathway filtering
+                    if (this.selectedDomains.size > 0) {
+                        const categoryId = this.getCategoryIdFromElement(category);
+                        const isInSelectedDomain = Array.from(this.selectedDomains).some(domainId => {
+                            const domain = this.domainPathways[domainId];
+                            return domain && domain.categories.includes(categoryId);
+                        });
+                        shouldShow = shouldShow && isInSelectedDomain;
+                    }
+
+                    // Search filtering
+                    if (this.searchQuery) {
+                        const categoryText = category.textContent.toLowerCase();
+                        shouldShow = shouldShow && categoryText.includes(this.searchQuery);
+                    }
+
+                    // Show/hide category
+                    category.style.display = shouldShow ? 'block' : 'none';
+                    if (shouldShow) visibleCount++;
+                });
+
+                this.updateFilterStats(visibleCount);
+            }
+
+            getCategoryIdFromElement(categoryElement) {
+                const titleElement = categoryElement.querySelector('.category-title');
+                if (titleElement) {
+                    const title = titleElement.textContent;
+                    // Map titles to category IDs
+                    const titleToId = {
+                        'Clinical Excellence & Patient Care': 'clinical-excellence',
+                        'Healthcare Administration & Management': 'healthcare-admin',
+                        'Health Information Technology': 'health-information-tech',
+                        'Medical Coding & Billing': 'medical-coding-billing',
+                        'Healthcare Quality & Safety': 'quality-safety'
+                    };
+                    return titleToId[title] || '';
+                }
+                return '';
+            }
+
+            getVendorsFromCategory(categoryElement) {
+                const vendorElements = categoryElement.querySelectorAll('.vendor-badge');
+                return Array.from(vendorElements).map(el => el.textContent.trim());
+            }
+
+            updateFilterStats(visibleCount) {
+                // Update the filter header with current results
+                const header = document.querySelector('.filter-header p');
+                if (header) {
+                    const totalCerts = Object.values(this.categoryDatabase).reduce((sum, cat) => sum + cat.totalCerts, 0);
+                    header.textContent = `Showing ${visibleCount} categories with ${totalCerts}+ healthcare certifications across 45+ vendor partnerships`;
+                }
+            }
+
+            clearAllFilters() {
+                this.selectedCategories.clear();
+                this.selectedCategories.add('all');
+                this.selectedVendors.clear();
+                this.selectedDomains.clear();
+                this.partnershipFilter = 'all';
+                this.searchQuery = '';
+                
+                document.getElementById('partnershipFilter').value = 'all';
+                document.getElementById('advancedSearch').value = '';
+                
+                // Clear vendor checkboxes
+                document.querySelectorAll('#vendorFilterGrid input[type="checkbox"]').forEach(cb => cb.checked = false);
+                
+                // Clear domain checkboxes
+                document.querySelectorAll('#domainPathwaysGrid input[type="checkbox"]').forEach(cb => cb.checked = false);
+                
+                this.applyFilters();
+            }
+
+            updateLevelDisplay() {
+                const pricing = this.levelPricing[this.currentLevel];
+                
+                // Update level badge and budget display
+                document.getElementById('currentLevelBadge').textContent = `Level ${this.currentLevel} Selected`;
+                document.getElementById('currentBudget').textContent = `Budget: $${pricing.budget.toLocaleString()}`;
+                
+                // Update detailed level info if visible
+                const levelInfo = document.getElementById('levelInfo');
+                if (levelInfo) {
+                    document.getElementById('maxCerts').textContent = pricing.maxCerts;
+                    document.getElementById('investmentLevel').textContent = `$${pricing.perDimension.toFixed(2)}`;
+                    document.getElementById('duration').textContent = pricing.duration;
+                    document.getElementById('complexity').textContent = pricing.intensity;
+                }
+            }
+
+            // Sync with HEXAD system
+            syncWithHexadSystem(level) {
+                const hexadData = {
+                    level: level,
+                    sector: 'Healthcare',
+                    timestamp: new Date().toISOString(),
+                    pricing: this.levelPricing[level]
+                };
+                
+                sessionStorage.setItem('hexadHealthcareSync', JSON.stringify(hexadData));
+                
+                if (window.hexadMasterySystem) {
+                    window.hexadMasterySystem.updateFromHealthcare(level, this.levelPricing[level]);
+                }
+            }
+        }
+
+        // Initialize both systems
+        const healthcareSync = new HealthcareCrossPageSyncManager();
+        const healthcareAdvancedSystem = new HealthcareAdvancedFilteringSystemComplete();
+        
+        // Keep legacy reference for compatibility
+        const healthcareFiltering = {
+            currentLevel: 1,
+            updateLevelInfo: () => healthcareAdvancedSystem.updateLevelDisplay()
+        };
+
+        // Global functions for UI interaction
+        function openCertificationModal() {
+            // Create certification selection modal
+            const modal = document.createElement('div');
+            modal.className = 'certification-modal';
+            modal.innerHTML = `
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2>Select Your Healthcare Certifications</h2>
+                        <span class="modal-close" onclick="closeCertificationModal()">&times;</span>
+                    </div>
+                    <div class="modal-body">
+                        <div class="level-info">
+                            <p><strong>Current Level:</strong> ${levelConfig[healthcareFiltering.currentLevel].name}</p>
+                            <p><strong>Maximum Certifications:</strong> ${levelConfig[healthcareFiltering.currentLevel].maxCertifications}</p>
+                            <p><strong>Total Budget:</strong> $${levelConfig[healthcareFiltering.currentLevel].budget.toLocaleString()}</p>
+                        </div>
+                        <div class="certification-categories">
+                            <h3>Available Healthcare Certifications:</h3>
+                            <div class="cert-grid">
+                                <div class="cert-category">
+                                    <h4>Clinical Excellence (15 certs)</h4>
+                                    <p>Epic, Cerner, MEDITECH, HIMSS, AHIMA</p>
+                                </div>
+                                <div class="cert-category">
+                                    <h4>Healthcare Administration (12 certs)</h4>
+                                    <p>HFMA, ACHE, NAHAM, HIMSS, CHIME</p>
+                                </div>
+                                <div class="cert-category">
+                                    <h4>Health Information Technology (10 certs)</h4>
+                                    <p>Epic, Cerner, MEDITECH, Microsoft, Google</p>
+                                </div>
+                                <div class="cert-category">
+                                    <h4>Medical Coding & Billing (8 certs)</h4>
+                                    <p>AAPC, AHIMA, HFMA, HCCA, NAHAM</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn-primary" onclick="proceedToCheckout()">Continue to Checkout</button>
+                        <button class="btn-secondary" onclick="closeCertificationModal()">Cancel</button>
+                    </div>
+                </div>
+            `;
+            
+            // Add modal styles
+            const modalStyles = `
+                <style>
+                .certification-modal {
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(0, 0, 0, 0.8);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    z-index: 1000;
+                }
+                .modal-content {
+                    background: white;
+                    border-radius: 20px;
+                    max-width: 800px;
+                    width: 90%;
+                    max-height: 80vh;
+                    overflow-y: auto;
+                }
+                .modal-header {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 2rem;
+                    border-bottom: 1px solid #e2e8f0;
+                }
+                .modal-close {
+                    font-size: 2rem;
+                    cursor: pointer;
+                    color: #64748b;
+                }
+                .modal-body {
+                    padding: 2rem;
+                }
+                .level-info {
+                    background: #f8fafc;
+                    padding: 1rem;
+                    border-radius: 10px;
+                    margin-bottom: 2rem;
+                }
+                .cert-grid {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                    gap: 1rem;
+                }
+                .cert-category {
+                    background: #f8fafc;
+                    padding: 1rem;
+                    border-radius: 10px;
+                }
+                .modal-footer {
+                    padding: 2rem;
+                    border-top: 1px solid #e2e8f0;
+                    display: flex;
+                    gap: 1rem;
+                    justify-content: flex-end;
+                }
+                </style>
+            `;
+            
+            document.head.insertAdjacentHTML('beforeend', modalStyles);
+            document.body.appendChild(modal);
+        }
+
+        function closeCertificationModal() {
+            const modal = document.querySelector('.certification-modal');
+            if (modal) {
+                modal.remove();
+            }
+        }
+
+        function proceedToCheckout() {
+            // Save checkout context
+            const checkoutContext = {
+                industry: 'Healthcare',
+                level: healthcareFiltering.currentLevel,
+                maxCertifications: levelConfig[healthcareFiltering.currentLevel].maxCertifications,
+                budget: levelConfig[healthcareFiltering.currentLevel].budget,
+                selectedCertifications: [],
+                timestamp: Date.now()
+            };
+            
+            sessionStorage.setItem('checkout_context', JSON.stringify(checkoutContext));
+            
+            // Navigate to checkout
+            window.location.href = '../hexad-checkout-system.html';
+        }
+
+        function showLevelInfo(category) {
+            alert(`Healthcare Category: ${category}\n\nLevel ${healthcareFiltering.currentLevel} Professional\n\nThis category includes certifications appropriate for your current level.\n\nClick "Select Certifications" to view specific options.`);
+        }
+
+        function selectDomainPath(domain) {
+            alert(`Healthcare Domain: ${domain}\n\nLevel ${healthcareFiltering.currentLevel} pathway selected.\n\nThis domain combines multiple healthcare technologies and standards.\n\nClick "Select Certifications" to continue.`);
+        }
+
+        // Legacy function for compatibility
+        function selectCertifications() {
+            openCertificationModal();
+        }
+
+        // Navigation and UI enhancements
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile navigation toggle
+            const hamburger = document.querySelector('.nav-hamburger');
+            const navMenu = document.querySelector('.nav-menu');
+            
+            if (hamburger && navMenu) {
+                hamburger.addEventListener('click', function() {
+                    navMenu.classList.toggle('active');
+                });
+            }
+            
+            // Sync level from URL parameters or session storage
+            const urlParams = new URLSearchParams(window.location.search);
+            const levelFromUrl = urlParams.get('level');
+            const levelFromStorage = sessionStorage.getItem('hexad_selected_level');
+            
+            if (levelFromUrl) {
+                const level = parseInt(levelFromUrl);
+                const levelButton = document.querySelector(`[data-level="${level}"]`);
+                if (levelButton) {
+                    document.querySelectorAll('.level-button').forEach(b => b.classList.remove('active'));
+                    levelButton.classList.add('active');
+                    healthcareFiltering.currentLevel = level;
+                    healthcareFiltering.updateLevelInfo();
+                }
+            } else if (levelFromStorage) {
+                const level = parseInt(levelFromStorage);
+                const levelButton = document.querySelector(`[data-level="${level}"]`);
+                if (levelButton) {
+                    document.querySelectorAll('.level-button').forEach(b => b.classList.remove('active'));
+                    levelButton.classList.add('active');
+                    healthcareFiltering.currentLevel = level;
+                    healthcareFiltering.updateLevelInfo();
+                }
+            }
+        });
+    </script>
+</body>
+</html>

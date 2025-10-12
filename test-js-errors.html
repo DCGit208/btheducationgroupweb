@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Error Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .error { color: red; background: #ffe6e6; padding: 10px; margin: 5px 0; }
+        .success { color: green; background: #e6ffe6; padding: 10px; margin: 5px 0; }
+        .info { color: blue; background: #e6f3ff; padding: 10px; margin: 5px 0; }
+    </style>
+</head>
+<body>
+    <h1>JavaScript Error Test</h1>
+    <div id="results"></div>
+    
+    <!-- Required DOM elements for ITFilterManager -->
+    <div id="categoryGrid"></div>
+    <div id="certificationGrid"></div>
+    <div id="searchInput"></div>
+    <div id="resultsTitle"></div>
+
+    <script src="assets/js/it-sector-data.js"></script>
+    <script src="assets/js/it-filter-manager.js"></script>
+    <script>
+        const results = document.getElementById('results');
+        
+        function log(message, type = 'info') {
+            const div = document.createElement('div');
+            div.className = type;
+            div.textContent = new Date().toLocaleTimeString() + ': ' + message;
+            results.appendChild(div);
+        }
+
+        // Override console methods to capture errors
+        const originalError = console.error;
+        const originalLog = console.log;
+        
+        console.error = function(...args) {
+            log('ERROR: ' + args.join(' '), 'error');
+            originalError.apply(console, args);
+        };
+        
+        console.log = function(...args) {
+            log('LOG: ' + args.join(' '), 'info');
+            originalLog.apply(console, args);
+        };
+
+        // Test ITSectorData
+        if (typeof ITSectorData !== 'undefined') {
+            log('ITSectorData loaded successfully', 'success');
+            
+            if (ITSectorData.certifications && Array.isArray(ITSectorData.certifications)) {
+                log(`Found ${ITSectorData.certifications.length} certifications in flat array`, 'success');
+            } else {
+                log('ITSectorData.certifications is missing or not an array', 'error');
+            }
+            
+            if (ITSectorData.categories) {
+                log(`Found ${Object.keys(ITSectorData.categories).length} categories`, 'success');
+            } else {
+                log('ITSectorData.categories is missing', 'error');
+            }
+        } else {
+            log('ITSectorData not defined', 'error');
+        }
+
+        // Test ITFilterManager
+        if (typeof ITFilterManager !== 'undefined') {
+            log('ITFilterManager class loaded successfully', 'success');
+        } else {
+            log('ITFilterManager class not defined', 'error');
+        }
+
+        // Wait for DOMContentLoaded and see if ITFilterManager initializes
+        window.addEventListener('DOMContentLoaded', function() {
+            log('DOMContentLoaded fired', 'success');
+            
+            setTimeout(() => {
+                log('Checking if filterManager instance was created...', 'info');
+                if (typeof filterManager !== 'undefined') {
+                    log('filterManager instance created successfully', 'success');
+                } else {
+                    log('filterManager instance was not created', 'error');
+                }
+            }, 1000);
+        });
+
+        // Catch any uncaught errors
+        window.addEventListener('error', function(e) {
+            log(`Uncaught error: ${e.message} at ${e.filename}:${e.lineno}`, 'error');
+        });
+    </script>
+</body>
+</html>

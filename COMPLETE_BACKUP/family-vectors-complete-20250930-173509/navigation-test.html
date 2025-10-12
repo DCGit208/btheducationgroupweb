@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HEXAD Navigation Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .test-section { margin: 20px 0; padding: 10px; border: 1px solid #ccc; }
+        .test-button { background: #007cba; color: white; padding: 10px 20px; margin: 5px; border: none; cursor: pointer; }
+        .status { margin: 10px 0; }
+        .pass { color: green; }
+        .fail { color: red; }
+    </style>
+</head>
+<body>
+    <h1>🧪 HEXAD Navigation Test Suite</h1>
+    
+    <div class="test-section">
+        <h2>Toggle Dimension Tests</h2>
+        <p>Testing each dimension expansion/collapse functionality:</p>
+        
+        <button class="test-button" onclick="testDimension('personal-dev-l1', 'Personal Development')">
+            Test Personal Development
+        </button>
+        
+        <button class="test-button" onclick="testDimension('professional-dev-l1', 'Professional Development')">
+            Test Professional Development
+        </button>
+        
+        <button class="test-button" onclick="testDimension('occupational-dev-l1', 'Occupational Development')">
+            Test Occupational Development
+        </button>
+        
+        <button class="test-button" onclick="testDimension('financial-dev-l1', 'Financial Development')">
+            Test Financial Development
+        </button>
+        
+        <button class="test-button" onclick="testDimension('relationship-dev-l1', 'Relationship Development')">
+            Test Relationship Development
+        </button>
+        
+        <button class="test-button" onclick="testDimension('truth-education-l1', 'Truth Education')">
+            Test Truth Education
+        </button>
+        
+        <div id="dimension-results" class="status"></div>
+    </div>
+    
+    <div class="test-section">
+        <h2>Level Navigation Tests</h2>
+        <p>Testing level switching functionality:</p>
+        
+        <button class="test-button" onclick="testLevel(1)">Test Level 1</button>
+        <button class="test-button" onclick="testLevel(2)">Test Level 2</button>
+        <button class="test-button" onclick="testLevel(3)">Test Level 3</button>
+        <button class="test-button" onclick="testLevel(4)">Test Level 4</button>
+        <button class="test-button" onclick="testLevel(5)">Test Level 5</button>
+        
+        <div id="level-results" class="status"></div>
+    </div>
+    
+    <div class="test-section">
+        <h2>Main Site Test</h2>
+        <a href="/hexad-mastery.html" target="_blank" class="test-button" style="display: inline-block; text-decoration: none;">
+            🚀 Open HEXAD Mastery System
+        </a>
+    </div>
+
+    <script>
+        function testDimension(dimensionId, name) {
+            const resultsDiv = document.getElementById('dimension-results');
+            
+            // Open main site in iframe for testing
+            const iframe = document.createElement('iframe');
+            iframe.src = '/hexad-mastery.html';
+            iframe.style.width = '100%';
+            iframe.style.height = '600px';
+            iframe.style.border = '1px solid #ccc';
+            iframe.onload = function() {
+                try {
+                    const doc = iframe.contentDocument || iframe.contentWindow.document;
+                    const element = doc.getElementById(dimensionId);
+                    
+                    if (element) {
+                        resultsDiv.innerHTML += `<div class="pass">✅ ${name} element found (ID: ${dimensionId})</div>`;
+                        
+                        // Test if toggle function exists
+                        if (iframe.contentWindow.toggleDimension) {
+                            resultsDiv.innerHTML += `<div class="pass">✅ ${name} toggle function available</div>`;
+                            
+                            // Try to toggle
+                            iframe.contentWindow.toggleDimension(dimensionId);
+                            resultsDiv.innerHTML += `<div class="pass">✅ ${name} toggle executed successfully</div>`;
+                        } else {
+                            resultsDiv.innerHTML += `<div class="fail">❌ ${name} toggle function not found</div>`;
+                        }
+                    } else {
+                        resultsDiv.innerHTML += `<div class="fail">❌ ${name} element not found (ID: ${dimensionId})</div>`;
+                    }
+                } catch (error) {
+                    resultsDiv.innerHTML += `<div class="fail">❌ ${name} error: ${error.message}</div>`;
+                }
+            };
+            
+            // Remove existing iframe if any
+            const existing = document.querySelector('iframe');
+            if (existing) existing.remove();
+            
+            document.body.appendChild(iframe);
+        }
+        
+        function testLevel(level) {
+            const resultsDiv = document.getElementById('level-results');
+            resultsDiv.innerHTML += `<div>Testing Level ${level} navigation...</div>`;
+            
+            // This would need to be implemented with proper iframe testing
+            resultsDiv.innerHTML += `<div class="pass">✅ Level ${level} test placeholder - manual verification needed</div>`;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,170 @@
+{
+  "providerClinical": {
+    "title": "Clinical Solutions",
+    "areas": [
+      {
+        "name": "EHR",
+        "training": ["CPHIMS", "HL7/FHIR", "ONC Certification", "Privacy & Security"],
+        "vendors": [
+          "Epic", "Oracle Health (Cerner)", "MEDITECH", "Veradigm (Allscripts)", "athenahealth", "NextGen Healthcare", "eClinicalWorks", "InterSystems"
+        ]
+      },
+      {
+        "name": "Population Health Management Services",
+        "training": ["Population Health", "Data Analytics", "Quality Reporting"],
+        "vendors": [
+          "Innovaccer", "Arcadia", "Lightbeam", "Cedar Gate", "Optum", "Health Catalyst", "MedeAnalytics"
+        ]
+      },
+      {
+        "name": "Specialty Information Management Systems",
+        "training": ["Oncology IS", "Cardiology IS", "GI/Endoscopy IS"],
+        "vendors": [
+          "Varian", "Elekta", "Lumedx", "Provation", "EndoSoft"
+        ]
+      },
+      {
+        "name": "PACS & VNA",
+        "training": ["DICOM", "IHE Profiles", "Imaging Workflow"],
+        "vendors": [
+          "GE HealthCare", "Philips", "Fujifilm Healthcare", "Agfa HealthCare", "Sectra", "Merative (Merge)", "Canon Medical"
+        ]
+      },
+      {
+        "name": "Mobile Health Applications",
+        "training": ["Mobile App Security", "Telehealth Workflows"],
+        "vendors": ["Doximity", "Apple", "Google"]
+      },
+      {
+        "name": "HCIT Integration Systems",
+        "training": ["HL7", "FHIR", "Interface Engines"],
+        "vendors": [
+          "InterSystems", "Lyniate Rhapsody", "NextGen Mirth", "Corepoint", "Redox", "Health Gorilla", "Kno2"
+        ]
+      },
+      {
+        "name": "Telehealth Solutions",
+        "training": ["Telehealth Billing", "Licensure & Privacy", "RPM"],
+        "vendors": ["Amwell", "Teladoc Health", "Doxy.me", "Zoom for Healthcare", "eVisit", "Microsoft Teams"]
+      },
+      {
+        "name": "Medical Image Analysis Systems",
+        "training": ["AI in Imaging", "Regulatory (FDA/MDR)", "Safety"],
+        "vendors": ["Aidoc", "Viz.ai", "Zebra Medical (Nanox)", "Arterys", "iCAD", "Qure.ai"]
+      },
+      {
+        "name": "Laboratory Information Systems",
+        "training": ["LIS Ops", "Interfaces", "Quality"],
+        "vendors": ["Orchard Software", "Sunquest (CliniSys)", "SCC Soft", "Epic Beaker", "Oracle Health PathNet"]
+      },
+      {
+        "name": "Practice Management Systems",
+        "training": ["Scheduling", "Billing", "RCM"],
+        "vendors": ["athenahealth", "NextGen", "eClinicalWorks", "AdvancedMD", "Kareo", "DrChrono"]
+      },
+      {
+        "name": "Clinical Decision Support Systems",
+        "training": ["CDS Design", "Evidence-Based Care"],
+        "vendors": ["Wolters Kluwer (UpToDate/Sentri7)", "Elsevier (ClinicalKey)", "Zynx Health"]
+      },
+      {
+        "name": "Computerized Physician Order Entry Systems",
+        "training": ["CPOE", "Medication Safety"],
+        "vendors": ["Epic", "Oracle Health (Cerner)", "MEDITECH", "athenahealth"]
+      },
+      {
+        "name": "Cardiovascular Information Systems",
+        "training": ["CVIS", "Imaging", "Workflow"],
+        "vendors": ["Philips IntelliSpace", "GE (MUSE/CardioLab)", "Lumedx", "Agfa"]
+      },
+      {
+        "name": "Patient Registry Software",
+        "training": ["Registry Design", "Analytics"],
+        "vendors": ["IQVIA", "Optum", "TriNetX", "OM1", "ArborMetrix"]
+      },
+      {
+        "name": "Infection Surveillance Solutions",
+        "training": ["Infection Control", "Data Feeds"],
+        "vendors": ["VigiLanz", "Theradoc (Premier)", "Wolters Kluwer Sentri7", "RLDatix"]
+      },
+      {
+        "name": "Radiation Dose Management Solutions",
+        "training": ["Dose Tracking", "Regulatory"],
+        "vendors": ["Bayer Radimetrics", "GE DoseWatch", "Sectra DoseTrack", "Philips DoseWise"]
+      }
+    ]
+  },
+
+  "providerNonClinical": {
+    "title": "Non-Clinical Solutions",
+    "areas": [
+      {
+        "name": "Healthcare Asset Management Solutions",
+        "training": ["RTLS", "Biomedical Asset Mgmt"],
+        "vendors": ["CenTrak", "STANLEY Healthcare", "Zebra Technologies"]
+      },
+      {
+        "name": "Revenue Cycle Management Solutions",
+        "training": ["Front/Mid/Back RCM", "Denials", "Clearinghouse"],
+        "vendors": ["Optum (Change Healthcare)", "Waystar", "R1 RCM", "Experian Health", "FinThrive", "Availity"]
+      }
+    ]
+  },
+
+  "analytics": {
+    "title": "Healthcare Analytics",
+    "areas": [
+      { "name": "Clinical Analytics", "training": ["Outcomes", "Quality", "Population Health"], "vendors": ["Health Catalyst", "MedeAnalytics", "SAS", "Oracle", "Microsoft"] },
+      { "name": "Financial Analytics", "training": ["Costing", "Revenue", "Contracts"], "vendors": ["MedeAnalytics", "SAS", "Oracle", "Tableau", "Qlik"] },
+      { "name": "Operations & Administrative Analytics", "training": ["Throughput", "Staffing", "Supply"], "vendors": ["Health Catalyst", "Qlik", "Power BI", "ThoughtSpot"] }
+    ]
+  },
+
+  "otherProvider": {
+    "title": "Additional Provider Categories",
+    "areas": [
+      { "name": "Customer Relationship Management Solutions", "training": ["CRM", "Patient 360"], "vendors": ["Salesforce Health Cloud", "Microsoft Cloud for Healthcare", "Innovaccer"] },
+      { "name": "Pharmacy Information Systems", "training": ["Retail/Clinical Pharmacy"], "vendors": ["Epic Willow", "Oracle PharmNet", "PioneerRx", "QS/1 (RedSail)"] },
+      { "name": "Healthcare Interoperability Solutions", "training": ["FHIR/HL7", "Networks"], "vendors": ["InterSystems HealthShare", "Rhapsody", "Mirth", "Redox", "Health Gorilla", "Kno2"] },
+      { "name": "Healthcare Quality Management Solutions", "training": ["Quality", "Risk"], "vendors": ["RLDatix", "Midas", "Verge Health"] },
+      { "name": "Supply Chain Management Solutions", "training": ["Procurement", "Inventory"], "vendors": ["GHX", "Tecsys", "Oracle", "SAP"] },
+      { "name": "Medication Management Systems", "training": ["eMAR", "Dispensing", "Inventory"], "vendors": ["Omnicell", "BD Pyxis", "Swisslog"] },
+      { "name": "Workforce Management Solutions", "training": ["Scheduling", "Timekeeping"], "vendors": ["UKG (Kronos)", "symplr (API Healthcare)", "QGenda"] },
+      { "name": "Financial Management Systems (Billing & Accounting)", "training": ["ERP", "Accounting"], "vendors": ["Oracle", "SAP", "Workday", "Infor"] },
+      { "name": "Healthcare Information Exchanges", "training": ["HIE Ops", "Governance"], "vendors": ["InterSystems", "Orion Health", "Rhapsody", "Epic Care Everywhere", "eHealth Exchange"] },
+      { "name": "Medical Document Management Solutions", "training": ["ECM", "Capture", "Clinical Docs"], "vendors": ["Hyland OnBase", "OpenText", "3M/M*Modal", "Nuance (Microsoft)", "Kofax"] }
+    ]
+  },
+
+  "payer": {
+    "title": "Healthcare Payer Solutions",
+    "areas": [
+      { "name": "Claims Management Solutions", "training": ["Claims Ops"], "vendors": ["Cognizant TriZetto", "HealthEdge", "Pega", "Oracle Health Insurance"] },
+      { "name": "Population Health Management Solutions", "training": ["Pop Health"], "vendors": ["Innovaccer", "Arcadia", "Lightbeam", "Optum"] },
+      { "name": "Pharmacy Audit and Analysis Solutions", "training": ["Pharmacy Audit"], "vendors": ["Inmar Intelligence", "EXL (SCIO)"] },
+      { "name": "Payment Management Solutions", "training": ["Payments"], "vendors": ["Zelis", "InstaMed", "Optum Pay", "Waystar"] },
+      { "name": "Customer Relationship Management Solutions", "training": ["CRM"], "vendors": ["Salesforce", "Microsoft"] },
+      { "name": "Member Eligibility Management Solutions", "training": ["Eligibility"], "vendors": ["Availity", "Experian Health"] },
+      { "name": "Fraud Analytics Solutions", "training": ["Fraud/Abuse"], "vendors": ["SAS", "IBM", "FICO", "Optum"] },
+      { "name": "Provider Network Management Solutions", "training": ["Network Mgmt"], "vendors": ["symplr", "Kyruus", "Quest Analytics"] },
+      { "name": "HCIT Outsourcing Services", "training": ["Managed Services"], "vendors": ["Accenture", "Deloitte", "Cognizant", "TCS", "Wipro", "Infosys", "HCLTech", "NTT DATA", "IBM", "KPMG", "PwC", "DXC", "Atos"] }
+    ]
+  },
+
+  "components": {
+    "title": "Components",
+    "areas": [
+      { "name": "Services", "training": [], "vendors": [] },
+      { "name": "Software", "training": [], "vendors": [] },
+      { "name": "Hardware", "training": [], "vendors": [] }
+    ]
+  },
+
+  "endUsers": {
+    "title": "End Users",
+    "areas": [
+      { "name": "Healthcare Providers", "training": [], "vendors": ["Hospitals", "Ambulatory Care Centers", "Home Health & Assisted Living", "Diagnostic & Imaging Centers", "Pharmacies"] },
+      { "name": "Healthcare Payers", "training": [], "vendors": ["Private Payers", "Public Payers"] }
+    ]
+  }
+}

@@ -1,0 +1,550 @@
+[
+  {
+    "vendor": "CompTIA",
+    "bundle_id": "comptia-level-1-foundation",
+    "name": "CompTIA Level 1 Foundation Bundle",
+    "level": 1,
+    "description": "Essential IT fundamentals providing foundational knowledge for all IT career paths",
+    "focus_areas": ["tech-support", "digital-skills"],
+    "domains": ["Tech Support", "Digital Skills"],
+    "certifications": [
+      {
+        "name": "CompTIA Tech+",
+        "exam": "FC0-U71",
+        "required": true,
+        "order": 1,
+        "certification_id": 2960832630
+      },
+      {
+        "name": "CompTIA A+",
+        "exam": "220-1201/220-1202", 
+        "required": true,
+        "order": 2,
+        "certification_id": 1445690541
+      },
+      {
+        "name": "CompTIA Network+",
+        "exam": "N10-009",
+        "required": true,
+        "order": 3,
+        "certification_id": 545852962
+      }
+    ],
+    "prerequisites": [],
+    "career_outcomes": [
+      "IT Support Specialist",
+      "Help Desk Technician", 
+      "Desktop Support Technician",
+      "Network Technician"
+    ],
+    "estimated_time_months": 6,
+    "total_certifications": 3
+  },
+  {
+    "vendor": "CompTIA",
+    "bundle_id": "comptia-level-2-security-foundation",
+    "name": "CompTIA Level 2 Security Foundation Bundle",
+    "level": 2,
+    "description": "Core IT and security fundamentals preparing for specialized career paths",
+    "focus_areas": ["tech-support", "digital-skills", "cyber"],
+    "domains": ["Tech Support", "Digital Skills", "Cyber"],
+    "certifications": [
+      {
+        "name": "CompTIA Tech+",
+        "exam": "FC0-U71",
+        "required": true,
+        "order": 1,
+        "certification_id": 2960832630
+      },
+      {
+        "name": "CompTIA A+",
+        "exam": "220-1201/220-1202",
+        "required": true, 
+        "order": 2,
+        "certification_id": 1445690541
+      },
+      {
+        "name": "CompTIA Network+",
+        "exam": "N10-009",
+        "required": true,
+        "order": 3,
+        "certification_id": 545852962
+      },
+      {
+        "name": "CompTIA Security+",
+        "exam": "SY0-701",
+        "required": true,
+        "order": 4,
+        "certification_id": 2295459720
+      }
+    ],
+    "prerequisites": ["comptia-level-1-foundation"],
+    "career_outcomes": [
+      "Security Analyst I",
+      "Junior Network Administrator", 
+      "Systems Administrator",
+      "IT Security Specialist"
+    ],
+    "estimated_time_months": 9,
+    "total_certifications": 4
+  },
+  {
+    "vendor": "CompTIA", 
+    "bundle_id": "comptia-level-3-cybersecurity-focus",
+    "name": "CompTIA Level 3 Cybersecurity Focus Bundle",
+    "level": 3,
+    "description": "Specialized cybersecurity track focusing on offensive security and penetration testing",
+    "focus_areas": ["cyber"],
+    "domains": ["Cyber"],
+    "focus_area": "cybersecurity",
+    "certifications": [
+      {
+        "name": "CompTIA Tech+",
+        "exam": "FC0-U71", 
+        "required": true,
+        "order": 1,
+        "certification_id": 2960832630
+      },
+      {
+        "name": "CompTIA A+",
+        "exam": "220-1201/220-1202",
+        "required": true,
+        "order": 2,
+        "certification_id": 1445690541
+      },
+      {
+        "name": "CompTIA Network+",
+        "exam": "N10-009",
+        "required": true,
+        "order": 3,
+        "certification_id": 545852962
+      },
+      {
+        "name": "CompTIA Security+",
+        "exam": "SY0-701", 
+        "required": true,
+        "order": 4,
+        "certification_id": 2295459720
+      },
+      {
+        "name": "CompTIA PenTest+",
+        "exam": "PT0-002",
+        "required": true,
+        "order": 5,
+        "certification_id": 4059495557
+      }
+    ],
+    "prerequisites": ["comptia-level-2-security-foundation"],
+    "career_outcomes": [
+      "Penetration Tester", 
+      "Ethical Hacker",
+      "Security Consultant",
+      "Vulnerability Assessment Analyst"
+    ],
+    "estimated_time_months": 12,
+    "total_certifications": 5
+  },
+  {
+    "vendor": "CompTIA",
+    "bundle_id": "comptia-level-3-infrastructure-focus", 
+    "name": "CompTIA Level 3 Infrastructure Focus Bundle",
+    "level": 3,
+    "description": "Specialized infrastructure track focusing on Linux systems and server management",
+    "focus_areas": ["network", "data"],
+    "domains": ["Network", "Data"], 
+    "focus_area": "infrastructure",
+    "certifications": [
+      {
+        "name": "CompTIA Tech+",
+        "exam": "FC0-U71",
+        "required": true,
+        "order": 1, 
+        "certification_id": 2960832630
+      },
+      {
+        "name": "CompTIA A+",
+        "exam": "220-1201/220-1202",
+        "required": true,
+        "order": 2,
+        "certification_id": 1445690541
+      },
+      {
+        "name": "CompTIA Network+", 
+        "exam": "N10-009",
+        "required": true,
+        "order": 3,
+        "certification_id": 545852962
+      },
+      {
+        "name": "CompTIA Security+",
+        "exam": "SY0-701",
+        "required": true,
+        "order": 4,
+        "certification_id": 2295459720
+      },
+      {
+        "name": "CompTIA Linux+",
+        "exam": "XK0-005",
+        "required": true,
+        "order": 5,
+        "certification_id": 3120865962
+      }
+    ],
+    "prerequisites": ["comptia-level-2-security-foundation"],
+    "career_outcomes": [
+      "Linux System Administrator",
+      "Network Administrator", 
+      "Infrastructure Engineer",
+      "Systems Engineer"
+    ],
+    "estimated_time_months": 12,
+    "total_certifications": 5
+  },
+  {
+    "vendor": "CompTIA",
+    "bundle_id": "comptia-level-4-cybersecurity-advanced",
+    "name": "CompTIA Level 4 Cybersecurity Advanced Bundle", 
+    "level": 4,
+    "description": "Advanced cybersecurity specialization with detection and response capabilities",
+    "focus_areas": ["cyber"],
+    "domains": ["Cyber"],
+    "focus_area": "cybersecurity", 
+    "certifications": [
+      {
+        "name": "CompTIA Tech+",
+        "exam": "FC0-U71",
+        "required": true,
+        "order": 1,
+        "certification_id": 2960832630
+      },
+      {
+        "name": "CompTIA A+",
+        "exam": "220-1201/220-1202",
+        "required": true,
+        "order": 2, 
+        "certification_id": 1445690541
+      },
+      {
+        "name": "CompTIA Network+",
+        "exam": "N10-009",
+        "required": true,
+        "order": 3,
+        "certification_id": 545852962
+      },
+      {
+        "name": "CompTIA Security+",
+        "exam": "SY0-701",
+        "required": true,
+        "order": 4,
+        "certification_id": 2295459720
+      },
+      {
+        "name": "CompTIA PenTest+", 
+        "exam": "PT0-002",
+        "required": true,
+        "order": 5,
+        "certification_id": 4059495557
+      },
+      {
+        "name": "CompTIA CySA+",
+        "exam": "CS0-003",
+        "required": true,
+        "order": 6,
+        "certification_id": 2684878034
+      }
+    ],
+    "prerequisites": ["comptia-level-3-cybersecurity-focus"],
+    "career_outcomes": [
+      "SOC Analyst II/III",
+      "Incident Response Analyst", 
+      "Threat Hunter",
+      "Security Architect"
+    ],
+    "estimated_time_months": 15,
+    "total_certifications": 6
+  },
+  {
+    "vendor": "CompTIA",
+    "bundle_id": "comptia-level-4-infrastructure-advanced",
+    "name": "CompTIA Level 4 Infrastructure Advanced Bundle",
+    "level": 4, 
+    "description": "Advanced infrastructure specialization with server management and enterprise systems",
+    "focus_areas": ["network", "data"],
+    "domains": ["Network", "Data"],
+    "focus_area": "infrastructure",
+    "certifications": [
+      {
+        "name": "CompTIA Tech+",
+        "exam": "FC0-U71",
+        "required": true,
+        "order": 1,
+        "certification_id": 2960832630
+      },
+      {
+        "name": "CompTIA A+", 
+        "exam": "220-1201/220-1202",
+        "required": true,
+        "order": 2,
+        "certification_id": 1445690541
+      },
+      {
+        "name": "CompTIA Network+",
+        "exam": "N10-009",
+        "required": true,
+        "order": 3,
+        "certification_id": 545852962
+      },
+      {
+        "name": "CompTIA Security+",
+        "exam": "SY0-701", 
+        "required": true,
+        "order": 4,
+        "certification_id": 2295459720
+      },
+      {
+        "name": "CompTIA Linux+",
+        "exam": "XK0-005",
+        "required": true,
+        "order": 5,
+        "certification_id": 3120865962
+      },
+      {
+        "name": "CompTIA Server+",
+        "exam": "SK0-005",
+        "required": true,
+        "order": 6,
+        "certification_id": 2041385651
+      }
+    ],
+    "prerequisites": ["comptia-level-3-infrastructure-focus"],
+    "career_outcomes": [
+      "Senior Systems Administrator",
+      "Infrastructure Architect", 
+      "Data Center Manager",
+      "Enterprise Systems Engineer"
+    ],
+    "estimated_time_months": 15,
+    "total_certifications": 6
+  },
+  {
+    "vendor": "CompTIA",
+    "bundle_id": "comptia-level-5-cybersecurity-expert", 
+    "name": "CompTIA Level 5 Cybersecurity Expert Bundle",
+    "level": 5,
+    "description": "Expert-level cybersecurity leadership with management and advanced technical specialization options",
+    "focus_areas": ["cyber"],
+    "domains": ["Cyber"],
+    "focus_area": "cybersecurity",
+    "certifications": [
+      {
+        "name": "CompTIA Tech+",
+        "exam": "FC0-U71",
+        "required": true,
+        "order": 1,
+        "certification_id": 2960832630
+      },
+      {
+        "name": "CompTIA A+",
+        "exam": "220-1201/220-1202",
+        "required": true,
+        "order": 2,
+        "certification_id": 1445690541
+      },
+      {
+        "name": "CompTIA Network+", 
+        "exam": "N10-009",
+        "required": true,
+        "order": 3,
+        "certification_id": 545852962
+      },
+      {
+        "name": "CompTIA Security+",
+        "exam": "SY0-701",
+        "required": true,
+        "order": 4,
+        "certification_id": 2295459720
+      },
+      {
+        "name": "CompTIA PenTest+",
+        "exam": "PT0-002",
+        "required": true, 
+        "order": 5,
+        "certification_id": 4059495557
+      },
+      {
+        "name": "CompTIA CySA+",
+        "exam": "CS0-003",
+        "required": true,
+        "order": 6,
+        "certification_id": 2684878034
+      },
+      {
+        "name": "CompTIA CASP+ (Advanced Security Practitioner)",
+        "exam": "CAS-004", 
+        "required": true,
+        "order": 7,
+        "certification_id": 1108003638,
+        "note": "Previously known as SecurityX"
+      }
+    ],
+    "specialization_options": [
+      {
+        "path": "management",
+        "description": "Security management and governance leadership track",
+        "additional_certifications": [
+          {
+            "name": "CISM (Certified Information Security Manager)",
+            "vendor": "ISACA",
+            "focus": "Security Management"
+          }
+        ]
+      },
+      {
+        "path": "advanced_technical", 
+        "description": "Advanced technical security expertise track",
+        "additional_certifications": [
+          {
+            "name": "CISSP (Certified Information Systems Security Professional)", 
+            "vendor": "(ISC)²",
+            "focus": "Security Architecture"
+          },
+          {
+            "name": "CEH (Certified Ethical Hacker)",
+            "vendor": "EC-Council", 
+            "focus": "Ethical Hacking"
+          }
+        ]
+      }
+    ],
+    "prerequisites": ["comptia-level-4-cybersecurity-advanced"],
+    "career_outcomes": [
+      "Chief Information Security Officer (CISO)",
+      "Security Architect", 
+      "Security Consultant",
+      "Cybersecurity Manager",
+      "Principal Security Engineer"
+    ],
+    "estimated_time_months": 18,
+    "total_certifications": 7
+  },
+  {
+    "vendor": "CompTIA",
+    "bundle_id": "comptia-level-5-infrastructure-expert",
+    "name": "CompTIA Level 5 Infrastructure Expert Bundle",
+    "level": 5,
+    "description": "Expert-level infrastructure with cloud specialization and vendor-neutral security options",
+    "focus_areas": ["network", "data", "cloud"], 
+    "domains": ["Network", "Data", "Cloud"],
+    "focus_area": "infrastructure",
+    "certifications": [
+      {
+        "name": "CompTIA Tech+",
+        "exam": "FC0-U71",
+        "required": true,
+        "order": 1,
+        "certification_id": 2960832630
+      },
+      {
+        "name": "CompTIA A+",
+        "exam": "220-1201/220-1202", 
+        "required": true,
+        "order": 2,
+        "certification_id": 1445690541
+      },
+      {
+        "name": "CompTIA Network+",
+        "exam": "N10-009",
+        "required": true,
+        "order": 3,
+        "certification_id": 545852962
+      },
+      {
+        "name": "CompTIA Security+",
+        "exam": "SY0-701",
+        "required": true,
+        "order": 4, 
+        "certification_id": 2295459720
+      },
+      {
+        "name": "CompTIA Linux+",
+        "exam": "XK0-005",
+        "required": true,
+        "order": 5,
+        "certification_id": 3120865962
+      },
+      {
+        "name": "CompTIA Server+",
+        "exam": "SK0-005",
+        "required": true,
+        "order": 6,
+        "certification_id": 2041385651
+      },
+      {
+        "name": "CompTIA Cloud+", 
+        "exam": "CV0-003",
+        "required": true,
+        "order": 7,
+        "certification_id": 3936326711
+      }
+    ],
+    "specialization_options": [
+      {
+        "path": "aws_cloud",
+        "description": "Amazon Web Services cloud specialization",
+        "additional_certifications": [
+          {
+            "name": "AWS Certified Solutions Architect – Associate",
+            "vendor": "Amazon Web Services", 
+            "focus": "Cloud Architecture"
+          }
+        ]
+      },
+      {
+        "path": "azure_cloud",
+        "description": "Microsoft Azure cloud specialization", 
+        "additional_certifications": [
+          {
+            "name": "Microsoft Certified: Azure Administrator Associate",
+            "vendor": "Microsoft",
+            "focus": "Cloud Administration"
+          }
+        ]
+      },
+      {
+        "path": "gcp_cloud",
+        "description": "Google Cloud Platform specialization",
+        "additional_certifications": [
+          {
+            "name": "Google Associate Cloud Engineer", 
+            "vendor": "Google Cloud",
+            "focus": "Cloud Engineering"
+          }
+        ]
+      }
+    ],
+    "cloud_security_options": [
+      {
+        "name": "Certified Cloud Security Professional (CCSP)",
+        "vendor": "(ISC)²",
+        "focus": "Cloud Security",
+        "certification_id": 4240222364
+      },
+      {
+        "name": "Certificate of Cloud Security Knowledge (CCSK)",
+        "vendor": "CSA", 
+        "focus": "Cloud Security Knowledge",
+        "certification_id": 201988302
+      }
+    ],
+    "prerequisites": ["comptia-level-4-infrastructure-advanced"],
+    "career_outcomes": [
+      "Cloud Architect",
+      "Infrastructure Architect",
+      "DevOps Engineer", 
+      "Site Reliability Engineer (SRE)",
+      "Cloud Security Engineer"
+    ],
+    "estimated_time_months": 18,
+    "total_certifications": 7
+  }
+]

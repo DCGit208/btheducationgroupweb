@@ -1,0 +1,263 @@
+[
+  {
+    "name": "Fortinet Certified Fundamentals (FCF) in Cybersecurity",
+    "vendor": "Fortinet",
+    "category": "cybersecurity",
+    "focus": "Blue Team",
+    "level": 1,
+    "retired": false,
+    "premium": false,
+    "exam": "Fortinet Certified Fundamentals (FCF)"
+  },
+  {
+    "name": "Fortinet Certified Professional - OT Security (FCP)",
+    "vendor": "Fortinet",
+    "category": "cybersecurity",
+    "focus": "OT/ICS Security",
+    "level": 3,
+    "retired": false,
+    "premium": true,
+    "exam": "FCP OT Security"
+  },
+  {
+    "name": "Fortinet Certified Professional - Public Cloud Security (FCP)",
+    "vendor": "Fortinet",
+    "category": "cybersecurity",
+    "focus": "Cloud Security",
+    "level": 3,
+    "retired": false,
+    "premium": true,
+    "exam": "FCP Public Cloud"
+  },
+  {
+    "name": "Fortinet Certified Professional - SD-Branch (FCP)",
+    "vendor": "Fortinet",
+    "category": "cybersecurity",
+    "focus": "SD-Branch",
+    "level": 3,
+    "retired": false,
+    "premium": true,
+    "exam": "FCP SD-Branch"
+  },
+  {
+    "name": "Fortinet Certified Professional - SD-WAN (FCP)",
+    "vendor": "Fortinet",
+    "category": "cybersecurity",
+    "focus": "SD-WAN",
+    "level": 3,
+    "retired": false,
+    "premium": true,
+    "exam": "FCP SD-WAN"
+  },
+  {
+    "name": "Fortinet Certified Professional - Secure Access Service Edge (FCP)",
+    "vendor": "Fortinet",
+    "category": "cybersecurity",
+    "focus": "SASE",
+    "level": 3,
+    "retired": false,
+    "premium": true,
+    "exam": "FCP SASE"
+  },
+  {
+    "name": "Fortinet Certified Professional - Secure Email Gateway (FCP)",
+    "vendor": "Fortinet",
+    "category": "cybersecurity",
+    "focus": "Secure Email Gateway",
+    "level": 3,
+    "retired": false,
+    "premium": true,
+    "exam": "FCP Secure Email"
+  },
+  {
+    "name": "Fortinet Certified Professional - Secure Web Gateway (FCP)",
+    "vendor": "Fortinet",
+    "category": "cybersecurity",
+    "focus": "Secure Web Gateway",
+    "level": 3,
+    "retired": false,
+    "premium": true,
+    "exam": "FCP Secure Web"
+  },
+  {
+    "name": "Fortinet Certified Professional - Zero Trust Access (FCP)",
+    "vendor": "Fortinet",
+    "category": "cybersecurity",
+    "focus": "Zero Trust Access",
+    "level": 3,
+    "retired": false,
+    "premium": true,
+    "exam": "FCP Zero Trust Access"
+  },
+  {
+    "name": "Fortinet Certified Professional (FCP) – Network Security",
+    "vendor": "Fortinet",
+    "category": "cybersecurity",
+    "focus": "Blue Team",
+    "level": 3,
+    "retired": false,
+    "premium": false,
+    "exam": "Fortinet Certified Professional (FCP) – Network Security"
+  },
+  {
+    "name": "NSE 4 Network Security Professional",
+    "vendor": "Fortinet",
+    "category": "cybersecurity",
+    "focus": "Network Security",
+    "level": 3,
+    "retired": false,
+    "exam": "NSE 4",
+    "logo": "../assets/images/vendor-logos/fortinet.svg",
+    "url": "https://www.fortinet.com/support/training/certification"
+  },
+  {
+    "name": "Fortinet Certified Solution Architect - Secure Email & Web Gateway (FCSA)",
+    "vendor": "Fortinet",
+    "category": "cybersecurity",
+    "focus": "Secure Email/Web Gateway Architecture",
+    "level": 4,
+    "retired": false,
+    "premium": true,
+    "exam": "FCSA SEG/SWG"
+  },
+  {
+    "name": "Fortinet Certified Solution Architect - Zero Trust Access (FCSA)",
+    "vendor": "Fortinet",
+    "category": "cybersecurity",
+    "focus": "Zero Trust Architecture",
+    "level": 4,
+    "retired": false,
+    "premium": true,
+    "exam": "FCSA ZTNA"
+  },
+  {
+    "name": "Fortinet Certified Solution Specialist - OT Security (FCSS)",
+    "vendor": "Fortinet",
+    "category": "cybersecurity",
+    "focus": "OT/ICS Security - Advanced",
+    "level": 4,
+    "retired": false,
+    "premium": true,
+    "exam": "FCSS OT Security"
+  },
+  {
+    "name": "Fortinet Certified Solution Specialist - Public Cloud Security (FCSS)",
+    "vendor": "Fortinet",
+    "category": "cybersecurity",
+    "focus": "Cloud Security - Advanced",
+    "level": 4,
+    "retired": false,
+    "premium": true,
+    "exam": "FCSS Public Cloud"
+  },
+  {
+    "name": "Fortinet Certified Solution Specialist - SD-Branch (FCSS)",
+    "vendor": "Fortinet",
+    "category": "cybersecurity",
+    "focus": "SD-Branch - Advanced",
+    "level": 4,
+    "retired": false,
+    "premium": true,
+    "exam": "FCSS SD-Branch"
+  },
+  {
+    "name": "Fortinet Certified Solution Specialist - SD-WAN (FCSS)",
+    "vendor": "Fortinet",
+    "category": "cybersecurity",
+    "focus": "SD-WAN - Advanced",
+    "level": 4,
+    "retired": false,
+    "premium": true,
+    "exam": "FCSS SD-WAN"
+  },
+  {
+    "name": "Fortinet Certified Solution Specialist - Secure Access Service Edge (FCSS)",
+    "vendor": "Fortinet",
+    "category": "cybersecurity",
+    "focus": "SASE - Advanced",
+    "level": 4,
+    "retired": false,
+    "premium": true,
+    "exam": "FCSS SASE"
+  },
+  {
+    "name": "Fortinet Certified Solution Specialist - Secure Email Gateway (FCSS)",
+    "vendor": "Fortinet",
+    "category": "cybersecurity",
+    "focus": "Secure Email Gateway - Advanced",
+    "level": 4,
+    "retired": false,
+    "premium": true,
+    "exam": "FCSS Secure Email"
+  },
+  {
+    "name": "Fortinet Certified Solution Specialist - Secure Web Gateway (FCSS)",
+    "vendor": "Fortinet",
+    "category": "cybersecurity",
+    "focus": "Secure Web Gateway - Advanced",
+    "level": 4,
+    "retired": false,
+    "premium": true,
+    "exam": "FCSS Secure Web"
+  },
+  {
+    "name": "Fortinet Certified Solution Specialist - Zero Trust Access (FCSS)",
+    "vendor": "Fortinet",
+    "category": "cybersecurity",
+    "focus": "Zero Trust Access - Advanced",
+    "level": 4,
+    "retired": false,
+    "premium": true,
+    "exam": "FCSS Zero Trust Access"
+  },
+  {
+    "name": "Fortinet Certified Solution Specialist - Zero Trust Access (Professional)",
+    "vendor": "Fortinet",
+    "category": "cybersecurity",
+    "focus": "Zero Trust Access - Professional",
+    "level": 4,
+    "retired": false,
+    "premium": true,
+    "exam": "FCSS ZTNA Pro"
+  },
+  {
+    "name": "Fortinet Certified Solution Specialist (FCSS) – OT Security",
+    "vendor": "Fortinet",
+    "category": "cybersecurity",
+    "focus": "Blue Team",
+    "level": 4,
+    "retired": false,
+    "premium": false,
+    "exam": "Fortinet Certified Solution Specialist (FCSS) – OT Security"
+  },
+  {
+    "name": "Fortinet Certified Expert (FCX) in Cybersecurity",
+    "vendor": "Fortinet",
+    "category": "cybersecurity",
+    "focus": "Blue Team",
+    "level": 5,
+    "retired": false,
+    "premium": false,
+    "exam": "Fortinet Certified Expert (FCX)"
+  },
+  {
+    "name": "Fortinet Certified Master Architect - Secure Email & Web Gateway (FCMA)",
+    "vendor": "Fortinet",
+    "category": "cybersecurity",
+    "focus": "Secure Email/Web Gateway Architecture",
+    "level": 5,
+    "retired": false,
+    "premium": true,
+    "exam": "FCMA SEG/SWG"
+  },
+  {
+    "name": "Fortinet Certified Master Architect - Zero Trust (FCMA)",
+    "vendor": "Fortinet",
+    "category": "cybersecurity",
+    "focus": "Zero Trust Architecture",
+    "level": 5,
+    "retired": false,
+    "premium": true,
+    "exam": "FCMA ZTNA"
+  }
+]

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technology Page Debug Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .test-section { margin: 20px 0; padding: 15px; border: 1px solid #ccc; }
+        .pass { color: green; font-weight: bold; }
+        .fail { color: red; font-weight: bold; }
+        .warning { color: orange; font-weight: bold; }
+        pre { background: #f5f5f5; padding: 10px; overflow-x: auto; }
+    </style>
+</head>
+<body>
+    <h1>Technology Page Debug Test</h1>
+    <div id="results"></div>
+
+    <script src="assets/js/it-sector-data.js"></script>
+    <script src="assets/js/it-filter-manager.js"></script>
+    <script>
+        const results = document.getElementById('results');
+        
+        function addResult(title, status, message, data = null) {
+            const div = document.createElement('div');
+            div.className = 'test-section';
+            
+            const statusClass = status === 'pass' ? 'pass' : status === 'fail' ? 'fail' : 'warning';
+            
+            div.innerHTML = `
+                <h3 class="${statusClass}">${status.toUpperCase()}: ${title}</h3>
+                <p>${message}</p>
+                ${data ? `<pre>${JSON.stringify(data, null, 2)}</pre>` : ''}
+            `;
+            
+            results.appendChild(div);
+        }
+
+        // Wait for DOM to load
+        window.addEventListener('DOMContentLoaded', function() {
+            // Test 1: Check if ITSectorData exists and has proper structure
+            if (typeof ITSectorData !== 'undefined') {
+                addResult('ITSectorData Loading', 'pass', 'ITSectorData object is available');
+                
+                // Check structure
+                if (ITSectorData.certificationLevels) {
+                    const levelCount = Object.keys(ITSectorData.certificationLevels).length;
+                    addResult('Level Structure', 'pass', `Found ${levelCount} certification levels`, {
+                        levels: Object.keys(ITSectorData.certificationLevels)
+                    });
+                    
+                    // Check if flattened certifications array exists
+                    if (ITSectorData.certifications && Array.isArray(ITSectorData.certifications)) {
+                        addResult('Certifications Array', 'pass', `Found ${ITSectorData.certifications.length} certifications in flat array`);
+                        
+                        // Show first few certifications
+                        addResult('Sample Certifications', 'pass', 'First 3 certifications:', 
+                            ITSectorData.certifications.slice(0, 3).map(cert => ({
+                                name: cert.name,
+                                vendor: cert.vendor,
+                                level: cert.level
+                            }))
+                        );
+                    } else {
+                        addResult('Certifications Array', 'fail', 'ITSectorData.certifications is missing or not an array - this will break ITFilterManager!');
+                    }
+                } else {
+                    addResult('Level Structure', 'fail', 'ITSectorData.certificationLevels is missing');
+                }
+            } else {
+                addResult('ITSectorData Loading', 'fail', 'ITSectorData is not defined - JavaScript file may not be loading');
+            }
+
+            // Test 2: Check if ITFilterManager exists and can initialize
+            if (typeof ITFilterManager !== 'undefined') {
+                addResult('ITFilterManager Loading', 'pass', 'ITFilterManager class is available');
+                
+                try {
+                    // Try to create an instance (but don't initialize since we don't have the DOM elements)
+                    const testManager = new ITFilterManager();
+                    addResult('ITFilterManager Creation', 'pass', 'ITFilterManager instance can be created');
+                } catch (error) {
+                    addResult('ITFilterManager Creation', 'fail', `Error creating ITFilterManager: ${error.message}`);
+                }
+            } else {
+                addResult('ITFilterManager Loading', 'fail', 'ITFilterManager is not defined');
+            }
+
+            // Test 3: Check what happens when we try to access the actual technology page elements
+            fetch('/programs/technology.html')
+                .then(response => response.text())
+                .then(html => {
+                    const parser = new DOMParser();
+                    const doc = parser.parseFromString(html, 'text/html');
+                    
+                    const certGrid = doc.getElementById('certificationGrid');
+                    const searchInput = doc.getElementById('searchInput');
+                    const resultsTitle = doc.getElementById('resultsTitle');
+                    
+                    if (certGrid && searchInput && resultsTitle) {
+                        addResult('DOM Elements', 'pass', 'Required DOM elements exist in technology.html');
+                    } else {
+                        addResult('DOM Elements', 'fail', `Missing DOM elements: ${!certGrid ? 'certificationGrid ' : ''}${!searchInput ? 'searchInput ' : ''}${!resultsTitle ? 'resultsTitle' : ''}`);
+                    }
+                })
+                .catch(error => {
+                    addResult('DOM Elements Check', 'fail', `Error loading technology.html: ${error.message}`);
+                });
+        });
+    </script>
+</body>
+</html>

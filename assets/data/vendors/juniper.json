@@ -1,0 +1,54 @@
+[
+  {
+    "name": "JNCIA-Junos",
+    "vendor": "Juniper",
+    "category": "networking",
+    "focus": "Enterprise R&S",
+    "level": 1,
+    "retired": false,
+    "exam": "JNCIA-Junos",
+    "logo": "../assets/images/vendor-logos/juniper.svg",
+    "url": "https://www.juniper.net/us/en/training/certification/tracks/junos/"
+  },
+  {
+    "name": "JNCIA – Junos",
+    "vendor": "Juniper",
+    "category": "core-it",
+    "focus": "Enterprise R&S",
+    "level": 2,
+    "retired": false,
+    "premium": false,
+    "exam": "JN0-104"
+  },
+  {
+    "name": "JNCIS-ENT",
+    "vendor": "Juniper",
+    "category": "networking",
+    "focus": "Enterprise R&S",
+    "level": 2,
+    "retired": false,
+    "exam": "JNCIS-ENT",
+    "logo": "../assets/images/vendor-logos/juniper.svg",
+    "url": "https://www.juniper.net/us/en/training/certification/tracks/enterprise-routing-switching/"
+  },
+  {
+    "name": "JNCIS – Enterprise Routing and Switching",
+    "vendor": "Juniper",
+    "category": "core-it",
+    "focus": "Enterprise R&S",
+    "level": 3,
+    "retired": false,
+    "premium": false,
+    "exam": "JN0-351"
+  },
+  {
+    "name": "JNCIP – Enterprise Routing and Switching",
+    "vendor": "Juniper",
+    "category": "core-it",
+    "focus": "Enterprise R&S",
+    "level": 4,
+    "retired": false,
+    "premium": false,
+    "exam": "JN0-451"
+  }
+]

@@ -1,0 +1,4 @@
+[
+  {"name":"Elastic Certified Engineer","vendor":"Elastic","category":"specialized-tech","focus":"Elasticsearch Administration","level":2,"retired":false,"premium":true,"exam":"Elastic Engineer"},
+  {"name":"Elastic Certified Analyst","vendor":"Elastic","category":"specialized-tech","focus":"Kibana Analysis","level":2,"retired":false,"premium":true,"exam":"Elastic Analyst"}
+]

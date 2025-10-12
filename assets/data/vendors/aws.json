@@ -1,0 +1,23 @@
+[
+  { "name": "AWS Certified Cloud Practitioner", "vendor": "AWS", "category": "cloud-platforms", "focus": "Cloud Fundamentals", "level": 1, "retired": false, "premium": true, "exam": "CLF-C02", "tags": ["AWS-Foundational"], "vendor_stage": "Foundational" },
+  { "name": "AWS Certified Developer – Associate", "vendor": "AWS", "category": "software-devops", "focus": "Application Development", "level": 2, "retired": false, "premium": true, "exam": "DVA-C02", "prereqTags": ["AWS-Foundational", "Programming-Fundamentals"], "tags": ["Programming", "AWS"], "vendor_stage": "Associate" },
+  { "name": "AWS Certified Solutions Architect – Associate", "vendor": "AWS", "category": "cloud-platforms", "focus": "Architecture", "level": 2, "retired": false, "premium": true, "exam": "SAA-C03" },
+  { "name": "AWS Certified SysOps Administrator – Associate", "vendor": "AWS", "category": "cloud-platforms", "focus": "Operations", "level": 2, "retired": false, "premium": true, "exam": "SOA-C02" },
+  { "name": "AWS Certified DevOps Engineer – Professional", "vendor": "AWS", "category": "software-devops", "focus": "DevOps & Automation", "level": 4, "retired": false, "premium": true, "exam": "DOP-C02", "prereqTags": ["AWS-Associate"], "tags": ["DevOps", "AWS"], "vendor_stage": "Professional" },
+  { "name": "AWS Certified Solutions Architect – Professional", "vendor": "AWS", "category": "cloud-platforms", "focus": "Architecture", "level": 4, "retired": false, "premium": true, "exam": "SAP-C02" },
+  { "name": "AWS Certified Database – Specialty", "vendor": "AWS", "category": "cloud-platforms", "focus": "Data Platforms", "level": 4, "retired": false, "premium": true, "exam": "DBS-C01", "logo": "../assets/images/vendor-logos/aws.svg", "url": "https://aws.amazon.com/certification/certified-database-specialty/" },
+  { "name": "AWS Certified Machine Learning – Specialty", "vendor": "AWS", "category": "emerging-tech", "focus": "AI & ML", "level": 4, "retired": false, "premium": true, "exam": "MLS-C01", "logo": "../assets/images/vendor-logos/aws.svg", "url": "https://aws.amazon.com/certification/certified-machine-learning-specialty/" },
+  { "name": "AWS Certified Advanced Networking – Specialty", "vendor": "AWS", "category": "core-it", "focus": "Enterprise R&S", "level": 4, "retired": false, "premium": true, "exam": "ANS-C01", "logo": "../assets/images/vendor-logos/aws.svg", "url": "https://aws.amazon.com/certification/certified-advanced-networking-specialty/" }
+  ,
+  { "name": "AWS Certified Security – Specialty", "vendor": "AWS", "category": "cybersecurity", "focus": "Cloud Security", "level": 4, "retired": false, "premium": true, "exam": "SCS-C02", "logo": "../assets/images/vendor-logos/aws.svg", "url": "https://aws.amazon.com/certification/certified-security-specialty/" },
+  { "name": "AWS Certified Data Analytics – Specialty", "vendor": "AWS", "category": "cloud-platforms", "focus": "Data Platforms", "level": 4, "retired": false, "premium": true, "exam": "DAS-C01", "logo": "../assets/images/vendor-logos/aws.svg", "url": "https://aws.amazon.com/certification/certified-data-analytics-specialty/" }
+  ,
+  { "name": "AWS Certified: SAP on AWS – Specialty", "vendor": "AWS", "category": "cloud-platforms", "focus": "SAP on AWS", "level": 4, "retired": false, "premium": true, "exam": "PAS-C01", "logo": "../assets/images/vendor-logos/aws.svg", "url": "https://aws.amazon.com/certification/certified-sap-on-aws-specialty/" }
+  ,
+  { "name": "AWS IoT Core Specialist", "vendor": "AWS", "category": "emerging-tech", "focus": "IoT Platforms & Device Connectivity", "level": 3, "retired": false, "premium": true, "exam": "AWS IoT Core Specialist" },
+  { "name": "AWS Media Services Specialist", "vendor": "AWS", "category": "specialized-tech", "focus": "Media Processing & Delivery", "level": 3, "retired": false, "premium": true, "exam": "AWS Media Specialist" },
+  { "name": "Alexa Skills Developer", "vendor": "AWS", "category": "software-devops", "focus": "Voice Apps & Conversational AI", "level": 2, "retired": false, "premium": true, "exam": "Alexa Skills Developer" }
+  ,
+  { "name": "AWS IoT Greengrass Edge Specialist", "vendor": "AWS", "category": "emerging-tech", "focus": "IoT Edge & Offline Processing", "level": 3, "retired": false, "premium": true, "exam": "AWS IoT Greengrass Specialist" },
+  { "name": "AWS Kinesis Analytics Specialist", "vendor": "AWS", "category": "specialized-tech", "focus": "Streaming Data Analytics", "level": 3, "retired": false, "premium": true, "exam": "AWS Kinesis Analytics Specialist" }
+]

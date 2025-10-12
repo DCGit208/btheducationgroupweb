@@ -1,0 +1,15 @@
+[
+  {
+    "name": "Docker Certified Associate",
+    "vendor": "Docker",
+    "category": "software-devops",
+    "focus": "Containerization",
+    "level": 2,
+    "retired": false,
+    "premium": true,
+    "exam": "DCA",
+    "prereqTags": ["Linux", "Networking-Basics"],
+    "tags": ["Docker", "Containers"],
+    "vendor_stage": "Associate"
+  }
+]

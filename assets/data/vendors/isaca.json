@@ -1,0 +1,56 @@
+[
+  {
+    "name": "ISACA Software Development Fundamentals",
+    "vendor": "ISACA",
+    "category": "software-devops",
+    "focus": "Programming",
+    "level": 1,
+    "retired": false,
+    "premium": true,
+    "exam": "N/A",
+    "vendor_stage": "Foundational",
+    "neutral": false,
+    "tracks": ["programming"],
+    "tags": ["Programming-Fundamentals"]
+  },
+  {
+    "name": "ISACA CISA",
+    "vendor": "ISACA",
+    "category": "cybersecurity",
+    "focus": "GRC & Audit",
+    "level": 3,
+    "retired": false,
+    "premium": true,
+    "exam": "CISA"
+  },
+  {
+    "name": "ISACA CISM",
+    "vendor": "ISACA",
+    "category": "cybersecurity",
+    "focus": "GRC & Audit",
+    "level": 3,
+    "retired": false,
+    "premium": true,
+    "exam": "CISM"
+  },
+  {
+    "name": "ISACA CRISC",
+    "vendor": "ISACA",
+    "category": "cybersecurity",
+    "focus": "GRC & Audit",
+    "level": 3,
+    "retired": false,
+    "premium": true,
+    "exam": "CRISC"
+  },
+  {
+    "name": "ISACA CGEIT",
+    "vendor": "ISACA",
+    "category": "governance-agile",
+    "focus": "Project/Program/Portfolio",
+    "level": 4,
+    "retired": false,
+    "premium": true,
+    "exam": "CGEIT"
+  }
+]

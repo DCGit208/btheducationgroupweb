@@ -1,0 +1,34 @@
+[
+  {
+    "name": "Certified ScrumMaster (CSM)",
+    "vendor": "Scrum Alliance",
+    "category": "governance-agile",
+    "focus": "Agile / Scrum",
+    "level": 1,
+    "retired": false,
+    "exam": "CSM",
+    "logo": "../assets/images/vendor-logos/scrumalliance.svg",
+    "url": "https://www.scrumalliance.org/get-certified/scrum-master-track/certified-scrummaster"
+  },
+  {
+    "name": "Advanced Certified ScrumMaster (A-CSM)",
+    "vendor": "Scrum Alliance",
+    "category": "governance-agile",
+    "focus": "Agile / Scrum",
+    "level": 2,
+    "retired": false,
+    "exam": "A-CSM",
+    "logo": "../assets/images/vendor-logos/scrumalliance.svg",
+    "url": "https://www.scrumalliance.org/get-certified/scrum-master-track/advanced-certified-scrummaster"
+  },
+  {
+    "name": "Certified Scrum Product Owner (CSPO)",
+    "vendor": "Scrum Alliance",
+    "category": "governance-agile",
+    "focus": "Agile Frameworks",
+    "level": 2,
+    "retired": false,
+    "premium": false,
+    "exam": "CSPO"
+  }
+]

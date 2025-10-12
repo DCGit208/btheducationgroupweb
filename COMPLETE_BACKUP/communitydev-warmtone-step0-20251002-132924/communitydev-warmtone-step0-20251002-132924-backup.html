@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Development Trade School Programs | BTH Education Group</title>
+    <meta name="description" content="Comprehensive trade school programmes that empower African communities with practical skills across agriculture, energy, health, construction, digital literacy, entrepreneurship and more. Connect via Starlink and learn anywhere.">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pP5tyXcVmfoMTYsA7OzsxFrTGk+LlM/6E5Vd2hRSBhP9rHLtRz5LQ7uMlMJEaoYvs/ltXecN90W9Kltpzfj8qg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Optional external stylesheet if present in the project -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <style>
+        /* Base resets */
+        body {
+            margin: 0;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #1f2937;
+            background-color: #f7f8fa;
+        }
+        h1, h2, h3 {
+            margin: 0;
+        }
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+        /* World-Class Hero Section */
+        header {
+            background: 
+                linear-gradient(135deg, rgba(0, 133, 255, 0.85), rgba(0, 183, 255, 0.75)),
+                url('assets/images/hero_communitydev.jpg') center/cover no-repeat;
+            color: white;
+            padding: 80px 20px 100px;
+            text-align: center;
+            position: relative;
+            min-height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(0, 133, 255, 0.1), rgba(0, 183, 255, 0.05));
+            z-index: 1;
+        }
+        header > * {
+            position: relative;
+            z-index: 2;
+        }
+        .hero-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .hero-title {
+            font-size: 3.2rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+        .hero-subtitle {
+            font-size: 1.8rem;
+            font-weight: 500;
+            margin-bottom: 24px;
+            color: #E0F2FF;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+        }
+        .hero-description {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            color: #F0F8FF;
+            text-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        }
+        .hero-tagline {
+            font-size: 1.1rem;
+            font-style: italic;
+            color: #B8E6FF;
+            margin-top: 16px;
+            text-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        }
+        /* Card grid */
+        .section {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .section h2 {
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+        }
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background-color: #ffffff;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+        .card .icon {
+            font-size: 40px;
+            margin-bottom: 16px;
+            color: #0085ff;
+        }
+        .card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+            color: #0f172a;
+        }
+        .card p {
+            font-size: 0.9rem;
+            color: #475569;
+            flex-grow: 1;
+        }
+        .card .cta {
+            margin-top: 16px;
+            align-self: flex-start;
+            display: inline-block;
+            background: linear-gradient(135deg, #0085FF, #00B7FF);
+            color: #ffffff;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-weight: 500;
+            transition: background 0.2s ease;
+        }
+        .card .cta:hover {
+            background: linear-gradient(135deg, #0070e0, #00a1d9);
+        }
+        /* Responsive Hero Section */
+        @media (max-width: 1024px) {
+            .hero-title {
+                font-size: 2.8rem;
+            }
+            .hero-subtitle {
+                font-size: 1.6rem;
+            }
+            .hero-description {
+                font-size: 1.1rem;
+            }
+        }
+        @media (max-width: 768px) {
+            header {
+                padding: 60px 20px 80px;
+                min-height: 60vh;
+            }
+            .hero-title {
+                font-size: 2.4rem;
+                margin-bottom: 16px;
+            }
+            .hero-subtitle {
+                font-size: 1.4rem;
+                margin-bottom: 20px;
+            }
+            .hero-description {
+                font-size: 1.05rem;
+                margin-bottom: 16px;
+            }
+            .hero-tagline {
+                font-size: 1rem;
+            }
+        }
+        @media (max-width: 640px) {
+            header {
+                padding: 50px 15px 70px;
+                min-height: 55vh;
+            }
+            .hero-title {
+                font-size: 2rem;
+            }
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+            .hero-description {
+                font-size: 1rem;
+            }
+            .hero-tagline {
+                font-size: 0.95rem;
+            }
+            .section h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="hero-content">
+            <h1 class="hero-title">Community Development Trade School Programmes</h1>
+            <h2 class="hero-subtitle">Transforming Communities Through Skills & Connectivity</h2>
+            <p class="hero-description">Practical, multi‑sector training designed to empower rural & underserved communities across Africa - via high-speed, low-latency broadband internet-space-connectivity!</p>
+            <p class="hero-tagline">Together we can build self‑sustaining hubs of innovation and opportunity.</p>
+        </div>
+    </header>
+    <section class="section">
+        <h2>Explore Our Programmes</h2>
+        <div class="card-grid">
+            <!-- Agriculture & Food Security -->
+            <div class="card">
+                <div class="icon"><i class="fas fa-seedling"></i></div>
+                <h3>Agriculture & Food Security</h3>
+                <p>Learn sustainable farming, livestock care, agro‑processing and irrigation to strengthen food security and boost incomes.</p>
+                <a href="lms.html?sector=agriculture" class="cta">Start Learning</a>
+            </div>
+            <!-- Water & Sanitation -->
+            <div class="card">
+                <div class="icon"><i class="fas fa-tint"></i></div>
+                <h3>Water & Sanitation</h3>
+                <p>Get hands‑on training in well drilling, water system installation, sanitation, latrine construction and hygiene promotion.</p>
+                <a href="lms.html?sector=water" class="cta">Start Learning</a>
+            </div>
+            <!-- Renewable Energy -->
+            <div class="card">
+                <div class="icon"><i class="fas fa-solar-panel"></i></div>
+                <h3>Renewable Energy</h3>
+                <p>Design, install and maintain solar panels, mini‑grids, solar pumping and energy storage systems for off‑grid electrification.</p>
+                <a href="lms.html?sector=energy" class="cta">Start Learning</a>
+            </div>
+            <!-- Construction & Infrastructure -->
+            <div class="card">
+                <div class="icon"><i class="fas fa-hard-hat"></i></div>
+                <h3>Construction & Infrastructure</h3>
+                <p>Master masonry, carpentry, plumbing, electrics and project management to build safe, resilient homes and community buildings.</p>
+                <a href="lms.html?sector=construction" class="cta">Start Learning</a>
+            </div>
+            <!-- Healthcare & Community Health -->
+            <div class="card">
+                <div class="icon"><i class="fas fa-heartbeat"></i></div>
+                <h3>Healthcare & Community Health</h3>
+                <p>Train as a community health worker: learn health promotion, maternal and child care, disease prevention and basic diagnostics.</p>
+                <a href="lms.html?sector=health" class="cta">Start Learning</a>
+            </div>
+            <!-- Digital Skills & Connectivity -->
+            <div class="card">
+                <div class="icon"><i class="fas fa-wifi"></i></div>
+                <h3>Digital Skills & Connectivity</h3>
+                <p>Gain essential computer literacy, mobile repair, digital marketing and remote teaching skills to bridge the digital divide.</p>
+                <a href="lms.html?sector=digital" class="cta">Start Learning</a>
+            </div>
+            <!-- Business, Finance & Entrepreneurship -->
+            <div class="card">
+                <div class="icon"><i class="fas fa-chart-line"></i></div>
+                <h3>Business, Finance & Entrepreneurship</h3>
+                <p>Develop entrepreneurial thinking, financial literacy, cooperative management and micro‑enterprise skills for thriving ventures.</p>
+                <a href="lms.html?sector=business" class="cta">Start Learning</a>
+            </div>
+            <!-- Manufacturing & Industrial Technology -->
+            <div class="card">
+                <div class="icon"><i class="fas fa-industry"></i></div>
+                <h3>Manufacturing & Industrial Technology</h3>
+                <p>Learn welding, fabrication, machining, maintenance and industrial safety to support local industry and repairs.</p>
+                <a href="lms.html?sector=manufacturing" class="cta">Start Learning</a>
+            </div>
+            <!-- Small‑Scale Manufacturing & Crafts -->
+            <div class="card">
+                <div class="icon"><i class="fas fa-scissors"></i></div>
+                <h3>Small‑Scale Manufacturing & Crafts</h3>
+                <p>Master tailoring, carpentry, sewing machine maintenance and handcraft skills to create products for local and regional markets.</p>
+                <a href="lms.html?sector=crafts" class="cta">Start Learning</a>
+            </div>
+            <!-- Environment & Sustainability -->
+            <div class="card">
+                <div class="icon"><i class "fas fa-leaf"></i></div>
+                <h3>Environment & Sustainability</h3>
+                <p>Train in waste management, recycling, agro‑forestry and climate‑resilient farming to safeguard ecosystems and livelihoods.</p>
+                <a href="lms.html?sector=environment" class="cta">Start Learning</a>
+            </div>
+            <!-- Transportation & Mechanics -->
+            <div class="card">
+                <div class="icon"><i class="fas fa-tools"></i></div>
+                <h3>Transportation & Mechanics</h3>
+                <p>Acquire skills to repair bicycles, motorcycles and small engines, maintain generators and manage local transport fleets.</p>
+                <a href="lms.html?sector=transport" class="cta">Start Learning</a>
+            </div>
+            <!-- Public Safety & Emergency Services -->
+            <div class="card">
+                <div class="icon"><i class="fas fa-first-aid"></i></div>
+                <h3>Public Safety & Emergency Services</h3>
+                <p>Learn first aid, firefighting, disaster preparedness and community policing to protect and save lives.</p>
+                <a href="lms.html?sector=safety" class="cta">Start Learning</a>
+            </div>
+            <!-- Communications & Telecommunications -->
+            <div class="card">
+                <div class="icon"><i class="fas fa-broadcast-tower"></i></div>
+                <h3>Communications & Telecommunications</h3>
+                <p>Install and maintain telecom equipment, manage radio networks, set up satellite dishes and troubleshoot connectivity.</p>
+                <a href="lms.html?sector=communications" class="cta">Start Learning</a>
+            </div>
+            <!-- Research & Data Science -->
+            <div class="card">
+                <div class="icon"><i class="fas fa-microscope"></i></div>
+                <h3>Research & Data Science</h3>
+                <p>Develop skills in survey design, data collection, basic statistics and digital tools for community‑based research.</p>
+                <a href="lms.html?sector=research" class="cta">Start Learning</a>
+            </div>
+            <!-- Education & EdTech -->
+            <div class="card">
+                <div class="icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                <h3>Education & EdTech</h3>
+                <p>Become a digital educator: integrate technology into classrooms, manage e‑learning platforms and facilitate adult literacy.</p>
+                <a href="lms.html?sector=education" class="cta">Start Learning</a>
+            </div>
+            <!-- Government & Civic Technology -->
+            <div class="card">
+                <div class="icon"><i class="fas fa-landmark"></i></div>
+                <h3>Government & Civic Technology</h3>
+                <p>Learn public administration, e‑government services, participatory budgeting and community leadership skills.</p>
+                <a href="lms.html?sector=government" class="cta">Start Learning</a>
+            </div>
+            <!-- Biotechnology & Life Sciences -->
+            <div class="card">
+                <div class="icon"><i class="fas fa-dna"></i></div>
+                <h3>Biotechnology & Life Sciences</h3>
+                <p>Explore lab basics, genetics, food microbiology and bio‑innovation to improve agriculture and health outcomes.</p>
+                <a href="lms.html?sector=biotech" class="cta">Start Learning</a>
+            </div>
+            <!-- Automotive Technology -->
+            <div class="card">
+                <div class="icon"><i class="fas fa-car"></i></div>
+                <h3>Automotive Technology</h3>
+                <p>Gain expertise in diagnostics and maintenance of petrol, diesel and electric vehicles, and manage a small auto workshop.</p>
+                <a href="lms.html?sector=automotive" class="cta">Start Learning</a>
+            </div>
+            <!-- Web Development & Software Engineering -->
+            <div class="card">
+                <div class="icon"><i class="fas fa-code"></i></div>
+                <h3>Web Development & Software Engineering</h3>
+                <p>Learn coding fundamentals, build websites and applications, manage databases and practise digital security.</p>
+                <a href="lms.html?sector=web" class="cta">Start Learning</a>
+            </div>
+            <!-- AgriTech & Smart Farming -->
+            <div class="card">
+                <div class="icon"><i class="fas fa-tractor"></i></div>
+                <h3>AgriTech & Smart Farming</h3>
+                <p>Use sensors, drones and analytics to monitor crops, automate irrigation and make data‑driven farm decisions.</p>
+                <a href="lms.html?sector=agritech" class="cta">Start Learning</a>
+            </div>
+            <!-- ISP & Connectivity Services -->
+            <div class="card">
+                <div class="icon"><i class="fas fa-satellite-dish"></i></div>
+                <h3>ISP & Connectivity Services</h3>
+                <p>Become a connectivity technician: install Starlink or other satellite broadband, configure networks and maintain equipment.</p>
+                <a href="lms.html?sector=isp" class="cta">Start Learning</a>
+            </div>
+            <!-- Aerospace & Drone Operation -->
+            <div class="card">
+                <div class="icon"><i class="fas fa-plane"></i></div>
+                <h3>Aerospace & Drone Operation</h3>
+                <p>Train to pilot drones for agriculture, logistics and environmental monitoring, and learn UAV maintenance and mapping.</p>
+                <a href="lms.html?sector=aerospace" class="cta">Start Learning</a>
+            </div>
+        </div>
+    </section>
+    <!-- Investment & Sponsorship Section -->
+    <section class="section" id="community-partners">
+        <h2>Investment & Sponsorship Opportunities</h2>
+        <div class="card-grid">
+            <!-- Investor Program -->
+            <div class="card">
+                <h3>Investor Programme</h3>
+                <p>Help us scale these vocational programmes by funding the tools, equipment and infrastructure needed for each sector. Rather than donating outright, investors purchase or lease assets – tractors, solar panels, water‑purification units and other critical gear – and earn residual revenue from their long‑term use in our training centres.</p>
+                <p><strong>Examples of investment needs:</strong></p>
+                <ul style="font-size:0.9rem; color:#475569; padding-left: 16px;">
+                    <li><strong>Agriculture:</strong> small tractors, irrigation pumps, seeders and threshers</li>
+                    <li><strong>Water & Sanitation:</strong> borehole drilling rigs, water filters and composting latrine kits</li>
+                    <li><strong>Renewable Energy:</strong> solar panels, batteries, inverters and mini‑grid controllers</li>
+                    <li><strong>Construction:</strong> block‑making machines, scaffolding and power tools</li>
+                    <li><strong>Healthcare:</strong> basic medical kits, diagnostic devices and training mannequins</li>
+                    <li><strong>Digital & Connectivity:</strong> laptops, routers and networking gear</li>
+                    <li><strong>Manufacturing & Crafts:</strong> welding sets, sewing machines and woodworking tools</li>
+                    <li><strong>Transportation:</strong> toolkits for bicycle/motorcycle repair and small engines</li>
+                    <li><strong>Public Safety:</strong> first‑aid kits, fire extinguishers and training props</li>
+                    <li><strong>ISP & Connectivity:</strong> Starlink terminals, antennas and power systems</li>
+                </ul>
+                <p>Returns are generated through rental fees paid by training centres and cooperatives; investors retain ownership while communities build capacity. Contact us to discuss a tailored investment package for your preferred sector.</p>
+                <a href="investors.html" class="cta">Become an Investor</a>
+            </div>
+            <!-- Sponsorship Program -->
+            <div class="card">
+                <h3>Sponsorship Programme</h3>
+                <p>Support learners directly by covering course fees and materials. Each sponsorship pack funds training, mentorship and community projects for groups of young people. Your contribution transforms lives and builds resilient communities.</p>
+                <p><strong>Available packs (approximate USD cost):</strong></p>
+                <ul style="font-size:0.9rem; color:#475569; padding-left: 16px;">
+                    <li><strong>Bronze:</strong> Train 10 learners – around <span style="white-space:nowrap;">$1,700</span></li>
+                    <li><strong>Silver:</strong> Train 50 learners – around <span style="white-space:nowrap;">$8,500</span></li>
+                    <li><strong>Gold:</strong> Train 100 learners – around <span style="white-space:nowrap;">$17,000</span></li>
+                </ul>
+                <p>Sponsors may direct their gift to any of our sectors – from agriculture to aerospace. We provide progress reports and recognition for every package. Help us create the next generation of skilled professionals.</p>
+                <a href="sponsorship.html" class="cta">Sponsor a Training</a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

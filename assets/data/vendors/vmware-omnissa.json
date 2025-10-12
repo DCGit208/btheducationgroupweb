@@ -1,0 +1,188 @@
+[
+  {
+    "name": "VMware Certified Technical Associate – Data Center Virtualization (VCTA-DCV)",
+    "vendor": "VMware/Omnissa",
+    "category": "cloud-platforms",
+    "focus": "Virtualization",
+    "level": 2,
+    "retired": false,
+    "premium": true,
+    "exam": "VCTA-DCV",
+    "logo": "../assets/images/vendor-logos/vmware.svg"
+  },
+  {
+    "name": "VMware Certified Professional – Cloud Management and Automation (VCP-CMA)",
+    "vendor": "VMware/Omnissa",
+    "category": "cloud-platforms",
+    "focus": "Cloud Management",
+    "level": 3,
+    "retired": false,
+    "premium": true,
+    "exam": "VCP-CMA",
+    "logo": "../assets/images/vendor-logos/vmware.svg"
+  },
+  {
+    "name": "VMware Certified Professional – Data Center Virtualization (VCP-DCV)",
+    "vendor": "VMware/Omnissa",
+    "category": "cloud-platforms",
+    "focus": "Data Center Virtualization",
+    "level": 3,
+    "retired": false,
+    "premium": true,
+    "exam": "VCP-DCV",
+    "logo": "../assets/images/vendor-logos/vmware.svg"
+  },
+  {
+    "name": "VMware Certified Professional – Desktop and Mobility (VCP-DTM)",
+    "vendor": "VMware/Omnissa",
+    "category": "cloud-platforms",
+    "focus": "Horizon/Workspace ONE",
+    "level": 3,
+    "retired": false,
+    "premium": true,
+    "exam": "VCP-DTM",
+    "logo": "../assets/images/vendor-logos/vmware.svg"
+  },
+  {
+    "name": "VMware Certified Professional – Network Virtualization (VCP-NV)",
+    "vendor": "VMware/Omnissa",
+    "category": "cloud-platforms",
+    "focus": "Virtualization",
+    "level": 3,
+    "retired": false,
+    "premium": true,
+    "exam": "VCP-NV",
+    "logo": "../assets/images/vendor-logos/vmware.svg"
+  },
+  {
+    "name": "VMware VCP-DCV",
+    "vendor": "VMware/Omnissa",
+    "category": "cloud-platforms",
+    "focus": "Virtualization",
+    "level": 3,
+    "retired": false,
+    "premium": true,
+    "exam": "VCP-DCV 2024"
+  },
+  {
+    "name": "VMware Certified Advanced Professional – Cloud Management and Automation Deploy (VCAP-CMA Deploy)",
+    "vendor": "VMware/Omnissa",
+    "category": "cloud-platforms",
+    "focus": "Cloud Management",
+    "level": 4,
+    "retired": false,
+    "premium": true,
+    "exam": "VCAP-CMA Deploy",
+    "logo": "../assets/images/vendor-logos/vmware.svg"
+  },
+  {
+    "name": "VMware Certified Advanced Professional – Cloud Management and Automation Design (VCAP-CMA Design)",
+    "vendor": "VMware/Omnissa",
+    "category": "cloud-platforms",
+    "focus": "Cloud Management",
+    "level": 4,
+    "retired": false,
+    "premium": true,
+    "exam": "VCAP-CMA Design",
+    "logo": "../assets/images/vendor-logos/vmware.svg"
+  },
+  {
+    "name": "VMware Certified Advanced Professional – Data Center Virtualization Deploy (VCAP-DCV Deploy)",
+    "vendor": "VMware/Omnissa",
+    "category": "cloud-platforms",
+    "focus": "Virtualization",
+    "level": 4,
+    "retired": false,
+    "premium": true,
+    "exam": "VCAP-DCV Deploy",
+    "logo": "../assets/images/vendor-logos/vmware.svg"
+  },
+  {
+    "name": "VMware Certified Advanced Professional – Data Center Virtualization Design (VCAP-DCV Design)",
+    "vendor": "VMware/Omnissa",
+    "category": "cloud-platforms",
+    "focus": "Data Center Virtualization",
+    "level": 4,
+    "retired": false,
+    "premium": true,
+    "exam": "VCAP-DCV Design",
+    "logo": "../assets/images/vendor-logos/vmware.svg"
+  },
+  {
+    "name": "VMware Certified Advanced Professional – Desktop and Mobility Deploy (VCAP-DTM Deploy)",
+    "vendor": "VMware/Omnissa",
+    "category": "cloud-platforms",
+    "focus": "Horizon/Workspace ONE",
+    "level": 4,
+    "retired": false,
+    "premium": true,
+    "exam": "VCAP-DTM Deploy",
+    "logo": "../assets/images/vendor-logos/vmware.svg"
+  },
+  {
+    "name": "VMware Certified Advanced Professional – Desktop and Mobility Design (VCAP-DTM Design)",
+    "vendor": "VMware/Omnissa",
+    "category": "cloud-platforms",
+    "focus": "Horizon/Workspace ONE",
+    "level": 4,
+    "retired": false,
+    "premium": true,
+    "exam": "VCAP-DTM Design",
+    "logo": "../assets/images/vendor-logos/vmware.svg"
+  },
+  {
+    "name": "VMware Certified Advanced Professional – Network Virtualization Deploy (VCAP-NV Deploy)",
+    "vendor": "VMware/Omnissa",
+    "category": "cloud-platforms",
+    "focus": "Network Virtualization",
+    "level": 4,
+    "retired": false,
+    "premium": true,
+    "exam": "VCAP-NV Deploy",
+    "logo": "../assets/images/vendor-logos/vmware.svg"
+  },
+  {
+    "name": "VMware Certified Advanced Professional – Network Virtualization Design (VCAP-NV Design)",
+    "vendor": "VMware/Omnissa",
+    "category": "cloud-platforms",
+    "focus": "Network Virtualization",
+    "level": 4,
+    "retired": false,
+    "premium": true,
+    "exam": "VCAP-NV Design",
+    "logo": "../assets/images/vendor-logos/vmware.svg"
+  },
+  {
+    "name": "VMware Certified Design Expert – Cloud Management and Automation (VCDX-CMA)",
+    "vendor": "VMware/Omnissa",
+    "category": "cloud-platforms",
+    "focus": "Cloud Management",
+    "level": 5,
+    "retired": false,
+    "premium": true,
+    "exam": "VCDX-CMA",
+    "logo": "../assets/images/vendor-logos/vmware.svg"
+  },
+  {
+    "name": "VMware Certified Design Expert – Data Center Virtualization (VCDX-DCV)",
+    "vendor": "VMware/Omnissa",
+    "category": "cloud-platforms",
+    "focus": "Data Center Virtualization",
+    "level": 5,
+    "retired": false,
+    "premium": true,
+    "exam": "VCDX-DCV",
+    "logo": "../assets/images/vendor-logos/vmware.svg"
+  },
+  {
+    "name": "VMware Certified Design Expert – Network Virtualization (VCDX-NV)",
+    "vendor": "VMware/Omnissa",
+    "category": "cloud-platforms",
+    "focus": "Network Virtualization",
+    "level": 5,
+    "retired": false,
+    "premium": true,
+    "exam": "VCDX-NV",
+    "logo": "../assets/images/vendor-logos/vmware.svg"
+  }
+]

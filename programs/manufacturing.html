@@ -3,847 +3,1041 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manufacturing Professional Certification Pathways | Level 1-5 System | BTH Education Group</title>
-    <meta name="description" content="Advance your manufacturing career with BTH's comprehensive certification pathways. Level 1-5 progression system across quality control, lean manufacturing, industrial automation, and advanced manufacturing technologies.">
-    
-    <!-- Favicon and Open Graph Meta Tags -->
+    <title>Manufacturing & Industrial Hub - Smart Manufacturing Workforce Development | BTH Education Group</title>
+    <meta name="description" content="Comprehensive Manufacturing & Industrial workforce development hub. Training, certification, and career pathways across Automation, Quality Control, Lean Six Sigma, Welding, and Industry 4.0 technologies.">
     <link rel="icon" type="image/png" href="../assets/images/favicon.png">
-    <meta property="og:title" content="Manufacturing Professional Certification Pathways | BTH Education Group">
-    <meta property="og:description" content="Advance your manufacturing career with comprehensive certification pathways across quality control, lean manufacturing, industrial automation, and advanced manufacturing technologies.">
-    <meta property="og:image" content="../assets/images/og-image.jpg">
-    <meta property="og:url" content="https://www.btheducationgroup.org/programs/manufacturing.html">
-    <meta property="og:type" content="website">
-    
-    <!-- Stylesheets -->
     <link rel="stylesheet" href="../assets/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
     <style>
-        /* Manufacturing-specific styling */
-        :root {
-            /* Manufacturing Brand Colors */
-            --manufacturing-primary: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
-            --manufacturing-secondary: linear-gradient(135deg, #4b5563 0%, #374151 100%);
-            --manufacturing-accent: linear-gradient(135deg, #059669 0%, #047857 100%);
-            --manufacturing-precision: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%);
-            --manufacturing-safety: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
-            
-            /* Level System Colors */
-            --level-1: linear-gradient(135deg, #10b981 0%, #059669 100%);
-            --level-2: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
-            --level-3: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
-            --level-4: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
-            --level-5: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+        /* Manufacturing-Specific Styling */
+        .navbar {
+            background: rgba(255, 255, 255, 0.95);
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
-
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            line-height: 1.6;
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+        
+        .nav-logo img {
+            height: 40px;
+            width: auto;
+        }
+        
+        .nav-menu {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .nav-link {
             color: #374151;
-            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:hover,
+        .nav-link.active {
+            color: #dc2626;
         }
 
-        /* Hero Section */
-        .hero-manufacturing {
-            background: var(--manufacturing-primary);
-            color: white;
-            padding: 120px 0;
+        /* MANUFACTURING HERO SECTION */
+        .manufacturing-hero {
             position: relative;
+            background: linear-gradient(135deg, #1f2937 0%, #374151 25%, #4b5563 50%, #6b7280 75%, #9ca3af 100%);
+            color: white;
+            padding: 120px 0 160px;
+            text-align: center;
             overflow: hidden;
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
         }
-
-        .hero-manufacturing::before {
+        
+        /* Manufacturing-Specific Animated Background */
+        .manufacturing-hero::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            background: radial-gradient(circle at 20% 30%, rgba(245, 158, 11, 0.3) 0%, transparent 50%),
-                        radial-gradient(circle at 80% 70%, rgba(217, 119, 6, 0.3) 0%, transparent 50%);
-            opacity: 0.7;
-            z-index: 1;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(239, 68, 68, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(245, 101, 101, 0.2) 0%, transparent 50%),
+                radial-gradient(circle at 40% 60%, rgba(220, 38, 38, 0.25) 0%, transparent 50%);
+            animation: manufacturingShift 18s ease-in-out infinite;
         }
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            text-align: center;
-        }
-
-        .hero-title {
-            font-size: 3.5rem;
-            font-weight: 700;
-            margin-bottom: 24px;
-            line-height: 1.2;
-        }
-
-        .hero-subtitle {
-            font-size: 1.3rem;
-            margin-bottom: 40px;
-            opacity: 0.9;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        /* Level Display in Hero */
-        .level-display-hero {
-            background: rgba(255, 255, 255, 0.15);
-            -webkit-backdrop-filter: blur(10px);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 20px;
-            padding: 20px 30px;
-            display: inline-block;
-            margin-top: 20px;
-        }
-
-        .level-badge {
-            background: rgba(255, 255, 255, 0.25);
-            color: white;
-            padding: 8px 20px;
-            border-radius: 50px;
-            font-size: 1rem;
-            font-weight: 600;
-            display: inline-block;
-            margin-bottom: 10px;
-        }
-
-        .level-budget {
-            font-size: 1.1rem;
-            font-weight: 600;
-            opacity: 0.9;
-        }
-
-        /* Certification Categories */
-        .certification-categories {
-            padding: 80px 0;
-            background: #f8f9fa;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .section-title {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #2c3e50;
-            margin-bottom: 20px;
-        }
-
-        .section-description {
-            font-size: 1.1rem;
-            color: #666;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .categories-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .category-card {
-            background: white;
-            border-radius: 16px;
-            padding: 30px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            transition: all 0.3s ease;
-            border-top: 4px solid;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .category-card:nth-child(1) { border-top-color: #f59e0b; }
-        .category-card:nth-child(2) { border-top-color: #4b5563; }
-        .category-card:nth-child(3) { border-top-color: #059669; }
-        .category-card:nth-child(4) { border-top-color: #7c3aed; }
-
-        .category-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 40px rgba(0,0,0,0.15);
-        }
-
-        .category-header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-
-        .category-icon {
-            width: 60px;
-            height: 60px;
-            background: var(--manufacturing-primary);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 20px;
-            font-size: 24px;
-            color: white;
-        }
-
-        .category-title {
-            font-size: 1.4rem;
-            font-weight: 600;
-            color: #2c3e50;
-            margin: 0;
-        }
-
-        .category-description {
-            font-size: 1rem;
-            color: #666;
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-
-        .cert-count {
-            background: linear-gradient(135deg, #fef3c7, #fbbf24);
-            color: #92400e;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            display: inline-block;
-        }
-
-        /* Level Integration Section */
-        .level-integration {
-            padding: 80px 0;
-            background: white;
-        }
-
-        .level-display {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 20px;
-            text-align: center;
-        }
-
-        .current-level-info {
-            background: var(--manufacturing-primary);
-            color: white;
-            padding: 40px;
-            border-radius: 20px;
-            margin-bottom: 40px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .current-level-info::before {
+        
+        .manufacturing-hero::after {
             content: '';
             position: absolute;
             top: 0;
+            left: 0;
             right: 0;
-            width: 200px;
-            height: 200px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            transform: translate(50%, -50%);
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M20 20c11.046 0 20-8.954 20-20H0c0 11.046 8.954 20 20 20z'/%3E%3C/g%3E%3C/svg%3E");
+            animation: gearRotate 30s linear infinite;
         }
-
-        .level-info-content {
+        
+        @keyframes manufacturingShift {
+            0%, 100% { 
+                background: radial-gradient(circle at 20% 30%, rgba(239, 68, 68, 0.3) 0%, transparent 50%),
+                           radial-gradient(circle at 80% 70%, rgba(245, 101, 101, 0.2) 0%, transparent 50%),
+                           radial-gradient(circle at 40% 60%, rgba(220, 38, 38, 0.25) 0%, transparent 50%);
+            }
+            33% { 
+                background: radial-gradient(circle at 70% 20%, rgba(245, 101, 101, 0.25) 0%, transparent 50%),
+                           radial-gradient(circle at 30% 80%, rgba(220, 38, 38, 0.3) 0%, transparent 50%),
+                           radial-gradient(circle at 60% 40%, rgba(239, 68, 68, 0.2) 0%, transparent 50%);
+            }
+            66% { 
+                background: radial-gradient(circle at 40% 80%, rgba(220, 38, 38, 0.2) 0%, transparent 50%),
+                           radial-gradient(circle at 80% 30%, rgba(239, 68, 68, 0.25) 0%, transparent 50%),
+                           radial-gradient(circle at 20% 50%, rgba(245, 101, 101, 0.3) 0%, transparent 50%);
+            }
+        }
+        
+        @keyframes gearRotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .hero-content {
             position: relative;
-            z-index: 2;
+            z-index: 10;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
         }
-
-        .level-title {
-            font-size: 2.2rem;
-            font-weight: 700;
-            margin-bottom: 16px;
-        }
-
-        .level-description {
-            font-size: 1.1rem;
-            opacity: 0.9;
-            margin-bottom: 30px;
-        }
-
-        .level-stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
-            margin-top: 30px;
-        }
-
-        .stat-item {
-            text-align: center;
-        }
-
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #fff;
-            display: block;
-        }
-
-        .stat-label {
+        
+        .sector-badge {
+            display: inline-flex;
+            align-items: center;
+            background: rgba(239, 68, 68, 0.2);
+            -webkit-backdrop-filter: blur(15px);
+            backdrop-filter: blur(15px);
+            border: 2px solid rgba(239, 68, 68, 0.3);
+            border-radius: 50px;
+            padding: 1rem 2rem;
+            margin-bottom: 2rem;
             font-size: 1rem;
-            opacity: 0.8;
-            margin-top: 8px;
+            font-weight: 700;
+            color: #fef2f2;
+            animation: fadeInUp 1s ease-out 0.2s both;
         }
-
-        /* CTA Buttons */
-        .cta-buttons {
+        
+        .sector-badge .badge-icon {
+            font-size: 1.5rem;
+            margin-right: 0.75rem;
+        }
+        
+        .manufacturing-hero h1 {
+            font-size: clamp(3rem, 6vw, 5rem);
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+            background: linear-gradient(135deg, #ffffff 0%, #f3f4f6 50%, #e5e7eb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: fadeInUp 1s ease-out 0.4s both;
+        }
+        
+        .manufacturing-hero .subtitle {
+            font-size: 1.4rem;
+            opacity: 0.95;
+            margin-bottom: 3rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.7;
+            color: #e5e7eb;
+            animation: fadeInUp 1s ease-out 0.6s both;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* CTA Section */
+        .hero-cta-section {
+            margin: 3rem 0;
+            animation: fadeInUp 1s ease-out 0.8s both;
+        }
+        
+        .hero-cta-buttons {
             display: flex;
-            gap: 20px;
+            gap: 1.5rem;
             justify-content: center;
             flex-wrap: wrap;
+            margin-bottom: 2rem;
         }
-
-        .btn-primary-large {
-            background: var(--manufacturing-primary);
+        
+        .hero-primary-btn {
+            background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
             color: white;
-            padding: 18px 40px;
-            border: none;
+            padding: 1.2rem 3rem;
             border-radius: 50px;
-            font-size: 1.1rem;
-            font-weight: 600;
             text-decoration: none;
-            display: inline-block;
+            font-weight: 700;
+            font-size: 1.1rem;
             transition: all 0.3s ease;
-            cursor: pointer;
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
-
-        .btn-primary-large:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(245, 158, 11, 0.3);
-            color: white;
+        
+        .hero-primary-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
         }
-
-        .btn-secondary {
+        
+        .hero-primary-btn:hover::before {
+            left: 100%;
+        }
+        
+        .hero-primary-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(220, 38, 38, 0.4);
+        }
+        
+        .hero-secondary-btn {
             background: transparent;
-            color: #f59e0b;
-            padding: 16px 30px;
-            border: 2px solid #f59e0b;
+            color: white;
+            padding: 1.2rem 3rem;
             border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            border: 2px solid rgba(255, 255, 255, 0.4);
+            transition: all 0.3s ease;
+            -webkit-backdrop-filter: blur(15px);
+            backdrop-filter: blur(15px);
+        }
+        
+        .hero-secondary-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.6);
+            transform: translateY(-3px);
+        }
+
+        /* Manufacturing Statistics */
+        .manufacturing-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2.5rem;
+            margin-top: 4rem;
+            max-width: 1100px;
+            margin-left: auto;
+            margin-right: auto;
+            animation: fadeInUp 1s ease-out 1s both;
+        }
+        
+        .stat-card {
+            background: rgba(255, 255, 255, 0.1);
+            -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 2.5rem 2rem;
+            text-align: center;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #dc2626, #ef4444);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+        
+        .stat-card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-8px);
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(239, 68, 68, 0.4);
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 0.75rem;
+            background: linear-gradient(135deg, #ffffff 0%, #f3f4f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .stat-label {
             font-size: 1rem;
             font-weight: 600;
-            text-decoration: none;
-            display: inline-block;
+            text-transform: uppercase;
+            letter-spacing: 0.75px;
+            color: #e5e7eb;
+        }
+
+        /* Manufacturing Ecosystem Section */
+        .manufacturing-ecosystem {
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            padding: 8rem 0;
+        }
+
+        .ecosystem-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .ecosystem-header {
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+
+        .ecosystem-header h2 {
+            font-size: 3rem;
+            color: #1f2937;
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+            position: relative;
+        }
+
+        .ecosystem-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, #dc2626, #ef4444);
+            border-radius: 2px;
+        }
+
+        .ecosystem-header p {
+            font-size: 1.25rem;
+            color: #6b7280;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        /* Workforce Development Pipeline */
+        .workforce-pipeline {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+            margin: 5rem 0;
+        }
+
+        .pipeline-stage {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem 2rem;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s ease;
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pipeline-stage::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, #dc2626, #ef4444);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .pipeline-stage:hover::before {
+            transform: scaleX(1);
+        }
+
+        .pipeline-stage:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(220, 38, 38, 0.15);
+            border-color: #fecaca;
+        }
+
+        .pipeline-icon {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+            font-size: 2.5rem;
+            color: white;
+            box-shadow: 0 10px 30px rgba(220, 38, 38, 0.3);
+        }
+
+        .pipeline-stage h3 {
+            font-size: 1.75rem;
+            color: #1f2937;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .pipeline-stage p {
+            color: #6b7280;
+            line-height: 1.7;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+
+        .pipeline-features {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .pipeline-features li {
+            padding: 0.5rem 0;
+            color: #374151;
+            font-weight: 500;
+        }
+
+        .pipeline-features li::before {
+            content: '✓';
+            color: #dc2626;
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+
+        /* Industry Domains Grid */
+        .industry-domains {
+            margin: 6rem 0;
+        }
+
+        .domains-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .domains-header h3 {
+            font-size: 2.5rem;
+            color: #1f2937;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .domains-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .domain-card {
+            background: white;
+            border-radius: 16px;
+            padding: 2.5rem 2rem;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
             transition: all 0.3s ease;
+            border: 1px solid #e5e7eb;
+            position: relative;
         }
 
-        .btn-secondary:hover {
-            background: #f59e0b;
-            color: white;
+        .domain-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(220, 38, 38, 0.1);
+            border-color: #fecaca;
         }
 
-        /* Final CTA Section */
-        .cta-section {
-            background: var(--manufacturing-primary);
+        .domain-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .domain-icon {
+            font-size: 2rem;
+            margin-right: 1rem;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #fef2f2 0%, #fecaca 100%);
+            border-radius: 12px;
+            color: #dc2626;
+        }
+
+        .domain-title {
+            font-size: 1.4rem;
+            color: #1f2937;
+            margin: 0;
+            font-weight: 600;
+        }
+
+        .domain-certifications {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .cert-badge {
+            background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%);
             color: white;
-            padding: 80px 0;
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .domain-vendors {
+            color: #6b7280;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+            font-style: italic;
+        }
+
+        /* LMS Integration Section */
+        .lms-integration {
+            background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+            color: white;
+            padding: 6rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .lms-integration::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Cpath d='M30 30c16.569 0 30-13.431 30-30H0c0 16.569 13.431 30 30 30z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .lms-content {
+            position: relative;
+            z-index: 10;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
             text-align: center;
         }
 
-        .cta-content {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .cta-title {
+        .lms-content h3 {
             font-size: 2.5rem;
+            margin-bottom: 2rem;
             font-weight: 700;
-            margin-bottom: 20px;
         }
 
-        .cta-description {
+        .lms-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .lms-feature {
+            background: rgba(255, 255, 255, 0.1);
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            padding: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .lms-feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .lms-feature h4 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: #f3f4f6;
+        }
+
+        .lms-feature p {
+            color: #d1d5db;
+            line-height: 1.6;
+        }
+
+        /* Interactive Elements */
+        .interactive-demo {
+            background: #ffffff;
+            padding: 4rem 0;
+        }
+
+        .demo-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            text-align: center;
+        }
+
+        .demo-cta {
+            background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%);
+            color: white;
+            padding: 1.5rem 3rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
             font-size: 1.2rem;
-            margin-bottom: 40px;
-            opacity: 0.9;
+            display: inline-block;
+            transition: all 0.3s ease;
+            margin-top: 2rem;
+        }
+
+        .demo-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(220, 38, 38, 0.3);
         }
 
         /* Responsive Design */
+        @media (max-width: 1200px) {
+            .workforce-pipeline {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+        
         @media (max-width: 768px) {
-            .hero-title {
+            .manufacturing-hero h1 {
                 font-size: 2.5rem;
             }
             
-            .hero-subtitle {
-                font-size: 1.1rem;
-            }
-            
-            .categories-grid {
-                grid-template-columns: 1fr;
-                padding: 0 15px;
-            }
-            
-            .level-stats {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-            
-            .cta-title {
-                font-size: 2rem;
-            }
-            
-            .cta-buttons {
+            .hero-cta-buttons {
                 flex-direction: column;
-                align-items: center;
+                gap: 1rem;
+            }
+            
+            .manufacturing-stats {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+            }
+            
+            .domains-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .ecosystem-header h2 {
+                font-size: 2rem;
             }
         }
     </style>
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="nav-container">
-                <div class="nav-brand">
-                    <a href="../index.html">
-                        <img src="../assets/images/bthlogo.png" alt="BTH Education Group" class="nav-logo">
-                    </a>
-                </div>
-                <div class="nav-menu">
-                    <a href="../index.html" class="nav-link">Home</a>
-                    <a href="../about.html" class="nav-link">About</a>
-                    <a href="../programs.html" class="nav-link active">Programs</a>
-                    <a href="../industry-solutions.html" class="nav-link">Industry Solutions</a>
-                    <a href="../contact.html" class="nav-link">Contact</a>
-                    <a href="../apply.html" class="nav-link btn-nav">Apply Now</a>
-                </div>
-                <div class="nav-hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="../assets/images/bthlogo.png" alt="BTH Education Group">
             </div>
-        </nav>
-    </header>
+            <ul class="nav-menu">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="../program.html" class="nav-link">Programs</a></li>
+                <li><a href="../about.html" class="nav-link">About</a></li>
+                <li><a href="../contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
-    <main>
-        <!-- Hero Section -->
-        <section class="hero-manufacturing">
-            <div class="hero-content">
-                <h1 class="hero-title">Manufacturing Professional Certification Pathways</h1>
-                <p class="hero-subtitle">Advance your manufacturing career with comprehensive certification pathways across quality control, lean manufacturing, industrial automation, and advanced manufacturing technologies. Build the products that power our world.</p>
-                
-                <!-- Level Integration Display -->
-                <div id="levelDisplay" class="level-display-hero">
-                    <div class="level-badge" id="currentLevelBadge">Level 1 Selected</div>
-                    <div class="level-budget" id="currentBudget">Budget: $13,902.66</div>
+    <!-- MANUFACTURING HERO SECTION -->
+    <section class="manufacturing-hero">
+        <div class="hero-content">
+            <div class="sector-badge">
+                <span class="badge-icon">🏭</span>
+                Manufacturing & Industrial Workforce Development Hub
+            </div>
+            <h1>Smart Manufacturing Ecosystem</h1>
+            <p class="subtitle">
+                Complete workforce development pipeline for Industry 4.0 - from Automation & Quality Control to Lean Six Sigma & Advanced Welding. 
+                Your comprehensive training-certification-work network hub powered by our dedicated Manufacturing LMS and Pearson VUE partnership.
+            </p>
+            
+            <!-- Call to Action Buttons -->
+            <div class="hero-cta-section">
+                <div class="hero-cta-buttons">
+                    <a href="#workforce-pipeline" class="hero-primary-btn">Start Your Journey</a>
+                    <a href="#lms-access" class="hero-secondary-btn">Access Manufacturing LMS</a>
                 </div>
             </div>
-        </section>
 
-        <!-- Certification Categories -->
-        <section class="certification-categories">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Manufacturing Certification Categories</h2>
-                    <p class="section-description">Choose from four specialized manufacturing tracks, each designed to advance your career in critical areas of modern manufacturing and industrial production.</p>
+            <!-- Manufacturing Statistics -->
+            <div class="manufacturing-stats">
+                <div class="stat-card">
+                    <div class="stat-number">55+</div>
+                    <div class="stat-label">Certifications</div>
                 </div>
-                
-                <div class="categories-grid">
-                    <!-- Quality Control & Assurance -->
-                    <div class="category-card" data-category="quality-control">
-                        <div class="category-header">
-                            <div class="category-icon">🎯</div>
-                            <h3 class="category-title">Quality Control & Assurance</h3>
-                        </div>
-                        <p class="category-description">Master quality systems with certifications in quality management, statistical process control, inspection techniques, and continuous improvement methodologies from leading quality organizations.</p>
-                        <span class="cert-count">15+ Quality Certifications</span>
-                    </div>
-                    
-                    <!-- Lean Manufacturing & Process Improvement -->
-                    <div class="category-card" data-category="lean-manufacturing">
-                        <div class="category-header">
-                            <div class="category-icon">⚙️</div>
-                            <h3 class="category-title">Lean Manufacturing & Process Improvement</h3>
-                        </div>
-                        <p class="category-description">Optimize production systems with certifications in lean principles, Six Sigma, kaizen, value stream mapping, and operational excellence.</p>
-                        <span class="cert-count">12+ Lean Certifications</span>
-                    </div>
-                    
-                    <!-- Industrial Automation & Robotics -->
-                    <div class="category-card" data-category="automation-robotics">
-                        <div class="category-header">
-                            <div class="category-icon">🤖</div>
-                            <h3 class="category-title">Industrial Automation & Robotics</h3>
-                        </div>
-                        <p class="category-description">Lead the future of manufacturing with certifications in PLC programming, robotics systems, SCADA, industrial IoT, and smart manufacturing technologies.</p>
-                        <span class="cert-count">18+ Automation Certifications</span>
-                    </div>
-                    
-                    <!-- Advanced Manufacturing Technologies -->
-                    <div class="category-card" data-category="advanced-manufacturing">
-                        <div class="category-header">
-                            <div class="category-icon">🔬</div>
-                            <h3 class="category-title">Advanced Manufacturing Technologies</h3>
-                        </div>
-                        <p class="category-description">Excel in cutting-edge manufacturing with certifications in additive manufacturing, CNC machining, materials science, and Industry 4.0 technologies.</p>
-                        <span class="cert-count">10+ Advanced Tech Certifications</span>
-                    </div>
+                <div class="stat-card">
+                    <div class="stat-number">12</div>
+                    <div class="stat-label">Industry Domains</div>
                 </div>
-            </div>
-        </section>
-
-        <!-- Level Integration Section -->
-        <section class="level-integration">
-            <div class="level-display">
-                <div class="current-level-info" id="levelInfo">
-                    <div class="level-info-content">
-                        <div class="level-badge" id="levelBadge">Level 1</div>
-                        <h2 class="level-title" id="levelTitle">Foundation Manufacturing Professional</h2>
-                        <p class="level-description" id="levelDesc">Begin your manufacturing career journey with essential certifications and fundamental skills in production systems and quality control.</p>
-                        
-                        <div class="level-stats">
-                            <div class="stat-item">
-                                <span class="stat-number" id="maxCerts">3</span>
-                                <div class="stat-label">Maximum Certifications</div>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-number" id="totalBudget">$13,902.66</span>
-                                <div class="stat-label">Total Investment</div>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-number">55+</span>
-                                <div class="stat-label">Available Certifications</div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="stat-card">
+                    <div class="stat-number">85+</div>
+                    <div class="stat-label">Vendor Partners</div>
                 </div>
-                
-                <div class="cta-buttons">
-                    <button class="btn-primary-large" onclick="selectCertifications()">Select Your Certifications</button>
-                    <a href="../hexad-mastery.html" class="btn-secondary">Return to HEXAD Assessment</a>
+                <div class="stat-card">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">LMS Access</div>
                 </div>
-            </div>
-        </section>
-
-        <!-- Call to Action -->
-        <section class="cta-section">
-            <div class="cta-content">
-                <h2 class="cta-title">Ready to Transform Manufacturing?</h2>
-                <p class="cta-description">Join thousands of manufacturing professionals who have advanced their careers and improved production systems through BTH's comprehensive certification pathways.</p>
-                <a href="../apply.html" class="btn-primary-large">Start Your Manufacturing Journey</a>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <div class="footer-brand">
-                    <img src="../assets/images/bthlogo.png" alt="BTH Education Group" class="footer-logo">
-                    <p>Transforming careers through world-class education and certification programs.</p>
-                </div>
-            </div>
-            <div class="footer-section">
-                <h3>Programs</h3>
-                <ul>
-                    <li><a href="../programs.html">All Programs</a></li>
-                    <li><a href="technology.html">Technology</a></li>
-                    <li><a href="healthcare.html">Healthcare</a></li>
-                    <li><a href="cybersecurity.html">Cybersecurity</a></li>
-                    <li><a href="manufacturing.html">Manufacturing</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Company</h3>
-                <ul>
-                    <li><a href="../about.html">About BTH</a></li>
-                    <li><a href="../contact.html">Contact Us</a></li>
-                    <li><a href="../industry-solutions.html">Industry Solutions</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Resources</h3>
-                <ul>
-                    <li><a href="../program-catalog.html">Program Catalog</a></li>
-                    <li><a href="../roi-calculator.html">ROI Calculator</a></li>
-                    <li><a href="../career-assessment.html">Career Assessment</a></li>
-                </ul>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 BTH Education Group. All rights reserved.</p>
-        </div>
-    </footer>
+    </section>
 
-    <!-- Manufacturing Cross-Page Synchronization JavaScript -->
+    <!-- Manufacturing Ecosystem Section -->
+    <section class="manufacturing-ecosystem" id="workforce-pipeline">
+        <div class="ecosystem-container">
+            <div class="ecosystem-header">
+                <h2>Manufacturing Workforce Development Pipeline</h2>
+                <p>Complete ecosystem for training, certification, and career advancement across all manufacturing domains</p>
+            </div>
+
+            <!-- Workforce Development Pipeline -->
+            <div class="workforce-pipeline">
+                <div class="pipeline-stage">
+                    <div class="pipeline-icon">📚</div>
+                    <h3>TRAINING</h3>
+                    <p>Comprehensive training programs delivered through our dedicated Manufacturing LMS with hands-on simulations and real-world applications.</p>
+                    <ul class="pipeline-features">
+                        <li>Interactive Learning Modules</li>
+                        <li>Virtual Reality Training</li>
+                        <li>Expert-Led Workshops</li>
+                        <li>Hands-on Lab Access</li>
+                    </ul>
+                </div>
+
+                <div class="pipeline-stage">
+                    <div class="pipeline-icon">🎓</div>
+                    <h3>CERTIFICATION</h3>
+                    <p>Industry-recognized certifications through our Pearson VUE partnership, validating your expertise across all manufacturing domains.</p>
+                    <ul class="pipeline-features">
+                        <li>Pearson VUE Testing Centers</li>
+                        <li>International Recognition</li>
+                        <li>Vendor-Specific Certifications</li>
+                        <li>Continuous Learning Paths</li>
+                    </ul>
+                </div>
+
+                <div class="pipeline-stage">
+                    <div class="pipeline-icon">💼</div>
+                    <h3>WORK NETWORK</h3>
+                    <p>Connect with manufacturing employers, contractors, and professionals through our comprehensive work network and career placement services.</p>
+                    <ul class="pipeline-features">
+                        <li>Job Placement Services</li>
+                        <li>Industry Networking</li>
+                        <li>Career Advancement</li>
+                        <li>Continuous Support</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Industry Domains -->
+            <div class="industry-domains">
+                <div class="domains-header">
+                    <h3>Manufacturing Industry Domains</h3>
+                    <p>Comprehensive coverage across all manufacturing sectors and specializations</p>
+                </div>
+
+                <div class="domains-grid">
+                    <!-- Automation & Robotics -->
+                    <div class="domain-card">
+                        <div class="domain-header">
+                            <div class="domain-icon">🤖</div>
+                            <h4 class="domain-title">Automation & Robotics</h4>
+                        </div>
+                        <div class="domain-certifications">
+                            <span class="cert-badge">PLC Programming</span>
+                            <span class="cert-badge">SCADA Systems</span>
+                            <span class="cert-badge">HMI Design</span>
+                            <span class="cert-badge">Robotics</span>
+                        </div>
+                        <p class="domain-vendors">Vendors: Siemens, Allen-Bradley, Schneider, ABB, Fanuc, KUKA</p>
+                    </div>
+
+                    <!-- Quality Control & Management -->
+                    <div class="domain-card">
+                        <div class="domain-header">
+                            <div class="domain-icon">🔍</div>
+                            <h4 class="domain-title">Quality Control & Management</h4>
+                        </div>
+                        <div class="domain-certifications">
+                            <span class="cert-badge">ISO 9001</span>
+                            <span class="cert-badge">Six Sigma</span>
+                            <span class="cert-badge">SPC</span>
+                            <span class="cert-badge">Quality Auditing</span>
+                        </div>
+                        <p class="domain-vendors">Standards: ISO, ASQ, IAQG, AIAG, APQP</p>
+                    </div>
+
+                    <!-- Lean Manufacturing -->
+                    <div class="domain-card">
+                        <div class="domain-header">
+                            <div class="domain-icon">⚡</div>
+                            <h4 class="domain-title">Lean Manufacturing</h4>
+                        </div>
+                        <div class="domain-certifications">
+                            <span class="cert-badge">Lean Six Sigma</span>
+                            <span class="cert-badge">Kaizen</span>
+                            <span class="cert-badge">5S</span>
+                            <span class="cert-badge">Value Stream</span>
+                        </div>
+                        <p class="domain-vendors">Methodologies: Toyota Production System, DMAIC, Kanban</p>
+                    </div>
+
+                    <!-- Advanced Welding -->
+                    <div class="domain-card">
+                        <div class="domain-header">
+                            <div class="domain-icon">🔥</div>
+                            <h4 class="domain-title">Advanced Welding</h4>
+                        </div>
+                        <div class="domain-certifications">
+                            <span class="cert-badge">AWS D1.1</span>
+                            <span class="cert-badge">CWI</span>
+                            <span class="cert-badge">Pipe Welding</span>
+                            <span class="cert-badge">TIG/MIG</span>
+                        </div>
+                        <p class="domain-vendors">Standards: AWS, ASME, API, Military Specifications</p>
+                    </div>
+
+                    <!-- Industrial Maintenance -->
+                    <div class="domain-card">
+                        <div class="domain-header">
+                            <div class="domain-icon">🔧</div>
+                            <h4 class="domain-title">Industrial Maintenance</h4>
+                        </div>
+                        <div class="domain-certifications">
+                            <span class="cert-badge">CMRP</span>
+                            <span class="cert-badge">Predictive Maintenance</span>
+                            <span class="cert-badge">HVAC Systems</span>
+                            <span class="cert-badge">Electrical Systems</span>
+                        </div>
+                        <p class="domain-vendors">Platforms: SMRP, Fluke, SKF, Emerson, Honeywell</p>
+                    </div>
+
+                    <!-- Supply Chain & Logistics -->
+                    <div class="domain-card">
+                        <div class="domain-header">
+                            <div class="domain-icon">📦</div>
+                            <h4 class="domain-title">Supply Chain & Logistics</h4>
+                        </div>
+                        <div class="domain-certifications">
+                            <span class="cert-badge">APICS SCOR</span>
+                            <span class="cert-badge">Inventory Mgmt</span>
+                            <span class="cert-badge">Warehouse Ops</span>
+                            <span class="cert-badge">ERP Systems</span>
+                        </div>
+                        <p class="domain-vendors">Systems: SAP, Oracle, Microsoft, Infor, JDA</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LMS Integration Section -->
+    <section class="lms-integration" id="lms-access">
+        <div class="lms-content">
+            <h3>Manufacturing LMS - Your Learning Command Center</h3>
+            <p style="font-size: 1.2rem; margin-bottom: 3rem; opacity: 0.9;">
+                Dedicated Learning Management System designed specifically for manufacturing professionals with industry-specific content and Pearson VUE integration.
+            </p>
+
+            <div class="lms-features">
+                <div class="lms-feature">
+                    <div class="lms-feature-icon">🎯</div>
+                    <h4>Personalized Learning Paths</h4>
+                    <p>Customized curriculum based on your career goals, current skills, and industry requirements.</p>
+                </div>
+
+                <div class="lms-feature">
+                    <div class="lms-feature-icon">🔬</div>
+                    <h4>Virtual Labs & Simulations</h4>
+                    <p>Hands-on practice with virtual manufacturing equipment and real-world scenario simulations.</p>
+                </div>
+
+                <div class="lms-feature">
+                    <div class="lms-feature-icon">📊</div>
+                    <h4>Progress Tracking</h4>
+                    <p>Real-time progress monitoring with detailed analytics and performance insights.</p>
+                </div>
+
+                <div class="lms-feature">
+                    <div class="lms-feature-icon">🏆</div>
+                    <h4>Pearson VUE Integration</h4>
+                    <p>Direct access to schedule and take certification exams through our Pearson VUE partnership.</p>
+                </div>
+            </div>
+
+            <div class="interactive-demo">
+                <div class="demo-container">
+                    <h4 style="font-size: 2rem; color: #1f2937; margin-bottom: 1rem;">Ready to Transform Your Manufacturing Career?</h4>
+                    <p style="color: #6b7280; font-size: 1.1rem; margin-bottom: 2rem;">
+                        Join thousands of manufacturing professionals who have advanced their careers through our comprehensive workforce development ecosystem.
+                    </p>
+                    <a href="../apply.html?sector=manufacturing" class="demo-cta">Access Manufacturing Hub Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript -->
+    <script src="../assets/js/bth-session-manager.js"></script>
+    <script src="../assets/js/bth-certification-database.js"></script>
+    
     <script>
-        // Manufacturing Industry Data
-        const manufacturingIndustryData = {
-            name: 'Manufacturing',
-            categories: [
-                {
-                    id: 'quality-control',
-                    name: 'Quality Control & Assurance',
-                    description: 'Master quality systems and statistical process control',
-                    certCount: 15,
-                    certifications: [
-                        'ASQ Certified Quality Inspector (CQI)',
-                        'ASQ Certified Quality Technician (CQT)',
-                        'ASQ Certified Quality Auditor (CQA)',
-                        'ASQ Certified Quality Engineer (CQE)',
-                        'ASQ Certified Manager of Quality/Organizational Excellence (CMQ/OE)',
-                        'ISO 9001:2015 Quality Management Systems',
-                        'Statistical Process Control (SPC)',
-                        'Measurement Systems Analysis (MSA)',
-                        'Failure Mode and Effects Analysis (FMEA)',
-                        'Design of Experiments (DOE)',
-                        'Control Charts and Process Capability',
-                        'Quality Function Deployment (QFD)',
-                        'Total Quality Management (TQM)',
-                        'Supplier Quality Management',
-                        'Quality Cost Analysis'
-                    ]
-                },
-                {
-                    id: 'lean-manufacturing',
-                    name: 'Lean Manufacturing & Process Improvement',
-                    description: 'Optimize production with lean principles and Six Sigma',
-                    certCount: 12,
-                    certifications: [
-                        'Lean Six Sigma Yellow Belt',
-                        'Lean Six Sigma Green Belt',
-                        'Lean Six Sigma Black Belt',
-                        'Lean Six Sigma Master Black Belt',
-                        'Certified Lean Practitioner',
-                        'Kaizen Event Leader',
-                        'Value Stream Mapping Specialist',
-                        '5S Workplace Organization',
-                        'Total Productive Maintenance (TPM)',
-                        'Single Minute Exchange of Dies (SMED)',
-                        'Poka-Yoke (Error Proofing)',
-                        'Continuous Improvement Facilitator'
-                    ]
-                },
-                {
-                    id: 'automation-robotics',
-                    name: 'Industrial Automation & Robotics',
-                    description: 'Lead smart manufacturing with automation systems',
-                    certCount: 18,
-                    certifications: [
-                        'Certified Automation Professional (CAP)',
-                        'PLC Programming (Allen-Bradley)',
-                        'PLC Programming (Siemens)',
-                        'PLC Programming (Schneider Electric)',
-                        'HMI/SCADA Systems Design',
-                        'Industrial Robotics Programming',
-                        'Fanuc Robot Programming',
-                        'ABB Robot Programming',
-                        'KUKA Robot Programming',
-                        'Industrial IoT Implementation',
-                        'Motion Control Systems',
-                        'Variable Frequency Drives (VFD)',
-                        'Industrial Networking (Ethernet/IP)',
-                        'Safety Instrumented Systems (SIS)',
-                        'Process Control Systems',
-                        'Manufacturing Execution Systems (MES)',
-                        'Computer Integrated Manufacturing (CIM)',
-                        'Industry 4.0 Technologies'
-                    ]
-                },
-                {
-                    id: 'advanced-manufacturing',
-                    name: 'Advanced Manufacturing Technologies',
-                    description: 'Excel in cutting-edge manufacturing processes',
-                    certCount: 10,
-                    certifications: [
-                        'Additive Manufacturing (3D Printing)',
-                        'CNC Programming and Operations',
-                        'Computer-Aided Manufacturing (CAM)',
-                        'Materials Science for Manufacturing',
-                        'Composite Materials Manufacturing',
-                        'Advanced Welding Technologies',
-                        'Precision Machining',
-                        'Metrology and Inspection',
-                        'Supply Chain Management',
-                        'Manufacturing Project Management'
-                    ]
-                }
-            ]
-        };
+        // Manufacturing Hub Initialization
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeManufacturingHub();
+            initializeAnimations();
+        });
 
-        // Level Configuration (synchronized with HEXAD)
-        const levelConfig = {
-            1: {
-                name: 'Foundation Manufacturing Professional',
-                description: 'Begin your manufacturing career journey with essential certifications and fundamental skills in production systems and quality control.',
-                maxCertifications: 3,
-                budget: 13902.66,
-                badge: 'Level 1'
-            },
-            2: {
-                name: 'Intermediate Manufacturing Specialist',
-                description: 'Expand your manufacturing expertise with advanced certifications in process improvement and production optimization.',
-                maxCertifications: 5,
-                budget: 20704.02,
-                badge: 'Level 2'
-            },
-            3: {
-                name: 'Advanced Manufacturing Professional',
-                description: 'Master complex manufacturing systems with senior-level certifications in automation and lean principles.',
-                maxCertifications: 7,
-                budget: 27605.32,
-                badge: 'Level 3'
-            },
-            4: {
-                name: 'Manufacturing Expert & Leader',
-                description: 'Lead manufacturing initiatives with expert-level certifications in advanced technologies and process excellence.',
-                maxCertifications: 9,
-                budget: 34506.68,
-                badge: 'Level 4'
-            },
-            5: {
-                name: 'Manufacturing Executive & Strategist',
-                description: 'Drive manufacturing transformation with comprehensive executive-level expertise and strategic manufacturing leadership.',
-                maxCertifications: 12,
-                budget: 44272.98,
-                badge: 'Level 5'
-            }
-        };
-
-        // Manufacturing Cross-Page Synchronization Manager
-        class ManufacturingCrossPageSyncManager {
-            constructor() {
-                this.currentLevel = 1;
-                this.selectedCertifications = [];
-                this.industryData = manufacturingIndustryData;
-                this.initializePage();
-            }
-
-            initializePage() {
-                // Get level from URL parameters or session storage
-                const urlParams = new URLSearchParams(window.location.search);
-                const levelFromUrl = urlParams.get('level');
-                const levelFromStorage = sessionStorage.getItem('hexad_selected_level');
-                
-                if (levelFromUrl) {
-                    this.currentLevel = parseInt(levelFromUrl);
-                } else if (levelFromStorage) {
-                    this.currentLevel = parseInt(levelFromStorage);
-                }
-                
-                // Update UI with current level
-                this.updateLevelDisplay();
-                
-                // Set up event listeners
-                this.setupEventListeners();
-            }
-
-            setupEventListeners() {
-                // Listen for level changes from HEXAD page
-                window.addEventListener('storage', (e) => {
-                    if (e.key === 'hexad_selected_level') {
-                        this.currentLevel = parseInt(e.newValue);
-                        this.updateLevelDisplay();
-                    }
-                });
-                
-                // Listen for postMessage from HEXAD page
-                window.addEventListener('message', (event) => {
-                    if (event.data.type === 'level_update' && event.data.level) {
-                        this.currentLevel = event.data.level;
-                        this.updateLevelDisplay();
-                    }
+        function initializeManufacturingHub() {
+            // Register manufacturing sector in session
+            if (window.BTHSession) {
+                window.BTHSession.trackSectorVisit('manufacturing', {
+                    hubType: 'workforce-development',
+                    lmsAccess: true,
+                    pearsonVUE: true,
+                    domains: 12,
+                    certifications: 55
                 });
             }
 
-            updateLevelDisplay() {
-                const config = levelConfig[this.currentLevel];
-                if (!config) return;
+            console.log('🏭 Manufacturing Workforce Development Hub Initialized');
+        }
 
-                // Update hero section
-                const levelBadge = document.getElementById('currentLevelBadge');
-                const budgetDisplay = document.getElementById('currentBudget');
-                
-                if (levelBadge) {
-                    levelBadge.textContent = `${config.badge} Selected`;
+        function initializeAnimations() {
+            // Intersection Observer for animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            // Observe elements for animations
+            document.querySelectorAll('.domain-card, .pipeline-stage, .lms-feature').forEach(element => {
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(30px)';
+                element.style.transition = 'all 0.6s ease';
+                observer.observe(element);
+            });
+
+            // Staggered animations
+            const domainCards = document.querySelectorAll('.domain-card');
+            domainCards.forEach((card, index) => {
+                card.style.transitionDelay = `${index * 0.1}s`;
+            });
+        }
+
+        // Smooth scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
                 }
+            });
+        });
+
+        // Dynamic statistics animation
+        function animateCounters() {
+            const counters = document.querySelectorAll('.stat-number');
+            counters.forEach(counter => {
+                const target = parseInt(counter.textContent.replace(/\D/g, ''));
+                const suffix = counter.textContent.replace(/[0-9]/g, '');
+                let current = 0;
+                const increment = target / 60;
                 
-                if (budgetDisplay) {
-                    budgetDisplay.textContent = `Budget: $${config.budget.toLocaleString()}`;
-                }
-
-                // Update level info section
-                const levelInfoBadge = document.getElementById('levelBadge');
-                const levelTitle = document.getElementById('levelTitle');
-                const levelDesc = document.getElementById('levelDesc');
-                const maxCerts = document.getElementById('maxCerts');
-                const totalBudget = document.getElementById('totalBudget');
-
-                if (levelInfoBadge) levelInfoBadge.textContent = config.badge;
-                if (levelTitle) levelTitle.textContent = config.name;
-                if (levelDesc) levelDesc.textContent = config.description;
-                if (maxCerts) maxCerts.textContent = config.maxCertifications;
-                if (totalBudget) totalBudget.textContent = `$${config.budget.toLocaleString()}`;
-            }
-
-            saveSelectionData() {
-                const selectionData = {
-                    industry: 'Manufacturing',
-                    level: this.currentLevel,
-                    selectedCertifications: this.selectedCertifications,
-                    timestamp: Date.now()
+                const updateCounter = () => {
+                    if (current < target) {
+                        current += increment;
+                        counter.textContent = Math.ceil(current) + suffix;
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        counter.textContent = target + suffix;
+                    }
                 };
                 
-                sessionStorage.setItem('industry_selection_data', JSON.stringify(selectionData));
-                localStorage.setItem('last_industry_selection', JSON.stringify(selectionData));
-            }
-
-            returnToHexad() {
-                this.saveSelectionData();
-                
-                // Send completion message to parent window (if in iframe)
-                if (window.parent !== window) {
-                    window.parent.postMessage({
-                        type: 'industry_selection_complete',
-                        data: {
-                            industry: 'Manufacturing',
-                            level: this.currentLevel,
-                            certifications: this.selectedCertifications
-                        }
-                    }, '*');
-                }
-                
-                // Navigate back to HEXAD page
-                window.location.href = '../hexad-mastery.html';
-            }
-        }
-
-        // Initialize page synchronization
-        const manufacturingSync = new ManufacturingCrossPageSyncManager();
-
-        // Global functions for UI interaction
-        function selectCertifications() {
-            alert(`Manufacturing Certification Selection\n\nLevel ${manufacturingSync.currentLevel} allows up to ${levelConfig[manufacturingSync.currentLevel].maxCertifications} certifications.\n\nBudget: $${levelConfig[manufacturingSync.currentLevel].budget.toLocaleString()}\n\nTotal Available: 55+ Manufacturing Certifications\n\nCertification selection interface coming soon!`);
-        }
-
-        // Navigation and UI enhancements
-        document.addEventListener('DOMContentLoaded', function() {
-            // Mobile navigation toggle
-            const hamburger = document.querySelector('.nav-hamburger');
-            const navMenu = document.querySelector('.nav-menu');
-            
-            if (hamburger && navMenu) {
-                hamburger.addEventListener('click', function() {
-                    navMenu.classList.toggle('active');
-                });
-            }
-            
-            // Category card interactions
-            const categoryCards = document.querySelectorAll('.category-card');
-            categoryCards.forEach(card => {
-                card.addEventListener('click', function() {
-                    const category = this.dataset.category;
-                    console.log(`Selected manufacturing category: ${category}`);
-                    // Future: Open category-specific certification selection
-                });
+                updateCounter();
             });
+        }
+
+        // Trigger counter animation when stats section is visible
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                    statsObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        const statsSection = document.querySelector('.manufacturing-stats');
+        if (statsSection) {
+            statsObserver.observe(statsSection);
+        }
+
+        // Parallax effect for hero section
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const hero = document.querySelector('.manufacturing-hero');
+            if (hero && scrolled < window.innerHeight) {
+                hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+            }
         });
     </script>
 </body>

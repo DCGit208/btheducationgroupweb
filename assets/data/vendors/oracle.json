@@ -1,0 +1,141 @@
+[
+  {
+    "name": "Oracle Cloud Infrastructure Foundations Associate",
+    "vendor": "Oracle",
+    "category": "cloud-platforms",
+    "focus": "Cloud Fundamentals",
+    "level": 1,
+    "retired": false,
+    "exam": "1Z0-1085-23",
+    "logo": "../assets/images/vendor-logos/oracle.svg",
+    "url": "https://education.oracle.com/oracle-cloud-infrastructure-oci",
+    "tags": ["OCI-Foundational"],
+    "vendor_stage": "Foundational"
+  },
+  {
+    "name": "Oracle Java Foundations",
+    "vendor": "Oracle",
+    "category": "software-devops",
+    "focus": "Java Foundations",
+    "level": 1,
+    "retired": false,
+    "exam": "1Z0-811",
+    "logo": "../assets/images/vendor-logos/oracle.svg",
+    "tags": ["Programming-Fundamentals", "Java"],
+    "vendor_stage": "Foundational"
+  },
+  {
+    "name": "Oracle Cloud Infrastructure Architect Associate",
+    "vendor": "Oracle",
+    "category": "cloud-platforms",
+    "focus": "OCI Architect Associate",
+    "level": 2,
+    "retired": false,
+    "exam": "1Z0-1072-23",
+    "logo": "../assets/images/vendor-logos/oracle.svg"
+  },
+  {
+    "name": "Oracle Cloud Infrastructure Developer Associate",
+    "vendor": "Oracle",
+    "category": "cloud-platforms",
+    "focus": "OCI Developer Associate",
+    "level": 2,
+    "retired": false,
+    "exam": "1Z0-1084-23",
+    "logo": "../assets/images/vendor-logos/oracle.svg",
+    "prereqTags": ["OCI-Foundational", "Programming-Fundamentals"],
+    "tags": ["Programming", "OCI"],
+    "vendor_stage": "Associate"
+  },
+  {
+    "name": "Oracle Database SQL",
+    "vendor": "Oracle",
+    "category": "specialized-tech",
+    "focus": "SQL Fundamentals",
+    "level": 2,
+    "retired": false,
+    "exam": "1Z0-071",
+    "logo": "../assets/images/vendor-logos/oracle.svg"
+  },
+  {
+    "name": "Oracle MySQL 8.0 Database Administrator",
+    "vendor": "Oracle",
+    "category": "specialized-tech",
+    "focus": "MySQL Administration",
+    "level": 2,
+    "retired": false,
+    "exam": "1Z0-908",
+    "logo": "../assets/images/vendor-logos/oracle.svg"
+  },
+  {
+    "name": "Oracle Autonomous Database Cloud",
+    "vendor": "Oracle",
+    "category": "cloud-platforms",
+    "focus": "Autonomous Database",
+    "level": 3,
+    "retired": false,
+    "exam": "1Z0-931",
+    "logo": "../assets/images/vendor-logos/oracle.svg"
+  },
+  {
+    "name": "Oracle Certified Professional, Java SE 17 Developer",
+    "vendor": "Oracle",
+    "category": "software-devops",
+    "focus": "Java Development",
+    "level": 3,
+    "retired": false,
+    "exam": "1Z0-829",
+    "logo": "../assets/images/vendor-logos/oracle.svg",
+    "url": "https://education.oracle.com/java-se-17-developer"
+  },
+  {
+    "name": "Oracle Cloud Infrastructure Security Professional",
+    "vendor": "Oracle",
+    "category": "cloud-platforms",
+    "focus": "OCI Security",
+    "level": 3,
+    "retired": false,
+    "exam": "1Z0-1104-23",
+    "logo": "../assets/images/vendor-logos/oracle.svg"
+  },
+  {
+    "name": "Oracle Database Administration Associate",
+    "vendor": "Oracle",
+    "category": "cloud-platforms",
+    "focus": "Data Platforms",
+    "level": 3,
+    "retired": false,
+    "premium": false,
+    "exam": "Oracle Database Administration Associate"
+  },
+  {
+    "name": "Oracle Cloud Infrastructure Architect Professional",
+    "vendor": "Oracle",
+    "category": "cloud-platforms",
+    "focus": "Public Cloud",
+    "level": 4,
+    "retired": false,
+    "premium": false,
+    "exam": "Oracle Cloud Infrastructure Architect Professional"
+  },
+  {
+    "name": "Oracle Database Administration Professional",
+    "vendor": "Oracle",
+    "category": "cloud-platforms",
+    "focus": "Data Platforms",
+    "level": 4,
+    "retired": false,
+    "premium": false,
+    "exam": "Oracle Database Administration Professional"
+  },
+  {
+    "name": "Oracle Database Performance Tuning Specialist",
+    "vendor": "Oracle",
+    "category": "cloud-platforms",
+    "focus": "Data Platforms",
+    "level": 4,
+    "retired": false,
+    "premium": false,
+    "exam": "Oracle Database Performance Tuning Specialist"
+  }
+]

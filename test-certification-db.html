@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Certification Database Test</title>
+    <script src="assets/js/certification-database.js"></script>
+</head>
+<body>
+    <h1>Technology Certification Database Test</h1>
+    <div id="results"></div>
+    
+    <script>
+        function runTests() {
+            const results = document.getElementById('results');
+            let output = '<h2>Test Results:</h2>';
+            
+            // Test 1: Count total certifications
+            if (typeof window.ALL_CERTIFICATIONS !== 'undefined') {
+                output += `<p>✅ Database loaded successfully</p>`;
+                output += `<p><strong>Total Certifications: ${window.ALL_CERTIFICATIONS.length}</strong></p>`;
+                
+                // Test 2: Count by category
+                const categories = {};
+                window.ALL_CERTIFICATIONS.forEach(cert => {
+                    categories[cert.category] = (categories[cert.category] || 0) + 1;
+                });
+                
+                output += '<h3>Certifications by Category:</h3><ul>';
+                Object.entries(categories).forEach(([category, count]) => {
+                    output += `<li>${category}: ${count} certifications</li>`;
+                });
+                output += '</ul>';
+                
+                // Test 3: Count by vendor
+                const vendors = {};
+                window.ALL_CERTIFICATIONS.forEach(cert => {
+                    vendors[cert.vendor] = (vendors[cert.vendor] || 0) + 1;
+                });
+                
+                output += '<h3>Certifications by Vendor:</h3><ul>';
+                Object.entries(vendors).forEach(([vendor, count]) => {
+                    output += `<li>${vendor}: ${count} certifications</li>`;
+                });
+                output += '</ul>';
+                
+                // Test 4: Count by level
+                const levels = {};
+                window.ALL_CERTIFICATIONS.forEach(cert => {
+                    levels[cert.level] = (levels[cert.level] || 0) + 1;
+                });
+                
+                output += '<h3>Certifications by Level:</h3><ul>';
+                Object.entries(levels).sort((a, b) => a[0] - b[0]).forEach(([level, count]) => {
+                    output += `<li>Level ${level}: ${count} certifications</li>`;
+                });
+                output += '</ul>';
+                
+                // Test 5: Validate database integrity
+                let errors = [];
+                window.ALL_CERTIFICATIONS.forEach((cert, index) => {
+                    if (!cert.id) errors.push(`Certification ${index} missing ID`);
+                    if (!cert.name) errors.push(`Certification ${index} missing name`);
+                    if (!cert.vendor) errors.push(`Certification ${index} missing vendor`);
+                    if (!cert.category) errors.push(`Certification ${index} missing category`);
+                    if (!cert.level) errors.push(`Certification ${index} missing level`);
+                    if (!cert.price && cert.price !== 0) errors.push(`Certification ${index} missing price`);
+                });
+                
+                if (errors.length === 0) {
+                    output += `<p>✅ Database integrity check passed</p>`;
+                } else {
+                    output += `<p>❌ Database integrity issues found:</p><ul>`;
+                    errors.forEach(error => output += `<li>${error}</li>`);
+                    output += '</ul>';
+                }
+                
+                // Test 6: Check vendor database
+                if (typeof window.VENDOR_DATABASE !== 'undefined') {
+                    output += `<p>✅ Vendor database loaded: ${Object.keys(window.VENDOR_DATABASE).length} vendors</p>`;
+                } else {
+                    output += `<p>❌ Vendor database not loaded</p>`;
+                }
+                
+                // Test 7: Check category database
+                if (typeof window.CATEGORY_DATABASE !== 'undefined') {
+                    output += `<p>✅ Category database loaded: ${Object.keys(window.CATEGORY_DATABASE).length} categories</p>`;
+                } else {
+                    output += `<p>❌ Category database not loaded</p>`;
+                }
+                
+            } else {
+                output += '<p>❌ Database failed to load</p>';
+            }
+            
+            results.innerHTML = output;
+        }
+        
+        // Run tests when page loads
+        window.addEventListener('load', runTests);
+    </script>
+</body>
+</html>

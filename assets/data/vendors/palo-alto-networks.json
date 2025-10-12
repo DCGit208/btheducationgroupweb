@@ -1,0 +1,4 @@
+[
+  { "name": "Palo Alto Networks Certified Cybersecurity Entry-level Technician (PCCET)", "vendor": "Palo Alto Networks", "category": "cybersecurity", "focus": "Network Security", "level": 1, "retired": false, "exam": "PCCET", "logo": "../assets/images/vendor-logos/paloaltonetworks.svg", "url": "https://www.paloaltonetworks.com/services/education/certification" },
+  { "name": "Palo Alto Networks Certified Network Security Administrator (PCNSA)", "vendor": "Palo Alto Networks", "category": "cybersecurity", "focus": "Network Security", "level": 2, "retired": false, "exam": "PCNSA", "logo": "../assets/images/vendor-logos/paloaltonetworks.svg", "url": "https://www.paloaltonetworks.com/services/education/certification" }
+]

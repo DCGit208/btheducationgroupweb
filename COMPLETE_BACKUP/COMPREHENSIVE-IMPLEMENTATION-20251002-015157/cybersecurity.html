@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity Professional Certification Pathways | Level 1-5 System | BTH Education Group</title>
+    <meta name="description" content="Advance your cybersecurity career with BTH's comprehensive certification pathways. Level 1-5 progression system across security operations, risk management, compliance, and specialized cybersecurity domains.">
+    
+    <!-- Favicon and Open Graph Meta Tags -->
+    <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+    <meta property="og:title" content="Cybersecurity Professional Certification Pathways | BTH Education Group">
+    <meta property="og:description" content="Advance your cybersecurity career with comprehensive certification pathways across security operations, risk management, compliance, and specialized cybersecurity domains.">
+    <meta property="og:image" content="../assets/images/og-image.jpg">
+    <meta property="og:url" content="https://www.btheducationgroup.org/programs/cybersecurity.html">
+    <meta property="og:type" content="website">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* Cybersecurity-specific styling */
+        :root {
+            /* Cybersecurity Brand Colors */
+            --cyber-primary: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+            --cyber-secondary: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+            --cyber-accent: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            --cyber-alert: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+            --cyber-secure: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            
+            /* Level System Colors */
+            --level-1: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            --level-2: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+            --level-3: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            --level-4: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+            --level-5: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: #374151;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        }
+
+        /* Hero Section */
+        .hero-cybersecurity {
+            background: var(--cyber-primary);
+            color: white;
+            padding: 120px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-cybersecurity::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 20%, rgba(239, 68, 68, 0.3) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 80%, rgba(185, 28, 28, 0.3) 0%, transparent 50%);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 24px;
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Level Display in Hero */
+        .level-display-hero {
+            background: rgba(255, 255, 255, 0.15);
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 20px 30px;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .level-badge {
+            background: rgba(255, 255, 255, 0.25);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .level-budget {
+            font-size: 1.1rem;
+            font-weight: 600;
+            opacity: 0.9;
+        }
+
+        /* Certification Categories */
+        .certification-categories {
+            padding: 80px 0;
+            background: #f8f9fa;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        .section-description {
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .category-card {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border-top: 4px solid;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .category-card:nth-child(1) { border-top-color: #dc2626; }
+        .category-card:nth-child(2) { border-top-color: #1f2937; }
+        .category-card:nth-child(3) { border-top-color: #f59e0b; }
+        .category-card:nth-child(4) { border-top-color: #10b981; }
+
+        .category-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+        }
+
+        .category-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .category-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--cyber-primary);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 20px;
+            font-size: 24px;
+            color: white;
+        }
+
+        .category-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin: 0;
+        }
+
+        .category-description {
+            font-size: 1rem;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .cert-count {
+            background: linear-gradient(135deg, #fee2e2, #fecaca);
+            color: #dc2626;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        /* Level Integration Section */
+        .level-integration {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .level-display {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .current-level-info {
+            background: var(--cyber-primary);
+            color: white;
+            padding: 40px;
+            border-radius: 20px;
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .current-level-info::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 200px;
+            height: 200px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transform: translate(50%, -50%);
+        }
+
+        .level-info-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .level-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .level-description {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+
+        .level-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #fff;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            opacity: 0.8;
+            margin-top: 8px;
+        }
+
+        /* CTA Buttons */
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary-large {
+            background: var(--cyber-primary);
+            color: white;
+            padding: 18px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .btn-primary-large:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(220, 38, 38, 0.3);
+            color: white;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #dc2626;
+            padding: 16px 30px;
+            border: 2px solid #dc2626;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            background: #dc2626;
+            color: white;
+        }
+
+        /* Final CTA Section */
+        .cta-section {
+            background: var(--cyber-primary);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .cta-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .cta-description {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .categories-grid {
+                grid-template-columns: 1fr;
+                padding: 0 15px;
+            }
+            
+            .level-stats {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .cta-title {
+                font-size: 2rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <a href="../index.html">
+                        <img src="../assets/images/bthlogo.png" alt="BTH Education Group" class="nav-logo">
+                    </a>
+                </div>
+                <div class="nav-menu">
+                    <a href="../index.html" class="nav-link">Home</a>
+                    <a href="../about.html" class="nav-link">About</a>
+                    <a href="../programs.html" class="nav-link active">Programs</a>
+                    <a href="../industry-solutions.html" class="nav-link">Industry Solutions</a>
+                    <a href="../contact.html" class="nav-link">Contact</a>
+                    <a href="../apply.html" class="nav-link btn-nav">Apply Now</a>
+                </div>
+                <div class="nav-hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-cybersecurity">
+            <div class="hero-content">
+                <h1 class="hero-title">Cybersecurity Professional Certification Pathways</h1>
+                <p class="hero-subtitle">Protect organizations from evolving cyber threats with comprehensive certification pathways across security operations, risk management, compliance, and specialized cybersecurity domains. Join the front lines of digital defense.</p>
+                
+                <!-- Level Integration Display -->
+                <div id="levelDisplay" class="level-display-hero">
+                    <div class="level-badge" id="currentLevelBadge">Level 1 Selected</div>
+                    <div class="level-budget" id="currentBudget">Budget: $13,902.66</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certification Categories -->
+        <section class="certification-categories">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Cybersecurity Certification Categories</h2>
+                    <p class="section-description">Choose from four specialized cybersecurity tracks, each designed to advance your career in critical areas of organizational security and digital protection.</p>
+                </div>
+                
+                <div class="categories-grid">
+                    <!-- Security Operations -->
+                    <div class="category-card" data-category="security-ops">
+                        <div class="category-header">
+                            <div class="category-icon">🛡️</div>
+                            <h3 class="category-title">Security Operations</h3>
+                        </div>
+                        <p class="category-description">Master security monitoring, incident response, and threat detection with certifications from leading cybersecurity organizations and technology vendors.</p>
+                        <span class="cert-count">18+ Security Certifications</span>
+                    </div>
+                    
+                    <!-- Risk & Compliance -->
+                    <div class="category-card" data-category="risk-compliance">
+                        <div class="category-header">
+                            <div class="category-icon">⚖️</div>
+                            <h3 class="category-title">Risk & Compliance</h3>
+                        </div>
+                        <p class="category-description">Lead organizational security governance with certifications in risk management, compliance frameworks, and security policy development.</p>
+                        <span class="cert-count">12+ Governance Certifications</span>
+                    </div>
+                    
+                    <!-- Ethical Hacking & Testing -->
+                    <div class="category-card" data-category="ethical-hacking">
+                        <div class="category-header">
+                            <div class="category-icon">🔍</div>
+                            <h3 class="category-title">Ethical Hacking & Testing</h3>
+                        </div>
+                        <p class="category-description">Secure systems through offensive security with certifications in penetration testing, vulnerability assessment, and ethical hacking methodologies.</p>
+                        <span class="cert-count">15+ Penetration Testing Certifications</span>
+                    </div>
+                    
+                    <!-- Specialized Security -->
+                    <div class="category-card" data-category="specialized-security">
+                        <div class="category-header">
+                            <div class="category-icon">🔐</div>
+                            <h3 class="category-title">Specialized Security</h3>
+                        </div>
+                        <p class="category-description">Excel in specialized security domains with certifications in digital forensics, cloud security, IoT security, and emerging cybersecurity technologies.</p>
+                        <span class="cert-count">10+ Specialty Certifications</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Level Integration Section -->
+        <section class="level-integration">
+            <div class="level-display">
+                <div class="current-level-info" id="levelInfo">
+                    <div class="level-info-content">
+                        <div class="level-badge" id="levelBadge">Level 1</div>
+                        <h2 class="level-title" id="levelTitle">Foundation Cybersecurity Professional</h2>
+                        <p class="level-description" id="levelDesc">Begin your cybersecurity career journey with essential certifications and fundamental skills in security operations and threat awareness.</p>
+                        
+                        <div class="level-stats">
+                            <div class="stat-item">
+                                <span class="stat-number" id="maxCerts">3</span>
+                                <div class="stat-label">Maximum Certifications</div>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number" id="totalBudget">$13,902.66</span>
+                                <div class="stat-label">Total Investment</div>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">55+</span>
+                                <div class="stat-label">Available Certifications</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cta-buttons">
+                    <button class="btn-primary-large" onclick="selectCertifications()">Select Your Certifications</button>
+                    <a href="../hexad-mastery.html" class="btn-secondary">Return to HEXAD Assessment</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="cta-section">
+            <div class="cta-content">
+                <h2 class="cta-title">Ready to Defend the Digital World?</h2>
+                <p class="cta-description">Join thousands of cybersecurity professionals who have advanced their careers and strengthened organizational security through BTH's comprehensive certification pathways.</p>
+                <a href="../apply.html" class="btn-primary-large">Start Your Security Journey</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <div class="footer-brand">
+                    <img src="../assets/images/bthlogo.png" alt="BTH Education Group" class="footer-logo">
+                    <p>Transforming careers through world-class education and certification programs.</p>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Programs</h3>
+                <ul>
+                    <li><a href="../programs.html">All Programs</a></li>
+                    <li><a href="technology.html">Technology</a></li>
+                    <li><a href="healthcare.html">Healthcare</a></li>
+                    <li><a href="cybersecurity.html">Cybersecurity</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="../about.html">About BTH</a></li>
+                    <li><a href="../contact.html">Contact Us</a></li>
+                    <li><a href="../industry-solutions.html">Industry Solutions</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="../program-catalog.html">Program Catalog</a></li>
+                    <li><a href="../roi-calculator.html">ROI Calculator</a></li>
+                    <li><a href="../career-assessment.html">Career Assessment</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 BTH Education Group. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Cybersecurity Cross-Page Synchronization JavaScript -->
+    <script>
+        // Cybersecurity Industry Data
+        const cybersecurityIndustryData = {
+            name: 'Cybersecurity',
+            categories: [
+                {
+                    id: 'security-ops',
+                    name: 'Security Operations',
+                    description: 'Master security monitoring and incident response',
+                    certCount: 18,
+                    certifications: [
+                        'CompTIA Security+',
+                        'CISSP (Certified Information Systems Security Professional)',
+                        'CISM (Certified Information Security Manager)',
+                        'CISA (Certified Information Systems Auditor)',
+                        'GSEC (GIAC Security Essentials)',
+                        'CySA+ (CompTIA Cybersecurity Analyst)',
+                        'GCIH (GIAC Certified Incident Handler)',
+                        'GNFA (GIAC Network Forensic Analyst)',
+                        'GCFA (GIAC Certified Forensic Analyst)',
+                        'GMON (GIAC Continuous Monitoring)',
+                        'GCED (GIAC Certified Enterprise Defender)',
+                        'CCSP (Certified Cloud Security Professional)',
+                        'CISF (Critical Infrastructure Security and Resilience)',
+                        'SANS FOR508 (Advanced Incident Response)',
+                        'SANS FOR578 (Cyber Threat Intelligence)',
+                        'Splunk Certified Security Analyst',
+                        'IBM QRadar Certified Specialist',
+                        'Microsoft Security Operations Analyst'
+                    ]
+                },
+                {
+                    id: 'risk-compliance',
+                    name: 'Risk & Compliance',
+                    description: 'Lead security governance and compliance',
+                    certCount: 12,
+                    certifications: [
+                        'CISA (Certified Information Systems Auditor)',
+                        'CRISC (Certified in Risk and Information Systems Control)',
+                        'COBIT 5 Foundation',
+                        'ISO 27001 Lead Implementer',
+                        'ISO 27001 Lead Auditor',
+                        'NIST Cybersecurity Framework',
+                        'FedRAMP Security Controls',
+                        'SOC 2 Type II Auditor',
+                        'HIPAA Security Officer',
+                        'PCI DSS Professional',
+                        'GDPR Data Protection Officer',
+                        'Certified GRC Professional'
+                    ]
+                },
+                {
+                    id: 'ethical-hacking',
+                    name: 'Ethical Hacking & Testing',
+                    description: 'Master offensive security and penetration testing',
+                    certCount: 15,
+                    certifications: [
+                        'CEH (Certified Ethical Hacker)',
+                        'OSCP (Offensive Security Certified Professional)',
+                        'GPEN (GIAC Penetration Tester)',
+                        'GWAPT (GIAC Web Application Penetration Tester)',
+                        'GWEB (GIAC Web Application Penetration Tester)',
+                        'GXPN (GIAC Exploit Researcher and Advanced Penetration Tester)',
+                        'CISSP Penetration Testing',
+                        'CompTIA PenTest+',
+                        'eLearnSecurity ePPT',
+                        'eLearnSecurity eWPT',
+                        'OSCE (Offensive Security Certified Expert)',
+                        'SLAE (SecurityTube Linux Assembly Expert)',
+                        'Red Team Operations',
+                        'Social Engineering Specialist',
+                        'Mobile Application Security'
+                    ]
+                },
+                {
+                    id: 'specialized-security',
+                    name: 'Specialized Security',
+                    description: 'Excel in specialized security domains',
+                    certCount: 10,
+                    certifications: [
+                        'GCFE (GIAC Certified Forensic Examiner)',
+                        'EnCE (EnCase Certified Examiner)',
+                        'CCE (Certified Computer Examiner)',
+                        'CCFP (Certified Cyber Forensics Professional)',
+                        'CISSP Cloud Security',
+                        'AWS Certified Security - Specialty',
+                        'Microsoft Azure Security Engineer',
+                        'Google Cloud Professional Cloud Security Engineer',
+                        'IoT Security Specialist',
+                        'Blockchain Security Professional'
+                    ]
+                }
+            ]
+        };
+
+        // Level Configuration (synchronized with HEXAD)
+        const levelConfig = {
+            1: {
+                name: 'Foundation Cybersecurity Professional',
+                description: 'Begin your cybersecurity career journey with essential certifications and fundamental skills in security operations and threat awareness.',
+                maxCertifications: 3,
+                budget: 13902.66,
+                badge: 'Level 1'
+            },
+            2: {
+                name: 'Intermediate Security Specialist',
+                description: 'Expand your cybersecurity expertise with advanced certifications in security analysis and incident response.',
+                maxCertifications: 5,
+                budget: 20704.02,
+                badge: 'Level 2'
+            },
+            3: {
+                name: 'Advanced Security Professional',
+                description: 'Master complex security challenges with senior-level certifications and specialized security competencies.',
+                maxCertifications: 7,
+                budget: 27605.32,
+                badge: 'Level 3'
+            },
+            4: {
+                name: 'Security Expert & Leader',
+                description: 'Lead security initiatives with expert-level certifications and advanced threat hunting capabilities.',
+                maxCertifications: 9,
+                budget: 34506.68,
+                badge: 'Level 4'
+            },
+            5: {
+                name: 'Security Executive & Strategist',
+                description: 'Drive organizational security strategy with comprehensive executive-level expertise and strategic security leadership.',
+                maxCertifications: 12,
+                budget: 44272.98,
+                badge: 'Level 5'
+            }
+        };
+
+        // Cybersecurity Cross-Page Synchronization Manager
+        class CybersecurityCrossPageSyncManager {
+            constructor() {
+                this.currentLevel = 1;
+                this.selectedCertifications = [];
+                this.industryData = cybersecurityIndustryData;
+                this.initializePage();
+            }
+
+            initializePage() {
+                // Get level from URL parameters or session storage
+                const urlParams = new URLSearchParams(window.location.search);
+                const levelFromUrl = urlParams.get('level');
+                const levelFromStorage = sessionStorage.getItem('hexad_selected_level');
+                
+                if (levelFromUrl) {
+                    this.currentLevel = parseInt(levelFromUrl);
+                } else if (levelFromStorage) {
+                    this.currentLevel = parseInt(levelFromStorage);
+                }
+                
+                // Update UI with current level
+                this.updateLevelDisplay();
+                
+                // Set up event listeners
+                this.setupEventListeners();
+            }
+
+            setupEventListeners() {
+                // Listen for level changes from HEXAD page
+                window.addEventListener('storage', (e) => {
+                    if (e.key === 'hexad_selected_level') {
+                        this.currentLevel = parseInt(e.newValue);
+                        this.updateLevelDisplay();
+                    }
+                });
+                
+                // Listen for postMessage from HEXAD page
+                window.addEventListener('message', (event) => {
+                    if (event.data.type === 'level_update' && event.data.level) {
+                        this.currentLevel = event.data.level;
+                        this.updateLevelDisplay();
+                    }
+                });
+            }
+
+            updateLevelDisplay() {
+                const config = levelConfig[this.currentLevel];
+                if (!config) return;
+
+                // Update hero section
+                const levelBadge = document.getElementById('currentLevelBadge');
+                const budgetDisplay = document.getElementById('currentBudget');
+                
+                if (levelBadge) {
+                    levelBadge.textContent = `${config.badge} Selected`;
+                }
+                
+                if (budgetDisplay) {
+                    budgetDisplay.textContent = `Budget: $${config.budget.toLocaleString()}`;
+                }
+
+                // Update level info section
+                const levelInfoBadge = document.getElementById('levelBadge');
+                const levelTitle = document.getElementById('levelTitle');
+                const levelDesc = document.getElementById('levelDesc');
+                const maxCerts = document.getElementById('maxCerts');
+                const totalBudget = document.getElementById('totalBudget');
+
+                if (levelInfoBadge) levelInfoBadge.textContent = config.badge;
+                if (levelTitle) levelTitle.textContent = config.name;
+                if (levelDesc) levelDesc.textContent = config.description;
+                if (maxCerts) maxCerts.textContent = config.maxCertifications;
+                if (totalBudget) totalBudget.textContent = `$${config.budget.toLocaleString()}`;
+            }
+
+            saveSelectionData() {
+                const selectionData = {
+                    industry: 'Cybersecurity',
+                    level: this.currentLevel,
+                    selectedCertifications: this.selectedCertifications,
+                    timestamp: Date.now()
+                };
+                
+                sessionStorage.setItem('industry_selection_data', JSON.stringify(selectionData));
+                localStorage.setItem('last_industry_selection', JSON.stringify(selectionData));
+            }
+
+            returnToHexad() {
+                this.saveSelectionData();
+                
+                // Send completion message to parent window (if in iframe)
+                if (window.parent !== window) {
+                    window.parent.postMessage({
+                        type: 'industry_selection_complete',
+                        data: {
+                            industry: 'Cybersecurity',
+                            level: this.currentLevel,
+                            certifications: this.selectedCertifications
+                        }
+                    }, '*');
+                }
+                
+                // Navigate back to HEXAD page
+                window.location.href = '../hexad-mastery.html';
+            }
+        }
+
+        // Initialize page synchronization
+        const cybersecuritySync = new CybersecurityCrossPageSyncManager();
+
+        // Global functions for UI interaction
+        function selectCertifications() {
+            alert(`Cybersecurity Certification Selection\n\nLevel ${cybersecuritySync.currentLevel} allows up to ${levelConfig[cybersecuritySync.currentLevel].maxCertifications} certifications.\n\nBudget: $${levelConfig[cybersecuritySync.currentLevel].budget.toLocaleString()}\n\nTotal Available: 55+ Cybersecurity Certifications\n\nCertification selection interface coming soon!`);
+        }
+
+        // Navigation and UI enhancements
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile navigation toggle
+            const hamburger = document.querySelector('.nav-hamburger');
+            const navMenu = document.querySelector('.nav-menu');
+            
+            if (hamburger && navMenu) {
+                hamburger.addEventListener('click', function() {
+                    navMenu.classList.toggle('active');
+                });
+            }
+            
+            // Category card interactions
+            const categoryCards = document.querySelectorAll('.category-card');
+            categoryCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    const category = this.dataset.category;
+                    console.log(`Selected cybersecurity category: ${category}`);
+                    // Future: Open category-specific certification selection
+                });
+            });
+        });
+    </script>
+</body>
+</html>

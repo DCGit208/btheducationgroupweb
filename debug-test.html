@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug Test</title>
+</head>
+<body>
+    <h1>Debug Test</h1>
+    <div id="status">Loading...</div>
+    <div id="results"></div>
+    
+    <script>
+        async function test() {
+            try {
+                document.getElementById('status').innerHTML = 'Testing fetch...';
+                
+                // Test 1: Load bundles
+                const bundlesResponse = await fetch('assets/data/comptia-bundles.json');
+                const bundles = await bundlesResponse.json();
+                document.getElementById('status').innerHTML = `Loaded ${bundles.length} bundles`;
+                
+                // Test 2: Load certifications
+                const certsResponse = await fetch('assets/data/certifications.json');
+                const certs = await certsResponse.json();
+                const comptiaCerts = certs.filter(cert => cert.vendor === 'CompTIA');
+                
+                document.getElementById('results').innerHTML = `
+                    <p>Bundles loaded: ${bundles.length}</p>
+                    <p>Total certifications: ${certs.length}</p>
+                    <p>CompTIA certifications: ${comptiaCerts.length}</p>
+                    <h3>CompTIA Certifications:</h3>
+                    <ul>${comptiaCerts.map(cert => `<li>${cert.name} (${cert.exam})</li>`).join('')}</ul>
+                `;
+                
+            } catch (error) {
+                document.getElementById('status').innerHTML = `Error: ${error.message}`;
+                console.error('Error:', error);
+            }
+        }
+        
+        test();
+    </script>
+</body>
+</html>

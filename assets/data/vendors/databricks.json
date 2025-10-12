@@ -1,0 +1,20 @@
+[
+  {"name":"Databricks Certified Data Engineer Associate","vendor":"Databricks","category":"specialized-tech","focus":"Data Engineering","level":2,"retired":false,"premium":true,"exam":"DB Data Engineer Associate"},
+  {"name":"Databricks Certified Data Engineer Professional","vendor":"Databricks","category":"specialized-tech","focus":"Data Engineering","level":3,"retired":false,"premium":true,"exam":"DB Data Engineer Professional"},
+  {"name":"Databricks Lakehouse Fundamentals","vendor":"Databricks","category":"specialized-tech","focus":"Lakehouse Fundamentals","level":1,"retired":false,"premium":true,"exam":"Lakehouse Fundamentals"},
+  {"name":"Databricks Certified Machine Learning Associate","vendor":"Databricks","category":"specialized-tech","focus":"Machine Learning","level":2,"retired":false,"premium":true,"exam":"DB ML Associate"},
+  {"name":"Databricks Certified Machine Learning Professional","vendor":"Databricks","category":"specialized-tech","focus":"Machine Learning","level":3,"retired":false,"premium":true,"exam":"DB ML Professional"},
+  {"name":"Databricks Certified Data Analyst Associate","vendor":"Databricks","category":"specialized-tech","focus":"Data Analysis","level":2,"retired":false,"premium":true,"exam":"DB Data Analyst Associate"}
+  ,
+  {"name":"Databricks Certified Data Analyst Professional","vendor":"Databricks","category":"specialized-tech","focus":"Data Analysis","level":3,"retired":false,"premium":true,"exam":"DB Data Analyst Professional"}
+  ,
+  {"name":"Databricks Lakehouse Admin Associate","vendor":"Databricks","category":"specialized-tech","focus":"Lakehouse Administration","level":2,"retired":false,"premium":true,"exam":"Lakehouse Admin Associate"},
+  {"name":"Databricks Lakehouse Admin Professional","vendor":"Databricks","category":"specialized-tech","focus":"Lakehouse Administration","level":3,"retired":false,"premium":true,"exam":"Lakehouse Admin Professional"},
+  {"name":"Databricks Delta Live Tables (DLT) Specialist","vendor":"Databricks","category":"specialized-tech","focus":"Streaming & Pipelines (DLT)","level":3,"retired":false,"premium":true,"exam":"DLT Specialist"},
+  {"name":"Databricks Certified GenAI Associate","vendor":"Databricks","category":"emerging-tech","focus":"Generative AI","level":2,"retired":false,"premium":true,"exam":"DB GenAI Associate"},
+  {"name":"Databricks Certified GenAI Professional","vendor":"Databricks","category":"emerging-tech","focus":"Generative AI","level":3,"retired":false,"premium":true,"exam":"DB GenAI Professional"}
+  ,
+  {"name":"Databricks Unity Catalog Specialist","vendor":"Databricks","category":"specialized-tech","focus":"Data Governance & Access Control","level":3,"retired":false,"premium":true,"exam":"Unity Catalog Specialist"},
+  {"name":"Databricks SQL Analyst Specialist","vendor":"Databricks","category":"specialized-tech","focus":"SQL Analytics & BI","level":2,"retired":false,"premium":true,"exam":"DB SQL Analyst Specialist"},
+  {"name":"Databricks Platform Architect Professional","vendor":"Databricks","category":"specialized-tech","focus":"Platform Architecture & Governance","level":4,"retired":false,"premium":true,"exam":"DB Platform Architect Professional"}
+]

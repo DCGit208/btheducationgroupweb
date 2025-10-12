@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quick Navigation Debug Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .test-btn { background: #007cba; color: white; padding: 10px; margin: 5px; border: none; cursor: pointer; }
+        .result { margin: 10px 0; padding: 10px; background: #f0f0f0; border-radius: 5px; }
+        .error { background: #ffebee; color: #c62828; }
+        .success { background: #e8f5e8; color: #2e7d32; }
+    </style>
+</head>
+<body>
+    <h1>🔧 HEXAD Navigation Debug Test</h1>
+    
+    <iframe id="hexadFrame" src="hexad-mastery.html" width="100%" height="400" style="border: 1px solid #ccc;"></iframe>
+    
+    <div>
+        <button class="test-btn" onclick="testElement('personal-dev-l1')">Test Personal Dev L1</button>
+        <button class="test-btn" onclick="testElement('professional-dev-l1')">Test Professional Dev L1</button>
+        <button class="test-btn" onclick="testElement('occupational-dev-l1')">Test Occupational Dev L1</button>
+        <button class="test-btn" onclick="runFullTest()">🧪 Run Full Test</button>
+    </div>
+    
+    <div id="results"></div>
+
+    <script>
+        function log(message, type = 'info') {
+            const div = document.getElementById('results');
+            const resultDiv = document.createElement('div');
+            resultDiv.className = `result ${type}`;
+            resultDiv.innerHTML = `[${new Date().toLocaleTimeString()}] ${message}`;
+            div.appendChild(resultDiv);
+            console.log(message);
+        }
+        
+        function testElement(elementId) {
+            log('🔧 Testing element: ' + elementId);
+            
+            const iframe = document.getElementById('hexadFrame');
+            const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+            const iframeWindow = iframe.contentWindow;
+            
+            try {
+                // Check if element exists
+                const element = iframeDoc.getElementById(elementId);
+                if (!element) {
+                    log('❌ Element not found: ' + elementId, 'error');
+                    return;
+                }
+                log('✅ Element found: ' + elementId, 'success');
+                
+                // Check initial state
+                const isActive = element.classList.contains('active');
+                log('📊 Initial active state: ' + isActive);
+                
+                // Check if function exists
+                if (typeof iframeWindow.toggleDimension === 'function') {
+                    log('✅ toggleDimension function exists', 'success');
+                    
+                    // Try to call the function
+                    iframeWindow.toggleDimension(elementId);
+                    log('🔧 toggleDimension called');
+                    
+                    // Check state after delay
+                    setTimeout(() => {
+                        const newState = element.classList.contains('active');
+                        if (newState !== isActive) {
+                            log('✅ State changed successfully: ' + isActive + ' → ' + newState, 'success');
+                        } else {
+                            log('❌ State did not change: ' + isActive + ' → ' + newState, 'error');
+                        }
+                    }, 500);
+                    
+                } else {
+                    log('❌ toggleDimension function not found', 'error');
+                }
+                
+            } catch (error) {
+                log('❌ Error: ' + error.message, 'error');
+            }
+        }
+        
+        function runFullTest() {
+            log('🚀 Starting full navigation test...');
+            const elements = ['personal-dev-l1', 'professional-dev-l1', 'occupational-dev-l1', 'financial-dev-l1', 'relationship-dev-l1', 'truth-education-l1'];
+            
+            elements.forEach((elementId, index) => {
+                setTimeout(() => {
+                    testElement(elementId);
+                }, index * 1000);
+            });
+        }
+        
+        // Wait for iframe to load
+        document.getElementById('hexadFrame').onload = function() {
+            log('📄 HEXAD page loaded in iframe', 'success');
+        };
+    </script>
+</body>
+</html>

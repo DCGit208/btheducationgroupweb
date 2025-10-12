@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Population Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .test { margin: 10px 0; padding: 10px; border: 1px solid #ccc; }
+        .pass { background: #d4edda; border-color: #28a745; }
+        .fail { background: #f8d7da; border-color: #dc3545; }
+        iframe { width: 100%; height: 500px; border: 1px solid #ccc; margin: 20px 0; }
+    </style>
+</head>
+<body>
+    <h1>DOM Population Test</h1>
+    <div id="testResults"></div>
+    
+    <h2>Technology Page in Frame</h2>
+    <iframe id="testFrame" src="/programs/technology.html"></iframe>
+
+    <script>
+        const results = document.getElementById('testResults');
+        
+        function addTest(name, passed, message) {
+            const div = document.createElement('div');
+            div.className = `test ${passed ? 'pass' : 'fail'}`;
+            div.innerHTML = `<strong>${name}:</strong> ${message}`;
+            results.appendChild(div);
+        }
+
+        // Wait for iframe to load
+        document.getElementById('testFrame').onload = function() {
+            setTimeout(() => {
+                const iframe = document.getElementById('testFrame');
+                const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+                
+                // Test 1: Check if certificationGrid has content
+                const certGrid = iframeDoc.getElementById('certificationGrid');
+                if (certGrid) {
+                    const hasContent = certGrid.innerHTML.trim().length > 0;
+                    addTest('Certification Grid Content', hasContent, 
+                        hasContent ? `Has ${certGrid.children.length} child elements` : 'No content found');
+                    
+                    if (hasContent) {
+                        addTest('Sample Content', true, `First 100 chars: ${certGrid.innerHTML.substring(0, 100)}...`);
+                    }
+                } else {
+                    addTest('Certification Grid Element', false, 'certificationGrid element not found');
+                }
+                
+                // Test 2: Check if category grid has content
+                const categoryGrid = iframeDoc.getElementById('categoryGrid');
+                if (categoryGrid) {
+                    const hasContent = categoryGrid.innerHTML.trim().length > 0;
+                    addTest('Category Grid Content', hasContent, 
+                        hasContent ? `Has ${categoryGrid.children.length} child elements` : 'No content found');
+                } else {
+                    addTest('Category Grid Element', false, 'categoryGrid element not found');
+                }
+                
+                // Test 3: Check console errors
+                const consoleErrors = [];
+                const originalError = iframe.contentWindow.console.error;
+                iframe.contentWindow.console.error = function(...args) {
+                    consoleErrors.push(args.join(' '));
+                    originalError.apply(console, args);
+                };
+                
+                setTimeout(() => {
+                    addTest('Console Errors', consoleErrors.length === 0, 
+                        consoleErrors.length === 0 ? 'No console errors' : `${consoleErrors.length} errors: ${consoleErrors.join(', ')}`);
+                }, 1000);
+                
+                // Test 4: Check if ITFilterManager initialized
+                const hasITFilterManager = typeof iframe.contentWindow.ITFilterManager !== 'undefined';
+                addTest('ITFilterManager Available', hasITFilterManager, 
+                    hasITFilterManager ? 'ITFilterManager class is available' : 'ITFilterManager not found');
+                
+                // Test 5: Check if ITSectorData has certifications array
+                const hasData = iframe.contentWindow.ITSectorData && 
+                               iframe.contentWindow.ITSectorData.certifications && 
+                               Array.isArray(iframe.contentWindow.ITSectorData.certifications);
+                addTest('ITSectorData Certifications', hasData, 
+                    hasData ? `Found ${iframe.contentWindow.ITSectorData.certifications.length} certifications` : 'ITSectorData.certifications not found or invalid');
+                
+            }, 2000); // Wait 2 seconds for JavaScript to execute
+        };
+    </script>
+</body>
+</html>

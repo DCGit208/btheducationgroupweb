@@ -1,0 +1,109 @@
+[
+  {
+    "name": "Google Cloud Digital Leader",
+    "vendor": "Google Cloud",
+    "category": "cloud-platforms",
+    "focus": "Public Cloud",
+    "level": 1,
+    "retired": false,
+    "premium": true,
+    "exam": "Cloud Digital Leader"
+  },
+  {
+    "name": "Associate Cloud Engineer",
+    "vendor": "Google Cloud",
+    "category": "cloud-platforms",
+    "focus": "Public Cloud",
+    "level": 2,
+    "retired": false,
+    "premium": true,
+    "exam": "Associate Cloud Engineer"
+  },
+  {
+    "name": "Professional Cloud Architect",
+    "vendor": "Google Cloud",
+    "category": "cloud-platforms",
+    "focus": "Public Cloud",
+    "level": 4,
+    "retired": false,
+    "premium": true,
+    "exam": "Professional Cloud Architect"
+  },
+  {
+    "name": "Professional Cloud Developer",
+    "vendor": "Google Cloud",
+    "category": "software-devops",
+    "focus": "Programming",
+    "level": 4,
+    "retired": false,
+    "premium": true,
+    "exam": "Professional Cloud Developer",
+    "prereqTags": ["GCP-Associate"],
+    "tags": ["Programming", "GCP"],
+    "vendor_stage": "Professional",
+    "logo": "../assets/images/vendor-logos/googlecloud.svg",
+    "url": "https://cloud.google.com/certification/cloud-developer"
+  },
+  {
+    "name": "Professional Cloud DevOps Engineer",
+    "vendor": "Google Cloud",
+    "category": "software-devops",
+    "focus": "DevOps",
+    "level": 4,
+    "retired": false,
+    "premium": true,
+    "exam": "Professional Cloud DevOps Engineer"
+  },
+  {
+    "name": "Professional Cloud Network Engineer",
+    "vendor": "Google Cloud",
+    "category": "core-it",
+    "focus": "Enterprise R&S",
+    "level": 4,
+    "retired": false,
+    "premium": true,
+    "exam": "Professional Cloud Network Engineer"
+  },
+  {
+    "name": "Professional Cloud Security Engineer",
+    "vendor": "Google Cloud",
+    "category": "cybersecurity",
+    "focus": "Cloud Security",
+    "level": 4,
+    "retired": false,
+    "premium": true,
+    "exam": "Professional Cloud Security Engineer"
+  },
+  {
+    "name": "Professional Collaboration Engineer",
+    "vendor": "Google Cloud",
+    "category": "cloud-platforms",
+    "focus": "Modern Workplace",
+    "level": 4,
+    "retired": false,
+    "premium": true,
+    "exam": "Professional Collaboration Engineer",
+    "logo": "../assets/images/vendor-logos/googlecloud.svg",
+    "url": "https://cloud.google.com/certification/collaboration-engineer"
+  },
+  {
+    "name": "Professional Data Engineer",
+    "vendor": "Google Cloud",
+    "category": "cloud-platforms",
+    "focus": "Data Platforms",
+    "level": 4,
+    "retired": false,
+    "premium": true,
+    "exam": "Professional Data Engineer"
+  },
+  {
+    "name": "Professional Machine Learning Engineer",
+    "vendor": "Google Cloud",
+    "category": "emerging-tech",
+    "focus": "AI & ML",
+    "level": 4,
+    "retired": false,
+    "premium": true,
+    "exam": "Professional Machine Learning Engineer"
+  }
+]

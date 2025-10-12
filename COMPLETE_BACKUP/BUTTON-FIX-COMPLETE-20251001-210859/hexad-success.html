@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to HEXAD Mastery System - BTH Education Group</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --success-gradient: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+            --accent-blue: #3b82f6;
+            --accent-green: #059669;
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .success-container {
+            max-width: 800px;
+            padding: 3rem;
+            text-align: center;
+        }
+
+        .success-icon {
+            font-size: 5rem;
+            color: var(--accent-green);
+            margin-bottom: 2rem;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .success-title {
+            font-size: 3rem;
+            font-weight: 900;
+            background: var(--success-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
+        }
+
+        .success-subtitle {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 3rem;
+        }
+
+        .order-details {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 3rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .order-details h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--accent-green);
+        }
+
+        .detail-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .detail-item:last-child {
+            border-bottom: none;
+            font-weight: 700;
+            font-size: 1.125rem;
+            color: var(--accent-green);
+        }
+
+        .access-section {
+            background: rgba(67, 233, 123, 0.1);
+            border: 2px solid var(--accent-green);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .access-section h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--accent-green);
+        }
+
+        .access-steps {
+            text-align: left;
+            margin: 1.5rem 0;
+        }
+
+        .access-steps li {
+            margin-bottom: 0.5rem;
+            padding-left: 1rem;
+        }
+
+        .lms-button {
+            background: var(--success-gradient);
+            border: none;
+            border-radius: 12px;
+            padding: 1rem 2rem;
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: white;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin: 1rem 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .lms-button:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .secondary-button {
+            background: transparent;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 12px;
+            padding: 1rem 2rem;
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: white;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin: 1rem 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .secondary-button:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.6);
+        }
+
+        .next-steps {
+            text-align: left;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        .next-steps h4 {
+            color: var(--accent-blue);
+            margin-bottom: 1rem;
+        }
+
+        .progress-info {
+            background: rgba(59, 130, 246, 0.1);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .progress-info h4 {
+            color: var(--accent-blue);
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .success-container {
+                padding: 2rem 1rem;
+            }
+            
+            .success-title {
+                font-size: 2rem;
+            }
+            
+            .lms-button,
+            .secondary-button {
+                width: 100%;
+                justify-content: center;
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="success-container">
+        <div class="success-icon">
+            <i class="fas fa-check-circle"></i>
+        </div>
+        
+        <h1 class="success-title">Payment Successful! 🎉</h1>
+        <p class="success-subtitle">
+            Welcome to the HEXAD Mastery System. Your learning journey begins now!
+        </p>
+
+        <div class="order-details" id="orderDetails">
+            <h3>Order Summary</h3>
+            <!-- Populated by JavaScript -->
+        </div>
+
+        <div class="access-section">
+            <h3><i class="fas fa-graduation-cap"></i> Instant LMS Access</h3>
+            <p>Your Learning Management System access is now active!</p>
+            
+            <div class="access-steps">
+                <ul>
+                    <li>✅ Payment processed successfully</li>
+                    <li>✅ LMS account created</li>
+                    <li>✅ Learning materials unlocked</li>
+                    <li>✅ Certification pathways activated</li>
+                </ul>
+            </div>
+
+            <a href="#" class="lms-button" id="lmsAccessBtn">
+                <i class="fas fa-play"></i>
+                Start Learning Now
+            </a>
+            
+            <a href="mailto:support@btheducationgroup.org" class="secondary-button">
+                <i class="fas fa-headset"></i>
+                Contact Support
+            </a>
+        </div>
+
+        <div class="next-steps">
+            <h4><i class="fas fa-route"></i> Your Learning Path</h4>
+            <div id="learningPath">
+                <!-- Populated by JavaScript -->
+            </div>
+        </div>
+
+        <div class="progress-info">
+            <h4><i class="fas fa-chart-line"></i> Progression System</h4>
+            <p><strong>Dimension-by-Dimension Unlock:</strong> Complete your current dimension to unlock the next one at the same level.</p>
+            <p><strong>Level Progression:</strong> Master all 6 dimensions at your current level to unlock the next level.</p>
+            <p><strong>Certification Integration:</strong> Professional certifications are embedded within your learning modules.</p>
+        </div>
+
+        <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1);">
+            <p style="color: rgba(255,255,255,0.6); font-size: 0.9rem;">
+                Need help? Contact our support team at 
+                <a href="mailto:support@btheducationgroup.org" style="color: var(--accent-green);">support@btheducationgroup.org</a>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Get order details from URL parameters or sessionStorage
+        function getOrderDetails() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const sessionOrder = JSON.parse(sessionStorage.getItem('hexadOrder') || '{}');
+            
+            return {
+                level: sessionOrder.level || urlParams.get('level'),
+                dimension: sessionOrder.dimension || urlParams.get('dimension'),
+                certifications: sessionOrder.certifications || [],
+                paymentMethod: sessionOrder.paymentMethod || urlParams.get('payment_method'),
+                total: sessionOrder.total || urlParams.get('total'),
+                sessionId: urlParams.get('session_id')
+            };
+        }
+
+        function displayOrderDetails() {
+            const order = getOrderDetails();
+            const container = document.getElementById('orderDetails');
+            
+            let html = '';
+            
+            if (order.level && order.dimension) {
+                const dimensionName = order.dimension.charAt(0).toUpperCase() + order.dimension.slice(1);
+                html += `<div class="detail-item"><span>Program</span><span>HEXAD Level ${order.level} - ${dimensionName} Development</span></div>`;
+                
+                if (order.certifications && order.certifications.length > 0) {
+                    const certNames = order.certifications.map(cert => cert.toUpperCase()).join(', ');
+                    html += `<div class="detail-item"><span>Certifications</span><span>${certNames}</span></div>`;
+                }
+                
+                const paymentMethodText = {
+                    'full': 'Full Payment (5% discount applied)',
+                    'monthly': '12 Monthly Payments',
+                    'dimension': 'Dimension-by-Dimension'
+                };
+                
+                html += `<div class="detail-item"><span>Payment Method</span><span>${paymentMethodText[order.paymentMethod] || 'One-time Payment'}</span></div>`;
+                
+                if (order.total) {
+                    html += `<div class="detail-item"><span>Total Paid</span><span>$${parseFloat(order.total).toFixed(2)}</span></div>`;
+                }
+            } else {
+                html = '<p>Order details will be available shortly...</p>';
+            }
+            
+            container.innerHTML = html;
+        }
+
+        function displayLearningPath() {
+            const order = getOrderDetails();
+            const container = document.getElementById('learningPath');
+            
+            const dimensionInfo = {
+                personal: {
+                    icon: '🧠',
+                    modules: ['Critical Thinking', 'Skills Development', 'Behavioral Mastery', 'Axioms Study'],
+                    duration: '12-24 months'
+                },
+                professional: {
+                    icon: '💼',
+                    modules: ['Industry Certifications', 'Professional Ethics', 'Career Skills', 'AI Integration'],
+                    duration: '12-24 months'
+                },
+                occupational: {
+                    icon: '🔧',
+                    modules: ['Technical Training', 'Production Skills', 'Quality Management', 'Safety Standards'],
+                    duration: '12-24 months'
+                },
+                financial: {
+                    icon: '💰',
+                    modules: ['Investment Education', 'Wealth Building', 'Financial Planning', 'Risk Management'],
+                    duration: '12-24 months'
+                },
+                relationship: {
+                    icon: '❤️',
+                    modules: ['Interpersonal Skills', 'Communication', 'Conflict Resolution', 'Network Building'],
+                    duration: '12-24 months'
+                },
+                truth: {
+                    icon: '📚',
+                    modules: ['Critical Analysis', 'Research Methods', 'Information Literacy', 'Truth Assessment'],
+                    duration: '12-24 months'
+                }
+            };
+            
+            if (order.dimension && dimensionInfo[order.dimension]) {
+                const info = dimensionInfo[order.dimension];
+                const html = `
+                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                        <div style="font-size: 2rem;">${info.icon}</div>
+                        <div>
+                            <h5 style="color: var(--accent-green);">${order.dimension.charAt(0).toUpperCase() + order.dimension.slice(1)} Development - Level ${order.level}</h5>
+                            <p style="color: rgba(255,255,255,0.8); font-size: 0.9rem;">Duration: ${info.duration}</p>
+                        </div>
+                    </div>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.5rem; margin-top: 1rem;">
+                        ${info.modules.map(module => `
+                            <div style="background: rgba(255,255,255,0.1); padding: 0.5rem; border-radius: 6px; font-size: 0.9rem;">
+                                ${module}
+                            </div>
+                        `).join('')}
+                    </div>
+                `;
+                container.innerHTML = html;
+            }
+        }
+
+        function setupLMSAccess() {
+            const order = getOrderDetails();
+            const lmsBtn = document.getElementById('lmsAccessBtn');
+            
+            // Generate LMS access URL with user credentials
+            const lmsUrl = `hexad-lms.html?level=${order.level}&dimension=${order.dimension}&session=${order.sessionId}`;
+            lmsBtn.href = lmsUrl;
+            
+            // Track user access
+            if (order.sessionId) {
+                fetch('/api/track-access', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        sessionId: order.sessionId,
+                        level: order.level,
+                        dimension: order.dimension,
+                        timestamp: new Date().toISOString()
+                    })
+                }).catch(console.error);
+            }
+        }
+
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', function() {
+            displayOrderDetails();
+            displayLearningPath();
+            setupLMSAccess();
+            
+            // Clear session storage after displaying
+            setTimeout(() => {
+                sessionStorage.removeItem('hexadOrder');
+            }, 1000);
+        });
+
+        // Send welcome email
+        function sendWelcomeEmail() {
+            const order = getOrderDetails();
+            
+            fetch('/api/send-welcome', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    sessionId: order.sessionId,
+                    level: order.level,
+                    dimension: order.dimension
+                })
+            }).catch(console.error);
+        }
+
+        // Call welcome email function
+        sendWelcomeEmail();
+    </script>
+</body>
+</html>

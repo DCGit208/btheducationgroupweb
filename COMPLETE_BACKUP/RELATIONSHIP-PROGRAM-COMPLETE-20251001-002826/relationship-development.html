@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relationship Development Programs - BTH Education Group</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <style>
+        /* ========== RELATIONSHIP DEVELOPMENT PROGRAM STYLES ========== */
+        .program-hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 120px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .program-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('content-materials/Family/pexels-august-de-richelieu-4262424.jpg') center/cover;
+            opacity: 0.2;
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            text-align: center;
+        }
+
+        .program-title {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .program-subtitle {
+            font-size: 24px;
+            margin-bottom: 15px;
+            opacity: 0.9;
+        }
+
+        .program-tagline {
+            font-size: 18px;
+            opacity: 0.8;
+            margin-bottom: 40px;
+            font-style: italic;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        .stat-number {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #ffd700;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        /* ========== PROGRAM MODULES SECTION ========== */
+        .modules-section {
+            padding: 100px 0;
+            background: #f8fafc;
+        }
+
+        .section-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #2d3748;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 18px;
+            color: #718096;
+            margin-bottom: 60px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .modules-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 80px;
+        }
+
+        .module-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .module-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+        }
+
+        .module-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+        }
+
+        .module-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .module-icon {
+            font-size: 48px;
+            margin-right: 20px;
+        }
+
+        .module-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: #2d3748;
+            margin-bottom: 5px;
+        }
+
+        .module-level {
+            font-size: 14px;
+            color: #667eea;
+            font-weight: 600;
+        }
+
+        .module-description {
+            color: #4a5568;
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+
+        .module-features {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 30px;
+        }
+
+        .module-features li {
+            padding: 8px 0;
+            position: relative;
+            padding-left: 25px;
+            color: #2d3748;
+        }
+
+        .module-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #48bb78;
+            font-weight: bold;
+        }
+
+        .module-pricing {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            padding: 20px;
+            background: #f7fafc;
+            border-radius: 10px;
+        }
+
+        .pricing-info {
+            flex: 1;
+        }
+
+        .price-amount {
+            font-size: 28px;
+            font-weight: 700;
+            color: #667eea;
+        }
+
+        .price-period {
+            font-size: 14px;
+            color: #718096;
+        }
+
+        .enroll-btn {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        .enroll-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+        }
+
+        /* ========== FAMILY MATURATION MATRIX SECTION ========== */
+        .matrix-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #2d3748 0%, #4a5568 100%);
+            color: white;
+        }
+
+        .matrix-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .matrix-title {
+            text-align: center;
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .matrix-subtitle {
+            text-align: center;
+            font-size: 18px;
+            opacity: 0.9;
+            margin-bottom: 60px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .matrix-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 20px;
+            margin-bottom: 60px;
+        }
+
+        .matrix-stage {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            transition: transform 0.3s ease, background 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .matrix-stage:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .stage-number {
+            font-size: 24px;
+            font-weight: 700;
+            color: #ffd700;
+            margin-bottom: 10px;
+        }
+
+        .stage-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .stage-description {
+            font-size: 12px;
+            opacity: 0.8;
+            line-height: 1.4;
+        }
+
+        /* ========== SUCCESS STORIES SECTION ========== */
+        .testimonials-section {
+            padding: 100px 0;
+            background: white;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background: #f8fafc;
+            border-radius: 20px;
+            padding: 40px;
+            position: relative;
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: 15px;
+            left: 20px;
+            font-size: 60px;
+            color: #667eea;
+            opacity: 0.3;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            color: #4a5568;
+            line-height: 1.6;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: #2d3748;
+        }
+
+        .testimonial-role {
+            font-size: 14px;
+            color: #718096;
+        }
+
+        /* ========== RESPONSIVE DESIGN ========== */
+        @media (max-width: 768px) {
+            .program-title {
+                font-size: 36px;
+            }
+
+            .program-subtitle {
+                font-size: 20px;
+            }
+
+            .hero-stats {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+
+            .modules-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .matrix-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .section-title {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="index.html" class="brand-link">
+                    <img src="assets/images/logo.png" alt="BTH Education Group" class="logo">
+                    <span class="brand-text">BTH Education</span>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="programs.html" class="nav-link">Programs</a></li>
+                <li><a href="oedp.html" class="nav-link">OEDP</a></li>
+                <li><a href="family-maturation-programs.html" class="nav-link active">Family Programs</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Program Hero Section -->
+    <section class="program-hero">
+        <div class="hero-content">
+            <h1 class="program-title">Relationship Development Programs</h1>
+            <h2 class="program-subtitle">"Love Grows in Connected Families"</h2>
+            <p class="program-tagline">World-Class Family Maturation Matrix™ - Building Beautiful Bonds That Last Generations</p>
+            
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-number">6</div>
+                    <div class="stat-label">Core Modules</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">24</div>
+                    <div class="stat-label">Courses Available</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">1,000+</div>
+                    <div class="stat-label">Families Transformed</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">95%</div>
+                    <div class="stat-label">Success Rate</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Program Modules Section -->
+    <section class="modules-section">
+        <div class="section-container">
+            <h2 class="section-title">Complete Program Modules</h2>
+            <p class="section-subtitle">Six comprehensive modules designed to strengthen every aspect of your family relationships through the proven Family Maturation Matrix™ framework.</p>
+            
+            <div class="modules-grid">
+                <!-- Module 1: Marriage Education & Enrichment -->
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-icon">💑</div>
+                        <div>
+                            <h3 class="module-title">Marriage Education & Enrichment</h3>
+                            <div class="module-level">Foundation Level</div>
+                        </div>
+                    </div>
+                    <p class="module-description">
+                        Build the strongest foundation for your family through comprehensive marriage education, communication mastery, and relationship enrichment programs.
+                    </p>
+                    <ul class="module-features">
+                        <li>Pre-Marriage Preparation Intensive</li>
+                        <li>Communication Mastery Workshop</li>
+                        <li>Conflict Resolution Strategies</li>
+                        <li>Intimacy & Connection Building</li>
+                        <li>Financial Partnership Planning</li>
+                        <li>Spiritual Unity Development</li>
+                    </ul>
+                    <div class="module-pricing">
+                        <div class="pricing-info">
+                            <div class="price-amount">$297</div>
+                            <div class="price-period">per module</div>
+                        </div>
+                    </div>
+                    <button class="enroll-btn" onclick="alert('Enrollment opening soon! Contact us for early access.')">
+                        Start Module 1
+                    </button>
+                </div>
+
+                <!-- Module 2: Parent-Child Communication -->
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-icon">👨‍👧‍👦</div>
+                        <div>
+                            <h3 class="module-title">Parent-Child Communication</h3>
+                            <div class="module-level">Growth Level</div>
+                        </div>
+                    </div>
+                    <p class="module-description">
+                        Master the art of connecting with children of all ages through age-appropriate communication, emotional intelligence, and developmental understanding.
+                    </p>
+                    <ul class="module-features">
+                        <li>Age-Specific Communication Strategies</li>
+                        <li>Emotional Intelligence Development</li>
+                        <li>Discipline Through Connection</li>
+                        <li>Building Trust & Respect</li>
+                        <li>Technology & Screen Time Balance</li>
+                        <li>Teenage Relationship Navigation</li>
+                    </ul>
+                    <div class="module-pricing">
+                        <div class="pricing-info">
+                            <div class="price-amount">$247</div>
+                            <div class="price-period">per module</div>
+                        </div>
+                    </div>
+                    <button class="enroll-btn" onclick="alert('Enrollment opening soon! Contact us for early access.')">
+                        Start Module 2
+                    </button>
+                </div>
+
+                <!-- Module 3: Sibling Relationship Building -->
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-icon">👫</div>
+                        <div>
+                            <h3 class="module-title">Sibling Relationship Building</h3>
+                            <div class="module-level">Development Level</div>
+                        </div>
+                    </div>
+                    <p class="module-description">
+                        Foster lifelong bonds between siblings through conflict resolution, cooperation building, and creating family traditions that unite rather than divide.
+                    </p>
+                    <ul class="module-features">
+                        <li>Sibling Rivalry Resolution</li>
+                        <li>Cooperation & Teamwork Building</li>
+                        <li>Individual Identity Respect</li>
+                        <li>Family Tradition Creation</li>
+                        <li>Birth Order Understanding</li>
+                        <li>Lifelong Bond Development</li>
+                    </ul>
+                    <div class="module-pricing">
+                        <div class="pricing-info">
+                            <div class="price-amount">$197</div>
+                            <div class="price-period">per module</div>
+                        </div>
+                    </div>
+                    <button class="enroll-btn" onclick="alert('Enrollment opening soon! Contact us for early access.')">
+                        Start Module 3
+                    </button>
+                </div>
+
+                <!-- Module 4: Extended Family Integration -->
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-icon">👨‍👩‍👧‍👦</div>
+                        <div>
+                            <h3 class="module-title">Extended Family Integration</h3>
+                            <div class="module-level">Expansion Level</div>
+                        </div>
+                    </div>
+                    <p class="module-description">
+                        Create harmony across generations by integrating grandparents, relatives, and in-laws into a cohesive family unit that honors tradition while embracing growth.
+                    </p>
+                    <ul class="module-features">
+                        <li>Multigenerational Communication</li>
+                        <li>Boundary Setting with Love</li>
+                        <li>Cultural Tradition Integration</li>
+                        <li>Holiday & Celebration Planning</li>
+                        <li>Grandparent-Grandchild Bonds</li>
+                        <li>Family History Preservation</li>
+                    </ul>
+                    <div class="module-pricing">
+                        <div class="pricing-info">
+                            <div class="price-amount">$247</div>
+                            <div class="price-period">per module</div>
+                        </div>
+                    </div>
+                    <button class="enroll-btn" onclick="alert('Enrollment opening soon! Contact us for early access.')">
+                        Start Module 4
+                    </button>
+                </div>
+
+                <!-- Module 5: Community Connection Building -->
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-icon">🏘️</div>
+                        <div>
+                            <h3 class="module-title">Community Connection Building</h3>
+                            <div class="module-level">Mastery Level</div>
+                        </div>
+                    </div>
+                    <p class="module-description">
+                        Expand your family's influence by building meaningful connections with neighbors, community organizations, and creating a support network that enriches everyone.
+                    </p>
+                    <ul class="module-features">
+                        <li>Neighborhood Engagement Strategies</li>
+                        <li>Community Service Projects</li>
+                        <li>Social Network Building</li>
+                        <li>Cultural Bridge Building</li>
+                        <li>Mentorship Program Creation</li>
+                        <li>Legacy Project Development</li>
+                    </ul>
+                    <div class="module-pricing">
+                        <div class="pricing-info">
+                            <div class="price-amount">$297</div>
+                            <div class="price-period">per module</div>
+                        </div>
+                    </div>
+                    <button class="enroll-btn" onclick="alert('Enrollment opening soon! Contact us for early access.')">
+                        Start Module 5
+                    </button>
+                </div>
+
+                <!-- Module 6: Family Legacy Creation -->
+                <div class="module-card">
+                    <div class="module-header">
+                        <div class="module-icon">👑</div>
+                        <div>
+                            <h3 class="module-title">Family Legacy Creation</h3>
+                            <div class="module-level">Excellence Level</div>
+                        </div>
+                    </div>
+                    <p class="module-description">
+                        Build a lasting family legacy that spans generations through values documentation, wealth building, mentorship systems, and impact creation.
+                    </p>
+                    <ul class="module-features">
+                        <li>Family Mission Statement Creation</li>
+                        <li>Values Documentation System</li>
+                        <li>Generational Wealth Planning</li>
+                        <li>Mentorship Program Design</li>
+                        <li>Impact Measurement Tools</li>
+                        <li>Legacy Documentation Project</li>
+                    </ul>
+                    <div class="module-pricing">
+                        <div class="pricing-info">
+                            <div class="price-amount">$397</div>
+                            <div class="price-period">per module</div>
+                        </div>
+                    </div>
+                    <button class="enroll-btn" onclick="alert('Enrollment opening soon! Contact us for early access.')">
+                        Start Module 6
+                    </button>
+                </div>
+            </div>
+
+            <!-- Complete Program Bundle -->
+            <div class="module-card" style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; margin-top: 40px;">
+                <div class="module-header">
+                    <div class="module-icon">🏆</div>
+                    <div>
+                        <h3 class="module-title" style="color: white;">Complete Family Maturation Matrix™</h3>
+                        <div class="module-level" style="color: #ffd700;">Master Level Program</div>
+                    </div>
+                </div>
+                <p class="module-description" style="color: rgba(255,255,255,0.9);">
+                    Get all 6 modules in our comprehensive Family Maturation Matrix™ program with exclusive bonuses, priority support, and lifetime access to updates.
+                </p>
+                <ul class="module-features" style="color: rgba(255,255,255,0.9);">
+                    <li>All 6 Relationship Development Modules</li>
+                    <li>Exclusive Family Assessment Tools</li>
+                    <li>Priority Email & Phone Support</li>
+                    <li>Monthly Group Coaching Calls</li>
+                    <li>Lifetime Access to Updates</li>
+                    <li>Family Success Certificate</li>
+                </ul>
+                <div class="module-pricing" style="background: rgba(255,255,255,0.1);">
+                    <div class="pricing-info">
+                        <div class="price-amount" style="color: #ffd700;">$1,497</div>
+                        <div class="price-period" style="color: rgba(255,255,255,0.8);">one-time payment (Save $585!)</div>
+                    </div>
+                </div>
+                <button class="enroll-btn" style="background: white; color: #667eea;" onclick="alert('Premium enrollment opening soon! Contact us for VIP early access.')">
+                    Get Complete Program
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Family Maturation Matrix Section -->
+    <section class="matrix-section">
+        <div class="matrix-container">
+            <h2 class="matrix-title">The Family Maturation Matrix™</h2>
+            <p class="matrix-subtitle">Our proven 6-stage framework that has transformed over 1,000 families worldwide, creating lasting bonds and generational impact through systematic relationship development.</p>
+            
+            <div class="matrix-grid">
+                <div class="matrix-stage">
+                    <div class="stage-number">1</div>
+                    <div class="stage-title">Foundation</div>
+                    <div class="stage-description">Building strong marital bonds and family structure</div>
+                </div>
+                <div class="matrix-stage">
+                    <div class="stage-number">2</div>
+                    <div class="stage-title">Growth</div>
+                    <div class="stage-description">Developing parent-child communication excellence</div>
+                </div>
+                <div class="matrix-stage">
+                    <div class="stage-number">3</div>
+                    <div class="stage-title">Development</div>
+                    <div class="stage-description">Creating harmonious sibling relationships</div>
+                </div>
+                <div class="matrix-stage">
+                    <div class="stage-number">4</div>
+                    <div class="stage-title">Expansion</div>
+                    <div class="stage-description">Integrating extended family connections</div>
+                </div>
+                <div class="matrix-stage">
+                    <div class="stage-number">5</div>
+                    <div class="stage-title">Mastery</div>
+                    <div class="stage-description">Building community and social networks</div>
+                </div>
+                <div class="matrix-stage">
+                    <div class="stage-number">6</div>
+                    <div class="stage-title">Excellence</div>
+                    <div class="stage-description">Creating lasting family legacy</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Stories Section -->
+    <section class="testimonials-section">
+        <div class="section-container">
+            <h2 class="section-title">Family Success Stories</h2>
+            <p class="section-subtitle">Real families sharing their transformation journey through our Relationship Development Programs</p>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">
+                        "The Family Maturation Matrix™ saved our marriage and transformed our family. We went from constant conflict to deep connection. Our children now come to us for advice instead of hiding problems."
+                    </p>
+                    <div class="testimonial-author">Sarah & Michael Chen</div>
+                    <div class="testimonial-role">Parents of 3, Program Graduates</div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="testimonial-text">
+                        "After Module 3, our children stopped fighting and started supporting each other. The sibling relationship building techniques actually work. Our home is peaceful for the first time in years."
+                    </p>
+                    <div class="testimonial-author">Maria Rodriguez</div>
+                    <div class="testimonial-role">Mother of 4, Module 3 Graduate</div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="testimonial-text">
+                        "The extended family integration module helped us navigate difficult in-law relationships. Now holidays are joy-filled celebrations instead of stressful obligations."
+                    </p>
+                    <div class="testimonial-author">David & Rachel Johnson</div>
+                    <div class="testimonial-role">Married 15 years, Complete Program</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>BTH Education Group</h3>
+                    <p>Building stronger families through world-class education and development programs.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Programs</h4>
+                    <ul>
+                        <li><a href="family-maturation-programs.html">Family Programs</a></li>
+                        <li><a href="relationship-development.html">Relationship Development</a></li>
+                        <li><a href="oedp.html">OEDP</a></li>
+                        <li><a href="programs.html">All Programs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Support Center</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 BTH Education Group. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Add smooth scrolling for internal links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all module cards
+        document.querySelectorAll('.module-card, .matrix-stage, .testimonial-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+::1 - - [04/Oct/2025 02:10:05] "HEAD /assets/js/it-sector-data.js HTTP/1.1" 200 -
+::1 - - [04/Oct/2025 02:10:19] "HEAD /assets/css/style.css HTTP/1.1" 200 -
+::1 - - [04/Oct/2025 02:10:36] "HEAD /assets/js/it-filter-manager.js HTTP/1.1" 200 -
+::1 - - [04/Oct/2025 02:12:11] "GET /programs/technology.html HTTP/1.1" 200 -
+::1 - - [04/Oct/2025 02:12:11] "GET /assets/js/it-sector-data.js HTTP/1.1" 200 -
+::1 - - [04/Oct/2025 02:12:11] "GET /assets/js/it-filter-manager.js HTTP/1.1" 200 -
+::1 - - [04/Oct/2025 02:12:11] "GET /assets/css/style.css HTTP/1.1" 304 -
+::1 - - [04/Oct/2025 02:12:33] "GET /programs/technology.html?id=a45bc6cc-b650-43e3-bff0-fcbd1ffcfcc9&vscodeBrowserReqId=1759540353165 HTTP/1.1" 200 -
+::1 - - [04/Oct/2025 02:13:22] "GET /test-js-functionality.html?id=a45bc6cc-b650-43e3-bff0-fcbd1ffcfcc9&vscodeBrowserReqId=1759540402229 HTTP/1.1" 200 -
+::1 - - [04/Oct/2025 02:16:12] "GET /test-js-functionality.html?id=a45bc6cc-b650-43e3-bff0-fcbd1ffcfcc9&vscodeBrowserReqId=1759540572855 HTTP/1.1" 200 -
+::1 - - [04/Oct/2025 02:16:26] "GET /programs/technology.html?id=a45bc6cc-b650-43e3-bff0-fcbd1ffcfcc9&vscodeBrowserReqId=1759540586045 HTTP/1.1" 200 -

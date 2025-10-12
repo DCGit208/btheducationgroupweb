@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Nokia Network Routing Specialist I (NRS I)",
+    "vendor": "Nokia",
+    "category": "core-it",
+    "focus": "Enterprise R&S",
+    "level": 2,
+    "retired": false,
+    "premium": false,
+    "exam": "NRS I"
+  },
+  {
+    "name": "Nokia Network Routing Specialist II (NRS II)",
+    "vendor": "Nokia",
+    "category": "core-it",
+    "focus": "Enterprise R&S",
+    "level": 3,
+    "retired": false,
+    "premium": false,
+    "exam": "NRS II"
+  },
+  {
+    "name": "Nokia Service Routing Architect (SRA)",
+    "vendor": "Nokia",
+    "category": "core-it",
+    "focus": "Enterprise R&S",
+    "level": 4,
+    "retired": false,
+    "premium": false,
+    "exam": "SRA"
+  }
+]

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BTH Course | Certification Learning Hub</title>
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    body{font-family: 'Segoe UI', Arial, sans-serif; margin:0; background:#f6f9fc; color:#1f2937;}
+    header{position:sticky; top:0; z-index:10; background:#fff; box-shadow:0 2px 10px rgba(0,0,0,.06);}
+    .container{max-width:1100px; margin:0 auto; padding:0 1rem;}
+    .nav{display:flex; align-items:center; justify-content:space-between; padding:1rem 0;}
+    .nav a{color:#1f2937; text-decoration:none; font-weight:700;}
+    .badge{display:inline-block; padding:.35rem .65rem; border-radius:14px; font-size:.85rem; font-weight:700;}
+    .badge.vendor{background:#e0f2fe; color:#0369a1;}
+    .badge.level{background:#ecfccb; color:#3f6212;}
+    .hero{background:linear-gradient(120deg,#007fff 0%,#0052cc 100%); color:#fff; padding:3rem 0; margin-bottom:2rem;}
+    .hero h1{margin:0 0 1rem 0; font-size:2.2rem; font-weight:900; letter-spacing:-1px;}
+    .sub{opacity:.95; font-size:1.1rem;}
+    .grid{display:grid; grid-template-columns: 2fr 1fr; gap:2rem; align-items:start;}
+    .card{background:#fff; border-radius:16px; box-shadow:0 6px 18px rgba(0,0,0,.06); padding:1.25rem 1.25rem;}
+    .card h2{margin-top:0;}
+    .learn-list{margin:0; padding-left:1.2rem;}
+    .learn-list li{margin:.4rem 0;}
+    .cta{display:flex; gap:1rem; flex-wrap:wrap; margin-top:1rem;}
+    .btn{display:inline-block; padding:.85rem 1.35rem; border-radius:10px; font-weight:700; text-decoration:none; border:0; cursor:pointer;}
+    .btn-primary{background:linear-gradient(90deg,#ffb347,#ffcc80); color:#111827; box-shadow: 0 10px 28px rgba(255,179,71,.25);}
+    .btn-outline{background:#fff; border:2px solid #0052cc; color:#0052cc;}
+    .meta{display:flex; gap:1rem; flex-wrap:wrap; margin:.75rem 0 0 0; font-size:.95rem; color:#374151;}
+    .toc h3{margin:.6rem 0;}
+    .toc ul{margin:0; padding-left:1.1rem;}
+    footer{margin-top:3rem; text-align:center; color:#6b7280; padding:2rem 0;}
+    @media (max-width: 880px){ .grid{grid-template-columns:1fr;} }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="nav">
+        <a href="../index.html">BTH Education Group</a>
+        <a href="certificationcourses.html">← All Certifications</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1 id="courseTitle">Certification Course</h1>
+      <div class="sub" id="courseSubtitle">Vendor-aligned fundamentals for real roles.</div>
+      <div class="meta">
+        <span class="badge vendor" id="courseVendor">Vendor</span>
+        <span class="badge level" id="courseLevel">Level: Fundamental</span>
+      </div>
+    </div>
+  </section>
+
+  <main class="container">
+    <div class="grid">
+      <article class="card">
+        <h2>About this Certification</h2>
+        <p id="courseDescription">Loading course details…</p>
+
+        <h2>What you’ll learn</h2>
+        <ul class="learn-list" id="courseOutcomes">
+          <li>Hands-on, role-based skills.</li>
+          <li>Mapped to industry-standard exam domains.</li>
+          <li>Preparation labs and practice tests (where applicable).</li>
+        </ul>
+
+        <h2>Who this is for</h2>
+        <p id="courseAudience">Beginners, jobseekers, and upskillers looking for entry-level credentials.</p>
+
+        <div class="cta">
+          <a id="enrollBtn" class="btn btn-primary" href="#">Enroll / Apply</a>
+          <a id="contactBtn" class="btn btn-outline" href="../contact.html">Talk to an Advisor</a>
+        </div>
+      </article>
+
+      <aside class="card toc">
+        <h3>Course details</h3>
+        <ul>
+          <li><strong>Format:</strong> Hybrid (self-paced + mentor)</li>
+          <li><strong>Duration:</strong> 4–12 weeks (typical)</li>
+          <li><strong>Exam:</strong> Included or proctored via Pearson VUE/Partner</li>
+          <li><strong>Certification:</strong> Industry-recognized credential</li>
+        </ul>
+        <h3 style="margin-top:1rem;">Next steps</h3>
+        <ul>
+          <li>Free readiness assessment</li>
+          <li>Financing &amp; scholarships</li>
+          <li>Career services (CV, interview prep)</li>
+        </ul>
+      </aside>
+    </div>
+  </main>
+
+  <footer>
+    © 2025 BTH Education Group — Training &amp; Exam Delivery Partner (Pearson VUE, ETA, EC-Council, AWS).
+  </footer>
+
+  <script>
+    // Dataset: minimal course registry
+    const COURSES = {
+      "adobe": {
+        title: "Adobe Certified Professional",
+        vendor: "Certiport",
+        level: "Fundamental",
+        description: "Certification across Photoshop, Illustrator, InDesign, Premiere Pro, After Effects and more—prove creative software mastery.",
+        outcomes: ["Design workflows", "Image & video editing", "Brand assets", "Exam readiness"],
+        sku: "adobe"
+      },
+      "comptia-techplus": {
+        title: "CompTIA Tech+",
+        vendor: "CompTIA",
+        level: "Fundamental",
+        description: "Validates essential IT knowledge: devices, operating systems, networking, security, and troubleshooting—ideal first IT credential.",
+        outcomes: ["Device & OS basics", "Networking & security", "Troubleshooting", "Helpdesk readiness"],
+        sku: "comptia-techplus"
+      },
+      "eta-css": {
+        title: "ETA CSS — Customer Service Specialist",
+        vendor: "ETA International",
+        level: "Professional",
+        description: "Professional customer service certification focused on communication, empathy, process, and conflict resolution.",
+        outcomes: ["Customer communication", "Service quality", "Complaint handling", "CX metrics"],
+        sku: "eta-css"
+      },
+      "eta-csm": {
+        title: "ETA CSM — Certified Service Manager",
+        vendor: "ETA International",
+        level: "Professional",
+        description: "Management credential for service operations leaders—KPIs, team leadership, continuous improvement, CX strategy.",
+        outcomes: ["Service operations", "Leadership & KPIs", "Quality frameworks", "CX strategy"],
+        sku: "eta-csm"
+      },
+      "cscu": {
+        title: "Certified Secure Computer User (CSCU)",
+        vendor: "EC-Council",
+        level: "Fundamental",
+        description: "End-user cybersecurity awareness: safe browsing, phishing defense, passwords, data protection, and device hygiene.",
+        outcomes: ["Threat awareness", "Safe practices", "Identity protection", "Incident basics"],
+        sku: "cscu"
+      },
+      "welding1": {
+        title: "Welding Fundamentals I",
+        vendor: "AWS",
+        level: "Fundamental",
+        description: "Intro to welding processes, safety, and equipment—perfect on-ramp to skilled trades.",
+        outcomes: ["Safety", "Processes overview", "Equipment basics", "Shop readiness"],
+        sku: "welding1"
+      }
+    };
+
+    function getParam(name){
+      const u = new URL(window.location.href);
+      return u.searchParams.get(name);
+    }
+
+    function render(){
+      const key = (getParam('course') || '').toLowerCase();
+      const c = COURSES[key];
+      if(!c){
+        document.getElementById('courseTitle').textContent = "Certification Course";
+        document.getElementById('courseSubtitle').textContent = "Select a course from the catalog to view details.";
+        document.getElementById('courseVendor').textContent = "Vendor";
+        document.getElementById('courseLevel').textContent = "Level: Fundamental";
+        document.getElementById('courseDescription').textContent = "We couldn’t find this course key. Please return to the catalog.";
+        document.getElementById('enrollBtn').setAttribute('href','certificationcourses.html');
+        return;
+      }
+      document.getElementById('courseTitle').textContent = c.title;
+      document.getElementById('courseSubtitle').textContent = "Vendor-aligned fundamentals for real roles.";
+      document.getElementById('courseVendor').textContent = c.vendor;
+      document.getElementById('courseLevel').textContent = "Level: " + (c.level || "Fundamental");
+      document.getElementById('courseDescription').textContent = c.description;
+      const ol = document.getElementById('courseOutcomes');
+      ol.innerHTML = "";
+      (c.outcomes || []).forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = item;
+        ol.appendChild(li);
+      });
+      // Wire enrollment to your payment or application flow
+      document.getElementById('enrollBtn').setAttribute('href', '../payment.html?sku=' + encodeURIComponent(c.sku));
+    }
+
+    render();
+  </script>
+</body>
+</html>

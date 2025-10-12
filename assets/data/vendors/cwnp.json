@@ -1,0 +1,45 @@
+[
+  {
+    "name": "Certified Wireless Specialist (CWS)",
+    "vendor": "CWNP",
+    "category": "networking",
+    "focus": "Wireless Networking",
+    "level": 1,
+    "retired": false,
+    "exam": "CWS-101",
+    "logo": "../assets/images/vendor-logos/cwnp.svg",
+    "url": "https://www.cwnp.com/certifications/cws-101/"
+  },
+  {
+    "name": "Certified Wireless Technician (CWT)",
+    "vendor": "CWNP",
+    "category": "networking",
+    "focus": "Wireless Networking",
+    "level": 1,
+    "retired": false,
+    "exam": "CWT-101",
+    "logo": "../assets/images/vendor-logos/cwnp.svg",
+    "url": "https://www.cwnp.com/certifications/cwt-101/"
+  },
+  {
+    "name": "Certified Wireless Network Administrator (CWNA)",
+    "vendor": "CWNP",
+    "category": "networking",
+    "focus": "Wireless Networking",
+    "level": 2,
+    "retired": false,
+    "exam": "CWNA-109",
+    "logo": "../assets/images/vendor-logos/cwnp.svg",
+    "url": "https://www.cwnp.com/certifications/cwna-109/"
+  },
+  {
+    "name": "CWNA – Certified Wireless Network Administrator",
+    "vendor": "CWNP",
+    "category": "core-it",
+    "focus": "Wireless",
+    "level": 2,
+    "retired": false,
+    "premium": false,
+    "exam": "CWNA"
+  }
+]

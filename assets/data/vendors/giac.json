@@ -1,0 +1,32 @@
+[
+  {
+    "name": "GIAC Security Essentials (GSEC)",
+    "vendor": "GIAC",
+    "category": "cybersecurity",
+    "focus": "Blue Team",
+    "level": 2,
+    "retired": false,
+    "premium": false,
+    "exam": "GSEC"
+  },
+  {
+    "name": "GIAC Certified Incident Handler (GCIH)",
+    "vendor": "GIAC",
+    "category": "cybersecurity",
+    "focus": "Blue Team",
+    "level": 3,
+    "retired": false,
+    "premium": false,
+    "exam": "GCIH"
+  },
+  {
+    "name": "GIAC Penetration Tester (GPEN)",
+    "vendor": "GIAC",
+    "category": "cybersecurity",
+    "focus": "Offensive Security",
+    "level": 3,
+    "retired": false,
+    "premium": false,
+    "exam": "GPEN"
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Aruba Certified Mobility Associate (ACMA)",
+    "vendor": "Aruba",
+    "category": "core-it",
+    "focus": "Wireless",
+    "level": 2,
+    "retired": false,
+    "premium": false,
+    "exam": "Aruba Certified Mobility Associate"
+  },
+  {
+    "name": "Aruba Certified Switching Associate (ACSA)",
+    "vendor": "Aruba",
+    "category": "core-it",
+    "focus": "Enterprise R&S",
+    "level": 2,
+    "retired": false,
+    "premium": false,
+    "exam": "Aruba Certified Switching Associate"
+  },
+  {
+    "name": "Aruba Certified Mobility Professional (ACMP)",
+    "vendor": "Aruba",
+    "category": "core-it",
+    "focus": "Wireless",
+    "level": 3,
+    "retired": false,
+    "premium": false,
+    "exam": "Aruba Certified Mobility Professional"
+  },
+  {
+    "name": "Aruba Certified Switching Professional (ACSP)",
+    "vendor": "Aruba",
+    "category": "core-it",
+    "focus": "Enterprise R&S",
+    "level": 3,
+    "retired": false,
+    "premium": false,
+    "exam": "Aruba Certified Switching Professional"
+  },
+  {
+    "name": "Aruba Certified Design Expert (ACDX)",
+    "vendor": "Aruba",
+    "category": "core-it",
+    "focus": "Wireless",
+    "level": 4,
+    "retired": false,
+    "premium": false,
+    "exam": "Aruba Certified Design Expert"
+  },
+  {
+    "name": "Aruba Certified Mobility Expert (ACMX)",
+    "vendor": "Aruba",
+    "category": "core-it",
+    "focus": "Wireless",
+    "level": 4,
+    "retired": false,
+    "premium": false,
+    "exam": "Aruba Certified Mobility Expert"
+  }
+]

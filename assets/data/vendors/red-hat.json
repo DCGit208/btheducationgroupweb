@@ -1,0 +1,12 @@
+[
+  { "name": "Red Hat Certified Specialist in OpenShift Administration", "vendor": "Red Hat", "category": "software-devops", "focus": "Kubernetes", "level": 3, "retired": false, "premium": true, "exam": "EX280", "logo": "../assets/images/vendor-logos/redhat.svg", "url": "https://www.redhat.com/en/services/certification/rhcs-openshift-administration" }
+  ,
+  { "name": "Red Hat Certified System Administrator (RHCSA)", "vendor": "Red Hat", "category": "specialized-tech", "focus": "Linux Administration", "level": 2, "retired": false, "premium": true, "exam": "EX200", "logo": "../assets/images/vendor-logos/redhat.svg" },
+  { "name": "Red Hat Certified Engineer (RHCE)", "vendor": "Red Hat", "category": "specialized-tech", "focus": "Linux Engineering", "level": 3, "retired": false, "premium": true, "exam": "EX294", "logo": "../assets/images/vendor-logos/redhat.svg" },
+  { "name": "Red Hat Certified Specialist in Ansible Automation", "vendor": "Red Hat", "category": "software-devops", "focus": "Automation", "level": 3, "retired": false, "premium": true, "exam": "EX374", "logo": "../assets/images/vendor-logos/redhat.svg" },
+  { "name": "Red Hat Certified Specialist in Containers and Kubernetes", "vendor": "Red Hat", "category": "software-devops", "focus": "Containers & Kubernetes", "level": 2, "retired": false, "premium": true, "exam": "EX188", "logo": "../assets/images/vendor-logos/redhat.svg" },
+  { "name": "Red Hat Certified Specialist in OpenShift Application Development", "vendor": "Red Hat", "category": "software-devops", "focus": "OpenShift App Dev", "level": 3, "retired": false, "premium": true, "exam": "EX288", "logo": "../assets/images/vendor-logos/redhat.svg" },
+  { "name": "Red Hat Certified Specialist in Ansible Automation for Network Automation", "vendor": "Red Hat", "category": "software-devops", "focus": "Network Automation", "level": 3, "retired": false, "premium": true, "exam": "EX457", "logo": "../assets/images/vendor-logos/redhat.svg" }
+  ,
+  { "name": "Red Hat Certified Architect (RHCA)", "vendor": "Red Hat", "category": "specialized-tech", "focus": "Linux & Cloud Architecture", "level": 5, "retired": false, "premium": true, "exam": "RHCA (multiple specialist exams)", "logo": "../assets/images/vendor-logos/redhat.svg" }
+ ]

@@ -1,0 +1,68 @@
+[
+  {
+    "name": "IEEE Certified Software Development Professional (CSDP)",
+    "vendor": "IEEE Computer Society",
+    "category": "software-devops",
+    "focus": "Software Engineering",
+    "level": 5,
+    "retired": false,
+    "premium": true,
+    "exam": "CSDP",
+    "prereqTags": [
+      "IEEE-Software-Requirements",
+      "IEEE-Software-Design",
+      "IEEE-Software-Construction",
+      "IEEE-Software-Testing"
+    ],
+    "tags": ["Software Engineering", "SDLC"],
+    "vendor_stage": "Expert"
+  },
+  {
+    "name": "IEEE Software Requirements Certification",
+    "vendor": "IEEE Computer Society",
+    "category": "software-devops",
+    "focus": "Requirements",
+    "level": 3,
+    "retired": false,
+    "premium": true,
+    "exam": "SWE-REQ",
+    "tags": ["IEEE-Software-Requirements"],
+    "vendor_stage": "Professional"
+  },
+  {
+    "name": "IEEE Software Design Certification",
+    "vendor": "IEEE Computer Society",
+    "category": "software-devops",
+    "focus": "Design",
+    "level": 3,
+    "retired": false,
+    "premium": true,
+    "exam": "SWE-DSN",
+    "tags": ["IEEE-Software-Design"],
+    "vendor_stage": "Professional"
+  },
+  {
+    "name": "IEEE Software Construction Certification",
+    "vendor": "IEEE Computer Society",
+    "category": "software-devops",
+    "focus": "Construction",
+    "level": 3,
+    "retired": false,
+    "premium": true,
+    "exam": "SWE-CNS",
+    "tags": ["IEEE-Software-Construction"],
+    "vendor_stage": "Professional"
+  },
+  {
+    "name": "IEEE Software Testing Certification",
+    "vendor": "IEEE Computer Society",
+    "category": "software-devops",
+    "focus": "Testing",
+    "level": 3,
+    "retired": false,
+    "premium": true,
+    "exam": "SWE-TST",
+    "tags": ["IEEE-Software-Testing"],
+    "vendor_stage": "Professional"
+  }
+]

@@ -1,0 +1,15 @@
+[
+  {"name":"Huawei Certified ICT Associate (HCIA) - Datacom","vendor":"Huawei","category":"core-it","focus":"Enterprise Networking","level":1,"retired":false,"premium":true,"vendor_area":"Datacom","exam":"HCIA-Datacom"},
+  {"name":"Huawei Certified ICT Associate (HCIA) - Security","vendor":"Huawei","category":"cybersecurity","focus":"Network Security","level":1,"retired":false,"premium":true,"vendor_area":"Security","exam":"HCIA-Security"},
+  {"name":"Huawei Certified ICT Associate (HCIA) - Cloud Service","vendor":"Huawei","category":"cloud-platforms","focus":"Cloud Service Fundamentals","level":1,"retired":false,"premium":true,"vendor_area":"Cloud Service","exam":"HCIA-Cloud Service"},
+
+  {"name":"Huawei Certified ICT Professional (HCIP) - Datacom","vendor":"Huawei","category":"core-it","focus":"Enterprise Networking Professional","level":3,"retired":false,"premium":true,"vendor_area":"Datacom","exam":"HCIP-Datacom"},
+  {"name":"Huawei Certified ICT Professional (HCIP) - Security","vendor":"Huawei","category":"cybersecurity","focus":"Network Security Professional","level":3,"retired":false,"premium":true,"vendor_area":"Security","exam":"HCIP-Security"},
+  {"name":"Huawei Certified ICT Professional (HCIP) - Cloud Service","vendor":"Huawei","category":"cloud-platforms","focus":"Cloud Service Professional","level":3,"retired":false,"premium":true,"vendor_area":"Cloud Service","exam":"HCIP-Cloud Service"},
+
+  {"name":"Huawei Certified ICT Expert (HCIE) - Datacom","vendor":"Huawei","category":"core-it","focus":"Enterprise Networking Expert","level":4,"retired":false,"premium":true,"vendor_area":"Datacom","exam":"HCIE-Datacom"},
+  {"name":"Huawei Certified ICT Expert (HCIE) - Security","vendor":"Huawei","category":"cybersecurity","focus":"Security Expert","level":4,"retired":false,"premium":true,"vendor_area":"Security","exam":"HCIE-Security"},
+  {"name":"Huawei Certified ICT Expert (HCIE) - Cloud Service","vendor":"Huawei","category":"cloud-platforms","focus":"Cloud Service Expert","level":4,"retired":false,"premium":true,"vendor_area":"Cloud Service","exam":"HCIE-Cloud Service"},
+
+  {"name":"Huawei Certified 5G Associate","vendor":"Huawei","category":"emerging-tech","focus":"5G Fundamentals","level":1,"retired":false,"premium":true,"vendor_area":"5G/Carrier","exam":"HCIA-5G"}
+]

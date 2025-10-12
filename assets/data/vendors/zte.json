@@ -1,0 +1,6 @@
+[
+  {"name":"ZTE Certified Network Engineer (ZCNE)","vendor":"ZTE","category":"core-it","focus":"Enterprise Networking","level":2,"retired":false,"premium":true,"vendor_area":"Networking","exam":"ZCNE"},
+  {"name":"ZTE Certified Network Professional (ZCNP)","vendor":"ZTE","category":"core-it","focus":"Networking Professional","level":3,"retired":false,"premium":true,"vendor_area":"Networking","exam":"ZCNP"},
+  {"name":"ZTE Certified Network Expert (ZCIE)","vendor":"ZTE","category":"core-it","focus":"Networking Expert","level":4,"retired":false,"premium":true,"vendor_area":"Networking","exam":"ZCIE"},
+  {"name":"ZTE Certified 5G Associate","vendor":"ZTE","category":"emerging-tech","focus":"5G Fundamentals","level":1,"retired":false,"premium":true,"vendor_area":"5G/Carrier","exam":"ZTE-5G-Associate"}
+]

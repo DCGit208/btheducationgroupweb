@@ -1,0 +1,12 @@
+[
+  {
+    "name": "ForgeRock Identity Management Professional",
+    "vendor": "ForgeRock",
+    "category": "cybersecurity",
+    "focus": "Cloud Security",
+    "level": 3,
+    "retired": false,
+    "premium": false,
+    "exam": "ForgeRock Identity Management Professional"
+  }
+]

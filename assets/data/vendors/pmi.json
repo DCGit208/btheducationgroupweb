@@ -1,0 +1,74 @@
+[
+  {
+    "name": "Certified Associate in Project Management (CAPM)",
+    "vendor": "PMI",
+    "category": "governance-agile",
+    "focus": "Project Management",
+    "level": 1,
+    "retired": false,
+    "exam": "CAPM",
+    "logo": "../assets/images/vendor-logos/pmi.svg",
+    "url": "https://www.pmi.org/certifications/certified-associate-capm"
+  },
+  {
+    "name": "PMI CAPM",
+    "vendor": "PMI",
+    "category": "governance-agile",
+    "focus": "Project/Program/Portfolio",
+    "level": 1,
+    "retired": false,
+    "premium": true,
+    "exam": "CAPM"
+  },
+  {
+    "name": "PMI PMP",
+    "vendor": "PMI",
+    "category": "governance-agile",
+    "focus": "Project/Program/Portfolio",
+    "level": 3,
+    "retired": false,
+    "premium": true,
+    "exam": "PMP"
+  },
+  {
+    "name": "PMI-ACP (Agile Certified Practitioner)",
+    "vendor": "PMI",
+    "category": "governance-agile",
+    "focus": "Agile Frameworks",
+    "level": 3,
+    "retired": false,
+    "premium": true,
+    "exam": "PMI-ACP"
+  },
+  {
+    "name": "PMI-PBA (Professional in Business Analysis)",
+    "vendor": "PMI",
+    "category": "governance-agile",
+    "focus": "Project/Program/Portfolio",
+    "level": 3,
+    "retired": false,
+    "premium": true,
+    "exam": "PMI-PBA"
+  },
+  {
+    "name": "Project Management Professional (PMP)",
+    "vendor": "PMI",
+    "category": "governance-agile",
+    "focus": "Project Management",
+    "level": 3,
+    "retired": false,
+    "exam": "PMP",
+    "logo": "../assets/images/vendor-logos/pmi.svg",
+    "url": "https://www.pmi.org/certifications/project-management-pmp"
+  },
+  {
+    "name": "PMI PgMP",
+    "vendor": "PMI",
+    "category": "governance-agile",
+    "focus": "Project/Program/Portfolio",
+    "level": 4,
+    "retired": false,
+    "premium": true,
+    "exam": "PgMP"
+  }
+]

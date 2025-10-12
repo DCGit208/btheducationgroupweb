@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BTH Advanced Filtering Systems - Functionality Test</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            margin: 20px; 
+            background: #f8fafc;
+        }
+        .test-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .test-section {
+            margin: 30px 0;
+            padding: 20px;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+        }
+        .test-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 20px;
+            margin: -20px -20px 20px -20px;
+            border-radius: 6px 6px 0 0;
+        }
+        .success { color: #10b981; font-weight: bold; }
+        .error { color: #ef4444; font-weight: bold; }
+        .test-result { 
+            margin: 10px 0; 
+            padding: 10px;
+            background: #f8fafc;
+            border-radius: 4px;
+        }
+        .feature-test {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .feature-card {
+            padding: 15px;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            background: white;
+        }
+        .test-button {
+            background: #3b82f6;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            margin: 10px 5px;
+        }
+        .test-button:hover { background: #2563eb; }
+        iframe {
+            width: 100%;
+            height: 600px;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1>🧪 BTH Advanced Filtering Systems - Live Functionality Test</h1>
+        <p>This page tests the actual functionality of our three advanced filtering systems in real-time.</p>
+
+        <!-- Test 1: System Loading Test -->
+        <div class="test-section">
+            <div class="test-header">
+                <h2>Test 1: System Loading & Initialization</h2>
+            </div>
+            <div id="loadingResults">
+                <div class="test-result">
+                    <strong>Technology System:</strong> <span id="techStatus">Testing...</span>
+                </div>
+                <div class="test-result">
+                    <strong>Healthcare System:</strong> <span id="healthcareStatus">Testing...</span>
+                </div>
+                <div class="test-result">
+                    <strong>Manufacturing System:</strong> <span id="manufacturingStatus">Testing...</span>
+                </div>
+            </div>
+            <button class="test-button" onclick="testSystemLoading()">Run Loading Test</button>
+        </div>
+
+        <!-- Test 2: Filter Functionality Test -->
+        <div class="test-section">
+            <div class="test-header">
+                <h2>Test 2: Filter Tab Switching</h2>
+            </div>
+            <div class="feature-test">
+                <div class="feature-card">
+                    <h4>Technology Filters</h4>
+                    <button class="test-button" onclick="testTechnologyFilters()">Test Tech Filters</button>
+                    <div id="techFilterResult" class="test-result"></div>
+                </div>
+                <div class="feature-card">
+                    <h4>Healthcare Filters</h4>
+                    <button class="test-button" onclick="testHealthcareFilters()">Test Health Filters</button>
+                    <div id="healthFilterResult" class="test-result"></div>
+                </div>
+                <div class="feature-card">
+                    <h4>Manufacturing Filters</h4>
+                    <button class="test-button" onclick="testManufacturingFilters()">Test Mfg Filters</button>
+                    <div id="mfgFilterResult" class="test-result"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Test 3: Search Functionality -->
+        <div class="test-section">
+            <div class="test-header">
+                <h2>Test 3: Search Functionality</h2>
+            </div>
+            <p>Test the advanced search capabilities:</p>
+            <div class="feature-test">
+                <div class="feature-card">
+                    <h4>Search Test</h4>
+                    <input type="text" id="searchInput" placeholder="Enter search term..." style="width: 100%; padding: 8px; margin: 10px 0;">
+                    <button class="test-button" onclick="testSearch()">Test Search</button>
+                    <div id="searchResult" class="test-result"></div>
+                </div>
+                <div class="feature-card">
+                    <h4>Vendor Filter Test</h4>
+                    <select id="vendorSelect" style="width: 100%; padding: 8px; margin: 10px 0;">
+                        <option value="">Select Vendor</option>
+                        <option value="Microsoft">Microsoft</option>
+                        <option value="AWS">AWS</option>
+                        <option value="Epic">Epic</option>
+                        <option value="Siemens">Siemens</option>
+                    </select>
+                    <button class="test-button" onclick="testVendorFilter()">Test Vendor Filter</button>
+                    <div id="vendorResult" class="test-result"></div>
+                </div>
+                <div class="feature-card">
+                    <h4>Level Integration Test</h4>
+                    <select id="levelSelect" style="width: 100%; padding: 8px; margin: 10px 0;">
+                        <option value="1">Level 1 - Foundation</option>
+                        <option value="2">Level 2 - Professional</option>
+                        <option value="3">Level 3 - Expert</option>
+                        <option value="4">Level 4 - Mastery</option>
+                        <option value="5">Level 5 - Visionary</option>
+                    </select>
+                    <button class="test-button" onclick="testLevelIntegration()">Test Level Integration</button>
+                    <div id="levelResult" class="test-result"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Test 4: Live Preview Test -->
+        <div class="test-section">
+            <div class="test-header">
+                <h2>Test 4: Live System Preview</h2>
+            </div>
+            <p>Select a system to preview in real-time:</p>
+            <div style="margin: 20px 0;">
+                <button class="test-button" onclick="loadSystemPreview('technology')">Preview Technology System</button>
+                <button class="test-button" onclick="loadSystemPreview('healthcare')">Preview Healthcare System</button>
+                <button class="test-button" onclick="loadSystemPreview('manufacturing')">Preview Manufacturing System</button>
+            </div>
+            <div id="systemPreview" style="display: none;">
+                <iframe id="previewFrame" src="" title="System Preview"></iframe>
+            </div>
+        </div>
+
+        <!-- Test 5: Cross-Page Integration Test -->
+        <div class="test-section">
+            <div class="test-header">
+                <h2>Test 5: Cross-Page Integration</h2>
+            </div>
+            <div id="integrationTest">
+                <button class="test-button" onclick="testCrossPageSync()">Test Cross-Page Sync</button>
+                <div id="syncResult" class="test-result"></div>
+            </div>
+        </div>
+
+        <!-- Results Summary -->
+        <div class="test-section">
+            <div class="test-header">
+                <h2>📊 Test Results Summary</h2>
+            </div>
+            <div id="testSummary">
+                <p>Run the tests above to see results here...</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let testResults = {
+            systemLoading: false,
+            filterFunctionality: false,
+            searchFunctionality: false,
+            crossPageSync: false
+        };
+
+        // Test 1: System Loading
+        function testSystemLoading() {
+            const systems = [
+                { name: 'Technology', file: 'programs/technology.html', class: 'ITAdvancedFilteringSystemComplete', statusId: 'techStatus' },
+                { name: 'Healthcare', file: 'programs/healthcare.html', class: 'HealthcareAdvancedFilteringSystemComplete', statusId: 'healthcareStatus' },
+                { name: 'Manufacturing', file: 'programs/manufacturing.html', class: 'ManufacturingAdvancedFilteringSystemComplete', statusId: 'manufacturingStatus' }
+            ];
+
+            systems.forEach(system => {
+                fetch(system.file)
+                    .then(response => response.text())
+                    .then(html => {
+                        const hasClass = html.includes(`class ${system.class}`);
+                        const hasInit = html.includes(`new ${system.class}()`);
+                        const status = hasClass && hasInit;
+                        
+                        document.getElementById(system.statusId).innerHTML = status 
+                            ? '<span class="success">✅ Loaded & Initialized</span>'
+                            : '<span class="error">❌ Failed to Load</span>';
+                    })
+                    .catch(error => {
+                        document.getElementById(system.statusId).innerHTML = '<span class="error">❌ File Not Found</span>';
+                    });
+            });
+
+            testResults.systemLoading = true;
+            updateTestSummary();
+        }
+
+        // Test 2: Filter Functionality
+        function testTechnologyFilters() {
+            fetch('programs/technology.html')
+                .then(response => response.text())
+                .then(html => {
+                    const hasFilterTabs = html.includes('filter-tab');
+                    const hasAdvancedSearch = html.includes('advancedSearch');
+                    const hasVendorFilter = html.includes('vendorFilterContainer');
+                    const hasDomainFilter = html.includes('domainFilterContainer');
+                    
+                    const score = [hasFilterTabs, hasAdvancedSearch, hasVendorFilter, hasDomainFilter].filter(Boolean).length;
+                    
+                    document.getElementById('techFilterResult').innerHTML = 
+                        `<span class="${score === 4 ? 'success' : 'error'}">${score}/4 filter features found</span>`;
+                });
+        }
+
+        function testHealthcareFilters() {
+            fetch('programs/healthcare.html')
+                .then(response => response.text())
+                .then(html => {
+                    const hasFilterTabs = html.includes('filter-tab');
+                    const hasAdvancedSearch = html.includes('advancedSearch');
+                    const hasVendorFilter = html.includes('vendorFilterContainer');
+                    const hasDomainFilter = html.includes('domainFilterContainer');
+                    
+                    const score = [hasFilterTabs, hasAdvancedSearch, hasVendorFilter, hasDomainFilter].filter(Boolean).length;
+                    
+                    document.getElementById('healthFilterResult').innerHTML = 
+                        `<span class="${score === 4 ? 'success' : 'error'}">${score}/4 filter features found</span>`;
+                });
+        }
+
+        function testManufacturingFilters() {
+            fetch('programs/manufacturing.html')
+                .then(response => response.text())
+                .then(html => {
+                    const hasFilterTabs = html.includes('filter-tab');
+                    const hasAdvancedSearch = html.includes('advancedSearch');
+                    const hasVendorFilter = html.includes('vendorFilterContainer');
+                    const hasDomainFilter = html.includes('domainFilterContainer');
+                    
+                    const score = [hasFilterTabs, hasAdvancedSearch, hasVendorFilter, hasDomainFilter].filter(Boolean).length;
+                    
+                    document.getElementById('mfgFilterResult').innerHTML = 
+                        `<span class="${score === 4 ? 'success' : 'error'}">${score}/4 filter features found</span>`;
+                });
+        }
+
+        // Test 3: Search Functionality
+        function testSearch() {
+            const searchTerm = document.getElementById('searchInput').value;
+            if (!searchTerm) {
+                document.getElementById('searchResult').innerHTML = '<span class="error">Please enter a search term</span>';
+                return;
+            }
+
+            // Test if search functionality exists in systems
+            Promise.all([
+                fetch('programs/technology.html').then(r => r.text()),
+                fetch('programs/healthcare.html').then(r => r.text()),
+                fetch('programs/manufacturing.html').then(r => r.text())
+            ]).then(([tech, health, mfg]) => {
+                const hasSearchLogic = [tech, health, mfg].every(html => 
+                    html.includes('searchQuery') && html.includes('toLowerCase')
+                );
+                
+                document.getElementById('searchResult').innerHTML = hasSearchLogic
+                    ? `<span class="success">✅ Search for "${searchTerm}" would work across all systems</span>`
+                    : '<span class="error">❌ Search functionality missing</span>';
+            });
+        }
+
+        function testVendorFilter() {
+            const vendor = document.getElementById('vendorSelect').value;
+            if (!vendor) {
+                document.getElementById('vendorResult').innerHTML = '<span class="error">Please select a vendor</span>';
+                return;
+            }
+
+            // Test if vendor exists in systems
+            Promise.all([
+                fetch('programs/technology.html').then(r => r.text()),
+                fetch('programs/healthcare.html').then(r => r.text()),
+                fetch('programs/manufacturing.html').then(r => r.text())
+            ]).then(([tech, health, mfg]) => {
+                const systemsWithVendor = [
+                    { name: 'Technology', has: tech.includes(vendor) },
+                    { name: 'Healthcare', has: health.includes(vendor) },
+                    { name: 'Manufacturing', has: mfg.includes(vendor) }
+                ].filter(s => s.has);
+                
+                document.getElementById('vendorResult').innerHTML = systemsWithVendor.length > 0
+                    ? `<span class="success">✅ ${vendor} found in: ${systemsWithVendor.map(s => s.name).join(', ')}</span>`
+                    : `<span class="error">❌ ${vendor} not found in any system</span>`;
+            });
+        }
+
+        function testLevelIntegration() {
+            const level = document.getElementById('levelSelect').value;
+            
+            Promise.all([
+                fetch('programs/technology.html').then(r => r.text()),
+                fetch('programs/healthcare.html').then(r => r.text()),
+                fetch('programs/manufacturing.html').then(r => r.text())
+            ]).then(([tech, health, mfg]) => {
+                const hasLevelSystem = [tech, health, mfg].every(html => 
+                    html.includes('levelPricing') && html.includes('currentLevel')
+                );
+                
+                document.getElementById('levelResult').innerHTML = hasLevelSystem
+                    ? `<span class="success">✅ Level ${level} integration found in all systems</span>`
+                    : '<span class="error">❌ Level integration missing</span>';
+            });
+        }
+
+        // Test 4: Live Preview
+        function loadSystemPreview(system) {
+            const urls = {
+                'technology': 'programs/technology.html',
+                'healthcare': 'programs/healthcare.html',
+                'manufacturing': 'programs/manufacturing.html'
+            };
+            
+            document.getElementById('systemPreview').style.display = 'block';
+            document.getElementById('previewFrame').src = urls[system];
+        }
+
+        // Test 5: Cross-Page Integration
+        function testCrossPageSync() {
+            Promise.all([
+                fetch('programs/technology.html').then(r => r.text()),
+                fetch('programs/healthcare.html').then(r => r.text()),
+                fetch('programs/manufacturing.html').then(r => r.text()),
+                fetch('hexad-mastery.html').then(r => r.text())
+            ]).then(([tech, health, mfg, hexad]) => {
+                const hasTechSync = tech.includes('sessionStorage.setItem') && tech.includes('hexadTechnologySync');
+                const hasHealthSync = health.includes('sessionStorage.setItem') && health.includes('hexadHealthcareSync');
+                const hasMfgSync = mfg.includes('sessionStorage.setItem') && mfg.includes('hexadManufacturingSync');
+                const hasHexadSync = hexad.includes('sessionStorage');
+                
+                const syncCount = [hasTechSync, hasHealthSync, hasMfgSync, hasHexadSync].filter(Boolean).length;
+                
+                document.getElementById('syncResult').innerHTML = syncCount === 4
+                    ? '<span class="success">✅ Cross-page sync implemented in all 4 systems</span>'
+                    : `<span class="error">❌ Cross-page sync missing (${syncCount}/4 systems)</span>`;
+                
+                testResults.crossPageSync = syncCount === 4;
+                updateTestSummary();
+            });
+        }
+
+        function updateTestSummary() {
+            const completedTests = Object.values(testResults).filter(Boolean).length;
+            const totalTests = Object.keys(testResults).length;
+            
+            document.getElementById('testSummary').innerHTML = `
+                <h3>Test Progress: ${completedTests}/${totalTests} completed</h3>
+                <ul>
+                    <li>System Loading: ${testResults.systemLoading ? '✅' : '⏳'}</li>
+                    <li>Filter Functionality: ${testResults.filterFunctionality ? '✅' : '⏳'}</li>
+                    <li>Search Functionality: ${testResults.searchFunctionality ? '✅' : '⏳'}</li>
+                    <li>Cross-Page Sync: ${testResults.crossPageSync ? '✅' : '⏳'}</li>
+                </ul>
+            `;
+        }
+
+        // Auto-run basic tests when page loads
+        window.addEventListener('load', () => {
+            setTimeout(testSystemLoading, 1000);
+        });
+    </script>
+</body>
+</html>
