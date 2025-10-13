@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Support | BTH Education Group</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Need help with a course, enrollment, or testing? Contact BTH Education Group support.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .faq { margin-top: 2rem; }
+    .faq-item { border: 1px solid var(--border); border-radius: 12px; margin-bottom: 0.75rem; background:#fff; }
+    .faq-q { width: 100%; text-align: left; padding: 1rem 1.25rem; border: 0; background: transparent; font-weight: 600; cursor: pointer; }
+    .faq-a { display: none; padding: 0 1.25rem 1rem; color: #4a5568; }
+    .faq-item.open .faq-a { display: block; }
+    .support-hero { padding: 6rem 0 2rem; margin-top: 80px; }
+    .partner-grid-compact .partner-logo { width: 56px; height: 56px; object-fit: contain; }
+    .partner-grid-compact .compact-partner { display:flex; flex-direction:column; align-items:center; justify-content:center; }
+    .partner-grid-compact .compact-partner span { margin-top:0.25rem; font-size:0.85rem; color:#374151; }
+    /* Footer grid layout */
+    .site-footer .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 2rem;
+      align-items: start;
+    }
+    @media (max-width: 900px) {
+      .site-footer .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 600px) {
+      .site-footer .footer-grid { grid-template-columns: 1fr; }
+    }
+    .site-footer .footer-section h4 { margin-bottom: 0.75rem; }
+    .site-footer .footer-links { list-style: none; padding: 0; margin: 0; }
+    .site-footer .footer-links li + li { margin-top: 0.5rem; }
+    /* Footer visual separation for Support page */
+    .footer-divider {
+      height: 8px;
+      background: linear-gradient(90deg, rgba(59,130,246,.35), rgba(16,185,129,.35));
+      border: 0;
+      margin: 3rem 0 0;
+    }
+
+    .site-footer--support {
+      background: #0f172a; /* slate-900 */
+      color: #cbd5e1;      /* slate-300 */
+      border-top: 1px solid rgba(148,163,184,0.15);
+    }
+    .site-footer--support a { color: #e2e8f0; text-decoration: none; }
+    .site-footer--support a:hover { color: #ffffff; text-decoration: underline; }
+
+    .site-footer--support .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 2.5rem;
+      align-items: start;
+      padding-top: 2.5rem;
+      padding-bottom: 1.5rem;
+    }
+    .site-footer--support .footer-grid > *:not(:first-child) {
+      border-left: 1px solid rgba(148,163,184,0.15);
+      padding-left: 1.5rem;
+    }
+    .site-footer--support .footer-section h4,
+    .site-footer--support .footer-brand .logo {
+      color: #ffffff;
+    }
+    .site-footer--support .footer-brand p { color: #94a3b8; }
+
+    .site-footer--support .footer-links { list-style: none; padding: 0; margin: 0; }
+    .site-footer--support .footer-links li + li { margin-top: 0.5rem; }
+    .site-footer--support .footer-bottom {
+      border-top: 1px solid rgba(148,163,184,0.15);
+      margin-top: 1rem;
+      padding-top: 1rem;
+      color: #94a3b8;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 1100px) {
+      .site-footer--support .footer-grid { grid-template-columns: 1.5fr 1fr 1fr; }
+      .site-footer--support .footer-grid > *:nth-child(4) { grid-column: 1 / -1; border-left: 0; padding-left: 0; border-top: 1px solid rgba(148,163,184,0.15); padding-top: 1rem; margin-top: 0.5rem; }
+    }
+    @media (max-width: 800px) {
+      .site-footer--support .footer-grid { grid-template-columns: 1fr 1fr; }
+      .site-footer--support .footer-grid > * { border-left: 0; padding-left: 0; }
+      .site-footer--support .footer-grid > *:not(:first-child) { border-top: 1px solid rgba(148,163,184,0.15); padding-top: 1rem; margin-top: 0.5rem; }
+    }
+    @media (max-width: 540px) {
+      .site-footer--support .footer-grid { grid-template-columns: 1fr; gap: 1.25rem; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header" id="header">
+    <div class="container">
+      <nav class="nav">
+        <a href="index.html" class="logo">BTH<span>Education</span></a>
+
+        <div class="nav-links" id="navLinks">
+          <a href="about.html">About</a>
+          <a href="programs.html">Programs</a>
+          <a href="oedp.html">OEDP</a>
+          <a href="partners.html">Partners</a>
+          <a href="support.html" class="active">Support</a>
+        </div>
+
+        <div class="cta-group">
+          <a href="assessment.html" class="btn btn-ghost btn-small">🎯 Free Assessment</a>
+          <a href="apply.html" class="btn btn-primary btn-small">Apply Now</a>
+          <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero hero-gradient support-hero">
+    <div class="container">
+      <div class="hero-inner">
+        <div class="authority-badges">
+          <div class="badge">Help Center</div>
+          <div class="badge">1‑Business‑Day Response</div>
+          <div class="badge">Pearson VUE Partner</div>
+        </div>
+        <h1>Support &amp; Help Center</h1>
+        <p class="lead">Have questions about courses, enrollment, testing, billing, or technical issues? Start with the FAQs below or send us a message — we’ll respond within one business day.</p>
+        <div class="cta-row">
+          <a href="programs/certificationcourses.html" class="btn btn-outline">← Back to Certification Catalog</a>
+          <a href="#contact" class="btn btn-primary">Contact Support</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="two-column">
+          <!-- Left: Self-serve -->
+          <div>
+            <div class="card">
+              <h2>Browse Help Topics</h2>
+              <div class="tiles" style="margin-top:1rem">
+                <a class="tile" href="#faq-enrollment">
+                  <h3>📝 Enrollment &amp; Admissions</h3>
+                  <p>Applications, program fit, prerequisites, scheduling.</p>
+                  <span>View FAQs →</span>
+                </a>
+                <a class="tile" href="#faq-exams">
+                  <h3>🧪 Exams &amp; Testing</h3>
+                  <p>Pearson VUE scheduling, ID requirements, retakes.</p>
+                  <span>View FAQs →</span>
+                </a>
+                <a class="tile" href="#faq-billing">
+                  <h3>💳 Billing &amp; Payments</h3>
+                  <p>Invoices, refunds, coupons, receipts, payment plans.</p>
+                  <span>View FAQs →</span>
+                </a>
+                <a class="tile" href="#faq-technical">
+                  <h3>🛠️ Technical Issues</h3>
+                  <p>Login, LMS access, video playback, course progress.</p>
+                  <span>View FAQs →</span>
+                </a>
+              </div>
+            </div>
+
+            <div id="faq" class="card faq" style="margin-top:2rem">
+              <h2>Frequently Asked Questions</h2>
+
+              <h3 id="faq-enrollment" style="margin-top:1.25rem">Enrollment &amp; Admissions</h3>
+              <div class="faq-item">
+                <button class="faq-q">How do I know which certification to start with?</button>
+                <div class="faq-a"><p>Begin with foundational certifications in your interest area (e.g., IT Fundamentals, Digital Literacy, or CCS). Try our free assessment to match your goals.</p></div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-q">Do you offer mentorship or internships?</button>
+                <div class="faq-a"><p>Yes. OEDP is hybrid: online learning + real-world mentorship. Many tracks include internships or project-based work.</p></div>
+              </div>
+
+              <h3 id="faq-exams" style="margin-top:1.25rem">Exams &amp; Testing</h3>
+              <div class="faq-item">
+                <button class="faq-q">Where do I take my Pearson VUE exam?</button>
+                <div class="faq-a"><p>We are an Authorized Test Center. You can test on-site (where available) or via OnVUE online proctoring, depending on the certification.</p></div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-q">What IDs are required?</button>
+                <div class="faq-a"><p>Government-issued ID is typically required. Check the specific exam program’s ID policy before test day.</p></div>
+              </div>
+
+              <h3 id="faq-billing" style="margin-top:1.25rem">Billing &amp; Payments</h3>
+              <div class="faq-item">
+                <button class="faq-q">Do you offer refunds or payment plans?</button>
+                <div class="faq-a"><p>We offer refunds subject to our policy and payment plans for select programs. Contact support before purchasing if you need a plan.</p></div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-q">Can I apply a coupon code?</button>
+                <div class="faq-a"><p>Yes, when available. Coupon/promo fields appear at checkout if a valid promotion is active for your selected course.</p></div>
+              </div>
+
+              <h3 id="faq-technical" style="margin-top:1.25rem">Technical Issues</h3>
+              <div class="faq-item">
+                <button class="faq-q">I can’t access my course or video is buffering.</button>
+                <div class="faq-a"><p>Try logging out/in, clearing cache, or a different browser. If the problem persists, contact support with your browser and device details.</p></div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-q">How do I reset my password?</button>
+                <div class="faq-a"><p>Use the “Forgot password” link on the sign-in page. If the email doesn’t arrive within 5 minutes, check spam or contact support.</p></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Contact form -->
+          <div id="contact">
+            <div class="card">
+              <h2>Contact Support</h2>
+              <p class="muted">Prefer email? Write us at <strong>coursesupport@btheducationgroup.org</strong>.</p>
+              <form id="supportForm" action="api/send.php" method="post" enctype="multipart/form-data" novalidate>
+                <input type="hidden" name="form_type" value="support">
+                <input type="text" name="hp_url" id="hp_url" style="display:none;">
+
+                <div class="grid-2">
+                  <div>
+                    <label for="name">Full Name</label>
+                    <input id="name" name="Name" required>
+                  </div>
+                  <div>
+                    <label for="email">Email</label>
+                    <input id="email" name="Email" type="email" required>
+                  </div>
+                </div>
+
+                <div class="grid-2">
+                  <div>
+                    <label for="phone">Phone (optional)</label>
+                    <input id="phone" name="Phone" placeholder="+1 555 123 4567">
+                  </div>
+                  <div>
+                    <label for="topic">Topic</label>
+                    <select id="topic" name="Topic" required>
+                      <option value="">Select a topic</option>
+                      <option>General Question</option>
+                      <option>Enrollment / Admissions</option>
+                      <option>Scheduling / Classes</option>
+                      <option>Exam / Testing</option>
+                      <option>Billing / Payments</option>
+                      <option>Technical Issue</option>
+                      <option>Certificates / Results</option>
+                      <option>Other</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div>
+                  <label for="message">Message</label>
+                  <textarea id="message" name="Message" placeholder="How can we help? Include context, timelines, and any reference numbers."></textarea>
+                </div>
+
+                <div class="cta-row" style="justify-content:flex-start;margin-top:0.5rem">
+                  <button type="submit" class="btn btn-primary">Send to Support</button>
+                  <a class="btn btn-ghost" href="index.html">Back to Home</a>
+                </div>
+
+                <div id="ok" class="success">Thanks! Your message has been sent. We’ll reply within one business day.</div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- Trust signals -->
+<div class="authorizations-section" style="margin-top:2rem">
+  <div class="authorizations-header">
+    <h2>Trusted by Leading Certification &amp; Technology Partners</h2>
+    <p>We deliver training and exams in partnership with the world’s most respected programs.</p>
+  </div>
+
+  <div class="partner-grid-compact" style="align-items:stretch">
+    <div class="compact-partner" title="Pearson VUE">
+      <picture>
+        <source srcset="assets/images/vendor-logos/pearsonvue.svg" type="image/svg+xml">
+        <img class="partner-logo" src="assets/images/vendor-logos/pearsonvue.png" alt="Pearson VUE">
+      </picture>
+      <span>Pearson VUE</span>
+    </div>
+
+    <div class="compact-partner" title="Certiport">
+      <picture>
+        <source srcset="assets/images/vendor-logos/certiport.svg" type="image/svg+xml">
+        <img class="partner-logo" src="assets/images/vendor-logos/certiport.png" alt="Certiport">
+      </picture>
+      <span>Certiport</span>
+    </div>
+
+    <div class="compact-partner" title="CompTIA">
+      <picture>
+        <source srcset="assets/images/vendor-logos/comptia.svg" type="image/svg+xml">
+        <img class="partner-logo" src="assets/images/vendor-logos/comptia.png" alt="CompTIA">
+      </picture>
+      <span>CompTIA</span>
+    </div>
+
+    <div class="compact-partner" title="EC-Council">
+      <picture>
+        <source srcset="assets/images/vendor-logos/eccouncil.svg" type="image/svg+xml">
+        <img class="partner-logo" src="assets/images/vendor-logos/eccouncil.png" alt="EC-Council">
+      </picture>
+      <span>EC‑Council</span>
+    </div>
+
+    <div class="compact-partner" title="Microsoft">
+      <picture>
+        <source srcset="assets/images/vendor-logos/microsoft.svg" type="image/svg+xml">
+        <img class="partner-logo" src="assets/images/vendor-logos/microsoft.png" alt="Microsoft">
+      </picture>
+      <span>Microsoft</span>
+    </div>
+
+    <div class="compact-partner" title="Cisco">
+      <picture>
+        <source srcset="assets/images/vendor-logos/cisco.svg" type="image/svg+xml">
+        <img class="partner-logo" src="assets/images/vendor-logos/cisco.png" alt="Cisco">
+      </picture>
+      <span>Cisco</span>
+    </div>
+
+    <div class="compact-partner" title="Adobe">
+      <picture>
+        <source srcset="assets/images/vendor-logos/adobe.svg" type="image/svg+xml">
+        <img class="partner-logo" src="assets/images/vendor-logos/adobe.png" alt="Adobe">
+      </picture>
+      <span>Adobe</span>
+    </div>
+
+    <div class="compact-partner" title="Autodesk">
+      <picture>
+        <source srcset="assets/images/vendor-logos/autodesk.svg" type="image/svg+xml">
+        <img class="partner-logo" src="assets/images/vendor-logos/autodesk.png" alt="Autodesk">
+      </picture>
+      <span>Autodesk</span>
+    </div>
+
+    <div class="compact-partner" title="AWS">
+      <picture>
+        <source srcset="assets/images/vendor-logos/aws.svg" type="image/svg+xml">
+        <img class="partner-logo" src="assets/images/vendor-logos/aws.png" alt="AWS">
+      </picture>
+      <span>AWS</span>
+    </div>
+
+    <div class="compact-partner" title="PMI">
+      <picture>
+        <source srcset="assets/images/vendor-logos/pmi.svg" type="image/svg+xml">
+        <img class="partner-logo" src="assets/images/vendor-logos/pmi.png" alt="PMI">
+      </picture>
+      <span>PMI</span>
+    </div>
+
+    <div class="compact-partner" title="Unity">
+      <picture>
+        <source srcset="assets/images/vendor-logos/unity.svg" type="image/svg+xml">
+        <img class="partner-logo" src="assets/images/vendor-logos/unity.png" alt="Unity">
+      </picture>
+      <span>Unity</span>
+    </div>
+
+    <div class="compact-partner" title="Apple">
+      <picture>
+        <source srcset="assets/images/vendor-logos/apple.svg" type="image/svg+xml">
+        <img class="partner-logo" src="assets/images/vendor-logos/apple.png" alt="Apple">
+      </picture>
+      <span>Apple</span>
+    </div>
+
+    <div class="compact-partner" title="ETA International">
+      <picture>
+        <source srcset="assets/images/vendor-logos/eta.svg" type="image/svg+xml">
+        <img class="partner-logo" src="assets/images/vendor-logos/eta.png" alt="ETA International">
+      </picture>
+      <span>ETA International</span>
+    </div>
+
+    <div class="compact-partner" title="NABCEP">
+      <picture>
+        <source srcset="assets/images/vendor-logos/nabcep.svg" type="image/svg+xml">
+        <img class="partner-logo" src="assets/images/vendor-logos/nabcep.png" alt="NABCEP">
+      </picture>
+      <span>NABCEP</span>
+    </div>
+
+    <div class="compact-partner" title="MSSC">
+      <picture>
+        <source srcset="assets/images/vendor-logos/mssc.svg" type="image/svg+xml">
+        <img class="partner-logo" src="assets/images/vendor-logos/mssc.png" alt="MSSC">
+      </picture>
+      <span>MSSC</span>
+    </div>
+  </div>
+</div>
+      </div>
+    </section>
+  </main>
+
+  <div class="footer-divider"></div>
+  <footer class="site-footer site-footer--support">
+    <div class="container">
+      <div class="footer-grid grid grid-4">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">BTH<span>Education</span></a>
+          <p>Global Education Investment Organization specializing in Family Education, Professional Early Child Education, Occupational Education, Investment Education and Education Franchises.</p>
+        </div>
+
+        <div class="footer-section">
+          <h4>Education Investment Programs</h4>
+          <ul class="footer-links">
+            <li><a href="programs/certificationcourses.html">Certification Catalog</a></li>
+            <li><a href="oedp.html">OEDP - Workforce Development</a></li>
+            <li><a href="pece.html">PECE - Family Education</a></li>
+            <li><a href="investor-education.html">Investment Education</a></li>
+            <li><a href="social-administration.html">ISSAD - Social Administration</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Resources</h4>
+          <ul class="footer-links">
+            <li><a href="assessment.html">🎯 Free Career Assessment</a></li>
+            <li><a href="catalog.html">📥 Program Catalog</a></li>
+            <li><a href="calculator.html">📊 ROI Calculator</a></li>
+            <li><a href="success-stories.html">Success Stories</a></li>
+            <li><a href="programs/coursecontact.html">Course Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About BTH</a></li>
+            <li><a href="partners.html">Partners</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="support.html" class="active">Support</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 BTH Education Group. All rights reserved. | Global Education Investment Organization</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function(){
+      var form = document.getElementById('supportForm');
+      if (!form) return;
+      form.addEventListener('submit', async function(e){
+        e.preventDefault();
+        var btn = form.querySelector('button[type="submit"]');
+        if (btn) btn.disabled = true;
+
+        try {
+          var res = await fetch(form.action, { method: 'POST', body: new FormData(form) });
+          var data = await res.json();
+          if (btn) btn.disabled = false;
+
+          if (data.ok) {
+            var ok = document.getElementById('ok');
+            if (ok) { ok.style.display = 'block'; ok.textContent = 'Thanks! Your message has been sent. We’ll reply within one business day.'; }
+            form.reset();
+          } else {
+            alert((data.errors && data.errors.join('\n')) || data.error || 'There was a problem sending your message.');
+          }
+        } catch(err) {
+          if (btn) btn.disabled = false;
+          alert('Network or server error. Please try again.');
+        }
+      });
+    })();
+  </script>
+  <script>
+    // FAQ accordion
+    document.querySelectorAll('.faq-q').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        item.classList.toggle('open');
+      });
+    });
+
+    // Global header behavior
+    window.addEventListener('scroll', function() {
+      const header = document.getElementById('header');
+      if (header) {
+        if (window.scrollY > 100) header.classList.add('scrolled');
+        else header.classList.remove('scrolled');
+      }
+    });
+    const hamburger = document.getElementById('hamburger');
+    if (hamburger) {
+      hamburger.addEventListener('click', function() {
+        const navLinks = document.getElementById('navLinks');
+        if (navLinks) navLinks.classList.toggle('active');
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Course Contact | BTH Education Group</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Questions about a specific certification course? Contact the BTH Education Group learning team.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    :root{--ink:#0f172a;--muted:#475569;--line:#e2e8f0;--brand:#0052cc;--brand-2:#007fff;--ok:#10b981;}
+    body{background:linear-gradient(135deg,#f5f7fb 0%,#eaf1ff 100%);color:var(--ink);font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+    .container{max-width:1000px;margin:0 auto;padding:0 20px}
+    header.main-nav{position:sticky;top:0;background:rgba(255,255,255,.85);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);z-index:30}
+    .wrap{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{font-weight:900;letter-spacing:-.02em}
+    .page-hero{padding:80px 0 30px;text-align:center}
+    .eyebrow{display:inline-flex;gap:.5rem;align-items:center;font-weight:800;text-transform:uppercase;letter-spacing:.12em;background:#fff;border:1px solid var(--line);padding:.35rem .7rem;border-radius:999px}
+    h1{font-size:clamp(1.9rem,4vw,2.6rem);margin:.6rem 0}
+    p.lead{font-size:1.05rem;color:#334155;max-width:760px;margin:0 auto}
+    .card{background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:0 12px 40px rgba(0,0,0,.06);padding:24px}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+    @media (max-width:860px){.grid{grid-template-columns:1fr}}
+    label{font-weight:700;color:#0b1220}
+    input,select,textarea{width:100%;padding:.9rem 1rem;border:1px solid var(--line);border-radius:12px;font-size:1rem}
+    textarea{min-height:180px}
+    .btn{display:inline-flex;align-items:center;gap:.45rem;padding:.9rem 1.2rem;border-radius:12px;border:1px solid var(--line);background:#fff;font-weight:800}
+    .btn-primary{border:none;background:linear-gradient(90deg,var(--brand),var(--brand-2));color:#fff;box-shadow:0 10px 26px rgba(0,82,204,.18)}
+    .btn-ghost{background:#fff}
+    .row{display:flex;gap:10px;flex-wrap:wrap}
+    .muted{color:var(--muted);font-size:.95rem}
+    .success{display:none;margin-top:14px;background:#ecfdf5;border:1px solid #bbf7d0;color:#065f46;padding:12px;border-radius:10px}
+    .crumbs{font-size:.9rem;margin-top:8px}
+    .crumbs a{color:var(--brand)}
+    footer{background:linear-gradient(90deg,var(--brand),var(--brand-2));color:#fff;margin-top:40px;padding:30px 0}
+    footer .links{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin-bottom:8px}
+    footer a{color:#fff}
+  </style>
+</head>
+<body>
+  <header class="main-nav">
+    <div class="container wrap">
+      <a class="brand" href="../index.html">BTH <span style="font-weight:700;color:#334155">Education</span></a>
+      <nav class="nav-links">
+        <a href="../programs.html">Programs</a>
+        <a href="../oedp.html">OEDP</a>
+        <a href="../partners.html">Partners</a>
+        <a href="../support.html">Support</a>
+        <a href="coursecontact.html">Contact</a>
+      </nav>
+      <div class="row">
+        <a class="btn" href="../assessment.html">Free Assessment</a>
+        <a class="btn btn-primary" href="../apply.html">Apply Now</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <div class="eyebrow">Course Contact • Learning Team</div>
+      <h1>Ask About a Certification Course</h1>
+      <p class="lead">Have questions about enrollment, prerequisites, scheduling, or exams? Send us details and our learning advisors will help you pick the right path.</p>
+      <p class="crumbs"><a href="certificationcourses.html">← Back to Certification Catalog</a></p>
+    </div>
+  </section>
+
+  <main class="container" style="padding-bottom:26px">
+    <div class="card">
+      <form id="courseForm" action="../api/send.php" method="post" enctype="multipart/form-data" novalidate>
+  <input type="hidden" name="form_type" value="course_contact">
+  <input type="text" name="hp_url" id="hp_url" style="display:none;">
+        <div class="grid">
+          <div>
+            <label for="name">Full Name</label>
+            <input id="name" name="Name" required>
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input id="email" name="Email" type="email" required>
+          </div>
+          <div>
+            <label for="phone">Phone (optional)</label>
+            <input id="phone" name="Phone" placeholder="+1 555 123 4567">
+          </div>
+          <div>
+            <label for="vendor">Vendor</label>
+            <select id="vendor" name="Vendor" required>
+              <option value="">Select vendor</option>
+              <option>Certiport</option>
+              <option>ETA</option>
+              <option>CompTIA</option>
+              <option>EC-Council</option>
+              <option>AWS (Welding)</option>
+              <option>PMI</option>
+              <option>Adobe</option>
+              <option>Autodesk</option>
+              <option>Apple</option>
+              <option>Cisco</option>
+              <option>Unity</option>
+              <option>Microsoft</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div>
+            <label for="course">Course / Certification</label>
+            <input id="course" name="Course" placeholder="e.g., CompTIA Tech+, EM1 DC, MOS Excel, Adobe Photoshop">
+          </div>
+          <div>
+            <label for="urgency">Urgency</label>
+            <select id="urgency" name="Urgency">
+              <option>General Question</option>
+              <option>Ready to Enroll</option>
+              <option>Need Scheduling Help</option>
+              <option>Exam/Testing Support</option>
+            </select>
+          </div>
+          <div style="grid-column:1/-1">
+            <label for="message">Message</label>
+            <textarea id="message" name="Message" placeholder="How can we help? Please include any timelines, background, or goals."></textarea>
+          </div>
+        </div>
+        <div class="row" style="margin-top:10px">
+          <button type="submit" class="btn btn-primary">Send to course_info@btheducationgroup.org</button>
+          <a class="btn btn-ghost" href="certificationcourses.html">Back to Catalog</a>
+        </div>
+        <div id="ok" class="success">Thanks! Your email client should have opened. If not, please email <strong>course_info@btheducationgroup.org</strong> directly.</div>
+        <p class="muted" style="margin-top:10px">We’ll reply within one business day.</p>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="links">
+        <a href="../index.html">Home</a>
+        <a href="../about.html">About</a>
+        <a href="https://btheducationgroup.org/program.html">Programs</a>
+        <a href="../partners.html">Partners</a>
+        <a href="../support.html">Support</a>
+      </div>
+      <p style="text-align:center;opacity:.9">&copy; 2025 BTH Education Group — Learn • Certify • Work • Earn.</p>
+    </div>
+  </footer>
+
+  <script>
+document.getElementById('courseForm').addEventListener('submit', async function(e){
+  e.preventDefault();
+  const form = e.currentTarget;
+  const btn = form.querySelector('button[type="submit"]');
+  btn.disabled = true;
+
+  try {
+    const res = await fetch(form.action, { method: 'POST', body: new FormData(form) });
+    const data = await res.json();
+    btn.disabled = false;
+
+    if (data.ok) {
+      document.getElementById('ok').style.display = 'block';
+      form.reset();
+    } else {
+      alert((data.errors && data.errors.join('\n')) || data.error || 'There was a problem sending your message.');
+    }
+  } catch(err) {
+    btn.disabled = false;
+    alert('Network or server error.');
+  }
+});
+</script>
+</body>
+</html>

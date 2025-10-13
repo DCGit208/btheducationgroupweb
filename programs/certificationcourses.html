@@ -36,6 +36,7 @@
     .hero:before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(0,82,204,.75),rgba(0,127,255,.55));z-index:0}
     .hero-inner{position:relative;z-index:1;display:grid;place-items:center;padding:120px 0 80px}
     .hero-card{background:rgba(255,255,255,.9);backdrop-filter:blur(12px);border:1px solid var(--line);border-radius:24px;padding:36px;max-width:980px;text-align:center;box-shadow:0 24px 70px rgba(0,0,0,.12)}
+    .hero-card.parallax{will-change:transform;transition:transform .2s ease-out}
     .eyebrow{display:inline-flex;gap:.5rem;align-items:center;font-weight:800;text-transform:uppercase;letter-spacing:.12em;color:#0f172a;background:#fff;border:1px solid var(--line);padding:.4rem .75rem;border-radius:999px;margin-bottom:14px}
     .hero h1{font-size:clamp(2rem,4vw,3.25rem);line-height:1.1;margin:.2rem 0 .6rem;letter-spacing:-.02em}
     .text-gradient{background:linear-gradient(90deg,var(--accent),var(--accent-2));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
@@ -45,6 +46,14 @@
     .kpi strong{display:block;font-size:1.6rem}
     .partner-row{display:flex;flex-wrap:wrap;gap:18px;justify-content:center;margin:14px 0}
     .partner-row img{height:36px;width:auto;filter:drop-shadow(0 2px 8px rgba(0,0,0,.08))}
+    .partner-float{animation:partnerBob 6s ease-in-out infinite; animation-delay:calc(var(--i)*.25s)}
+@keyframes partnerBob{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-6px)}
+}
+@media (prefers-reduced-motion:reduce){
+  .partner-float{animation:none}
+}
     .hero-ctas{display:flex;gap:12px;justify-content:center;margin-top:10px;flex-wrap:wrap}
     /* ===== FILTERS TOOLBAR ===== */
     .toolbar{position:sticky;top:58px;z-index:30;background:#fff;border-bottom:1px solid var(--line)}
@@ -60,8 +69,48 @@
     .card{position:relative;background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px 16px;box-shadow:0 8px 28px rgba(0,0,0,.06);transition:.2s transform,.2s box-shadow;overflow:hidden}
     .card:hover{transform:translateY(-6px);box-shadow:0 20px 48px rgba(0,82,204,.12)}
     .card .vendor{display:flex;align-items:center;gap:.6rem;color:#0b1220;font-weight:700;margin-bottom:10px}
-    .card .vendor img{width:36px;height:36px;object-fit:contain}
-    .badge{position:absolute;top:10px;right:10px;background:linear-gradient(90deg,var(--brand),var(--brand-2));color:#fff;padding:.25rem .6rem;border-radius:999px;font-size:.75rem;font-weight:800;letter-spacing:.06em}
+    .card .vendor img{
+      height:28px;
+      width:auto;
+      max-width:140px; /* prevent overly wide logos from shrinking too much */
+      object-fit:contain;
+      image-rendering:auto;
+    }
+    .card .vendor img[alt*="Certiport"],
+    .card .vendor img[alt*="certiport"]{
+      height:36px;
+      max-width:160px;
+    }
+    .badge{
+      position:absolute;
+      top:10px;
+      left:10px; /* moved to top-left */
+      background:#ffffff;
+      color:#0b1220;
+      padding:.28rem .6rem;
+      border-radius:999px;
+      font-size:.72rem;
+      font-weight:800;
+      letter-spacing:.04em;
+      border:1px solid var(--line);
+      box-shadow:0 6px 18px rgba(0,0,0,.08);
+      z-index: 3;
+    }
+    .sector-pill{
+      position:absolute;
+      top:10px;
+      right:10px; /* moved to top-right */
+      background:linear-gradient(90deg,#0ea5e9,#2563eb);
+      color:#fff;
+      padding:.28rem .6rem;
+      border-radius:999px;
+      font-size:.72rem;
+      font-weight:800;
+      letter-spacing:.04em;
+      border:1px solid rgba(255,255,255,.25);
+      box-shadow:0 6px 18px rgba(2,6,23,.18);
+      z-index: 3;
+    }
     .card h3{font-size:1.1rem;margin:.2rem 0 .35rem;color:#0b1220}
     .card p{color:var(--muted);font-size:.96rem;margin:.2rem 0 .8rem}
     .tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
@@ -70,12 +119,41 @@
     .btn{display:inline-flex;align-items:center;gap:.45rem;padding:.6rem .9rem;border-radius:10px;border:1px solid var(--line);background:#fff;font-weight:700}
     .btn.cta{border:none;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#111;box-shadow:0 8px 18px rgba(255,179,71,.22)}
     .btn.ghost{background:#fff}
-    .bookmark{position:absolute;top:-28px;right:-28px;width:90px;height:90px;background:conic-gradient(from 210deg at 50% 50%,#ffd699,#fff);transform:rotate(45deg)}
+    .bookmark{
+      position:absolute;
+      top:-28px;
+      right:-28px;
+      width:90px;
+      height:90px;
+      background:conic-gradient(from 210deg at 50% 50%,#ffd699,#fff);
+      transform:rotate(45deg);
+      z-index: 1; /* ensure decorative element stays behind labels */
+      opacity:.85;
+    }
     /* ===== SKELETON / PAGINATION ===== */
     .skeleton{background:linear-gradient(90deg,#f2f4f7 25%,#e9eef6 37%,#f2f4f7 63%);background-size:400% 100%;animation:sheen 1.4s ease infinite;border-radius:12px;height:140px}
     @keyframes sheen{0%{background-position:100% 0}100%{background-position:-100% 0}}
     .pager{display:flex;justify-content:center;gap:12px;margin-top:18px}
     .pager button{padding:.6rem .9rem;border-radius:10px;border:1px solid var(--line);background:#fff;font-weight:700}
+    .pager .pages{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+    .pager .page-btn{
+      padding:.5rem .8rem;
+      border-radius:10px;
+      border:1px solid var(--line);
+      background:#fff;
+      font-weight:700;
+      min-width:40px;
+      text-align:center;
+      cursor:pointer;
+    }
+    .pager .page-btn[aria-current="page"]{
+      background:linear-gradient(90deg,var(--brand),var(--brand-2));
+      color:#fff;
+      border-color:transparent;
+      box-shadow:0 6px 16px rgba(0,82,204,.18);
+      cursor:default;
+    }
+    .pager .dots{padding:.5rem .6rem;color:#64748b;user-select:none}
     /* ===== PARTNERS ===== */
     #partners{background:#fff;border-top:1px solid var(--line);padding:40px 0;margin-top:10px}
     #partners h2{text-align:center;margin:0 0 16px}
@@ -142,13 +220,13 @@
           <div class="kpi"><strong>10K+ </strong><small>Learners</small></div>
           <div class="kpi"><strong>94% </strong><small>Placement</small></div>
         </div>
-        <div class="partner-row">
-          <img src="../assets/certiport-logo.png" alt="Certiport" loading="lazy">
-          <img src="../assets/eta-logo.png" alt="ETA International" loading="lazy">
-          <img src="../assets/comptia-logo.png" alt="CompTIA" loading="lazy">
-          <img src="../assets/eccouncil-logo.png" alt="EC‑Council" loading="lazy">
-          <img src="../assets/aws-logo.png" alt="AWS (Welding Society)" loading="lazy">
-        </div>
+<div class="partner-row">
+  <img src="../assets/images/vendor-logos/certiport.svg" alt="Certiport" loading="lazy" class="partner-float" style="--i:0">
+  <img src="../assets/images/vendor-logos/eta.svg" alt="ETA International" loading="lazy" class="partner-float" style="--i:1">
+  <img src="../assets/images/vendor-logos/comptia.svg" alt="CompTIA" loading="lazy" class="partner-float" style="--i:2">
+  <img src="../assets/images/vendor-logos/eccouncil.svg" alt="EC-Council" loading="lazy" class="partner-float" style="--i:3">
+  <img src="../assets/images/vendor-logos/aws.svg" alt="AWS (Welding Society)" loading="lazy" class="partner-float" style="--i:4">
+</div>
         <div class="hero-ctas">
           <a href="#catalog" class="btn-small btn-primary" style="padding:.8rem 1.1rem;border-radius:12px;">Browse Certifications</a>
           <a href="../certcourse-lms.html" class="btn-small" style="padding:.8rem 1.1rem;border-radius:12px;">Go to Learning Hub</a>
@@ -204,9 +282,10 @@
   <section id="catalog" class="catalog">
     <div class="container">
       <div id="grid" class="grid" aria-live="polite"></div>
-      <div class="pager">
-        <button id="prev" disabled>Prev</button>
-        <button id="next">Load More</button>
+      <div class="pager" role="navigation" aria-label="Pagination">
+        <button id="prev" aria-label="Previous page" disabled>Prev</button>
+        <div id="pages" class="pages" role="list"></div>
+        <button id="next" aria-label="Next page">Next</button>
       </div>
     </div>
   </section>
@@ -216,19 +295,19 @@
     <div class="container">
       <h2 class="reveal">Our Certification &amp; Exam Delivery Partners</h2>
       <div class="logos reveal">
-        <img src="../assets/certiport-logo.png" alt="Certiport" loading="lazy">
-        <img src="../assets/eta-logo.png" alt="ETA" loading="lazy">
-        <img src="../assets/comptia-logo.png" alt="CompTIA" loading="lazy">
-        <img src="../assets/eccouncil-logo.png" alt="EC‑Council" loading="lazy">
-        <img src="../assets/adobe-logo.png" alt="Adobe" loading="lazy">
-        <img src="../assets/autodesk-logo.png" alt="Autodesk" loading="lazy">
-        <img src="../assets/apple-logo.png" alt="Apple" loading="lazy">
-        <img src="../assets/cisco-logo.png" alt="Cisco" loading="lazy">
-        <img src="../assets/meta-logo.png" alt="Meta" loading="lazy">
-        <img src="../assets/pmi-logo.png" alt="PMI" loading="lazy">
-        <img src="../assets/unity-logo.png" alt="Unity" loading="lazy">
-        <img src="../assets/aws-logo.png" alt="AWS" loading="lazy">
-      </div>
+  <img src="../assets/images/vendor-logos/certiport.svg" alt="Certiport" loading="lazy">
+  <img src="../assets/images/vendor-logos/eta.svg" alt="ETA" loading="lazy">
+  <img src="../assets/images/vendor-logos/comptia.svg" alt="CompTIA" loading="lazy">
+  <img src="../assets/images/vendor-logos/eccouncil.svg" alt="EC-Council" loading="lazy">
+  <img src="../assets/images/vendor-logos/adobe.svg" alt="Adobe" loading="lazy">
+  <img src="../assets/images/vendor-logos/autodesk.svg" alt="Autodesk" loading="lazy">
+  <img src="../assets/images/vendor-logos/apple.svg" alt="Apple" loading="lazy">
+  <img src="../assets/images/vendor-logos/cisco.svg" alt="Cisco" loading="lazy">
+  <img src="../assets/images/vendor-logos/meta.svg" alt="Meta" loading="lazy">
+  <img src="../assets/images/vendor-logos/pmi.svg" alt="PMI" loading="lazy">
+  <img src="../assets/images/vendor-logos/unity.svg" alt="Unity" loading="lazy">
+  <img src="../assets/images/vendor-logos/aws.svg" alt="AWS" loading="lazy">
+</div>
     </div>
   </section>
 
@@ -238,10 +317,10 @@
       <div class="links">
         <a href="../index.html">Home</a>
         <a href="../about.html">About</a>
-        <a href="../programs.html">Programs</a>
+        <a href="https://btheducationgroup.org/program.html">Programs</a>
         <a href="../partners.html">Partners</a>
-        <a href="../contact.html">Contact</a>
-        <a href="../support.html">Support</a>
+        <a href="/coursecontact.html">Contact</a>
+        <a href="/support.html">Support</a>
       </div>
       <p class="copy">&copy; 2025 BTH Education Group — Learn • Certify • Work • Earn.</p>
     </div>
@@ -289,15 +368,28 @@
     ];
 
     // Derive logos from vendor
-    function logoFor(vendor){
-      const v = (vendor||'').toLowerCase();
-      if(v.includes('certiport')) return '../assets/certiport-logo.png';
-      if(v.includes('comp')) return '../assets/comptia-logo.png';
-      if(v.includes('eta')) return '../assets/eta-logo.png';
-      if(v.includes('ec-') || v.includes('ec‑') || v.includes('council')) return '../assets/eccouncil-logo.png';
-      if(v.includes('aws')) return '../assets/aws-logo.png';
-      return '../assets/placeholder-logo.png';
-    }
+   function logoFor(vendor){
+  // Map normalized vendor name -> svg filename (supports eccouncil.svg)
+  const map = {
+    'certiport':'certiport.svg',
+    'eta':'eta.svg',
+    'comptia':'comptia.svg',
+    'ec-council':'eccouncil.svg',
+    'eccouncil':'eccouncil.svg',
+    'aws':'aws.svg',
+    'adobe':'adobe.svg',
+    'autodesk':'autodesk.svg',
+    'apple':'apple.svg',
+    'cisco':'cisco.svg',
+    'meta':'meta.svg',
+    'unity':'unity.svg',
+    'pmi':'pmi.svg',
+    'microsoft':'microsoft.svg'
+  };
+  const key = (vendor||'').toLowerCase().replace(/&amp;|&/g,'and').replace(/\s+/g,'-');
+  const file = map[key] || `${key}.svg`;
+  return `../assets/images/vendor-logos/${file}`;
+}
 
     // State
     let state = { q:'', sector:'', sort:'popular', page:1, pageSize:12, chips:[] };
@@ -315,7 +407,37 @@
     const $grid = document.getElementById('grid');
     const $prev = document.getElementById('prev');
     const $next = document.getElementById('next');
+    const $pages = document.getElementById('pages');
     const $chips = document.getElementById('quick-chips');
+    function buildPages(maxPage){
+      if(!$pages) return;
+      // Windowed pagination around current page
+      const windowSize = 7;
+      let start = Math.max(1, state.page - Math.floor(windowSize/2));
+      let end = start + windowSize - 1;
+      if (end > maxPage){ end = maxPage; start = Math.max(1, end - windowSize + 1); }
+
+      function btn(n, current=false){
+        return `<button class="page-btn" data-page="${n}" ${current?'aria-current="page"':''} aria-label="Page ${n}">${n}</button>`;
+      }
+
+      const parts = [];
+      // Always show first
+      if (start > 1){
+        parts.push(btn(1, state.page===1));
+        if (start > 2) parts.push('<span class="dots" aria-hidden="true">…</span>');
+      }
+      for(let n=start; n<=end; n++){
+        parts.push(btn(n, n===state.page));
+      }
+      // Always show last
+      if (end < maxPage){
+        if (end < maxPage-1) parts.push('<span class="dots" aria-hidden="true">…</span>');
+        parts.push(btn(maxPage, state.page===maxPage));
+      }
+
+      $pages.innerHTML = parts.join('');
+    }
 
     $q.value = state.q; $sector.value = state.sector; $sort.value = state.sort;
 
@@ -337,8 +459,20 @@
     });
 
     // Pagination
-    $prev.addEventListener('click', ()=>{ if(state.page>1){ state.page--; render(); } });
-    $next.addEventListener('click', ()=>{ state.page++; render(); });
+    $prev.addEventListener('click', ()=>{ 
+      if (state.page > 1) { 
+        state.page--; 
+        render(); 
+      }
+    });
+    $next.addEventListener('click', ()=>{ 
+      const total = filterData().length;
+      const maxPage = Math.max(1, Math.ceil(total / state.pageSize));
+      if (state.page < maxPage) {
+        state.page++;
+        render();
+      }
+    });
 
     function syncURL(){
       const p = new URLSearchParams();
@@ -375,28 +509,34 @@
     function render(){
       const all = filterData();
       const total = all.length;
-      const start = (state.page-1)*state.pageSize;
-      const pageItems = all.slice(start, start+state.pageSize);
+      const maxPage = Math.max(1, Math.ceil(total / state.pageSize));
+
+      // Clamp the current page BEFORE computing slice indices
+      if (state.page > maxPage) state.page = maxPage;
+      if (state.page < 1) state.page = 1;
+
+      const start = (state.page - 1) * state.pageSize;
+      const pageItems = all.slice(start, start + state.pageSize);
 
       $grid.innerHTML = '';
 
       if(!pageItems.length){
         $grid.innerHTML = '<div class="chip">No results. Try another search or filter.</div>';
         $prev.disabled = true; $next.disabled = true;
+        buildPages(maxPage);
         return;
       }
 
       pageItems.forEach(item=>{
         const card = document.createElement('article');
-        card.className = 'card reveal';
+        card.className = 'card reveal on';
         const tags = (item.tags||[]).map(t=>`<span class="tag">${t}</span>`).join('');
         const q = state.q.trim();
         card.innerHTML = `
-          <span class="badge">${item.vendor}</span>
+          <span class="sector-pill" title="Sector">${item.sector}</span>
           <div class="vendor">
             <img src="${logoFor(item.vendor)}" alt="${item.vendor} logo" loading="lazy">
             <span>${item.vendor}</span>
-            <span class="chip" style="margin-left:auto">${item.sector}</span>
           </div>
           <h3>${highlight(item.title, q)}</h3>
           <p>${highlight(item.blurb||'', q)}</p>
@@ -410,9 +550,23 @@
         $grid.appendChild(card);
       });
 
-      $prev.disabled = state.page===1;
-      $next.disabled = (start + state.pageSize) >= total;
+      // Ensure newly rendered cards are visible even without IntersectionObserver
+      const pendingReveals = document.querySelectorAll('#grid .reveal:not(.on)');
+      pendingReveals.forEach(el => el.classList.add('on'));
+
+      $prev.disabled = state.page <= 1;
+      $next.disabled = state.page >= maxPage;
+      buildPages(maxPage);
     }
+    // Numbered pagination click (delegated)
+    $pages.addEventListener('click', (e)=>{
+      const b = e.target.closest('.page-btn');
+      if(!b) return;
+      const n = parseInt(b.dataset.page, 10);
+      if (!Number.isFinite(n) || n===state.page) return;
+      state.page = n;
+      render();
+    });
 
     render();
 
@@ -433,6 +587,71 @@
         "itemListElement": list
       });
       document.head.appendChild(script);
+    })();
+    (function parallaxHero(){
+  const card = document.querySelector('.hero-card');
+  if(!card) return;
+  card.classList.add('parallax');
+  let ticking = false;
+  function onScroll(){
+    if(ticking) return;
+    window.requestAnimationFrame(()=>{
+      const y = window.scrollY || 0;
+      const delta = Math.max(0, 120 - y);
+      card.style.transform = `translateY(${Math.max(0, delta*0.05)}px)`;
+      ticking = false;
+    });
+    ticking = true;
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+})();
+
+    /* --- SVG -> PNG graceful fallback + prefer SVG globally --- */
+    (function assetFormatHelpers(){
+      function enableSvgPngFallback(root=document){
+        const imgs = root.querySelectorAll('img[src$=".svg"]');
+        imgs.forEach(img=>{
+          function onErr(){
+            try{
+              img.removeEventListener('error', onErr);
+              const src = img.getAttribute('src');
+              if(!src) return;
+              // swap only once
+              if(src.endsWith('.svg')){
+                img.setAttribute('src', src.replace(/\.svg(\?.*)?$/i, '.png$1'));
+              }
+            }catch(e){}
+          }
+          // ensure we don't double-bind
+          img.addEventListener('error', onErr, { once:true });
+        });
+      }
+
+      function preferSvgOverPng(root=document){
+        const imgs = root.querySelectorAll('img[src*="/vendor-logos/"][src$=".png"]');
+        imgs.forEach(img=>{
+          const src = img.getAttribute('src');
+          if(!src) return;
+          const svg = src.replace(/\.png(\?.*)?$/i, '.svg$1');
+          img.setAttribute('src', svg);
+        });
+      }
+
+      // initial pass
+      preferSvgOverPng(document);
+      enableSvgPngFallback(document);
+
+      // hook into dynamic renders (catalog cards)
+      const _render = render;
+      render = function(){
+        _render();
+        // after cards are injected, try to prefer svg & attach fallback within grid only
+        const grid = document.getElementById('grid');
+        if(grid){
+          preferSvgOverPng(grid);
+          enableSvgPngFallback(grid);
+        }
+      };
     })();
   </script>
 </body>

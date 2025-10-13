@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Support | BTH Education Group</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Find answers fast or contact BTH Education Group support for enrollment, payment, scheduling, and testing help.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    :root{--ink:#0f172a;--muted:#475569;--line:#e2e8f0;--brand:#0052cc;--brand-2:#007fff;--ok:#10b981;}
+    body{background:linear-gradient(135deg,#f5f7fb 0%,#eaf1ff 100%);color:var(--ink);font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+    .container{max-width:1100px;margin:0 auto;padding:0 20px}
+    header.main-nav{position:sticky;top:0;background:rgba(255,255,255,.85);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);z-index:30}
+    .wrap{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{font-weight:900;letter-spacing:-.02em}
+    .hero{padding:80px 0 34px;text-align:center}
+    .eyebrow{display:inline-flex;gap:.5rem;align-items:center;font-weight:800;text-transform:uppercase;letter-spacing:.12em;background:#fff;border:1px solid var(--line);padding:.35rem .7rem;border-radius:999px}
+    h1{font-size:clamp(2rem,4vw,2.7rem);margin:.6rem 0}
+    p.lead{font-size:1.08rem;color:#334155;max-width:820px;margin:0 auto}
+    .grid{display:grid;grid-template-columns:1.2fr .8fr;gap:24px;margin-top:20px}
+    @media (max-width:980px){.grid{grid-template-columns:1fr}}
+    .card{background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:0 12px 40px rgba(0,0,0,.06);padding:24px}
+    .accordion details{border:1px solid var(--line);background:#fff;border-radius:12px;margin-bottom:10px;overflow:hidden}
+    .accordion summary{cursor:pointer;list-style:none;padding:14px 16px;font-weight:800}
+    .accordion summary::-webkit-details-marker{display:none}
+    .accordion .content{padding:0 16px 16px;color:#334155}
+    label{font-weight:700}
+    input,select,textarea{width:100%;padding:.9rem 1rem;border:1px solid var(--line);border-radius:12px;font-size:1rem}
+    textarea{min-height:160px}
+    .row{display:flex;gap:10px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:.45rem;padding:.9rem 1.2rem;border-radius:12px;border:1px solid var(--line);background:#fff;font-weight:800}
+    .btn-primary{border:none;background:linear-gradient(90deg,var(--brand),var(--brand-2));color:#fff;box-shadow:0 10px 26px rgba(0,82,204,.18)}
+    .success{display:none;margin-top:12px;background:#ecfdf5;border:1px solid #bbf7d0;color:#065f46;padding:12px;border-radius:10px}
+    footer{background:linear-gradient(90deg,var(--brand),var(--brand-2));color:#fff;margin-top:40px;padding:30px 0}
+    footer .links{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin-bottom:8px}
+    footer a{color:#fff}
+  </style>
+</head>
+<body>
+  <header class="main-nav">
+    <div class="container wrap">
+      <a class="brand" href="index.html">BTH <span style="font-weight:700;color:#334155">Education</span></a>
+      <nav class="nav-links">
+        <a href="programs/certificationcourses.html">Certifications</a>
+        <a href="oedp.html">OEDP</a>
+        <a href="partners.html">Partners</a>
+        <a href="about.html">About</a>
+      </nav>
+      <div class="row">
+        <a class="btn" href="assessment.html">Free Assessment</a>
+        <a class="btn btn-primary" href="apply.html">Apply Now</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <div class="eyebrow">Support Hub</div>
+      <h1>How can we help?</h1>
+      <p class="lead">Find quick answers or contact our support team for help with enrollment, payments, scheduling, and testing.</p>
+    </div>
+  </section>
+
+  <main class="container" style="padding-bottom:28px">
+    <div class="grid">
+      <!-- FAQs -->
+      <div class="card">
+        <h2 style="margin-bottom:12px">Popular FAQs</h2>
+        <div class="accordion">
+          <details>
+            <summary>How do I enroll in a certification course?</summary>
+            <div class="content">Open the <a href="programs/certificationcourses.html">Certification Catalog</a>, pick a course, and click <strong>Start Course</strong>. You’ll be guided to the Learning Hub to complete enrollment.</div>
+          </details>
+          <details>
+            <summary>How are payments handled?</summary>
+            <div class="content">Payments are securely processed via Stripe. You’ll receive a receipt by email. For invoice or purchase orders, contact support below.</div>
+          </details>
+          <details>
+            <summary>Where do I schedule my certification exam?</summary>
+            <div class="content">Exams are delivered through Pearson VUE and vendor partners. You’ll get scheduling instructions after course enrollment.</div>
+          </details>
+          <details>
+            <summary>Can I reschedule or cancel?</summary>
+            <div class="content">Yes—policies vary by vendor. Contact us with your order details and target exam date, and we’ll help.</div>
+          </details>
+          <details>
+            <summary>Do you offer group/corporate packages?</summary>
+            <div class="content">Yes. We can tailor programs for teams and enterprise with reporting and manager dashboards.</div>
+          </details>
+        </div>
+      </div>
+
+      <!-- Support form -->
+      <div class="card">
+        <h2 style="margin-bottom:12px">Contact Support</h2>
+        <form id="supportForm" action="mailto:coursesupport@btheducationgroup.org" method="post" enctype="text/plain">
+          <div class="row" style="flex-direction:column;gap:14px">
+            <div>
+              <label for="sname">Full Name</label>
+              <input id="sname" name="Name" required>
+            </div>
+            <div>
+              <label for="semail">Email</label>
+              <input id="semail" name="Email" type="email" required>
+            </div>
+            <div>
+              <label for="topic">Topic</label>
+              <select id="topic" name="Topic" required>
+                <option value="">Choose a topic</option>
+                <option>Enrollment</option>
+                <option>Payment / Invoice</option>
+                <option>Scheduling / Exam</option>
+                <option>Account / LMS Access</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div>
+              <label for="details">Details</label>
+              <textarea id="details" name="Message" placeholder="Describe the issue (include order #, course/vendor, and desired date if applicable)"></textarea>
+            </div>
+            <div class="row">
+              <button type="submit" class="btn btn-primary">Send to coursesupport@btheducationgroup.org</button>
+              <a class="btn" href="programs/certificationcourses.html">Back to Certifications</a>
+            </div>
+            <div id="ok" class="success">Thanks! Your email client should have opened. If not, email <strong>coursesupport@btheducationgroup.org</strong> directly.</div>
+            <p class="muted" style="color:#475569">We typically respond within one business day.</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="https://btheducationgroup.org/program.html">Programs</a>
+        <a href="partners.html">Partners</a>
+        <a href="programs/coursecontact.html">Course Contact</a>
+      </div>
+      <p style="text-align:center;opacity:.9">&copy; 2025 BTH Education Group — Learn • Certify • Work • Earn.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Mailto prefill (works on static hosting)
+    document.getElementById('supportForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const email = 'coursesupport@btheducationgroup.org';
+      const name = document.getElementById('sname').value.trim();
+      const from = document.getElementById('semail').value.trim();
+      const topic = document.getElementById('topic').value.trim();
+      const details = document.getElementById('details').value.trim();
+
+      const subject = encodeURIComponent(`Support: ${topic || 'General Inquiry'}`);
+      const body = encodeURIComponent(
+`Name: ${name}
+Email: ${from}
+Topic: ${topic}
+
+Details:
+${details}`);
+
+      window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+      document.getElementById('ok').style.display = 'block';
+    });
+  </script>
+</body>
+</html>
