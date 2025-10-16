@@ -63,6 +63,52 @@
     .select{border:1px solid var(--line);border-radius:10px;padding:.6rem .8rem;background:#fff}
     .chips{display:flex;gap:8px;flex-wrap:wrap}
     .chip[data-active="true"]{background:rgba(16,185,129,.08);border-color:#c7f4e6}
+    /* === Keep toolbar on ONE line with horizontal scroll if needed === */
+.toolbar .wrap{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  /* force single line */
+  flex-wrap: nowrap;
+  /* allow sideways scroll instead of wrapping */
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  padding: 12px 0;
+}
+
+/* Search grows, everything else stays natural width */
+.search{
+  flex: 1 1 auto;          /* grow + shrink */
+  min-width: 240px;         /* keep it usable on small screens */
+}
+.select,
+.chips{
+  flex: 0 0 auto;           /* do NOT grow, do NOT shrink */
+}
+
+/* Make the quick chips row scroll horizontally instead of wrapping */
+.chips{
+  white-space: nowrap;
+  gap: 8px;
+  padding-bottom: 2px;      /* room for hidden scrollbar overlays */
+}
+.chips .chip{
+  display: inline-flex;     /* ensure no wrap between chips */
+}
+
+/* Optional: thinner scrollbar for the toolbar line (WebKit) */
+.toolbar .wrap::-webkit-scrollbar{ height: 8px; }
+.toolbar .wrap::-webkit-scrollbar-thumb{
+  background: rgba(15,23,42,.15);
+  border-radius: 4px;
+}
+
+/* Mobile tweaks so it still fits gracefully */
+@media (max-width: 740px){
+  .search{ min-width: 180px; }
+  .toolbar .wrap{ gap: 8px; }
+}
     /* ===== GRID ===== */
     section.catalog{padding:28px 0}
     .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
@@ -159,11 +205,92 @@
     #partners h2{text-align:center;margin:0 0 16px}
     #partners .logos{display:flex;flex-wrap:wrap;gap:22px;justify-content:center}
     #partners .logos img{height:42px;width:auto;filter:grayscale(.05) drop-shadow(0 2px 6px rgba(0,0,0,.06))}
-    /* ===== FOOTER ===== */
-    footer{background:linear-gradient(90deg,var(--brand),var(--brand-2));color:#fff;padding:36px 0;margin-top:28px}
-    footer .links{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin-bottom:8px}
-    footer a{color:#fff}
-    .copy{opacity:.9;text-align:center}
+    /* === Global Footer (compact, elegant) === */
+    .site-footer--global{
+      background: linear-gradient(90deg, var(--brand), var(--brand-2));
+      color:#fff;
+      padding:32px 0 26px;
+      border-top: 1px solid rgba(255,255,255,0.15);
+    }
+    .site-footer--global a{ color:#fff; text-decoration:none; }
+    .site-footer--global a:hover{ text-decoration:underline; text-underline-offset:2px; }
+
+    .site-footer--global .footer-grid{
+      display:grid;
+      grid-template-columns: 1.1fr 1fr 1fr 1fr;
+      gap: 2.25rem;
+      align-items:flex-start;
+      padding-top: 8px;
+      padding-bottom: 6px;
+    }
+    .site-footer--global .footer-grid > *:not(:first-child){
+      border-left:1px solid rgba(255,255,255,0.18);
+      padding-left:1.5rem;
+    }
+
+    .site-footer--global .footer-brand{ max-width:360px; }
+    .site-footer--global .footer-brand .logo{
+      font-weight:900; letter-spacing:-.02em; font-size:1.35rem; display:inline-block; margin-bottom:.35rem;
+    }
+    .site-footer--global .footer-brand .logo span{ color:#ffffff; font-weight:900; }
+    .site-footer--global .footer-brand p{
+      color: rgba(255,255,255,0.9);
+      font-size: .95rem;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    .site-footer--global .footer-section h4{
+      font-size:1rem; font-weight:800; margin:0 0 .4rem; letter-spacing:.02em; padding-bottom:.3rem; position:relative;
+    }
+    .site-footer--global .footer-section h4::after{
+      content:""; display:block; width:28px; height:2px; margin-top:.45rem; border-radius:2px;
+      background: linear-gradient(90deg, rgba(255,255,255,.95), rgba(255,255,255,.55));
+    }
+    .site-footer--global .footer-links{
+      list-style:none; padding:0; margin:.25rem 0 0; display:flex; flex-direction:column; gap:.45rem;
+    }
+    .site-footer--global .footer-links a{
+      font-size:.95rem; opacity:.95;
+    }
+
+    .site-footer--global .footer-bottom{
+      border-top:1px solid rgba(255,255,255,0.15);
+      margin-top: 18px;
+      padding-top: 14px;
+      text-align:center;
+      color:#fff;
+      opacity:.9;
+      font-size:.95rem;
+    }
+
+    @media (max-width:1100px){
+      .site-footer--global .footer-grid{
+        grid-template-columns: 1.4fr 1fr 1fr;
+      }
+      .site-footer--global .footer-grid > *:nth-child(4){
+        grid-column:1 / -1;
+        border-left:0; padding-left:0;
+        border-top:1px solid rgba(255,255,255,.15);
+        padding-top:1rem; margin-top:.5rem;
+      }
+    }
+    @media (max-width:800px){
+      .site-footer--global .footer-grid{
+        grid-template-columns: 1fr 1fr;
+        gap:1.5rem 1.25rem;
+      }
+      .site-footer--global .footer-grid > *{
+        border-left:0; padding-left:0;
+      }
+      .site-footer--global .footer-grid > *:not(:first-child){
+        border-top:1px solid rgba(255,255,255,.15);
+        padding-top:1rem; margin-top:.5rem;
+      }
+    }
+    @media (max-width:540px){
+      .site-footer--global .footer-grid{ grid-template-columns:1fr; gap:1.1rem; }
+    }
     /* ===== ANIMATIONS ===== */
     .reveal{opacity:0;transform:translateY(14px);transition:.5s cubic-bezier(.2,.7,.2,1)}
     .reveal.on{opacity:1;transform:none}
@@ -176,6 +303,18 @@
       .hero-video{display:none}
       .reveal{transition:none}
     }
+
+    .modal {
+  position: fixed; z-index: 9999; left: 0; top: 0; width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.45); display: flex; align-items: center; justify-content: center;
+}
+.modal-content {
+  background: #fff; border-radius: 14px; padding: 32px 24px; max-width: 480px; width: 90vw; box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  position: relative;
+}
+.modal-close {
+  position: absolute; top: 18px; right: 18px; font-size: 1.5rem; color: #475569;
+}
   </style>
   <script>
     // basic helper for IntersectionObserver reveals
@@ -260,6 +399,14 @@
         <option value="career">Career Readiness</option>
         <option value="credentials">Credentials</option>
       </select>
+      <label class="visually-hidden" for="pathway">Pathway</label>
+<select id="pathway" class="select" aria-label="Pathway">
+  <option value="">All Pathways</option>
+  <!-- Minimal seed list now; we can expand after you confirm -->
+  <option value="adobe-marketing-design">Adobe: Marketing Design</option>
+  <option value="its-network-automation">ITS: Network Automation Specialist</option>
+  <option value="its-technical-support">ITS: IT Technical Support Specialist</option>
+</select>
       <label class="visually-hidden" for="sort">Sort</label>
       <select id="sort" class="select" aria-label="Sort">
         <option value="popular">Most Popular</option>
@@ -282,6 +429,13 @@
   <section id="catalog" class="catalog">
     <div class="container">
       <div id="grid" class="grid" aria-live="polite"></div>
+      <div id="pathway-modal" class="modal" style="display:none;">
+  <div class="modal-content">
+    <span id="modal-close" class="modal-close" style="cursor:pointer;">&times;</span>
+    <h3 id="modal-title"></h3>
+    <div id="modal-details"></div>
+  </div>
+</div>
       <div class="pager" role="navigation" aria-label="Pagination">
         <button id="prev" aria-label="Previous page" disabled>Prev</button>
         <div id="pages" class="pages" role="list"></div>
@@ -303,7 +457,7 @@
   <img src="../assets/images/vendor-logos/autodesk.svg" alt="Autodesk" loading="lazy">
   <img src="../assets/images/vendor-logos/apple.svg" alt="Apple" loading="lazy">
   <img src="../assets/images/vendor-logos/cisco.svg" alt="Cisco" loading="lazy">
-  <img src="../assets/images/vendor-logos/meta.svg" alt="Meta" loading="lazy">
+  <img src="../assets/images/vendor-logos/meta.svg" alt="PMI" loading="lazy">
   <img src="../assets/images/vendor-logos/pmi.svg" alt="PMI" loading="lazy">
   <img src="../assets/images/vendor-logos/unity.svg" alt="Unity" loading="lazy">
   <img src="../assets/images/vendor-logos/aws.svg" alt="AWS" loading="lazy">
@@ -312,60 +466,580 @@
   </section>
 
   <!-- FOOTER -->
-  <footer role="contentinfo">
+  <footer class="site-footer site-footer--global" role="contentinfo">
     <div class="container">
-      <div class="links">
-        <a href="../index.html">Home</a>
-        <a href="../about.html">About</a>
-        <a href="https://btheducationgroup.org/program.html">Programs</a>
-        <a href="../partners.html">Partners</a>
-        <a href="/coursecontact.html">Contact</a>
-        <a href="/support.html">Support</a>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/index.html" class="logo">BTH <span>Education Group</span></a>
+          <p>Global education investment across Family Education, PECE, OEDP, Investment Education &amp; Franchises.</p>
+        </div>
+        <div class="footer-section">
+          <h4>Education Investment Programs</h4>
+          <ul class="footer-links">
+            <li><a href="/program.html">OEDP – Workforce Development</a></li>
+            <li><a href="/pece.html">PECE – Family Education</a></li>
+            <li><a href="/investor-education.html">Investment Education</a></li>
+            <li><a href="/franchises.html">Education Franchises</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="/about.html">About BTH</a></li>
+            <li><a href="/partners.html">Partners</a></li>
+            <li><a href="/careers.html">Careers</a></li>
+            <li><a href="/contact.html">General Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h4>Help &amp; Support</h4>
+          <ul class="footer-links">
+            <li><a href="/support.html">Support</a></li>
+            <li><a href="/coursecontact.html">Course Contact</a></li>
+            <li><a href="/faq.html">FAQs</a></li>
+            <li><a href="/policies.html">Policies</a></li>
+          </ul>
+        </div>
       </div>
-      <p class="copy">&copy; 2025 BTH Education Group — Learn • Certify • Work • Earn.</p>
+      <div class="footer-bottom">
+        <p>&copy; 2025 BTH Education Group. Learn • Certify • Work • Earn.</p>
+      </div>
     </div>
   </footer>
 
   <!-- DATA + RENDERER -->
   <script>
-    // Catalog data (same set as before, plus popularity for sorting)
-    const DATA = [
-      {key:'adobe', vendor:'Certiport', sector:'design', title:'Adobe Certified Professional', blurb:'Photoshop, Illustrator, InDesign, Premiere Pro, After Effects, and more.', popular:95, tags:['Design','Media']},
-      {key:'agriscience', vendor:'Certiport', sector:'agriscience', title:'Agriscience & Technology Careers', blurb:'Foundations for agricultural and technology career readiness.', popular:60, tags:['STEM','Career']},
-      {key:'apple-swift', vendor:'Certiport', sector:'technology', title:'Apple App Development with Swift', blurb:'Fundamentals of iOS app development using Swift.', popular:75, tags:['iOS','Coding']},
-      {key:'autodesk', vendor:'Certiport', sector:'design', title:'Autodesk Certified User', blurb:'AutoCAD, Revit, Inventor, Maya, Fusion 360, and more.', popular:80, tags:['CAD','Engineering']},
-      {key:'cisco-cst', vendor:'Certiport', sector:'technology', title:'Cisco Certified Support Technician', blurb:'Networking and cybersecurity fundamentals.', popular:82, tags:['Networking','Security']},
-      {key:'ccs', vendor:'Certiport', sector:'career', title:'Critical Career Skills (CCS)', blurb:'Foundational essential skills for workplace success.', popular:70, tags:['Soft Skills']},
-      {key:'esb', vendor:'Certiport', sector:'business', title:'Entrepreneurship & Small Business (ESB)', blurb:'Startup and small business management essentials.', popular:68, tags:['Entrepreneurship']},
-      {key:'ic3', vendor:'Certiport', sector:'technology', title:'IC3 Digital Literacy', blurb:'Global standard for digital skills.', popular:78, tags:['Digital Literacy']},
-      {key:'itspecialist', vendor:'Certiport', sector:'technology', title:'Information Technology Specialist', blurb:'Networking, Security, Databases, Cloud, Dev, and more.', popular:90, tags:['IT','Cloud']},
-      {key:'intuit', vendor:'Certiport', sector:'business', title:'Intuit Certified Bookkeeping Professional', blurb:'Bookkeeping and financial skills for business.', popular:66, tags:['Finance']},
-      {key:'healthsciences', vendor:'Certiport', sector:'healthcare', title:'Health Sciences Careers', blurb:'Foundational health science pathways.', popular:58, tags:['Health']},
-      {key:'hospitality', vendor:'Certiport', sector:'hospitality', title:'Hospitality & Culinary Arts Careers', blurb:'Food service, hospitality, and culinary foundations.', popular:55, tags:['Service']},
-      {key:'knowledgepillars', vendor:'Certiport', sector:'technology', title:'Knowledge Pillars', blurb:'Web dev, JavaScript, Python, CI/CD, and more.', popular:65, tags:['Web','Dev']},
-      {key:'meta', vendor:'Certiport', sector:'business', title:'Meta Digital Marketing Associate', blurb:'Digital marketing and social media skills.', popular:72, tags:['Marketing']},
-      {key:'mos', vendor:'Certiport', sector:'business', title:'Microsoft Office Specialist (MOS)', blurb:'Word, Excel, PowerPoint, Outlook, Access.', popular:96, tags:['Office']},
-      {key:'pearsonlanguages', vendor:'Certiport', sector:'languages', title:'Pearson Languages', blurb:'Language proficiency credentials.', popular:50, tags:['Languages']},
-      {key:'pmi', vendor:'Certiport', sector:'management', title:'PMI — Project Management Fundamentals', blurb:'Project management foundations.', popular:77, tags:['PM']},
-      {key:'unity', vendor:'Certiport', sector:'technology', title:'Unity Certified User', blurb:'Game development & interactive content.', popular:73, tags:['Game Dev']},
-      {key:'credentials', vendor:'Certiport', sector:'credentials', title:'Certiport Credentials', blurb:'Industry‑recognized credentials.', popular:52, tags:['Credentials']},
-      {key:'comptia-techplus', vendor:'CompTIA', sector:'technology', title:'CompTIA Tech+', blurb:'Essential IT foundations: devices, OS, networking, security, troubleshooting.', popular:92, tags:['IT Support']},
-      {key:'em1', vendor:'ETA', sector:'electronics', title:'EM1 — DC Electronics', blurb:'Basic DC electronics concepts and skills.', popular:61, tags:['Electronics']},
-      {key:'em2', vendor:'ETA', sector:'electronics', title:'EM2 — AC Electronics', blurb:'Basic AC electronics concepts and skills.', popular:60, tags:['Electronics']},
-      {key:'em3', vendor:'ETA', sector:'electronics', title:'EM3 — Semiconductors', blurb:'Intro to semiconductors and applications.', popular:59, tags:['Electronics']},
-      {key:'em4', vendor:'ETA', sector:'electronics', title:'EM4 — Integrated Circuits', blurb:'Fundamentals of integrated circuits.', popular:58, tags:['Electronics']},
-      {key:'em5', vendor:'ETA', sector:'electronics', title:'EM5 — Analog & Digital Circuits', blurb:'Analog and digital circuit basics.', popular:62, tags:['Electronics']},
-      {key:'workforce-communication', vendor:'ETA', sector:'career', title:'Workforce Readiness — Communication', blurb:'Essential workplace communication skills.', popular:64, tags:['Career']},
-      {key:'workforce-customer', vendor:'ETA', sector:'service', title:'Workforce Readiness — Customer Service', blurb:'Frontline customer excellence.', popular:63, tags:['Service']},
-      {key:'workforce-teamwork', vendor:'ETA', sector:'career', title:'Workforce Readiness — Teamwork', blurb:'Collaboration and team dynamics.', popular:62, tags:['Career']},
-      {key:'workforce-problem', vendor:'ETA', sector:'career', title:'Workforce Readiness — Problem Solving', blurb:'Critical thinking and solutions.', popular:61, tags:['Career']},
-      {key:'cscu', vendor:'EC-Council', sector:'technology', title:'Certified Secure Computer User (CSCU)', blurb:'End‑user cybersecurity awareness and hygiene.', popular:84, tags:['Security']},
-      {key:'welding1', vendor:'AWS', sector:'welding', title:'Welding Fundamentals I', blurb:'Intro to welding processes & safety.', popular:67, tags:['Welding']},
-      {key:'welding2', vendor:'AWS', sector:'welding', title:'Welding Fundamentals II', blurb:'Intermediate welding techniques & applications.', popular:65, tags:['Welding']},
-      {key:'welding3', vendor:'AWS', sector:'welding', title:'Welding Fundamentals III', blurb:'Advanced practice & career readiness.', popular:63, tags:['Welding']},
-      {key:'eta-css', vendor:'ETA', sector:'service', title:'ETA CSS — Customer Service Specialist', blurb:'Professional certification in service excellence.', popular:69, tags:['Service']},
-      {key:'eta-csm', vendor:'ETA', sector:'service', title:'ETA CSM — Certified Service Manager', blurb:'Service operations management credential.', popular:68, tags:['Service']}
-    ];
+    // --- DATA array: all certifications ---
+/* removed duplicate DATA declaration */
+
+// --- PATHWAY_CERTS mapping ---
+const PATHWAY_CERTS = {
+  "adobe-marketing-design": [
+    "adobe-express",
+    "adobe-photoshop-2025",
+    "adobe-acrobat-pro"
+  ],
+  "adobe-video-design": [
+    "adobe-premiere-pro-2025",
+    "adobe-photoshop-2025",
+    "adobe-after-effects-2025"
+  ],
+  "adobe-visual-design": [
+    "adobe-photoshop-2025",
+    "adobe-illustrator-2025",
+    "adobe-indesign-2025"
+  ],
+  "adobe-web-design": [
+    "adobe-dreamweaver-2024",
+    "adobe-photoshop-2025",
+    "adobe-animate-2024"
+  ],
+  "freelancer-app-dev": [
+    "its-html5-app",
+    "swift-certified-user",
+    "esb-v2"
+  ],
+  "application-developer": [
+    "its-html-css",
+    "its-javascript",
+    "its-software-dev",
+    "its-html5-app"
+  ],
+  "assistant-it-project-manager": [
+    "pmi-project-management-ready",
+    "its-software-dev",
+    "professional-communication"
+  ],
+  "assistant-project-manager": [
+    "pmi-project-management-ready",
+    "mos-word-2019",
+    "mos-excel-2019",
+    "mos-outlook-2019",
+    "professional-communication"
+  ],
+  "future-proof-economies": [
+    "esb-v2",
+    "professional-communication",
+    "ic3-gs6-l1",
+    "ic3-gs6-l2",
+    "ic3-gs6-l3",
+    "its-ai",
+    "its-cloud",
+    "its-computational-thinking",
+    "its-cybersecurity",
+    "its-data-analytics",
+    "its-databases",
+    "its-device-config",
+    "its-html-css",
+    "its-html5-app",
+    "its-java",
+    "its-javascript",
+    "its-network-security",
+    "its-networking",
+    "its-python",
+    "its-software-dev"
+  ],
+  "ic3-gs6-master": [
+    "ic3-gs6-l1",
+    "ic3-gs6-l2",
+    "ic3-gs6-l3"
+  ],
+  "independent-contractor": [
+    "professional-communication",
+    "esb-v2"
+  ],
+  "its-technical-support-specialist": [
+    "its-device-config",
+    "its-networking",
+    "its-network-security"
+  ],
+  "master-entrepreneur": [
+    "intuit-d4d",
+    "esb-v2"
+  ],
+  "mos-associate-m365": [
+    "mos-word-365",
+    "mos-excel-365",
+    "mos-powerpoint-365",
+    "mos-outlook-2019"
+  ],
+  "mos-associate-2019": [
+    "mos-word-2019",
+    "mos-excel-2019",
+    "mos-powerpoint-2019",
+    "mos-outlook-2019"
+  ],
+  "mos-expert-m365": [
+    "mos-word-expert-365",
+    "mos-excel-expert-365"
+  ],
+  "mos-expert-2019": [
+    "mos-access-expert-2019",
+    "mos-word-expert-2019",
+    "mos-excel-expert-2019"
+  ],
+  "mos-master-2016": [
+    "mos-word-expert-2016",
+    "mos-excel-expert-2016",
+    "mos-powerpoint-2016",
+    "mos-access-2016",
+    "mos-outlook-2016"
+  ],
+  "its-network-automation": [
+    "its-python",
+    "its-software-dev",
+    "cisco-networking"
+  ],
+  "network-security-support-technician": [
+    "cisco-cybersecurity",
+    "cisco-networking"
+  ],
+  "network-support-freelancer": [
+    "cisco-networking",
+    "esb-v2",
+    "intuit-d4d",
+    "intuit-quickbooks-online"
+  ],
+  "office-manager-admin": [
+    "mos-word-2019",
+    "mos-excel-2019",
+    "mos-outlook-2019",
+    "professional-communication",
+    "intuit-quickbooks-online"
+  ],
+  "staff-accountant": [
+    "mos-word-2019",
+    "mos-excel-2019",
+    "professional-communication",
+    "intuit-quickbooks-online"
+  ],
+  "video-design-freelancer": [
+    "esb-v2"
+  ],
+  "video-game-producer": [
+    "mos-powerpoint-2019",
+    "professional-communication",
+    "unity-programmer"
+  ],
+  "visual-design-freelancer": [
+    "esb-v2"
+  ],
+  "vr-specialist": [
+    "unity-programmer",
+    "unity-vr-developer"
+  ],
+  "web-developer-freelancer": [
+    "its-html-css",
+    "its-javascript",
+    "adobe-photoshop-2025",
+    "esb-v2"
+  ],
+  "workforce-ready": [
+    "mos-word-2019",
+    "mos-excel-2019",
+    "mos-powerpoint-2019",
+    "professional-communication"
+  ]
+};
+  </script>
+  <script>
+    // Catalog data (revised for CTAs + pathways)
+const DATA = [
+  // --- Adobe Certified Professional ---
+  { key:'adobe-acrobat-pro', vendor:'Adobe', sector:'design', title:'Acrobat Pro', blurb:'Document creation and management.', tags:['Adobe','Design'], ctas:{start:true, pathway:false} },
+  { key:'adobe-express', vendor:'Adobe', sector:'design', title:'Express', blurb:'Content creation and marketing.', tags:['Adobe','Design'], ctas:{start:true, pathway:false} },
+  { key:'adobe-after-effects-2025', vendor:'Adobe', sector:'design', title:'After Effects 2025', blurb:'Motion graphics and visual effects.', tags:['Adobe','Design'], ctas:{start:true, pathway:false} },
+  { key:'adobe-illustrator-2025', vendor:'Adobe', sector:'design', title:'Illustrator 2025', blurb:'Vector graphics and illustration.', tags:['Adobe','Design'], ctas:{start:true, pathway:false} },
+  { key:'adobe-indesign-2025', vendor:'Adobe', sector:'design', title:'InDesign 2025', blurb:'Page design and layout.', tags:['Adobe','Design'], ctas:{start:true, pathway:false} },
+  { key:'adobe-photoshop-2025', vendor:'Adobe', sector:'design', title:'Photoshop 2025', blurb:'Photo editing and compositing.', tags:['Adobe','Design'], ctas:{start:true, pathway:false} },
+  { key:'adobe-premiere-pro-2025', vendor:'Adobe', sector:'design', title:'Premiere Pro 2025', blurb:'Video editing.', tags:['Adobe','Design'], ctas:{start:true, pathway:false} },
+  { key:'adobe-animate-2024', vendor:'Adobe', sector:'design', title:'Animate 2024', blurb:'Animation and interactive content.', tags:['Adobe','Design'], ctas:{start:true, pathway:false} },
+  { key:'adobe-dreamweaver-2024', vendor:'Adobe', sector:'design', title:'Dreamweaver 2024', blurb:'Web design and development.', tags:['Adobe','Design'], ctas:{start:true, pathway:false} },
+
+  // --- Agriscience and Technology Careers ---
+  { key:'agriscience-foundations', vendor:'Certiport', sector:'agriscience', title:'Agriscience Foundations', blurb:'Agriscience and technology careers.', tags:['Agriscience'], ctas:{start:true, pathway:false} },
+
+  // --- Apple App Development with Swift ---
+  { key:'swift-certified-user', vendor:'Apple', sector:'technology', title:'App Development with Swift Certified User', blurb:'iOS app development.', tags:['Apple','App Dev'], ctas:{start:true, pathway:false} },
+  { key:'swift-associate', vendor:'Apple', sector:'technology', title:'App Development with Swift Associate', blurb:'iOS app development fundamentals.', tags:['Apple','App Dev'], ctas:{start:true, pathway:false} },
+
+  // --- Autodesk ---
+  { key:'autodesk-tinkercad', vendor:'Autodesk', sector:'design', title:'Tinkercad', blurb:'3D design and modeling.', tags:['Autodesk','Design'], ctas:{start:true, pathway:false} },
+  { key:'autodesk-autocad', vendor:'Autodesk', sector:'design', title:'AutoCAD', blurb:'2D and 3D CAD design.', tags:['Autodesk','Design'], ctas:{start:true, pathway:false} },
+  { key:'autodesk-fusion', vendor:'Autodesk', sector:'design', title:'Fusion', blurb:'3D CAD, CAM, and CAE.', tags:['Autodesk','Design'], ctas:{start:true, pathway:false} },
+  { key:'autodesk-inventor', vendor:'Autodesk', sector:'design', title:'Inventor (Imperial | Metric)', blurb:'Mechanical design and 3D CAD.', tags:['Autodesk','Design'], ctas:{start:true, pathway:false} },
+  { key:'autodesk-revit', vendor:'Autodesk', sector:'design', title:'Revit Architecture (Imperial | Metric)', blurb:'Building information modeling.', tags:['Autodesk','Design'], ctas:{start:true, pathway:false} },
+  { key:'autodesk-3dsmax', vendor:'Autodesk', sector:'design', title:'3ds Max', blurb:'3D modeling, animation, and rendering.', tags:['Autodesk','Design'], ctas:{start:true, pathway:false} },
+  { key:'autodesk-maya', vendor:'Autodesk', sector:'design', title:'Maya', blurb:'3D animation, modeling, simulation.', tags:['Autodesk','Design'], ctas:{start:true, pathway:false} },
+
+  // --- Cisco Certified Support Technician (CCST) ---
+  { key:'cisco-it-support', vendor:'Cisco', sector:'technology', title:'Cisco Certified Support Technician - IT Support (100-140)', blurb:'IT support fundamentals.', tags:['Cisco','IT'], ctas:{start:true, pathway:false} },
+  { key:'cisco-cybersecurity', vendor:'Cisco', sector:'technology', title:'Cisco Certified Support Technician - Cybersecurity (100-160)', blurb:'Cybersecurity fundamentals.', tags:['Cisco','Security'], ctas:{start:true, pathway:false} },
+  { key:'cisco-networking', vendor:'Cisco', sector:'technology', title:'Cisco Certified Support Technician - Networking (100-150)', blurb:'Networking fundamentals.', tags:['Cisco','Networking'], ctas:{start:true, pathway:false} },
+
+  // --- Critical Career Skills (CCS) ---
+  { key:'professional-communication', vendor:'Certiport', sector:'career', title:'Professional Communication', blurb:'Essential workplace communication skills.', tags:['Career'], ctas:{start:true, pathway:false} },
+  { key:'generative-ai-foundations', vendor:'Certiport', sector:'technology', title:'Generative AI Foundations', blurb:'AI skills for the workplace.', tags:['AI','Career'], ctas:{start:true, pathway:false} },
+
+  // --- Entrepreneurship and Small Business (ESB) ---
+  { key:'esb-v2', vendor:'Certiport', sector:'business', title:'Entrepreneurship & Small Business (ESB) V.2', blurb:'Startup and small business management essentials.', tags:['Entrepreneurship'], ctas:{start:true, pathway:false} },
+
+  // --- ETA International Electronics Fundamentals ---
+  { key:'em1', vendor:'ETA', sector:'electronics', title:'EM1 — Direct Current (DC)', blurb:'Basic DC electronics concepts and skills.', tags:['Electronics'], ctas:{start:true, pathway:false} },
+  { key:'em2', vendor:'ETA', sector:'electronics', title:'EM2 — Alternating Current (AC)', blurb:'Basic AC electronics concepts and skills.', tags:['Electronics'], ctas:{start:true, pathway:false} },
+  { key:'em3', vendor:'ETA', sector:'electronics', title:'EM3 — Analog Electronics Basics', blurb:'Analog electronics fundamentals.', tags:['Electronics'], ctas:{start:true, pathway:false} },
+  { key:'em4', vendor:'ETA', sector:'electronics', title:'EM4 — Digital Electronics Basics', blurb:'Digital electronics fundamentals.', tags:['Electronics'], ctas:{start:true, pathway:false} },
+  { key:'em5', vendor:'ETA', sector:'electronics', title:'EM5 — Comprehensive Electronics Basics', blurb:'Comprehensive electronics concepts and skills.', tags:['Electronics'], ctas:{start:true, pathway:false} },
+
+  // --- ETA International Workforce Readiness ---
+  { key:'csm', vendor:'ETA', sector:'service', title:'Certified Service Manager (CSM)', blurb:'Service management and leadership fundamentals.', tags:['Service','Management'], ctas:{start:true, pathway:false} },
+  { key:'css', vendor:'ETA', sector:'service', title:'Customer Service Specialist (CSS)', blurb:'Frontline customer service excellence.', tags:['Service'], ctas:{start:true, pathway:false} },
+
+  // --- Health Sciences Careers ---
+  { key:'medical-admin-assistant', vendor:'Certiport', sector:'healthcare', title:'Medical Administrative Assistant', blurb:'Healthcare administration skills.', tags:['Healthcare'], ctas:{start:true, pathway:false} },
+
+  // --- Hospitality and Culinary Arts Careers ---
+  { key:'culinary-foundations', vendor:'Certiport', sector:'hospitality', title:'Culinary Foundations', blurb:'Culinary arts basics.', tags:['Hospitality'], ctas:{start:true, pathway:false} },
+
+  // --- IC3 Digital Literacy Certification (IC3) Global Standard 6 ---
+  { key:'ic3-gs6-l1', vendor:'Certiport', sector:'technology', title:'IC3 GS6 Level 1', blurb:'Foundational digital literacy skills.', tags:['Digital Literacy'], ctas:{start:true, pathway:false} },
+  { key:'ic3-gs6-l2', vendor:'Certiport', sector:'technology', title:'IC3 GS6 Level 2', blurb:'Intermediate digital literacy skills.', tags:['Digital Literacy'], ctas:{start:true, pathway:false} },
+  { key:'ic3-gs6-l3', vendor:'Certiport', sector:'technology', title:'IC3 GS6 Level 3', blurb:'Advanced digital literacy skills.', tags:['Digital Literacy'], ctas:{start:true, pathway:false} },
+
+  // --- Information Technology Specialist ---
+  { key:'its-ai', vendor:'Certiport', sector:'technology', title:'Information Technology Specialist Artificial Intelligence', blurb:'AI skills for IT.', tags:['IT','AI'], ctas:{start:true, pathway:false} },
+  { key:'its-cloud', vendor:'Certiport', sector:'technology', title:'Information Technology Specialist Cloud Computing', blurb:'Cloud computing skills.', tags:['IT','Cloud'], ctas:{start:true, pathway:false} },
+  { key:'its-computational-thinking', vendor:'Certiport', sector:'technology', title:'Information Technology Specialist Computational Thinking', blurb:'Computational thinking skills.', tags:['IT'], ctas:{start:true, pathway:false} },
+  { key:'its-cybersecurity', vendor:'Certiport', sector:'technology', title:'Information Technology Specialist Cybersecurity', blurb:'Cybersecurity skills.', tags:['IT','Security'], ctas:{start:true, pathway:false} },
+  { key:'its-data-analytics', vendor:'Certiport', sector:'technology', title:'Information Technology Specialist Data Analytics', blurb:'Data analytics skills.', tags:['IT','Data'], ctas:{start:true, pathway:false} },
+  { key:'its-databases', vendor:'Certiport', sector:'technology', title:'Information Technology Specialist Databases', blurb:'Database management skills.', tags:['IT','Database'], ctas:{start:true, pathway:false} },
+  { key:'its-device-config', vendor:'Certiport', sector:'technology', title:'Information Technology Specialist Device Configuration and Management', blurb:'Device configuration and management.', tags:['IT'], ctas:{start:true, pathway:false} },
+  { key:'its-html-css', vendor:'Certiport', sector:'technology', title:'Information Technology Specialist HTML and CSS', blurb:'Web development skills.', tags:['IT','Web'], ctas:{start:true, pathway:false} },
+  { key:'its-html5-app', vendor:'Certiport', sector:'technology', title:'Information Technology Specialist HTML5 Application Development', blurb:'HTML5 app development.', tags:['IT','Web'], ctas:{start:true, pathway:false} },
+  { key:'its-java', vendor:'Certiport', sector:'technology', title:'Information Technology Specialist Java', blurb:'Java programming skills.', tags:['IT','Java'], ctas:{start:true, pathway:false} },
+  { key:'its-javascript', vendor:'Certiport', sector:'technology', title:'Information Technology Specialist JavaScript', blurb:'JavaScript programming skills.', tags:['IT','JavaScript'], ctas:{start:true, pathway:false} },
+  { key:'its-networking', vendor:'Certiport', sector:'technology', title:'Information Technology Specialist Networking', blurb:'Networking skills.', tags:['IT','Networking'], ctas:{start:true, pathway:false} },
+  { key:'its-network-security', vendor:'Certiport', sector:'technology', title:'Information Technology Specialist Network Security', blurb:'Network security skills.', tags:['IT','Security'], ctas:{start:true, pathway:false} },
+  { key:'its-python', vendor:'Certiport', sector:'technology', title:'Information Technology Specialist Python', blurb:'Python programming skills.', tags:['IT','Python'], ctas:{start:true, pathway:false} },
+  { key:'its-software-dev', vendor:'Certiport', sector:'technology', title:'Information Technology Specialist Software Development', blurb:'Software development skills.', tags:['IT','Dev'], ctas:{start:true, pathway:false} },
+
+  // --- Intuit Certifications ---
+  { key:'intuit-quickbooks-online', vendor:'Intuit', sector:'business', title:'Intuit QuickBooks Online', blurb:'Bookkeeping and accounting.', tags:['Intuit','Finance'], ctas:{start:true, pathway:false} },
+  { key:'intuit-d4d', vendor:'Intuit', sector:'business', title:'Intuit Design for Delight Innovator', blurb:'Design thinking for entrepreneurs.', tags:['Intuit','Innovation'], ctas:{start:true, pathway:false} },
+  { key:'intuit-bookkeeping', vendor:'Intuit', sector:'business', title:'Intuit Certified Bookkeeping Professional', blurb:'Bookkeeping skills.', tags:['Intuit','Finance'], ctas:{start:true, pathway:false} },
+  { key:'intuit-personal-finance', vendor:'Intuit', sector:'business', title:'Intuit Personal Finance', blurb:'Personal finance skills.', tags:['Intuit','Finance'], ctas:{start:true, pathway:false} },
+
+  // --- Meta ---
+  { key:'meta-digital-marketing', vendor:'Meta', sector:'business', title:'Meta Certified Digital Marketing Associate', blurb:'Digital marketing skills.', tags:['Meta','Marketing'], ctas:{start:true, pathway:false} },
+
+  // --- Microsoft Certified Educator (MCE) ---
+  { key:'mce-62-193', vendor:'Microsoft', sector:'education', title:'Technology Literacy for Educators', blurb:'Technology skills for educators.', tags:['Microsoft','Education'], ctas:{start:true, pathway:false} },
+
+  // --- Microsoft Certified Fundamentals ---
+  { key:'ms-azure-ai-fundamentals', vendor:'Microsoft', sector:'technology', title:'Azure AI Fundamentals (AI-900)', blurb:'AI fundamentals.', tags:['Microsoft','AI'], ctas:{start:true, pathway:false} },
+{ key:'ms-azure-fundamentals', vendor:'Microsoft', sector:'technology', title:'Azure Fundamentals (AZ-900)', blurb:'Azure cloud fundamentals.', tags:['Microsoft','Cloud'], ctas:{start:true, pathway:false} },
+{ key:'ms-azure-data-fundamentals', vendor:'Microsoft', sector:'technology', title:'Azure Data Fundamentals (DP-900)', blurb:'Data fundamentals.', tags:['Microsoft','Data'], ctas:{start:true, pathway:false} },
+{ key:'ms-365-fundamentals', vendor:'Microsoft', sector:'technology', title:'Microsoft 365 Fundamentals (MS-900)', blurb:'Microsoft 365 fundamentals.', tags:['Microsoft','Office'], ctas:{start:true, pathway:false} },
+{ key:'ms-power-platform-fundamentals', vendor:'Microsoft', sector:'technology', title:'Microsoft Power Platform Fundamentals (PL-900)', blurb:'Power Platform fundamentals.', tags:['Microsoft','Power Platform'], ctas:{start:true, pathway:false} },
+{ key:'ms-security-compliance-fundamentals', vendor:'Microsoft', sector:'technology', title:'Microsoft Security, Compliance, and Identity Fundamentals (SC-900)', blurb:'Security and compliance fundamentals.', tags:['Microsoft','Security'], ctas:{start:true, pathway:false} },
+
+  // --- Microsoft Office Specialist (MOS) ---
+  { key:'mos-word-365', vendor:'Microsoft', sector:'business', title:'Word (Microsoft 365 apps)', blurb:'Word processing skills.', tags:['Microsoft','Office'], ctas:{start:true, pathway:false} },
+  { key:'mos-excel-365', vendor:'Microsoft', sector:'business', title:'Excel (Microsoft 365 apps)', blurb:'Spreadsheet skills.', tags:['Microsoft','Office'], ctas:{start:true, pathway:false} },
+  { key:'mos-powerpoint-365', vendor:'Microsoft', sector:'business', title:'PowerPoint (Microsoft 365 apps)', blurb:'Presentation skills.', tags:['Microsoft','Office'], ctas:{start:true, pathway:false} },
+  { key:'mos-word-expert-365', vendor:'Microsoft', sector:'business', title:'Word Expert (Microsoft 365 apps)', blurb:'Advanced word processing.', tags:['Microsoft','Office'], ctas:{start:true, pathway:false} },
+  { key:'mos-excel-expert-365', vendor:'Microsoft', sector:'business', title:'Excel Expert (Microsoft 365 apps)', blurb:'Advanced spreadsheet skills.', tags:['Microsoft','Office'], ctas:{start:true, pathway:false} },
+  { key:'mos-excel-accounting-365', vendor:'Microsoft', sector:'business', title:'Excel for Accounting (Microsoft 365 apps)', blurb:'Accounting with Excel.', tags:['Microsoft','Office'], ctas:{start:true, pathway:false} },
+  { key:'mos-excel-finance-365', vendor:'Microsoft', sector:'business', title:'Excel for Business Finance (Microsoft 365 apps)', blurb:'Business finance with Excel.', tags:['Microsoft','Office'], ctas:{start:true, pathway:false} },
+  { key:'mos-word-2019', vendor:'Microsoft', sector:'business', title:'Word (Office 2019)', blurb:'Word processing skills.', tags:['Microsoft','Office'], ctas:{start:true, pathway:false} },
+  { key:'mos-excel-2019', vendor:'Microsoft', sector:'business', title:'Excel (Office 2019)', blurb:'Spreadsheet skills.', tags:['Microsoft','Office'], ctas:{start:true, pathway:false} },
+  { key:'mos-powerpoint-2019', vendor:'Microsoft', sector:'business', title:'PowerPoint (Office 2019)', blurb:'Presentation skills.', tags:['Microsoft','Office'], ctas:{start:true, pathway:false} },
+  { key:'mos-outlook-2019', vendor:'Microsoft', sector:'business', title:'Outlook (Office 2019)', blurb:'Email and calendar management.', tags:['Microsoft','Office'], ctas:{start:true, pathway:false} },
+  { key:'mos-word-expert-2019', vendor:'Microsoft', sector:'business', title:'Word Expert (Office 2019)', blurb:'Advanced word processing.', tags:['Microsoft','Office'], ctas:{start:true, pathway:false} },
+  { key:'mos-excel-expert-2019', vendor:'Microsoft', sector:'business', title:'Excel Expert (Office 2019)', blurb:'Advanced spreadsheet skills.', tags:['Microsoft','Office'], ctas:{start:true, pathway:false} },
+  { key:'mos-access-expert-2019', vendor:'Microsoft', sector:'business', title:'Access Expert (Office 2019)', blurb:'Database management.', tags:['Microsoft','Office'], ctas:{start:true, pathway:false} },
+  { key:'mos-word-2016', vendor:'Microsoft', sector:'business', title:'Word (Office 2016)', blurb:'Word processing skills.', tags:['Microsoft','Office'], ctas:{start:true, pathway:false} },
+  { key:'mos-excel-2016', vendor:'Microsoft', sector:'business', title:'Excel (Office 2016)', blurb:'Spreadsheet skills.', tags:['Microsoft','Office'], ctas:{start:true, pathway:false} },
+  { key:'mos-powerpoint-2016', vendor:'Microsoft', sector:'business', title:'PowerPoint (Office 2016)', blurb:'Presentation skills.', tags:['Microsoft','Office'], ctas:{start:true, pathway:false} },
+  { key:'mos-word-expert-2016', vendor:'Microsoft', sector:'business', title:'Word Expert (Office 2016)', blurb:'Advanced word processing.', tags:['Microsoft','Office'], ctas:{start:true, pathway:false} },
+  { key:'mos-excel-expert-2016', vendor:'Microsoft', sector:'business', title:'Excel Expert (Office 2016)', blurb:'Advanced spreadsheet skills.', tags:['Microsoft','Office'], ctas:{start:true, pathway:false} },
+  { key:'mos-access-2016', vendor:'Microsoft', sector:'business', title:'Access (Office 2016)', blurb:'Database management.', tags:['Microsoft','Office'], ctas:{start:true, pathway:false} },
+  { key:'mos-outlook-2016', vendor:'Microsoft', sector:'business', title:'Outlook (Office 2016)', blurb:'Email and calendar management.', tags:['Microsoft','Office'], ctas:{start:true, pathway:false} },
+
+  // --- Project Management Institute (PMI) ---
+  { key:'pmi-project-management-ready', vendor:'PMI', sector:'management', title:'PMI Project Management Ready', blurb:'Project management foundations.', tags:['PMI','Management'], ctas:{start:true, pathway:false} },
+
+  // --- Unity Certified User (USU) ---
+  { key:'unity-programmer', vendor:'Unity', sector:'technology', title:'Unity Certified User: Programmer', blurb:'Unity programming skills.', tags:['Unity','Game Dev'], ctas:{start:true, pathway:false} },
+  { key:'unity-vr-developer', vendor:'Unity', sector:'technology', title:'Unity Certified User: VR Developer', blurb:'VR development skills.', tags:['Unity','Game Dev'], ctas:{start:true, pathway:false} },
+  { key:'unity-artist', vendor:'Unity', sector:'technology', title:'Unity Certified User: Artist', blurb:'Unity art and design skills.', tags:['Unity','Game Dev'], ctas:{start:true, pathway:false} },
+
+  // --- Amercian Welding Society (AWS) ---
+  { key:'aws-certified-welding-inspector', vendor:'AWS', sector:'welding', title:'AWS Certified Welding Inspector', blurb:'Welding inspection skills.', tags:['AWS','Welding'], ctas:{start:true, pathway:false} },
+  { key:'aws-certified-welding-supervisor', vendor:'AWS', sector:'welding', title:'AWS Certified Welding Supervisor', blurb:'Welding supervision skills.', tags:['AWS','Welding'], ctas:{start:true, pathway:false} },
+  { key:'aws-certified-welding-educator', vendor:'AWS', sector:'welding', title:'AWS Certified Welding Educator', blurb:'Welding education skills.', tags:['AWS','Welding'], ctas:{start:true, pathway:false} },
+  { key:'aws-certified-welding-technician', vendor:'AWS', sector:'welding', title:'AWS Certified Welding Technician', blurb:'Welding technician skills.', tags:['AWS','Welding'], ctas:{start:true, pathway:false} },
+  { key:'aws-certified-welding-operator', vendor:'AWS', sector:'welding', title:'AWS Certified Welding Operator', blurb:'Welding operator skills.', tags:['AWS','Welding'], ctas:{start:true, pathway:false} },
+  { key:'aws-certified-welding-fitter', vendor:'AWS', sector:'welding', title:'AWS Certified Welding Fitter', blurb:'Welding fitter skills.', tags:['AWS','Welding'], ctas:{start:true, pathway:false} },
+  { key:'aws-certified-welding-brazing', vendor:'AWS', sector:'welding', title:'AWS Certified Welding Brazing', blurb:'Welding brazing skills.', tags:['AWS','Welding'], ctas:{start:true, pathway:false} },
+  { key:'aws-certified-welding-inspector-advanced', vendor:'AWS', sector:'welding', title:'AWS Certified Welding Inspector - Advanced', blurb:'Advanced welding inspection skills.', tags:['AWS','Welding'], ctas:{start:true, pathway:false} },
+  { key:'aws-welding-fundamentals', vendor:'AWS', sector:'welding', title:'AWS Welding Fundamentals I', blurb:'Basic welding skills.', tags:['AWS','Welding'], ctas:{start:true, pathway:false} },
+  { key:'aws-welding-fundamentals-ii', vendor:'AWS', sector:'welding', title:'AWS Welding Fundamentals II', blurb:'Intermediate welding skills.', tags:['AWS','Welding'], ctas:{start:true, pathway:false} },
+  { key:'aws-welding-fundamentals-iii', vendor:'AWS', sector:'welding', title:'AWS Welding Fundamentals III', blurb:'Advanced welding skills.', tags:['AWS','Welding'], ctas:{start:true, pathway:false} },
+
+  // --- EC-Council Fundamental Certifications ---
+  { key:'cscu', vendor:'EC-Council', sector:'technology', title:'Certified Secure Computer User (CSCU)', blurb:'End-user cybersecurity awareness and hygiene.', tags:['Security'], ctas:{start:true, pathway:false} },
+  { key:'network-defense-essentials', vendor:'EC-Council', sector:'technology', title:'Network Defense Essentials (NDE)', blurb:'Fundamentals of network defense and security.', tags:['Security','Networking'], ctas:{start:true, pathway:false} },
+  { key:'ethical-hacking-essentials', vendor:'EC-Council', sector:'technology', title:'Ethical Hacking Essentials (EHE)', blurb:'Introduction to ethical hacking concepts and skills.', tags:['Security','Ethical Hacking'], ctas:{start:true, pathway:false} },
+  { key:'digital-forensics-essentials', vendor:'EC-Council', sector:'technology', title:'Digital Forensics Essentials (DFE)', blurb:'Fundamentals of digital forensics and investigation.', tags:['Security','Forensics'], ctas:{start:true, pathway:false} },
+  { key:'cybersecurity-technician', vendor:'EC-Council', sector:'technology', title:'Cybersecurity Technician (CCT)', blurb:'Entry-level cybersecurity technician skills.', tags:['Security','Cybersecurity'], ctas:{start:true, pathway:false} },
+]; // <--- Make sure this is the only closing bracket for DATA
+  </script>
+  <script>
+    // --- PATHWAYS: 29 distinct Certiport pathways (slug + label) ---
+const PATHWAY_OPTIONS = [
+  {slug:'adobe-marketing-design', label:'Adobe Certified Professional in Marketing Design'},
+  {slug:'adobe-video-design', label:'Adobe Certified Professional in Video Design'},
+  {slug:'adobe-visual-design', label:'Adobe Certified Professional in Visual Design'},
+  {slug:'adobe-web-design', label:'Adobe Certified Professional in Web Design'},
+
+  {slug:'freelancer-app-dev', label:'App Development Freelancer'},
+  {slug:'application-developer', label:'Application Developer'},
+  {slug:'assistant-it-project-manager', label:'Assistant IT Project Manager'},
+  {slug:'assistant-project-manager', label:'Assistant Project Manager'},
+
+  {slug:'future-proof-economies', label:'Future Proof Economies: Workforce Ready'},
+  {slug:'ic3-gs6-master', label:'IC3 Digital Literacy GS6 Master'},
+  {slug:'independent-contractor', label:'Independent Contractor'},
+  {slug:'its-technical-support-specialist', label:'IT Technical Support Specialist'},
+
+  {slug:'master-entrepreneur', label:'Master Entrepreneur'},
+
+  {slug:'mos-associate-m365', label:'MOS Associate (Microsoft 365 Apps)'},
+  {slug:'mos-associate-2019', label:'MOS Associate (Office 2019)'},
+  {slug:'mos-expert-m365', label:'MOS Expert (Microsoft 365 Apps)'},
+  {slug:'mos-expert-2019', label:'MOS Expert (Office 2019)'},
+  {slug:'mos-master-2016', label:'MOS Master (Office 2016)'},
+
+  {slug:'its-network-automation', label:'Network Automation Specialist'},
+  {slug:'network-security-support-technician', label:'Network Security Support Technician'},
+  {slug:'network-support-freelancer', label:'Network Support Freelancer'},
+
+  {slug:'office-manager-admin', label:'Office Manager / Administrator'},
+  {slug:'staff-accountant', label:'Staff Accountant'},
+
+  {slug:'video-design-freelancer', label:'Video Design Freelancer'},
+  {slug:'video-game-producer', label:'Video Game Producer'},
+  {slug:'visual-design-freelancer', label:'Visual Design Freelancer'},
+  {slug:'vr-specialist', label:'VR Specialist'},
+  {slug:'web-developer-freelancer', label:'Web Developer Freelancer'},
+
+  {slug:'workforce-ready', label:'Workforce Ready (Prereq: IC3 GS6 Master)'},
+];
+
+// Info for each pathway (expand as needed)
+const PATHWAY_INFO = {
+  'adobe-marketing-design': {
+    title: 'Adobe Certified Professional in Marketing Design',
+    summary: 'Prepares you for marketing design roles using Adobe Express, Photoshop, and Acrobat Pro.',
+    details: 'Requirements: Complete all three certifications. Recommended for marketing and design professionals. See full details in Certiport Pathways.docx.',
+  },
+  'adobe-video-design': {
+    title: 'Adobe Certified Professional in Video Design',
+    summary: 'Prepares you for video production and editing roles using Adobe Premiere Pro and After Effects.',
+    details: 'Requirements: Complete all three certifications. Recommended for video professionals. See full details in Certiport Pathways.docx.',
+  },
+  'adobe-visual-design': {
+    title: 'Adobe Certified Professional in Visual Design',
+    summary: 'Prepares you for visual design roles using Adobe Photoshop and Illustrator.',
+    details: 'Requirements: Complete all three certifications. Recommended for design professionals. See full details in Certiport Pathways.docx.',
+  },
+  'adobe-web-design': {
+    title: 'Adobe Certified Professional in Web Design',
+    summary: 'Prepares you for web design roles using Adobe XD, Dreamweaver, and Photoshop.',
+    details: 'Requirements: Complete all three certifications. Recommended for web design professionals. See full details in Certiport Pathways.docx.',
+  },
+  'freelancer-app-dev': {
+    title: 'App Development Freelancer',
+    summary: 'Prepares you for freelance app development using various tools and platforms.',
+    details: 'Requirements: Complete the core certifications. Recommended for aspiring freelancers. See full details in Certiport Pathways.docx.',
+  },
+  'application-developer': {
+    title: 'Application Developer',
+    summary: 'Prepares you for application development roles using modern programming languages and frameworks.',
+    details: 'Requirements: Complete the core certifications. Recommended for software development professionals. See full details in Certiport Pathways.docx.',
+  },
+  'assistant-it-project-manager': {
+    title: 'Assistant IT Project Manager',
+    summary: 'Prepares you for supporting IT project management using Microsoft Project and other tools.',
+    details: 'Requirements: Complete the core certifications. Recommended for IT and project management professionals. See full details in Certiport Pathways.docx.',
+  },
+  'assistant-project-manager': {
+    title: 'Assistant Project Manager',
+    summary: 'Prepares you for supporting project management in various industries.',
+    details: 'Requirements: Complete the core certifications. Recommended for project management professionals. See full details in Certiport Pathways.docx.',
+  },
+  'future-proof-economies': {
+    title: 'Future Proof Economies: Workforce Ready',
+    summary: 'Prepares you for the future workforce demands with essential skills and knowledge.',
+    details: 'Requirements: Complete the core certifications. Recommended for all professionals. See full details in Certiport Pathways.docx.',
+  },
+  'ic3-gs6-master': {
+    title: 'IC3 Digital Literacy GS6 Master',
+    summary: 'Demonstrates comprehensive digital literacy skills.',
+    details: 'Requirements: Pass all three IC3 GS6 exams. Recommended for all professionals. See full details in Certiport Pathways.docx.',
+  },
+  'independent-contractor': {
+    title: 'Independent Contractor',
+    summary: 'Prepares you for success as an independent contractor in your field of expertise.',
+    details: 'Requirements: Complete the core certifications. Recommended for all professionals considering independent contracting. See full details in Certiport Pathways.docx.',
+  },
+  'its-technical-support-specialist': {
+    title: 'IT Technical Support Specialist',
+    summary: 'Prepares you for IT support roles with a focus on technical skills and problem-solving.',
+    details: 'Requirements: Complete the core certifications. Recommended for IT support professionals. See full details in Certiport Pathways.docx.',
+  },
+  'master-entrepreneur': {
+    title: 'Master Entrepreneur',
+    summary: 'Equips you with the skills to start and manage your own business successfully.',
+    details: 'Requirements: Complete the core certifications. Recommended for aspiring entrepreneurs. See full details in Certiport Pathways.docx.',
+  },
+  'mos-associate-m365': {
+    title: 'MOS Associate (Microsoft 365 Apps)',
+    summary: 'Demonstrates proficiency in Microsoft 365 applications.',
+    details: 'Requirements: Pass the MOS Associate exam. Recommended for office professionals. See full details in Certiport Pathways.docx.',
+  },
+  'mos-associate-2019': {
+    title: 'MOS Associate (Office 2019)',
+    summary: 'Demonstrates proficiency in Office 2019 applications.',
+    details: 'Requirements: Pass the MOS Associate exam. Recommended for office professionals. See full details in Certiport Pathways.docx.',
+  },
+  'mos-expert-m365': {
+    title: 'MOS Expert (Microsoft 365 Apps)',
+    summary: 'Demonstrates advanced skills in Microsoft 365 applications.',
+    details: 'Requirements: Pass the MOS Expert exam. Recommended for experienced office professionals. See full details in Certiport Pathways.docx.',
+  },
+  'mos-expert-2019': {
+    title: 'MOS Expert (Office 2019)',
+    summary: 'Demonstrates advanced skills in Office 2019 applications.',
+    details: 'Requirements: Pass the MOS Expert exam. Recommended for experienced office professionals. See full details in Certiport Pathways.docx.',
+  },
+  'mos-master-2016': {
+    title: 'MOS Master (Office 2016)',
+    summary: 'Demonstrates mastery of Office 2016 applications.',
+    details: 'Requirements: Pass the MOS Master exam. Recommended for experts in office applications. See full details in Certiport Pathways.docx.',
+  },
+  'its-network-automation': {
+    title: 'Network Automation Specialist',
+    summary: 'Prepares you for automating network management tasks.',
+    details: 'Requirements: Complete the core certifications. Recommended for network professionals. See full details in Certiport Pathways.docx.',
+  },
+  'network-security-support-technician': {
+    title: 'Network Security Support Technician',
+    summary: 'Prepares you for supporting network security measures.',
+    details: 'Requirements: Complete the core certifications. Recommended for IT security professionals. See full details in Certiport Pathways.docx.',
+  },
+  'network-support-freelancer': {
+    title: 'Network Support Freelancer',
+    summary: 'Prepares you for providing network support as a freelancer.',
+    details: 'Requirements: Complete the core certifications. Recommended for freelance IT professionals. See full details in Certiport Pathways.docx.',
+  },
+  'office-manager-admin': {
+    title: 'Office Manager / Administrator',
+    summary: 'Prepares you for managing office operations and administration.',
+    details: 'Requirements: Complete the core certifications. Recommended for office management professionals. See full details in Certiport Pathways.docx.',
+  },
+  'staff-accountant': {
+    title: 'Staff Accountant',
+    summary: 'Prepares you for accounting and financial management roles.',
+    details: 'Requirements: Complete the core certifications. Recommended for accounting professionals. See full details in Certiport Pathways.docx.',
+  },
+  'video-design-freelancer': {
+    title: 'Video Design Freelancer',
+    summary: 'Prepares you for freelance video design and production.',
+    details: 'Requirements: Complete the core certifications. Recommended for aspiring video professionals. See full details in Certiport Pathways.docx.',
+  },
+  'video-game-producer': {
+    title: 'Video Game Producer',
+    summary: 'Prepares you for producing video games, from concept to launch.',
+    details: 'Requirements: Complete the core certifications. Recommended for game development professionals. See full details in Certiport Pathways.docx.',
+  },
+  'visual-design-freelancer': {
+    title: 'Visual Design Freelancer',
+    summary: 'Prepares you for freelance visual design projects.',
+    details: 'Requirements: Complete the core certifications. Recommended for aspiring visual designers. See full details in Certiport Pathways.docx.',
+  },
+  'vr-specialist': {
+    title: 'VR Specialist',
+    summary: 'Prepares you for creating virtual reality content and experiences.',
+    details: 'Requirements: Complete the core certifications. Recommended for VR development professionals. See full details in Certiport Pathways.docx.',
+  },
+  'web-developer-freelancer': {
+    title: 'Web Developer Freelancer',
+    summary: 'Prepares you for freelance web development projects.',
+    details: 'Requirements: Complete the core certifications. Recommended for aspiring web developers. See full details in Certiport Pathways.docx.',
+  },
+  'workforce-ready': {
+    title: 'Workforce Ready (Prereq: IC3 GS6 Master)',
+    summary: 'Prepares you for immediate entry into the workforce with essential skills.',
+    details: 'Requirements: Complete the IC3 GS6 Master and additional core certifications. Recommended for all job seekers. See full details in Certiport Pathways.docx.',
+  },
+};
+
+// Auto-populate the <select id="pathway">
+(function hydratePathwaySelect(){
+  const sel = document.getElementById('pathway');
+  if(!sel) return;
+  // Clear existing (keep "All Pathways")
+  for (let i = sel.options.length - 1; i >= 1; i--) sel.remove(i);
+  // Insert options
+  PATHWAY_OPTIONS.forEach(p=>{
+    const opt = document.createElement('option');
+    opt.value = p.slug;
+    opt.textContent = p.label;
+    sel.appendChild(opt);
+  });
+})();
 
     // Derive logos from vendor
    function logoFor(vendor){
@@ -392,18 +1066,20 @@
 }
 
     // State
-    let state = { q:'', sector:'', sort:'popular', page:1, pageSize:12, chips:[] };
+  let state = { q:'', sector:'', pathway:'', sort:'popular', page:1, pageSize:12, chips:[] };
 
     // Read from URL params
-    const params = new URLSearchParams(location.search);
-    state.q = params.get('q') || '';
-    state.sector = params.get('sector') || '';
-    state.sort = params.get('sort') || 'popular';
+const params = new URLSearchParams(location.search);
+state.q       = params.get('q')       || '';
+state.sector  = params.get('sector')  || '';
+state.sort    = params.get('sort')    || 'popular';
+state.pathway = params.get('pathway') || '';
 
     // Bind controls
     const $q = document.getElementById('q');
     const $sector = document.getElementById('sector');
     const $sort = document.getElementById('sort');
+    const $pathway = document.getElementById('pathway');
     const $grid = document.getElementById('grid');
     const $prev = document.getElementById('prev');
     const $next = document.getElementById('next');
@@ -414,7 +1090,8 @@
       // Windowed pagination around current page
       const windowSize = 7;
       let start = Math.max(1, state.page - Math.floor(windowSize/2));
-      let end = start + windowSize - 1;
+      let end =
+ Math.min(maxPage, start + windowSize - 1);
       if (end > maxPage){ end = maxPage; start = Math.max(1, end - windowSize + 1); }
 
       function btn(n, current=false){
@@ -439,24 +1116,13 @@
       $pages.innerHTML = parts.join('');
     }
 
-    $q.value = state.q; $sector.value = state.sector; $sort.value = state.sort;
+    $q.value = state.q; $sector.value = state.sector; $sort.value = state.sort; $pathway.value = state.pathway;
 
     $q.addEventListener('input', ()=>{ state.q = $q.value.trim(); state.page=1; syncURL(); render(); });
     $sector.addEventListener('change', ()=>{ state.sector = $sector.value; state.page=1; syncURL(); render(); });
     $sort.addEventListener('change', ()=>{ state.sort = $sort.value; state.page=1; syncURL(); render(); });
+    $pathway.addEventListener('change', ()=>{ state.pathway = $pathway.value; state.page = 1; syncURL(); render(); });
 
-    // Chip quick-filters
-    $chips.addEventListener('click', (e)=>{
-      const b = e.target.closest('[data-chip]'); if(!b) return;
-      const val = b.dataset.chip; const [type, value] = val.split(':');
-      if(type==='vendor'){ // toggle vendor chip
-        const exists = state.chips.includes(val);
-        state.chips = exists ? state.chips.filter(x=>x!==val) : [...state.chips, val];
-        b.dataset.active = String(!exists);
-      }
-      if(type==='sector'){ state.sector = value; $sector.value=value; }
-      state.page=1; syncURL(); render();
-    });
 
     // Pagination
     $prev.addEventListener('click', ()=>{ 
@@ -474,32 +1140,40 @@
       }
     });
 
-    function syncURL(){
-      const p = new URLSearchParams();
-      if(state.q) p.set('q', state.q);
-      if(state.sector) p.set('sector', state.sector);
-      if(state.sort && state.sort!=='popular') p.set('sort', state.sort);
-      history.replaceState(null,'', p.toString()?('?'+p.toString()):location.pathname);
-    }
+ function syncURL(){
+  const p = new URLSearchParams();
+  if (state.q)      p.set('q', state.q);
+  if (state.sector) p.set('sector', state.sector);
+  if (state.sort && state.sort !== 'popular') p.set('sort', state.sort);
+  if (state.pathway) p.set('pathway', state.pathway);   // <— add this
+  history.replaceState(null,'', p.toString()?('?'+p.toString()):location.pathname);
+}
 
     function sortData(arr){
-      if(state.sort==='az') return arr.slice().sort((a,b)=>a.title.localeCompare(b.title));
+      if(state.sort==='az') {
+        return arr.slice().sort((a,b)=>a.title.localeCompare(b.title));
+      }
       if(state.sort==='za') return arr.slice().sort((a,b)=>b.title.localeCompare(a.title));
       return arr.slice().sort((a,b)=> (b.popular??0)-(a.popular??0));
     }
 
-    function filterData(){
-      const q = state.q.toLowerCase();
-      let out = DATA.filter(d=>{
-        const okSector = !state.sector || d.sector===state.sector;
-        const okChips = state.chips.filter(c=>c.startsWith('vendor:')).length
-          ? state.chips.some(c=> d.vendor === c.split(':')[1])
-          : true;
-        const okQ = !q || [d.title,d.vendor,d.sector,(d.blurb||'')].join(' ').toLowerCase().includes(q);
-        return okSector && okChips && okQ;
-      });
-      return sortData(out);
+   function filterData(){
+  const q = state.q.toLowerCase();
+  let out = DATA.filter(d=>{
+    const okSector = !state.sector || d.sector === state.sector;
+    const okChips = state.chips.filter(c=>c.startsWith('vendor:')).length
+      ? state.chips.some(c=> d.vendor === c.split(':')[1])
+      : true;
+    let okPathway = true;
+    // Use PATHWAY_CERTS for pathway filtering
+    if (state.pathway && PATHWAY_CERTS[state.pathway]) {
+      okPathway = PATHWAY_CERTS[state.pathway].includes(d.key);
     }
+    const okQ = !q || [d.title,d.vendor,d.sector,(d.blurb||'')].join(' ').toLowerCase().includes(q);
+    return okSector && okChips && okPathway && okQ;
+  });
+  return sortData(out);
+}
 
     function highlight(text, q){
       if(!q) return text;
@@ -542,8 +1216,7 @@
           <p>${highlight(item.blurb||'', q)}</p>
           <div class="tags">${tags}</div>
           <div class="actions">
-            <a class="btn cta" href="certcourse-lms.html?course=${encodeURIComponent(item.key)}">Start Course</a>
-            <a class="btn ghost" href="../oedp.html">OEDP Pathways</a>
+            ${item.ctas.start ? `<a class="btn cta" href="certcourse-lms.html?course=${encodeURIComponent(item.key)}">Start Course</a>` : ''}
           </div>
           <div class="bookmark" aria-hidden="true"></div>
         `;
@@ -653,6 +1326,30 @@
         }
       };
     })();
+
+    function showPathwayModal(slug) {
+  const info = PATHWAY_INFO[slug];
+  if (!info) return;
+  document.getElementById('modal-title').textContent = info.title;
+  document.getElementById('modal-details').textContent = info.details;
+  document.getElementById('pathway-modal').style.display = 'flex';
+}
+document.getElementById('modal-close').onclick = function() {
+  document.getElementById('pathway-modal').style.display = 'none';
+};
+window.onclick = function(event) {
+  const modal = document.getElementById('pathway-modal');
+  if (event.target === modal) modal.style.display = 'none';
+};
+
+function setPathway(slug){
+  const $pathway = document.getElementById('pathway');
+  if ($pathway) $pathway.value = slug;
+  state.pathway = slug;
+  state.page = 1;
+  syncURL();
+  render();
+}
   </script>
 </body>
 </html>

@@ -50,18 +50,18 @@
     .site-footer--support a { color: #e2e8f0; text-decoration: none; }
     .site-footer--support a:hover { color: #ffffff; text-decoration: underline; }
 
-    .site-footer--support .footer-grid {
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr 1fr;
-      gap: 2.5rem;
-      align-items: start;
-      padding-top: 2.5rem;
-      padding-bottom: 1.5rem;
-    }
-    .site-footer--support .footer-grid > *:not(:first-child) {
-      border-left: 1px solid rgba(148,163,184,0.15);
-      padding-left: 1.5rem;
-    }
+   .site-footer--support .footer-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr 1fr; /* slimmer brand col */
+  gap: 2.25rem;                             /* slightly increased elegance */
+  align-items: start;
+  padding-top: 1.5rem;                      /* tighter vertical rhythm */
+  padding-bottom: 0.75rem;
+}
+  .site-footer--support .footer-grid > *:not(:first-child) {
+  border-left: 1px solid rgba(148,163,184,0.2); /* cleaner, slightly brighter */
+  padding-left: 1.75rem;                        /* a bit more breathing room */
+}
     .site-footer--support .footer-section h4,
     .site-footer--support .footer-brand .logo {
       color: #ffffff;
@@ -78,18 +78,75 @@
       font-size: 0.9rem;
     }
 
-    @media (max-width: 1100px) {
-      .site-footer--support .footer-grid { grid-template-columns: 1.5fr 1fr 1fr; }
-      .site-footer--support .footer-grid > *:nth-child(4) { grid-column: 1 / -1; border-left: 0; padding-left: 0; border-top: 1px solid rgba(148,163,184,0.15); padding-top: 1rem; margin-top: 0.5rem; }
+@media (max-width: 1100px) {
+  .site-footer--support .footer-grid { grid-template-columns: 1.5fr 1fr 1fr; }
+  .site-footer--support .footer-grid > *:nth-child(4) {
+    grid-column: 1 / -1;
+    border-left: 0; padding-left: 0;
+    border-top: 1px solid rgba(148,163,184,0.15);
+    padding-top: 1rem; margin-top: 0.5rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .site-footer--support .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem 1.25rem; /* row x column */
+  }
+  .site-footer--support .footer-grid > * {
+    border-left: 0; padding-left: 0;
+  }
+  .site-footer--support .footer-grid > *:not(:first-child) {
+    border-top: 1px solid rgba(148,163,184,0.15);
+    padding-top: 1rem; margin-top: 0.75rem;
+  }
+}
+
+@media (max-width: 540px) {
+  .site-footer--support .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+  }
+}
+
+    /* Support footer density + typographic tweaks */
+ .site-footer--support .footer-grid {
+  gap: 2.25rem;
+  padding-top: 1.25rem;
+  padding-bottom: 0.75rem;
+}
+    .site-footer--support .footer-brand { max-width: 380px; }
+    .site-footer--support .footer-brand .logo { font-size: 1.5rem; color: #fff; }
+    .site-footer--support .footer-brand p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-top: 0.5rem;
+      color: #9aa7b8;
     }
-    @media (max-width: 800px) {
-      .site-footer--support .footer-grid { grid-template-columns: 1fr 1fr; }
-      .site-footer--support .footer-grid > * { border-left: 0; padding-left: 0; }
-      .site-footer--support .footer-grid > *:not(:first-child) { border-top: 1px solid rgba(148,163,184,0.15); padding-top: 1rem; margin-top: 0.5rem; }
+.site-footer--support .footer-section h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.02em;
+  position: relative;
+  padding-bottom: 0.35rem;
+}
+
+.site-footer--support .footer-section h4::after {
+  content: "";
+  display: block;
+  width: 28px;
+  height: 2px;
+  margin-top: 0.5rem;
+  border-radius: 2px;
+  background: linear-gradient(90deg, rgba(59,130,246,0.9), rgba(16,185,129,0.9));
+}
+    .site-footer--support .footer-links a {
+      font-size: 0.95rem;
     }
-    @media (max-width: 540px) {
-      .site-footer--support .footer-grid { grid-template-columns: 1fr; gap: 1.25rem; }
-    }
+    .site-footer--support .footer-bottom { font-size: 0.85rem; }
   </style>
 </head>
 <body>
@@ -407,15 +464,15 @@
     <div class="container">
       <div class="footer-grid grid grid-4">
         <div class="footer-brand">
-          <a href="index.html" class="logo">BTH<span>Education</span></a>
-          <p>Global Education Investment Organization specializing in Family Education, Professional Early Child Education, Occupational Education, Investment Education and Education Franchises.</p>
+          <a href="index.html" class="logo">BTH Education Group</a>
+          <p style="max-width: 300px;">Global education investment across Family Education, PECE, OEDP, Investment Education &amp; Franchises.</p>
         </div>
 
         <div class="footer-section">
           <h4>Education Investment Programs</h4>
           <ul class="footer-links">
             <li><a href="programs/certificationcourses.html">Certification Catalog</a></li>
-            <li><a href="oedp.html">OEDP - Workforce Development</a></li>
+            <li><a href="https://btheducationgroup.org/program.html">OEDP - Workforce Development</a></li>
             <li><a href="pece.html">PECE - Family Education</a></li>
             <li><a href="investor-education.html">Investment Education</a></li>
             <li><a href="social-administration.html">ISSAD - Social Administration</a></li>
