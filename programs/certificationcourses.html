@@ -30,10 +30,129 @@
     .btn-small{padding:.55rem .9rem;border-radius:10px;border:1px solid var(--line);background:#fff;font-weight:700}
     .btn-primary{border:none;background:linear-gradient(90deg,var(--brand),var(--brand-2));color:#fff;box-shadow:0 8px 24px rgba(0,82,204,.18)}
     .btn-primary:hover{filter:brightness(1.05);transform:translateY(-1px)}
+    /* Block unintended horizontal scroll at the root */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Clip the oversized hero layers that use negative insets + blur */
+.pro-hero,
+.hero {
+  overflow-x: clip; /* 'clip' avoids creating a scroll container */
+  /* fallback if needed: overflow-x: hidden; */
+}
+
+/* Extra safety: clip the decorative layers inside the hero */
+.hero-veil,
+.hero-aurora,
+.hero-noise {
+  pointer-events: none;      /* already set for noise, keep consistent */
+  contain: paint;            /* isolate visual effects to avoid layout overflow */
+}
+
+/* Keep the toolbar’s own horizontal scroll working (do not change this) */
+/* .toolbar .wrap { overflow-x: auto; } remains as-is */
+   /* ====== PRO HERO ====== */
+.pro-hero { position: relative; isolation: isolate; }
+.pro-hero .hero-video{
+  position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
+  opacity:.55; filter:contrast(1.05) saturate(1.05) brightness(.9);
+}
+
+/* layered color + aurora + noise */
+.hero-aurora{
+  position:absolute; inset:-20% -10% -10% -10%; z-index:0;
+  background:
+    conic-gradient(from 210deg at 30% 10%, rgba(255,179,71,.35), rgba(255,204,128,.15), transparent 60%),
+    conic-gradient(from 120deg at 80% 0%, rgba(0,255,194,.10), rgba(0,127,255,.10), transparent 70%);
+  filter: blur(40px);
+  animation: auroraDrift 16s ease-in-out infinite alternate;
+}
+@keyframes auroraDrift{
+  0%   { transform: translateY(0) rotate(0deg) }
+  100% { transform: translateY(-2%) rotate(2deg) }
+}
+.hero-noise{
+  position:absolute; inset:0; z-index:0; opacity:.05; pointer-events:none;
+  background-image:url("data:image/svg+xml;utf8,\
+  <svg xmlns='http://www.w3.org/2000/svg' width='140' height='140' viewBox='0 0 140 140'>\
+  <filter id='n'>\
+    <feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/>\
+    <feColorMatrix type='saturate' values='0'/>\
+    <feComponentTransfer><feFuncA type='table' tableValues='0 0.5'/></feComponentTransfer>\
+  </filter>\
+  <rect width='100%' height='100%' filter='url(%23n)' />\
+  </svg>");
+  background-size: 260px 260px;
+  mix-blend-mode: overlay;
+}
+
+/* glass card + subtle tilt */
+.pro-glass{
+  background: rgba(255,255,255,.88);
+  border:1px solid rgba(255,255,255,.6);
+  box-shadow: 0 24px 70px rgba(0,0,0,.14), inset 0 1px 0 rgba(255,255,255,.6);
+  border-radius: 22px;
+  transition: transform .2s ease, box-shadow .2s ease;
+  will-change: transform;
+}
+.pro-glass:hover{ box-shadow: 0 28px 90px rgba(0,0,0,.18) }
+
+/* layout */
+.pro-hero .hero-inner{ position:relative; z-index:2; display:grid; place-items:center; padding:120px 0 86px; }
+.hero-title{ font-size: clamp(2rem, 4.5vw, 3.35rem); line-height:1.08; letter-spacing:-.02em; margin:.25rem 0 .6rem; }
+.text-gradient{
+  background: linear-gradient(90deg, #ffb347 0%, #ffcc80 45%, #ffffff 100%);
+  -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;
+}
+
+/* counters */
+.kpis-pro .kpi strong{ font-variant-numeric: tabular-nums; }
+
+/* marquee */
+.partner-marquee{
+  --marquee-speed: 28s;
+  position: relative; overflow: hidden; margin: 14px auto 10px;
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+.partner-marquee .track{
+  display:flex; gap:36px; align-items:center;
+  animation: scrollX var(--marquee-speed) linear infinite;
+  will-change: transform;
+}
+.partner-marquee img{
+  height: 40px; width: auto; filter: drop-shadow(0 2px 8px rgba(2,6,23,.12));
+  opacity:.98;
+}
+@keyframes scrollX{ to { transform: translateX(-50%); } }
+
+/* CTAs micro-interaction */
+.pro-cta{
+  padding:.9rem 1.15rem; border-radius:12px; position:relative; overflow:hidden;
+}
+.pro-cta::after{
+  content:''; position:absolute; inset:0; background: radial-gradient(120px 60px at var(--mx,50%) 0%, rgba(255,255,255,.28), transparent 60%);
+  opacity:0; transition:opacity .25s ease;
+}
+.pro-cta:hover::after{ opacity:1; }
+
+/* decorative wave */
+.hero-wave{ position:absolute; left:0; right:0; bottom:-1px; width:100%; height:120px; z-index:2; }
+
+/* Motion preferences + small screens */
+@media (prefers-reduced-motion: reduce){
+  .pro-hero .hero-video{ display:none }
+  .partner-marquee .track{ animation: none }
+  .hero-aurora{ animation: none }
+}
+@media (max-width: 740px){
+  .pro-hero .hero-inner{ padding:96px 0 68px; }
+  .partner-marquee img{ height:34px; }
+}
     /* ===== HERO ===== */
     .hero{position:relative;isolation:isolate}
-    .hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.5;filter:contrast(1.05) saturate(1.05) blur(.5px)}
-    .hero:before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(0,82,204,.75),rgba(0,127,255,.55));z-index:0}
+    .hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity: 0.1;;filter:contrast(1.05) saturate(1.05) blur(.5px)}
     .hero-inner{position:relative;z-index:1;display:grid;place-items:center;padding:120px 0 80px}
     .hero-card{background:rgba(255,255,255,.9);backdrop-filter:blur(12px);border:1px solid var(--line);border-radius:24px;padding:36px;max-width:980px;text-align:center;box-shadow:0 24px 70px rgba(0,0,0,.12)}
     .hero-card.parallax{will-change:transform;transition:transform .2s ease-out}
@@ -58,8 +177,20 @@
     /* ===== FILTERS TOOLBAR ===== */
     .toolbar{position:sticky;top:58px;z-index:30;background:#fff;border-bottom:1px solid var(--line)}
     .toolbar .wrap{display:flex;gap:10px;align-items:center;flex-wrap:wrap;padding:12px 0}
-    .search{flex:1;min-width:220px;display:flex;align-items:center;gap:.5rem;background:#fff;border:1px solid var(--line);padding:.6rem .8rem;border-radius:12px}
-    .search input{border:none;outline:none;width:100%;font-size:1rem}
+    .search{
+      display:flex;
+      align-items:center;
+      gap:.5rem;
+      background:#fff;
+      border:1px solid var(--line);
+      padding:.4rem .65rem;
+      border-radius:12px;
+      height:40px;
+      flex: 0 0 280px;   /* ideal width — change this to reduce/increase */
+      min-width:160px;   /* lower bound on small screens */
+      max-width:320px;   /* upper bound */
+    }
+    .search input{border:none;outline:none;width:100%;font-size:.95rem;height:100%}
     .select{border:1px solid var(--line);border-radius:10px;padding:.6rem .8rem;background:#fff}
     .chips{display:flex;gap:8px;flex-wrap:wrap}
     .chip[data-active="true"]{background:rgba(16,185,129,.08);border-color:#c7f4e6}
@@ -67,6 +198,7 @@
 .toolbar .wrap{
   display:flex;
   align-items:center;
+  justify-content:center;   /* center the whole toolbar content */
   gap:10px;
   /* force single line */
   flex-wrap: nowrap;
@@ -77,11 +209,8 @@
   padding: 12px 0;
 }
 
-/* Search grows, everything else stays natural width */
-.search{
-  flex: 1 1 auto;          /* grow + shrink */
-  min-width: 240px;         /* keep it usable on small screens */
-}
+/* Keep the compact .search defined earlier — do not override it here */
+/* .select and .chips remain fixed so they stay aligned */
 .select,
 .chips{
   flex: 0 0 auto;           /* do NOT grow, do NOT shrink */
@@ -315,6 +444,7 @@
 .modal-close {
   position: absolute; top: 18px; right: 18px; font-size: 1.5rem; color: #475569;
 }
+  .hero-card { transform: none !important; }
   </style>
   <script>
     // basic helper for IntersectionObserver reveals
@@ -344,35 +474,77 @@
     </div>
   </header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <video class="hero-video" autoplay muted loop playsinline poster="../assets/hero-poster.jpg">
-      <source src="../assets/hero-bg.mp4" type="video/mp4">
-    </video>
-    <div class="container hero-inner">
-      <div class="hero-card reveal">
-        <div class="eyebrow">Learn • Certify • Work • Earn <span class="chip">Pearson VUE Network</span></div>
-        <h1>Unlock Your Future with <span class="text-gradient">World‑Class Certifications</span></h1>
-        <p class="hero-sub">Foundational and professional credentials across technology, service, welding, electronics, business, and design — mapped to real roles through OEDP.</p>
-        <div class="kpis">
-          <div class="kpi"><strong>50+ </strong><small>Certifications</small></div>
-          <div class="kpi"><strong>10K+ </strong><small>Learners</small></div>
-          <div class="kpi"><strong>94% </strong><small>Placement</small></div>
+  <!-- HERO (Advanced) -->
+<section class="hero pro-hero" aria-label="Certification Catalog Hero">
+  <!-- Video Background -->
+  <video class="hero-video" autoplay muted loop playsinline poster="../assets/hero-poster.jpg">
+    <source src="../assets/hero-bg.mp4" type="video/mp4">
+  </video>
+
+  <!-- Color layers -->
+  <div class="hero-veil" aria-hidden="true"></div>
+  <div class="hero-aurora" aria-hidden="true"></div>
+  <div class="hero-noise" aria-hidden="true"></div>
+
+  <div class="container hero-inner">
+    <div class="hero-card pro-glass" data-parallax>
+      <div class="eyebrow">
+        Learn • Certify • Work • Earn
+        <span class="chip">Pearson VUE Network</span>
+      </div>
+
+      <h1 class="hero-title">
+        Unlock Your Future with
+        <span class="text-gradient">World-Class, Entry-Level Industry Certifications</span>
+      </h1>
+
+      <p class="hero-sub">
+        Foundational and professional credentials across technology, service, welding, electronics, business, and design — mapped to real roles through OEDP.
+      </p>
+
+      <!-- KPIs with animated counters -->
+      <div class="kpis kpis-pro" data-kpis>
+        <div class="kpi">
+          <strong data-count="50">0</strong><small>Certifications</small>
         </div>
-<div class="partner-row">
-  <img src="../assets/images/vendor-logos/certiport.svg" alt="Certiport" loading="lazy" class="partner-float" style="--i:0">
-  <img src="../assets/images/vendor-logos/eta.svg" alt="ETA International" loading="lazy" class="partner-float" style="--i:1">
-  <img src="../assets/images/vendor-logos/comptia.svg" alt="CompTIA" loading="lazy" class="partner-float" style="--i:2">
-  <img src="../assets/images/vendor-logos/eccouncil.svg" alt="EC-Council" loading="lazy" class="partner-float" style="--i:3">
-  <img src="../assets/images/vendor-logos/aws.svg" alt="AWS (Welding Society)" loading="lazy" class="partner-float" style="--i:4">
-</div>
-        <div class="hero-ctas">
-          <a href="#catalog" class="btn-small btn-primary" style="padding:.8rem 1.1rem;border-radius:12px;">Browse Certifications</a>
-          <a href="../certcourse-lms.html" class="btn-small" style="padding:.8rem 1.1rem;border-radius:12px;">Go to Learning Hub</a>
+        <div class="kpi">
+          <strong data-count="10000">0</strong><small>Learners</small>
+        </div>
+        <div class="kpi">
+          <strong data-count="94">0</strong><small>Placement</small>
         </div>
       </div>
+
+      <!-- Partner logo marquee -->
+      <div class="partner-marquee" role="list" aria-label="Certification Partners">
+        <div class="track">
+          <img src="../assets/images/vendor-logos/certiport.svg" alt="Certiport" role="listitem" loading="lazy">
+          <img src="../assets/images/vendor-logos/eta.svg" alt="ETA International" role="listitem" loading="lazy">
+          <img src="../assets/images/vendor-logos/comptia.svg" alt="CompTIA" role="listitem" loading="lazy">
+          <img src="../assets/images/vendor-logos/eccouncil.svg" alt="EC-Council" role="listitem" loading="lazy">
+          <img src="../assets/images/vendor-logos/aws.svg" alt="AWS (Welding Society)" role="listitem" loading="lazy">
+          <!-- duplicated for seamless loop -->
+          <img src="../assets/images/vendor-logos/certiport.svg" alt="" aria-hidden="true" loading="lazy">
+          <img src="../assets/images/vendor-logos/eta.svg" alt="" aria-hidden="true" loading="lazy">
+          <img src="../assets/images/vendor-logos/comptia.svg" alt="" aria-hidden="true" loading="lazy">
+          <img src="../assets/images/vendor-logos/eccouncil.svg" alt="" aria-hidden="true" loading="lazy">
+          <img src="../assets/images/vendor-logos/aws.svg" alt="" aria-hidden="true" loading="lazy">
+        </div>
+      </div>
+
+      <div class="hero-ctas">
+        <a href="#catalog" class="btn-small btn-primary pro-cta">Browse Certifications</a>
+        <a href="../certcourse-lms.html" class="btn-small pro-cta ghost">Go to Learning Hub</a>
+      </div>
     </div>
-  </section>
+  </div>
+
+  <!-- Decorative wave -->
+  <svg class="hero-wave" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0,40 C480,120 960,0 1440,80 L1440,120 L0,120 Z" fill="#ffffff" opacity="0.16"></path>
+    <path d="M0,60 C480,80 960,40 1440,60 L1440,120 L0,120 Z" fill="#ffffff" opacity="0.10"></path>
+  </svg>
+</section>
 
   <!-- FILTER TOOLBAR -->
   <div class="toolbar" role="region" aria-label="Filters">
@@ -413,15 +585,11 @@
         <option value="az">A → Z</option>
         <option value="za">Z → A</option>
       </select>
-      <div class="chips" id="quick-chips" aria-label="Quick filters">
-        <button class="chip" data-chip="vendor:Certiport">Certiport</button>
-        <button class="chip" data-chip="vendor:ETA">ETA</button>
-        <button class="chip" data-chip="vendor:CompTIA">CompTIA</button>
-        <button class="chip" data-chip="vendor:EC-Council">EC‑Council</button>
-        <button class="chip" data-chip="sector:technology">Technology</button>
-        <button class="chip" data-chip="sector:service">Service</button>
-        <button class="chip" data-chip="sector:welding">Welding</button>
-      </div>
+      <label class="visually-hidden" for="vendor">Vendor</label>
+<select id="vendor" class="select" aria-label="Vendor">
+  <option value="">All Vendors</option>
+  <!-- Vendor options will be populated by JavaScript -->
+</select>
     </div>
   </div>
 
@@ -683,7 +851,7 @@ const PATHWAY_CERTS = {
 };
   </script>
   <script>
-    // Catalog data (revised for CTAs + pathways)
+   // Catalog data (revised for CTAs + pathways)
 const DATA = [
   // --- Adobe Certified Professional ---
   { key:'adobe-acrobat-pro', vendor:'Adobe', sector:'design', title:'Acrobat Pro', blurb:'Document creation and management.', tags:['Adobe','Design'], ctas:{start:true, pathway:false} },
@@ -698,6 +866,10 @@ const DATA = [
 
   // --- Agriscience and Technology Careers ---
   { key:'agriscience-foundations', vendor:'Certiport', sector:'agriscience', title:'Agriscience Foundations', blurb:'Agriscience and technology careers.', tags:['Agriscience'], ctas:{start:true, pathway:false} },
+
+  // --- Amazon Web Services (AWS) ---
+  { key:'aws-cloud-practitioner', vendor:'Amazon Web Services', sector:'technology', title:'AWS Certified Cloud Practitioner (CLF-C02)', blurb:'Cloud computing fundamentals.', tags:['AWS','Cloud'], ctas:{start:true, pathway:false} },
+  { key:'aws-ai-practitioner', vendor:'Amazon Web Services', sector:'technology', title:'AWS Certified AI Practitioner (AIF-C01)', blurb:'AI and machine learning fundamentals.', tags:['AWS','AI'], ctas:{start:true, pathway:false} },
 
   // --- Apple App Development with Swift ---
   { key:'swift-certified-user', vendor:'Apple', sector:'technology', title:'App Development with Swift Certified User', blurb:'iOS app development.', tags:['Apple','App Dev'], ctas:{start:true, pathway:false} },
@@ -721,6 +893,13 @@ const DATA = [
   { key:'professional-communication', vendor:'Certiport', sector:'career', title:'Professional Communication', blurb:'Essential workplace communication skills.', tags:['Career'], ctas:{start:true, pathway:false} },
   { key:'generative-ai-foundations', vendor:'Certiport', sector:'technology', title:'Generative AI Foundations', blurb:'AI skills for the workplace.', tags:['AI','Career'], ctas:{start:true, pathway:false} },
 
+  // --- CompTIA ---
+  { key:'comptia-techplus', vendor:'CompTIA', sector:'technology', title:'CompTIA Tech+ (FC0-U71)', blurb:'Foundational hardware, software, troubleshooting, and basic cybersecurity skills.', tags:['CompTIA','Technology'], ctas:{start:true, pathway:false} },
+  { key:'comptia-data-analysis-essentials', vendor:'CompTIA', sector:'technology', title:'Comptia Data Analysis Essentials', blurb:'Essential data analysis skills for Problem Solving', tags:['CompTIA','Data Analysis'], ctas:{start:true, pathway:false} },
+  { key:'comptia-cloud-essentials', vendor:'CompTIA', sector:'technology', title:'CompTIA Cloud Essentials', blurb:'Build your foundational knowledge of cloud computing.', tags:['CompTIA','Cloud'], ctas:{start:true, pathway:false} },
+  { key:'comptia-ai-essentials', vendor:'CompTIA', sector:'technology', title:'CompTIA AI Essentials', blurb:'Beginner-friendly, self-paced course, crafted to build a solid foundation in AI.', tags:['CompTIA','AI'], ctas:{start:true, pathway:false} },
+  { key:'comptia-business-essentials', vendor:'CompTIA', sector:'technology', title:'CompTIA Business Essentials', blurb:'Fundamental business skills for IT professionals.', tags:['CompTIA','Business'], ctas:{start:true, pathway:false} },
+  
   // --- Entrepreneurship and Small Business (ESB) ---
   { key:'esb-v2', vendor:'Certiport', sector:'business', title:'Entrepreneurship & Small Business (ESB) V.2', blurb:'Startup and small business management essentials.', tags:['Entrepreneurship'], ctas:{start:true, pathway:false} },
 
@@ -783,6 +962,10 @@ const DATA = [
 { key:'ms-power-platform-fundamentals', vendor:'Microsoft', sector:'technology', title:'Microsoft Power Platform Fundamentals (PL-900)', blurb:'Power Platform fundamentals.', tags:['Microsoft','Power Platform'], ctas:{start:true, pathway:false} },
 { key:'ms-security-compliance-fundamentals', vendor:'Microsoft', sector:'technology', title:'Microsoft Security, Compliance, and Identity Fundamentals (SC-900)', blurb:'Security and compliance fundamentals.', tags:['Microsoft','Security'], ctas:{start:true, pathway:false} },
 
+// --- Dynamics 365 Fundamentals ---
+{ key:'ms-dynamics-365-fundamentals', vendor:'Microsoft', sector:'business', title:'Dynamics 365 Fundamentals (Customer Relationship Management-MB-910)', blurb:'Microsoft Dynamics 365 customer engagement apps, including sales, customer services, marketing, and field service.', tags:['Microsoft','Business'], ctas:{start:true, pathway:false} },
+{ key: 'ms-dynamics-365-enterprise-resource-planning', vendor:'Microsoft', sector:'business', title:'Dynamics 365 Enterprise Resource Planning (ERP-MB-920)', blurb:'It covers how ERP systems unify functions like finance, supply chain, commerce, and human resources onto a single platform to improve efficiency and provide data-driven insights.', tags:['Microsoft','Business'], ctas:{start:true, pathway:false} },
+
   // --- Microsoft Office Specialist (MOS) ---
   { key:'mos-word-365', vendor:'Microsoft', sector:'business', title:'Word (Microsoft 365 apps)', blurb:'Word processing skills.', tags:['Microsoft','Office'], ctas:{start:true, pathway:false} },
   { key:'mos-excel-365', vendor:'Microsoft', sector:'business', title:'Excel (Microsoft 365 apps)', blurb:'Spreadsheet skills.', tags:['Microsoft','Office'], ctas:{start:true, pathway:false} },
@@ -814,19 +997,11 @@ const DATA = [
   { key:'unity-vr-developer', vendor:'Unity', sector:'technology', title:'Unity Certified User: VR Developer', blurb:'VR development skills.', tags:['Unity','Game Dev'], ctas:{start:true, pathway:false} },
   { key:'unity-artist', vendor:'Unity', sector:'technology', title:'Unity Certified User: Artist', blurb:'Unity art and design skills.', tags:['Unity','Game Dev'], ctas:{start:true, pathway:false} },
 
-  // --- Amercian Welding Society (AWS) ---
-  { key:'aws-certified-welding-inspector', vendor:'AWS', sector:'welding', title:'AWS Certified Welding Inspector', blurb:'Welding inspection skills.', tags:['AWS','Welding'], ctas:{start:true, pathway:false} },
-  { key:'aws-certified-welding-supervisor', vendor:'AWS', sector:'welding', title:'AWS Certified Welding Supervisor', blurb:'Welding supervision skills.', tags:['AWS','Welding'], ctas:{start:true, pathway:false} },
-  { key:'aws-certified-welding-educator', vendor:'AWS', sector:'welding', title:'AWS Certified Welding Educator', blurb:'Welding education skills.', tags:['AWS','Welding'], ctas:{start:true, pathway:false} },
-  { key:'aws-certified-welding-technician', vendor:'AWS', sector:'welding', title:'AWS Certified Welding Technician', blurb:'Welding technician skills.', tags:['AWS','Welding'], ctas:{start:true, pathway:false} },
-  { key:'aws-certified-welding-operator', vendor:'AWS', sector:'welding', title:'AWS Certified Welding Operator', blurb:'Welding operator skills.', tags:['AWS','Welding'], ctas:{start:true, pathway:false} },
-  { key:'aws-certified-welding-fitter', vendor:'AWS', sector:'welding', title:'AWS Certified Welding Fitter', blurb:'Welding fitter skills.', tags:['AWS','Welding'], ctas:{start:true, pathway:false} },
-  { key:'aws-certified-welding-brazing', vendor:'AWS', sector:'welding', title:'AWS Certified Welding Brazing', blurb:'Welding brazing skills.', tags:['AWS','Welding'], ctas:{start:true, pathway:false} },
-  { key:'aws-certified-welding-inspector-advanced', vendor:'AWS', sector:'welding', title:'AWS Certified Welding Inspector - Advanced', blurb:'Advanced welding inspection skills.', tags:['AWS','Welding'], ctas:{start:true, pathway:false} },
-  { key:'aws-welding-fundamentals', vendor:'AWS', sector:'welding', title:'AWS Welding Fundamentals I', blurb:'Basic welding skills.', tags:['AWS','Welding'], ctas:{start:true, pathway:false} },
-  { key:'aws-welding-fundamentals-ii', vendor:'AWS', sector:'welding', title:'AWS Welding Fundamentals II', blurb:'Intermediate welding skills.', tags:['AWS','Welding'], ctas:{start:true, pathway:false} },
-  { key:'aws-welding-fundamentals-iii', vendor:'AWS', sector:'welding', title:'AWS Welding Fundamentals III', blurb:'Advanced welding skills.', tags:['AWS','Welding'], ctas:{start:true, pathway:false} },
-
+/// --- American Welding Society (AWS) ---
+  { key:'aws-welding-fundamentals-i', vendor:'AWS', sector:'manufacturing', title:'AWS Welding Fundamentals I', blurb:'Basic welding skills.', tags:['AWS','Welding'], ctas:{start:true, pathway:false} },
+  { key:'aws-welding-fundamentals-ii', vendor:'AWS', sector:'manufacturing', title:'AWS Welding Fundamentals II', blurb:'Intermediate welding skills.', tags:['AWS','Welding'], ctas:{start:true, pathway:false} },
+  { key:'aws-welding-fundamentals-iii', vendor:'AWS', sector:'manufacturing', title:'AWS Welding Fundamentals III', blurb:'Advanced welding skills.', tags:['AWS','Welding'], ctas:{start:true, pathway:false} },
+  
   // --- EC-Council Fundamental Certifications ---
   { key:'cscu', vendor:'EC-Council', sector:'technology', title:'Certified Secure Computer User (CSCU)', blurb:'End-user cybersecurity awareness and hygiene.', tags:['Security'], ctas:{start:true, pathway:false} },
   { key:'network-defense-essentials', vendor:'EC-Council', sector:'technology', title:'Network Defense Essentials (NDE)', blurb:'Fundamentals of network defense and security.', tags:['Security','Networking'], ctas:{start:true, pathway:false} },
@@ -1012,7 +1187,7 @@ const PATHWAY_INFO = {
   'vr-specialist': {
     title: 'VR Specialist',
     summary: 'Prepares you for creating virtual reality content and experiences.',
-    details: 'Requirements: Complete the core certifications. Recommended for VR development professionals. See full details in Certiport Pathways.docx.',
+    details: 'Requirements: Complete the core certifications. Recommended for VR professionals. See full details in Certiport Pathways.docx.',
   },
   'web-developer-freelancer': {
     title: 'Web Developer Freelancer',
@@ -1022,7 +1197,7 @@ const PATHWAY_INFO = {
   'workforce-ready': {
     title: 'Workforce Ready (Prereq: IC3 GS6 Master)',
     summary: 'Prepares you for immediate entry into the workforce with essential skills.',
-    details: 'Requirements: Complete the IC3 GS6 Master and additional core certifications. Recommended for all job seekers. See full details in Certiport Pathways.docx.',
+    details: 'Requirements: Complete the core certifications. Recommended for all job seekers. See full details in Certiport Pathways.docx.',
   },
 };
 
@@ -1033,14 +1208,30 @@ const PATHWAY_INFO = {
   // Clear existing (keep "All Pathways")
   for (let i = sel.options.length - 1; i >= 1; i--) sel.remove(i);
   // Insert options
-  PATHWAY_OPTIONS.forEach(p=>{
+  PATHWAY_OPTIONS.forEach(o => {
     const opt = document.createElement('option');
-    opt.value = p.slug;
-    opt.textContent = p.label;
+    opt.value = o.slug;
+    opt.textContent = o.label;
     sel.appendChild(opt);
   });
 })();
 
+// --- Populate Vendor Dropdown ---
+(function hydrateVendorSelect(){
+  const sel = document.getElementById('vendor');
+  if(!sel) return;
+  // Get unique vendors from DATA
+  const vendors = Array.from(new Set(DATA.map(d => d.vendor))).sort();
+  // Remove all except "All Vendors"
+  for (let i = sel.options.length - 1; i >= 1; i--) sel.remove(i);
+  // Add each vendor as an option
+  vendors.forEach(vendor => {
+    const opt = document.createElement('option');
+    opt.value = vendor;
+    opt.textContent = vendor;
+    sel.appendChild(opt);
+  });
+})();
     // Derive logos from vendor
    function logoFor(vendor){
   // Map normalized vendor name -> svg filename (supports eccouncil.svg)
@@ -1085,6 +1276,7 @@ state.pathway = params.get('pathway') || '';
     const $next = document.getElementById('next');
     const $pages = document.getElementById('pages');
     const $chips = document.getElementById('quick-chips');
+    const $vendor = document.getElementById('vendor');
     function buildPages(maxPage){
       if(!$pages) return;
       // Windowed pagination around current page
@@ -1122,7 +1314,14 @@ state.pathway = params.get('pathway') || '';
     $sector.addEventListener('change', ()=>{ state.sector = $sector.value; state.page=1; syncURL(); render(); });
     $sort.addEventListener('change', ()=>{ state.sort = $sort.value; state.page=1; syncURL(); render(); });
     $pathway.addEventListener('change', ()=>{ state.pathway = $pathway.value; state.page = 1; syncURL(); render(); });
-
+    if ($vendor) {
+      $vendor.addEventListener('change', () => {
+        state.vendor = $vendor.value;
+        state.page = 1;
+        syncURL();
+        render();
+      });
+    }
 
     // Pagination
     $prev.addEventListener('click', ()=>{ 
@@ -1161,16 +1360,13 @@ state.pathway = params.get('pathway') || '';
   const q = state.q.toLowerCase();
   let out = DATA.filter(d=>{
     const okSector = !state.sector || d.sector === state.sector;
-    const okChips = state.chips.filter(c=>c.startsWith('vendor:')).length
-      ? state.chips.some(c=> d.vendor === c.split(':')[1])
-      : true;
+    const okVendor = !state.vendor || d.vendor === state.vendor;
     let okPathway = true;
-    // Use PATHWAY_CERTS for pathway filtering
     if (state.pathway && PATHWAY_CERTS[state.pathway]) {
       okPathway = PATHWAY_CERTS[state.pathway].includes(d.key);
     }
     const okQ = !q || [d.title,d.vendor,d.sector,(d.blurb||'')].join(' ').toLowerCase().includes(q);
-    return okSector && okChips && okPathway && okQ;
+    return okSector && okVendor && okPathway && okQ;
   });
   return sortData(out);
 }
@@ -1244,40 +1440,27 @@ state.pathway = params.get('pathway') || '';
     render();
 
     // JSON-LD (ItemList) for SEO
-    (function schema(){
-      const list = DATA.slice(0,12).map((d,i)=>({
-        "@type":"ListItem",
-        "position": i+1,
-        "url": location.origin + location.pathname.replace('certificationcourses','certcourse-lms') + '?course=' + encodeURIComponent(d.key),
-        "name": d.title
-      }));
-      const script = document.createElement('script');
-      script.type='application/ld+json';
-      script.textContent = JSON.stringify({
-        "@context":"https://schema.org",
-        "@type":"ItemList",
-        "name":"BTH Certification Courses",
-        "itemListElement": list
-      });
-      document.head.appendChild(script);
-    })();
-    (function parallaxHero(){
-  const card = document.querySelector('.hero-card');
-  if(!card) return;
-  card.classList.add('parallax');
-  let ticking = false;
-  function onScroll(){
-    if(ticking) return;
-    window.requestAnimationFrame(()=>{
-      const y = window.scrollY || 0;
-      const delta = Math.max(0, 120 - y);
-      card.style.transform = `translateY(${Math.max(0, delta*0.05)}px)`;
-      ticking = false;
-    });
-    ticking = true;
-  }
-  window.addEventListener('scroll', onScroll, {passive:true});
+(function schema(){
+  const list = DATA.slice(0,12).map((d,i)=>({
+    "@type":"ListItem",
+    "position": i+1,
+    "url": location.origin + location.pathname.replace('certificationcourses','certcourse-lms') + '?course=' + encodeURIComponent(d.key),
+    "name": d.title
+  }));
+  const script = document.createElement('script');
+  script.type='application/ld+json';
+  script.textContent = JSON.stringify({
+    "@context":"https://schema.org",
+    "@type":"ItemList",
+    "name":"BTH Certification Courses",
+    "itemListElement": list
+  });
+  document.head.appendChild(script);
 })();
+
+// Ensure a safe onScroll handler is defined (no-op) so adding the listener won't error
+function onScroll() { /* no-op placeholder */ }
+window.addEventListener('scroll', onScroll, {passive:true});
 
     /* --- SVG -> PNG graceful fallback + prefer SVG globally --- */
     (function assetFormatHelpers(){
@@ -1351,5 +1534,54 @@ function setPathway(slug){
   render();
 }
   </script>
+  <script>
+/* Parallax tilt on the glass card */
+(function(){
+  const card = document.querySelector('.pro-hero [data-parallax]');
+  if(!card) return;
+  const MAX = 6; // deg
+  function tilt(e){
+    const r = card.getBoundingClientRect();
+    const cx = r.left + r.width/2, cy = r.top + r.height/2;
+    const dx = (e.clientX - cx) / (r.width/2);
+    const dy = (e.clientY - cy) / (r.height/2);
+    card.style.transform = `rotateX(${(-dy*MAX).toFixed(2)}deg) rotateY(${(dx*MAX).toFixed(2)}deg) translateZ(0)`;
+  }
+  function reset(){ card.style.transform = 'rotateX(0) rotateY(0)' }
+  window.addEventListener('mousemove', tilt, {passive:true});
+  card.addEventListener('mouseleave', reset);
+})();
+
+/* Animated KPI counters (activates when visible) */
+(function(){
+  const wrap = document.querySelector('[data-kpis]');
+  if(!wrap) return;
+  const els = wrap.querySelectorAll('[data-count]');
+  let done = false;
+
+  function animate(el, to, dur=1200){
+    const start = performance.now();
+    const from = 0;
+    const fmt = (n)=> el.dataset.count >= 1000 ? n.toLocaleString() : n;
+    function tick(t){
+      const p = Math.min(1, (t-start)/dur);
+      el.textContent = fmt(Math.floor(from + (to-from)*p));
+      if(p < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  }
+
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(en=>{
+      if(en.isIntersecting && !done){
+        done = true;
+        els.forEach(el=> animate(el, parseInt(el.dataset.count,10)));
+        io.disconnect();
+      }
+    });
+  },{threshold:.35});
+  io.observe(wrap);
+})();
+</script>
 </body>
 </html>
