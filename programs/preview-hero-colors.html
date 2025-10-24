@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Preview — Hero Colors & Headline</title>
+<style>
+  :root{
+    --ink:#0f172a; --muted:#475569; --line:#e2e8f0;
+    --brand:#0052cc; --brand-2:#007fff;
+    --accent:#ffb347; --accent-2:#ffcc80;
+    --bg: linear-gradient(135deg,#f5f7fb 0%,#eaf1ff 100%);
+  }
+  html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--ink)}
+  .wrap{max-width:1100px;margin:48px auto;padding:24px}
+  .hero{
+    background: linear-gradient(120deg, rgba(0,82,204,.12), rgba(0,127,255,.06));
+    padding:48px;border-radius:18px;box-shadow:0 20px 60px rgba(2,6,23,.07);
+  }
+  .hero-card{background:linear-gradient(180deg,rgba(255,255,255,.98),#ffffff);padding:28px;border-radius:14px;border:1px solid var(--line)}
+  .eyebrow{font-weight:800;letter-spacing:.12em;color:var(--muted);display:inline-flex;gap:.6rem;margin-bottom:12px}
+  h1{font-size:clamp(1.6rem,3.6vw,2.6rem);margin:.2rem 0 8px;line-height:1.05}
+  .text-gradient{
+    background:linear-gradient(90deg,var(--accent),var(--accent-2));
+    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+    font-weight:800;
+  }
+  .text-accent{
+    display:inline-block;
+    background: linear-gradient(90deg,#ffd699 0%, #ffcc80 40%, #ffb347 70%, #ffd699 100%);
+    background-size:200% 100%;
+    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+    font-weight:900;
+    padding:0 4px;
+    position:relative;
+    transition:transform .28s ease;
+    animation: gradientShift 6s linear infinite;
+  }
+  .text-accent::after{
+    content:""; position:absolute; left:0; right:0; bottom:-6px; height:4px;border-radius:4px;
+    background:linear-gradient(90deg,#ffd699,#ffcc80); transform:scaleX(0); transform-origin:left; transition:transform .36s cubic-bezier(.2,.9,.2,1);
+  }
+  .text-accent:hover{ transform: translateY(-3px); }
+  .text-accent:hover::after{ transform:scaleX(1); }
+
+  @keyframes gradientShift{
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+  }
+  @media (prefers-reduced-motion:reduce){
+    .text-accent, .text-accent::after { animation:none; transition:none; transform:none }
+    .text-accent::after{ transform:scaleX(1) }
+  }
+
+  .hero-sub{color:var(--muted);margin:12px 0 16px;max-width:72ch}
+  .kpis{display:flex;gap:12px;margin-top:10px}
+  .kpi{background:#fff;border:1px solid var(--line);padding:12px 16px;border-radius:10px;min-width:108px;text-align:center}
+  .swatches{display:flex;gap:12px;margin-top:18px;flex-wrap:wrap}
+  .sw{width:120px;height:64px;border-radius:8px;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-weight:700;color:#0b1220}
+  .sw--brand{background:linear-gradient(90deg,var(--brand),var(--brand-2));color:#fff}
+  .sw--accent{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#111}
+  .sw--muted{background:var(--muted);color:#fff}
+  .note{font-size:.9rem;color:var(--muted);margin-top:12px}
+</style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="hero">
+      <div class="hero-card">
+        <div class="eyebrow">LEARN • CERTIFY • WORK • EARN <span style="margin-left:6px;font-weight:700;color:var(--brand)">PEARSON VUE NETWORK</span></div>
+        <h1>
+          Unlock Your Future with
+          <span class="text-gradient">World‑Class Entry‑Level</span>
+          <span class="text-accent">Industry Certifications</span>
+        </h1>
+        <p class="hero-sub">Foundational and professional credentials across technology, service, welding, electronics, business, and design — mapped to real roles through OEDP.</p>
+
+        <div class="kpis">
+          <div class="kpi"><div style="font-size:1.4rem">50+</div><small style="color:var(--muted)">Certifications</small></div>
+          <div class="kpi"><div style="font-size:1.4rem">10K+</div><small style="color:var(--muted)">Learners</small></div>
+          <div class="kpi"><div style="font-size:1.4rem">94%</div><small style="color:var(--muted)">Placement</small></div>
+        </div>
+
+        <div class="swatches" aria-hidden="true">
+          <div class="sw sw--brand">Brand</div>
+          <div class="sw sw--accent">Accent</div>
+          <div class="sw sw--muted">Muted</div>
+          <div class="sw" style="background:var(--line)">Line</div>
+          <div class="sw" style="background:var(--bg)">BG</div>
+        </div>
+
+        <p class="note">Hover "Industry Certifications" for the underline reveal. Animations disabled if user prefers reduced motion.</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

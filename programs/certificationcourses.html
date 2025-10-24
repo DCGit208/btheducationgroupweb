@@ -914,6 +914,19 @@ const DATA = [
   { key:'csm', vendor:'ETA', sector:'service', title:'Certified Service Manager (CSM)', blurb:'Service management and leadership fundamentals.', tags:['Service','Management'], ctas:{start:true, pathway:false} },
   { key:'css', vendor:'ETA', sector:'service', title:'Customer Service Specialist (CSS)', blurb:'Frontline customer service excellence.', tags:['Service'], ctas:{start:true, pathway:false} },
 
+  // --- GOOGLE ---
+  { key:'google-ads-search', vendor:'Google', sector:'business', title:'Google Ads Search Certification', blurb:'Search advertising skills.', tags:['Google','Marketing'], ctas:{start:true, pathway:false} },
+  { key:'google-ads-display', vendor:'Google', sector:'business', title:'Google Ads Display Certification', blurb:'Display advertising skills.', tags:['Google','Marketing'], ctas:{start:true, pathway:false} },
+  { key:'google-ads-video', vendor:'Google', sector:'business', title:'Google Ads Video Certification', blurb:'Video advertising skills.', tags:['Google','Marketing'], ctas:{start:true, pathway:false} },
+  { key:'google-ads-shopping', vendor:'Google', sector:'business', title:'Google Ads Shopping Certification', blurb:'Shopping advertising skills.', tags:['Google','Marketing'], ctas:{start:true, pathway:false} },
+  { key:'google-ads-app', vendor:'Google', sector:'business', title:'Google Ads App Certification', blurb:'App advertising skills.', tags:['Google','Marketing'], ctas:{start:true, pathway:false} },
+  { key:'google-ads-measurement', vendor:'Google', sector:'business', title:'Google Ads Measurement Certification', blurb:'Advertising measurement skills.', tags:['Google','Marketing'], ctas:{start:true, pathway:false} },
+  { key:'google-ai-powered-performance-ads', vendor:'Google', sector:'business', title:'Google AI-Powered Performance Ads Certification', blurb:'AI-driven advertising skills.', tags:['Google','Marketing','AI'], ctas:{start:true, pathway:false} },
+  { key:'google-ai-powered-shopping-ads', vendor:'Google', sector:'business', title:'Google AI-Powered Shopping Ads Certification', blurb:'AI-driven shopping advertising skills.', tags:['Google','Marketing','AI'], ctas:{start:true, pathway:false} },
+  { key:'google-grow-offline-sales', vendor:'Google', sector:'business', title:'Google Grow Offline Sales Certification', blurb:'Offline sales growth strategies.', tags:['Google','Marketing'], ctas:{start:true, pathway:false} },
+  { key:'google-cloud-digital-leader', vendor:'Google', sector:'technology', title:'Google Cloud Digital Leader', blurb:'Cloud computing fundamentals.', tags:['Google','Cloud'], ctas:{start:true, pathway:false} },
+  { key:'google-generative-ai-leader', vendor:'Google', sector:'technology', title:'Google Generative AI Leader', blurb:'Generative AI fundamentals.', tags:['Google','AI'], ctas:{start:true, pathway:false} },
+
   // --- Health Sciences Careers ---
   { key:'medical-admin-assistant', vendor:'Certiport', sector:'healthcare', title:'Medical Administrative Assistant', blurb:'Healthcare administration skills.', tags:['Healthcare'], ctas:{start:true, pathway:false} },
 
@@ -1216,21 +1229,83 @@ const PATHWAY_INFO = {
   });
 })();
 
+// Featured vendor groups that act like subcategories inside the Vendor dropdown
+const FEATURED_VENDOR_GROUPS = [
+  {
+    value: 'group:google-ads',
+    label: 'Google Ads Certifications',
+    // Include Google Ads + AI-Powered Ads items only (not Cloud/Gemini, etc.)
+    predicate: (d) =>
+      d.vendor === 'Google' && (
+        /google\s+ads/i.test(d.title) ||
+        /ai-powered.*ads/i.test(d.title) ||
+        (d.tags || []).includes('Marketing')
+      )
+  },
+  {
+    value: 'group:microsoft-fundamentals',
+    label: 'Microsoft Fundamentals',
+    // Azure/AI/Data/MS/Power Platform/Security Fundamentals (AI-900, AZ-900, DP-900, MS-900, PL-900, SC-900)
+    // plus Dynamics MB-910/MB-920
+    predicate: (d) =>
+      d.vendor === 'Microsoft' && (
+        /fundamentals/i.test(d.title) ||
+        /MB-910/i.test(d.title) ||
+        /MB-920/i.test(d.title)
+      )
+  },
+  {
+    value: 'group:ec-council-essentials',
+    label: 'EC-Council Essentials',
+    // Essentials series + CSCU
+    predicate: (d) =>
+      d.vendor === 'EC-Council' && (
+        /essentials/i.test(d.title) ||   // NDE, EHE, DFE
+        /CSCU/i.test(d.key)              // Secure Computer User
+      )
+  },
+  {
+    value: 'group:eta-electronics',
+    label: 'ETA Electronics Modules',
+    // EM1–EM5 modules
+    predicate: (d) =>
+      d.vendor === 'ETA' && /^em[1-5]$/i.test(d.key)
+  }
+];
 // --- Populate Vendor Dropdown ---
 (function hydrateVendorSelect(){
   const sel = document.getElementById('vendor');
   if(!sel) return;
-  // Get unique vendors from DATA
-  const vendors = Array.from(new Set(DATA.map(d => d.vendor))).sort();
-  // Remove all except "All Vendors"
+
+  // Remove all except the first "All Vendors"
   for (let i = sel.options.length - 1; i >= 1; i--) sel.remove(i);
-  // Add each vendor as an option
-  vendors.forEach(vendor => {
-    const opt = document.createElement('option');
-    opt.value = vendor;
-    opt.textContent = vendor;
-    sel.appendChild(opt);
-  });
+
+  // --- Featured group (subcategories) ---
+  if (FEATURED_VENDOR_GROUPS && FEATURED_VENDOR_GROUPS.length){
+    const ogFeatured = document.createElement('optgroup');
+    ogFeatured.label = 'Featured';
+    FEATURED_VENDOR_GROUPS.forEach(g => {
+      const opt = document.createElement('option');
+      opt.value = g.value;           // e.g., group:google-ads
+      opt.textContent = `• ${g.label}`;
+      ogFeatured.appendChild(opt);
+    });
+    sel.appendChild(ogFeatured);
+  }
+
+  // --- Normal vendors group (derived from DATA) ---
+  const vendors = Array.from(new Set(DATA.map(d => d.vendor))).sort();
+  if (vendors.length){
+    const ogVendors = document.createElement('optgroup');
+    ogVendors.label = 'Vendors';
+    vendors.forEach(vendor => {
+      const opt = document.createElement('option');
+      opt.value = vendor;
+      opt.textContent = vendor;
+      ogVendors.appendChild(opt);
+    });
+    sel.appendChild(ogVendors);
+  }
 })();
     // Derive logos from vendor
    function logoFor(vendor){
@@ -1249,7 +1324,8 @@ const PATHWAY_INFO = {
     'meta':'meta.svg',
     'unity':'unity.svg',
     'pmi':'pmi.svg',
-    'microsoft':'microsoft.svg'
+    'microsoft':'microsoft.svg',
+    'google':'google.svg'
   };
   const key = (vendor||'').toLowerCase().replace(/&amp;|&/g,'and').replace(/\s+/g,'-');
   const file = map[key] || `${key}.svg`;
@@ -1257,7 +1333,7 @@ const PATHWAY_INFO = {
 }
 
     // State
-  let state = { q:'', sector:'', pathway:'', sort:'popular', page:1, pageSize:12, chips:[] };
+  let state = { q:'', sector:'', vendor:'', pathway:'', sort:'popular', page:1, pageSize:12, chips:[] };
 
     // Read from URL params
 const params = new URLSearchParams(location.search);
@@ -1265,6 +1341,7 @@ state.q       = params.get('q')       || '';
 state.sector  = params.get('sector')  || '';
 state.sort    = params.get('sort')    || 'popular';
 state.pathway = params.get('pathway') || '';
+state.vendor  = params.get('vendor')  || '';
 
     // Bind controls
     const $q = document.getElementById('q');
@@ -1308,7 +1385,7 @@ state.pathway = params.get('pathway') || '';
       $pages.innerHTML = parts.join('');
     }
 
-    $q.value = state.q; $sector.value = state.sector; $sort.value = state.sort; $pathway.value = state.pathway;
+    $q.value = state.q; $sector.value = state.sector; $sort.value = state.sort; $pathway.value = state.pathway; if ($vendor) $vendor.value = state.vendor;
 
     $q.addEventListener('input', ()=>{ state.q = $q.value.trim(); state.page=1; syncURL(); render(); });
     $sector.addEventListener('change', ()=>{ state.sector = $sector.value; state.page=1; syncURL(); render(); });
@@ -1345,6 +1422,7 @@ state.pathway = params.get('pathway') || '';
   if (state.sector) p.set('sector', state.sector);
   if (state.sort && state.sort !== 'popular') p.set('sort', state.sort);
   if (state.pathway) p.set('pathway', state.pathway);   // <— add this
+  if (state.vendor)  p.set('vendor', state.vendor);
   history.replaceState(null,'', p.toString()?('?'+p.toString()):location.pathname);
 }
 
@@ -1360,7 +1438,16 @@ state.pathway = params.get('pathway') || '';
   const q = state.q.toLowerCase();
   let out = DATA.filter(d=>{
     const okSector = !state.sector || d.sector === state.sector;
-    const okVendor = !state.vendor || d.vendor === state.vendor;
+    let okVendor = true;
+    if (state.vendor){
+      // Is the selected value a featured group (e.g., group:google-ads)?
+      const group = (FEATURED_VENDOR_GROUPS || []).find(g => g.value === state.vendor);
+      if (group){
+        okVendor = !!group.predicate(d);
+      } else {
+        okVendor = d.vendor === state.vendor;
+      }
+    }
     let okPathway = true;
     if (state.pathway && PATHWAY_CERTS[state.pathway]) {
       okPathway = PATHWAY_CERTS[state.pathway].includes(d.key);
