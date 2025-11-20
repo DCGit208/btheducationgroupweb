@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apply — BTH Sales Specialist Program</title>
+  <meta name="description" content="Apply to the BTH Education Group Sales Specialist Program. Submit your profile, sector preference, and motivation to join the 2,000-person workforce." />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <style>
+    body { margin: 0; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #111827; background: #f5f5f7; }
+    .page { max-width: 960px; margin: 0 auto; padding: 1.5rem; }
+    header.hero { background: radial-gradient(circle at top left, #facc15 0, #054ada 45%, #020617 100%); color: #ffffff; border-radius: 1.25rem; padding: 2rem 1.5rem; margin: 1rem 0 1.5rem; position: relative; overflow: hidden; }
+    header.hero h1 { margin: 0 0 0.35rem; font-size: clamp(1.8rem, 2.6vw, 2.6rem); line-height: 1.15; }
+    header.hero p { margin: 0.25rem 0 0; opacity: 0.95; }
+    a.button, button.button { display: inline-block; padding: 0.85rem 1.4rem; border-radius: 999px; background: linear-gradient(135deg, #054ada, #f59e0b); color: #ffffff; font-weight: 600; letter-spacing: 0.03em; text-transform: uppercase; font-size: 0.9rem; border: none; cursor: pointer; }
+    .card { background: #ffffff; border-radius: 1rem; padding: 1.2rem 1.25rem; box-shadow: 0 10px 25px rgba(15,23,42,0.06); }
+    .form-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 1rem; }
+    .col-12 { grid-column: span 12; }
+    .col-6 { grid-column: span 6; }
+    .col-4 { grid-column: span 4; }
+    .col-8 { grid-column: span 8; }
+    label { display: block; font-size: 0.9rem; margin-bottom: 0.35rem; color: #111827; font-weight: 600; }
+    input[type="text"], input[type="email"], input[type="tel"], input[type="url"], input[type="date"], select, textarea { width: 100%; padding: 0.7rem 0.75rem; border-radius: 0.6rem; border: 1px solid #e5e7eb; background: #ffffff; font-size: 0.95rem; }
+    textarea { min-height: 120px; resize: vertical; }
+    .help { font-size: 0.8rem; color: #6b7280; margin-top: 0.25rem; }
+    .actions { display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; margin-top: 0.75rem; }
+    .muted { color: #6b7280; font-size: 0.85rem; }
+    .success { display: none; margin-top: 1rem; padding: 0.9rem 1rem; background: #ecfdf5; color: #065f46; border: 1px solid #a7f3d0; border-radius: 0.75rem; }
+    .error { display: none; margin-top: 1rem; padding: 0.9rem 1rem; background: #fef2f2; color: #991b1b; border: 1px solid #fecaca; border-radius: 0.75rem; }
+    .note { margin-top: 0.6rem; font-size: 0.85rem; color: #374151; }
+    .back { text-decoration: none; color: #111827; font-weight: 600; }
+    @media (max-width: 768px) { .col-6, .col-4, .col-8 { grid-column: span 12; } header.hero { padding: 1.5rem; } }
+  </style>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function getSrcParam() { try { return new URLSearchParams(window.location.search).get('src') || ''; } catch(e){ return ''; } }
+    function encodeWhatsApp(text) { return encodeURIComponent(text).replace(/\!/g, '%21').replace(/\*/g, '%2A').replace(/\(/g, '%28').replace(/\)/g, '%29'); }
+    function collectData(form) {
+      const data = new FormData(form);
+      const obj = {};
+      for (const [k,v] of data.entries()) obj[k] = v;
+      return obj;
+    }
+    function validateRequired(form) {
+      const required = form.querySelectorAll('[required]');
+      for (const el of required) { if (!el.value || (el.type === 'checkbox' && !el.checked)) { el.focus(); return false; } }
+      return true;
+    }
+    function toMailtoBody(obj) {
+      const lines = [
+        `Full Name: ${obj.fullName}`,
+        `Email: ${obj.email}`,
+        `Phone: ${obj.phone}`,
+        `Preferred Contact: ${obj.contactMethod}`,
+        `Country: ${obj.country}`,
+        `City: ${obj.city}`,
+        `Time Zone: ${obj.timezone || ''}`,
+        `Education: ${obj.education || ''}`,
+        `Sales Experience (years): ${obj.experience}`,
+        `Preferred Sector: ${obj.sector}`,
+        `LinkedIn: ${obj.linkedin || ''}`,
+        `Website/Portfolio: ${obj.website || ''}`,
+        `Availability Date: ${obj.startDate || ''}`,
+        `Heard About Us: ${obj.referral || ''}`,
+        `Motivation:`,
+        `${obj.motivation || ''}`
+      ];
+      return encodeURIComponent(lines.join('\n'));
+    }
+    function onSubmitEmail(e) {
+      e.preventDefault();
+      const form = document.getElementById('applicationForm');
+      const success = document.getElementById('success');
+      const error = document.getElementById('error');
+      success.style.display = 'none';
+      error.style.display = 'none';
+      if (!validateRequired(form)) { error.textContent = 'Please complete all required fields.'; error.style.display = 'block'; return; }
+      const obj = collectData(form);
+      const body = toMailtoBody(obj);
+      const subject = encodeURIComponent('Sales Specialist Application — ' + obj.fullName);
+      const to = 'info@btheducationgroup.org';
+      try {
+        window.dataLayer.push({
+          event: 'application_submit_email',
+          sector: obj.sector || '',
+          experience: obj.experience || '',
+          country: obj.country || '',
+          source: getSrcParam()
+        });
+      } catch (e) {}
+      window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
+      success.textContent = 'Email compose window opened. If it did not open, use WhatsApp submission below.';
+      success.style.display = 'block';
+    }
+    function onSubmitWhatsApp(e) {
+      e.preventDefault();
+      const form = document.getElementById('applicationForm');
+      const success = document.getElementById('success');
+      const error = document.getElementById('error');
+      success.style.display = 'none';
+      error.style.display = 'none';
+      if (!validateRequired(form)) { error.textContent = 'Please complete all required fields.'; error.style.display = 'block'; return; }
+      const obj = collectData(form);
+      const message = [
+        '*Sales Specialist Application*',
+        `Name: ${obj.fullName}`,
+        `Email: ${obj.email}`,
+        `Phone: ${obj.phone}`,
+        `Country/City: ${obj.country}, ${obj.city}`,
+        `Experience (yrs): ${obj.experience}`,
+        `Sector: ${obj.sector}`,
+        `LinkedIn: ${obj.linkedin || '-'}`,
+        `Availability: ${obj.startDate || '-'}`,
+        `Source: ${getSrcParam() || '-'}`,
+        '',
+        'Motivation:',
+        obj.motivation || '-'
+      ].join('\n');
+      const number = '237680289956';
+      const url = `https://wa.me/${number}?text=${encodeWhatsApp(message)}`;
+      try {
+        window.dataLayer.push({
+          event: 'application_submit_whatsapp',
+          sector: obj.sector || '',
+          experience: obj.experience || '',
+          country: obj.country || '',
+          source: getSrcParam()
+        });
+      } catch (e) {}
+      window.open(url, '_blank');
+      success.textContent = 'WhatsApp opened with your application details. Send the message to complete.';
+      success.style.display = 'block';
+    }
+    function onSavePDF(e) { e.preventDefault(); window.print(); }
+    window.addEventListener('DOMContentLoaded', function() {
+      document.getElementById('submitEmail').addEventListener('click', onSubmitEmail);
+      document.getElementById('submitWhatsApp').addEventListener('click', onSubmitWhatsApp);
+      document.getElementById('savePDF').addEventListener('click', onSavePDF);
+    });
+  </script>
+  </head>
+<body>
+  <div class="page">
+    <header class="hero">
+      <a class="back" href="salespecialist.html">← Back to Program Overview</a>
+      <h1>Apply to the Sales Specialist Program</h1>
+      <p>Complete this application to be considered for the 2025/2026 cohort. All fields marked with * are required.</p>
+    </header>
+
+    <section class="card">
+      <form id="applicationForm" novalidate>
+        <div class="form-grid">
+          <div class="col-12">
+            <label for="fullName">Full Name *</label>
+            <input id="fullName" name="fullName" type="text" autocomplete="name" required />
+          </div>
+          <div class="col-6">
+            <label for="email">Email *</label>
+            <input id="email" name="email" type="email" autocomplete="email" required />
+          </div>
+          <div class="col-6">
+            <label for="phone">Phone (with country code) *</label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel" placeholder="e.g., +237 680 000 000" required />
+            <div class="help">We may contact you via WhatsApp for scheduling.</div>
+          </div>
+
+          <div class="col-6">
+            <label for="country">Country *</label>
+            <input id="country" name="country" type="text" required />
+          </div>
+          <div class="col-6">
+            <label for="city">City *</label>
+            <input id="city" name="city" type="text" required />
+          </div>
+
+          <div class="col-6">
+            <label for="contactMethod">Preferred Contact *</label>
+            <select id="contactMethod" name="contactMethod" required>
+              <option value="">Select…</option>
+              <option>Email</option>
+              <option>WhatsApp</option>
+              <option>Phone Call</option>
+            </select>
+          </div>
+          <div class="col-6">
+            <label for="timezone">Time Zone</label>
+            <input id="timezone" name="timezone" type="text" placeholder="e.g., GMT+1" />
+          </div>
+
+          <div class="col-6">
+            <label for="education">Highest Education</label>
+            <input id="education" name="education" type="text" placeholder="e.g., Bachelor of Business" />
+          </div>
+          <div class="col-6">
+            <label for="experience">Years of Sales Experience *</label>
+            <select id="experience" name="experience" required>
+              <option value="">Select…</option>
+              <option>0-1</option>
+              <option>2-3</option>
+              <option>4-6</option>
+              <option>7-10</option>
+              <option>10+</option>
+            </select>
+          </div>
+
+          <div class="col-12">
+            <label for="sector">Preferred Industry Sector *</label>
+            <select id="sector" name="sector" required>
+              <option value="">Select…</option>
+              <option>IT & Cybersecurity</option>
+              <option>Telecommunications</option>
+              <option>Web & Software Engineering</option>
+              <option>EdTech</option>
+              <option>Manufacturing & Industrial</option>
+              <option>Automotive Technology</option>
+              <option>Construction & Infrastructure</option>
+              <option>Energy & Renewable Systems</option>
+              <option>Agricultural Technology</option>
+              <option>Healthcare</option>
+              <option>Finance & Accounting</option>
+              <option>Business & Management</option>
+              <option>Government & Civic Tech</option>
+              <option>Public Safety & Emergency Services</option>
+              <option>Research & Development</option>
+              <option>Biotech & Life Sciences</option>
+              <option>Aerospace & Defense</option>
+              <option>Transportation & Logistics</option>
+              <option>Creative Arts</option>
+              <option>Digital Design</option>
+              <option>Media & Content</option>
+            </select>
+          </div>
+
+          <div class="col-6">
+            <label for="linkedin">LinkedIn Profile</label>
+            <input id="linkedin" name="linkedin" type="url" placeholder="https://www.linkedin.com/in/username" />
+          </div>
+          <div class="col-6">
+            <label for="website">Website/Portfolio</label>
+            <input id="website" name="website" type="url" placeholder="https://example.com" />
+          </div>
+
+          <div class="col-6">
+            <label for="startDate">Availability Start Date</label>
+            <input id="startDate" name="startDate" type="date" />
+          </div>
+          <div class="col-6">
+            <label for="referral">How did you hear about us?</label>
+            <select id="referral" name="referral">
+              <option value="">Select…</option>
+              <option>Facebook</option>
+              <option>Instagram</option>
+              <option>LinkedIn</option>
+              <option>Google Search</option>
+              <option>Friend/Colleague</option>
+              <option>Event/Webinar</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="col-12">
+            <label for="motivation">Motivation Statement *</label>
+            <textarea id="motivation" name="motivation" placeholder="Why do you want to join the Sales Specialist Program? What strengths will you bring?" required></textarea>
+          </div>
+
+          <div class="col-12">
+            <label style="display:flex; gap:0.5rem; align-items:center; font-weight:400;">
+              <input id="consent" name="consent" type="checkbox" required />
+              I agree to be contacted about my application and I consent to the processing of my information according to BTH's privacy practices.
+            </label>
+            <div class="help">You may be contacted by email, phone or WhatsApp.</div>
+          </div>
+        </div>
+
+        <div class="actions">
+          <button id="submitEmail" class="button" type="button">Submit via Email</button>
+          <button id="submitWhatsApp" class="button" type="button" style="background:linear-gradient(135deg,#25D366,#128C7E)">Submit via WhatsApp</button>
+          <button id="savePDF" class="button" type="button" style="background:linear-gradient(135deg,#6b7280,#374151)">Save as PDF</button>
+        </div>
+
+        <div id="success" class="success"></div>
+        <div id="error" class="error"></div>
+
+        <p class="note">For assistance, contact Admissions: WhatsApp +237 680 289 956 • Tel +237 653 795 603 • Email info@btheducationgroup.org</p>
+      </form>
+    </section>
+
+    <p class="muted" style="margin:1rem 0 2rem;">Looking for program details? See the <a href="salespecialist.html">Sales Specialist Program overview</a>.</p>
+  </div>
+</body>
+</html>
