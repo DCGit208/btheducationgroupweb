@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>{{SECTOR_TITLE}} Certifications | BTH Professional & HEXAD Pathways</title>
+  <meta name="description" content="Explore comprehensive {{SECTOR_TITLE}} certification pathways across professional and HEXAD frameworks with filtering by level, vendor and solution area." />
+  <link rel="icon" type="image/png" href="../assets/images/favicon.png" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <style>
+    :root {
+      --sector-primary: #667eea; /* Override per sector */
+      --sector-accent: #0ea5e9;
+      --container-max: 1400px;
+    }
+    body { font-family: Inter,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Arial,sans-serif; color:#0f172a; background:#fff; }
+    /* Sticky minimal sector nav */
+    .sector-navbar { position:sticky; top:0; z-index:1000; background:linear-gradient(135deg,#0f172a,#1e293b); color:#fff; border-bottom:1px solid rgba(255,255,255,.08); }
+    .sector-nav-inner { max-width:var(--container-max); margin:0 auto; display:flex; align-items:center; justify-content:space-between; height:70px; padding:0 2rem; }
+    .sector-nav-left { display:flex; align-items:center; gap:1rem; }
+    .sector-nav-brand { font-weight:800; letter-spacing:.5px; color:#e2e8f0; text-decoration:none; }
+    .sector-nav-links { display:flex; gap:1.2rem; }
+    .sector-nav-links a { color:#cbd5e1; font-size:.85rem; text-decoration:none; position:relative; padding:.4rem .6rem; }
+    .sector-nav-links a:hover,.sector-nav-links a.active { color:#fff; }
+    .sector-nav-cta { background: linear-gradient(135deg,var(--sector-primary),var(--sector-accent)); color:#fff; text-decoration:none; font-weight:600; padding:.6rem 1.2rem; border-radius:40px; font-size:.8rem; letter-spacing:.5px; text-transform:uppercase; }
+    /* HERO */
+    .sector-hero { position:relative; background:linear-gradient(135deg,#0f172a 0%,#1e293b 30%,#334155 60%,#475569 100%); color:#fff; padding:120px 0 140px; text-align:center; overflow:hidden; }
+    .sector-hero::before { content:''; position:absolute; inset:0; background: radial-gradient(circle at 20% 20%, rgba(59,130,246,.3) 0%, transparent 55%), radial-gradient(circle at 80% 70%, rgba(16,185,129,.25) 0%, transparent 60%), radial-gradient(circle at 50% 40%, rgba(139,92,246,.25) 0%, transparent 55%); animation: heroBgShift 22s ease-in-out infinite; }
+    @keyframes heroBgShift { 0%,100% { filter:hue-rotate(0deg);} 50% { filter:hue-rotate(35deg);} }
+    .hero-inner { position:relative; z-index:2; max-width:var(--container-max); margin:0 auto; padding:0 2rem; }
+    .hero-badge { display:inline-flex; align-items:center; gap:.5rem; background:rgba(255,255,255,.12); backdrop-filter:blur(10px); border:1px solid rgba(255,255,255,.25); padding:.6rem 1.1rem; border-radius:50px; font-size:.75rem; font-weight:600; letter-spacing:.5px; margin-bottom:1.6rem; }
+    .hero-badge .dot { width:12px; height:12px; background:linear-gradient(135deg,var(--sector-primary),var(--sector-accent)); border-radius:50%; }
+    .sector-hero h1 { font-size:clamp(2.4rem,5vw,4.2rem); font-weight:800; line-height:1.05; margin:0 0 1.2rem; background:linear-gradient(135deg,#fff,#e2e8f0 60%,#cbd5e1); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+    .sector-subtitle { font-size:1.2rem; max-width:780px; margin:0 auto 2.4rem; color:#cbd5e1; line-height:1.55; }
+    .hero-cta-row { display:flex; justify-content:center; flex-wrap:wrap; gap:1rem; margin-bottom:2.6rem; }
+    .hero-btn-primary { background:linear-gradient(135deg,var(--sector-primary),var(--sector-accent)); color:#fff; text-decoration:none; font-weight:700; padding:1rem 2.2rem; border-radius:50px; font-size:1rem; position:relative; overflow:hidden; }
+    .hero-btn-primary::before { content:''; position:absolute; inset:0; background:linear-gradient(90deg,transparent,rgba(255,255,255,.25),transparent); transform:translateX(-100%); animation: btnShine 4s linear infinite; }
+    @keyframes btnShine { 0% { transform:translateX(-100%);} 60% { transform:translateX(100%);} 100% { transform:translateX(100%);} }
+    .hero-btn-secondary { background:rgba(255,255,255,.12); backdrop-filter:blur(10px); color:#fff; text-decoration:none; font-weight:600; padding:1rem 2rem; border-radius:50px; border:1px solid rgba(255,255,255,.3); }
+    .stats-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:1.4rem; max-width:1000px; margin:0 auto; }
+    .stat { background:rgba(255,255,255,.12); backdrop-filter:blur(12px); border:1px solid rgba(255,255,255,.25); padding:1.4rem 1rem; border-radius:16px; text-align:center; transition:.3s; }
+    .stat:hover { background:rgba(255,255,255,.2); transform:translateY(-4px); }
+    .stat-number { font-size:2.1rem; font-weight:800; background:linear-gradient(135deg,#fff,#e2e8f0); -webkit-background-clip:text; -webkit-text-fill-color:transparent; margin-bottom:.35rem; }
+    .stat-label { font-size:.7rem; font-weight:600; letter-spacing:.04em; text-transform:uppercase; color:#e2e8f0; }
+    /* Framework Cards */
+    .framework-section { background:linear-gradient(135deg,#f8fafc,#e2e8f0); padding:80px 0; }
+    .section-inner { max-width:var(--container-max); margin:0 auto; padding:0 2rem; }
+    .section-inner h2 { text-align:center; font-size:2.4rem; margin:0 0 1rem; color:#1e293b; }
+    .section-inner .section-sub { text-align:center; font-size:1.1rem; color:#64748b; max-width:720px; margin:0 auto 3rem; }
+    .framework-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(380px,1fr)); gap:2.2rem; }
+    .framework-card { background:#fff; border:1px solid rgba(102,126,234,.15); border-radius:18px; padding:2.2rem 2rem; box-shadow:0 16px 40px rgba(0,0,0,.08); position:relative; overflow:hidden; display:flex; flex-direction:column; gap:1rem; }
+    .framework-card::before { content:''; position:absolute; left:0; top:0; height:4px; width:100%; background:var(--sector-primary); }
+    .framework-card.premium::before { background:linear-gradient(135deg,#ffd700,#ffed4e); }
+    .framework-card h3 { margin:0; font-size:1.4rem; color:#1e293b; }
+    .framework-features { list-style:none; margin:0; padding:0; }
+    .framework-features li { display:flex; align-items:center; gap:.6rem; padding:.6rem 0; border-bottom:1px solid #f1f5f9; font-size:.9rem; color:#475569; }
+    .framework-features li:last-child { border-bottom:none; }
+    .framework-features i { color:#10b981; font-size:.95rem; }
+    .framework-cta { margin-top:.8rem; display:flex; gap:.8rem; }
+    .fw-btn { flex:1; text-align:center; padding:.85rem 1rem; border-radius:10px; font-weight:600; font-size:.85rem; text-decoration:none; }
+    .fw-btn.standard { background:var(--sector-primary); color:#fff; }
+    .fw-btn.hexad { background:linear-gradient(135deg,#ffd700,#ffed4e); color:#1e293b; }
+    /* Categories Overview */
+    .categories-section { padding:70px 0; }
+    .categories-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:1.8rem; margin-top:2.4rem; }
+    .category-card { background:#fff; border:1px solid #e2e8f0; border-radius:16px; padding:1.5rem 1.4rem 1.7rem; box-shadow:0 10px 28px rgba(0,0,0,.06); position:relative; overflow:hidden; transition:.35s; cursor:pointer; }
+    .category-card::before { content:''; position:absolute; top:0; left:0; width:100%; height:3px; background:var(--sector-primary); transform:scaleX(0); transition:transform .4s; }
+    .category-card:hover { transform:translateY(-6px); box-shadow:0 16px 40px rgba(0,0,0,.1); }
+    .category-card:hover::before { transform:scaleX(1); }
+    .category-icon { font-size:1.6rem; margin-bottom:.6rem; color:var(--sector-primary); }
+    .category-card h3 { margin:.2rem 0 .6rem; font-size:1.15rem; color:#1e293b; }
+    .category-card p { margin:0 0 .9rem; font-size:.85rem; line-height:1.4; color:#64748b; }
+    .tags { display:flex; flex-wrap:wrap; gap:.4rem; }
+    .tag { font-size:.65rem; font-weight:600; padding:.3rem .55rem; background:#f1f5f9; color:#475569; border-radius:50px; letter-spacing:.03em; }
+    /* Filters + Results */
+    .filter-bar { background:#f8fafc; border-top:1px solid #e2e8f0; border-bottom:1px solid #e2e8f0; padding:40px 0; margin-top:40px; }
+    .filter-grid { max-width:var(--container-max); margin:0 auto; padding:0 2rem; display:grid; gap:1rem; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); }
+    .filter-group { background:#fff; border:1px solid #e2e8f0; border-radius:14px; padding:1rem .9rem; display:flex; flex-direction:column; gap:.6rem; }
+    .filter-group label { font-size:.7rem; font-weight:700; text-transform:uppercase; letter-spacing:.05em; color:#475569; }
+    .levels-box { display:flex; gap:.4rem; flex-wrap:wrap; }
+    .level-chip { background:#f1f5f9; border:1px solid #e2e8f0; padding:.4rem .7rem; font-size:.7rem; font-weight:600; border-radius:40px; cursor:pointer; }
+    .level-chip.active { background:var(--sector-primary); color:#fff; border-color:var(--sector-primary); }
+    .results-section { padding:50px 0 80px; }
+    .results-header { max-width:var(--container-max); margin:0 auto 1.2rem; padding:0 2rem; display:flex; justify-content:space-between; align-items:center; }
+    #resultsCount { font-weight:600; font-size:.85rem; color:#334155; }
+    .cert-grid { max-width:var(--container-max); margin:0 auto; padding:0 2rem; display:grid; gap:1.2rem; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); }
+    .cert-card { background:#fff; border:1px solid #e2e8f0; border-radius:14px; padding:1rem .95rem 1.05rem; display:flex; flex-direction:column; gap:.55rem; box-shadow:0 6px 18px rgba(0,0,0,.05); position:relative; }
+    .cert-card h3 { font-size:.95rem; margin:0; line-height:1.25; color:#1e293b; }
+    .cert-meta { font-size:.65rem; font-weight:600; letter-spacing:.04em; color:#64748b; display:flex; flex-wrap:wrap; gap:.4rem; }
+    .cert-tags { display:flex; flex-wrap:wrap; gap:.35rem; }
+    .cert-tag { font-size:.55rem; font-weight:600; padding:.25rem .5rem; background:#eef2ff; color:#3730a3; border:1px solid #c7d2fe; border-radius:40px; }
+    .cert-actions { margin-top:.4rem; display:flex; gap:.5rem; }
+    .cert-btn { flex:1; text-align:center; text-decoration:none; font-size:.7rem; font-weight:700; padding:.55rem .7rem; border-radius:8px; letter-spacing:.05em; }
+    .cert-btn.view { background:var(--sector-primary); color:#fff; }
+    .cert-btn.apply { background:#0f172a; color:#fff; }
+    .empty-state { max-width:620px; margin:40px auto; background:#f8fafc; border:2px dashed #cbd5e1; padding:2rem 1.5rem; border-radius:18px; text-align:center; color:#475569; }
+    /* Back link */
+    .back-link-wrap { max-width:var(--container-max); margin:0 auto; padding:0 2rem 10px; }
+    .back-link-wrap a { color:var(--sector-primary); font-size:.85rem; text-decoration:none; font-weight:600; }
+    /* Accessibility helpers */
+    [aria-live] { outline:none; }
+    @media (max-width:860px){ .framework-cards{grid-template-columns:1fr;} }
+  </style>
+</head>
+<body data-sector="{{SECTOR_SLUG}}">
+  <nav class="sector-navbar" aria-label="Sector navigation">
+    <div class="sector-nav-inner">
+      <div class="sector-nav-left">
+        <a href="../program.html" class="sector-nav-brand">← Programs Hub</a>
+        <div class="sector-nav-links">
+          <a href="#frameworks">Frameworks</a>
+          <a href="#categories">Categories</a>
+          <a href="#filters">Filters</a>
+          <a href="#results">Certifications</a>
+        </div>
+      </div>
+      <a href="../apply.html?sector={{SECTOR_SLUG}}" class="sector-nav-cta">Apply</a>
+    </div>
+  </nav>
+  <header class="sector-hero" id="hero">
+    <div class="hero-inner">
+      <div class="hero-badge"><span class="dot"></span><span>{{SECTOR_TITLE}} Pathway</span></div>
+      <h1>{{SECTOR_TITLE}} Certifications</h1>
+      <p class="sector-subtitle">{{SECTOR_SUBTITLE}} Choose between Professional Development and the complete HEXAD Framework. Filter by level, vendor, and solution areas to build a tailored learning journey.</p>
+      <div class="hero-cta-row">
+        <a href="#results" class="hero-btn-primary">Browse Certifications</a>
+        <a href="../apply.html?sector={{SECTOR_SLUG}}" class="hero-btn-secondary">Start Application</a>
+      </div>
+      <div class="stats-grid" aria-label="Sector statistics">
+        <div class="stat"><div class="stat-number" data-stat="certCount">0</div><div class="stat-label">CERTIFICATIONS</div></div>
+        <div class="stat"><div class="stat-number" data-stat="vendors">0</div><div class="stat-label">VENDORS</div></div>
+        <div class="stat"><div class="stat-number" data-stat="pathways">2</div><div class="stat-label">FRAMEWORKS</div></div>
+        <div class="stat"><div class="stat-number" data-stat="levels">5</div><div class="stat-label">LEVELS</div></div>
+      </div>
+    </div>
+  </header>
+
+  <section class="framework-section" id="frameworks" aria-labelledby="fwHeading">
+    <div class="section-inner">
+      <h2 id="fwHeading">Framework Selection</h2>
+      <p class="section-sub">Choose a learning framework. Standard focuses on direct role progression. HEXAD provides holistic professional development across performance dimensions.</p>
+      <div class="framework-cards">
+        <div class="framework-card standard" data-framework="standard">
+          <h3>Standard Professional Pathway</h3>
+          <ul class="framework-features">
+            <li><i class="fa fa-check"></i> Role‑aligned certification tracks</li>
+            <li><i class="fa fa-check"></i> Progressive difficulty levels (1–5)</li>
+            <li><i class="fa fa-check"></i> Vendor-neutral & vendor-specific mix</li>
+            <li><i class="fa fa-check"></i> Fast career applicability</li>
+          </ul>
+          <div class="framework-cta">
+            <a href="#filters" class="fw-btn standard" data-select-framework="standard">Activate Standard</a>
+            <a href="../apply.html?sector={{SECTOR_SLUG}}&framework=standard" class="fw-btn hexad" style="background:#0f172a;color:#fff;">Apply Standard</a>
+          </div>
+        </div>
+        <div class="framework-card premium" data-framework="hexad">
+          <h3>HEXAD Complete Framework</h3>
+          <ul class="framework-features">
+            <li><i class="fa fa-check"></i> Integrated performance dimensions</li>
+            <li><i class="fa fa-check"></i> Broader competency modeling</li>
+            <li><i class="fa fa-check"></i> Extended leadership tracks</li>
+            <li><i class="fa fa-check"></i> Elevation & mastery progression</li>
+          </ul>
+          <div class="framework-cta">
+            <a href="#filters" class="fw-btn hexad" data-select-framework="hexad">Activate HEXAD</a>
+            <a href="../apply.html?sector={{SECTOR_SLUG}}&framework=hexad" class="fw-btn standard" style="background:#0f172a;">Apply HEXAD</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="categories-section" id="categories" aria-labelledby="catHeading">
+    <div class="section-inner">
+      <h2 id="catHeading">Key Categories</h2>
+      <p class="section-sub">Representative focus areas for {{SECTOR_TITLE}}. These guide specialization tracks and filter presets.</p>
+      <div class="categories-grid" id="categoryGrid"><!-- dynamic category cards injected --></div>
+    </div>
+  </section>
+
+  <section class="filter-bar" id="filters" aria-labelledby="filterHeading">
+    <div class="filter-grid">
+      <div class="filter-group" role="group" aria-label="Framework toggle">
+        <label>Framework</label>
+        <div style="display:flex; gap:.5rem; flex-wrap:wrap;">
+          <button type="button" class="level-chip" data-fw="standard">Standard</button>
+          <button type="button" class="level-chip" data-fw="hexad">HEXAD</button>
+        </div>
+      </div>
+      <div class="filter-group" role="group" aria-label="Levels">
+        <label>Levels</label>
+        <div class="levels-box" id="levelFilters"></div>
+      </div>
+      <div class="filter-group" role="group" aria-label="Vendor">
+        <label>Vendor</label>
+        <select id="vendorFilter" aria-label="Filter by vendor"></select>
+      </div>
+      <div class="filter-group" role="group" aria-label="Solution Area">
+        <label>Solution Area</label>
+        <input type="search" id="focusFilter" placeholder="Search solution area (e.g., Cloud, Analytics)" aria-label="Search solution area" />
+      </div>
+    </div>
+  </section>
+
+  <section class="results-section" aria-labelledby="resultsHeading">
+    <div class="back-link-wrap"><a href="../program.html">← Back to Programs</a></div>
+    <div class="results-header">
+      <h2 id="resultsHeading" style="font-size:1.3rem; margin:0;">Certifications</h2>
+      <div id="resultsCount" aria-live="polite">0 results</div>
+    </div>
+    <div id="results" class="cert-grid" aria-live="polite" aria-busy="false"></div>
+    <div id="emptyState" class="empty-state" style="display:none;">No certifications match your selected criteria. Adjust filters or try a broader search.</div>
+  </section>
+
+  <!-- Detail modal placeholder (optional dynamic injection) -->
+  <div id="certModal" class="modal-backdrop" aria-hidden="true" style="display:none"></div>
+
+  <footer style="background:linear-gradient(135deg,#0f172a,#1e293b); color:#e2e8f0; padding:50px 0; margin-top:40px;">
+    <div style="max-width:var(--container-max); margin:0 auto; padding:0 2rem; display:grid; gap:1.4rem; grid-template-columns:repeat(auto-fit,minmax(240px,1fr));">
+      <div><h4 style="margin:0 0 .6rem; font-size:.9rem; letter-spacing:.05em; text-transform:uppercase;">Sector</h4><p style="font-size:.75rem; line-height:1.4;">{{SECTOR_TITLE}} certification pathways combining vendor-specific and cross-discipline competencies.</p></div>
+      <div><h4 style="margin:0 0 .6rem; font-size:.9rem; letter-spacing:.05em; text-transform:uppercase;">Navigation</h4><ul style="list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:.4rem; font-size:.75rem;"> <li><a style="color:#e2e8f0; text-decoration:none;" href="#frameworks">Frameworks</a></li><li><a style="color:#e2e8f0; text-decoration:none;" href="#categories">Categories</a></li><li><a style="color:#e2e8f0; text-decoration:none;" href="#filters">Filters</a></li><li><a style="color:#e2e8f0; text-decoration:none;" href="#results">Certifications</a></li></ul></div>
+      <div><h4 style="margin:0 0 .6rem; font-size:.9rem; letter-spacing:.05em; text-transform:uppercase;">Apply</h4><p style="font-size:.75rem;">Ready to start? Begin the application process and select either Standard or HEXAD framework progression.</p><a href="../apply.html?sector={{SECTOR_SLUG}}" style="display:inline-block; margin-top:.6rem; background:linear-gradient(135deg,var(--sector-primary),var(--sector-accent)); color:#fff; text-decoration:none; font-weight:600; padding:.55rem 1rem; border-radius:8px; font-size:.7rem;">Apply Now</a></div>
+      <div><h4 style="margin:0 0 .6rem; font-size:.9rem; letter-spacing:.05em; text-transform:uppercase;">Programs Hub</h4><p style="font-size:.75rem;">Browse all industry sectors and discover integrated development pathways.</p><a href="../program.html" style="display:inline-block; margin-top:.6rem; background:#334155; color:#fff; text-decoration:none; font-weight:600; padding:.55rem 1rem; border-radius:8px; font-size:.7rem;">All Sectors</a></div>
+    </div>
+    <div style="text-align:center; margin-top:2rem; font-size:.65rem; opacity:.7;">© 2025 BTH Education Group · Sector: {{SECTOR_TITLE}}</div>
+  </footer>
+
+  <script src="../assets/js/sector-framework.js"></script>
+  <script>
+    // Initialization glue: adapt existing sector-framework.js if needed.
+    document.addEventListener('DOMContentLoaded', () => {
+      // Provide category stubs until data injection occurs.
+      const catTarget = document.getElementById('categoryGrid');
+      if (catTarget && !catTarget.children.length) {
+        const sampleCategories = [
+          { icon:'fa-cloud', title:'Core Systems', desc:'Infrastructure, platforms and integration foundations.', tags:['Core','Systems','Integration'] },
+          { icon:'fa-shield-halved', title:'Security & Compliance', desc:'Risk, governance, protection & assurance domains.', tags:['Security','Risk','Compliance'] },
+          { icon:'fa-chart-line', title:'Optimization', desc:'Performance, scaling and reliability engineering.', tags:['Scaling','Performance','Reliability'] }
+        ];
+        sampleCategories.forEach(c => {
+          const el = document.createElement('div');
+          el.className = 'category-card';
+          el.innerHTML = `<div class="category-icon"><i class="fa ${c.icon}"></i></div><h3>${c.title}</h3><p>${c.desc}</p><div class="tags">${c.tags.map(t=>`<span class='tag'>${t}</span>`).join('')}</div>`;
+          catTarget.appendChild(el);
+        });
+      }
+    });
+  </script>
+</body>
+</html>
