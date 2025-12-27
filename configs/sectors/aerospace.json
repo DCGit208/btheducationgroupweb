@@ -1,0 +1,28 @@
+{
+  "name": "Aerospace & Defense",
+  "slug": "aerospace",
+  "icon": "\u2708\ufe0f",
+  "subtitle": "Aviation & Defense Systems",
+  "description": "Aerospace Systems, Avionics, Defense Cyber, Aviation Operations",
+  "description_long": "Advance aerospace and defense technology with certifications in aviation systems, avionics, defense cybersecurity, and aerospace manufacturing.",
+  "hero_gradient": [
+    "#1e40af",
+    "#1e3a8a"
+  ],
+  "total_certifications": 28,
+  "total_vendors": 11,
+  "avg_salary": "$105,000",
+  "categories": [
+    "Aerospace Systems",
+    "Avionics",
+    "Defense Cybersecurity",
+    "Aviation Operations"
+  ],
+  "featured_vendors": [
+    "FAA",
+    "Boeing",
+    "Lockheed Martin",
+    "Northrop Grumman",
+    "Raytheon"
+  ]
+}

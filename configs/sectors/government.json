@@ -1,0 +1,28 @@
+{
+  "name": "Government & Civic Technology",
+  "slug": "government",
+  "icon": "\ud83c\udfdb\ufe0f",
+  "subtitle": "GovTech & Public Sector IT",
+  "description": "GovTech Platforms, Digital Identity, Public Sector IT, Civic Engagement",
+  "description_long": "Modernize government services with certifications in civic technology platforms, digital identity systems, public sector IT, and e-government solutions.",
+  "hero_gradient": [
+    "#475569",
+    "#334155"
+  ],
+  "total_certifications": 25,
+  "total_vendors": 10,
+  "avg_salary": "$84,000",
+  "categories": [
+    "GovTech Platforms",
+    "Digital Identity",
+    "Public Sector IT",
+    "Civic Engagement"
+  ],
+  "featured_vendors": [
+    "Tyler Technologies",
+    "NIC",
+    "Granicus",
+    "Accela",
+    "CivicPlus"
+  ]
+}

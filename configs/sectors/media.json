@@ -1,0 +1,28 @@
+{
+  "name": "Media & Entertainment Technology",
+  "slug": "media",
+  "icon": "\ud83c\udfac",
+  "subtitle": "Broadcasting & Production",
+  "description": "Broadcasting Systems, Streaming, Game Development, Audio/Video Production",
+  "description_long": "Master entertainment technology from content creation to distribution with certifications in broadcasting, streaming platforms, game engines, and production tools.",
+  "hero_gradient": [
+    "#dc2626",
+    "#991b1b"
+  ],
+  "total_certifications": 38,
+  "total_vendors": 16,
+  "avg_salary": "$92,000",
+  "categories": [
+    "Broadcasting",
+    "Streaming Platforms",
+    "Game Development",
+    "Audio/Video Production"
+  ],
+  "featured_vendors": [
+    "Avid",
+    "Adobe",
+    "Unity",
+    "Unreal Engine",
+    "Blackmagic"
+  ]
+}

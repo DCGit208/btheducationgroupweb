@@ -1,0 +1,28 @@
+{
+  "name": "Research & Development",
+  "slug": "research",
+  "icon": "\ud83d\udd2c",
+  "subtitle": "Laboratory & Innovation Tech",
+  "description": "Laboratory Technology, Clinical Research, Innovation Management, Data Science",
+  "description_long": "Drive innovation with certifications in laboratory information systems, clinical research management, R&D operations, and scientific data analysis.",
+  "hero_gradient": [
+    "#0891b2",
+    "#0e7490"
+  ],
+  "total_certifications": 30,
+  "total_vendors": 12,
+  "avg_salary": "$98,000",
+  "categories": [
+    "Laboratory Systems",
+    "Clinical Research",
+    "Innovation Management",
+    "Scientific Data"
+  ],
+  "featured_vendors": [
+    "LabWare",
+    "Thermo Fisher",
+    "Waters",
+    "Agilent",
+    "PerkinElmer"
+  ]
+}

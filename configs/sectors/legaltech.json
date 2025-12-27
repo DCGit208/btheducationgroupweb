@@ -1,0 +1,28 @@
+{
+  "name": "Legal Technology",
+  "slug": "legaltech",
+  "icon": "\u2696\ufe0f",
+  "subtitle": "LegalTech & Compliance",
+  "description": "Case Management, E-Discovery, Contract Lifecycle, Compliance Tech",
+  "description_long": "Transform legal practice with certifications in case management systems, e-discovery platforms, contract automation, and legal compliance technology.",
+  "hero_gradient": [
+    "#059669",
+    "#047857"
+  ],
+  "total_certifications": 28,
+  "total_vendors": 12,
+  "avg_salary": "$88,000",
+  "categories": [
+    "Case Management",
+    "E-Discovery",
+    "Contract Lifecycle",
+    "Legal Research"
+  ],
+  "featured_vendors": [
+    "Clio",
+    "LexisNexis",
+    "Thomson Reuters",
+    "Relativity",
+    "iManage"
+  ]
+}

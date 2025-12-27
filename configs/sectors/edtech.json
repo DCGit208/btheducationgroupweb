@@ -1,0 +1,28 @@
+{
+  "name": "EdTech (Educational Technology)",
+  "slug": "edtech",
+  "icon": "\ud83d\udcda",
+  "subtitle": "Learning Management Systems",
+  "description": "Instructional Design, LMS Platforms, eLearning, Educational Technology",
+  "description_long": "Transform education with certifications in learning management systems, instructional design, e-learning development, and educational technology platforms.",
+  "hero_gradient": [
+    "#10b981",
+    "#059669"
+  ],
+  "total_certifications": 32,
+  "total_vendors": 13,
+  "avg_salary": "$76,000",
+  "categories": [
+    "Learning Management Systems",
+    "Instructional Design",
+    "E-Learning Development",
+    "EdTech Platforms"
+  ],
+  "featured_vendors": [
+    "Canvas",
+    "Blackboard",
+    "Moodle",
+    "Articulate",
+    "Adobe Captivate"
+  ]
+}
