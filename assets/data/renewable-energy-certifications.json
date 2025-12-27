@@ -1,0 +1,674 @@
+[
+  {
+    "name": "NABCEP Solar PV Systems - Level 1",
+    "vendor": "NABCEP",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "solar-pv",
+    "focus": "Solar PV Systems expertise",
+    "exam": "NABCEP-1001",
+    "tags": [
+      "solar-pv",
+      "level-1",
+      "nabcep"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/nabcep.svg"
+  },
+  {
+    "name": "NABCEP Wind Energy - Level 1",
+    "vendor": "NABCEP",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "wind-energy",
+    "focus": "Wind Energy expertise",
+    "exam": "NABCEP-1002",
+    "tags": [
+      "wind-energy",
+      "level-1",
+      "nabcep"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/nabcep.svg"
+  },
+  {
+    "name": "NABCEP Wind Energy - Level 2",
+    "vendor": "NABCEP",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "wind-energy",
+    "focus": "Advanced Wind Energy",
+    "exam": "NABCEP-2003",
+    "tags": [
+      "wind-energy",
+      "level-2",
+      "nabcep"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/nabcep.svg"
+  },
+  {
+    "name": "NABCEP Energy Storage - Level 2",
+    "vendor": "NABCEP",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "energy-storage",
+    "focus": "Advanced Energy Storage",
+    "exam": "NABCEP-2004",
+    "tags": [
+      "energy-storage",
+      "level-2",
+      "nabcep"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/nabcep.svg"
+  },
+  {
+    "name": "NABCEP Smart Grid - Level 2",
+    "vendor": "NABCEP",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "smart-grid",
+    "focus": "Advanced Smart Grid",
+    "exam": "NABCEP-2005",
+    "tags": [
+      "smart-grid",
+      "level-2",
+      "nabcep"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/nabcep.svg"
+  },
+  {
+    "name": "IREC Solar PV Systems - Level 1",
+    "vendor": "IREC",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "solar-pv",
+    "focus": "Solar PV Systems expertise",
+    "exam": "IREC-1006",
+    "tags": [
+      "solar-pv",
+      "level-1",
+      "irec"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/irec.svg"
+  },
+  {
+    "name": "IREC Wind Energy - Level 1",
+    "vendor": "IREC",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "wind-energy",
+    "focus": "Wind Energy expertise",
+    "exam": "IREC-1007",
+    "tags": [
+      "wind-energy",
+      "level-1",
+      "irec"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/irec.svg"
+  },
+  {
+    "name": "IREC Wind Energy - Level 2",
+    "vendor": "IREC",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "wind-energy",
+    "focus": "Advanced Wind Energy",
+    "exam": "IREC-2008",
+    "tags": [
+      "wind-energy",
+      "level-2",
+      "irec"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/irec.svg"
+  },
+  {
+    "name": "IREC Energy Storage - Level 2",
+    "vendor": "IREC",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "energy-storage",
+    "focus": "Advanced Energy Storage",
+    "exam": "IREC-2009",
+    "tags": [
+      "energy-storage",
+      "level-2",
+      "irec"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/irec.svg"
+  },
+  {
+    "name": "IREC Smart Grid - Level 2",
+    "vendor": "IREC",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "smart-grid",
+    "focus": "Advanced Smart Grid",
+    "exam": "IREC-2010",
+    "tags": [
+      "smart-grid",
+      "level-2",
+      "irec"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/irec.svg"
+  },
+  {
+    "name": "IEEE Solar PV Systems - Level 1",
+    "vendor": "IEEE",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "solar-pv",
+    "focus": "Solar PV Systems expertise",
+    "exam": "IEEE-1011",
+    "tags": [
+      "solar-pv",
+      "level-1",
+      "ieee"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/ieee.svg"
+  },
+  {
+    "name": "IEEE Wind Energy - Level 1",
+    "vendor": "IEEE",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "wind-energy",
+    "focus": "Wind Energy expertise",
+    "exam": "IEEE-1012",
+    "tags": [
+      "wind-energy",
+      "level-1",
+      "ieee"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/ieee.svg"
+  },
+  {
+    "name": "IEEE Wind Energy - Level 2",
+    "vendor": "IEEE",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "wind-energy",
+    "focus": "Advanced Wind Energy",
+    "exam": "IEEE-2013",
+    "tags": [
+      "wind-energy",
+      "level-2",
+      "ieee"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/ieee.svg"
+  },
+  {
+    "name": "IEEE Energy Storage - Level 2",
+    "vendor": "IEEE",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "energy-storage",
+    "focus": "Advanced Energy Storage",
+    "exam": "IEEE-2014",
+    "tags": [
+      "energy-storage",
+      "level-2",
+      "ieee"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/ieee.svg"
+  },
+  {
+    "name": "IEEE Smart Grid - Level 2",
+    "vendor": "IEEE",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "smart-grid",
+    "focus": "Advanced Smart Grid",
+    "exam": "IEEE-2015",
+    "tags": [
+      "smart-grid",
+      "level-2",
+      "ieee"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/ieee.svg"
+  },
+  {
+    "name": "Siemens Energy Solar PV Systems - Level 1",
+    "vendor": "Siemens Energy",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "solar-pv",
+    "focus": "Solar PV Systems expertise",
+    "exam": "SIEMENSE-1016",
+    "tags": [
+      "solar-pv",
+      "level-1",
+      "siemens-energy"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/siemens-energy.svg"
+  },
+  {
+    "name": "Siemens Energy Wind Energy - Level 1",
+    "vendor": "Siemens Energy",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "wind-energy",
+    "focus": "Wind Energy expertise",
+    "exam": "SIEMENSE-1017",
+    "tags": [
+      "wind-energy",
+      "level-1",
+      "siemens-energy"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/siemens-energy.svg"
+  },
+  {
+    "name": "Siemens Energy Wind Energy - Level 2",
+    "vendor": "Siemens Energy",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "wind-energy",
+    "focus": "Advanced Wind Energy",
+    "exam": "SIEMENSE-2018",
+    "tags": [
+      "wind-energy",
+      "level-2",
+      "siemens-energy"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/siemens-energy.svg"
+  },
+  {
+    "name": "Siemens Energy Energy Storage - Level 2",
+    "vendor": "Siemens Energy",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "energy-storage",
+    "focus": "Advanced Energy Storage",
+    "exam": "SIEMENSE-2019",
+    "tags": [
+      "energy-storage",
+      "level-2",
+      "siemens-energy"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/siemens-energy.svg"
+  },
+  {
+    "name": "Siemens Energy Smart Grid - Level 2",
+    "vendor": "Siemens Energy",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "smart-grid",
+    "focus": "Advanced Smart Grid",
+    "exam": "SIEMENSE-2020",
+    "tags": [
+      "smart-grid",
+      "level-2",
+      "siemens-energy"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/siemens-energy.svg"
+  },
+  {
+    "name": "GE Renewable Solar PV Systems - Level 1",
+    "vendor": "GE Renewable",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "solar-pv",
+    "focus": "Solar PV Systems expertise",
+    "exam": "GERENEWA-1021",
+    "tags": [
+      "solar-pv",
+      "level-1",
+      "ge-renewable"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/ge-renewable.svg"
+  },
+  {
+    "name": "GE Renewable Wind Energy - Level 1",
+    "vendor": "GE Renewable",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "wind-energy",
+    "focus": "Wind Energy expertise",
+    "exam": "GERENEWA-1022",
+    "tags": [
+      "wind-energy",
+      "level-1",
+      "ge-renewable"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/ge-renewable.svg"
+  },
+  {
+    "name": "GE Renewable Wind Energy - Level 2",
+    "vendor": "GE Renewable",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "wind-energy",
+    "focus": "Advanced Wind Energy",
+    "exam": "GERENEWA-2023",
+    "tags": [
+      "wind-energy",
+      "level-2",
+      "ge-renewable"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/ge-renewable.svg"
+  },
+  {
+    "name": "GE Renewable Energy Storage - Level 2",
+    "vendor": "GE Renewable",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "energy-storage",
+    "focus": "Advanced Energy Storage",
+    "exam": "GERENEWA-2024",
+    "tags": [
+      "energy-storage",
+      "level-2",
+      "ge-renewable"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/ge-renewable.svg"
+  },
+  {
+    "name": "GE Renewable Smart Grid - Level 2",
+    "vendor": "GE Renewable",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "smart-grid",
+    "focus": "Advanced Smart Grid",
+    "exam": "GERENEWA-2025",
+    "tags": [
+      "smart-grid",
+      "level-2",
+      "ge-renewable"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/ge-renewable.svg"
+  },
+  {
+    "name": "Tesla Energy Solar PV Systems - Level 1",
+    "vendor": "Tesla Energy",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "solar-pv",
+    "focus": "Solar PV Systems expertise",
+    "exam": "TESLAENE-1026",
+    "tags": [
+      "solar-pv",
+      "level-1",
+      "tesla-energy"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/tesla-energy.svg"
+  },
+  {
+    "name": "Tesla Energy Wind Energy - Level 1",
+    "vendor": "Tesla Energy",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "wind-energy",
+    "focus": "Wind Energy expertise",
+    "exam": "TESLAENE-1027",
+    "tags": [
+      "wind-energy",
+      "level-1",
+      "tesla-energy"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/tesla-energy.svg"
+  },
+  {
+    "name": "Tesla Energy Wind Energy - Level 2",
+    "vendor": "Tesla Energy",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "wind-energy",
+    "focus": "Advanced Wind Energy",
+    "exam": "TESLAENE-2028",
+    "tags": [
+      "wind-energy",
+      "level-2",
+      "tesla-energy"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/tesla-energy.svg"
+  },
+  {
+    "name": "Tesla Energy Energy Storage - Level 2",
+    "vendor": "Tesla Energy",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "energy-storage",
+    "focus": "Advanced Energy Storage",
+    "exam": "TESLAENE-2029",
+    "tags": [
+      "energy-storage",
+      "level-2",
+      "tesla-energy"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/tesla-energy.svg"
+  },
+  {
+    "name": "Tesla Energy Smart Grid - Level 2",
+    "vendor": "Tesla Energy",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "smart-grid",
+    "focus": "Advanced Smart Grid",
+    "exam": "TESLAENE-2030",
+    "tags": [
+      "smart-grid",
+      "level-2",
+      "tesla-energy"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/tesla-energy.svg"
+  },
+  {
+    "name": "Schneider Electric Solar PV Systems - Level 1",
+    "vendor": "Schneider Electric",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "solar-pv",
+    "focus": "Solar PV Systems expertise",
+    "exam": "SCHNEIDE-1031",
+    "tags": [
+      "solar-pv",
+      "level-1",
+      "schneider-electric"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/schneider-electric.svg"
+  },
+  {
+    "name": "Schneider Electric Wind Energy - Level 1",
+    "vendor": "Schneider Electric",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "wind-energy",
+    "focus": "Wind Energy expertise",
+    "exam": "SCHNEIDE-1032",
+    "tags": [
+      "wind-energy",
+      "level-1",
+      "schneider-electric"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/schneider-electric.svg"
+  }
+]

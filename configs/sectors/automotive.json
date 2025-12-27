@@ -1,0 +1,48 @@
+{
+  "name": "Automotive Technology",
+  "slug": "automotive",
+  "icon": "\ud83d\ude97",
+  "subtitle": "Master vehicle systems, EV technology, autonomous driving, and automotive manufacturing",
+  "description": "Build expertise in automotive engineering, electric vehicles, ADAS, diagnostics, and connected car systems with certifications from ASE, SAE, Tesla, and leading OEMs.",
+  "gradient_start": "#dc2626",
+  "gradient_end": "#991b1b",
+  "cert_count": 35,
+  "vendor_count": 8,
+  "categories": [
+    {
+      "id": "vehicle-diagnostics",
+      "name": "Vehicle Diagnostics",
+      "icon": "\ud83d\udd27"
+    },
+    {
+      "id": "ev-systems",
+      "name": "Electric Vehicles",
+      "icon": "\u26a1"
+    },
+    {
+      "id": "adas-autonomous",
+      "name": "ADAS & Autonomous",
+      "icon": "\ud83e\udd16"
+    },
+    {
+      "id": "manufacturing",
+      "name": "Manufacturing",
+      "icon": "\ud83c\udfed"
+    },
+    {
+      "id": "connected-car",
+      "name": "Connected Car",
+      "icon": "\ud83d\udce1"
+    }
+  ],
+  "vendors": [
+    "ASE",
+    "SAE International",
+    "Tesla",
+    "GM",
+    "Ford",
+    "BMW",
+    "Bosch",
+    "Continental"
+  ]
+}

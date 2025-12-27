@@ -1,0 +1,632 @@
+[
+  {
+    "name": "APICS Supply Chain Management - Level 1",
+    "vendor": "APICS",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "supply-chain",
+    "focus": "Supply Chain Management expertise",
+    "exam": "APICS-1001",
+    "tags": [
+      "supply-chain",
+      "level-1",
+      "apics"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/apics.svg"
+  },
+  {
+    "name": "APICS Fleet Management - Level 1",
+    "vendor": "APICS",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "fleet-mgmt",
+    "focus": "Fleet Management expertise",
+    "exam": "APICS-1002",
+    "tags": [
+      "fleet-mgmt",
+      "level-1",
+      "apics"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/apics.svg"
+  },
+  {
+    "name": "APICS Fleet Management - Level 2",
+    "vendor": "APICS",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "fleet-mgmt",
+    "focus": "Advanced Fleet Management",
+    "exam": "APICS-2003",
+    "tags": [
+      "fleet-mgmt",
+      "level-2",
+      "apics"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/apics.svg"
+  },
+  {
+    "name": "APICS Warehouse Automation - Level 2",
+    "vendor": "APICS",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "warehouse-automation",
+    "focus": "Advanced Warehouse Automation",
+    "exam": "APICS-2004",
+    "tags": [
+      "warehouse-automation",
+      "level-2",
+      "apics"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/apics.svg"
+  },
+  {
+    "name": "APICS Logistics Operations - Level 2",
+    "vendor": "APICS",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "logistics-ops",
+    "focus": "Advanced Logistics Operations",
+    "exam": "APICS-2005",
+    "tags": [
+      "logistics-ops",
+      "level-2",
+      "apics"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/apics.svg"
+  },
+  {
+    "name": "ISM Supply Chain Management - Level 1",
+    "vendor": "ISM",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "supply-chain",
+    "focus": "Supply Chain Management expertise",
+    "exam": "ISM-1006",
+    "tags": [
+      "supply-chain",
+      "level-1",
+      "ism"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/ism.svg"
+  },
+  {
+    "name": "ISM Fleet Management - Level 1",
+    "vendor": "ISM",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "fleet-mgmt",
+    "focus": "Fleet Management expertise",
+    "exam": "ISM-1007",
+    "tags": [
+      "fleet-mgmt",
+      "level-1",
+      "ism"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/ism.svg"
+  },
+  {
+    "name": "ISM Fleet Management - Level 2",
+    "vendor": "ISM",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "fleet-mgmt",
+    "focus": "Advanced Fleet Management",
+    "exam": "ISM-2008",
+    "tags": [
+      "fleet-mgmt",
+      "level-2",
+      "ism"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/ism.svg"
+  },
+  {
+    "name": "ISM Warehouse Automation - Level 2",
+    "vendor": "ISM",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "warehouse-automation",
+    "focus": "Advanced Warehouse Automation",
+    "exam": "ISM-2009",
+    "tags": [
+      "warehouse-automation",
+      "level-2",
+      "ism"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/ism.svg"
+  },
+  {
+    "name": "ISM Logistics Operations - Level 2",
+    "vendor": "ISM",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "logistics-ops",
+    "focus": "Advanced Logistics Operations",
+    "exam": "ISM-2010",
+    "tags": [
+      "logistics-ops",
+      "level-2",
+      "ism"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/ism.svg"
+  },
+  {
+    "name": "SAP Supply Chain Management - Level 1",
+    "vendor": "SAP",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "supply-chain",
+    "focus": "Supply Chain Management expertise",
+    "exam": "SAP-1011",
+    "tags": [
+      "supply-chain",
+      "level-1",
+      "sap"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/sap.svg"
+  },
+  {
+    "name": "SAP Fleet Management - Level 1",
+    "vendor": "SAP",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "fleet-mgmt",
+    "focus": "Fleet Management expertise",
+    "exam": "SAP-1012",
+    "tags": [
+      "fleet-mgmt",
+      "level-1",
+      "sap"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/sap.svg"
+  },
+  {
+    "name": "SAP Fleet Management - Level 2",
+    "vendor": "SAP",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "fleet-mgmt",
+    "focus": "Advanced Fleet Management",
+    "exam": "SAP-2013",
+    "tags": [
+      "fleet-mgmt",
+      "level-2",
+      "sap"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/sap.svg"
+  },
+  {
+    "name": "SAP Warehouse Automation - Level 2",
+    "vendor": "SAP",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "warehouse-automation",
+    "focus": "Advanced Warehouse Automation",
+    "exam": "SAP-2014",
+    "tags": [
+      "warehouse-automation",
+      "level-2",
+      "sap"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/sap.svg"
+  },
+  {
+    "name": "SAP Logistics Operations - Level 2",
+    "vendor": "SAP",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "logistics-ops",
+    "focus": "Advanced Logistics Operations",
+    "exam": "SAP-2015",
+    "tags": [
+      "logistics-ops",
+      "level-2",
+      "sap"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/sap.svg"
+  },
+  {
+    "name": "Oracle Supply Chain Management - Level 1",
+    "vendor": "Oracle",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "supply-chain",
+    "focus": "Supply Chain Management expertise",
+    "exam": "ORACLE-1016",
+    "tags": [
+      "supply-chain",
+      "level-1",
+      "oracle"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/oracle.svg"
+  },
+  {
+    "name": "Oracle Fleet Management - Level 1",
+    "vendor": "Oracle",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "fleet-mgmt",
+    "focus": "Fleet Management expertise",
+    "exam": "ORACLE-1017",
+    "tags": [
+      "fleet-mgmt",
+      "level-1",
+      "oracle"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/oracle.svg"
+  },
+  {
+    "name": "Oracle Fleet Management - Level 2",
+    "vendor": "Oracle",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "fleet-mgmt",
+    "focus": "Advanced Fleet Management",
+    "exam": "ORACLE-2018",
+    "tags": [
+      "fleet-mgmt",
+      "level-2",
+      "oracle"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/oracle.svg"
+  },
+  {
+    "name": "Oracle Warehouse Automation - Level 2",
+    "vendor": "Oracle",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "warehouse-automation",
+    "focus": "Advanced Warehouse Automation",
+    "exam": "ORACLE-2019",
+    "tags": [
+      "warehouse-automation",
+      "level-2",
+      "oracle"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/oracle.svg"
+  },
+  {
+    "name": "Oracle Logistics Operations - Level 2",
+    "vendor": "Oracle",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "logistics-ops",
+    "focus": "Advanced Logistics Operations",
+    "exam": "ORACLE-2020",
+    "tags": [
+      "logistics-ops",
+      "level-2",
+      "oracle"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/oracle.svg"
+  },
+  {
+    "name": "Manhattan Associates Supply Chain Management - Level 1",
+    "vendor": "Manhattan Associates",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "supply-chain",
+    "focus": "Supply Chain Management expertise",
+    "exam": "MANHATTA-1021",
+    "tags": [
+      "supply-chain",
+      "level-1",
+      "manhattan-associates"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/manhattan-associates.svg"
+  },
+  {
+    "name": "Manhattan Associates Fleet Management - Level 1",
+    "vendor": "Manhattan Associates",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "fleet-mgmt",
+    "focus": "Fleet Management expertise",
+    "exam": "MANHATTA-1022",
+    "tags": [
+      "fleet-mgmt",
+      "level-1",
+      "manhattan-associates"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/manhattan-associates.svg"
+  },
+  {
+    "name": "Manhattan Associates Fleet Management - Level 2",
+    "vendor": "Manhattan Associates",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "fleet-mgmt",
+    "focus": "Advanced Fleet Management",
+    "exam": "MANHATTA-2023",
+    "tags": [
+      "fleet-mgmt",
+      "level-2",
+      "manhattan-associates"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/manhattan-associates.svg"
+  },
+  {
+    "name": "Manhattan Associates Warehouse Automation - Level 2",
+    "vendor": "Manhattan Associates",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "warehouse-automation",
+    "focus": "Advanced Warehouse Automation",
+    "exam": "MANHATTA-2024",
+    "tags": [
+      "warehouse-automation",
+      "level-2",
+      "manhattan-associates"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/manhattan-associates.svg"
+  },
+  {
+    "name": "Manhattan Associates Logistics Operations - Level 2",
+    "vendor": "Manhattan Associates",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "logistics-ops",
+    "focus": "Advanced Logistics Operations",
+    "exam": "MANHATTA-2025",
+    "tags": [
+      "logistics-ops",
+      "level-2",
+      "manhattan-associates"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/manhattan-associates.svg"
+  },
+  {
+    "name": "JDA Supply Chain Management - Level 1",
+    "vendor": "JDA",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "supply-chain",
+    "focus": "Supply Chain Management expertise",
+    "exam": "JDA-1026",
+    "tags": [
+      "supply-chain",
+      "level-1",
+      "jda"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/jda.svg"
+  },
+  {
+    "name": "JDA Fleet Management - Level 1",
+    "vendor": "JDA",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "fleet-mgmt",
+    "focus": "Fleet Management expertise",
+    "exam": "JDA-1027",
+    "tags": [
+      "fleet-mgmt",
+      "level-1",
+      "jda"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/jda.svg"
+  },
+  {
+    "name": "JDA Fleet Management - Level 2",
+    "vendor": "JDA",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "fleet-mgmt",
+    "focus": "Advanced Fleet Management",
+    "exam": "JDA-2028",
+    "tags": [
+      "fleet-mgmt",
+      "level-2",
+      "jda"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/jda.svg"
+  },
+  {
+    "name": "JDA Warehouse Automation - Level 2",
+    "vendor": "JDA",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "warehouse-automation",
+    "focus": "Advanced Warehouse Automation",
+    "exam": "JDA-2029",
+    "tags": [
+      "warehouse-automation",
+      "level-2",
+      "jda"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/jda.svg"
+  },
+  {
+    "name": "JDA Logistics Operations - Level 2",
+    "vendor": "JDA",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "logistics-ops",
+    "focus": "Advanced Logistics Operations",
+    "exam": "JDA-2030",
+    "tags": [
+      "logistics-ops",
+      "level-2",
+      "jda"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/jda.svg"
+  }
+]

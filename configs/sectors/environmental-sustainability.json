@@ -1,0 +1,47 @@
+{
+  "name": "Environmental & Sustainability",
+  "slug": "environmental-sustainability",
+  "icon": "\ud83c\udf0d",
+  "subtitle": "Drive environmental stewardship with sustainability, conservation, and climate technology",
+  "description": "Build expertise in environmental management, climate science, conservation technology, and sustainable practices with certifications from LEED, ISSP, EPA, and environmental organizations.",
+  "gradient_start": "#22c55e",
+  "gradient_end": "#16a34a",
+  "cert_count": 29,
+  "vendor_count": 7,
+  "categories": [
+    {
+      "id": "sustainability-mgmt",
+      "name": "Sustainability Management",
+      "icon": "\u267b\ufe0f"
+    },
+    {
+      "id": "climate-science",
+      "name": "Climate Science",
+      "icon": "\ud83c\udf21\ufe0f"
+    },
+    {
+      "id": "conservation",
+      "name": "Conservation",
+      "icon": "\ud83c\udf33"
+    },
+    {
+      "id": "environmental-compliance",
+      "name": "Environmental Compliance",
+      "icon": "\ud83d\udccb"
+    },
+    {
+      "id": "green-tech",
+      "name": "Green Technology",
+      "icon": "\ud83d\udd2c"
+    }
+  ],
+  "vendors": [
+    "USGBC LEED",
+    "ISSP",
+    "EPA",
+    "ISO",
+    "GRI",
+    "CDP",
+    "GBCI"
+  ]
+}

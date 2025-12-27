@@ -1,0 +1,48 @@
+{
+  "name": "Business & Management",
+  "slug": "business",
+  "icon": "\ud83d\udcbc",
+  "subtitle": "Lead organizations with strategic planning, operations management, and business analytics",
+  "description": "Develop leadership and business technology skills in strategy, operations, analytics, and transformation with certifications from PMI, Salesforce, Microsoft, and management bodies.",
+  "gradient_start": "#6366f1",
+  "gradient_end": "#4f46e5",
+  "cert_count": 31,
+  "vendor_count": 8,
+  "categories": [
+    {
+      "id": "project-management",
+      "name": "Project Management",
+      "icon": "\ud83d\udccb"
+    },
+    {
+      "id": "business-analytics",
+      "name": "Business Analytics",
+      "icon": "\ud83d\udcca"
+    },
+    {
+      "id": "crm-systems",
+      "name": "CRM Systems",
+      "icon": "\ud83d\udc65"
+    },
+    {
+      "id": "operations-mgmt",
+      "name": "Operations Management",
+      "icon": "\u2699\ufe0f"
+    },
+    {
+      "id": "strategy",
+      "name": "Strategy & Planning",
+      "icon": "\ud83c\udfaf"
+    }
+  ],
+  "vendors": [
+    "PMI",
+    "Salesforce",
+    "Microsoft",
+    "SAP",
+    "Oracle",
+    "Tableau",
+    "APICS",
+    "Six Sigma"
+  ]
+}

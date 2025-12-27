@@ -1,0 +1,695 @@
+[
+  {
+    "name": "Cisco 5G & Wireless - Level 1",
+    "vendor": "Cisco",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "5g-wireless",
+    "focus": "5G & Wireless expertise",
+    "exam": "CISCO-1001",
+    "tags": [
+      "5g-wireless",
+      "level-1",
+      "cisco"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/cisco.svg"
+  },
+  {
+    "name": "Cisco Fiber Optics - Level 1",
+    "vendor": "Cisco",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "fiber-optics",
+    "focus": "Fiber Optics expertise",
+    "exam": "CISCO-1002",
+    "tags": [
+      "fiber-optics",
+      "level-1",
+      "cisco"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/cisco.svg"
+  },
+  {
+    "name": "Cisco Fiber Optics - Level 2",
+    "vendor": "Cisco",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "fiber-optics",
+    "focus": "Advanced Fiber Optics",
+    "exam": "CISCO-2003",
+    "tags": [
+      "fiber-optics",
+      "level-2",
+      "cisco"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/cisco.svg"
+  },
+  {
+    "name": "Cisco Satellite Systems - Level 2",
+    "vendor": "Cisco",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "satellite",
+    "focus": "Advanced Satellite Systems",
+    "exam": "CISCO-2004",
+    "tags": [
+      "satellite",
+      "level-2",
+      "cisco"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/cisco.svg"
+  },
+  {
+    "name": "Cisco Telecom Operations - Level 2",
+    "vendor": "Cisco",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "telecom-ops",
+    "focus": "Advanced Telecom Operations",
+    "exam": "CISCO-2005",
+    "tags": [
+      "telecom-ops",
+      "level-2",
+      "cisco"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/cisco.svg"
+  },
+  {
+    "name": "Nokia 5G & Wireless - Level 1",
+    "vendor": "Nokia",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "5g-wireless",
+    "focus": "5G & Wireless expertise",
+    "exam": "NOKIA-1006",
+    "tags": [
+      "5g-wireless",
+      "level-1",
+      "nokia"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/nokia.svg"
+  },
+  {
+    "name": "Nokia Fiber Optics - Level 1",
+    "vendor": "Nokia",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "fiber-optics",
+    "focus": "Fiber Optics expertise",
+    "exam": "NOKIA-1007",
+    "tags": [
+      "fiber-optics",
+      "level-1",
+      "nokia"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/nokia.svg"
+  },
+  {
+    "name": "Nokia Fiber Optics - Level 2",
+    "vendor": "Nokia",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "fiber-optics",
+    "focus": "Advanced Fiber Optics",
+    "exam": "NOKIA-2008",
+    "tags": [
+      "fiber-optics",
+      "level-2",
+      "nokia"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/nokia.svg"
+  },
+  {
+    "name": "Nokia Satellite Systems - Level 2",
+    "vendor": "Nokia",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "satellite",
+    "focus": "Advanced Satellite Systems",
+    "exam": "NOKIA-2009",
+    "tags": [
+      "satellite",
+      "level-2",
+      "nokia"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/nokia.svg"
+  },
+  {
+    "name": "Nokia Telecom Operations - Level 2",
+    "vendor": "Nokia",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "telecom-ops",
+    "focus": "Advanced Telecom Operations",
+    "exam": "NOKIA-2010",
+    "tags": [
+      "telecom-ops",
+      "level-2",
+      "nokia"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/nokia.svg"
+  },
+  {
+    "name": "Ericsson 5G & Wireless - Level 1",
+    "vendor": "Ericsson",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "5g-wireless",
+    "focus": "5G & Wireless expertise",
+    "exam": "ERICSSON-1011",
+    "tags": [
+      "5g-wireless",
+      "level-1",
+      "ericsson"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/ericsson.svg"
+  },
+  {
+    "name": "Ericsson Fiber Optics - Level 1",
+    "vendor": "Ericsson",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "fiber-optics",
+    "focus": "Fiber Optics expertise",
+    "exam": "ERICSSON-1012",
+    "tags": [
+      "fiber-optics",
+      "level-1",
+      "ericsson"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/ericsson.svg"
+  },
+  {
+    "name": "Ericsson Fiber Optics - Level 2",
+    "vendor": "Ericsson",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "fiber-optics",
+    "focus": "Advanced Fiber Optics",
+    "exam": "ERICSSON-2013",
+    "tags": [
+      "fiber-optics",
+      "level-2",
+      "ericsson"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/ericsson.svg"
+  },
+  {
+    "name": "Ericsson Satellite Systems - Level 2",
+    "vendor": "Ericsson",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "satellite",
+    "focus": "Advanced Satellite Systems",
+    "exam": "ERICSSON-2014",
+    "tags": [
+      "satellite",
+      "level-2",
+      "ericsson"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/ericsson.svg"
+  },
+  {
+    "name": "Ericsson Telecom Operations - Level 2",
+    "vendor": "Ericsson",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "telecom-ops",
+    "focus": "Advanced Telecom Operations",
+    "exam": "ERICSSON-2015",
+    "tags": [
+      "telecom-ops",
+      "level-2",
+      "ericsson"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/ericsson.svg"
+  },
+  {
+    "name": "Huawei 5G & Wireless - Level 1",
+    "vendor": "Huawei",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "5g-wireless",
+    "focus": "5G & Wireless expertise",
+    "exam": "HUAWEI-1016",
+    "tags": [
+      "5g-wireless",
+      "level-1",
+      "huawei"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/huawei.svg"
+  },
+  {
+    "name": "Huawei Fiber Optics - Level 1",
+    "vendor": "Huawei",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "fiber-optics",
+    "focus": "Fiber Optics expertise",
+    "exam": "HUAWEI-1017",
+    "tags": [
+      "fiber-optics",
+      "level-1",
+      "huawei"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/huawei.svg"
+  },
+  {
+    "name": "Huawei Fiber Optics - Level 2",
+    "vendor": "Huawei",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "fiber-optics",
+    "focus": "Advanced Fiber Optics",
+    "exam": "HUAWEI-2018",
+    "tags": [
+      "fiber-optics",
+      "level-2",
+      "huawei"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/huawei.svg"
+  },
+  {
+    "name": "Huawei Satellite Systems - Level 2",
+    "vendor": "Huawei",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "satellite",
+    "focus": "Advanced Satellite Systems",
+    "exam": "HUAWEI-2019",
+    "tags": [
+      "satellite",
+      "level-2",
+      "huawei"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/huawei.svg"
+  },
+  {
+    "name": "Huawei Telecom Operations - Level 2",
+    "vendor": "Huawei",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "telecom-ops",
+    "focus": "Advanced Telecom Operations",
+    "exam": "HUAWEI-2020",
+    "tags": [
+      "telecom-ops",
+      "level-2",
+      "huawei"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/huawei.svg"
+  },
+  {
+    "name": "Juniper 5G & Wireless - Level 1",
+    "vendor": "Juniper",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "5g-wireless",
+    "focus": "5G & Wireless expertise",
+    "exam": "JUNIPER-1021",
+    "tags": [
+      "5g-wireless",
+      "level-1",
+      "juniper"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/juniper.svg"
+  },
+  {
+    "name": "Juniper Fiber Optics - Level 1",
+    "vendor": "Juniper",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "fiber-optics",
+    "focus": "Fiber Optics expertise",
+    "exam": "JUNIPER-1022",
+    "tags": [
+      "fiber-optics",
+      "level-1",
+      "juniper"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/juniper.svg"
+  },
+  {
+    "name": "Juniper Fiber Optics - Level 2",
+    "vendor": "Juniper",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "fiber-optics",
+    "focus": "Advanced Fiber Optics",
+    "exam": "JUNIPER-2023",
+    "tags": [
+      "fiber-optics",
+      "level-2",
+      "juniper"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/juniper.svg"
+  },
+  {
+    "name": "Juniper Satellite Systems - Level 2",
+    "vendor": "Juniper",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "satellite",
+    "focus": "Advanced Satellite Systems",
+    "exam": "JUNIPER-2024",
+    "tags": [
+      "satellite",
+      "level-2",
+      "juniper"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/juniper.svg"
+  },
+  {
+    "name": "Juniper Telecom Operations - Level 2",
+    "vendor": "Juniper",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "telecom-ops",
+    "focus": "Advanced Telecom Operations",
+    "exam": "JUNIPER-2025",
+    "tags": [
+      "telecom-ops",
+      "level-2",
+      "juniper"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/juniper.svg"
+  },
+  {
+    "name": "Aruba 5G & Wireless - Level 1",
+    "vendor": "Aruba",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "5g-wireless",
+    "focus": "5G & Wireless expertise",
+    "exam": "ARUBA-1026",
+    "tags": [
+      "5g-wireless",
+      "level-1",
+      "aruba"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/aruba.svg"
+  },
+  {
+    "name": "Aruba Fiber Optics - Level 1",
+    "vendor": "Aruba",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "fiber-optics",
+    "focus": "Fiber Optics expertise",
+    "exam": "ARUBA-1027",
+    "tags": [
+      "fiber-optics",
+      "level-1",
+      "aruba"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/aruba.svg"
+  },
+  {
+    "name": "Aruba Fiber Optics - Level 2",
+    "vendor": "Aruba",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "fiber-optics",
+    "focus": "Advanced Fiber Optics",
+    "exam": "ARUBA-2028",
+    "tags": [
+      "fiber-optics",
+      "level-2",
+      "aruba"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/aruba.svg"
+  },
+  {
+    "name": "Aruba Satellite Systems - Level 2",
+    "vendor": "Aruba",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "satellite",
+    "focus": "Advanced Satellite Systems",
+    "exam": "ARUBA-2029",
+    "tags": [
+      "satellite",
+      "level-2",
+      "aruba"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/aruba.svg"
+  },
+  {
+    "name": "Aruba Telecom Operations - Level 2",
+    "vendor": "Aruba",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "telecom-ops",
+    "focus": "Advanced Telecom Operations",
+    "exam": "ARUBA-2030",
+    "tags": [
+      "telecom-ops",
+      "level-2",
+      "aruba"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/aruba.svg"
+  },
+  {
+    "name": "SMPTE 5G & Wireless - Level 1",
+    "vendor": "SMPTE",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "5g-wireless",
+    "focus": "5G & Wireless expertise",
+    "exam": "SMPTE-1031",
+    "tags": [
+      "5g-wireless",
+      "level-1",
+      "smpte"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/smpte.svg"
+  },
+  {
+    "name": "SMPTE Fiber Optics - Level 1",
+    "vendor": "SMPTE",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "fiber-optics",
+    "focus": "Fiber Optics expertise",
+    "exam": "SMPTE-1032",
+    "tags": [
+      "fiber-optics",
+      "level-1",
+      "smpte"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/smpte.svg"
+  },
+  {
+    "name": "SMPTE Fiber Optics - Level 2",
+    "vendor": "SMPTE",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "fiber-optics",
+    "focus": "Advanced Fiber Optics",
+    "exam": "SMPTE-2033",
+    "tags": [
+      "fiber-optics",
+      "level-2",
+      "smpte"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/smpte.svg"
+  }
+]

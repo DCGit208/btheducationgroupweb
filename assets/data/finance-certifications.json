@@ -1,0 +1,716 @@
+[
+  {
+    "name": "AICPA Accounting Systems - Level 1",
+    "vendor": "AICPA",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "accounting-systems",
+    "focus": "Accounting Systems expertise",
+    "exam": "AICPA-1001",
+    "tags": [
+      "accounting-systems",
+      "level-1",
+      "aicpa"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/aicpa.svg"
+  },
+  {
+    "name": "AICPA Financial Analysis - Level 1",
+    "vendor": "AICPA",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "financial-analysis",
+    "focus": "Financial Analysis expertise",
+    "exam": "AICPA-1002",
+    "tags": [
+      "financial-analysis",
+      "level-1",
+      "aicpa"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/aicpa.svg"
+  },
+  {
+    "name": "AICPA Financial Analysis - Level 2",
+    "vendor": "AICPA",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "financial-analysis",
+    "focus": "Advanced Financial Analysis",
+    "exam": "AICPA-2003",
+    "tags": [
+      "financial-analysis",
+      "level-2",
+      "aicpa"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/aicpa.svg"
+  },
+  {
+    "name": "AICPA Tax & Compliance - Level 2",
+    "vendor": "AICPA",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "tax-compliance",
+    "focus": "Advanced Tax & Compliance",
+    "exam": "AICPA-2004",
+    "tags": [
+      "tax-compliance",
+      "level-2",
+      "aicpa"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/aicpa.svg"
+  },
+  {
+    "name": "AICPA Audit & Controls - Level 2",
+    "vendor": "AICPA",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "audit-controls",
+    "focus": "Advanced Audit & Controls",
+    "exam": "AICPA-2005",
+    "tags": [
+      "audit-controls",
+      "level-2",
+      "aicpa"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/aicpa.svg"
+  },
+  {
+    "name": "CFA Institute Accounting Systems - Level 1",
+    "vendor": "CFA Institute",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "accounting-systems",
+    "focus": "Accounting Systems expertise",
+    "exam": "CFAINSTI-1006",
+    "tags": [
+      "accounting-systems",
+      "level-1",
+      "cfa-institute"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/cfa-institute.svg"
+  },
+  {
+    "name": "CFA Institute Financial Analysis - Level 1",
+    "vendor": "CFA Institute",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "financial-analysis",
+    "focus": "Financial Analysis expertise",
+    "exam": "CFAINSTI-1007",
+    "tags": [
+      "financial-analysis",
+      "level-1",
+      "cfa-institute"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/cfa-institute.svg"
+  },
+  {
+    "name": "CFA Institute Financial Analysis - Level 2",
+    "vendor": "CFA Institute",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "financial-analysis",
+    "focus": "Advanced Financial Analysis",
+    "exam": "CFAINSTI-2008",
+    "tags": [
+      "financial-analysis",
+      "level-2",
+      "cfa-institute"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/cfa-institute.svg"
+  },
+  {
+    "name": "CFA Institute Tax & Compliance - Level 2",
+    "vendor": "CFA Institute",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "tax-compliance",
+    "focus": "Advanced Tax & Compliance",
+    "exam": "CFAINSTI-2009",
+    "tags": [
+      "tax-compliance",
+      "level-2",
+      "cfa-institute"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/cfa-institute.svg"
+  },
+  {
+    "name": "CFA Institute Audit & Controls - Level 2",
+    "vendor": "CFA Institute",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "audit-controls",
+    "focus": "Advanced Audit & Controls",
+    "exam": "CFAINSTI-2010",
+    "tags": [
+      "audit-controls",
+      "level-2",
+      "cfa-institute"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/cfa-institute.svg"
+  },
+  {
+    "name": "Intuit Accounting Systems - Level 1",
+    "vendor": "Intuit",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "accounting-systems",
+    "focus": "Accounting Systems expertise",
+    "exam": "INTUIT-1011",
+    "tags": [
+      "accounting-systems",
+      "level-1",
+      "intuit"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/intuit.svg"
+  },
+  {
+    "name": "Intuit Financial Analysis - Level 1",
+    "vendor": "Intuit",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "financial-analysis",
+    "focus": "Financial Analysis expertise",
+    "exam": "INTUIT-1012",
+    "tags": [
+      "financial-analysis",
+      "level-1",
+      "intuit"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/intuit.svg"
+  },
+  {
+    "name": "Intuit Financial Analysis - Level 2",
+    "vendor": "Intuit",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "financial-analysis",
+    "focus": "Advanced Financial Analysis",
+    "exam": "INTUIT-2013",
+    "tags": [
+      "financial-analysis",
+      "level-2",
+      "intuit"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/intuit.svg"
+  },
+  {
+    "name": "Intuit Tax & Compliance - Level 2",
+    "vendor": "Intuit",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "tax-compliance",
+    "focus": "Advanced Tax & Compliance",
+    "exam": "INTUIT-2014",
+    "tags": [
+      "tax-compliance",
+      "level-2",
+      "intuit"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/intuit.svg"
+  },
+  {
+    "name": "Intuit Audit & Controls - Level 2",
+    "vendor": "Intuit",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "audit-controls",
+    "focus": "Advanced Audit & Controls",
+    "exam": "INTUIT-2015",
+    "tags": [
+      "audit-controls",
+      "level-2",
+      "intuit"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/intuit.svg"
+  },
+  {
+    "name": "SAP Accounting Systems - Level 1",
+    "vendor": "SAP",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "accounting-systems",
+    "focus": "Accounting Systems expertise",
+    "exam": "SAP-1016",
+    "tags": [
+      "accounting-systems",
+      "level-1",
+      "sap"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/sap.svg"
+  },
+  {
+    "name": "SAP Financial Analysis - Level 1",
+    "vendor": "SAP",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "financial-analysis",
+    "focus": "Financial Analysis expertise",
+    "exam": "SAP-1017",
+    "tags": [
+      "financial-analysis",
+      "level-1",
+      "sap"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/sap.svg"
+  },
+  {
+    "name": "SAP Financial Analysis - Level 2",
+    "vendor": "SAP",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "financial-analysis",
+    "focus": "Advanced Financial Analysis",
+    "exam": "SAP-2018",
+    "tags": [
+      "financial-analysis",
+      "level-2",
+      "sap"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/sap.svg"
+  },
+  {
+    "name": "SAP Tax & Compliance - Level 2",
+    "vendor": "SAP",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "tax-compliance",
+    "focus": "Advanced Tax & Compliance",
+    "exam": "SAP-2019",
+    "tags": [
+      "tax-compliance",
+      "level-2",
+      "sap"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/sap.svg"
+  },
+  {
+    "name": "SAP Audit & Controls - Level 2",
+    "vendor": "SAP",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "audit-controls",
+    "focus": "Advanced Audit & Controls",
+    "exam": "SAP-2020",
+    "tags": [
+      "audit-controls",
+      "level-2",
+      "sap"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/sap.svg"
+  },
+  {
+    "name": "Oracle Accounting Systems - Level 1",
+    "vendor": "Oracle",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "accounting-systems",
+    "focus": "Accounting Systems expertise",
+    "exam": "ORACLE-1021",
+    "tags": [
+      "accounting-systems",
+      "level-1",
+      "oracle"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/oracle.svg"
+  },
+  {
+    "name": "Oracle Financial Analysis - Level 1",
+    "vendor": "Oracle",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "financial-analysis",
+    "focus": "Financial Analysis expertise",
+    "exam": "ORACLE-1022",
+    "tags": [
+      "financial-analysis",
+      "level-1",
+      "oracle"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/oracle.svg"
+  },
+  {
+    "name": "Oracle Financial Analysis - Level 2",
+    "vendor": "Oracle",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "financial-analysis",
+    "focus": "Advanced Financial Analysis",
+    "exam": "ORACLE-2023",
+    "tags": [
+      "financial-analysis",
+      "level-2",
+      "oracle"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/oracle.svg"
+  },
+  {
+    "name": "Oracle Tax & Compliance - Level 2",
+    "vendor": "Oracle",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "tax-compliance",
+    "focus": "Advanced Tax & Compliance",
+    "exam": "ORACLE-2024",
+    "tags": [
+      "tax-compliance",
+      "level-2",
+      "oracle"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/oracle.svg"
+  },
+  {
+    "name": "Oracle Audit & Controls - Level 2",
+    "vendor": "Oracle",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "audit-controls",
+    "focus": "Advanced Audit & Controls",
+    "exam": "ORACLE-2025",
+    "tags": [
+      "audit-controls",
+      "level-2",
+      "oracle"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/oracle.svg"
+  },
+  {
+    "name": "Microsoft Accounting Systems - Level 1",
+    "vendor": "Microsoft",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "accounting-systems",
+    "focus": "Accounting Systems expertise",
+    "exam": "MICROSOF-1026",
+    "tags": [
+      "accounting-systems",
+      "level-1",
+      "microsoft"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/microsoft.svg"
+  },
+  {
+    "name": "Microsoft Financial Analysis - Level 1",
+    "vendor": "Microsoft",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "financial-analysis",
+    "focus": "Financial Analysis expertise",
+    "exam": "MICROSOF-1027",
+    "tags": [
+      "financial-analysis",
+      "level-1",
+      "microsoft"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/microsoft.svg"
+  },
+  {
+    "name": "Microsoft Financial Analysis - Level 2",
+    "vendor": "Microsoft",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "financial-analysis",
+    "focus": "Advanced Financial Analysis",
+    "exam": "MICROSOF-2028",
+    "tags": [
+      "financial-analysis",
+      "level-2",
+      "microsoft"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/microsoft.svg"
+  },
+  {
+    "name": "Microsoft Tax & Compliance - Level 2",
+    "vendor": "Microsoft",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "tax-compliance",
+    "focus": "Advanced Tax & Compliance",
+    "exam": "MICROSOF-2029",
+    "tags": [
+      "tax-compliance",
+      "level-2",
+      "microsoft"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/microsoft.svg"
+  },
+  {
+    "name": "Microsoft Audit & Controls - Level 2",
+    "vendor": "Microsoft",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "audit-controls",
+    "focus": "Advanced Audit & Controls",
+    "exam": "MICROSOF-2030",
+    "tags": [
+      "audit-controls",
+      "level-2",
+      "microsoft"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/microsoft.svg"
+  },
+  {
+    "name": "Bloomberg Accounting Systems - Level 1",
+    "vendor": "Bloomberg",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "accounting-systems",
+    "focus": "Accounting Systems expertise",
+    "exam": "BLOOMBER-1031",
+    "tags": [
+      "accounting-systems",
+      "level-1",
+      "bloomberg"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/bloomberg.svg"
+  },
+  {
+    "name": "Bloomberg Financial Analysis - Level 1",
+    "vendor": "Bloomberg",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "financial-analysis",
+    "focus": "Financial Analysis expertise",
+    "exam": "BLOOMBER-1032",
+    "tags": [
+      "financial-analysis",
+      "level-1",
+      "bloomberg"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/bloomberg.svg"
+  },
+  {
+    "name": "Bloomberg Financial Analysis - Level 2",
+    "vendor": "Bloomberg",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "financial-analysis",
+    "focus": "Advanced Financial Analysis",
+    "exam": "BLOOMBER-2033",
+    "tags": [
+      "financial-analysis",
+      "level-2",
+      "bloomberg"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/bloomberg.svg"
+  },
+  {
+    "name": "Bloomberg Tax & Compliance - Level 2",
+    "vendor": "Bloomberg",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "tax-compliance",
+    "focus": "Advanced Tax & Compliance",
+    "exam": "BLOOMBER-2034",
+    "tags": [
+      "tax-compliance",
+      "level-2",
+      "bloomberg"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/bloomberg.svg"
+  }
+]

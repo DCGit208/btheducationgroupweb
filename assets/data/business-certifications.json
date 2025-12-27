@@ -1,0 +1,653 @@
+[
+  {
+    "name": "PMI Project Management - Level 1",
+    "vendor": "PMI",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "project-management",
+    "focus": "Project Management expertise",
+    "exam": "PMI-1001",
+    "tags": [
+      "project-management",
+      "level-1",
+      "pmi"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/pmi.svg"
+  },
+  {
+    "name": "PMI Business Analytics - Level 1",
+    "vendor": "PMI",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "business-analytics",
+    "focus": "Business Analytics expertise",
+    "exam": "PMI-1002",
+    "tags": [
+      "business-analytics",
+      "level-1",
+      "pmi"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/pmi.svg"
+  },
+  {
+    "name": "PMI Business Analytics - Level 2",
+    "vendor": "PMI",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "business-analytics",
+    "focus": "Advanced Business Analytics",
+    "exam": "PMI-2003",
+    "tags": [
+      "business-analytics",
+      "level-2",
+      "pmi"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/pmi.svg"
+  },
+  {
+    "name": "PMI CRM Systems - Level 2",
+    "vendor": "PMI",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "crm-systems",
+    "focus": "Advanced CRM Systems",
+    "exam": "PMI-2004",
+    "tags": [
+      "crm-systems",
+      "level-2",
+      "pmi"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/pmi.svg"
+  },
+  {
+    "name": "PMI Operations Management - Level 2",
+    "vendor": "PMI",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "operations-mgmt",
+    "focus": "Advanced Operations Management",
+    "exam": "PMI-2005",
+    "tags": [
+      "operations-mgmt",
+      "level-2",
+      "pmi"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/pmi.svg"
+  },
+  {
+    "name": "Salesforce Project Management - Level 1",
+    "vendor": "Salesforce",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "project-management",
+    "focus": "Project Management expertise",
+    "exam": "SALESFOR-1006",
+    "tags": [
+      "project-management",
+      "level-1",
+      "salesforce"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/salesforce.svg"
+  },
+  {
+    "name": "Salesforce Business Analytics - Level 1",
+    "vendor": "Salesforce",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "business-analytics",
+    "focus": "Business Analytics expertise",
+    "exam": "SALESFOR-1007",
+    "tags": [
+      "business-analytics",
+      "level-1",
+      "salesforce"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/salesforce.svg"
+  },
+  {
+    "name": "Salesforce Business Analytics - Level 2",
+    "vendor": "Salesforce",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "business-analytics",
+    "focus": "Advanced Business Analytics",
+    "exam": "SALESFOR-2008",
+    "tags": [
+      "business-analytics",
+      "level-2",
+      "salesforce"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/salesforce.svg"
+  },
+  {
+    "name": "Salesforce CRM Systems - Level 2",
+    "vendor": "Salesforce",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "crm-systems",
+    "focus": "Advanced CRM Systems",
+    "exam": "SALESFOR-2009",
+    "tags": [
+      "crm-systems",
+      "level-2",
+      "salesforce"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/salesforce.svg"
+  },
+  {
+    "name": "Salesforce Operations Management - Level 2",
+    "vendor": "Salesforce",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "operations-mgmt",
+    "focus": "Advanced Operations Management",
+    "exam": "SALESFOR-2010",
+    "tags": [
+      "operations-mgmt",
+      "level-2",
+      "salesforce"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/salesforce.svg"
+  },
+  {
+    "name": "Microsoft Project Management - Level 1",
+    "vendor": "Microsoft",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "project-management",
+    "focus": "Project Management expertise",
+    "exam": "MICROSOF-1011",
+    "tags": [
+      "project-management",
+      "level-1",
+      "microsoft"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/microsoft.svg"
+  },
+  {
+    "name": "Microsoft Business Analytics - Level 1",
+    "vendor": "Microsoft",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "business-analytics",
+    "focus": "Business Analytics expertise",
+    "exam": "MICROSOF-1012",
+    "tags": [
+      "business-analytics",
+      "level-1",
+      "microsoft"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/microsoft.svg"
+  },
+  {
+    "name": "Microsoft Business Analytics - Level 2",
+    "vendor": "Microsoft",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "business-analytics",
+    "focus": "Advanced Business Analytics",
+    "exam": "MICROSOF-2013",
+    "tags": [
+      "business-analytics",
+      "level-2",
+      "microsoft"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/microsoft.svg"
+  },
+  {
+    "name": "Microsoft CRM Systems - Level 2",
+    "vendor": "Microsoft",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "crm-systems",
+    "focus": "Advanced CRM Systems",
+    "exam": "MICROSOF-2014",
+    "tags": [
+      "crm-systems",
+      "level-2",
+      "microsoft"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/microsoft.svg"
+  },
+  {
+    "name": "Microsoft Operations Management - Level 2",
+    "vendor": "Microsoft",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "operations-mgmt",
+    "focus": "Advanced Operations Management",
+    "exam": "MICROSOF-2015",
+    "tags": [
+      "operations-mgmt",
+      "level-2",
+      "microsoft"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/microsoft.svg"
+  },
+  {
+    "name": "SAP Project Management - Level 1",
+    "vendor": "SAP",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "project-management",
+    "focus": "Project Management expertise",
+    "exam": "SAP-1016",
+    "tags": [
+      "project-management",
+      "level-1",
+      "sap"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/sap.svg"
+  },
+  {
+    "name": "SAP Business Analytics - Level 1",
+    "vendor": "SAP",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "business-analytics",
+    "focus": "Business Analytics expertise",
+    "exam": "SAP-1017",
+    "tags": [
+      "business-analytics",
+      "level-1",
+      "sap"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/sap.svg"
+  },
+  {
+    "name": "SAP Business Analytics - Level 2",
+    "vendor": "SAP",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "business-analytics",
+    "focus": "Advanced Business Analytics",
+    "exam": "SAP-2018",
+    "tags": [
+      "business-analytics",
+      "level-2",
+      "sap"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/sap.svg"
+  },
+  {
+    "name": "SAP CRM Systems - Level 2",
+    "vendor": "SAP",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "crm-systems",
+    "focus": "Advanced CRM Systems",
+    "exam": "SAP-2019",
+    "tags": [
+      "crm-systems",
+      "level-2",
+      "sap"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/sap.svg"
+  },
+  {
+    "name": "SAP Operations Management - Level 2",
+    "vendor": "SAP",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "operations-mgmt",
+    "focus": "Advanced Operations Management",
+    "exam": "SAP-2020",
+    "tags": [
+      "operations-mgmt",
+      "level-2",
+      "sap"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/sap.svg"
+  },
+  {
+    "name": "Oracle Project Management - Level 1",
+    "vendor": "Oracle",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "project-management",
+    "focus": "Project Management expertise",
+    "exam": "ORACLE-1021",
+    "tags": [
+      "project-management",
+      "level-1",
+      "oracle"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/oracle.svg"
+  },
+  {
+    "name": "Oracle Business Analytics - Level 1",
+    "vendor": "Oracle",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "business-analytics",
+    "focus": "Business Analytics expertise",
+    "exam": "ORACLE-1022",
+    "tags": [
+      "business-analytics",
+      "level-1",
+      "oracle"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/oracle.svg"
+  },
+  {
+    "name": "Oracle Business Analytics - Level 2",
+    "vendor": "Oracle",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "business-analytics",
+    "focus": "Advanced Business Analytics",
+    "exam": "ORACLE-2023",
+    "tags": [
+      "business-analytics",
+      "level-2",
+      "oracle"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/oracle.svg"
+  },
+  {
+    "name": "Oracle CRM Systems - Level 2",
+    "vendor": "Oracle",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "crm-systems",
+    "focus": "Advanced CRM Systems",
+    "exam": "ORACLE-2024",
+    "tags": [
+      "crm-systems",
+      "level-2",
+      "oracle"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/oracle.svg"
+  },
+  {
+    "name": "Oracle Operations Management - Level 2",
+    "vendor": "Oracle",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "operations-mgmt",
+    "focus": "Advanced Operations Management",
+    "exam": "ORACLE-2025",
+    "tags": [
+      "operations-mgmt",
+      "level-2",
+      "oracle"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/oracle.svg"
+  },
+  {
+    "name": "Tableau Project Management - Level 1",
+    "vendor": "Tableau",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "project-management",
+    "focus": "Project Management expertise",
+    "exam": "TABLEAU-1026",
+    "tags": [
+      "project-management",
+      "level-1",
+      "tableau"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/tableau.svg"
+  },
+  {
+    "name": "Tableau Business Analytics - Level 1",
+    "vendor": "Tableau",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "business-analytics",
+    "focus": "Business Analytics expertise",
+    "exam": "TABLEAU-1027",
+    "tags": [
+      "business-analytics",
+      "level-1",
+      "tableau"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/tableau.svg"
+  },
+  {
+    "name": "Tableau Business Analytics - Level 2",
+    "vendor": "Tableau",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "business-analytics",
+    "focus": "Advanced Business Analytics",
+    "exam": "TABLEAU-2028",
+    "tags": [
+      "business-analytics",
+      "level-2",
+      "tableau"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/tableau.svg"
+  },
+  {
+    "name": "Tableau CRM Systems - Level 2",
+    "vendor": "Tableau",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "crm-systems",
+    "focus": "Advanced CRM Systems",
+    "exam": "TABLEAU-2029",
+    "tags": [
+      "crm-systems",
+      "level-2",
+      "tableau"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/tableau.svg"
+  },
+  {
+    "name": "Tableau Operations Management - Level 2",
+    "vendor": "Tableau",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "operations-mgmt",
+    "focus": "Advanced Operations Management",
+    "exam": "TABLEAU-2030",
+    "tags": [
+      "operations-mgmt",
+      "level-2",
+      "tableau"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/tableau.svg"
+  },
+  {
+    "name": "APICS Project Management - Level 1",
+    "vendor": "APICS",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "project-management",
+    "focus": "Project Management expertise",
+    "exam": "APICS-1031",
+    "tags": [
+      "project-management",
+      "level-1",
+      "apics"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/apics.svg"
+  }
+]
