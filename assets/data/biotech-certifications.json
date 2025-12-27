@@ -1,0 +1,674 @@
+[
+  {
+    "name": "Medtronic Biomedical Equipment - Level 1",
+    "vendor": "Medtronic",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Biomedical Equipment",
+    "focus": "Biomedical Equipment expertise",
+    "exam": "MEDTRONIC-1001",
+    "tags": [
+      "biomedical-equipment",
+      "level-1",
+      "medtronic"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/medtronic.svg"
+  },
+  {
+    "name": "Philips Healthcare Clinical Trials - Level 1",
+    "vendor": "Philips Healthcare",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Clinical Trials",
+    "focus": "Clinical Trials expertise",
+    "exam": "PHILIPS HEALTHCARE-1002",
+    "tags": [
+      "clinical-trials",
+      "level-1",
+      "philips-healthcare"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/philipshealthcare.svg"
+  },
+  {
+    "name": "GE Healthcare Biotechnology Systems - Level 1",
+    "vendor": "GE Healthcare",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Biotechnology Systems",
+    "focus": "Biotechnology Systems expertise",
+    "exam": "GE HEALTHCARE-1003",
+    "tags": [
+      "biotechnology-systems",
+      "level-1",
+      "ge-healthcare"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/gehealthcare.svg"
+  },
+  {
+    "name": "Siemens Healthineers Pharmaceutical Tech - Level 1",
+    "vendor": "Siemens Healthineers",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Pharmaceutical Tech",
+    "focus": "Pharmaceutical Tech expertise",
+    "exam": "SIEMENS HEALTHINEERS-1004",
+    "tags": [
+      "pharmaceutical-tech",
+      "level-1",
+      "siemens-healthineers"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/siemenshealthineers.svg"
+  },
+  {
+    "name": "Abbott Biomedical Equipment - Level 1",
+    "vendor": "Abbott",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Biomedical Equipment",
+    "focus": "Biomedical Equipment expertise",
+    "exam": "ABBOTT-1005",
+    "tags": [
+      "biomedical-equipment",
+      "level-1",
+      "abbott"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/abbott.svg"
+  },
+  {
+    "name": "Medtronic Clinical Trials - Level 1",
+    "vendor": "Medtronic",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Clinical Trials",
+    "focus": "Clinical Trials expertise",
+    "exam": "MEDTRONIC-1006",
+    "tags": [
+      "clinical-trials",
+      "level-1",
+      "medtronic"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/medtronic.svg"
+  },
+  {
+    "name": "Philips Healthcare Biotechnology Systems - Level 1",
+    "vendor": "Philips Healthcare",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Biotechnology Systems",
+    "focus": "Biotechnology Systems expertise",
+    "exam": "PHILIPS HEALTHCARE-1007",
+    "tags": [
+      "biotechnology-systems",
+      "level-1",
+      "philips-healthcare"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/philipshealthcare.svg"
+  },
+  {
+    "name": "GE Healthcare Pharmaceutical Tech - Level 1",
+    "vendor": "GE Healthcare",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Pharmaceutical Tech",
+    "focus": "Pharmaceutical Tech expertise",
+    "exam": "GE HEALTHCARE-1008",
+    "tags": [
+      "pharmaceutical-tech",
+      "level-1",
+      "ge-healthcare"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/gehealthcare.svg"
+  },
+  {
+    "name": "Medtronic Biomedical Equipment - Level 2",
+    "vendor": "Medtronic",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Biomedical Equipment",
+    "focus": "Biomedical Equipment expertise",
+    "exam": "MEDTRONIC-2009",
+    "tags": [
+      "biomedical-equipment",
+      "level-2",
+      "medtronic"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/medtronic.svg"
+  },
+  {
+    "name": "Philips Healthcare Clinical Trials - Level 2",
+    "vendor": "Philips Healthcare",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Clinical Trials",
+    "focus": "Clinical Trials expertise",
+    "exam": "PHILIPS HEALTHCARE-2010",
+    "tags": [
+      "clinical-trials",
+      "level-2",
+      "philips-healthcare"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/philipshealthcare.svg"
+  },
+  {
+    "name": "GE Healthcare Biotechnology Systems - Level 2",
+    "vendor": "GE Healthcare",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Biotechnology Systems",
+    "focus": "Biotechnology Systems expertise",
+    "exam": "GE HEALTHCARE-2011",
+    "tags": [
+      "biotechnology-systems",
+      "level-2",
+      "ge-healthcare"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/gehealthcare.svg"
+  },
+  {
+    "name": "Siemens Healthineers Pharmaceutical Tech - Level 2",
+    "vendor": "Siemens Healthineers",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Pharmaceutical Tech",
+    "focus": "Pharmaceutical Tech expertise",
+    "exam": "SIEMENS HEALTHINEERS-2012",
+    "tags": [
+      "pharmaceutical-tech",
+      "level-2",
+      "siemens-healthineers"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/siemenshealthineers.svg"
+  },
+  {
+    "name": "Abbott Biomedical Equipment - Level 2",
+    "vendor": "Abbott",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Biomedical Equipment",
+    "focus": "Biomedical Equipment expertise",
+    "exam": "ABBOTT-2013",
+    "tags": [
+      "biomedical-equipment",
+      "level-2",
+      "abbott"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/abbott.svg"
+  },
+  {
+    "name": "Medtronic Clinical Trials - Level 2",
+    "vendor": "Medtronic",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Clinical Trials",
+    "focus": "Clinical Trials expertise",
+    "exam": "MEDTRONIC-2014",
+    "tags": [
+      "clinical-trials",
+      "level-2",
+      "medtronic"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/medtronic.svg"
+  },
+  {
+    "name": "Philips Healthcare Biotechnology Systems - Level 2",
+    "vendor": "Philips Healthcare",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Biotechnology Systems",
+    "focus": "Biotechnology Systems expertise",
+    "exam": "PHILIPS HEALTHCARE-2015",
+    "tags": [
+      "biotechnology-systems",
+      "level-2",
+      "philips-healthcare"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/philipshealthcare.svg"
+  },
+  {
+    "name": "GE Healthcare Pharmaceutical Tech - Level 2",
+    "vendor": "GE Healthcare",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Pharmaceutical Tech",
+    "focus": "Pharmaceutical Tech expertise",
+    "exam": "GE HEALTHCARE-2016",
+    "tags": [
+      "pharmaceutical-tech",
+      "level-2",
+      "ge-healthcare"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/gehealthcare.svg"
+  },
+  {
+    "name": "Siemens Healthineers Biomedical Equipment - Level 2",
+    "vendor": "Siemens Healthineers",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Biomedical Equipment",
+    "focus": "Biomedical Equipment expertise",
+    "exam": "SIEMENS HEALTHINEERS-2017",
+    "tags": [
+      "biomedical-equipment",
+      "level-2",
+      "siemens-healthineers"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/siemenshealthineers.svg"
+  },
+  {
+    "name": "Abbott Clinical Trials - Level 2",
+    "vendor": "Abbott",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Clinical Trials",
+    "focus": "Clinical Trials expertise",
+    "exam": "ABBOTT-2018",
+    "tags": [
+      "clinical-trials",
+      "level-2",
+      "abbott"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/abbott.svg"
+  },
+  {
+    "name": "Medtronic Biomedical Equipment - Level 3",
+    "vendor": "Medtronic",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Biomedical Equipment",
+    "focus": "Biomedical Equipment expertise",
+    "exam": "MEDTRONIC-3019",
+    "tags": [
+      "biomedical-equipment",
+      "level-3",
+      "medtronic"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/medtronic.svg"
+  },
+  {
+    "name": "Philips Healthcare Clinical Trials - Level 3",
+    "vendor": "Philips Healthcare",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Clinical Trials",
+    "focus": "Clinical Trials expertise",
+    "exam": "PHILIPS HEALTHCARE-3020",
+    "tags": [
+      "clinical-trials",
+      "level-3",
+      "philips-healthcare"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/philipshealthcare.svg"
+  },
+  {
+    "name": "GE Healthcare Biotechnology Systems - Level 3",
+    "vendor": "GE Healthcare",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Biotechnology Systems",
+    "focus": "Biotechnology Systems expertise",
+    "exam": "GE HEALTHCARE-3021",
+    "tags": [
+      "biotechnology-systems",
+      "level-3",
+      "ge-healthcare"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/gehealthcare.svg"
+  },
+  {
+    "name": "Siemens Healthineers Pharmaceutical Tech - Level 3",
+    "vendor": "Siemens Healthineers",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Pharmaceutical Tech",
+    "focus": "Pharmaceutical Tech expertise",
+    "exam": "SIEMENS HEALTHINEERS-3022",
+    "tags": [
+      "pharmaceutical-tech",
+      "level-3",
+      "siemens-healthineers"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/siemenshealthineers.svg"
+  },
+  {
+    "name": "Abbott Biomedical Equipment - Level 3",
+    "vendor": "Abbott",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Biomedical Equipment",
+    "focus": "Biomedical Equipment expertise",
+    "exam": "ABBOTT-3023",
+    "tags": [
+      "biomedical-equipment",
+      "level-3",
+      "abbott"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/abbott.svg"
+  },
+  {
+    "name": "Medtronic Clinical Trials - Level 3",
+    "vendor": "Medtronic",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Clinical Trials",
+    "focus": "Clinical Trials expertise",
+    "exam": "MEDTRONIC-3024",
+    "tags": [
+      "clinical-trials",
+      "level-3",
+      "medtronic"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/medtronic.svg"
+  },
+  {
+    "name": "Philips Healthcare Biotechnology Systems - Level 3",
+    "vendor": "Philips Healthcare",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Biotechnology Systems",
+    "focus": "Biotechnology Systems expertise",
+    "exam": "PHILIPS HEALTHCARE-3025",
+    "tags": [
+      "biotechnology-systems",
+      "level-3",
+      "philips-healthcare"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/philipshealthcare.svg"
+  },
+  {
+    "name": "GE Healthcare Pharmaceutical Tech - Level 3",
+    "vendor": "GE Healthcare",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Pharmaceutical Tech",
+    "focus": "Pharmaceutical Tech expertise",
+    "exam": "GE HEALTHCARE-3026",
+    "tags": [
+      "pharmaceutical-tech",
+      "level-3",
+      "ge-healthcare"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/gehealthcare.svg"
+  },
+  {
+    "name": "Medtronic Biomedical Equipment - Level 4",
+    "vendor": "Medtronic",
+    "level": 4,
+    "level_range": [
+      4,
+      5
+    ],
+    "category": "Biomedical Equipment",
+    "focus": "Biomedical Equipment expertise",
+    "exam": "MEDTRONIC-4027",
+    "tags": [
+      "biomedical-equipment",
+      "level-4",
+      "medtronic"
+    ],
+    "vendor_stage": "Expert",
+    "price": 400,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/medtronic.svg"
+  },
+  {
+    "name": "Philips Healthcare Clinical Trials - Level 4",
+    "vendor": "Philips Healthcare",
+    "level": 4,
+    "level_range": [
+      4,
+      5
+    ],
+    "category": "Clinical Trials",
+    "focus": "Clinical Trials expertise",
+    "exam": "PHILIPS HEALTHCARE-4028",
+    "tags": [
+      "clinical-trials",
+      "level-4",
+      "philips-healthcare"
+    ],
+    "vendor_stage": "Expert",
+    "price": 400,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/philipshealthcare.svg"
+  },
+  {
+    "name": "GE Healthcare Biotechnology Systems - Level 4",
+    "vendor": "GE Healthcare",
+    "level": 4,
+    "level_range": [
+      4,
+      5
+    ],
+    "category": "Biotechnology Systems",
+    "focus": "Biotechnology Systems expertise",
+    "exam": "GE HEALTHCARE-4029",
+    "tags": [
+      "biotechnology-systems",
+      "level-4",
+      "ge-healthcare"
+    ],
+    "vendor_stage": "Expert",
+    "price": 400,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/gehealthcare.svg"
+  },
+  {
+    "name": "Siemens Healthineers Pharmaceutical Tech - Level 4",
+    "vendor": "Siemens Healthineers",
+    "level": 4,
+    "level_range": [
+      4,
+      5
+    ],
+    "category": "Pharmaceutical Tech",
+    "focus": "Pharmaceutical Tech expertise",
+    "exam": "SIEMENS HEALTHINEERS-4030",
+    "tags": [
+      "pharmaceutical-tech",
+      "level-4",
+      "siemens-healthineers"
+    ],
+    "vendor_stage": "Expert",
+    "price": 400,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/siemenshealthineers.svg"
+  },
+  {
+    "name": "Abbott Biomedical Equipment - Level 4",
+    "vendor": "Abbott",
+    "level": 4,
+    "level_range": [
+      4,
+      5
+    ],
+    "category": "Biomedical Equipment",
+    "focus": "Biomedical Equipment expertise",
+    "exam": "ABBOTT-4031",
+    "tags": [
+      "biomedical-equipment",
+      "level-4",
+      "abbott"
+    ],
+    "vendor_stage": "Expert",
+    "price": 400,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/abbott.svg"
+  },
+  {
+    "name": "Medtronic Biomedical Equipment - Level 5",
+    "vendor": "Medtronic",
+    "level": 5,
+    "level_range": [
+      5,
+      5
+    ],
+    "category": "Biomedical Equipment",
+    "focus": "Biomedical Equipment expertise",
+    "exam": "MEDTRONIC-5032",
+    "tags": [
+      "biomedical-equipment",
+      "level-5",
+      "medtronic"
+    ],
+    "vendor_stage": "Master",
+    "price": 450,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/medtronic.svg"
+  }
+]

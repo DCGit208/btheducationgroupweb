@@ -1,0 +1,590 @@
+[
+  {
+    "name": "LabWare Laboratory Systems - Level 1",
+    "vendor": "LabWare",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Laboratory Systems",
+    "focus": "Laboratory Systems expertise",
+    "exam": "LABWARE-1001",
+    "tags": [
+      "laboratory-systems",
+      "level-1",
+      "labware"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/labware.svg"
+  },
+  {
+    "name": "Thermo Fisher Clinical Research - Level 1",
+    "vendor": "Thermo Fisher",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Clinical Research",
+    "focus": "Clinical Research expertise",
+    "exam": "THERMO FISHER-1002",
+    "tags": [
+      "clinical-research",
+      "level-1",
+      "thermo-fisher"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/thermofisher.svg"
+  },
+  {
+    "name": "Waters Innovation Management - Level 1",
+    "vendor": "Waters",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Innovation Management",
+    "focus": "Innovation Management expertise",
+    "exam": "WATERS-1003",
+    "tags": [
+      "innovation-management",
+      "level-1",
+      "waters"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/waters.svg"
+  },
+  {
+    "name": "Agilent Scientific Data - Level 1",
+    "vendor": "Agilent",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Scientific Data",
+    "focus": "Scientific Data expertise",
+    "exam": "AGILENT-1004",
+    "tags": [
+      "scientific-data",
+      "level-1",
+      "agilent"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/agilent.svg"
+  },
+  {
+    "name": "PerkinElmer Laboratory Systems - Level 1",
+    "vendor": "PerkinElmer",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Laboratory Systems",
+    "focus": "Laboratory Systems expertise",
+    "exam": "PERKINELMER-1005",
+    "tags": [
+      "laboratory-systems",
+      "level-1",
+      "perkinelmer"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/perkinelmer.svg"
+  },
+  {
+    "name": "LabWare Clinical Research - Level 1",
+    "vendor": "LabWare",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Clinical Research",
+    "focus": "Clinical Research expertise",
+    "exam": "LABWARE-1006",
+    "tags": [
+      "clinical-research",
+      "level-1",
+      "labware"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/labware.svg"
+  },
+  {
+    "name": "Thermo Fisher Innovation Management - Level 1",
+    "vendor": "Thermo Fisher",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Innovation Management",
+    "focus": "Innovation Management expertise",
+    "exam": "THERMO FISHER-1007",
+    "tags": [
+      "innovation-management",
+      "level-1",
+      "thermo-fisher"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/thermofisher.svg"
+  },
+  {
+    "name": "LabWare Laboratory Systems - Level 2",
+    "vendor": "LabWare",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Laboratory Systems",
+    "focus": "Laboratory Systems expertise",
+    "exam": "LABWARE-2008",
+    "tags": [
+      "laboratory-systems",
+      "level-2",
+      "labware"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/labware.svg"
+  },
+  {
+    "name": "Thermo Fisher Clinical Research - Level 2",
+    "vendor": "Thermo Fisher",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Clinical Research",
+    "focus": "Clinical Research expertise",
+    "exam": "THERMO FISHER-2009",
+    "tags": [
+      "clinical-research",
+      "level-2",
+      "thermo-fisher"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/thermofisher.svg"
+  },
+  {
+    "name": "Waters Innovation Management - Level 2",
+    "vendor": "Waters",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Innovation Management",
+    "focus": "Innovation Management expertise",
+    "exam": "WATERS-2010",
+    "tags": [
+      "innovation-management",
+      "level-2",
+      "waters"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/waters.svg"
+  },
+  {
+    "name": "Agilent Scientific Data - Level 2",
+    "vendor": "Agilent",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Scientific Data",
+    "focus": "Scientific Data expertise",
+    "exam": "AGILENT-2011",
+    "tags": [
+      "scientific-data",
+      "level-2",
+      "agilent"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/agilent.svg"
+  },
+  {
+    "name": "PerkinElmer Laboratory Systems - Level 2",
+    "vendor": "PerkinElmer",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Laboratory Systems",
+    "focus": "Laboratory Systems expertise",
+    "exam": "PERKINELMER-2012",
+    "tags": [
+      "laboratory-systems",
+      "level-2",
+      "perkinelmer"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/perkinelmer.svg"
+  },
+  {
+    "name": "LabWare Clinical Research - Level 2",
+    "vendor": "LabWare",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Clinical Research",
+    "focus": "Clinical Research expertise",
+    "exam": "LABWARE-2013",
+    "tags": [
+      "clinical-research",
+      "level-2",
+      "labware"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/labware.svg"
+  },
+  {
+    "name": "Thermo Fisher Innovation Management - Level 2",
+    "vendor": "Thermo Fisher",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Innovation Management",
+    "focus": "Innovation Management expertise",
+    "exam": "THERMO FISHER-2014",
+    "tags": [
+      "innovation-management",
+      "level-2",
+      "thermo-fisher"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/thermofisher.svg"
+  },
+  {
+    "name": "Waters Scientific Data - Level 2",
+    "vendor": "Waters",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Scientific Data",
+    "focus": "Scientific Data expertise",
+    "exam": "WATERS-2015",
+    "tags": [
+      "scientific-data",
+      "level-2",
+      "waters"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/waters.svg"
+  },
+  {
+    "name": "Agilent Laboratory Systems - Level 2",
+    "vendor": "Agilent",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Laboratory Systems",
+    "focus": "Laboratory Systems expertise",
+    "exam": "AGILENT-2016",
+    "tags": [
+      "laboratory-systems",
+      "level-2",
+      "agilent"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/agilent.svg"
+  },
+  {
+    "name": "LabWare Laboratory Systems - Level 3",
+    "vendor": "LabWare",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Laboratory Systems",
+    "focus": "Laboratory Systems expertise",
+    "exam": "LABWARE-3017",
+    "tags": [
+      "laboratory-systems",
+      "level-3",
+      "labware"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/labware.svg"
+  },
+  {
+    "name": "Thermo Fisher Clinical Research - Level 3",
+    "vendor": "Thermo Fisher",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Clinical Research",
+    "focus": "Clinical Research expertise",
+    "exam": "THERMO FISHER-3018",
+    "tags": [
+      "clinical-research",
+      "level-3",
+      "thermo-fisher"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/thermofisher.svg"
+  },
+  {
+    "name": "Waters Innovation Management - Level 3",
+    "vendor": "Waters",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Innovation Management",
+    "focus": "Innovation Management expertise",
+    "exam": "WATERS-3019",
+    "tags": [
+      "innovation-management",
+      "level-3",
+      "waters"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/waters.svg"
+  },
+  {
+    "name": "Agilent Scientific Data - Level 3",
+    "vendor": "Agilent",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Scientific Data",
+    "focus": "Scientific Data expertise",
+    "exam": "AGILENT-3020",
+    "tags": [
+      "scientific-data",
+      "level-3",
+      "agilent"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/agilent.svg"
+  },
+  {
+    "name": "PerkinElmer Laboratory Systems - Level 3",
+    "vendor": "PerkinElmer",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Laboratory Systems",
+    "focus": "Laboratory Systems expertise",
+    "exam": "PERKINELMER-3021",
+    "tags": [
+      "laboratory-systems",
+      "level-3",
+      "perkinelmer"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/perkinelmer.svg"
+  },
+  {
+    "name": "LabWare Clinical Research - Level 3",
+    "vendor": "LabWare",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Clinical Research",
+    "focus": "Clinical Research expertise",
+    "exam": "LABWARE-3022",
+    "tags": [
+      "clinical-research",
+      "level-3",
+      "labware"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/labware.svg"
+  },
+  {
+    "name": "Thermo Fisher Innovation Management - Level 3",
+    "vendor": "Thermo Fisher",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Innovation Management",
+    "focus": "Innovation Management expertise",
+    "exam": "THERMO FISHER-3023",
+    "tags": [
+      "innovation-management",
+      "level-3",
+      "thermo-fisher"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/thermofisher.svg"
+  },
+  {
+    "name": "LabWare Laboratory Systems - Level 4",
+    "vendor": "LabWare",
+    "level": 4,
+    "level_range": [
+      4,
+      5
+    ],
+    "category": "Laboratory Systems",
+    "focus": "Laboratory Systems expertise",
+    "exam": "LABWARE-4024",
+    "tags": [
+      "laboratory-systems",
+      "level-4",
+      "labware"
+    ],
+    "vendor_stage": "Expert",
+    "price": 400,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/labware.svg"
+  },
+  {
+    "name": "Thermo Fisher Clinical Research - Level 4",
+    "vendor": "Thermo Fisher",
+    "level": 4,
+    "level_range": [
+      4,
+      5
+    ],
+    "category": "Clinical Research",
+    "focus": "Clinical Research expertise",
+    "exam": "THERMO FISHER-4025",
+    "tags": [
+      "clinical-research",
+      "level-4",
+      "thermo-fisher"
+    ],
+    "vendor_stage": "Expert",
+    "price": 400,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/thermofisher.svg"
+  },
+  {
+    "name": "Waters Innovation Management - Level 4",
+    "vendor": "Waters",
+    "level": 4,
+    "level_range": [
+      4,
+      5
+    ],
+    "category": "Innovation Management",
+    "focus": "Innovation Management expertise",
+    "exam": "WATERS-4026",
+    "tags": [
+      "innovation-management",
+      "level-4",
+      "waters"
+    ],
+    "vendor_stage": "Expert",
+    "price": 400,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/waters.svg"
+  },
+  {
+    "name": "Agilent Scientific Data - Level 4",
+    "vendor": "Agilent",
+    "level": 4,
+    "level_range": [
+      4,
+      5
+    ],
+    "category": "Scientific Data",
+    "focus": "Scientific Data expertise",
+    "exam": "AGILENT-4027",
+    "tags": [
+      "scientific-data",
+      "level-4",
+      "agilent"
+    ],
+    "vendor_stage": "Expert",
+    "price": 400,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/agilent.svg"
+  },
+  {
+    "name": "LabWare Laboratory Systems - Level 5",
+    "vendor": "LabWare",
+    "level": 5,
+    "level_range": [
+      5,
+      5
+    ],
+    "category": "Laboratory Systems",
+    "focus": "Laboratory Systems expertise",
+    "exam": "LABWARE-5028",
+    "tags": [
+      "laboratory-systems",
+      "level-5",
+      "labware"
+    ],
+    "vendor_stage": "Master",
+    "price": 450,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/labware.svg"
+  }
+]

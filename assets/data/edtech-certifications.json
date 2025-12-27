@@ -1,0 +1,632 @@
+[
+  {
+    "name": "Canvas Learning Management Systems - Level 1",
+    "vendor": "Canvas",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Learning Management Systems",
+    "focus": "Learning Management Systems expertise",
+    "exam": "CANVAS-1001",
+    "tags": [
+      "learning-management-systems",
+      "level-1",
+      "canvas"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/canvas.svg"
+  },
+  {
+    "name": "Blackboard Instructional Design - Level 1",
+    "vendor": "Blackboard",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Instructional Design",
+    "focus": "Instructional Design expertise",
+    "exam": "BLACKBOARD-1002",
+    "tags": [
+      "instructional-design",
+      "level-1",
+      "blackboard"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/blackboard.svg"
+  },
+  {
+    "name": "Moodle E-Learning Development - Level 1",
+    "vendor": "Moodle",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "E-Learning Development",
+    "focus": "E-Learning Development expertise",
+    "exam": "MOODLE-1003",
+    "tags": [
+      "e-learning-development",
+      "level-1",
+      "moodle"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/moodle.svg"
+  },
+  {
+    "name": "Articulate EdTech Platforms - Level 1",
+    "vendor": "Articulate",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "EdTech Platforms",
+    "focus": "EdTech Platforms expertise",
+    "exam": "ARTICULATE-1004",
+    "tags": [
+      "edtech-platforms",
+      "level-1",
+      "articulate"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/articulate.svg"
+  },
+  {
+    "name": "Adobe Captivate Learning Management Systems - Level 1",
+    "vendor": "Adobe Captivate",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Learning Management Systems",
+    "focus": "Learning Management Systems expertise",
+    "exam": "ADOBE CAPTIVATE-1005",
+    "tags": [
+      "learning-management-systems",
+      "level-1",
+      "adobe-captivate"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/adobecaptivate.svg"
+  },
+  {
+    "name": "Canvas Instructional Design - Level 1",
+    "vendor": "Canvas",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Instructional Design",
+    "focus": "Instructional Design expertise",
+    "exam": "CANVAS-1006",
+    "tags": [
+      "instructional-design",
+      "level-1",
+      "canvas"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/canvas.svg"
+  },
+  {
+    "name": "Blackboard E-Learning Development - Level 1",
+    "vendor": "Blackboard",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "E-Learning Development",
+    "focus": "E-Learning Development expertise",
+    "exam": "BLACKBOARD-1007",
+    "tags": [
+      "e-learning-development",
+      "level-1",
+      "blackboard"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/blackboard.svg"
+  },
+  {
+    "name": "Moodle EdTech Platforms - Level 1",
+    "vendor": "Moodle",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "EdTech Platforms",
+    "focus": "EdTech Platforms expertise",
+    "exam": "MOODLE-1008",
+    "tags": [
+      "edtech-platforms",
+      "level-1",
+      "moodle"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/moodle.svg"
+  },
+  {
+    "name": "Canvas Learning Management Systems - Level 2",
+    "vendor": "Canvas",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Learning Management Systems",
+    "focus": "Learning Management Systems expertise",
+    "exam": "CANVAS-2009",
+    "tags": [
+      "learning-management-systems",
+      "level-2",
+      "canvas"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/canvas.svg"
+  },
+  {
+    "name": "Blackboard Instructional Design - Level 2",
+    "vendor": "Blackboard",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Instructional Design",
+    "focus": "Instructional Design expertise",
+    "exam": "BLACKBOARD-2010",
+    "tags": [
+      "instructional-design",
+      "level-2",
+      "blackboard"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/blackboard.svg"
+  },
+  {
+    "name": "Moodle E-Learning Development - Level 2",
+    "vendor": "Moodle",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "E-Learning Development",
+    "focus": "E-Learning Development expertise",
+    "exam": "MOODLE-2011",
+    "tags": [
+      "e-learning-development",
+      "level-2",
+      "moodle"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/moodle.svg"
+  },
+  {
+    "name": "Articulate EdTech Platforms - Level 2",
+    "vendor": "Articulate",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "EdTech Platforms",
+    "focus": "EdTech Platforms expertise",
+    "exam": "ARTICULATE-2012",
+    "tags": [
+      "edtech-platforms",
+      "level-2",
+      "articulate"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/articulate.svg"
+  },
+  {
+    "name": "Adobe Captivate Learning Management Systems - Level 2",
+    "vendor": "Adobe Captivate",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Learning Management Systems",
+    "focus": "Learning Management Systems expertise",
+    "exam": "ADOBE CAPTIVATE-2013",
+    "tags": [
+      "learning-management-systems",
+      "level-2",
+      "adobe-captivate"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/adobecaptivate.svg"
+  },
+  {
+    "name": "Canvas Instructional Design - Level 2",
+    "vendor": "Canvas",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Instructional Design",
+    "focus": "Instructional Design expertise",
+    "exam": "CANVAS-2014",
+    "tags": [
+      "instructional-design",
+      "level-2",
+      "canvas"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/canvas.svg"
+  },
+  {
+    "name": "Blackboard E-Learning Development - Level 2",
+    "vendor": "Blackboard",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "E-Learning Development",
+    "focus": "E-Learning Development expertise",
+    "exam": "BLACKBOARD-2015",
+    "tags": [
+      "e-learning-development",
+      "level-2",
+      "blackboard"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/blackboard.svg"
+  },
+  {
+    "name": "Moodle EdTech Platforms - Level 2",
+    "vendor": "Moodle",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "EdTech Platforms",
+    "focus": "EdTech Platforms expertise",
+    "exam": "MOODLE-2016",
+    "tags": [
+      "edtech-platforms",
+      "level-2",
+      "moodle"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/moodle.svg"
+  },
+  {
+    "name": "Articulate Learning Management Systems - Level 2",
+    "vendor": "Articulate",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Learning Management Systems",
+    "focus": "Learning Management Systems expertise",
+    "exam": "ARTICULATE-2017",
+    "tags": [
+      "learning-management-systems",
+      "level-2",
+      "articulate"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/articulate.svg"
+  },
+  {
+    "name": "Canvas Learning Management Systems - Level 3",
+    "vendor": "Canvas",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Learning Management Systems",
+    "focus": "Learning Management Systems expertise",
+    "exam": "CANVAS-3018",
+    "tags": [
+      "learning-management-systems",
+      "level-3",
+      "canvas"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/canvas.svg"
+  },
+  {
+    "name": "Blackboard Instructional Design - Level 3",
+    "vendor": "Blackboard",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Instructional Design",
+    "focus": "Instructional Design expertise",
+    "exam": "BLACKBOARD-3019",
+    "tags": [
+      "instructional-design",
+      "level-3",
+      "blackboard"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/blackboard.svg"
+  },
+  {
+    "name": "Moodle E-Learning Development - Level 3",
+    "vendor": "Moodle",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "E-Learning Development",
+    "focus": "E-Learning Development expertise",
+    "exam": "MOODLE-3020",
+    "tags": [
+      "e-learning-development",
+      "level-3",
+      "moodle"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/moodle.svg"
+  },
+  {
+    "name": "Articulate EdTech Platforms - Level 3",
+    "vendor": "Articulate",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "EdTech Platforms",
+    "focus": "EdTech Platforms expertise",
+    "exam": "ARTICULATE-3021",
+    "tags": [
+      "edtech-platforms",
+      "level-3",
+      "articulate"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/articulate.svg"
+  },
+  {
+    "name": "Adobe Captivate Learning Management Systems - Level 3",
+    "vendor": "Adobe Captivate",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Learning Management Systems",
+    "focus": "Learning Management Systems expertise",
+    "exam": "ADOBE CAPTIVATE-3022",
+    "tags": [
+      "learning-management-systems",
+      "level-3",
+      "adobe-captivate"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/adobecaptivate.svg"
+  },
+  {
+    "name": "Canvas Instructional Design - Level 3",
+    "vendor": "Canvas",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Instructional Design",
+    "focus": "Instructional Design expertise",
+    "exam": "CANVAS-3023",
+    "tags": [
+      "instructional-design",
+      "level-3",
+      "canvas"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/canvas.svg"
+  },
+  {
+    "name": "Blackboard E-Learning Development - Level 3",
+    "vendor": "Blackboard",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "E-Learning Development",
+    "focus": "E-Learning Development expertise",
+    "exam": "BLACKBOARD-3024",
+    "tags": [
+      "e-learning-development",
+      "level-3",
+      "blackboard"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/blackboard.svg"
+  },
+  {
+    "name": "Moodle EdTech Platforms - Level 3",
+    "vendor": "Moodle",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "EdTech Platforms",
+    "focus": "EdTech Platforms expertise",
+    "exam": "MOODLE-3025",
+    "tags": [
+      "edtech-platforms",
+      "level-3",
+      "moodle"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/moodle.svg"
+  },
+  {
+    "name": "Canvas Learning Management Systems - Level 4",
+    "vendor": "Canvas",
+    "level": 4,
+    "level_range": [
+      4,
+      5
+    ],
+    "category": "Learning Management Systems",
+    "focus": "Learning Management Systems expertise",
+    "exam": "CANVAS-4026",
+    "tags": [
+      "learning-management-systems",
+      "level-4",
+      "canvas"
+    ],
+    "vendor_stage": "Expert",
+    "price": 400,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/canvas.svg"
+  },
+  {
+    "name": "Blackboard Instructional Design - Level 4",
+    "vendor": "Blackboard",
+    "level": 4,
+    "level_range": [
+      4,
+      5
+    ],
+    "category": "Instructional Design",
+    "focus": "Instructional Design expertise",
+    "exam": "BLACKBOARD-4027",
+    "tags": [
+      "instructional-design",
+      "level-4",
+      "blackboard"
+    ],
+    "vendor_stage": "Expert",
+    "price": 400,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/blackboard.svg"
+  },
+  {
+    "name": "Moodle E-Learning Development - Level 4",
+    "vendor": "Moodle",
+    "level": 4,
+    "level_range": [
+      4,
+      5
+    ],
+    "category": "E-Learning Development",
+    "focus": "E-Learning Development expertise",
+    "exam": "MOODLE-4028",
+    "tags": [
+      "e-learning-development",
+      "level-4",
+      "moodle"
+    ],
+    "vendor_stage": "Expert",
+    "price": 400,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/moodle.svg"
+  },
+  {
+    "name": "Articulate EdTech Platforms - Level 4",
+    "vendor": "Articulate",
+    "level": 4,
+    "level_range": [
+      4,
+      5
+    ],
+    "category": "EdTech Platforms",
+    "focus": "EdTech Platforms expertise",
+    "exam": "ARTICULATE-4029",
+    "tags": [
+      "edtech-platforms",
+      "level-4",
+      "articulate"
+    ],
+    "vendor_stage": "Expert",
+    "price": 400,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/articulate.svg"
+  },
+  {
+    "name": "Canvas Learning Management Systems - Level 5",
+    "vendor": "Canvas",
+    "level": 5,
+    "level_range": [
+      5,
+      5
+    ],
+    "category": "Learning Management Systems",
+    "focus": "Learning Management Systems expertise",
+    "exam": "CANVAS-5030",
+    "tags": [
+      "learning-management-systems",
+      "level-5",
+      "canvas"
+    ],
+    "vendor_stage": "Master",
+    "price": 450,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/canvas.svg"
+  }
+]

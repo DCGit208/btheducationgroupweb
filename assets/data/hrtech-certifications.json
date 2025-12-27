@@ -1,0 +1,842 @@
+[
+  {
+    "name": "Workday HRIS Systems - Level 1",
+    "vendor": "Workday",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "HRIS Systems",
+    "focus": "HRIS Systems expertise",
+    "exam": "WORKDAY-1001",
+    "tags": [
+      "hris-systems",
+      "level-1",
+      "workday"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/workday.svg"
+  },
+  {
+    "name": "SAP SuccessFactors Talent Management - Level 1",
+    "vendor": "SAP SuccessFactors",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Talent Management",
+    "focus": "Talent Management expertise",
+    "exam": "SAP SUCCESSFACTORS-1002",
+    "tags": [
+      "talent-management",
+      "level-1",
+      "sap-successfactors"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/sapsuccessfactors.svg"
+  },
+  {
+    "name": "Oracle HCM Payroll & Benefits - Level 1",
+    "vendor": "Oracle HCM",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Payroll & Benefits",
+    "focus": "Payroll & Benefits expertise",
+    "exam": "ORACLE HCM-1003",
+    "tags": [
+      "payroll-&-benefits",
+      "level-1",
+      "oracle-hcm"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/oraclehcm.svg"
+  },
+  {
+    "name": "ADP HR Analytics - Level 1",
+    "vendor": "ADP",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "HR Analytics",
+    "focus": "HR Analytics expertise",
+    "exam": "ADP-1004",
+    "tags": [
+      "hr-analytics",
+      "level-1",
+      "adp"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/adp.svg"
+  },
+  {
+    "name": "BambooHR HRIS Systems - Level 1",
+    "vendor": "BambooHR",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "HRIS Systems",
+    "focus": "HRIS Systems expertise",
+    "exam": "BAMBOOHR-1005",
+    "tags": [
+      "hris-systems",
+      "level-1",
+      "bamboohr"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/bamboohr.svg"
+  },
+  {
+    "name": "Workday Talent Management - Level 1",
+    "vendor": "Workday",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Talent Management",
+    "focus": "Talent Management expertise",
+    "exam": "WORKDAY-1006",
+    "tags": [
+      "talent-management",
+      "level-1",
+      "workday"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/workday.svg"
+  },
+  {
+    "name": "SAP SuccessFactors Payroll & Benefits - Level 1",
+    "vendor": "SAP SuccessFactors",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Payroll & Benefits",
+    "focus": "Payroll & Benefits expertise",
+    "exam": "SAP SUCCESSFACTORS-1007",
+    "tags": [
+      "payroll-&-benefits",
+      "level-1",
+      "sap-successfactors"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/sapsuccessfactors.svg"
+  },
+  {
+    "name": "Oracle HCM HR Analytics - Level 1",
+    "vendor": "Oracle HCM",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "HR Analytics",
+    "focus": "HR Analytics expertise",
+    "exam": "ORACLE HCM-1008",
+    "tags": [
+      "hr-analytics",
+      "level-1",
+      "oracle-hcm"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/oraclehcm.svg"
+  },
+  {
+    "name": "ADP HRIS Systems - Level 1",
+    "vendor": "ADP",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "HRIS Systems",
+    "focus": "HRIS Systems expertise",
+    "exam": "ADP-1009",
+    "tags": [
+      "hris-systems",
+      "level-1",
+      "adp"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/adp.svg"
+  },
+  {
+    "name": "BambooHR Talent Management - Level 1",
+    "vendor": "BambooHR",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Talent Management",
+    "focus": "Talent Management expertise",
+    "exam": "BAMBOOHR-1010",
+    "tags": [
+      "talent-management",
+      "level-1",
+      "bamboohr"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/bamboohr.svg"
+  },
+  {
+    "name": "Workday HRIS Systems - Level 2",
+    "vendor": "Workday",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "HRIS Systems",
+    "focus": "HRIS Systems expertise",
+    "exam": "WORKDAY-2011",
+    "tags": [
+      "hris-systems",
+      "level-2",
+      "workday"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/workday.svg"
+  },
+  {
+    "name": "SAP SuccessFactors Talent Management - Level 2",
+    "vendor": "SAP SuccessFactors",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Talent Management",
+    "focus": "Talent Management expertise",
+    "exam": "SAP SUCCESSFACTORS-2012",
+    "tags": [
+      "talent-management",
+      "level-2",
+      "sap-successfactors"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/sapsuccessfactors.svg"
+  },
+  {
+    "name": "Oracle HCM Payroll & Benefits - Level 2",
+    "vendor": "Oracle HCM",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Payroll & Benefits",
+    "focus": "Payroll & Benefits expertise",
+    "exam": "ORACLE HCM-2013",
+    "tags": [
+      "payroll-&-benefits",
+      "level-2",
+      "oracle-hcm"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/oraclehcm.svg"
+  },
+  {
+    "name": "ADP HR Analytics - Level 2",
+    "vendor": "ADP",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "HR Analytics",
+    "focus": "HR Analytics expertise",
+    "exam": "ADP-2014",
+    "tags": [
+      "hr-analytics",
+      "level-2",
+      "adp"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/adp.svg"
+  },
+  {
+    "name": "BambooHR HRIS Systems - Level 2",
+    "vendor": "BambooHR",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "HRIS Systems",
+    "focus": "HRIS Systems expertise",
+    "exam": "BAMBOOHR-2015",
+    "tags": [
+      "hris-systems",
+      "level-2",
+      "bamboohr"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/bamboohr.svg"
+  },
+  {
+    "name": "Workday Talent Management - Level 2",
+    "vendor": "Workday",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Talent Management",
+    "focus": "Talent Management expertise",
+    "exam": "WORKDAY-2016",
+    "tags": [
+      "talent-management",
+      "level-2",
+      "workday"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/workday.svg"
+  },
+  {
+    "name": "SAP SuccessFactors Payroll & Benefits - Level 2",
+    "vendor": "SAP SuccessFactors",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Payroll & Benefits",
+    "focus": "Payroll & Benefits expertise",
+    "exam": "SAP SUCCESSFACTORS-2017",
+    "tags": [
+      "payroll-&-benefits",
+      "level-2",
+      "sap-successfactors"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/sapsuccessfactors.svg"
+  },
+  {
+    "name": "Oracle HCM HR Analytics - Level 2",
+    "vendor": "Oracle HCM",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "HR Analytics",
+    "focus": "HR Analytics expertise",
+    "exam": "ORACLE HCM-2018",
+    "tags": [
+      "hr-analytics",
+      "level-2",
+      "oracle-hcm"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/oraclehcm.svg"
+  },
+  {
+    "name": "ADP HRIS Systems - Level 2",
+    "vendor": "ADP",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "HRIS Systems",
+    "focus": "HRIS Systems expertise",
+    "exam": "ADP-2019",
+    "tags": [
+      "hris-systems",
+      "level-2",
+      "adp"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/adp.svg"
+  },
+  {
+    "name": "BambooHR Talent Management - Level 2",
+    "vendor": "BambooHR",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Talent Management",
+    "focus": "Talent Management expertise",
+    "exam": "BAMBOOHR-2020",
+    "tags": [
+      "talent-management",
+      "level-2",
+      "bamboohr"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/bamboohr.svg"
+  },
+  {
+    "name": "Workday Payroll & Benefits - Level 2",
+    "vendor": "Workday",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Payroll & Benefits",
+    "focus": "Payroll & Benefits expertise",
+    "exam": "WORKDAY-2021",
+    "tags": [
+      "payroll-&-benefits",
+      "level-2",
+      "workday"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/workday.svg"
+  },
+  {
+    "name": "SAP SuccessFactors HR Analytics - Level 2",
+    "vendor": "SAP SuccessFactors",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "HR Analytics",
+    "focus": "HR Analytics expertise",
+    "exam": "SAP SUCCESSFACTORS-2022",
+    "tags": [
+      "hr-analytics",
+      "level-2",
+      "sap-successfactors"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/sapsuccessfactors.svg"
+  },
+  {
+    "name": "Workday HRIS Systems - Level 3",
+    "vendor": "Workday",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "HRIS Systems",
+    "focus": "HRIS Systems expertise",
+    "exam": "WORKDAY-3023",
+    "tags": [
+      "hris-systems",
+      "level-3",
+      "workday"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/workday.svg"
+  },
+  {
+    "name": "SAP SuccessFactors Talent Management - Level 3",
+    "vendor": "SAP SuccessFactors",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Talent Management",
+    "focus": "Talent Management expertise",
+    "exam": "SAP SUCCESSFACTORS-3024",
+    "tags": [
+      "talent-management",
+      "level-3",
+      "sap-successfactors"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/sapsuccessfactors.svg"
+  },
+  {
+    "name": "Oracle HCM Payroll & Benefits - Level 3",
+    "vendor": "Oracle HCM",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Payroll & Benefits",
+    "focus": "Payroll & Benefits expertise",
+    "exam": "ORACLE HCM-3025",
+    "tags": [
+      "payroll-&-benefits",
+      "level-3",
+      "oracle-hcm"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/oraclehcm.svg"
+  },
+  {
+    "name": "ADP HR Analytics - Level 3",
+    "vendor": "ADP",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "HR Analytics",
+    "focus": "HR Analytics expertise",
+    "exam": "ADP-3026",
+    "tags": [
+      "hr-analytics",
+      "level-3",
+      "adp"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/adp.svg"
+  },
+  {
+    "name": "BambooHR HRIS Systems - Level 3",
+    "vendor": "BambooHR",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "HRIS Systems",
+    "focus": "HRIS Systems expertise",
+    "exam": "BAMBOOHR-3027",
+    "tags": [
+      "hris-systems",
+      "level-3",
+      "bamboohr"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/bamboohr.svg"
+  },
+  {
+    "name": "Workday Talent Management - Level 3",
+    "vendor": "Workday",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Talent Management",
+    "focus": "Talent Management expertise",
+    "exam": "WORKDAY-3028",
+    "tags": [
+      "talent-management",
+      "level-3",
+      "workday"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/workday.svg"
+  },
+  {
+    "name": "SAP SuccessFactors Payroll & Benefits - Level 3",
+    "vendor": "SAP SuccessFactors",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Payroll & Benefits",
+    "focus": "Payroll & Benefits expertise",
+    "exam": "SAP SUCCESSFACTORS-3029",
+    "tags": [
+      "payroll-&-benefits",
+      "level-3",
+      "sap-successfactors"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/sapsuccessfactors.svg"
+  },
+  {
+    "name": "Oracle HCM HR Analytics - Level 3",
+    "vendor": "Oracle HCM",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "HR Analytics",
+    "focus": "HR Analytics expertise",
+    "exam": "ORACLE HCM-3030",
+    "tags": [
+      "hr-analytics",
+      "level-3",
+      "oracle-hcm"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/oraclehcm.svg"
+  },
+  {
+    "name": "ADP HRIS Systems - Level 3",
+    "vendor": "ADP",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "HRIS Systems",
+    "focus": "HRIS Systems expertise",
+    "exam": "ADP-3031",
+    "tags": [
+      "hris-systems",
+      "level-3",
+      "adp"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/adp.svg"
+  },
+  {
+    "name": "BambooHR Talent Management - Level 3",
+    "vendor": "BambooHR",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Talent Management",
+    "focus": "Talent Management expertise",
+    "exam": "BAMBOOHR-3032",
+    "tags": [
+      "talent-management",
+      "level-3",
+      "bamboohr"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/bamboohr.svg"
+  },
+  {
+    "name": "Workday HRIS Systems - Level 4",
+    "vendor": "Workday",
+    "level": 4,
+    "level_range": [
+      4,
+      5
+    ],
+    "category": "HRIS Systems",
+    "focus": "HRIS Systems expertise",
+    "exam": "WORKDAY-4033",
+    "tags": [
+      "hris-systems",
+      "level-4",
+      "workday"
+    ],
+    "vendor_stage": "Expert",
+    "price": 400,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/workday.svg"
+  },
+  {
+    "name": "SAP SuccessFactors Talent Management - Level 4",
+    "vendor": "SAP SuccessFactors",
+    "level": 4,
+    "level_range": [
+      4,
+      5
+    ],
+    "category": "Talent Management",
+    "focus": "Talent Management expertise",
+    "exam": "SAP SUCCESSFACTORS-4034",
+    "tags": [
+      "talent-management",
+      "level-4",
+      "sap-successfactors"
+    ],
+    "vendor_stage": "Expert",
+    "price": 400,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/sapsuccessfactors.svg"
+  },
+  {
+    "name": "Oracle HCM Payroll & Benefits - Level 4",
+    "vendor": "Oracle HCM",
+    "level": 4,
+    "level_range": [
+      4,
+      5
+    ],
+    "category": "Payroll & Benefits",
+    "focus": "Payroll & Benefits expertise",
+    "exam": "ORACLE HCM-4035",
+    "tags": [
+      "payroll-&-benefits",
+      "level-4",
+      "oracle-hcm"
+    ],
+    "vendor_stage": "Expert",
+    "price": 400,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/oraclehcm.svg"
+  },
+  {
+    "name": "ADP HR Analytics - Level 4",
+    "vendor": "ADP",
+    "level": 4,
+    "level_range": [
+      4,
+      5
+    ],
+    "category": "HR Analytics",
+    "focus": "HR Analytics expertise",
+    "exam": "ADP-4036",
+    "tags": [
+      "hr-analytics",
+      "level-4",
+      "adp"
+    ],
+    "vendor_stage": "Expert",
+    "price": 400,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/adp.svg"
+  },
+  {
+    "name": "BambooHR HRIS Systems - Level 4",
+    "vendor": "BambooHR",
+    "level": 4,
+    "level_range": [
+      4,
+      5
+    ],
+    "category": "HRIS Systems",
+    "focus": "HRIS Systems expertise",
+    "exam": "BAMBOOHR-4037",
+    "tags": [
+      "hris-systems",
+      "level-4",
+      "bamboohr"
+    ],
+    "vendor_stage": "Expert",
+    "price": 400,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/bamboohr.svg"
+  },
+  {
+    "name": "Workday Talent Management - Level 4",
+    "vendor": "Workday",
+    "level": 4,
+    "level_range": [
+      4,
+      5
+    ],
+    "category": "Talent Management",
+    "focus": "Talent Management expertise",
+    "exam": "WORKDAY-4038",
+    "tags": [
+      "talent-management",
+      "level-4",
+      "workday"
+    ],
+    "vendor_stage": "Expert",
+    "price": 400,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/workday.svg"
+  },
+  {
+    "name": "Workday HRIS Systems - Level 5",
+    "vendor": "Workday",
+    "level": 5,
+    "level_range": [
+      5,
+      5
+    ],
+    "category": "HRIS Systems",
+    "focus": "HRIS Systems expertise",
+    "exam": "WORKDAY-5039",
+    "tags": [
+      "hris-systems",
+      "level-5",
+      "workday"
+    ],
+    "vendor_stage": "Master",
+    "price": 450,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/workday.svg"
+  },
+  {
+    "name": "SAP SuccessFactors Talent Management - Level 5",
+    "vendor": "SAP SuccessFactors",
+    "level": 5,
+    "level_range": [
+      5,
+      5
+    ],
+    "category": "Talent Management",
+    "focus": "Talent Management expertise",
+    "exam": "SAP SUCCESSFACTORS-5040",
+    "tags": [
+      "talent-management",
+      "level-5",
+      "sap-successfactors"
+    ],
+    "vendor_stage": "Master",
+    "price": 450,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/sapsuccessfactors.svg"
+  }
+]

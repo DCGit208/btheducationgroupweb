@@ -1,0 +1,905 @@
+[
+  {
+    "name": "AWS Front-End - Level 1",
+    "vendor": "AWS",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Front-End",
+    "focus": "Front-End expertise",
+    "exam": "AWS-1001",
+    "tags": [
+      "front-end",
+      "level-1",
+      "aws"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/aws.svg"
+  },
+  {
+    "name": "Microsoft Back-End - Level 1",
+    "vendor": "Microsoft",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Back-End",
+    "focus": "Back-End expertise",
+    "exam": "MICROSOFT-1002",
+    "tags": [
+      "back-end",
+      "level-1",
+      "microsoft"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/microsoft.svg"
+  },
+  {
+    "name": "Google Full-Stack - Level 1",
+    "vendor": "Google",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Full-Stack",
+    "focus": "Full-Stack expertise",
+    "exam": "GOOGLE-1003",
+    "tags": [
+      "full-stack",
+      "level-1",
+      "google"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/google.svg"
+  },
+  {
+    "name": "Docker DevOps - Level 1",
+    "vendor": "Docker",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "DevOps",
+    "focus": "DevOps expertise",
+    "exam": "DOCKER-1004",
+    "tags": [
+      "devops",
+      "level-1",
+      "docker"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/docker.svg"
+  },
+  {
+    "name": "Red Hat Cloud-Native - Level 1",
+    "vendor": "Red Hat",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Cloud-Native",
+    "focus": "Cloud-Native expertise",
+    "exam": "RED HAT-1005",
+    "tags": [
+      "cloud-native",
+      "level-1",
+      "red-hat"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/redhat.svg"
+  },
+  {
+    "name": "AWS Front-End - Level 1",
+    "vendor": "AWS",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Front-End",
+    "focus": "Front-End expertise",
+    "exam": "AWS-1006",
+    "tags": [
+      "front-end",
+      "level-1",
+      "aws"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/aws.svg"
+  },
+  {
+    "name": "Microsoft Back-End - Level 1",
+    "vendor": "Microsoft",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Back-End",
+    "focus": "Back-End expertise",
+    "exam": "MICROSOFT-1007",
+    "tags": [
+      "back-end",
+      "level-1",
+      "microsoft"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/microsoft.svg"
+  },
+  {
+    "name": "Google Full-Stack - Level 1",
+    "vendor": "Google",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Full-Stack",
+    "focus": "Full-Stack expertise",
+    "exam": "GOOGLE-1008",
+    "tags": [
+      "full-stack",
+      "level-1",
+      "google"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/google.svg"
+  },
+  {
+    "name": "Docker DevOps - Level 1",
+    "vendor": "Docker",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "DevOps",
+    "focus": "DevOps expertise",
+    "exam": "DOCKER-1009",
+    "tags": [
+      "devops",
+      "level-1",
+      "docker"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/docker.svg"
+  },
+  {
+    "name": "Red Hat Cloud-Native - Level 1",
+    "vendor": "Red Hat",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Cloud-Native",
+    "focus": "Cloud-Native expertise",
+    "exam": "RED HAT-1010",
+    "tags": [
+      "cloud-native",
+      "level-1",
+      "red-hat"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/redhat.svg"
+  },
+  {
+    "name": "AWS Front-End - Level 1",
+    "vendor": "AWS",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Front-End",
+    "focus": "Front-End expertise",
+    "exam": "AWS-1011",
+    "tags": [
+      "front-end",
+      "level-1",
+      "aws"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/aws.svg"
+  },
+  {
+    "name": "AWS Front-End - Level 2",
+    "vendor": "AWS",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Front-End",
+    "focus": "Front-End expertise",
+    "exam": "AWS-2012",
+    "tags": [
+      "front-end",
+      "level-2",
+      "aws"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/aws.svg"
+  },
+  {
+    "name": "Microsoft Back-End - Level 2",
+    "vendor": "Microsoft",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Back-End",
+    "focus": "Back-End expertise",
+    "exam": "MICROSOFT-2013",
+    "tags": [
+      "back-end",
+      "level-2",
+      "microsoft"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/microsoft.svg"
+  },
+  {
+    "name": "Google Full-Stack - Level 2",
+    "vendor": "Google",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Full-Stack",
+    "focus": "Full-Stack expertise",
+    "exam": "GOOGLE-2014",
+    "tags": [
+      "full-stack",
+      "level-2",
+      "google"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/google.svg"
+  },
+  {
+    "name": "Docker DevOps - Level 2",
+    "vendor": "Docker",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "DevOps",
+    "focus": "DevOps expertise",
+    "exam": "DOCKER-2015",
+    "tags": [
+      "devops",
+      "level-2",
+      "docker"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/docker.svg"
+  },
+  {
+    "name": "Red Hat Cloud-Native - Level 2",
+    "vendor": "Red Hat",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Cloud-Native",
+    "focus": "Cloud-Native expertise",
+    "exam": "RED HAT-2016",
+    "tags": [
+      "cloud-native",
+      "level-2",
+      "red-hat"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/redhat.svg"
+  },
+  {
+    "name": "AWS Front-End - Level 2",
+    "vendor": "AWS",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Front-End",
+    "focus": "Front-End expertise",
+    "exam": "AWS-2017",
+    "tags": [
+      "front-end",
+      "level-2",
+      "aws"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/aws.svg"
+  },
+  {
+    "name": "Microsoft Back-End - Level 2",
+    "vendor": "Microsoft",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Back-End",
+    "focus": "Back-End expertise",
+    "exam": "MICROSOFT-2018",
+    "tags": [
+      "back-end",
+      "level-2",
+      "microsoft"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/microsoft.svg"
+  },
+  {
+    "name": "Google Full-Stack - Level 2",
+    "vendor": "Google",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Full-Stack",
+    "focus": "Full-Stack expertise",
+    "exam": "GOOGLE-2019",
+    "tags": [
+      "full-stack",
+      "level-2",
+      "google"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/google.svg"
+  },
+  {
+    "name": "Docker DevOps - Level 2",
+    "vendor": "Docker",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "DevOps",
+    "focus": "DevOps expertise",
+    "exam": "DOCKER-2020",
+    "tags": [
+      "devops",
+      "level-2",
+      "docker"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/docker.svg"
+  },
+  {
+    "name": "Red Hat Cloud-Native - Level 2",
+    "vendor": "Red Hat",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Cloud-Native",
+    "focus": "Cloud-Native expertise",
+    "exam": "RED HAT-2021",
+    "tags": [
+      "cloud-native",
+      "level-2",
+      "red-hat"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/redhat.svg"
+  },
+  {
+    "name": "AWS Front-End - Level 2",
+    "vendor": "AWS",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Front-End",
+    "focus": "Front-End expertise",
+    "exam": "AWS-2022",
+    "tags": [
+      "front-end",
+      "level-2",
+      "aws"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/aws.svg"
+  },
+  {
+    "name": "Microsoft Back-End - Level 2",
+    "vendor": "Microsoft",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Back-End",
+    "focus": "Back-End expertise",
+    "exam": "MICROSOFT-2023",
+    "tags": [
+      "back-end",
+      "level-2",
+      "microsoft"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/microsoft.svg"
+  },
+  {
+    "name": "Google Full-Stack - Level 2",
+    "vendor": "Google",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Full-Stack",
+    "focus": "Full-Stack expertise",
+    "exam": "GOOGLE-2024",
+    "tags": [
+      "full-stack",
+      "level-2",
+      "google"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/google.svg"
+  },
+  {
+    "name": "AWS Front-End - Level 3",
+    "vendor": "AWS",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Front-End",
+    "focus": "Front-End expertise",
+    "exam": "AWS-3025",
+    "tags": [
+      "front-end",
+      "level-3",
+      "aws"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/aws.svg"
+  },
+  {
+    "name": "Microsoft Back-End - Level 3",
+    "vendor": "Microsoft",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Back-End",
+    "focus": "Back-End expertise",
+    "exam": "MICROSOFT-3026",
+    "tags": [
+      "back-end",
+      "level-3",
+      "microsoft"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/microsoft.svg"
+  },
+  {
+    "name": "Google Full-Stack - Level 3",
+    "vendor": "Google",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Full-Stack",
+    "focus": "Full-Stack expertise",
+    "exam": "GOOGLE-3027",
+    "tags": [
+      "full-stack",
+      "level-3",
+      "google"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/google.svg"
+  },
+  {
+    "name": "Docker DevOps - Level 3",
+    "vendor": "Docker",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "DevOps",
+    "focus": "DevOps expertise",
+    "exam": "DOCKER-3028",
+    "tags": [
+      "devops",
+      "level-3",
+      "docker"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/docker.svg"
+  },
+  {
+    "name": "Red Hat Cloud-Native - Level 3",
+    "vendor": "Red Hat",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Cloud-Native",
+    "focus": "Cloud-Native expertise",
+    "exam": "RED HAT-3029",
+    "tags": [
+      "cloud-native",
+      "level-3",
+      "red-hat"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/redhat.svg"
+  },
+  {
+    "name": "AWS Front-End - Level 3",
+    "vendor": "AWS",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Front-End",
+    "focus": "Front-End expertise",
+    "exam": "AWS-3030",
+    "tags": [
+      "front-end",
+      "level-3",
+      "aws"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/aws.svg"
+  },
+  {
+    "name": "Microsoft Back-End - Level 3",
+    "vendor": "Microsoft",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Back-End",
+    "focus": "Back-End expertise",
+    "exam": "MICROSOFT-3031",
+    "tags": [
+      "back-end",
+      "level-3",
+      "microsoft"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/microsoft.svg"
+  },
+  {
+    "name": "Google Full-Stack - Level 3",
+    "vendor": "Google",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Full-Stack",
+    "focus": "Full-Stack expertise",
+    "exam": "GOOGLE-3032",
+    "tags": [
+      "full-stack",
+      "level-3",
+      "google"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/google.svg"
+  },
+  {
+    "name": "Docker DevOps - Level 3",
+    "vendor": "Docker",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "DevOps",
+    "focus": "DevOps expertise",
+    "exam": "DOCKER-3033",
+    "tags": [
+      "devops",
+      "level-3",
+      "docker"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/docker.svg"
+  },
+  {
+    "name": "Red Hat Cloud-Native - Level 3",
+    "vendor": "Red Hat",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Cloud-Native",
+    "focus": "Cloud-Native expertise",
+    "exam": "RED HAT-3034",
+    "tags": [
+      "cloud-native",
+      "level-3",
+      "red-hat"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/redhat.svg"
+  },
+  {
+    "name": "AWS Front-End - Level 3",
+    "vendor": "AWS",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Front-End",
+    "focus": "Front-End expertise",
+    "exam": "AWS-3035",
+    "tags": [
+      "front-end",
+      "level-3",
+      "aws"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/aws.svg"
+  },
+  {
+    "name": "AWS Front-End - Level 4",
+    "vendor": "AWS",
+    "level": 4,
+    "level_range": [
+      4,
+      5
+    ],
+    "category": "Front-End",
+    "focus": "Front-End expertise",
+    "exam": "AWS-4036",
+    "tags": [
+      "front-end",
+      "level-4",
+      "aws"
+    ],
+    "vendor_stage": "Expert",
+    "price": 400,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/aws.svg"
+  },
+  {
+    "name": "Microsoft Back-End - Level 4",
+    "vendor": "Microsoft",
+    "level": 4,
+    "level_range": [
+      4,
+      5
+    ],
+    "category": "Back-End",
+    "focus": "Back-End expertise",
+    "exam": "MICROSOFT-4037",
+    "tags": [
+      "back-end",
+      "level-4",
+      "microsoft"
+    ],
+    "vendor_stage": "Expert",
+    "price": 400,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/microsoft.svg"
+  },
+  {
+    "name": "Google Full-Stack - Level 4",
+    "vendor": "Google",
+    "level": 4,
+    "level_range": [
+      4,
+      5
+    ],
+    "category": "Full-Stack",
+    "focus": "Full-Stack expertise",
+    "exam": "GOOGLE-4038",
+    "tags": [
+      "full-stack",
+      "level-4",
+      "google"
+    ],
+    "vendor_stage": "Expert",
+    "price": 400,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/google.svg"
+  },
+  {
+    "name": "Docker DevOps - Level 4",
+    "vendor": "Docker",
+    "level": 4,
+    "level_range": [
+      4,
+      5
+    ],
+    "category": "DevOps",
+    "focus": "DevOps expertise",
+    "exam": "DOCKER-4039",
+    "tags": [
+      "devops",
+      "level-4",
+      "docker"
+    ],
+    "vendor_stage": "Expert",
+    "price": 400,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/docker.svg"
+  },
+  {
+    "name": "Red Hat Cloud-Native - Level 4",
+    "vendor": "Red Hat",
+    "level": 4,
+    "level_range": [
+      4,
+      5
+    ],
+    "category": "Cloud-Native",
+    "focus": "Cloud-Native expertise",
+    "exam": "RED HAT-4040",
+    "tags": [
+      "cloud-native",
+      "level-4",
+      "red-hat"
+    ],
+    "vendor_stage": "Expert",
+    "price": 400,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/redhat.svg"
+  },
+  {
+    "name": "AWS Front-End - Level 4",
+    "vendor": "AWS",
+    "level": 4,
+    "level_range": [
+      4,
+      5
+    ],
+    "category": "Front-End",
+    "focus": "Front-End expertise",
+    "exam": "AWS-4041",
+    "tags": [
+      "front-end",
+      "level-4",
+      "aws"
+    ],
+    "vendor_stage": "Expert",
+    "price": 400,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/aws.svg"
+  },
+  {
+    "name": "AWS Front-End - Level 5",
+    "vendor": "AWS",
+    "level": 5,
+    "level_range": [
+      5,
+      5
+    ],
+    "category": "Front-End",
+    "focus": "Front-End expertise",
+    "exam": "AWS-5042",
+    "tags": [
+      "front-end",
+      "level-5",
+      "aws"
+    ],
+    "vendor_stage": "Master",
+    "price": 450,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/aws.svg"
+  },
+  {
+    "name": "Microsoft Back-End - Level 5",
+    "vendor": "Microsoft",
+    "level": 5,
+    "level_range": [
+      5,
+      5
+    ],
+    "category": "Back-End",
+    "focus": "Back-End expertise",
+    "exam": "MICROSOFT-5043",
+    "tags": [
+      "back-end",
+      "level-5",
+      "microsoft"
+    ],
+    "vendor_stage": "Master",
+    "price": 450,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/microsoft.svg"
+  }
+]
