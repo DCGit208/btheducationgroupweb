@@ -134,7 +134,11 @@
       "cloud-literacy"
     ],
     "vendor_stage": "Foundational",
-    "id": 4123933645
+    "id": 4123933645,
+    "level_range": [
+      1,
+      5
+    ]
   },
   {
     "name": "Alexa Skills Developer",
@@ -165,7 +169,11 @@
       "developer"
     ],
     "vendor_stage": "Associate",
-    "id": 4169953423
+    "id": 4169953423,
+    "level_range": [
+      2,
+      5
+    ]
   },
   {
     "name": "AWS Certified Solutions Architect \u2013 Associate",
@@ -181,6 +189,10 @@
     "tags": [
       "AWS-Associate",
       "architecture"
+    ],
+    "level_range": [
+      2,
+      5
     ]
   },
   {
@@ -253,6 +265,10 @@
     "tags": [
       "AWS-Specialty",
       "networking"
+    ],
+    "level_range": [
+      4,
+      5
     ]
   },
   {
@@ -296,7 +312,11 @@
       "devops"
     ],
     "vendor_stage": "Professional",
-    "id": 2926470264
+    "id": 2926470264,
+    "level_range": [
+      3,
+      5
+    ]
   },
   {
     "name": "AWS Certified Machine Learning \u2013 Specialty",
@@ -314,6 +334,10 @@
       "AWS-Specialty",
       "machine-learning",
       "retiring-2026"
+    ],
+    "level_range": [
+      5,
+      5
     ]
   },
   {
@@ -331,6 +355,10 @@
     "tags": [
       "AWS-Specialty",
       "security"
+    ],
+    "level_range": [
+      4,
+      5
     ]
   },
   {
@@ -347,6 +375,10 @@
     "tags": [
       "AWS-Professional",
       "architecture"
+    ],
+    "level_range": [
+      3,
+      5
     ]
   },
   {
@@ -5451,7 +5483,11 @@
       "ai-literacy"
     ],
     "vendor_stage": "Foundational",
-    "id": 4666329990
+    "id": 4666329990,
+    "level_range": [
+      1,
+      5
+    ]
   },
   {
     "name": "AWS Certified Data Engineer \u2013 Associate",
@@ -5467,7 +5503,11 @@
       "data-literacy"
     ],
     "vendor_stage": "Associate",
-    "id": 5680628368
+    "id": 5680628368,
+    "level_range": [
+      1,
+      5
+    ]
   },
   {
     "name": "AWS Certified CloudOps Engineer \u2013 Associate",
@@ -5483,7 +5523,11 @@
       "operations"
     ],
     "vendor_stage": "Associate",
-    "id": 8387211855
+    "id": 8387211855,
+    "level_range": [
+      2,
+      5
+    ]
   },
   {
     "name": "AWS Certified Machine Learning Engineer \u2013 Associate",
@@ -5499,7 +5543,11 @@
       "machine-learning"
     ],
     "vendor_stage": "Associate",
-    "id": 3978864826
+    "id": 3978864826,
+    "level_range": [
+      2,
+      5
+    ]
   },
   {
     "name": "AWS Certified Generative AI Developer \u2013 Professional",
@@ -5515,6 +5563,10 @@
       "generative-ai"
     ],
     "vendor_stage": "Professional",
-    "id": 3630048489
+    "id": 3630048489,
+    "level_range": [
+      5,
+      5
+    ]
   }
 ]
