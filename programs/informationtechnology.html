@@ -2376,11 +2376,16 @@
             const inLevelWindow = (cert)=>{
                 // Cumulative level visibility: Level N shows Levels 1..N
                 if (isCiscoL1AssociateStarter(cert)) return true;
-                if (!Array.isArray(cert.level_range) || cert.level_range.length!==2) return true;
-                const [minL/*,maxL*/] = cert.level_range;
                 if (!level) return true;
-                // Include any cert whose earliest recommended level is <= selected level
-                return level >= minL;
+                
+                // Use level_range if available, otherwise fall back to exact level matching
+                if (Array.isArray(cert.level_range) && cert.level_range.length === 2) {
+                    const [minL/*,maxL*/] = cert.level_range;
+                    return level >= minL;
+                }
+                
+                // Fallback: exact level match if no level_range
+                return cert.level === level;
             };
             // Infer vendor stage from name if explicit stage is missing
             const inferVendorStage = (c) => {
