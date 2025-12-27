@@ -3,3 +3,27 @@
 | 2025-10-12 20:01:22 | BACKUP | pricing-20251012-200122 | Reason: Snapshot alongside IT page backup | ✅ COMPLETED |
 | 2025-10-12 20:01:22 | BACKUP | certifications-20251012-200122 | Reason: Snapshot alongside IT page backup | ✅ COMPLETED |
 | 2025-10-12 20:01:22 | IMPLEMENTATION | manifest-20251012-200122 | Reason: Wrote auditable manifest for snapshot (sizes + checksums) | ✅ COMPLETED |
+| 2025-11-20 19:39:26 | BACKUP | informationtechnology-20251120-193926 | Reason: Pre-change snapshot | ✅ COMPLETED |
+| 2025-11-20 19:39:26 | BACKUP | pricing-20251120-193926 | Reason: Snapshot alongside IT page backup | ✅ COMPLETED |
+| 2025-11-20 19:39:26 | BACKUP | certifications-20251120-193926 | Reason: Snapshot alongside IT page backup | ✅ COMPLETED |
+| 2025-11-20 19:39:26 | IMPLEMENTATION | manifest-20251120-193926 | Reason: Wrote auditable manifest for snapshot (sizes + checksums) | ✅ COMPLETED |
+| 2025-12-27 14:42:02 | BACKUP | informationtechnology-20251227-144202 | Reason: Pre-change snapshot | ✅ COMPLETED |
+| 2025-12-27 14:42:02 | BACKUP | pricing-20251227-144202 | Reason: Snapshot alongside IT page backup | ✅ COMPLETED |
+| 2025-12-27 14:42:02 | BACKUP | certifications-20251227-144202 | Reason: Snapshot alongside IT page backup | ✅ COMPLETED |
+| 2025-12-27 14:42:02 | IMPLEMENTATION | manifest-20251227-144202 | Reason: Wrote auditable manifest for snapshot (sizes + checksums) | ✅ COMPLETED |
+| 2025-12-27 16:21:58 | BACKUP | informationtechnology-20251227-162158 | Reason: Pre-change snapshot | ✅ COMPLETED |
+| 2025-12-27 16:21:58 | BACKUP | pricing-20251227-162158 | Reason: Snapshot alongside IT page backup | ✅ COMPLETED |
+| 2025-12-27 16:21:58 | BACKUP | certifications-20251227-162158 | Reason: Snapshot alongside IT page backup | ✅ COMPLETED |
+| 2025-12-27 16:21:58 | IMPLEMENTATION | manifest-20251227-162158 | Reason: Wrote auditable manifest for snapshot (sizes + checksums) | ✅ COMPLETED |
+| 2025-12-27 16:38:27 | BACKUP | informationtechnology-20251227-163827 | Reason: Pre-change snapshot | ✅ COMPLETED |
+| 2025-12-27 16:38:27 | BACKUP | pricing-20251227-163827 | Reason: Snapshot alongside IT page backup | ✅ COMPLETED |
+| 2025-12-27 16:38:27 | BACKUP | certifications-20251227-163827 | Reason: Snapshot alongside IT page backup | ✅ COMPLETED |
+| 2025-12-27 16:38:27 | IMPLEMENTATION | manifest-20251227-163827 | Reason: Wrote auditable manifest for snapshot (sizes + checksums) | ✅ COMPLETED |
+| 2025-12-27 17:00:08 | BACKUP | informationtechnology-20251227-170008 | Reason: Pre-change snapshot | ✅ COMPLETED |
+| 2025-12-27 17:00:08 | BACKUP | pricing-20251227-170008 | Reason: Snapshot alongside IT page backup | ✅ COMPLETED |
+| 2025-12-27 17:00:08 | BACKUP | certifications-20251227-170008 | Reason: Snapshot alongside IT page backup | ✅ COMPLETED |
+| 2025-12-27 17:00:08 | IMPLEMENTATION | manifest-20251227-170008 | Reason: Wrote auditable manifest for snapshot (sizes + checksums) | ✅ COMPLETED |
+| 2025-12-27 17:15:45 | BACKUP | informationtechnology-20251227-171545 | Reason: Pre-change snapshot | ✅ COMPLETED |
+| 2025-12-27 17:15:45 | BACKUP | pricing-20251227-171545 | Reason: Snapshot alongside IT page backup | ✅ COMPLETED |
+| 2025-12-27 17:15:45 | BACKUP | certifications-20251227-171545 | Reason: Snapshot alongside IT page backup | ✅ COMPLETED |
+| 2025-12-27 17:15:45 | IMPLEMENTATION | manifest-20251227-171545 | Reason: Wrote auditable manifest for snapshot (sizes + checksums) | ✅ COMPLETED |

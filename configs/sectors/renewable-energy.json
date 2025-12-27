@@ -1,0 +1,47 @@
+{
+  "name": "Energy & Renewable Systems",
+  "slug": "renewable-energy",
+  "icon": "\ud83c\udf1e",
+  "subtitle": "Lead the clean energy transition with solar, wind, battery storage, and smart grid expertise",
+  "description": "Develop skills in renewable energy systems, grid integration, energy storage, and sustainability with certifications from NABCEP, IREC, IEEE, and industry leaders.",
+  "gradient_start": "#059669",
+  "gradient_end": "#047857",
+  "cert_count": 32,
+  "vendor_count": 7,
+  "categories": [
+    {
+      "id": "solar-pv",
+      "name": "Solar PV Systems",
+      "icon": "\u2600\ufe0f"
+    },
+    {
+      "id": "wind-energy",
+      "name": "Wind Energy",
+      "icon": "\ud83d\udca8"
+    },
+    {
+      "id": "energy-storage",
+      "name": "Energy Storage",
+      "icon": "\ud83d\udd0b"
+    },
+    {
+      "id": "smart-grid",
+      "name": "Smart Grid",
+      "icon": "\u26a1"
+    },
+    {
+      "id": "sustainability",
+      "name": "Sustainability",
+      "icon": "\ud83c\udf31"
+    }
+  ],
+  "vendors": [
+    "NABCEP",
+    "IREC",
+    "IEEE",
+    "Siemens Energy",
+    "GE Renewable",
+    "Tesla Energy",
+    "Schneider Electric"
+  ]
+}

@@ -1,139 +1,65 @@
-# Tel: (+237) 680289956 – 695882623 – 233362120
+# Our Partners
 
-# First Floor, NWCA Bldg, Commercial Avenue Bamenda, Cameroon
+## International Authorized Training and Exam Center
 
-**info@btheducationgroup.org**
+We're The International Authorized Training and Exam Center for the following Exam Sponsors and Delivery Partners:
 
-**[http://www.btheducationgoup.org](http://www.btheducationgoup.org)**
+### Pearson VUE Clients (By Company)
 
-TRAIN: REFRESH TRAIN – CERTIFY: RECERTIFY - WORKFORCE DEVELOPMENT - SERVICES
+- ABA Espana
+- ABWM
+- ACSM
+- AFP
+- AHIMA
+- AIWMI
+- Alibaba Cloud Certification
+- Amazon Web Services
+- American Academy of Financial Management India
+- American College
+- American Society for Nondestructive Testing
+- AMPP
+- APICS
+- Aptitude Test for Entrance Exam- ATEE
+- Baidu Certification
+- Basic Ability Exam
+- BBPSD
+- The Chartered Institute for IT
+- BOMI International
+- Brightest GmbH
+- Broadcom Software
+- Business Solutions Suite
+- CertiTrek
+- CertNexus
+- Chainshine Financial Training
+- Chartered Global Management Accountant
+- Chartered Institute of Management Accountants
+- Check Point Software Technologies
+- Cisco Systems
+- Citrix Systems
+- CMA Sri Lanka
+- CompTIA Testing
+- Condition Zebra (M) Sdn. Bhd.
+- CPS HR
+- CrossFit
+- CyberArk
+- EC-Council
+- Epic Systems Corporation
+- Ericsson
+- ForgeRock
+- Fortinet
+- GASQ
+- GIAC
+- GISCI
+- Global Association of Risk Professionals
+- Globex Certifications Inc.
+- Guild of Architectural Ironmongers Ltd
+- Hack2Secure
+- HCL Software Academy
+- HPE Certification and Learning
+- Huawei
+- IBM Corporation
+- IFRS Foundation
 
-```
-©202 5 BTH Education Group - http://www.btheducationgroup.org – BTH EDUCATION GROUP – BTH INTERNATIONAL No
-NW/GP/040/13/15090 – PPDI A CompTIA Partner - Oracle Academy Member – Amazon Web Service Partner
-(PARTNER ID 1686885) – Red Hat Org ID 12969076: Microsoft Partner: MPN ID: 6149008 - ETA International Partner:
-147960 - Pearson Vue Partner and Authorized Test Center: Site ID: 89828 – info@btheducationgroup.org - Tel: +
-```
-We’re The International Authorized Training and Exam Center for the following Exam Sponsors
-and Delivery Partners:
-
-## We Now have Client Authorization from Pearson to deliver exams for the following
-
-## Pearson VUE clients: (By Company)
-
-```
- ABA Espana
-```
-```
- ABWM
-```
-```
- ACSM
-```
-```
- AFP
-```
-```
- AHIMA
-```
-```
- AIWMI
-```
-```
- Alibaba Cloud Certification
-```
-```
- Amazon Web Services
-```
-```
- American Academy of Financial Management India
-```
-```
- American College
-```
-```
- American Society for Nondestructive Testing
-```
-```
- AMPP
-```
-```
- APICS
-```
-```
- Aptitude Test for Entrance Exam- ATEE
-```
-
-# Tel: (+237) 680289956 – 695882623 – 233362120
-
-# First Floor, NWCA Bldg, Commercial Avenue Bamenda, Cameroon
-
-**info@btheducationgroup.org**
-
-**[http://www.btheducationgoup.org](http://www.btheducationgoup.org)**
-
-TRAIN: REFRESH TRAIN – CERTIFY: RECERTIFY - WORKFORCE DEVELOPMENT - SERVICES
-
-```
-©202 5 BTH Education Group - http://www.btheducationgroup.org – BTH EDUCATION GROUP – BTH INTERNATIONAL No
-NW/GP/040/13/15090 – PPDI A CompTIA Partner - Oracle Academy Member – Amazon Web Service Partner
-(PARTNER ID 1686885) – Red Hat Org ID 12969076: Microsoft Partner: MPN ID: 6149008 - ETA International Partner:
-147960 - Pearson Vue Partner and Authorized Test Center: Site ID: 89828 – info@btheducationgroup.org - Tel: +
-```
-```
- Baidu Certification
-```
-```
- Basic Ability Exam
-```
-```
- BBPSD
-```
-```
- The Chartered Institute for IT
-```
-```
- BOMI International
-```
-```
- Brightest GmbH
-```
-```
- Broadcom Software
-```
-```
- Business Solutions Suite
-```
-```
- CertiTrek
-```
-```
- CertNexus
-```
-```
- Chainshine Financial Training
-```
-```
- Chartered Global Management Accountant
-```
-```
- Chartered Institute of Management Accountants
-```
-```
- Check Point Software Technologies
-```
-```
- Cisco Systems
-```
-```
- Citrix Systems
-```
-```
- CMA Sri Lanka
-```
-```
- CompTIA Testing
-```
 ```
  Condition Zebra (M) Sdn. Bhd.
 ```

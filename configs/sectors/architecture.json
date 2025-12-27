@@ -1,0 +1,49 @@
+{
+  "name": "Construction & Infrastructure",
+  "slug": "architecture",
+  "icon": "\ud83c\udfd7\ufe0f",
+  "subtitle": "Build the future with BIM, project management, structural design, and sustainable construction",
+  "description": "Master construction technology, building information modeling, project delivery, and infrastructure engineering with certifications from Autodesk, PMI, LEED, and industry bodies.",
+  "gradient_start": "#f59e0b",
+  "gradient_end": "#d97706",
+  "cert_count": 38,
+  "vendor_count": 9,
+  "categories": [
+    {
+      "id": "bim-modeling",
+      "name": "BIM & Modeling",
+      "icon": "\ud83c\udfdb\ufe0f"
+    },
+    {
+      "id": "project-mgmt",
+      "name": "Project Management",
+      "icon": "\ud83d\udccb"
+    },
+    {
+      "id": "structural",
+      "name": "Structural Design",
+      "icon": "\ud83c\udfd7\ufe0f"
+    },
+    {
+      "id": "green-building",
+      "name": "Green Building",
+      "icon": "\ud83c\udf3f"
+    },
+    {
+      "id": "infrastructure",
+      "name": "Infrastructure",
+      "icon": "\ud83d\udea7"
+    }
+  ],
+  "vendors": [
+    "Autodesk",
+    "PMI",
+    "USGBC LEED",
+    "Bentley",
+    "Trimble",
+    "RICS",
+    "PCI",
+    "ACI",
+    "AISC"
+  ]
+}

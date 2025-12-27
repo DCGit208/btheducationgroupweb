@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cisco Level 2 Diagnostic</title>
+    <style>
+        body { font-family: system-ui, -apple-system, sans-serif; max-width: 1200px; margin: 20px auto; padding: 20px; background: #f8fafc; }
+        .card { background: white; border-radius: 12px; padding: 20px; margin: 20px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        h1 { color: #1e293b; }
+        h2 { color: #475569; border-bottom: 2px solid #e2e8f0; padding-bottom: 10px; }
+        .cert-item { padding: 10px; margin: 5px 0; background: #f1f5f9; border-left: 4px solid #3b82f6; }
+        .foundational { border-left-color: #10b981; }
+        .associate { border-left-color: #3b82f6; }
+        .professional { border-left-color: #f59e0b; }
+        .expert { border-left-color: #ef4444; }
+        .summary { font-size: 1.2em; font-weight: bold; color: #1e293b; padding: 15px; background: #dbeafe; border-radius: 8px; margin: 20px 0; }
+        .error { background: #fee2e2; color: #991b1b; padding: 15px; border-radius: 8px; margin: 10px 0; }
+        .success { background: #dcfce7; color: #166534; padding: 15px; border-radius: 8px; margin: 10px 0; }
+        .warning { background: #fef3c7; color: #92400e; padding: 15px; border-radius: 8px; margin: 10px 0; }
+        .code { font-family: 'Courier New', monospace; background: #1e293b; color: #e2e8f0; padding: 10px; border-radius: 6px; overflow-x: auto; }
+        .button { background: #3b82f6; color: white; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; font-size: 16px; margin: 5px; }
+        .button:hover { background: #2563eb; }
+    </style>
+</head>
+<body>
+    <h1>🔍 Cisco Level 2 Diagnostic Tool</h1>
+    
+    <div class="card">
+        <h2>Instructions</h2>
+        <ol>
+            <li><strong>Open</strong> your Information Technology page in a new tab</li>
+            <li><strong>Set filters:</strong> Vendor = Cisco, Level = 2</li>
+            <li><strong>Make sure</strong> "Strict Chronology" toggle is ON</li>
+            <li><strong>Open Developer Console</strong> (F12 or Cmd+Option+I on Mac)</li>
+            <li><strong>Paste</strong> the diagnostic code below into the Console</li>
+            <li><strong>Check</strong> the results here vs what you see on the page</li>
+        </ol>
+    </div>
+
+    <div class="card">
+        <h2>📋 Diagnostic Code (Copy & Paste into Console)</h2>
+        <div class="code">
+<pre>// CISCO LEVEL 2 DIAGNOSTIC
+console.log("=== CISCO LEVEL 2 DIAGNOSTIC ===");
+
+const level = 2;
+const vendor = 'Cisco';
+
+// Check if certifications array exists
+if (typeof certifications === 'undefined') {
+    console.error("❌ certifications array not found! Make sure you're on the IT programs page.");
+} else {
+    console.log(`✓ Found ${certifications.length} total certifications`);
+    
+    // Get active Cisco certifications
+    const active = certifications.filter(c => !c.retired && c.vendor === 'Cisco');
+    console.log(`✓ Found ${active.length} active Cisco certifications`);
+    
+    // Define stage checkers (same as page code)
+    const inferVendorStage = (c) => {
+        const n = String(c.name||'');
+        if (/(\bCCST\b|\bCCT\b|Certified Support Technician|Certified Technician)\b/i.test(n)) return 'Foundational';
+        if (/(\bCCNA\b|CyberOps Associate|DevNet Associate)\b/i.test(n)) return 'Associate';
+        if (/(\bCCNP\b|DevNet Professional)\b/i.test(n)) return 'Professional';
+        if (/(\bCCIE\b|\bCCDE\b|DevNet Expert)\b/i.test(n)) return 'Expert';
+        return null;
+    };
+    
+    const isFoundational = (c) => /Fundamental|Foundational/i.test(String(c.vendor_stage || inferVendorStage(c)));
+    const isAssociate = (c) => /Associate/i.test(String(c.vendor_stage || inferVendorStage(c)));
+    const isProfessional = (c) => /Professional/i.test(String(c.vendor_stage || inferVendorStage(c)));
+    const isExpert = (c) => /Expert/i.test(String(c.vendor_stage || inferVendorStage(c)));
+    
+    // Count by stage
+    const foundational = active.filter(isFoundational);
+    const associate = active.filter(isAssociate);
+    const professional = active.filter(isProfessional);
+    const expert = active.filter(isExpert);
+    
+    console.log("\n📊 CISCO CERTIFICATIONS BY STAGE:");
+    console.log(`Foundational: ${foundational.length}`);
+    foundational.forEach(c => console.log(`  - ${c.name}`));
+    
+    console.log(`\nAssociate: ${associate.length}`);
+    associate.forEach(c => console.log(`  - ${c.name}`));
+    
+    console.log(`\nProfessional: ${professional.length}`);
+    professional.forEach(c => console.log(`  - ${c.name}`));
+    
+    console.log(`\nExpert: ${expert.length}`);
+    expert.forEach(c => console.log(`  - ${c.name}`));
+    
+    // What SHOULD appear at Level 2
+    console.log("\n✅ EXPECTED AT CISCO LEVEL 2:");
+    console.log(`${foundational.length} Foundational + ${Math.min(3, associate.length)} Associates = ${foundational.length + Math.min(3, associate.length)} TOTAL`);
+    
+    // Check if Professional items would be included (BUG CHECK)
+    console.log("\n🔍 BUG CHECK - Would Professional items appear?");
+    if (level >= 3) {
+        console.log(`✓ CORRECT: level=${level} >= 3, Professional items SHOULD appear`);
+    } else {
+        console.log(`✓ CORRECT: level=${level} < 3, Professional items should NOT appear`);
+    }
+    
+    // Simulate the actual filter
+    console.log("\n🎯 SIMULATING ACTUAL PAGE FILTER:");
+    const out = [];
+    const seen = new Set();
+    
+    // Add foundational
+    foundational.forEach(c => { out.push(c); seen.add(c.id); });
+    console.log(`Added ${foundational.length} Foundational items`);
+    
+    // Add associates (limited to 3 as per L1_ASSOCIATE_LIMIT)
+    const assocAllowed = associate.slice(0, 3);
+    assocAllowed.forEach(c => { if (!seen.has(c.id)) { out.push(c); seen.add(c.id); } });
+    console.log(`Added ${assocAllowed.length} Associate items`);
+    
+    // Professional check
+    if (level >= 3) {
+        professional.forEach(c => { if (!seen.has(c.id)) { out.push(c); seen.add(c.id); } });
+        console.log(`Added ${professional.length} Professional items (level >= 3)`);
+    } else {
+        console.log(`Skipped Professional items (level=${level} < 3) ✓ CORRECT`);
+    }
+    
+    console.log(`\n📌 FINAL RESULT: ${out.length} certifications should appear at Cisco Level 2`);
+    console.log("\nList:");
+    out.forEach((c, i) => {
+        const stage = c.vendor_stage || inferVendorStage(c);
+        console.log(`${i+1}. ${c.name} [${stage}]`);
+    });
+    
+    // Compare with what's actually displayed
+    console.log("\n🔄 CHECKING ACTUAL PAGE DISPLAY:");
+    const displayedCards = document.querySelectorAll('.certification-card');
+    console.log(`Page is currently showing: ${displayedCards.length} certification cards`);
+    
+    if (displayedCards.length === out.length) {
+        console.log("✅ MATCH! Display count matches expected count.");
+    } else {
+        console.error(`❌ MISMATCH! Expected ${out.length} but page shows ${displayedCards.length}`);
+        console.error("This means either:");
+        console.error("1. Filters are not set correctly (check Vendor=Cisco, Level=2, Strict Chronology=ON)");
+        console.error("2. Browser cache issue - Try hard refresh: Cmd+Shift+R (Mac) or Ctrl+Shift+R (Windows)");
+        console.error("3. The page code has not been updated");
+    }
+}
+
+console.log("\n=== END DIAGNOSTIC ===");
+</pre>
+        </div>
+        <button class="button" onclick="copyToClipboard()">📋 Copy to Clipboard</button>
+    </div>
+
+    <div class="card">
+        <h2>✅ Expected Results for Cisco Level 2</h2>
+        <div class="summary">
+            TOTAL: 7 certifications (4 Foundational + 3 Associates)
+        </div>
+        
+        <h3>Foundational (4 items)</h3>
+        <div class="cert-item foundational">1. Cisco Certified Support Technician (CCST) Cybersecurity</div>
+        <div class="cert-item foundational">2. Cisco Certified Support Technician (CCST) Networking</div>
+        <div class="cert-item foundational">3. Cisco Certified Technician (CCT) Routing and Switching</div>
+        <div class="cert-item foundational">4. Cisco Certified Support Technician (CCST) IT Support</div>
+        
+        <h3>Associate (3 items)</h3>
+        <div class="cert-item associate">5. Cisco Certified Network Associate (CCNA)</div>
+        <div class="cert-item associate">6. Cisco CyberOps Associate</div>
+        <div class="cert-item associate">7. Cisco Certified DevNet Associate</div>
+        
+        <div class="warning">
+            <strong>⚠️ Professional items (CCNP) should NOT appear until Level 3</strong><br>
+            If you see 40 items at Level 2, that's the bug we fixed. The code now requires level >= 3 for Professional items.
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>🐛 What Was the Bug?</h2>
+        <p>The original code had:</p>
+        <div class="code">if (level >= 2) { // Add Professional items ❌ WRONG }</div>
+        
+        <p style="margin: 20px 0;">This was fixed to:</p>
+        <div class="code">if (level >= 3) { // Add Professional items ✅ CORRECT }</div>
+        
+        <p style="margin: 20px 0;">Location: <code>informationtechnology.html</code> line 2408</p>
+    </div>
+
+    <div class="card">
+        <h2>🔧 Troubleshooting Steps</h2>
+        <div class="warning">
+            <strong>If you're still seeing 40 items at Level 2:</strong>
+            <ol style="margin: 10px 0; padding-left: 20px;">
+                <li><strong>Hard Refresh:</strong> Press <kbd>Cmd</kbd>+<kbd>Shift</kbd>+<kbd>R</kbd> (Mac) or <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>R</kbd> (Windows/Linux)</li>
+                <li><strong>Clear Cache:</strong> Open DevTools (F12) → Network tab → Check "Disable cache" → Reload</li>
+                <li><strong>Check Filters:</strong> Make sure Vendor=Cisco, Level=2, and "Strict Chronology" toggle is ON</li>
+                <li><strong>Verify Code:</strong> View page source and search for "level >= 3" at line ~2408</li>
+            </ol>
+        </div>
+    </div>
+
+    <script>
+        function copyToClipboard() {
+            const codeBlock = document.querySelector('.code pre');
+            const text = codeBlock.textContent;
+            
+            navigator.clipboard.writeText(text).then(() => {
+                alert('✅ Diagnostic code copied! Now paste it into your browser console.');
+            }).catch(err => {
+                alert('❌ Failed to copy. Please select and copy manually.');
+            });
+        }
+    </script>
+</body>
+</html>

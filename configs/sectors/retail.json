@@ -1,0 +1,28 @@
+{
+  "name": "Retail & E-commerce",
+  "slug": "retail",
+  "icon": "\ud83d\udecd\ufe0f",
+  "subtitle": "Digital Commerce",
+  "description": "Shopify, Magento, WooCommerce, POS Systems, Omnichannel",
+  "description_long": "Build and manage digital commerce platforms with certifications in e-commerce systems, point-of-sale, inventory management, and omnichannel retail technology.",
+  "hero_gradient": [
+    "#ec4899",
+    "#be185d"
+  ],
+  "total_certifications": 35,
+  "total_vendors": 14,
+  "avg_salary": "$78,000",
+  "categories": [
+    "E-Commerce Platforms",
+    "POS Systems",
+    "Inventory Management",
+    "Payment Processing"
+  ],
+  "featured_vendors": [
+    "Shopify",
+    "Magento",
+    "WooCommerce",
+    "Square",
+    "Salesforce Commerce"
+  ]
+}

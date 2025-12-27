@@ -1,0 +1,737 @@
+[
+  {
+    "name": "Avid Broadcasting - Level 1",
+    "vendor": "Avid",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Broadcasting",
+    "focus": "Broadcasting expertise",
+    "exam": "AVID-1001",
+    "tags": [
+      "broadcasting",
+      "level-1",
+      "avid"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/avid.svg"
+  },
+  {
+    "name": "Adobe Streaming Platforms - Level 1",
+    "vendor": "Adobe",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Streaming Platforms",
+    "focus": "Streaming Platforms expertise",
+    "exam": "ADOBE-1002",
+    "tags": [
+      "streaming-platforms",
+      "level-1",
+      "adobe"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/adobe.svg"
+  },
+  {
+    "name": "Unity Game Development - Level 1",
+    "vendor": "Unity",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Game Development",
+    "focus": "Game Development expertise",
+    "exam": "UNITY-1003",
+    "tags": [
+      "game-development",
+      "level-1",
+      "unity"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/unity.svg"
+  },
+  {
+    "name": "Unreal Engine Audio/Video Production - Level 1",
+    "vendor": "Unreal Engine",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Audio/Video Production",
+    "focus": "Audio/Video Production expertise",
+    "exam": "UNREAL ENGINE-1004",
+    "tags": [
+      "audio/video-production",
+      "level-1",
+      "unreal-engine"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/unrealengine.svg"
+  },
+  {
+    "name": "Blackmagic Broadcasting - Level 1",
+    "vendor": "Blackmagic",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Broadcasting",
+    "focus": "Broadcasting expertise",
+    "exam": "BLACKMAGIC-1005",
+    "tags": [
+      "broadcasting",
+      "level-1",
+      "blackmagic"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/blackmagic.svg"
+  },
+  {
+    "name": "Avid Streaming Platforms - Level 1",
+    "vendor": "Avid",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Streaming Platforms",
+    "focus": "Streaming Platforms expertise",
+    "exam": "AVID-1006",
+    "tags": [
+      "streaming-platforms",
+      "level-1",
+      "avid"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/avid.svg"
+  },
+  {
+    "name": "Adobe Game Development - Level 1",
+    "vendor": "Adobe",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Game Development",
+    "focus": "Game Development expertise",
+    "exam": "ADOBE-1007",
+    "tags": [
+      "game-development",
+      "level-1",
+      "adobe"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/adobe.svg"
+  },
+  {
+    "name": "Unity Audio/Video Production - Level 1",
+    "vendor": "Unity",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Audio/Video Production",
+    "focus": "Audio/Video Production expertise",
+    "exam": "UNITY-1008",
+    "tags": [
+      "audio/video-production",
+      "level-1",
+      "unity"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/unity.svg"
+  },
+  {
+    "name": "Unreal Engine Broadcasting - Level 1",
+    "vendor": "Unreal Engine",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Broadcasting",
+    "focus": "Broadcasting expertise",
+    "exam": "UNREAL ENGINE-1009",
+    "tags": [
+      "broadcasting",
+      "level-1",
+      "unreal-engine"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/unrealengine.svg"
+  },
+  {
+    "name": "Avid Broadcasting - Level 2",
+    "vendor": "Avid",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Broadcasting",
+    "focus": "Broadcasting expertise",
+    "exam": "AVID-2010",
+    "tags": [
+      "broadcasting",
+      "level-2",
+      "avid"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/avid.svg"
+  },
+  {
+    "name": "Adobe Streaming Platforms - Level 2",
+    "vendor": "Adobe",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Streaming Platforms",
+    "focus": "Streaming Platforms expertise",
+    "exam": "ADOBE-2011",
+    "tags": [
+      "streaming-platforms",
+      "level-2",
+      "adobe"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/adobe.svg"
+  },
+  {
+    "name": "Unity Game Development - Level 2",
+    "vendor": "Unity",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Game Development",
+    "focus": "Game Development expertise",
+    "exam": "UNITY-2012",
+    "tags": [
+      "game-development",
+      "level-2",
+      "unity"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/unity.svg"
+  },
+  {
+    "name": "Unreal Engine Audio/Video Production - Level 2",
+    "vendor": "Unreal Engine",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Audio/Video Production",
+    "focus": "Audio/Video Production expertise",
+    "exam": "UNREAL ENGINE-2013",
+    "tags": [
+      "audio/video-production",
+      "level-2",
+      "unreal-engine"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/unrealengine.svg"
+  },
+  {
+    "name": "Blackmagic Broadcasting - Level 2",
+    "vendor": "Blackmagic",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Broadcasting",
+    "focus": "Broadcasting expertise",
+    "exam": "BLACKMAGIC-2014",
+    "tags": [
+      "broadcasting",
+      "level-2",
+      "blackmagic"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/blackmagic.svg"
+  },
+  {
+    "name": "Avid Streaming Platforms - Level 2",
+    "vendor": "Avid",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Streaming Platforms",
+    "focus": "Streaming Platforms expertise",
+    "exam": "AVID-2015",
+    "tags": [
+      "streaming-platforms",
+      "level-2",
+      "avid"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/avid.svg"
+  },
+  {
+    "name": "Adobe Game Development - Level 2",
+    "vendor": "Adobe",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Game Development",
+    "focus": "Game Development expertise",
+    "exam": "ADOBE-2016",
+    "tags": [
+      "game-development",
+      "level-2",
+      "adobe"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/adobe.svg"
+  },
+  {
+    "name": "Unity Audio/Video Production - Level 2",
+    "vendor": "Unity",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Audio/Video Production",
+    "focus": "Audio/Video Production expertise",
+    "exam": "UNITY-2017",
+    "tags": [
+      "audio/video-production",
+      "level-2",
+      "unity"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/unity.svg"
+  },
+  {
+    "name": "Unreal Engine Broadcasting - Level 2",
+    "vendor": "Unreal Engine",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Broadcasting",
+    "focus": "Broadcasting expertise",
+    "exam": "UNREAL ENGINE-2018",
+    "tags": [
+      "broadcasting",
+      "level-2",
+      "unreal-engine"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/unrealengine.svg"
+  },
+  {
+    "name": "Blackmagic Streaming Platforms - Level 2",
+    "vendor": "Blackmagic",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Streaming Platforms",
+    "focus": "Streaming Platforms expertise",
+    "exam": "BLACKMAGIC-2019",
+    "tags": [
+      "streaming-platforms",
+      "level-2",
+      "blackmagic"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/blackmagic.svg"
+  },
+  {
+    "name": "Avid Game Development - Level 2",
+    "vendor": "Avid",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Game Development",
+    "focus": "Game Development expertise",
+    "exam": "AVID-2020",
+    "tags": [
+      "game-development",
+      "level-2",
+      "avid"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/avid.svg"
+  },
+  {
+    "name": "Avid Broadcasting - Level 3",
+    "vendor": "Avid",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Broadcasting",
+    "focus": "Broadcasting expertise",
+    "exam": "AVID-3021",
+    "tags": [
+      "broadcasting",
+      "level-3",
+      "avid"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/avid.svg"
+  },
+  {
+    "name": "Adobe Streaming Platforms - Level 3",
+    "vendor": "Adobe",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Streaming Platforms",
+    "focus": "Streaming Platforms expertise",
+    "exam": "ADOBE-3022",
+    "tags": [
+      "streaming-platforms",
+      "level-3",
+      "adobe"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/adobe.svg"
+  },
+  {
+    "name": "Unity Game Development - Level 3",
+    "vendor": "Unity",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Game Development",
+    "focus": "Game Development expertise",
+    "exam": "UNITY-3023",
+    "tags": [
+      "game-development",
+      "level-3",
+      "unity"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/unity.svg"
+  },
+  {
+    "name": "Unreal Engine Audio/Video Production - Level 3",
+    "vendor": "Unreal Engine",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Audio/Video Production",
+    "focus": "Audio/Video Production expertise",
+    "exam": "UNREAL ENGINE-3024",
+    "tags": [
+      "audio/video-production",
+      "level-3",
+      "unreal-engine"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/unrealengine.svg"
+  },
+  {
+    "name": "Blackmagic Broadcasting - Level 3",
+    "vendor": "Blackmagic",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Broadcasting",
+    "focus": "Broadcasting expertise",
+    "exam": "BLACKMAGIC-3025",
+    "tags": [
+      "broadcasting",
+      "level-3",
+      "blackmagic"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/blackmagic.svg"
+  },
+  {
+    "name": "Avid Streaming Platforms - Level 3",
+    "vendor": "Avid",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Streaming Platforms",
+    "focus": "Streaming Platforms expertise",
+    "exam": "AVID-3026",
+    "tags": [
+      "streaming-platforms",
+      "level-3",
+      "avid"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/avid.svg"
+  },
+  {
+    "name": "Adobe Game Development - Level 3",
+    "vendor": "Adobe",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Game Development",
+    "focus": "Game Development expertise",
+    "exam": "ADOBE-3027",
+    "tags": [
+      "game-development",
+      "level-3",
+      "adobe"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/adobe.svg"
+  },
+  {
+    "name": "Unity Audio/Video Production - Level 3",
+    "vendor": "Unity",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Audio/Video Production",
+    "focus": "Audio/Video Production expertise",
+    "exam": "UNITY-3028",
+    "tags": [
+      "audio/video-production",
+      "level-3",
+      "unity"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/unity.svg"
+  },
+  {
+    "name": "Unreal Engine Broadcasting - Level 3",
+    "vendor": "Unreal Engine",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Broadcasting",
+    "focus": "Broadcasting expertise",
+    "exam": "UNREAL ENGINE-3029",
+    "tags": [
+      "broadcasting",
+      "level-3",
+      "unreal-engine"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/unrealengine.svg"
+  },
+  {
+    "name": "Avid Broadcasting - Level 4",
+    "vendor": "Avid",
+    "level": 4,
+    "level_range": [
+      4,
+      5
+    ],
+    "category": "Broadcasting",
+    "focus": "Broadcasting expertise",
+    "exam": "AVID-4030",
+    "tags": [
+      "broadcasting",
+      "level-4",
+      "avid"
+    ],
+    "vendor_stage": "Expert",
+    "price": 400,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/avid.svg"
+  },
+  {
+    "name": "Adobe Streaming Platforms - Level 4",
+    "vendor": "Adobe",
+    "level": 4,
+    "level_range": [
+      4,
+      5
+    ],
+    "category": "Streaming Platforms",
+    "focus": "Streaming Platforms expertise",
+    "exam": "ADOBE-4031",
+    "tags": [
+      "streaming-platforms",
+      "level-4",
+      "adobe"
+    ],
+    "vendor_stage": "Expert",
+    "price": 400,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/adobe.svg"
+  },
+  {
+    "name": "Unity Game Development - Level 4",
+    "vendor": "Unity",
+    "level": 4,
+    "level_range": [
+      4,
+      5
+    ],
+    "category": "Game Development",
+    "focus": "Game Development expertise",
+    "exam": "UNITY-4032",
+    "tags": [
+      "game-development",
+      "level-4",
+      "unity"
+    ],
+    "vendor_stage": "Expert",
+    "price": 400,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/unity.svg"
+  },
+  {
+    "name": "Unreal Engine Audio/Video Production - Level 4",
+    "vendor": "Unreal Engine",
+    "level": 4,
+    "level_range": [
+      4,
+      5
+    ],
+    "category": "Audio/Video Production",
+    "focus": "Audio/Video Production expertise",
+    "exam": "UNREAL ENGINE-4033",
+    "tags": [
+      "audio/video-production",
+      "level-4",
+      "unreal-engine"
+    ],
+    "vendor_stage": "Expert",
+    "price": 400,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/unrealengine.svg"
+  },
+  {
+    "name": "Blackmagic Broadcasting - Level 4",
+    "vendor": "Blackmagic",
+    "level": 4,
+    "level_range": [
+      4,
+      5
+    ],
+    "category": "Broadcasting",
+    "focus": "Broadcasting expertise",
+    "exam": "BLACKMAGIC-4034",
+    "tags": [
+      "broadcasting",
+      "level-4",
+      "blackmagic"
+    ],
+    "vendor_stage": "Expert",
+    "price": 400,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/blackmagic.svg"
+  },
+  {
+    "name": "Avid Broadcasting - Level 5",
+    "vendor": "Avid",
+    "level": 5,
+    "level_range": [
+      5,
+      5
+    ],
+    "category": "Broadcasting",
+    "focus": "Broadcasting expertise",
+    "exam": "AVID-5035",
+    "tags": [
+      "broadcasting",
+      "level-5",
+      "avid"
+    ],
+    "vendor_stage": "Master",
+    "price": 450,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/avid.svg"
+  }
+]

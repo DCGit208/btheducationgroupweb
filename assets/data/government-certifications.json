@@ -1,0 +1,485 @@
+[
+  {
+    "name": "Tyler Technologies GovTech Platforms - Level 1",
+    "vendor": "Tyler Technologies",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "GovTech Platforms",
+    "focus": "GovTech Platforms expertise",
+    "exam": "TYLER TECHNOLOGIES-1001",
+    "tags": [
+      "govtech-platforms",
+      "level-1",
+      "tyler-technologies"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/tylertechnologies.svg"
+  },
+  {
+    "name": "NIC Digital Identity - Level 1",
+    "vendor": "NIC",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Digital Identity",
+    "focus": "Digital Identity expertise",
+    "exam": "NIC-1002",
+    "tags": [
+      "digital-identity",
+      "level-1",
+      "nic"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/nic.svg"
+  },
+  {
+    "name": "Granicus Public Sector IT - Level 1",
+    "vendor": "Granicus",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Public Sector IT",
+    "focus": "Public Sector IT expertise",
+    "exam": "GRANICUS-1003",
+    "tags": [
+      "public-sector-it",
+      "level-1",
+      "granicus"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/granicus.svg"
+  },
+  {
+    "name": "Accela Civic Engagement - Level 1",
+    "vendor": "Accela",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Civic Engagement",
+    "focus": "Civic Engagement expertise",
+    "exam": "ACCELA-1004",
+    "tags": [
+      "civic-engagement",
+      "level-1",
+      "accela"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/accela.svg"
+  },
+  {
+    "name": "CivicPlus GovTech Platforms - Level 1",
+    "vendor": "CivicPlus",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "GovTech Platforms",
+    "focus": "GovTech Platforms expertise",
+    "exam": "CIVICPLUS-1005",
+    "tags": [
+      "govtech-platforms",
+      "level-1",
+      "civicplus"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/civicplus.svg"
+  },
+  {
+    "name": "Tyler Technologies Digital Identity - Level 1",
+    "vendor": "Tyler Technologies",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Digital Identity",
+    "focus": "Digital Identity expertise",
+    "exam": "TYLER TECHNOLOGIES-1006",
+    "tags": [
+      "digital-identity",
+      "level-1",
+      "tyler-technologies"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/tylertechnologies.svg"
+  },
+  {
+    "name": "Tyler Technologies GovTech Platforms - Level 2",
+    "vendor": "Tyler Technologies",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "GovTech Platforms",
+    "focus": "GovTech Platforms expertise",
+    "exam": "TYLER TECHNOLOGIES-2007",
+    "tags": [
+      "govtech-platforms",
+      "level-2",
+      "tyler-technologies"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/tylertechnologies.svg"
+  },
+  {
+    "name": "NIC Digital Identity - Level 2",
+    "vendor": "NIC",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Digital Identity",
+    "focus": "Digital Identity expertise",
+    "exam": "NIC-2008",
+    "tags": [
+      "digital-identity",
+      "level-2",
+      "nic"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/nic.svg"
+  },
+  {
+    "name": "Granicus Public Sector IT - Level 2",
+    "vendor": "Granicus",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Public Sector IT",
+    "focus": "Public Sector IT expertise",
+    "exam": "GRANICUS-2009",
+    "tags": [
+      "public-sector-it",
+      "level-2",
+      "granicus"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/granicus.svg"
+  },
+  {
+    "name": "Accela Civic Engagement - Level 2",
+    "vendor": "Accela",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Civic Engagement",
+    "focus": "Civic Engagement expertise",
+    "exam": "ACCELA-2010",
+    "tags": [
+      "civic-engagement",
+      "level-2",
+      "accela"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/accela.svg"
+  },
+  {
+    "name": "CivicPlus GovTech Platforms - Level 2",
+    "vendor": "CivicPlus",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "GovTech Platforms",
+    "focus": "GovTech Platforms expertise",
+    "exam": "CIVICPLUS-2011",
+    "tags": [
+      "govtech-platforms",
+      "level-2",
+      "civicplus"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/civicplus.svg"
+  },
+  {
+    "name": "Tyler Technologies Digital Identity - Level 2",
+    "vendor": "Tyler Technologies",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Digital Identity",
+    "focus": "Digital Identity expertise",
+    "exam": "TYLER TECHNOLOGIES-2012",
+    "tags": [
+      "digital-identity",
+      "level-2",
+      "tyler-technologies"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/tylertechnologies.svg"
+  },
+  {
+    "name": "NIC Public Sector IT - Level 2",
+    "vendor": "NIC",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Public Sector IT",
+    "focus": "Public Sector IT expertise",
+    "exam": "NIC-2013",
+    "tags": [
+      "public-sector-it",
+      "level-2",
+      "nic"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/nic.svg"
+  },
+  {
+    "name": "Tyler Technologies GovTech Platforms - Level 3",
+    "vendor": "Tyler Technologies",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "GovTech Platforms",
+    "focus": "GovTech Platforms expertise",
+    "exam": "TYLER TECHNOLOGIES-3014",
+    "tags": [
+      "govtech-platforms",
+      "level-3",
+      "tyler-technologies"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/tylertechnologies.svg"
+  },
+  {
+    "name": "NIC Digital Identity - Level 3",
+    "vendor": "NIC",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Digital Identity",
+    "focus": "Digital Identity expertise",
+    "exam": "NIC-3015",
+    "tags": [
+      "digital-identity",
+      "level-3",
+      "nic"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/nic.svg"
+  },
+  {
+    "name": "Granicus Public Sector IT - Level 3",
+    "vendor": "Granicus",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Public Sector IT",
+    "focus": "Public Sector IT expertise",
+    "exam": "GRANICUS-3016",
+    "tags": [
+      "public-sector-it",
+      "level-3",
+      "granicus"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/granicus.svg"
+  },
+  {
+    "name": "Accela Civic Engagement - Level 3",
+    "vendor": "Accela",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Civic Engagement",
+    "focus": "Civic Engagement expertise",
+    "exam": "ACCELA-3017",
+    "tags": [
+      "civic-engagement",
+      "level-3",
+      "accela"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/accela.svg"
+  },
+  {
+    "name": "CivicPlus GovTech Platforms - Level 3",
+    "vendor": "CivicPlus",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "GovTech Platforms",
+    "focus": "GovTech Platforms expertise",
+    "exam": "CIVICPLUS-3018",
+    "tags": [
+      "govtech-platforms",
+      "level-3",
+      "civicplus"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/civicplus.svg"
+  },
+  {
+    "name": "Tyler Technologies Digital Identity - Level 3",
+    "vendor": "Tyler Technologies",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Digital Identity",
+    "focus": "Digital Identity expertise",
+    "exam": "TYLER TECHNOLOGIES-3019",
+    "tags": [
+      "digital-identity",
+      "level-3",
+      "tyler-technologies"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/tylertechnologies.svg"
+  },
+  {
+    "name": "Tyler Technologies GovTech Platforms - Level 4",
+    "vendor": "Tyler Technologies",
+    "level": 4,
+    "level_range": [
+      4,
+      5
+    ],
+    "category": "GovTech Platforms",
+    "focus": "GovTech Platforms expertise",
+    "exam": "TYLER TECHNOLOGIES-4020",
+    "tags": [
+      "govtech-platforms",
+      "level-4",
+      "tyler-technologies"
+    ],
+    "vendor_stage": "Expert",
+    "price": 400,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/tylertechnologies.svg"
+  },
+  {
+    "name": "NIC Digital Identity - Level 4",
+    "vendor": "NIC",
+    "level": 4,
+    "level_range": [
+      4,
+      5
+    ],
+    "category": "Digital Identity",
+    "focus": "Digital Identity expertise",
+    "exam": "NIC-4021",
+    "tags": [
+      "digital-identity",
+      "level-4",
+      "nic"
+    ],
+    "vendor_stage": "Expert",
+    "price": 400,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/nic.svg"
+  },
+  {
+    "name": "Granicus Public Sector IT - Level 4",
+    "vendor": "Granicus",
+    "level": 4,
+    "level_range": [
+      4,
+      5
+    ],
+    "category": "Public Sector IT",
+    "focus": "Public Sector IT expertise",
+    "exam": "GRANICUS-4022",
+    "tags": [
+      "public-sector-it",
+      "level-4",
+      "granicus"
+    ],
+    "vendor_stage": "Expert",
+    "price": 400,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/granicus.svg"
+  },
+  {
+    "name": "Tyler Technologies GovTech Platforms - Level 5",
+    "vendor": "Tyler Technologies",
+    "level": 5,
+    "level_range": [
+      5,
+      5
+    ],
+    "category": "GovTech Platforms",
+    "focus": "GovTech Platforms expertise",
+    "exam": "TYLER TECHNOLOGIES-5023",
+    "tags": [
+      "govtech-platforms",
+      "level-5",
+      "tyler-technologies"
+    ],
+    "vendor_stage": "Master",
+    "price": 450,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/tylertechnologies.svg"
+  }
+]

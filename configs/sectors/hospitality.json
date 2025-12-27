@@ -1,0 +1,28 @@
+{
+  "name": "Hospitality & Tourism Technology",
+  "slug": "hospitality",
+  "icon": "\ud83c\udfe8",
+  "subtitle": "Hotel & Travel Systems",
+  "description": "Hotel Management (Opera, Mews), Restaurant POS, Tourism Tech",
+  "description_long": "Optimize hospitality operations with certifications in property management systems, restaurant technology, booking platforms, and guest experience solutions.",
+  "hero_gradient": [
+    "#f59e0b",
+    "#d97706"
+  ],
+  "total_certifications": 32,
+  "total_vendors": 13,
+  "avg_salary": "$72,000",
+  "categories": [
+    "Property Management",
+    "Restaurant POS",
+    "Booking Systems",
+    "Guest Experience"
+  ],
+  "featured_vendors": [
+    "Oracle Hospitality",
+    "Mews",
+    "Toast",
+    "OpenTable",
+    "Amadeus"
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "name": "Communications & Telecommunications",
+  "slug": "communications",
+  "icon": "\ud83d\udce1",
+  "subtitle": "Master 5G networks, fiber optics, satellite systems, and next-generation wireless technologies",
+  "description": "Develop expertise in telecommunications infrastructure, network operations, wireless technologies, and broadcasting with certifications from Cisco, Nokia, Ericsson, and telecom leaders.",
+  "gradient_start": "#3b82f6",
+  "gradient_end": "#1d4ed8",
+  "cert_count": 33,
+  "vendor_count": 8,
+  "categories": [
+    {
+      "id": "5g-wireless",
+      "name": "5G & Wireless",
+      "icon": "\ud83d\udcf6"
+    },
+    {
+      "id": "fiber-optics",
+      "name": "Fiber Optics",
+      "icon": "\ud83c\udf10"
+    },
+    {
+      "id": "satellite",
+      "name": "Satellite Systems",
+      "icon": "\ud83d\udef0\ufe0f"
+    },
+    {
+      "id": "telecom-ops",
+      "name": "Telecom Operations",
+      "icon": "\ud83d\udce1"
+    },
+    {
+      "id": "broadcasting",
+      "name": "Broadcasting",
+      "icon": "\ud83d\udcfa"
+    }
+  ],
+  "vendors": [
+    "Cisco",
+    "Nokia",
+    "Ericsson",
+    "Huawei",
+    "Juniper",
+    "Aruba",
+    "SMPTE",
+    "SBE"
+  ]
+}

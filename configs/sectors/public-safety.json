@@ -1,0 +1,28 @@
+{
+  "name": "Public Safety & Emergency Services",
+  "slug": "public-safety",
+  "icon": "\ud83d\udea8",
+  "subtitle": "Emergency Management & Safety Tech",
+  "description": "Emergency Management, Fire Safety, Security Systems, Public Safety Tech",
+  "description_long": "Protect communities with certifications in emergency management systems, fire safety technology, security operations, and public safety communications.",
+  "hero_gradient": [
+    "#dc2626",
+    "#7f1d1d"
+  ],
+  "total_certifications": 35,
+  "total_vendors": 14,
+  "avg_salary": "$82,000",
+  "categories": [
+    "Emergency Management",
+    "Fire Safety",
+    "Security Systems",
+    "Public Safety Communications"
+  ],
+  "featured_vendors": [
+    "FEMA",
+    "NFPA",
+    "ASIS",
+    "DHS",
+    "Motorola Solutions"
+  ]
+}

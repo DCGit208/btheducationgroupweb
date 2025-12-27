@@ -1,0 +1,800 @@
+[
+  {
+    "name": "Autodesk BIM & Modeling - Level 1",
+    "vendor": "Autodesk",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "bim-modeling",
+    "focus": "BIM & Modeling expertise",
+    "exam": "AUTODESK-1001",
+    "tags": [
+      "bim-modeling",
+      "level-1",
+      "autodesk"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/autodesk.svg"
+  },
+  {
+    "name": "Autodesk Project Management - Level 1",
+    "vendor": "Autodesk",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "project-mgmt",
+    "focus": "Project Management expertise",
+    "exam": "AUTODESK-1002",
+    "tags": [
+      "project-mgmt",
+      "level-1",
+      "autodesk"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/autodesk.svg"
+  },
+  {
+    "name": "Autodesk Project Management - Level 2",
+    "vendor": "Autodesk",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "project-mgmt",
+    "focus": "Advanced Project Management",
+    "exam": "AUTODESK-2003",
+    "tags": [
+      "project-mgmt",
+      "level-2",
+      "autodesk"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/autodesk.svg"
+  },
+  {
+    "name": "Autodesk Structural Design - Level 2",
+    "vendor": "Autodesk",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "structural",
+    "focus": "Advanced Structural Design",
+    "exam": "AUTODESK-2004",
+    "tags": [
+      "structural",
+      "level-2",
+      "autodesk"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/autodesk.svg"
+  },
+  {
+    "name": "Autodesk Green Building - Level 2",
+    "vendor": "Autodesk",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "green-building",
+    "focus": "Advanced Green Building",
+    "exam": "AUTODESK-2005",
+    "tags": [
+      "green-building",
+      "level-2",
+      "autodesk"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/autodesk.svg"
+  },
+  {
+    "name": "PMI BIM & Modeling - Level 1",
+    "vendor": "PMI",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "bim-modeling",
+    "focus": "BIM & Modeling expertise",
+    "exam": "PMI-1006",
+    "tags": [
+      "bim-modeling",
+      "level-1",
+      "pmi"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/pmi.svg"
+  },
+  {
+    "name": "PMI Project Management - Level 1",
+    "vendor": "PMI",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "project-mgmt",
+    "focus": "Project Management expertise",
+    "exam": "PMI-1007",
+    "tags": [
+      "project-mgmt",
+      "level-1",
+      "pmi"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/pmi.svg"
+  },
+  {
+    "name": "PMI Project Management - Level 2",
+    "vendor": "PMI",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "project-mgmt",
+    "focus": "Advanced Project Management",
+    "exam": "PMI-2008",
+    "tags": [
+      "project-mgmt",
+      "level-2",
+      "pmi"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/pmi.svg"
+  },
+  {
+    "name": "PMI Structural Design - Level 2",
+    "vendor": "PMI",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "structural",
+    "focus": "Advanced Structural Design",
+    "exam": "PMI-2009",
+    "tags": [
+      "structural",
+      "level-2",
+      "pmi"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/pmi.svg"
+  },
+  {
+    "name": "PMI Green Building - Level 2",
+    "vendor": "PMI",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "green-building",
+    "focus": "Advanced Green Building",
+    "exam": "PMI-2010",
+    "tags": [
+      "green-building",
+      "level-2",
+      "pmi"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/pmi.svg"
+  },
+  {
+    "name": "USGBC LEED BIM & Modeling - Level 1",
+    "vendor": "USGBC LEED",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "bim-modeling",
+    "focus": "BIM & Modeling expertise",
+    "exam": "USGBCLEE-1011",
+    "tags": [
+      "bim-modeling",
+      "level-1",
+      "usgbc-leed"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/usgbc-leed.svg"
+  },
+  {
+    "name": "USGBC LEED Project Management - Level 1",
+    "vendor": "USGBC LEED",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "project-mgmt",
+    "focus": "Project Management expertise",
+    "exam": "USGBCLEE-1012",
+    "tags": [
+      "project-mgmt",
+      "level-1",
+      "usgbc-leed"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/usgbc-leed.svg"
+  },
+  {
+    "name": "USGBC LEED Project Management - Level 2",
+    "vendor": "USGBC LEED",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "project-mgmt",
+    "focus": "Advanced Project Management",
+    "exam": "USGBCLEE-2013",
+    "tags": [
+      "project-mgmt",
+      "level-2",
+      "usgbc-leed"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/usgbc-leed.svg"
+  },
+  {
+    "name": "USGBC LEED Structural Design - Level 2",
+    "vendor": "USGBC LEED",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "structural",
+    "focus": "Advanced Structural Design",
+    "exam": "USGBCLEE-2014",
+    "tags": [
+      "structural",
+      "level-2",
+      "usgbc-leed"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/usgbc-leed.svg"
+  },
+  {
+    "name": "USGBC LEED Green Building - Level 2",
+    "vendor": "USGBC LEED",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "green-building",
+    "focus": "Advanced Green Building",
+    "exam": "USGBCLEE-2015",
+    "tags": [
+      "green-building",
+      "level-2",
+      "usgbc-leed"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/usgbc-leed.svg"
+  },
+  {
+    "name": "Bentley BIM & Modeling - Level 1",
+    "vendor": "Bentley",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "bim-modeling",
+    "focus": "BIM & Modeling expertise",
+    "exam": "BENTLEY-1016",
+    "tags": [
+      "bim-modeling",
+      "level-1",
+      "bentley"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/bentley.svg"
+  },
+  {
+    "name": "Bentley Project Management - Level 1",
+    "vendor": "Bentley",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "project-mgmt",
+    "focus": "Project Management expertise",
+    "exam": "BENTLEY-1017",
+    "tags": [
+      "project-mgmt",
+      "level-1",
+      "bentley"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/bentley.svg"
+  },
+  {
+    "name": "Bentley Project Management - Level 2",
+    "vendor": "Bentley",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "project-mgmt",
+    "focus": "Advanced Project Management",
+    "exam": "BENTLEY-2018",
+    "tags": [
+      "project-mgmt",
+      "level-2",
+      "bentley"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/bentley.svg"
+  },
+  {
+    "name": "Bentley Structural Design - Level 2",
+    "vendor": "Bentley",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "structural",
+    "focus": "Advanced Structural Design",
+    "exam": "BENTLEY-2019",
+    "tags": [
+      "structural",
+      "level-2",
+      "bentley"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/bentley.svg"
+  },
+  {
+    "name": "Bentley Green Building - Level 2",
+    "vendor": "Bentley",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "green-building",
+    "focus": "Advanced Green Building",
+    "exam": "BENTLEY-2020",
+    "tags": [
+      "green-building",
+      "level-2",
+      "bentley"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/bentley.svg"
+  },
+  {
+    "name": "Trimble BIM & Modeling - Level 1",
+    "vendor": "Trimble",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "bim-modeling",
+    "focus": "BIM & Modeling expertise",
+    "exam": "TRIMBLE-1021",
+    "tags": [
+      "bim-modeling",
+      "level-1",
+      "trimble"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/trimble.svg"
+  },
+  {
+    "name": "Trimble Project Management - Level 1",
+    "vendor": "Trimble",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "project-mgmt",
+    "focus": "Project Management expertise",
+    "exam": "TRIMBLE-1022",
+    "tags": [
+      "project-mgmt",
+      "level-1",
+      "trimble"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/trimble.svg"
+  },
+  {
+    "name": "Trimble Project Management - Level 2",
+    "vendor": "Trimble",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "project-mgmt",
+    "focus": "Advanced Project Management",
+    "exam": "TRIMBLE-2023",
+    "tags": [
+      "project-mgmt",
+      "level-2",
+      "trimble"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/trimble.svg"
+  },
+  {
+    "name": "Trimble Structural Design - Level 2",
+    "vendor": "Trimble",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "structural",
+    "focus": "Advanced Structural Design",
+    "exam": "TRIMBLE-2024",
+    "tags": [
+      "structural",
+      "level-2",
+      "trimble"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/trimble.svg"
+  },
+  {
+    "name": "Trimble Green Building - Level 2",
+    "vendor": "Trimble",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "green-building",
+    "focus": "Advanced Green Building",
+    "exam": "TRIMBLE-2025",
+    "tags": [
+      "green-building",
+      "level-2",
+      "trimble"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/trimble.svg"
+  },
+  {
+    "name": "RICS BIM & Modeling - Level 1",
+    "vendor": "RICS",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "bim-modeling",
+    "focus": "BIM & Modeling expertise",
+    "exam": "RICS-1026",
+    "tags": [
+      "bim-modeling",
+      "level-1",
+      "rics"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/rics.svg"
+  },
+  {
+    "name": "RICS Project Management - Level 1",
+    "vendor": "RICS",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "project-mgmt",
+    "focus": "Project Management expertise",
+    "exam": "RICS-1027",
+    "tags": [
+      "project-mgmt",
+      "level-1",
+      "rics"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/rics.svg"
+  },
+  {
+    "name": "RICS Project Management - Level 2",
+    "vendor": "RICS",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "project-mgmt",
+    "focus": "Advanced Project Management",
+    "exam": "RICS-2028",
+    "tags": [
+      "project-mgmt",
+      "level-2",
+      "rics"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/rics.svg"
+  },
+  {
+    "name": "RICS Structural Design - Level 2",
+    "vendor": "RICS",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "structural",
+    "focus": "Advanced Structural Design",
+    "exam": "RICS-2029",
+    "tags": [
+      "structural",
+      "level-2",
+      "rics"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/rics.svg"
+  },
+  {
+    "name": "RICS Green Building - Level 2",
+    "vendor": "RICS",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "green-building",
+    "focus": "Advanced Green Building",
+    "exam": "RICS-2030",
+    "tags": [
+      "green-building",
+      "level-2",
+      "rics"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/rics.svg"
+  },
+  {
+    "name": "PCI BIM & Modeling - Level 1",
+    "vendor": "PCI",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "bim-modeling",
+    "focus": "BIM & Modeling expertise",
+    "exam": "PCI-1031",
+    "tags": [
+      "bim-modeling",
+      "level-1",
+      "pci"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/pci.svg"
+  },
+  {
+    "name": "PCI Project Management - Level 1",
+    "vendor": "PCI",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "project-mgmt",
+    "focus": "Project Management expertise",
+    "exam": "PCI-1032",
+    "tags": [
+      "project-mgmt",
+      "level-1",
+      "pci"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/pci.svg"
+  },
+  {
+    "name": "PCI Project Management - Level 2",
+    "vendor": "PCI",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "project-mgmt",
+    "focus": "Advanced Project Management",
+    "exam": "PCI-2033",
+    "tags": [
+      "project-mgmt",
+      "level-2",
+      "pci"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/pci.svg"
+  },
+  {
+    "name": "PCI Structural Design - Level 2",
+    "vendor": "PCI",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "structural",
+    "focus": "Advanced Structural Design",
+    "exam": "PCI-2034",
+    "tags": [
+      "structural",
+      "level-2",
+      "pci"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/pci.svg"
+  },
+  {
+    "name": "PCI Green Building - Level 2",
+    "vendor": "PCI",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "green-building",
+    "focus": "Advanced Green Building",
+    "exam": "PCI-2035",
+    "tags": [
+      "green-building",
+      "level-2",
+      "pci"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/pci.svg"
+  },
+  {
+    "name": "ACI BIM & Modeling - Level 1",
+    "vendor": "ACI",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "bim-modeling",
+    "focus": "BIM & Modeling expertise",
+    "exam": "ACI-1036",
+    "tags": [
+      "bim-modeling",
+      "level-1",
+      "aci"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/aci.svg"
+  },
+  {
+    "name": "ACI Project Management - Level 1",
+    "vendor": "ACI",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "project-mgmt",
+    "focus": "Project Management expertise",
+    "exam": "ACI-1037",
+    "tags": [
+      "project-mgmt",
+      "level-1",
+      "aci"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/aci.svg"
+  },
+  {
+    "name": "ACI Project Management - Level 2",
+    "vendor": "ACI",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "project-mgmt",
+    "focus": "Advanced Project Management",
+    "exam": "ACI-2038",
+    "tags": [
+      "project-mgmt",
+      "level-2",
+      "aci"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/aci.svg"
+  }
+]

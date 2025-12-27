@@ -1,0 +1,527 @@
+[
+  {
+    "name": "John Deere Precision Agriculture - Level 1",
+    "vendor": "John Deere",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Precision Agriculture",
+    "focus": "Precision Agriculture expertise",
+    "exam": "JOHN DEERE-1001",
+    "tags": [
+      "precision-agriculture",
+      "level-1",
+      "john-deere"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/johndeere.svg"
+  },
+  {
+    "name": "CNH Industrial Agricultural Drones - Level 1",
+    "vendor": "CNH Industrial",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Agricultural Drones",
+    "focus": "Agricultural Drones expertise",
+    "exam": "CNH INDUSTRIAL-1002",
+    "tags": [
+      "agricultural-drones",
+      "level-1",
+      "cnh-industrial"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/cnhindustrial.svg"
+  },
+  {
+    "name": "Trimble IoT Agriculture - Level 1",
+    "vendor": "Trimble",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "IoT Agriculture",
+    "focus": "IoT Agriculture expertise",
+    "exam": "TRIMBLE-1003",
+    "tags": [
+      "iot-agriculture",
+      "level-1",
+      "trimble"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/trimble.svg"
+  },
+  {
+    "name": "DJI Agriculture Smart Irrigation - Level 1",
+    "vendor": "DJI Agriculture",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Smart Irrigation",
+    "focus": "Smart Irrigation expertise",
+    "exam": "DJI AGRICULTURE-1004",
+    "tags": [
+      "smart-irrigation",
+      "level-1",
+      "dji-agriculture"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/djiagriculture.svg"
+  },
+  {
+    "name": "Climate FieldView Precision Agriculture - Level 1",
+    "vendor": "Climate FieldView",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Precision Agriculture",
+    "focus": "Precision Agriculture expertise",
+    "exam": "CLIMATE FIELDVIEW-1005",
+    "tags": [
+      "precision-agriculture",
+      "level-1",
+      "climate-fieldview"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/climatefieldview.svg"
+  },
+  {
+    "name": "John Deere Agricultural Drones - Level 1",
+    "vendor": "John Deere",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Agricultural Drones",
+    "focus": "Agricultural Drones expertise",
+    "exam": "JOHN DEERE-1006",
+    "tags": [
+      "agricultural-drones",
+      "level-1",
+      "john-deere"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/johndeere.svg"
+  },
+  {
+    "name": "John Deere Precision Agriculture - Level 2",
+    "vendor": "John Deere",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Precision Agriculture",
+    "focus": "Precision Agriculture expertise",
+    "exam": "JOHN DEERE-2007",
+    "tags": [
+      "precision-agriculture",
+      "level-2",
+      "john-deere"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/johndeere.svg"
+  },
+  {
+    "name": "CNH Industrial Agricultural Drones - Level 2",
+    "vendor": "CNH Industrial",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Agricultural Drones",
+    "focus": "Agricultural Drones expertise",
+    "exam": "CNH INDUSTRIAL-2008",
+    "tags": [
+      "agricultural-drones",
+      "level-2",
+      "cnh-industrial"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/cnhindustrial.svg"
+  },
+  {
+    "name": "Trimble IoT Agriculture - Level 2",
+    "vendor": "Trimble",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "IoT Agriculture",
+    "focus": "IoT Agriculture expertise",
+    "exam": "TRIMBLE-2009",
+    "tags": [
+      "iot-agriculture",
+      "level-2",
+      "trimble"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/trimble.svg"
+  },
+  {
+    "name": "DJI Agriculture Smart Irrigation - Level 2",
+    "vendor": "DJI Agriculture",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Smart Irrigation",
+    "focus": "Smart Irrigation expertise",
+    "exam": "DJI AGRICULTURE-2010",
+    "tags": [
+      "smart-irrigation",
+      "level-2",
+      "dji-agriculture"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/djiagriculture.svg"
+  },
+  {
+    "name": "Climate FieldView Precision Agriculture - Level 2",
+    "vendor": "Climate FieldView",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Precision Agriculture",
+    "focus": "Precision Agriculture expertise",
+    "exam": "CLIMATE FIELDVIEW-2011",
+    "tags": [
+      "precision-agriculture",
+      "level-2",
+      "climate-fieldview"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/climatefieldview.svg"
+  },
+  {
+    "name": "John Deere Agricultural Drones - Level 2",
+    "vendor": "John Deere",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Agricultural Drones",
+    "focus": "Agricultural Drones expertise",
+    "exam": "JOHN DEERE-2012",
+    "tags": [
+      "agricultural-drones",
+      "level-2",
+      "john-deere"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/johndeere.svg"
+  },
+  {
+    "name": "CNH Industrial IoT Agriculture - Level 2",
+    "vendor": "CNH Industrial",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "IoT Agriculture",
+    "focus": "IoT Agriculture expertise",
+    "exam": "CNH INDUSTRIAL-2013",
+    "tags": [
+      "iot-agriculture",
+      "level-2",
+      "cnh-industrial"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/cnhindustrial.svg"
+  },
+  {
+    "name": "Trimble Smart Irrigation - Level 2",
+    "vendor": "Trimble",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Smart Irrigation",
+    "focus": "Smart Irrigation expertise",
+    "exam": "TRIMBLE-2014",
+    "tags": [
+      "smart-irrigation",
+      "level-2",
+      "trimble"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/trimble.svg"
+  },
+  {
+    "name": "John Deere Precision Agriculture - Level 3",
+    "vendor": "John Deere",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Precision Agriculture",
+    "focus": "Precision Agriculture expertise",
+    "exam": "JOHN DEERE-3015",
+    "tags": [
+      "precision-agriculture",
+      "level-3",
+      "john-deere"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/johndeere.svg"
+  },
+  {
+    "name": "CNH Industrial Agricultural Drones - Level 3",
+    "vendor": "CNH Industrial",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Agricultural Drones",
+    "focus": "Agricultural Drones expertise",
+    "exam": "CNH INDUSTRIAL-3016",
+    "tags": [
+      "agricultural-drones",
+      "level-3",
+      "cnh-industrial"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/cnhindustrial.svg"
+  },
+  {
+    "name": "Trimble IoT Agriculture - Level 3",
+    "vendor": "Trimble",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "IoT Agriculture",
+    "focus": "IoT Agriculture expertise",
+    "exam": "TRIMBLE-3017",
+    "tags": [
+      "iot-agriculture",
+      "level-3",
+      "trimble"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/trimble.svg"
+  },
+  {
+    "name": "DJI Agriculture Smart Irrigation - Level 3",
+    "vendor": "DJI Agriculture",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Smart Irrigation",
+    "focus": "Smart Irrigation expertise",
+    "exam": "DJI AGRICULTURE-3018",
+    "tags": [
+      "smart-irrigation",
+      "level-3",
+      "dji-agriculture"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/djiagriculture.svg"
+  },
+  {
+    "name": "Climate FieldView Precision Agriculture - Level 3",
+    "vendor": "Climate FieldView",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Precision Agriculture",
+    "focus": "Precision Agriculture expertise",
+    "exam": "CLIMATE FIELDVIEW-3019",
+    "tags": [
+      "precision-agriculture",
+      "level-3",
+      "climate-fieldview"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/climatefieldview.svg"
+  },
+  {
+    "name": "John Deere Agricultural Drones - Level 3",
+    "vendor": "John Deere",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Agricultural Drones",
+    "focus": "Agricultural Drones expertise",
+    "exam": "JOHN DEERE-3020",
+    "tags": [
+      "agricultural-drones",
+      "level-3",
+      "john-deere"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/johndeere.svg"
+  },
+  {
+    "name": "John Deere Precision Agriculture - Level 4",
+    "vendor": "John Deere",
+    "level": 4,
+    "level_range": [
+      4,
+      5
+    ],
+    "category": "Precision Agriculture",
+    "focus": "Precision Agriculture expertise",
+    "exam": "JOHN DEERE-4021",
+    "tags": [
+      "precision-agriculture",
+      "level-4",
+      "john-deere"
+    ],
+    "vendor_stage": "Expert",
+    "price": 400,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/johndeere.svg"
+  },
+  {
+    "name": "CNH Industrial Agricultural Drones - Level 4",
+    "vendor": "CNH Industrial",
+    "level": 4,
+    "level_range": [
+      4,
+      5
+    ],
+    "category": "Agricultural Drones",
+    "focus": "Agricultural Drones expertise",
+    "exam": "CNH INDUSTRIAL-4022",
+    "tags": [
+      "agricultural-drones",
+      "level-4",
+      "cnh-industrial"
+    ],
+    "vendor_stage": "Expert",
+    "price": 400,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/cnhindustrial.svg"
+  },
+  {
+    "name": "Trimble IoT Agriculture - Level 4",
+    "vendor": "Trimble",
+    "level": 4,
+    "level_range": [
+      4,
+      5
+    ],
+    "category": "IoT Agriculture",
+    "focus": "IoT Agriculture expertise",
+    "exam": "TRIMBLE-4023",
+    "tags": [
+      "iot-agriculture",
+      "level-4",
+      "trimble"
+    ],
+    "vendor_stage": "Expert",
+    "price": 400,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/trimble.svg"
+  },
+  {
+    "name": "DJI Agriculture Smart Irrigation - Level 4",
+    "vendor": "DJI Agriculture",
+    "level": 4,
+    "level_range": [
+      4,
+      5
+    ],
+    "category": "Smart Irrigation",
+    "focus": "Smart Irrigation expertise",
+    "exam": "DJI AGRICULTURE-4024",
+    "tags": [
+      "smart-irrigation",
+      "level-4",
+      "dji-agriculture"
+    ],
+    "vendor_stage": "Expert",
+    "price": 400,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/djiagriculture.svg"
+  },
+  {
+    "name": "John Deere Precision Agriculture - Level 5",
+    "vendor": "John Deere",
+    "level": 5,
+    "level_range": [
+      5,
+      5
+    ],
+    "category": "Precision Agriculture",
+    "focus": "Precision Agriculture expertise",
+    "exam": "JOHN DEERE-5025",
+    "tags": [
+      "precision-agriculture",
+      "level-5",
+      "john-deere"
+    ],
+    "vendor_stage": "Master",
+    "price": 450,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/johndeere.svg"
+  }
+]

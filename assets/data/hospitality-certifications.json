@@ -1,0 +1,632 @@
+[
+  {
+    "name": "Oracle Hospitality Property Management - Level 1",
+    "vendor": "Oracle Hospitality",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Property Management",
+    "focus": "Property Management expertise",
+    "exam": "ORACLE HOSPITALITY-1001",
+    "tags": [
+      "property-management",
+      "level-1",
+      "oracle-hospitality"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/oraclehospitality.svg"
+  },
+  {
+    "name": "Mews Restaurant POS - Level 1",
+    "vendor": "Mews",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Restaurant POS",
+    "focus": "Restaurant POS expertise",
+    "exam": "MEWS-1002",
+    "tags": [
+      "restaurant-pos",
+      "level-1",
+      "mews"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/mews.svg"
+  },
+  {
+    "name": "Toast Booking Systems - Level 1",
+    "vendor": "Toast",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Booking Systems",
+    "focus": "Booking Systems expertise",
+    "exam": "TOAST-1003",
+    "tags": [
+      "booking-systems",
+      "level-1",
+      "toast"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/toast.svg"
+  },
+  {
+    "name": "OpenTable Guest Experience - Level 1",
+    "vendor": "OpenTable",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Guest Experience",
+    "focus": "Guest Experience expertise",
+    "exam": "OPENTABLE-1004",
+    "tags": [
+      "guest-experience",
+      "level-1",
+      "opentable"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/opentable.svg"
+  },
+  {
+    "name": "Amadeus Property Management - Level 1",
+    "vendor": "Amadeus",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Property Management",
+    "focus": "Property Management expertise",
+    "exam": "AMADEUS-1005",
+    "tags": [
+      "property-management",
+      "level-1",
+      "amadeus"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/amadeus.svg"
+  },
+  {
+    "name": "Oracle Hospitality Restaurant POS - Level 1",
+    "vendor": "Oracle Hospitality",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Restaurant POS",
+    "focus": "Restaurant POS expertise",
+    "exam": "ORACLE HOSPITALITY-1006",
+    "tags": [
+      "restaurant-pos",
+      "level-1",
+      "oracle-hospitality"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/oraclehospitality.svg"
+  },
+  {
+    "name": "Mews Booking Systems - Level 1",
+    "vendor": "Mews",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Booking Systems",
+    "focus": "Booking Systems expertise",
+    "exam": "MEWS-1007",
+    "tags": [
+      "booking-systems",
+      "level-1",
+      "mews"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/mews.svg"
+  },
+  {
+    "name": "Toast Guest Experience - Level 1",
+    "vendor": "Toast",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Guest Experience",
+    "focus": "Guest Experience expertise",
+    "exam": "TOAST-1008",
+    "tags": [
+      "guest-experience",
+      "level-1",
+      "toast"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/toast.svg"
+  },
+  {
+    "name": "Oracle Hospitality Property Management - Level 2",
+    "vendor": "Oracle Hospitality",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Property Management",
+    "focus": "Property Management expertise",
+    "exam": "ORACLE HOSPITALITY-2009",
+    "tags": [
+      "property-management",
+      "level-2",
+      "oracle-hospitality"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/oraclehospitality.svg"
+  },
+  {
+    "name": "Mews Restaurant POS - Level 2",
+    "vendor": "Mews",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Restaurant POS",
+    "focus": "Restaurant POS expertise",
+    "exam": "MEWS-2010",
+    "tags": [
+      "restaurant-pos",
+      "level-2",
+      "mews"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/mews.svg"
+  },
+  {
+    "name": "Toast Booking Systems - Level 2",
+    "vendor": "Toast",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Booking Systems",
+    "focus": "Booking Systems expertise",
+    "exam": "TOAST-2011",
+    "tags": [
+      "booking-systems",
+      "level-2",
+      "toast"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/toast.svg"
+  },
+  {
+    "name": "OpenTable Guest Experience - Level 2",
+    "vendor": "OpenTable",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Guest Experience",
+    "focus": "Guest Experience expertise",
+    "exam": "OPENTABLE-2012",
+    "tags": [
+      "guest-experience",
+      "level-2",
+      "opentable"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/opentable.svg"
+  },
+  {
+    "name": "Amadeus Property Management - Level 2",
+    "vendor": "Amadeus",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Property Management",
+    "focus": "Property Management expertise",
+    "exam": "AMADEUS-2013",
+    "tags": [
+      "property-management",
+      "level-2",
+      "amadeus"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/amadeus.svg"
+  },
+  {
+    "name": "Oracle Hospitality Restaurant POS - Level 2",
+    "vendor": "Oracle Hospitality",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Restaurant POS",
+    "focus": "Restaurant POS expertise",
+    "exam": "ORACLE HOSPITALITY-2014",
+    "tags": [
+      "restaurant-pos",
+      "level-2",
+      "oracle-hospitality"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/oraclehospitality.svg"
+  },
+  {
+    "name": "Mews Booking Systems - Level 2",
+    "vendor": "Mews",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Booking Systems",
+    "focus": "Booking Systems expertise",
+    "exam": "MEWS-2015",
+    "tags": [
+      "booking-systems",
+      "level-2",
+      "mews"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/mews.svg"
+  },
+  {
+    "name": "Toast Guest Experience - Level 2",
+    "vendor": "Toast",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Guest Experience",
+    "focus": "Guest Experience expertise",
+    "exam": "TOAST-2016",
+    "tags": [
+      "guest-experience",
+      "level-2",
+      "toast"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/toast.svg"
+  },
+  {
+    "name": "OpenTable Property Management - Level 2",
+    "vendor": "OpenTable",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Property Management",
+    "focus": "Property Management expertise",
+    "exam": "OPENTABLE-2017",
+    "tags": [
+      "property-management",
+      "level-2",
+      "opentable"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/opentable.svg"
+  },
+  {
+    "name": "Oracle Hospitality Property Management - Level 3",
+    "vendor": "Oracle Hospitality",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Property Management",
+    "focus": "Property Management expertise",
+    "exam": "ORACLE HOSPITALITY-3018",
+    "tags": [
+      "property-management",
+      "level-3",
+      "oracle-hospitality"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/oraclehospitality.svg"
+  },
+  {
+    "name": "Mews Restaurant POS - Level 3",
+    "vendor": "Mews",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Restaurant POS",
+    "focus": "Restaurant POS expertise",
+    "exam": "MEWS-3019",
+    "tags": [
+      "restaurant-pos",
+      "level-3",
+      "mews"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/mews.svg"
+  },
+  {
+    "name": "Toast Booking Systems - Level 3",
+    "vendor": "Toast",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Booking Systems",
+    "focus": "Booking Systems expertise",
+    "exam": "TOAST-3020",
+    "tags": [
+      "booking-systems",
+      "level-3",
+      "toast"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/toast.svg"
+  },
+  {
+    "name": "OpenTable Guest Experience - Level 3",
+    "vendor": "OpenTable",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Guest Experience",
+    "focus": "Guest Experience expertise",
+    "exam": "OPENTABLE-3021",
+    "tags": [
+      "guest-experience",
+      "level-3",
+      "opentable"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/opentable.svg"
+  },
+  {
+    "name": "Amadeus Property Management - Level 3",
+    "vendor": "Amadeus",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Property Management",
+    "focus": "Property Management expertise",
+    "exam": "AMADEUS-3022",
+    "tags": [
+      "property-management",
+      "level-3",
+      "amadeus"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/amadeus.svg"
+  },
+  {
+    "name": "Oracle Hospitality Restaurant POS - Level 3",
+    "vendor": "Oracle Hospitality",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Restaurant POS",
+    "focus": "Restaurant POS expertise",
+    "exam": "ORACLE HOSPITALITY-3023",
+    "tags": [
+      "restaurant-pos",
+      "level-3",
+      "oracle-hospitality"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/oraclehospitality.svg"
+  },
+  {
+    "name": "Mews Booking Systems - Level 3",
+    "vendor": "Mews",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Booking Systems",
+    "focus": "Booking Systems expertise",
+    "exam": "MEWS-3024",
+    "tags": [
+      "booking-systems",
+      "level-3",
+      "mews"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/mews.svg"
+  },
+  {
+    "name": "Toast Guest Experience - Level 3",
+    "vendor": "Toast",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Guest Experience",
+    "focus": "Guest Experience expertise",
+    "exam": "TOAST-3025",
+    "tags": [
+      "guest-experience",
+      "level-3",
+      "toast"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/toast.svg"
+  },
+  {
+    "name": "Oracle Hospitality Property Management - Level 4",
+    "vendor": "Oracle Hospitality",
+    "level": 4,
+    "level_range": [
+      4,
+      5
+    ],
+    "category": "Property Management",
+    "focus": "Property Management expertise",
+    "exam": "ORACLE HOSPITALITY-4026",
+    "tags": [
+      "property-management",
+      "level-4",
+      "oracle-hospitality"
+    ],
+    "vendor_stage": "Expert",
+    "price": 400,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/oraclehospitality.svg"
+  },
+  {
+    "name": "Mews Restaurant POS - Level 4",
+    "vendor": "Mews",
+    "level": 4,
+    "level_range": [
+      4,
+      5
+    ],
+    "category": "Restaurant POS",
+    "focus": "Restaurant POS expertise",
+    "exam": "MEWS-4027",
+    "tags": [
+      "restaurant-pos",
+      "level-4",
+      "mews"
+    ],
+    "vendor_stage": "Expert",
+    "price": 400,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/mews.svg"
+  },
+  {
+    "name": "Toast Booking Systems - Level 4",
+    "vendor": "Toast",
+    "level": 4,
+    "level_range": [
+      4,
+      5
+    ],
+    "category": "Booking Systems",
+    "focus": "Booking Systems expertise",
+    "exam": "TOAST-4028",
+    "tags": [
+      "booking-systems",
+      "level-4",
+      "toast"
+    ],
+    "vendor_stage": "Expert",
+    "price": 400,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/toast.svg"
+  },
+  {
+    "name": "OpenTable Guest Experience - Level 4",
+    "vendor": "OpenTable",
+    "level": 4,
+    "level_range": [
+      4,
+      5
+    ],
+    "category": "Guest Experience",
+    "focus": "Guest Experience expertise",
+    "exam": "OPENTABLE-4029",
+    "tags": [
+      "guest-experience",
+      "level-4",
+      "opentable"
+    ],
+    "vendor_stage": "Expert",
+    "price": 400,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/opentable.svg"
+  },
+  {
+    "name": "Oracle Hospitality Property Management - Level 5",
+    "vendor": "Oracle Hospitality",
+    "level": 5,
+    "level_range": [
+      5,
+      5
+    ],
+    "category": "Property Management",
+    "focus": "Property Management expertise",
+    "exam": "ORACLE HOSPITALITY-5030",
+    "tags": [
+      "property-management",
+      "level-5",
+      "oracle-hospitality"
+    ],
+    "vendor_stage": "Master",
+    "price": 450,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/oraclehospitality.svg"
+  }
+]

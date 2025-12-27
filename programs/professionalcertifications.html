@@ -1,0 +1,1300 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BTH Professional Certifications – Elite 5-Level Pathways | 20 Global Sectors</title>
+    
+    <!-- Premium Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* ============================================ */
+        /* PREMIUM DESIGN SYSTEM */
+        /* ============================================ */
+        :root {
+            --bth-blue: #1e3a8a;
+            --bth-blue-light: #3b82f6;
+            --bth-blue-dark: #1e293b;
+            --bth-gold: #fbbf24;
+            --bth-gold-light: #fcd34d;
+            --bth-red: #dc2626;
+            --bth-red-dark: #991b1b;
+            --bth-grey: #f8fafc;
+            --bth-dark: #0f172a;
+            --bth-white: #ffffff;
+            
+            --gradient-primary: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            --gradient-gold: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+            --gradient-dark: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+            --gradient-overlay: linear-gradient(180deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.98) 100%);
+            
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+            --shadow-md: 0 4px 15px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.15);
+            --shadow-xl: 0 25px 60px rgba(0, 0, 0, 0.2);
+            
+            --radius-sm: 8px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
+            --radius-xl: 32px;
+        }
+        
+        * { 
+            box-sizing: border-box; 
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            margin: 0;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bth-white);
+            color: #1e293b;
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        a { 
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        /* ============================================ */
+        /* PREMIUM HERO SECTION */
+        /* ============================================ */
+        .hero {
+            position: relative;
+            padding: 140px 20px 180px;
+            background: var(--gradient-dark);
+            color: #fff;
+            text-align: center;
+            min-height: 95vh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.2) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(251, 191, 36, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
+            animation: heroGradient 15s ease-in-out infinite;
+        }
+        
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Cpath d='M0 0h60v60H0V0zm30 30v30h30V30H30z'/%3E%3C/g%3E%3C/svg%3E");
+            animation: patternFloat 30s linear infinite;
+        }
+        
+        @keyframes heroGradient {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+        
+        @keyframes patternFloat {
+            0% { transform: translateY(0px); }
+            100% { transform: translateY(-60px); }
+        }
+        
+        .hero-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .hero-kicker {
+            display: inline-block;
+            font-size: 11px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            opacity: 0.9;
+            font-weight: 700;
+            background: rgba(59, 130, 246, 0.15);
+            padding: 8px 20px;
+            border-radius: 50px;
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            margin-bottom: 24px;
+            animation: fadeInDown 0.8s ease-out;
+        }
+        
+        .hero h1 {
+            font-size: clamp(36px, 5vw, 68px);
+            line-height: 1.1;
+            margin: 0 0 24px;
+            font-weight: 900;
+            letter-spacing: -0.02em;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+            background: linear-gradient(135deg, #ffffff 0%, #e0e7ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-sub {
+            font-size: clamp(16px, 2vw, 20px);
+            max-width: 920px;
+            margin: 0 auto 32px;
+            opacity: 0.95;
+            line-height: 1.7;
+            font-weight: 400;
+            color: #e0e7ff;
+            animation: fadeInUp 0.8s ease-out 0.4s both;
+        }
+        
+        .hero-badges {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 40px;
+            animation: fadeInUp 0.8s ease-out 0.6s both;
+        }
+        
+        .hero-badge {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 50px;
+            border: 1px solid rgba(255,255,255,0.15);
+            padding: 10px 20px;
+            font-size: 13px;
+            font-weight: 600;
+            white-space: nowrap;
+            transition: all 0.3s ease;
+        }
+        
+        .hero-badge:hover {
+            background: rgba(255, 255, 255, 0.12);
+            border-color: rgba(255,255,255,0.25);
+            transform: translateY(-2px);
+        }
+        
+        .hero-cta-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 16px;
+            animation: fadeInUp 0.8s ease-out 0.8s both;
+        }
+        
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .btn-primary {
+            background: var(--gradient-gold);
+            color: #0f172a;
+            padding: 18px 40px;
+            border-radius: 50px;
+            border: none;
+            font-weight: 700;
+            font-size: 16px;
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(251, 191, 36, 0.3);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .btn-primary:hover::before {
+            left: 100%;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(251, 191, 36, 0.4);
+        }
+        
+        .btn-primary i {
+            margin-left: 8px;
+            transition: transform 0.3s ease;
+        }
+        
+        .btn-primary:hover i {
+            transform: translateX(4px);
+        }
+        
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            color: #fff;
+            padding: 17px 38px;
+            border-radius: 50px;
+            border: 1px solid rgba(255,255,255,0.2);
+            font-weight: 600;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255,255,255,0.3);
+            transform: translateY(-3px);
+        }
+
+        /* ============================================ */
+        /* PREMIUM SECTION LAYOUTS */
+        /* ============================================ */
+        .section {
+            padding: 100px 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .section-alt {
+            background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+        }
+        
+        .section-header {
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto 60px;
+            animation: fadeInUp 0.8s ease-out;
+        }
+        
+        .section-header h2 {
+            margin: 0 0 20px;
+            color: var(--bth-blue-dark);
+            font-size: clamp(32px, 4vw, 52px);
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+        }
+        
+        .section-header p {
+            margin: 0;
+            font-size: clamp(16px, 2vw, 19px);
+            line-height: 1.7;
+            color: #64748b;
+            font-weight: 400;
+        }
+
+        /* ============================================ */
+        /* PREMIUM LEVELS GRID */
+        /* ============================================ */
+        .levels-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 24px;
+            animation: fadeInUp 0.8s ease-out 0.4s both;
+        }
+        
+        @media (max-width: 1200px) {
+            .levels-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+        
+        @media (max-width: 768px) {
+            .levels-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        
+        @media (max-width: 560px) {
+            .levels-grid { grid-template-columns: 1fr; }
+        }
+        
+        .card {
+            background: #ffffff;
+            border-radius: var(--radius-lg);
+            padding: 32px 28px 28px;
+            box-shadow: var(--shadow-md);
+            border: 1px solid rgba(226, 232, 240, 0.6);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-primary);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+        
+        .card:hover::before {
+            transform: scaleX(1);
+        }
+        
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-xl);
+            border-color: rgba(59, 130, 246, 0.3);
+        }
+        
+        .card-level-kicker {
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--bth-blue-light);
+            font-weight: 700;
+            background: rgba(59, 130, 246, 0.08);
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 6px;
+            margin-bottom: 12px;
+        }
+        
+        .card h3 {
+            margin: 0 0 12px;
+            color: var(--bth-blue-dark);
+            font-size: clamp(18px, 2vw, 22px);
+            font-weight: 700;
+            line-height: 1.3;
+        }
+        
+        .card-metrics {
+            font-size: 14px;
+            margin-bottom: 16px;
+            color: #64748b;
+            font-weight: 600;
+        }
+        
+        .card-metrics strong {
+            color: var(--bth-blue);
+        }
+        
+        .card ul {
+            margin: 0 0 20px;
+            padding-left: 20px;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+        
+        .card ul li { 
+            margin-bottom: 8px;
+            color: #475569;
+        }
+        
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(226, 232, 240, 0.6);
+        }
+        
+        .pill-outcome {
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+            border-radius: 50px;
+            padding: 6px 14px;
+            font-size: 11px;
+            white-space: nowrap;
+            font-weight: 600;
+            color: var(--bth-blue);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+        }
+        
+        .btn-mini {
+            background: var(--gradient-primary);
+            color: #fff;
+            border-radius: 50px;
+            padding: 10px 18px;
+            border: none;
+            font-size: 12px;
+            cursor: pointer;
+            white-space: nowrap;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2);
+        }
+        
+        .btn-mini:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(59, 130, 246, 0.35);
+        }
+
+        /* ============================================ */
+        /* PREMIUM SECTORS SECTION */
+        /* ============================================ */
+        .sectors-strip {
+            overflow-x: auto;
+            padding: 20px 0;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        
+        .sectors-strip::-webkit-scrollbar {
+            height: 8px;
+        }
+        
+        .sectors-strip::-webkit-scrollbar-track {
+            background: #f1f5f9;
+            border-radius: 10px;
+        }
+        
+        .sectors-strip::-webkit-scrollbar-thumb {
+            background: var(--bth-blue-light);
+            border-radius: 10px;
+        }
+        
+        .sectors-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+        }
+        
+        .sector-pill {
+            flex: 0 0 auto;
+            background: #ffffff;
+            border-radius: 50px;
+            padding: 12px 24px;
+            font-size: 14px;
+            border: 2px solid #e2e8f0;
+            cursor: pointer;
+            white-space: nowrap;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .sector-pill::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .sector-pill:hover::before {
+            left: 100%;
+        }
+        
+        .sector-pill:hover {
+            border-color: var(--bth-blue-light);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .sector-pill.active {
+            background: var(--gradient-primary);
+            border-color: var(--bth-blue);
+            color: #ffffff;
+            font-weight: 700;
+            box-shadow: 0 8px 20px rgba(59, 130, 246, 0.3);
+        }
+        
+        .sector-pill.active::before {
+            display: none;
+        }
+        
+        .sector-detail {
+            margin-top: 32px;
+            font-size: 15px;
+            background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+            border-radius: var(--radius-lg);
+            padding: 32px 36px;
+            border: 1px solid rgba(226, 232, 240, 0.8);
+            box-shadow: var(--shadow-md);
+            animation: fadeIn 0.4s ease-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .sector-detail strong {
+            display: block;
+            font-size: 18px;
+            color: var(--bth-blue-dark);
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+        
+        .sector-detail ul {
+            margin: 0;
+            padding-left: 24px;
+        }
+        
+        .sector-detail ul li {
+            margin-bottom: 10px;
+            color: #475569;
+            line-height: 1.7;
+        }
+
+        /* ============================================ */
+        /* PREMIUM WHO-IS-THIS-FOR BAND */
+        /* ============================================ */
+        .band-dark {
+            background: var(--gradient-dark);
+            color: #ffffff;
+            padding: 80px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .band-dark::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Cpath d='M0 0h60v60H0V0zm30 30v30h30V30H30z'/%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.5;
+        }
+        
+        .band-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .band-content > div:first-child {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .band-content h3 {
+            margin: 0 0 16px;
+            font-size: clamp(28px, 3vw, 38px);
+            font-weight: 800;
+            letter-spacing: -0.01em;
+        }
+        
+        .band-content p { 
+            margin: 0; 
+            font-size: clamp(15px, 2vw, 18px); 
+            max-width: 600px;
+            line-height: 1.7;
+            color: #e0e7ff;
+        }
+        
+        .band-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            font-size: 13px;
+        }
+        
+        .band-tag {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 50px;
+            border: 1px solid rgba(255,255,255,0.2);
+            padding: 10px 20px;
+            white-space: nowrap;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .band-tag:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+        }
+
+        /* ============================================ */
+        /* PREMIUM ENROLLMENT FORM */
+        /* ============================================ */
+        .enroll-wrapper {
+            background: #ffffff;
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-xl);
+            padding: 48px;
+            max-width: 1100px;
+            margin: 0 auto;
+            border: 1px solid rgba(226, 232, 240, 0.6);
+        }
+        
+        @media (max-width: 640px) {
+            .enroll-wrapper {
+                padding: 32px 24px;
+            }
+        }
+        
+        .enroll-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+        
+        @media (max-width: 900px) {
+            .enroll-grid { grid-template-columns: 1fr; }
+        }
+        
+        .field {
+            margin-bottom: 24px;
+        }
+        
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--bth-blue-dark);
+            font-size: 14px;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        select,
+        input[type="number"] {
+            width: 100%;
+            padding: 14px 16px;
+            border-radius: var(--radius-sm);
+            border: 2px solid #e2e8f0;
+            font-size: 15px;
+            font-family: inherit;
+            transition: all 0.3s ease;
+            background: #ffffff;
+        }
+        
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="tel"]:focus,
+        select:focus,
+        input[type="number"]:focus {
+            outline: none;
+            border-color: var(--bth-blue-light);
+            box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+        }
+        
+        .enroll-summary {
+            background: linear-gradient(135deg, #f8fafc 0%, #eff6ff 100%);
+            border-radius: var(--radius-md);
+            padding: 28px;
+            border: 2px solid rgba(59, 130, 246, 0.15);
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 12px;
+            font-size: 15px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid rgba(226, 232, 240, 0.5);
+        }
+        
+        .summary-row:last-of-type {
+            border-bottom: none;
+            padding-bottom: 0;
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 2px solid rgba(59, 130, 246, 0.2);
+        }
+        
+        .summary-row strong { 
+            font-weight: 700;
+            color: var(--bth-blue-dark);
+        }
+        
+        .enroll-actions {
+            margin-top: 32px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            align-items: stretch;
+        }
+        
+        .btn-submit {
+            background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+            color: #fff;
+            border-radius: 50px;
+            padding: 18px 40px;
+            border: none;
+            font-weight: 700;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(220, 38, 38, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-submit::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .btn-submit:hover::before {
+            left: 100%;
+        }
+        
+        .btn-submit:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(220, 38, 38, 0.4);
+        }
+        
+        .small-text { 
+            font-size: 13px; 
+            color: #64748b;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        /* ============================================ */
+        /* PREMIUM FOOTER */
+        /* ============================================ */
+        .trust-strip {
+            background: var(--bth-dark);
+            color: #94a3b8;
+            font-size: 14px;
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        /* ============================================ */
+        /* RESPONSIVE UTILITIES */
+        /* ============================================ */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 100px 20px 120px;
+                min-height: auto;
+            }
+            
+            .section {
+                padding: 60px 20px;
+            }
+            
+            .band-dark {
+                padding: 60px 20px;
+            }
+            
+            .band-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .band-tags {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- PREMIUM HERO SECTION -->
+    <header class="hero">
+        <div class="hero-inner">
+            <div class="hero-kicker">
+                <i class="fas fa-award"></i> BTH EDUCATION GROUP • PROFESSIONAL CERTIFICATIONS
+            </div>
+            <h1>Elite 5-Level Certification<br>Pathways Across 20 Global Sectors</h1>
+            <p class="hero-sub">
+                Transform your workforce with world-class, outcome-driven certification programs from Level 1 to Level 5. 
+                Build Fortune 500-aligned careers in IT, Healthcare, Energy, Finance, Manufacturing, Public Safety, and 16 more strategic sectors.
+                <strong>Enroll 1 learner – or empower 50.</strong>
+            </p>
+            <div class="hero-badges">
+                <div class="hero-badge">
+                    <i class="fas fa-layer-group"></i> Levels 1–5 • 3–10 Certifications per Level
+                </div>
+                <div class="hero-badge">
+                    <i class="fas fa-graduation-cap"></i> 12–28 Professional Development Modules
+                </div>
+                <div class="hero-badge">
+                    <i class="fas fa-globe-americas"></i> 20 Industry Sectors • Global Outcomes
+                </div>
+            </div>
+            <div class="hero-cta-row">
+                <button class="btn-primary" onclick="document.getElementById('enroll').scrollIntoView({behavior:'smooth'});">
+                    Get Pricing &amp; Enrollment Link <i class="fas fa-arrow-right"></i>
+                </button>
+                <button class="btn-secondary" onclick="document.getElementById('levels').scrollIntoView({behavior:'smooth'});">
+                    <i class="fas fa-compass"></i> Explore Levels &amp; Outcomes
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- PREMIUM LEVELS SECTION -->
+    <section id="levels" class="section section-alt">
+        <div class="section-header">
+            <h2>Five Elite Levels. One Seamless Career Continuum.</h2>
+            <p>
+                Every level strategically combines industry-leading certifications with professional development modules, 
+                precisely calibrated to workforce outcomes. Deploy Level 1–3 for immediate employability and technical mastery; 
+                leverage Level 4–5 for leadership transformation, strategic excellence, and C-suite pipeline development.
+            </p>
+        </div>
+
+        <div class="levels-grid">
+            <div class="card" data-level="1">
+                <div class="card-level-kicker">Level 1</div>
+                <h3>Foundation Workforce Readiness</h3>
+                <div class="card-metrics"><strong>3 Certifications</strong> + <strong>12 PD Modules</strong></div>
+                <ul>
+                    <li>Digital literacy &amp; core technology skills.</li>
+                    <li>Professional communication &amp; teamwork.</li>
+                    <li>Entry-level job readiness in the selected sector.</li>
+                </ul>
+                <div class="card-footer">
+                    <span class="pill-outcome">Outcome: Job-ready beginner roles</span>
+                    <button class="btn-mini" onclick="selectLevel(1)">Select Level 1</button>
+                </div>
+            </div>
+
+            <div class="card" data-level="2">
+                <div class="card-level-kicker">Level 2</div>
+                <h3>Intermediate Workforce Specialist</h3>
+                <div class="card-metrics"><strong>4 Certifications</strong> + <strong>15 PD Modules</strong></div>
+                <ul>
+                    <li>Sector-specific tools and platforms.</li>
+                    <li>Service quality, customer success, accountability.</li>
+                    <li>Prepared for intermediate technical roles.</li>
+                </ul>
+                <div class="card-footer">
+                    <span class="pill-outcome">Outcome: Skilled associate roles</span>
+                    <button class="btn-mini" onclick="selectLevel(2)">Select Level 2</button>
+                </div>
+            </div>
+
+            <div class="card" data-level="3">
+                <div class="card-level-kicker">Level 3</div>
+                <h3>Advanced Professional Track</h3>
+                <div class="card-metrics"><strong>5 Certifications</strong> + <strong>18 PD Modules</strong></div>
+                <ul>
+                    <li>Advanced technical mastery &amp; specialization.</li>
+                    <li>Project-based delivery &amp; reporting.</li>
+                    <li>Prepared for senior specialist roles.</li>
+                </ul>
+                <div class="card-footer">
+                    <span class="pill-outcome">Outcome: Senior technical roles</span>
+                    <button class="btn-mini" onclick="selectLevel(3)">Select Level 3</button>
+                </div>
+            </div>
+
+            <div class="card" data-level="4">
+                <div class="card-level-kicker">Level 4</div>
+                <h3>Leadership &amp; Management Readiness</h3>
+                <div class="card-metrics"><strong>6 Certifications</strong> + <strong>22 PD Modules</strong></div>
+                <ul>
+                    <li>Team leadership &amp; supervisory practice.</li>
+                    <li>Performance management, dashboards, reporting.</li>
+                    <li>Prepared for mid-level leadership roles.</li>
+                </ul>
+                <div class="card-footer">
+                    <span class="pill-outcome">Outcome: Supervisory &amp; manager roles</span>
+                    <button class="btn-mini" onclick="selectLevel(4)">Select Level 4</button>
+                </div>
+            </div>
+
+            <div class="card" data-level="5">
+                <div class="card-level-kicker">Level 5</div>
+                <h3>Executive &amp; C-Suite Pathways</h3>
+                <div class="card-metrics"><strong>7–10 Certifications</strong> + <strong>28 PD Modules</strong></div>
+                <ul>
+                    <li>Strategic leadership, governance, risk &amp; finance.</li>
+                    <li>Cross-sector interoperability &amp; digital transformation.</li>
+                    <li>COO / CFO / CIO / CXO pipeline development.</li>
+                </ul>
+                <div class="card-footer">
+                    <span class="pill-outcome">Outcome: Executive &amp; CXO tracks</span>
+                    <button class="btn-mini" onclick="selectLevel(5)">Select Level 5</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PREMIUM SECTORS SECTION -->
+    <section class="section">
+        <div class="section-header">
+            <h2>20 Strategic Sectors. One Uncompromising Standard.</h2>
+            <p>
+                Our elite 5-level architecture scales seamlessly across 20 high-impact sectors – from IT &amp; Cybersecurity to Healthcare,
+                Manufacturing, Public Safety, Energy, Finance, and beyond. Select a single sector for specialized excellence or architect 
+                a diversified portfolio to future-proof your workforce transformation strategy.
+            </p>
+        </div>
+
+        <div class="sectors-strip">
+            <div class="sectors-row" id="sectorsRow">
+                <div class="sector-pill active" data-sector="IT & Cybersecurity">IT &amp; Cybersecurity</div>
+                <div class="sector-pill" data-sector="Healthcare">Healthcare</div>
+                <div class="sector-pill" data-sector="Energy & Renewables">Energy &amp; Renewables</div>
+                <div class="sector-pill" data-sector="Finance & Accounting">Finance &amp; Accounting</div>
+                <div class="sector-pill" data-sector="Construction & Infrastructure">Construction &amp; Infrastructure</div>
+                <div class="sector-pill" data-sector="Manufacturing & Industrial">Manufacturing &amp; Industrial</div>
+                <div class="sector-pill" data-sector="Public Safety & Emergency">Public Safety &amp; Emergency</div>
+                <div class="sector-pill" data-sector="Logistics & Transportation">Logistics &amp; Transportation</div>
+                <div class="sector-pill" data-sector="Government & Civic Tech">Government &amp; Civic Tech</div>
+                <div class="sector-pill" data-sector="Biotech & Life Sciences">Biotech &amp; Life Sciences</div>
+                <div class="sector-pill" data-sector="Web & Software Engineering">Web &amp; Software Engineering</div>
+                <div class="sector-pill" data-sector="Creative & Digital Design">Creative &amp; Digital Design</div>
+                <div class="sector-pill" data-sector="EdTech">EdTech</div>
+                <div class="sector-pill" data-sector="Environmental Sustainability">Environmental Sustainability</div>
+                <div class="sector-pill" data-sector="Agricultural Technology">Agricultural Technology</div>
+                <div class="sector-pill" data-sector="Business & Management">Business &amp; Management</div>
+                <div class="sector-pill" data-sector="Aerospace & Defense">Aerospace &amp; Defense</div>
+                <div class="sector-pill" data-sector="Telecommunications">Telecommunications</div>
+                <div class="sector-pill" data-sector="Hospitality & Tourism">Hospitality &amp; Tourism</div>
+                <div class="sector-pill" data-sector="Legal & Compliance">Legal &amp; Compliance</div>
+            </div>
+        </div>
+
+        <div class="sector-detail" id="sectorDetail">
+            <strong>IT &amp; Cybersecurity – sample outcomes across Levels 1–5:</strong>
+            <ul>
+                <li><strong>Level 1–2:</strong> Helpdesk, support technician, junior SOC assistant roles.</li>
+                <li><strong>Level 3:</strong> Network / systems administrator, cybersecurity analyst tracks.</li>
+                <li><strong>Level 4:</strong> IT team lead, security operations lead, technical manager.</li>
+                <li><strong>Level 5:</strong> CIO / CISO pipeline, digital transformation leadership.</li>
+            </ul>
+            <span class="small-text">Select a sector above to see indicative outcome mapping.</span>
+        </div>
+    </section>
+
+    <!-- PREMIUM WHO IT'S FOR BAND -->
+    <section class="band-dark">
+        <div class="band-content">
+            <div>
+                <h3>Who Partners With Us?</h3>
+                <p>
+                    Forward-thinking governments, Fortune 500 corporations, leading universities, workforce development agencies, 
+                    philanthropic organizations, and impact investors seeking structured, ROI-driven certification programs with 
+                    proven pathways to employment, leadership excellence, and institutional transformation.
+                </p>
+            </div>
+            <div class="band-tags">
+                <div class="band-tag"><i class="fas fa-landmark"></i> Government Workforce Initiatives</div>
+                <div class="band-tag"><i class="fas fa-building"></i> Corporate Talent Pipelines</div>
+                <div class="band-tag"><i class="fas fa-user-graduate"></i> Youth &amp; Graduate Programs</div>
+                <div class="band-tag"><i class="fas fa-chart-line"></i> Executive &amp; Leadership Tracks</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PREMIUM ENROLLMENT SECTION -->
+    <section id="enroll" class="section section-alt">
+        <div class="section-header">
+            <h2>Request Your Custom Investment Proposal</h2>
+            <p>
+                Complete the form below to receive a comprehensive investment proposal including detailed pricing, 
+                sample certification portfolios, ROI projections, and secure payment options 
+                (Stripe / Paystack / Mobile Money / Bank Transfer) precisely tailored to your sector, level, and cohort size.
+            </p>
+        </div>
+
+        <div class="enroll-wrapper">
+            <form id="enrollForm" action="/process-enrollment" method="POST">
+                <div class="enroll-grid">
+                    <!-- LEFT: FORM FIELDS -->
+                    <div>
+                        <div class="field">
+                            <label for="contactName">Full Name</label>
+                            <input type="text" id="contactName" name="full_name" required />
+                        </div>
+                        <div class="field">
+                            <label for="contactEmail">Email</label>
+                            <input type="email" id="contactEmail" name="email" required />
+                        </div>
+                        <div class="field">
+                            <label for="contactPhone">Phone / WhatsApp</label>
+                            <input type="tel" id="contactPhone" name="phone" required />
+                        </div>
+                        <div class="field">
+                            <label for="org">Organization / Institution (optional)</label>
+                            <input type="text" id="org" name="organization" />
+                        </div>
+                        <div class="field">
+                            <label for="country">Country</label>
+                            <input type="text" id="country" name="country" placeholder="e.g. Cameroon" required />
+                        </div>
+                    </div>
+
+                    <!-- RIGHT: CONFIG + SUMMARY -->
+                    <div>
+                        <div class="field">
+                            <label for="sectorSelect">Preferred Sector</label>
+                            <select id="sectorSelect" name="sector" required>
+                                <option value="">Select a sector</option>
+                                <option>IT &amp; Cybersecurity</option>
+                                <option>Healthcare</option>
+                                <option>Energy &amp; Renewables</option>
+                                <option>Finance &amp; Accounting</option>
+                                <option>Construction &amp; Infrastructure</option>
+                                <option>Manufacturing &amp; Industrial</option>
+                                <option>Public Safety &amp; Emergency</option>
+                                <option>Logistics &amp; Transportation</option>
+                                <option>Government &amp; Civic Tech</option>
+                                <option>Biotech &amp; Life Sciences</option>
+                                <option>Web &amp; Software Engineering</option>
+                                <option>Creative &amp; Digital Design</option>
+                                <option>EdTech</option>
+                                <option>Environmental Sustainability</option>
+                                <option>Agricultural Technology</option>
+                                <option>Business &amp; Management</option>
+                                <option>Aerospace &amp; Defense</option>
+                                <option>Telecommunications</option>
+                            </select>
+                        </div>
+
+                        <div class="field">
+                            <label for="levelSelect">Level of Interest</label>
+                            <select id="levelSelect" name="level" required>
+                                <option value="">Select level</option>
+                                <option value="1">Level 1 – Foundation</option>
+                                <option value="2">Level 2 – Intermediate</option>
+                                <option value="3">Level 3 – Advanced</option>
+                                <option value="4">Level 4 – Leadership</option>
+                                <option value="5">Level 5 – Executive / C-Suite</option>
+                            </select>
+                        </div>
+
+                        <div class="field">
+                            <label for="numLearners">Number of Learners (1–50)</label>
+                            <input type="number" id="numLearners" name="num_learners" min="1" max="50" value="1" required />
+                        </div>
+
+                        <div class="field">
+                            <label for="notes">Notes (cohort type, timeline, sponsorship, etc.)</label>
+                            <input type="text" id="notes" name="notes" />
+                        </div>
+
+                        <div class="enroll-summary">
+                            <div class="summary-row">
+                                <span>Sector</span>
+                                <span id="sumSector">–</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>Level</span>
+                                <span id="sumLevel">–</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>Estimated Program Value / Learner (USD)</span>
+                                <span id="sumPerLearner">–</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>Number of Learners</span>
+                                <span id="sumLearners">1</span>
+                            </div>
+                            <div class="summary-row">
+                                <span><strong>Estimated Total (USD)</strong></span>
+                                <span id="sumTotalUsd"><strong>–</strong></span>
+                            </div>
+                            <div class="summary-row">
+                                <span>Estimated Total (FCFA @ 600)</span>
+                                <span id="sumTotalFcfa">–</span>
+                            </div>
+                            <div class="small-text" style="margin-top:4px;">
+                                Final pricing, scholarships, and financing options will be confirmed by the BTH team.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="enroll-actions">
+                    <button type="submit" class="btn-submit">
+                        <i class="fas fa-paper-plane"></i> Request Investment Proposal
+                    </button>
+                    <div class="small-text">
+                        <i class="fas fa-shield-alt"></i> Your information is secure. We'll respond within 24 hours with a detailed investment proposal, 
+                        comprehensive portfolio documentation, and a secure payment or contracting link customized to your exact requirements.
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <div class="trust-strip">
+        <i class="fas fa-certificate"></i> BTH Education Group – BTH International | Professional Certifications Excellence | 
+        Outcome-Based Workforce Transformation | 20 Strategic Sectors | Levels 1–5 | 
+        <i class="fas fa-globe"></i> Serving 120+ Countries Worldwide
+    </div>
+
+    <script>
+        const LEVEL_PRICES = {
+            1: 8100,
+            2: 12000,
+            3: 16000,
+            4: 20000,
+            5: 26865
+        };
+        const FCFA_RATE = 600;
+
+        const sectorsRow = document.getElementById('sectorsRow');
+        const sectorDetail = document.getElementById('sectorDetail');
+        const sectorOutcomes = {
+            'IT & Cybersecurity': {
+                title: 'IT & Cybersecurity – Strategic Career Outcomes',
+                bullets: [
+                    '<strong>Levels 1–2:</strong> Technical support specialist, junior SOC analyst, IT helpdesk professional',
+                    '<strong>Level 3:</strong> Systems administrator, network administrator, cybersecurity analyst, cloud specialist',
+                    '<strong>Level 4:</strong> IT team lead, security operations manager, technical project manager',
+                    '<strong>Level 5:</strong> CIO / CISO pipeline, enterprise digital transformation leader, security architect'
+                ]
+            },
+            'Healthcare': {
+                title: 'Healthcare – Strategic Career Outcomes',
+                bullets: [
+                    '<strong>Levels 1–2:</strong> Healthcare assistant, medical records specialist, patient data coordinator',
+                    '<strong>Level 3:</strong> Health information manager, medical technology specialist, clinical systems analyst',
+                    '<strong>Level 4:</strong> Clinical unit supervisor, healthcare operations coordinator, quality assurance manager',
+                    '<strong>Level 5:</strong> Healthcare administrator, COO / CNO pipeline, hospital director track'
+                ]
+            },
+            'Energy & Renewables': {
+                title: 'Energy & Renewables – Strategic Career Outcomes',
+                bullets: [
+                    '<strong>Levels 1–2:</strong> Field technician, renewable energy assistant, solar installation specialist',
+                    '<strong>Level 3:</strong> Plant operations specialist, solar/wind systems engineer, energy efficiency analyst',
+                    '<strong>Level 4:</strong> Site operations manager, regional project lead, sustainability coordinator',
+                    '<strong>Level 5:</strong> Energy program director, sustainability officer, renewable energy strategist'
+                ]
+            },
+            'Finance & Accounting': {
+                title: 'Finance & Accounting – Strategic Career Outcomes',
+                bullets: [
+                    '<strong>Levels 1–2:</strong> Accounting clerk, bookkeeper, financial data entry specialist',
+                    '<strong>Level 3:</strong> Financial analyst, senior accountant, tax specialist, audit associate',
+                    '<strong>Level 4:</strong> Accounting manager, financial controller, senior financial analyst',
+                    '<strong>Level 5:</strong> CFO pipeline, financial director, corporate controller, VP Finance'
+                ]
+            },
+            'Manufacturing & Industrial': {
+                title: 'Manufacturing & Industrial – Strategic Career Outcomes',
+                bullets: [
+                    '<strong>Levels 1–2:</strong> Production operator, quality control technician, manufacturing assistant',
+                    '<strong>Level 3:</strong> Process engineer, quality assurance specialist, production supervisor',
+                    '<strong>Level 4:</strong> Plant manager, operations manager, lean manufacturing lead',
+                    '<strong>Level 5:</strong> VP Operations, manufacturing director, COO pipeline'
+                ]
+            }
+        };
+
+        if (sectorsRow) {
+            sectorsRow.addEventListener('click', function (e) {
+                const pill = e.target.closest('.sector-pill');
+                if (!pill) return;
+                document.querySelectorAll('.sector-pill').forEach(p => p.classList.remove('active'));
+                pill.classList.add('active');
+                const sectorKey = pill.getAttribute('data-sector');
+                const data = sectorOutcomes[sectorKey];
+                if (data) {
+                    sectorDetail.innerHTML = `
+                        <strong><i class="fas fa-industry"></i> ${data.title}</strong>
+                        <ul>
+                            ${data.bullets.map(b => `<li>${b}</li>`).join('')}
+                        </ul>
+                        <span class="small-text"><i class="fas fa-info-circle"></i> All certification pathways can be customized to align with your national, regional, or corporate workforce transformation strategy.</span>
+                    `;
+                } else {
+                    sectorDetail.innerHTML = `
+                        <strong><i class="fas fa-industry"></i> ${sectorKey} – Strategic Career Outcomes</strong>
+                        <ul>
+                            <li><strong>Levels 1–2:</strong> Foundation and intermediate workforce roles with immediate employability focus</li>
+                            <li><strong>Level 3:</strong> Advanced specialist roles with technical mastery and project leadership</li>
+                            <li><strong>Level 4:</strong> Supervisory and operations management with team leadership competencies</li>
+                            <li><strong>Level 5:</strong> Executive and C-suite pathways with strategic organizational impact</li>
+                        </ul>
+                        <span class="small-text"><i class="fas fa-file-pdf"></i> Comprehensive sector-specific career mapping and certification portfolios available in our detailed proposal documentation.</span>
+                    `;
+                }
+            });
+        }
+
+        const sectorSelect = document.getElementById('sectorSelect');
+        const levelSelect = document.getElementById('levelSelect');
+        const numLearnersInput = document.getElementById('numLearners');
+        const sumSector = document.getElementById('sumSector');
+        const sumLevel = document.getElementById('sumLevel');
+        const sumPerLearner = document.getElementById('sumPerLearner');
+        const sumLearners = document.getElementById('sumLearners');
+        const sumTotalUsd = document.getElementById('sumTotalUsd');
+        const sumTotalFcfa = document.getElementById('sumTotalFcfa');
+
+        function updateSummary() {
+            const sector = sectorSelect.value || '–';
+            const level = levelSelect.value;
+            const learners = Number(numLearnersInput.value || 0);
+            const per = level ? LEVEL_PRICES[level] : 0;
+            const totalUsd = per * learners;
+            const totalFcfa = totalUsd * FCFA_RATE;
+
+            sumSector.textContent = sector;
+            sumLevel.textContent = level ? 'Level ' + level : '–';
+            sumPerLearner.textContent = per ? per.toLocaleString('en-US') : '–';
+            sumLearners.textContent = learners || '–';
+            sumTotalUsd.innerHTML = `<strong>${totalUsd ? totalUsd.toLocaleString('en-US') : '–'}</strong>`;
+            sumTotalFcfa.textContent = totalFcfa ? totalFcfa.toLocaleString('en-US') + ' FCFA' : '–';
+        }
+
+        if (sectorSelect) sectorSelect.addEventListener('change', updateSummary);
+        if (levelSelect) levelSelect.addEventListener('change', updateSummary);
+        if (numLearnersInput) numLearnersInput.addEventListener('input', updateSummary);
+
+        function selectLevel(level) {
+            if (!levelSelect) return;
+            levelSelect.value = String(level);
+            updateSummary();
+            document.getElementById('enroll').scrollIntoView({ behavior: 'smooth' });
+        }
+        window.selectLevel = selectLevel;
+
+        document.getElementById('enrollForm').addEventListener('submit', function () {
+            // Backend at /process-enrollment should:
+            // 1) Capture lead/enrollment in CRM or database.
+            // 2) Generate a quote + payment session (Stripe / Paystack / MoMo / Bank).
+            // 3) Email / redirect learner or sponsor with the secure payment link.
+        });
+    </script>
+</body>
+</html>

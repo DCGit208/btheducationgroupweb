@@ -1,0 +1,758 @@
+[
+  {
+    "name": "Adobe Graphic Design - Level 1",
+    "vendor": "Adobe",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "graphic-design",
+    "focus": "Graphic Design expertise",
+    "exam": "ADOBE-1001",
+    "tags": [
+      "graphic-design",
+      "level-1",
+      "adobe"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/adobe.svg"
+  },
+  {
+    "name": "Adobe Video Production - Level 1",
+    "vendor": "Adobe",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "video-production",
+    "focus": "Video Production expertise",
+    "exam": "ADOBE-1002",
+    "tags": [
+      "video-production",
+      "level-1",
+      "adobe"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/adobe.svg"
+  },
+  {
+    "name": "Adobe Video Production - Level 2",
+    "vendor": "Adobe",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "video-production",
+    "focus": "Advanced Video Production",
+    "exam": "ADOBE-2003",
+    "tags": [
+      "video-production",
+      "level-2",
+      "adobe"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/adobe.svg"
+  },
+  {
+    "name": "Adobe 3D & Animation - Level 2",
+    "vendor": "Adobe",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "3d-animation",
+    "focus": "Advanced 3D & Animation",
+    "exam": "ADOBE-2004",
+    "tags": [
+      "3d-animation",
+      "level-2",
+      "adobe"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/adobe.svg"
+  },
+  {
+    "name": "Adobe UI/UX Design - Level 2",
+    "vendor": "Adobe",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "ui-ux",
+    "focus": "Advanced UI/UX Design",
+    "exam": "ADOBE-2005",
+    "tags": [
+      "ui-ux",
+      "level-2",
+      "adobe"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/adobe.svg"
+  },
+  {
+    "name": "Autodesk Graphic Design - Level 1",
+    "vendor": "Autodesk",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "graphic-design",
+    "focus": "Graphic Design expertise",
+    "exam": "AUTODESK-1006",
+    "tags": [
+      "graphic-design",
+      "level-1",
+      "autodesk"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/autodesk.svg"
+  },
+  {
+    "name": "Autodesk Video Production - Level 1",
+    "vendor": "Autodesk",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "video-production",
+    "focus": "Video Production expertise",
+    "exam": "AUTODESK-1007",
+    "tags": [
+      "video-production",
+      "level-1",
+      "autodesk"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/autodesk.svg"
+  },
+  {
+    "name": "Autodesk Video Production - Level 2",
+    "vendor": "Autodesk",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "video-production",
+    "focus": "Advanced Video Production",
+    "exam": "AUTODESK-2008",
+    "tags": [
+      "video-production",
+      "level-2",
+      "autodesk"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/autodesk.svg"
+  },
+  {
+    "name": "Autodesk 3D & Animation - Level 2",
+    "vendor": "Autodesk",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "3d-animation",
+    "focus": "Advanced 3D & Animation",
+    "exam": "AUTODESK-2009",
+    "tags": [
+      "3d-animation",
+      "level-2",
+      "autodesk"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/autodesk.svg"
+  },
+  {
+    "name": "Autodesk UI/UX Design - Level 2",
+    "vendor": "Autodesk",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "ui-ux",
+    "focus": "Advanced UI/UX Design",
+    "exam": "AUTODESK-2010",
+    "tags": [
+      "ui-ux",
+      "level-2",
+      "autodesk"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/autodesk.svg"
+  },
+  {
+    "name": "Unity Graphic Design - Level 1",
+    "vendor": "Unity",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "graphic-design",
+    "focus": "Graphic Design expertise",
+    "exam": "UNITY-1011",
+    "tags": [
+      "graphic-design",
+      "level-1",
+      "unity"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/unity.svg"
+  },
+  {
+    "name": "Unity Video Production - Level 1",
+    "vendor": "Unity",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "video-production",
+    "focus": "Video Production expertise",
+    "exam": "UNITY-1012",
+    "tags": [
+      "video-production",
+      "level-1",
+      "unity"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/unity.svg"
+  },
+  {
+    "name": "Unity Video Production - Level 2",
+    "vendor": "Unity",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "video-production",
+    "focus": "Advanced Video Production",
+    "exam": "UNITY-2013",
+    "tags": [
+      "video-production",
+      "level-2",
+      "unity"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/unity.svg"
+  },
+  {
+    "name": "Unity 3D & Animation - Level 2",
+    "vendor": "Unity",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "3d-animation",
+    "focus": "Advanced 3D & Animation",
+    "exam": "UNITY-2014",
+    "tags": [
+      "3d-animation",
+      "level-2",
+      "unity"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/unity.svg"
+  },
+  {
+    "name": "Unity UI/UX Design - Level 2",
+    "vendor": "Unity",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "ui-ux",
+    "focus": "Advanced UI/UX Design",
+    "exam": "UNITY-2015",
+    "tags": [
+      "ui-ux",
+      "level-2",
+      "unity"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/unity.svg"
+  },
+  {
+    "name": "Maxon Graphic Design - Level 1",
+    "vendor": "Maxon",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "graphic-design",
+    "focus": "Graphic Design expertise",
+    "exam": "MAXON-1016",
+    "tags": [
+      "graphic-design",
+      "level-1",
+      "maxon"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/maxon.svg"
+  },
+  {
+    "name": "Maxon Video Production - Level 1",
+    "vendor": "Maxon",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "video-production",
+    "focus": "Video Production expertise",
+    "exam": "MAXON-1017",
+    "tags": [
+      "video-production",
+      "level-1",
+      "maxon"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/maxon.svg"
+  },
+  {
+    "name": "Maxon Video Production - Level 2",
+    "vendor": "Maxon",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "video-production",
+    "focus": "Advanced Video Production",
+    "exam": "MAXON-2018",
+    "tags": [
+      "video-production",
+      "level-2",
+      "maxon"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/maxon.svg"
+  },
+  {
+    "name": "Maxon 3D & Animation - Level 2",
+    "vendor": "Maxon",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "3d-animation",
+    "focus": "Advanced 3D & Animation",
+    "exam": "MAXON-2019",
+    "tags": [
+      "3d-animation",
+      "level-2",
+      "maxon"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/maxon.svg"
+  },
+  {
+    "name": "Maxon UI/UX Design - Level 2",
+    "vendor": "Maxon",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "ui-ux",
+    "focus": "Advanced UI/UX Design",
+    "exam": "MAXON-2020",
+    "tags": [
+      "ui-ux",
+      "level-2",
+      "maxon"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/maxon.svg"
+  },
+  {
+    "name": "Foundry Graphic Design - Level 1",
+    "vendor": "Foundry",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "graphic-design",
+    "focus": "Graphic Design expertise",
+    "exam": "FOUNDRY-1021",
+    "tags": [
+      "graphic-design",
+      "level-1",
+      "foundry"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/foundry.svg"
+  },
+  {
+    "name": "Foundry Video Production - Level 1",
+    "vendor": "Foundry",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "video-production",
+    "focus": "Video Production expertise",
+    "exam": "FOUNDRY-1022",
+    "tags": [
+      "video-production",
+      "level-1",
+      "foundry"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/foundry.svg"
+  },
+  {
+    "name": "Foundry Video Production - Level 2",
+    "vendor": "Foundry",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "video-production",
+    "focus": "Advanced Video Production",
+    "exam": "FOUNDRY-2023",
+    "tags": [
+      "video-production",
+      "level-2",
+      "foundry"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/foundry.svg"
+  },
+  {
+    "name": "Foundry 3D & Animation - Level 2",
+    "vendor": "Foundry",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "3d-animation",
+    "focus": "Advanced 3D & Animation",
+    "exam": "FOUNDRY-2024",
+    "tags": [
+      "3d-animation",
+      "level-2",
+      "foundry"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/foundry.svg"
+  },
+  {
+    "name": "Foundry UI/UX Design - Level 2",
+    "vendor": "Foundry",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "ui-ux",
+    "focus": "Advanced UI/UX Design",
+    "exam": "FOUNDRY-2025",
+    "tags": [
+      "ui-ux",
+      "level-2",
+      "foundry"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/foundry.svg"
+  },
+  {
+    "name": "Avid Graphic Design - Level 1",
+    "vendor": "Avid",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "graphic-design",
+    "focus": "Graphic Design expertise",
+    "exam": "AVID-1026",
+    "tags": [
+      "graphic-design",
+      "level-1",
+      "avid"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/avid.svg"
+  },
+  {
+    "name": "Avid Video Production - Level 1",
+    "vendor": "Avid",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "video-production",
+    "focus": "Video Production expertise",
+    "exam": "AVID-1027",
+    "tags": [
+      "video-production",
+      "level-1",
+      "avid"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/avid.svg"
+  },
+  {
+    "name": "Avid Video Production - Level 2",
+    "vendor": "Avid",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "video-production",
+    "focus": "Advanced Video Production",
+    "exam": "AVID-2028",
+    "tags": [
+      "video-production",
+      "level-2",
+      "avid"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/avid.svg"
+  },
+  {
+    "name": "Avid 3D & Animation - Level 2",
+    "vendor": "Avid",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "3d-animation",
+    "focus": "Advanced 3D & Animation",
+    "exam": "AVID-2029",
+    "tags": [
+      "3d-animation",
+      "level-2",
+      "avid"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/avid.svg"
+  },
+  {
+    "name": "Avid UI/UX Design - Level 2",
+    "vendor": "Avid",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "ui-ux",
+    "focus": "Advanced UI/UX Design",
+    "exam": "AVID-2030",
+    "tags": [
+      "ui-ux",
+      "level-2",
+      "avid"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/avid.svg"
+  },
+  {
+    "name": "Blackmagic Graphic Design - Level 1",
+    "vendor": "Blackmagic",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "graphic-design",
+    "focus": "Graphic Design expertise",
+    "exam": "BLACKMAG-1031",
+    "tags": [
+      "graphic-design",
+      "level-1",
+      "blackmagic"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/blackmagic.svg"
+  },
+  {
+    "name": "Blackmagic Video Production - Level 1",
+    "vendor": "Blackmagic",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "video-production",
+    "focus": "Video Production expertise",
+    "exam": "BLACKMAG-1032",
+    "tags": [
+      "video-production",
+      "level-1",
+      "blackmagic"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/blackmagic.svg"
+  },
+  {
+    "name": "Blackmagic Video Production - Level 2",
+    "vendor": "Blackmagic",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "video-production",
+    "focus": "Advanced Video Production",
+    "exam": "BLACKMAG-2033",
+    "tags": [
+      "video-production",
+      "level-2",
+      "blackmagic"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/blackmagic.svg"
+  },
+  {
+    "name": "Blackmagic 3D & Animation - Level 2",
+    "vendor": "Blackmagic",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "3d-animation",
+    "focus": "Advanced 3D & Animation",
+    "exam": "BLACKMAG-2034",
+    "tags": [
+      "3d-animation",
+      "level-2",
+      "blackmagic"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/blackmagic.svg"
+  },
+  {
+    "name": "Blackmagic UI/UX Design - Level 2",
+    "vendor": "Blackmagic",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "ui-ux",
+    "focus": "Advanced UI/UX Design",
+    "exam": "BLACKMAG-2035",
+    "tags": [
+      "ui-ux",
+      "level-2",
+      "blackmagic"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/blackmagic.svg"
+  },
+  {
+    "name": "Apple Graphic Design - Level 1",
+    "vendor": "Apple",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "graphic-design",
+    "focus": "Graphic Design expertise",
+    "exam": "APPLE-1036",
+    "tags": [
+      "graphic-design",
+      "level-1",
+      "apple"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/apple.svg"
+  }
+]

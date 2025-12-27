@@ -1,0 +1,674 @@
+[
+  {
+    "name": "Shopify E-Commerce Platforms - Level 1",
+    "vendor": "Shopify",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "E-Commerce Platforms",
+    "focus": "E-Commerce Platforms expertise",
+    "exam": "SHOPIFY-1001",
+    "tags": [
+      "e-commerce-platforms",
+      "level-1",
+      "shopify"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/shopify.svg"
+  },
+  {
+    "name": "Magento POS Systems - Level 1",
+    "vendor": "Magento",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "POS Systems",
+    "focus": "POS Systems expertise",
+    "exam": "MAGENTO-1002",
+    "tags": [
+      "pos-systems",
+      "level-1",
+      "magento"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/magento.svg"
+  },
+  {
+    "name": "WooCommerce Inventory Management - Level 1",
+    "vendor": "WooCommerce",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Inventory Management",
+    "focus": "Inventory Management expertise",
+    "exam": "WOOCOMMERCE-1003",
+    "tags": [
+      "inventory-management",
+      "level-1",
+      "woocommerce"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/woocommerce.svg"
+  },
+  {
+    "name": "Square Payment Processing - Level 1",
+    "vendor": "Square",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Payment Processing",
+    "focus": "Payment Processing expertise",
+    "exam": "SQUARE-1004",
+    "tags": [
+      "payment-processing",
+      "level-1",
+      "square"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/square.svg"
+  },
+  {
+    "name": "Salesforce Commerce E-Commerce Platforms - Level 1",
+    "vendor": "Salesforce Commerce",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "E-Commerce Platforms",
+    "focus": "E-Commerce Platforms expertise",
+    "exam": "SALESFORCE COMMERCE-1005",
+    "tags": [
+      "e-commerce-platforms",
+      "level-1",
+      "salesforce-commerce"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/salesforcecommerce.svg"
+  },
+  {
+    "name": "Shopify POS Systems - Level 1",
+    "vendor": "Shopify",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "POS Systems",
+    "focus": "POS Systems expertise",
+    "exam": "SHOPIFY-1006",
+    "tags": [
+      "pos-systems",
+      "level-1",
+      "shopify"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/shopify.svg"
+  },
+  {
+    "name": "Magento Inventory Management - Level 1",
+    "vendor": "Magento",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Inventory Management",
+    "focus": "Inventory Management expertise",
+    "exam": "MAGENTO-1007",
+    "tags": [
+      "inventory-management",
+      "level-1",
+      "magento"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/magento.svg"
+  },
+  {
+    "name": "WooCommerce Payment Processing - Level 1",
+    "vendor": "WooCommerce",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Payment Processing",
+    "focus": "Payment Processing expertise",
+    "exam": "WOOCOMMERCE-1008",
+    "tags": [
+      "payment-processing",
+      "level-1",
+      "woocommerce"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/woocommerce.svg"
+  },
+  {
+    "name": "Shopify E-Commerce Platforms - Level 2",
+    "vendor": "Shopify",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "E-Commerce Platforms",
+    "focus": "E-Commerce Platforms expertise",
+    "exam": "SHOPIFY-2009",
+    "tags": [
+      "e-commerce-platforms",
+      "level-2",
+      "shopify"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/shopify.svg"
+  },
+  {
+    "name": "Magento POS Systems - Level 2",
+    "vendor": "Magento",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "POS Systems",
+    "focus": "POS Systems expertise",
+    "exam": "MAGENTO-2010",
+    "tags": [
+      "pos-systems",
+      "level-2",
+      "magento"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/magento.svg"
+  },
+  {
+    "name": "WooCommerce Inventory Management - Level 2",
+    "vendor": "WooCommerce",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Inventory Management",
+    "focus": "Inventory Management expertise",
+    "exam": "WOOCOMMERCE-2011",
+    "tags": [
+      "inventory-management",
+      "level-2",
+      "woocommerce"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/woocommerce.svg"
+  },
+  {
+    "name": "Square Payment Processing - Level 2",
+    "vendor": "Square",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Payment Processing",
+    "focus": "Payment Processing expertise",
+    "exam": "SQUARE-2012",
+    "tags": [
+      "payment-processing",
+      "level-2",
+      "square"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/square.svg"
+  },
+  {
+    "name": "Salesforce Commerce E-Commerce Platforms - Level 2",
+    "vendor": "Salesforce Commerce",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "E-Commerce Platforms",
+    "focus": "E-Commerce Platforms expertise",
+    "exam": "SALESFORCE COMMERCE-2013",
+    "tags": [
+      "e-commerce-platforms",
+      "level-2",
+      "salesforce-commerce"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/salesforcecommerce.svg"
+  },
+  {
+    "name": "Shopify POS Systems - Level 2",
+    "vendor": "Shopify",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "POS Systems",
+    "focus": "POS Systems expertise",
+    "exam": "SHOPIFY-2014",
+    "tags": [
+      "pos-systems",
+      "level-2",
+      "shopify"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/shopify.svg"
+  },
+  {
+    "name": "Magento Inventory Management - Level 2",
+    "vendor": "Magento",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Inventory Management",
+    "focus": "Inventory Management expertise",
+    "exam": "MAGENTO-2015",
+    "tags": [
+      "inventory-management",
+      "level-2",
+      "magento"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/magento.svg"
+  },
+  {
+    "name": "WooCommerce Payment Processing - Level 2",
+    "vendor": "WooCommerce",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Payment Processing",
+    "focus": "Payment Processing expertise",
+    "exam": "WOOCOMMERCE-2016",
+    "tags": [
+      "payment-processing",
+      "level-2",
+      "woocommerce"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/woocommerce.svg"
+  },
+  {
+    "name": "Square E-Commerce Platforms - Level 2",
+    "vendor": "Square",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "E-Commerce Platforms",
+    "focus": "E-Commerce Platforms expertise",
+    "exam": "SQUARE-2017",
+    "tags": [
+      "e-commerce-platforms",
+      "level-2",
+      "square"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/square.svg"
+  },
+  {
+    "name": "Salesforce Commerce POS Systems - Level 2",
+    "vendor": "Salesforce Commerce",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "POS Systems",
+    "focus": "POS Systems expertise",
+    "exam": "SALESFORCE COMMERCE-2018",
+    "tags": [
+      "pos-systems",
+      "level-2",
+      "salesforce-commerce"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/salesforcecommerce.svg"
+  },
+  {
+    "name": "Shopify E-Commerce Platforms - Level 3",
+    "vendor": "Shopify",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "E-Commerce Platforms",
+    "focus": "E-Commerce Platforms expertise",
+    "exam": "SHOPIFY-3019",
+    "tags": [
+      "e-commerce-platforms",
+      "level-3",
+      "shopify"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/shopify.svg"
+  },
+  {
+    "name": "Magento POS Systems - Level 3",
+    "vendor": "Magento",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "POS Systems",
+    "focus": "POS Systems expertise",
+    "exam": "MAGENTO-3020",
+    "tags": [
+      "pos-systems",
+      "level-3",
+      "magento"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/magento.svg"
+  },
+  {
+    "name": "WooCommerce Inventory Management - Level 3",
+    "vendor": "WooCommerce",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Inventory Management",
+    "focus": "Inventory Management expertise",
+    "exam": "WOOCOMMERCE-3021",
+    "tags": [
+      "inventory-management",
+      "level-3",
+      "woocommerce"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/woocommerce.svg"
+  },
+  {
+    "name": "Square Payment Processing - Level 3",
+    "vendor": "Square",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Payment Processing",
+    "focus": "Payment Processing expertise",
+    "exam": "SQUARE-3022",
+    "tags": [
+      "payment-processing",
+      "level-3",
+      "square"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/square.svg"
+  },
+  {
+    "name": "Salesforce Commerce E-Commerce Platforms - Level 3",
+    "vendor": "Salesforce Commerce",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "E-Commerce Platforms",
+    "focus": "E-Commerce Platforms expertise",
+    "exam": "SALESFORCE COMMERCE-3023",
+    "tags": [
+      "e-commerce-platforms",
+      "level-3",
+      "salesforce-commerce"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/salesforcecommerce.svg"
+  },
+  {
+    "name": "Shopify POS Systems - Level 3",
+    "vendor": "Shopify",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "POS Systems",
+    "focus": "POS Systems expertise",
+    "exam": "SHOPIFY-3024",
+    "tags": [
+      "pos-systems",
+      "level-3",
+      "shopify"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/shopify.svg"
+  },
+  {
+    "name": "Magento Inventory Management - Level 3",
+    "vendor": "Magento",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Inventory Management",
+    "focus": "Inventory Management expertise",
+    "exam": "MAGENTO-3025",
+    "tags": [
+      "inventory-management",
+      "level-3",
+      "magento"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/magento.svg"
+  },
+  {
+    "name": "WooCommerce Payment Processing - Level 3",
+    "vendor": "WooCommerce",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Payment Processing",
+    "focus": "Payment Processing expertise",
+    "exam": "WOOCOMMERCE-3026",
+    "tags": [
+      "payment-processing",
+      "level-3",
+      "woocommerce"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/woocommerce.svg"
+  },
+  {
+    "name": "Shopify E-Commerce Platforms - Level 4",
+    "vendor": "Shopify",
+    "level": 4,
+    "level_range": [
+      4,
+      5
+    ],
+    "category": "E-Commerce Platforms",
+    "focus": "E-Commerce Platforms expertise",
+    "exam": "SHOPIFY-4027",
+    "tags": [
+      "e-commerce-platforms",
+      "level-4",
+      "shopify"
+    ],
+    "vendor_stage": "Expert",
+    "price": 400,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/shopify.svg"
+  },
+  {
+    "name": "Magento POS Systems - Level 4",
+    "vendor": "Magento",
+    "level": 4,
+    "level_range": [
+      4,
+      5
+    ],
+    "category": "POS Systems",
+    "focus": "POS Systems expertise",
+    "exam": "MAGENTO-4028",
+    "tags": [
+      "pos-systems",
+      "level-4",
+      "magento"
+    ],
+    "vendor_stage": "Expert",
+    "price": 400,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/magento.svg"
+  },
+  {
+    "name": "WooCommerce Inventory Management - Level 4",
+    "vendor": "WooCommerce",
+    "level": 4,
+    "level_range": [
+      4,
+      5
+    ],
+    "category": "Inventory Management",
+    "focus": "Inventory Management expertise",
+    "exam": "WOOCOMMERCE-4029",
+    "tags": [
+      "inventory-management",
+      "level-4",
+      "woocommerce"
+    ],
+    "vendor_stage": "Expert",
+    "price": 400,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/woocommerce.svg"
+  },
+  {
+    "name": "Square Payment Processing - Level 4",
+    "vendor": "Square",
+    "level": 4,
+    "level_range": [
+      4,
+      5
+    ],
+    "category": "Payment Processing",
+    "focus": "Payment Processing expertise",
+    "exam": "SQUARE-4030",
+    "tags": [
+      "payment-processing",
+      "level-4",
+      "square"
+    ],
+    "vendor_stage": "Expert",
+    "price": 400,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/square.svg"
+  },
+  {
+    "name": "Salesforce Commerce E-Commerce Platforms - Level 4",
+    "vendor": "Salesforce Commerce",
+    "level": 4,
+    "level_range": [
+      4,
+      5
+    ],
+    "category": "E-Commerce Platforms",
+    "focus": "E-Commerce Platforms expertise",
+    "exam": "SALESFORCE COMMERCE-4031",
+    "tags": [
+      "e-commerce-platforms",
+      "level-4",
+      "salesforce-commerce"
+    ],
+    "vendor_stage": "Expert",
+    "price": 400,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/salesforcecommerce.svg"
+  },
+  {
+    "name": "Shopify E-Commerce Platforms - Level 5",
+    "vendor": "Shopify",
+    "level": 5,
+    "level_range": [
+      5,
+      5
+    ],
+    "category": "E-Commerce Platforms",
+    "focus": "E-Commerce Platforms expertise",
+    "exam": "SHOPIFY-5032",
+    "tags": [
+      "e-commerce-platforms",
+      "level-5",
+      "shopify"
+    ],
+    "vendor_stage": "Master",
+    "price": 450,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/shopify.svg"
+  }
+]

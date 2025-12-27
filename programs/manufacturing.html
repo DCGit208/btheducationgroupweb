@@ -5,9 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manufacturing & Industrial Hub - Smart Manufacturing Workforce Development | BTH Education Group</title>
     <meta name="description" content="Comprehensive Manufacturing & Industrial workforce development hub. Training, certification, and career pathways across Automation, Quality Control, Lean Six Sigma, Welding, and Industry 4.0 technologies.">
+    <meta property="og:title" content="Smart Manufacturing Workforce Development Hub – BTH Education Group">
+    <meta property="og:description" content="Training → Certification → Work Network for Industry 4.0 across Automation, Quality, Lean, Welding, Maintenance, Supply Chain and more.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="/programs/manufacturing.html">
+    <meta property="og:image" content="/assets/images/og-manufacturing.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Smart Manufacturing Workforce Development Hub – BTH Education Group">
+    <meta name="twitter:description" content="Level 1–5 pathways mapped to verified certifications, labs and employer outcomes.">
+    <meta name="twitter:image" content="/assets/images/og-manufacturing.png">
     <link rel="icon" type="image/png" href="../assets/images/favicon.png">
     <link rel="stylesheet" href="../assets/css/style.css">
     <style>
+        :root {
+            --bg: #ffffff;
+            --text: #111827;
+            --muted: #6b7280;
+            --accent: #dc2626;
+            --accent-2: #ef4444;
+            --surface: #ffffff;
+            --surface-2: #f9fafb;
+            --radius: 16px;
+            --container: 1200px;
+        }
         /* Manufacturing-Specific Styling */
         .navbar {
             background: rgba(255, 255, 255, 0.95);
@@ -57,12 +77,12 @@
         /* MANUFACTURING HERO SECTION */
         .manufacturing-hero {
             position: relative;
-            background: linear-gradient(135deg, #1f2937 0%, #374151 25%, #4b5563 50%, #6b7280 75%, #9ca3af 100%);
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 30%, #334155 60%, #475569 90%);
             color: white;
-            padding: 120px 0 160px;
+            padding: 140px 0 180px;
             text-align: center;
             overflow: hidden;
-            min-height: 85vh;
+            min-height: 88vh;
             display: flex;
             align-items: center;
         }
@@ -128,16 +148,18 @@
         .sector-badge {
             display: inline-flex;
             align-items: center;
-            background: rgba(239, 68, 68, 0.2);
-            -webkit-backdrop-filter: blur(15px);
-            backdrop-filter: blur(15px);
-            border: 2px solid rgba(239, 68, 68, 0.3);
-            border-radius: 50px;
+            gap: 0.75rem;
+            background: rgba(255,255,255,0.14);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
             padding: 1rem 2rem;
-            margin-bottom: 2rem;
-            font-size: 1rem;
+            border-radius: 999px;
+            font-size: 0.95rem;
             font-weight: 700;
-            color: #fef2f2;
+            letter-spacing: 0.02em;
+            border: 1px solid rgba(255,255,255,0.2);
+            color: #ffffff;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
             animation: fadeInUp 1s ease-out 0.2s both;
         }
         
@@ -327,6 +349,47 @@
             margin: 0 auto;
             padding: 0 2rem;
         }
+
+        /* Section Nav (sticky) */
+        .section-nav {
+            position: sticky;
+            top: 64px;
+            z-index: 950;
+            background: rgba(255,255,255,0.92);
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0,0,0,0.06);
+        }
+        .section-nav-container {
+            max-width: var(--container);
+            margin: 0 auto;
+            display: flex;
+            gap: 0.5rem;
+            padding: 0.5rem 2rem;
+            overflow-x: auto;
+            scrollbar-width: thin;
+        }
+        .section-nav a {
+            display: inline-flex;
+            align-items: center;
+            height: 38px;
+            padding: 0 0.9rem;
+            border-radius: 999px;
+            background: #f3f4f6;
+            color: #111827;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            white-space: nowrap;
+            border: 1px solid #e5e7eb;
+            transition: background .2s, transform .2s, border-color .2s;
+        }
+        .section-nav a:hover {
+            background: #fff;
+            border-color: #d1d5db;
+            transform: translateY(-1px);
+        }
+        .section-nav a.active { background:#fff; border-color:#fecaca; color:#b91c1c; }
 
         .ecosystem-header {
             text-align: center;
@@ -538,6 +601,325 @@
             font-style: italic;
         }
 
+        /* Levels Framework Section */
+        .levels-framework {
+            background: #ffffff;
+            padding: 6rem 0;
+        }
+
+        .levels-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .level-card {
+            background: #ffffff;
+            border-radius: 18px;
+            padding: 2rem 1.8rem;
+            box-shadow: 0 12px 30px rgba(15, 23, 42, 0.06);
+            border: 1px solid #e5e7eb;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .level-tag {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.25rem 0.8rem;
+            border-radius: 999px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            background: #fee2e2;
+            color: #b91c1c;
+            margin-bottom: 0.5rem;
+        }
+
+        .level-card h3 {
+            font-size: 1.2rem;
+            margin: 0;
+            color: #111827;
+            font-weight: 700;
+        }
+
+        .level-card p {
+            margin: 0;
+            color: #6b7280;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .level-card ul {
+            list-style: none;
+            padding-left: 0;
+            margin: 0.75rem 0 0;
+            display: grid;
+            gap: 0.35rem;
+            font-size: 0.9rem;
+            color: #374151;
+        }
+
+        .level-card ul li::before {
+            content: "•";
+            color: #dc2626;
+            margin-right: 0.35rem;
+        }
+
+        .level-price-badge {
+            display:inline-block; margin-top:0.6rem; background:#f1f5f9; border:1px solid #e5e7eb; color:#334155;
+            padding:0.35rem 0.6rem; border-radius:8px; font-weight:700; font-size:0.9rem;
+        }
+        .level-actions { display:flex; gap:0.5rem; margin-top:0.7rem; flex-wrap:wrap; }
+        .level-actions .btn-enroll { background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%); color:#fff; text-decoration:none; padding:0.5rem 0.9rem; border-radius:10px; font-weight:700; font-size:0.9rem; }
+        .level-actions .btn-explore { background:#fff; color:#b91c1c; border:1px solid #fecaca; text-decoration:none; padding:0.5rem 0.9rem; border-radius:10px; font-weight:700; font-size:0.9rem; }
+
+        /* Certification Explorer */
+        .certification-explorer {
+            background: #f9fafb;
+            padding: 6rem 0;
+        }
+
+        /* Anchor scroll offsets for sticky navs */
+        #domains, #certification-explorer, #faqs {
+            scroll-margin-top: 90px;
+        }
+
+        .filter-bar {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2.5rem;
+            align-items: end;
+        }
+
+        .filter-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.35rem;
+        }
+
+        .filter-group label {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #4b5563;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .filter-group select,
+        .filter-group input[type="text"] {
+            border-radius: 999px;
+            border: 1px solid #e5e7eb;
+            padding: 0.6rem 0.9rem;
+            font-size: 0.95rem;
+            color: #111827;
+            background: #ffffff;
+        }
+
+        .filter-group input[type="text"]::placeholder {
+            color: #9ca3af;
+        }
+
+        .cert-results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        /* Filter chips */
+        .filter-chips { display:flex; flex-wrap:wrap; gap:0.6rem; margin: 0 0 1.5rem; }
+        .filter-chip { display:inline-flex; align-items:center; gap:0.5rem; background:linear-gradient(135deg, #dc2626 0%, #b91c1c 100%); border:1px solid rgba(220,38,38,0.2); color:#ffffff; padding:0.45rem 0.85rem; border-radius:999px; font-size:0.86rem; font-weight:600; box-shadow: 0 2px 8px rgba(220, 38, 38, 0.15); transition: all 0.2s ease; }
+        .filter-chip:hover { box-shadow: 0 4px 12px rgba(220, 38, 38, 0.25); transform: translateY(-1px); }
+        .filter-chip button { background:rgba(255,255,255,0.2); border:none; color:#ffffff; cursor:pointer; font-size:1rem; font-weight:700; width:20px; height:20px; border-radius:50%; display:flex; align-items:center; justify-content:center; transition: all 0.2s ease; }
+        .filter-chip button:hover { background:rgba(255,255,255,0.3); transform: scale(1.1); }
+
+        .cert-card {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 2rem 1.75rem 2rem;
+            box-shadow: 0 4px 6px rgba(15, 23, 42, 0.04), 0 12px 40px rgba(15, 23, 42, 0.08);
+            border: 1px solid #e5e7eb;
+            display: flex;
+            flex-direction: column;
+            gap: 0.85rem;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .cert-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 12px rgba(15, 23, 42, 0.06), 0 20px 50px rgba(15, 23, 42, 0.12);
+            border-color: #dc2626;
+        }
+
+        .cert-header {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+
+        .cert-level-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.35rem 0.9rem;
+            border-radius: 999px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+            color: #ffffff;
+            box-shadow: 0 2px 8px rgba(220, 38, 38, 0.25);
+            width: fit-content;
+        }
+
+        .cert-title {
+            margin: 0;
+            font-size: 1.15rem;
+            color: #0f172a;
+            font-weight: 700;
+            line-height: 1.35;
+            letter-spacing: -0.01em;
+        }
+
+        .cert-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+            font-size: 0.8rem;
+            color: #4b5563;
+        }
+
+        .cert-meta span {
+            background: #f1f5f9;
+            padding: 0.35rem 0.75rem;
+            border-radius: 999px;
+            border: 1px solid #e2e8f0;
+            font-weight: 500;
+            transition: all 0.2s ease;
+        }
+        .cert-meta span:hover {
+            background: #e2e8f0;
+            border-color: #cbd5e1;
+        }
+
+        .cert-description {
+            margin: 0.25rem 0 0.5rem;
+            color: #475569;
+            font-size: 0.94rem;
+            line-height: 1.65;
+            letter-spacing: 0.01em;
+        }
+
+        .cert-pd {
+            background: #f9fafb;
+            border-radius: 12px;
+            padding: 0.75rem 0.9rem;
+        }
+
+        /* Card overlay */
+        .cert-overlay { position:absolute; inset:0; background: rgba(17,24,39,0.9); color:#fff; display:flex; flex-direction:column; gap:0.5rem; padding:1rem; opacity:0; transition:opacity .2s ease; }
+        .cert-card:hover .cert-overlay, .cert-card:focus-within .cert-overlay { opacity:1; }
+        .cert-overlay h4 { margin:0; font-size:1rem; }
+        .cert-overlay .meta { display:flex; flex-wrap:wrap; gap:0.4rem; font-size:0.8rem; }
+        .cert-overlay .meta span { background: rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.2); border-radius:999px; padding:0.15rem 0.5rem; }
+        .cert-overlay .price { margin-top:auto; font-weight:800; }
+
+        .cert-pd h4 {
+            margin: 0 0 0.4rem;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #6b7280;
+        }
+
+        .cert-pd ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: grid;
+            gap: 0.25rem;
+            font-size: 0.85rem;
+            color: #374151;
+        }
+
+        .cert-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            margin-top: 0.6rem;
+        }
+
+        .cert-actions .hero-primary-btn,
+        .cert-actions .hero-secondary-btn {
+            font-size: 0.9rem;
+            padding: 0.7rem 1.4rem;
+        }
+
+        /* Professional Development Tracks */
+        .pd-tracks {
+            background: #ffffff;
+            padding: 6rem 0;
+        }
+
+        .pd-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 1.75rem;
+            margin-top: 3rem;
+        }
+
+        .pd-card {
+            background: #ffffff;
+            border-radius: 18px;
+            padding: 1.8rem 1.6rem;
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
+        }
+
+        .pd-card h3 {
+            margin: 0.4rem 0 0.7rem;
+            font-size: 1.1rem;
+            color: #111827;
+        }
+
+        .pd-card ul {
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+            display: grid;
+            gap: 0.35rem;
+            font-size: 0.9rem;
+            color: #374151;
+        }
+
+        .pd-card ul li::before {
+            content: "•";
+            color: #dc2626;
+            margin-right: 0.35rem;
+        }
+
+        /* Level Checkout Panel */
+        .level-checkout { background:#ffffff; border-top:1px solid #f1f5f9; border-bottom:1px solid #f1f5f9; margin-top:2rem; }
+        .level-checkout .checkout-inner { max-width: var(--container); margin:0 auto; padding: 1rem 2rem; display:flex; align-items:center; justify-content:space-between; gap:1rem; flex-wrap:wrap; }
+        .level-checkout .price { font-weight:800; color:#111827; }
+
+        @media (max-width: 768px) {
+            .filter-bar {
+                grid-template-columns: 1fr;
+            }
+            /* Mobile: collapse advanced filters by default */
+            .filter-bar .advanced { display: none; }
+            .filter-bar.expanded .advanced { display: flex; }
+            .filter-bar .toggle-filters { display: block; }
+        }
+
         /* LMS Integration Section */
         .lms-integration {
             background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
@@ -666,9 +1048,80 @@
                 font-size: 2rem;
             }
         }
+
+        /* Footer */
+        .site-footer {
+            background: #0f172a;
+            color: #cbd5e1;
+            padding: 2.5rem 0;
+        }
+        /* Why Hub: simplify cards to prevent glass/hover distortion */
+        .why-hub .stat-card {
+            background: #ffffff;
+            -webkit-backdrop-filter: none;
+            backdrop-filter: none;
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+            transform: none;
+        }
+        .why-hub .stat-card:hover { transform: none; border-color: #e5e7eb; box-shadow: 0 10px 28px rgba(15,23,42,0.08); }
+        .why-hub .stat-card::before { display: none; }
+        .why-hub .stat-label { color: #111827; font-weight: 700; text-transform: none; letter-spacing: normal; }
+        .site-footer .footer-inner {
+            max-width: var(--container);
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            gap: 1.5rem;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .site-footer a { color: #e2e8f0; text-decoration: none; }
+        .site-footer a:hover { text-decoration: underline; }
+
+        /* Back to Top */
+        #back-to-top { position: fixed; right: 20px; bottom: 20px; background:#111827; color:#fff; border:none; border-radius:999px; padding:0.6rem 0.8rem; cursor:pointer; box-shadow:0 8px 20px rgba(0,0,0,0.15); display:none; z-index:999; }
+        #back-to-top:hover { background:#0b1220; }
+
+        /* Level Pricing Strip */
+        .level-pricing { background:#ffffff; border-top:1px solid #f1f5f9; border-bottom:1px solid #f1f5f9; }
+        .level-pricing .inner { max-width: var(--container); margin:0 auto; padding: 1.25rem 2rem; display:flex; align-items:center; gap:1rem; flex-wrap:wrap; justify-content:space-between; }
+        .level-tabs { display:flex; gap:0.5rem; flex-wrap:wrap; }
+        .level-tab { background:#f3f4f6; border:1px solid #e5e7eb; color:#111827; padding:0.45rem 0.9rem; border-radius:999px; font-weight:700; cursor:pointer; }
+        .level-tab.active { background:#fee2e2; border-color:#fecaca; color:#b91c1c; }
+        .level-price { color:#111827; font-weight:800; font-size:1.05rem; }
+        .level-cta { display:flex; gap:0.5rem; }
+        .level-cta a { background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%); color:#fff; text-decoration:none; padding:0.6rem 1.1rem; border-radius:10px; font-weight:700; }
+        .level-cta a.secondary { background:#fff; color:#b91c1c; border:1px solid #fecaca; }
     </style>
 </head>
 <body>
+    
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "EducationalOccupationalProgram",
+            "name": "Manufacturing & Industrial Workforce Development",
+            "description": "Level 1–5 professional pathways in manufacturing aligned to vendor certifications and industry standards.",
+            "provider": {
+                "@type": "Organization",
+                "name": "BTH Education Group"
+            },
+            "occupationalCategory": [
+                "Automation Technician",
+                "Maintenance Technician",
+                "Quality Engineer",
+                "Production Supervisor",
+                "Welding Specialist"
+            ],
+            "hasCredential": [
+                {"@type":"EducationalOccupationalCredential","name":"AWS Certified Welder"},
+                {"@type":"EducationalOccupationalCredential","name":"ASQ CQE"},
+                {"@type":"EducationalOccupationalCredential","name":"APICS CPIM"}
+            ]
+        }
+        </script>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -683,6 +1136,8 @@
             </ul>
         </div>
     </nav>
+
+    <main>
 
     <!-- MANUFACTURING HERO SECTION -->
     <section class="manufacturing-hero">
@@ -700,15 +1155,15 @@
             <!-- Call to Action Buttons -->
             <div class="hero-cta-section">
                 <div class="hero-cta-buttons">
-                    <a href="#workforce-pipeline" class="hero-primary-btn">Start Your Journey</a>
-                    <a href="#lms-access" class="hero-secondary-btn">Access Manufacturing LMS</a>
+                    <a href="#domains" class="hero-primary-btn">Start Your Journey</a>
+                    <a href="#certification-explorer" class="hero-secondary-btn">Explore Certifications</a>
                 </div>
             </div>
 
             <!-- Manufacturing Statistics -->
             <div class="manufacturing-stats">
                 <div class="stat-card">
-                    <div class="stat-number">55+</div>
+                    <div class="stat-number">72</div>
                     <div class="stat-label">Certifications</div>
                 </div>
                 <div class="stat-card">
@@ -716,7 +1171,7 @@
                     <div class="stat-label">Industry Domains</div>
                 </div>
                 <div class="stat-card">
-                    <div class="stat-number">85+</div>
+                    <div class="stat-number">25+</div>
                     <div class="stat-label">Vendor Partners</div>
                 </div>
                 <div class="stat-card">
@@ -727,200 +1182,404 @@
         </div>
     </section>
 
-    <!-- Manufacturing Ecosystem Section -->
-    <section class="manufacturing-ecosystem" id="workforce-pipeline">
+    
+    <!-- Hub Navigation Cards -->
+    <section class="hub-nav" style="background:#fff;padding:2.5rem 0;">
+        <div class="ecosystem-container">
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;">
+                <a class="domain-card" href="#domains"><div class="domain-header"><div class="domain-icon">🧭</div><h4 class="domain-title">Domains</h4></div><p class="domain-vendors">Explore all manufacturing domains</p></a>
+                <a class="domain-card" href="#certification-explorer"><div class="domain-header"><div class="domain-icon">🧩</div><h4 class="domain-title">Career Explorer</h4></div><p class="domain-vendors">Design your certification path</p></a>
+                <a class="domain-card" href="#faqs"><div class="domain-header"><div class="domain-icon">❓</div><h4 class="domain-title">FAQs</h4></div><p class="domain-vendors">Common questions answered</p></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Domains Section (early placement) -->
+    <section class="domains" id="domains" style="background:#f9fafb;padding:4rem 0;">
+        <div class="ecosystem-container">
+            <div class="domains-header">
+                <h3>Manufacturing Industry Domains</h3>
+                <p>Comprehensive coverage across all manufacturing sectors and specializations</p>
+            </div>
+            <div class="domains-grid">
+                <!-- Automation & Robotics -->
+                <div class="domain-card">
+                    <div class="domain-header">
+                        <div class="domain-icon">🤖</div>
+                        <h4 class="domain-title">Automation & Robotics</h4>
+                    </div>
+                    <div class="domain-certifications">
+                        <span class="cert-badge">PLC Programming</span>
+                        <span class="cert-badge">SCADA Systems</span>
+                        <span class="cert-badge">HMI Design</span>
+                        <span class="cert-badge">Robotics</span>
+                    </div>
+                    <p class="domain-vendors">Vendors: Siemens, Allen-Bradley, Schneider, ABB, Fanuc, KUKA</p>
+                </div>
+
+                <!-- Quality Control & Management -->
+                <div class="domain-card">
+                    <div class="domain-header">
+                        <div class="domain-icon">🔍</div>
+                        <h4 class="domain-title">Quality Control & Management</h4>
+                    </div>
+                    <div class="domain-certifications">
+                        <span class="cert-badge">ISO 9001</span>
+                        <span class="cert-badge">Six Sigma</span>
+                        <span class="cert-badge">SPC</span>
+                        <span class="cert-badge">Quality Auditing</span>
+                    </div>
+                    <p class="domain-vendors">Standards: ISO, ASQ, IAQG, AIAG, APQP</p>
+                </div>
+
+                <!-- Lean Manufacturing -->
+                <div class="domain-card">
+                    <div class="domain-header">
+                        <div class="domain-icon">⚡</div>
+                        <h4 class="domain-title">Lean Manufacturing</h4>
+                    </div>
+                    <div class="domain-certifications">
+                        <span class="cert-badge">Lean Six Sigma</span>
+                        <span class="cert-badge">Kaizen</span>
+                        <span class="cert-badge">5S</span>
+                        <span class="cert-badge">Value Stream</span>
+                    </div>
+                    <p class="domain-vendors">Methodologies: Toyota Production System, DMAIC, Kanban</p>
+                </div>
+
+                <!-- Advanced Welding -->
+                <div class="domain-card">
+                    <div class="domain-header">
+                        <div class="domain-icon">🔥</div>
+                        <h4 class="domain-title">Advanced Welding</h4>
+                    </div>
+                    <div class="domain-certifications">
+                        <span class="cert-badge">AWS D1.1</span>
+                        <span class="cert-badge">CWI</span>
+                        <span class="cert-badge">Pipe Welding</span>
+                        <span class="cert-badge">TIG/MIG</span>
+                    </div>
+                    <p class="domain-vendors">Standards: AWS, ASME, API, Military Specifications</p>
+                </div>
+
+                <!-- Industrial Maintenance -->
+                <div class="domain-card">
+                    <div class="domain-header">
+                        <div class="domain-icon">🔧</div>
+                        <h4 class="domain-title">Industrial Maintenance</h4>
+                    </div>
+                    <div class="domain-certifications">
+                        <span class="cert-badge">CMRP</span>
+                        <span class="cert-badge">Predictive Maintenance</span>
+                        <span class="cert-badge">HVAC Systems</span>
+                        <span class="cert-badge">Electrical Systems</span>
+                    </div>
+                    <p class="domain-vendors">Platforms: SMRP, Fluke, SKF, Emerson, Honeywell</p>
+                </div>
+
+                <!-- Supply Chain & Logistics -->
+                <div class="domain-card">
+                    <div class="domain-header">
+                        <div class="domain-icon">📦</div>
+                        <h4 class="domain-title">Supply Chain & Logistics</h4>
+                    </div>
+                    <div class="domain-certifications">
+                        <span class="cert-badge">APICS SCOR</span>
+                        <span class="cert-badge">Inventory Mgmt</span>
+                        <span class="cert-badge">Warehouse Ops</span>
+                        <span class="cert-badge">ERP Systems</span>
+                    </div>
+                    <p class="domain-vendors">Systems: SAP, Oracle, Microsoft, Infor, JDA</p>
+                </div>
+
+                <!-- Industrial Energy & Utilities -->
+                <div class="domain-card">
+                    <div class="domain-header">
+                        <div class="domain-icon">⚙️</div>
+                        <h4 class="domain-title">Industrial Energy & Utilities</h4>
+                    </div>
+                    <div class="domain-certifications">
+                        <span class="cert-badge">ISO 50001</span>
+                        <span class="cert-badge">Energy Audits</span>
+                        <span class="cert-badge">Utilities Ops</span>
+                        <span class="cert-badge">Efficiency</span>
+                    </div>
+                    <p class="domain-vendors">Areas: Steam, Compressed Air, Chilled Water, Power</p>
+                </div>
+
+                <!-- EHS & Process Safety -->
+                <div class="domain-card">
+                    <div class="domain-header">
+                        <div class="domain-icon">🛡️</div>
+                        <h4 class="domain-title">EHS & Process Safety</h4>
+                    </div>
+                    <div class="domain-certifications">
+                        <span class="cert-badge">NEBOSH IGC</span>
+                        <span class="cert-badge">Process Safety</span>
+                        <span class="cert-badge">Risk</span>
+                        <span class="cert-badge">HAZOP</span>
+                    </div>
+                    <p class="domain-vendors">Standards: NEBOSH, IOSH, ISO 45001</p>
+                </div>
+
+                <!-- Mechatronics & Industrial Electronics -->
+                <div class="domain-card">
+                    <div class="domain-header">
+                        <div class="domain-icon">🔌</div>
+                        <h4 class="domain-title">Mechatronics & Industrial Electronics</h4>
+                    </div>
+                    <div class="domain-certifications">
+                        <span class="cert-badge">Sensors</span>
+                        <span class="cert-badge">Actuators</span>
+                        <span class="cert-badge">PLC I/O</span>
+                        <span class="cert-badge">Drives</span>
+                    </div>
+                    <p class="domain-vendors">Vendors: Siemens, Rockwell, Schneider</p>
+                </div>
+
+                <!-- Industry 4.0 & Smart Factory -->
+                <div class="domain-card">
+                    <div class="domain-header">
+                        <div class="domain-icon">🏭</div>
+                        <h4 class="domain-title">Industry 4.0 & Smart Factory</h4>
+                    </div>
+                    <div class="domain-certifications">
+                        <span class="cert-badge">IIoT</span>
+                        <span class="cert-badge">Data Integration</span>
+                        <span class="cert-badge">OT Cyber</span>
+                        <span class="cert-badge">Dashboards</span>
+                    </div>
+                    <p class="domain-vendors">Standards: ISA/IEC 62443, ISO</p>
+                </div>
+
+                <!-- Industrial Data & Analytics -->
+                <div class="domain-card">
+                    <div class="domain-header">
+                        <div class="domain-icon">📈</div>
+                        <h4 class="domain-title">Industrial Data & Analytics</h4>
+                    </div>
+                    <div class="domain-certifications">
+                        <span class="cert-badge">SPC</span>
+                        <span class="cert-badge">KPIs</span>
+                        <span class="cert-badge">ETL</span>
+                        <span class="cert-badge">Visualization</span>
+                    </div>
+                    <p class="domain-vendors">Tools: Excel, BI, Historians</p>
+                </div>
+
+                <!-- Production & Operations Management -->
+                <div class="domain-card">
+                    <div class="domain-header">
+                        <div class="domain-icon">📊</div>
+                        <h4 class="domain-title">Production & Operations Management</h4>
+                    </div>
+                    <div class="domain-certifications">
+                        <span class="cert-badge">OEE</span>
+                        <span class="cert-badge">Daily Mgmt</span>
+                        <span class="cert-badge">Line Balance</span>
+                        <span class="cert-badge">Capacity</span>
+                    </div>
+                    <p class="domain-vendors">Methods: SWL, Tiered Meetings, Hoshin</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Career Explorer with Multi-Filters -->
+    <section class="certification-explorer" id="certification-explorer">
         <div class="ecosystem-container">
             <div class="ecosystem-header">
-                <h2>Manufacturing Workforce Development Pipeline</h2>
-                <p>Complete ecosystem for training, certification, and career advancement across all manufacturing domains</p>
+                <h2>Manufacturing Certification &amp; Career Explorer</h2>
+                <p>Filter by Domain, Level, Type, Vendor, Solution Area, Region or Search. PD courses update to the selected Level.</p>
+                <div id="cert-count" aria-live="polite" style="margin-top:0.5rem;color:#6b7280;font-weight:600;"></div>
             </div>
 
-            <!-- Workforce Development Pipeline -->
-            <div class="workforce-pipeline">
-                <div class="pipeline-stage">
-                    <div class="pipeline-icon">📚</div>
-                    <h3>TRAINING</h3>
-                    <p>Comprehensive training programs delivered through our dedicated Manufacturing LMS with hands-on simulations and real-world applications.</p>
-                    <ul class="pipeline-features">
-                        <li>Interactive Learning Modules</li>
-                        <li>Virtual Reality Training</li>
-                        <li>Expert-Led Workshops</li>
-                        <li>Hands-on Lab Access</li>
-                    </ul>
+            <!-- Filters (ordered) -->
+            <div class="filter-bar" aria-label="Certification filters" id="filter-bar">
+                <div class="filter-group">
+                    <label for="filter-domain">Domain</label>
+                    <select id="filter-domain">
+                        <option value="">All Domains</option>
+                        <option value="automation">Automation &amp; Robotics</option>
+                        <option value="maintenance">Industrial Maintenance &amp; Reliability</option>
+                        <option value="quality">Quality Control &amp; Management</option>
+                        <option value="lean">Lean &amp; Continuous Improvement</option>
+                        <option value="welding">Advanced Welding &amp; Fabrication</option>
+                        <option value="supply-chain">Supply Chain &amp; Plant Logistics</option>
+                        <option value="ehs">EHS &amp; Process Safety</option>
+                        <option value="mechatronics">Mechatronics &amp; Industrial Electronics</option>
+                        <option value="industry4">Industry 4.0 &amp; Smart Factory</option>
+                        <option value="data">Industrial Data &amp; Analytics</option>
+                        <option value="production-ops">Production &amp; Operations Management</option>
+                        <option value="energy-utilities">Industrial Energy &amp; Utilities</option>
+                    </select>
                 </div>
 
-                <div class="pipeline-stage">
-                    <div class="pipeline-icon">🎓</div>
-                    <h3>CERTIFICATION</h3>
-                    <p>Industry-recognized certifications through our Pearson VUE partnership, validating your expertise across all manufacturing domains.</p>
-                    <ul class="pipeline-features">
-                        <li>Pearson VUE Testing Centers</li>
-                        <li>International Recognition</li>
-                        <li>Vendor-Specific Certifications</li>
-                        <li>Continuous Learning Paths</li>
-                    </ul>
+                <div class="filter-group">
+                    <label for="filter-level">Level</label>
+                    <select id="filter-level">
+                        <option value="">All Levels</option>
+                        <option value="1">Level 1 – Foundation</option>
+                        <option value="2">Level 2 – Operator / Technician</option>
+                        <option value="3">Level 3 – Specialist</option>
+                        <option value="4">Level 4 – Engineer / Supervisor</option>
+                        <option value="5">Level 5 – Manager / Leader</option>
+                    </select>
                 </div>
 
-                <div class="pipeline-stage">
-                    <div class="pipeline-icon">💼</div>
-                    <h3>WORK NETWORK</h3>
-                    <p>Connect with manufacturing employers, contractors, and professionals through our comprehensive work network and career placement services.</p>
-                    <ul class="pipeline-features">
-                        <li>Job Placement Services</li>
-                        <li>Industry Networking</li>
-                        <li>Career Advancement</li>
-                        <li>Continuous Support</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Industry Domains -->
-            <div class="industry-domains">
-                <div class="domains-header">
-                    <h3>Manufacturing Industry Domains</h3>
-                    <p>Comprehensive coverage across all manufacturing sectors and specializations</p>
+                <div class="filter-group">
+                    <label for="filter-type">Type</label>
+                    <select id="filter-type">
+                        <option value="">All Types</option>
+                        <option value="technical">Technical Certification</option>
+                        <option value="safety">Safety &amp; Compliance</option>
+                        <option value="quality-type">Quality &amp; Lean</option>
+                        <option value="leadership">Leadership &amp; Management</option>
+                        <option value="digital">Digital &amp; Data</option>
+                    </select>
                 </div>
 
-                <div class="domains-grid">
-                    <!-- Automation & Robotics -->
-                    <div class="domain-card">
-                        <div class="domain-header">
-                            <div class="domain-icon">🤖</div>
-                            <h4 class="domain-title">Automation & Robotics</h4>
-                        </div>
-                        <div class="domain-certifications">
-                            <span class="cert-badge">PLC Programming</span>
-                            <span class="cert-badge">SCADA Systems</span>
-                            <span class="cert-badge">HMI Design</span>
-                            <span class="cert-badge">Robotics</span>
-                        </div>
-                        <p class="domain-vendors">Vendors: Siemens, Allen-Bradley, Schneider, ABB, Fanuc, KUKA</p>
-                    </div>
-
-                    <!-- Quality Control & Management -->
-                    <div class="domain-card">
-                        <div class="domain-header">
-                            <div class="domain-icon">🔍</div>
-                            <h4 class="domain-title">Quality Control & Management</h4>
-                        </div>
-                        <div class="domain-certifications">
-                            <span class="cert-badge">ISO 9001</span>
-                            <span class="cert-badge">Six Sigma</span>
-                            <span class="cert-badge">SPC</span>
-                            <span class="cert-badge">Quality Auditing</span>
-                        </div>
-                        <p class="domain-vendors">Standards: ISO, ASQ, IAQG, AIAG, APQP</p>
-                    </div>
-
-                    <!-- Lean Manufacturing -->
-                    <div class="domain-card">
-                        <div class="domain-header">
-                            <div class="domain-icon">⚡</div>
-                            <h4 class="domain-title">Lean Manufacturing</h4>
-                        </div>
-                        <div class="domain-certifications">
-                            <span class="cert-badge">Lean Six Sigma</span>
-                            <span class="cert-badge">Kaizen</span>
-                            <span class="cert-badge">5S</span>
-                            <span class="cert-badge">Value Stream</span>
-                        </div>
-                        <p class="domain-vendors">Methodologies: Toyota Production System, DMAIC, Kanban</p>
-                    </div>
-
-                    <!-- Advanced Welding -->
-                    <div class="domain-card">
-                        <div class="domain-header">
-                            <div class="domain-icon">🔥</div>
-                            <h4 class="domain-title">Advanced Welding</h4>
-                        </div>
-                        <div class="domain-certifications">
-                            <span class="cert-badge">AWS D1.1</span>
-                            <span class="cert-badge">CWI</span>
-                            <span class="cert-badge">Pipe Welding</span>
-                            <span class="cert-badge">TIG/MIG</span>
-                        </div>
-                        <p class="domain-vendors">Standards: AWS, ASME, API, Military Specifications</p>
-                    </div>
-
-                    <!-- Industrial Maintenance -->
-                    <div class="domain-card">
-                        <div class="domain-header">
-                            <div class="domain-icon">🔧</div>
-                            <h4 class="domain-title">Industrial Maintenance</h4>
-                        </div>
-                        <div class="domain-certifications">
-                            <span class="cert-badge">CMRP</span>
-                            <span class="cert-badge">Predictive Maintenance</span>
-                            <span class="cert-badge">HVAC Systems</span>
-                            <span class="cert-badge">Electrical Systems</span>
-                        </div>
-                        <p class="domain-vendors">Platforms: SMRP, Fluke, SKF, Emerson, Honeywell</p>
-                    </div>
-
-                    <!-- Supply Chain & Logistics -->
-                    <div class="domain-card">
-                        <div class="domain-header">
-                            <div class="domain-icon">📦</div>
-                            <h4 class="domain-title">Supply Chain & Logistics</h4>
-                        </div>
-                        <div class="domain-certifications">
-                            <span class="cert-badge">APICS SCOR</span>
-                            <span class="cert-badge">Inventory Mgmt</span>
-                            <span class="cert-badge">Warehouse Ops</span>
-                            <span class="cert-badge">ERP Systems</span>
-                        </div>
-                        <p class="domain-vendors">Systems: SAP, Oracle, Microsoft, Infor, JDA</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- LMS Integration Section -->
-    <section class="lms-integration" id="lms-access">
-        <div class="lms-content">
-            <h3>Manufacturing LMS - Your Learning Command Center</h3>
-            <p style="font-size: 1.2rem; margin-bottom: 3rem; opacity: 0.9;">
-                Dedicated Learning Management System designed specifically for manufacturing professionals with industry-specific content and Pearson VUE integration.
-            </p>
-
-            <div class="lms-features">
-                <div class="lms-feature">
-                    <div class="lms-feature-icon">🎯</div>
-                    <h4>Personalized Learning Paths</h4>
-                    <p>Customized curriculum based on your career goals, current skills, and industry requirements.</p>
+                <div class="filter-group">
+                    <label for="filter-vendor">Vendor / Body (Multi)</label>
+                    <select id="filter-vendor" multiple>
+                        <optgroup label="Automation & Robotics">
+                            <option value="siemens">Siemens</option>
+                            <option value="rockwell">Rockwell / Allen-Bradley</option>
+                            <option value="schneider">Schneider Electric</option>
+                            <option value="abb">ABB</option>
+                            <option value="fanuc">FANUC</option>
+                            <option value="wonderware">Wonderware/AVEVA</option>
+                        </optgroup>
+                        <optgroup label="Quality & Lean">
+                            <option value="asq">ASQ</option>
+                            <option value="iso">ISO</option>
+                            <option value="asnt">ASNT</option>
+                            <option value="asme">ASME</option>
+                            <option value="sme">SME</option>
+                            <option value="jipm">JIPM</option>
+                        </optgroup>
+                        <optgroup label="Welding & Fabrication">
+                            <option value="aws">American Welding Society (AWS)</option>
+                        </optgroup>
+                        <optgroup label="Supply Chain & Logistics">
+                            <option value="apics">APICS / ASCM</option>
+                            <option value="sap">SAP</option>
+                        </optgroup>
+                        <optgroup label="Maintenance & Reliability">
+                            <option value="smrp">SMRP</option>
+                            <option value="parker">Parker Hannifin</option>
+                            <option value="ue-systems">UE Systems</option>
+                            <option value="icml">ICML</option>
+                            <option value="vibration-institute">Vibration Institute</option>
+                        </optgroup>
+                        <optgroup label="Safety & EHS">
+                            <option value="nebosh">NEBOSH / IOSH</option>
+                            <option value="osha">OSHA</option>
+                            <option value="nfpa">NFPA</option>
+                        </optgroup>
+                        <optgroup label="Industry 4.0 & Digital">
+                            <option value="isa">ISA / IEC 62443</option>
+                            <option value="cisco">Cisco</option>
+                            <option value="microsoft">Microsoft</option>
+                        </optgroup>
+                        <optgroup label="Energy & Utilities">
+                            <option value="aee">AEE (Energy)</option>
+                            <option value="niulpe">NIULPE</option>
+                        </optgroup>
+                        <optgroup label="Electronics & Controls">
+                            <option value="nims">NIMS</option>
+                        </optgroup>
+                    </select>
                 </div>
 
-                <div class="lms-feature">
-                    <div class="lms-feature-icon">🔬</div>
-                    <h4>Virtual Labs & Simulations</h4>
-                    <p>Hands-on practice with virtual manufacturing equipment and real-world scenario simulations.</p>
+                <div class="filter-group">
+                    <label for="filter-solution">Solution Area</label>
+                    <input type="text" id="filter-solution" placeholder="e.g., PLC, SPC, OEE, Welding codes" />
                 </div>
 
-                <div class="lms-feature">
-                    <div class="lms-feature-icon">📊</div>
-                    <h4>Progress Tracking</h4>
-                    <p>Real-time progress monitoring with detailed analytics and performance insights.</p>
+                <div class="filter-group">
+                    <label for="filter-region">Region</label>
+                    <select id="filter-region">
+                        <option value="">All Regions</option>
+                        <option value="global">Global</option>
+                        <option value="africa">Africa</option>
+                        <option value="europe">Europe</option>
+                        <option value="north-america">North America</option>
+                        <option value="middle-east">Middle East</option>
+                        <option value="asia-pacific">Asia-Pacific</option>
+                        <option value="latin-america">Latin America</option>
+                    </select>
                 </div>
 
-                <div class="lms-feature">
-                    <div class="lms-feature-icon">🏆</div>
-                    <h4>Pearson VUE Integration</h4>
-                    <p>Direct access to schedule and take certification exams through our Pearson VUE partnership.</p>
+                <div class="filter-group filter-search">
+                    <label for="filter-search">Search</label>
+                    <input type="text" id="filter-search" placeholder="Search by name, role or keyword…" />
+                </div>
+
+                <div class="filter-group" style="align-self:center;">
+                    <button id="reset-filters" class="hero-secondary-btn" type="button" style="color:#b91c1c;border-color:#fecaca;">Reset Filters</button>
                 </div>
             </div>
 
-            <div class="interactive-demo">
-                <div class="demo-container">
-                    <h4 style="font-size: 2rem; color: #1f2937; margin-bottom: 1rem;">Ready to Transform Your Manufacturing Career?</h4>
-                    <p style="color: #6b7280; font-size: 1.1rem; margin-bottom: 2rem;">
-                        Join thousands of manufacturing professionals who have advanced their careers through our comprehensive workforce development ecosystem.
-                    </p>
-                    <a href="../apply.html?sector=manufacturing" class="demo-cta">Access Manufacturing Hub Now</a>
+            <!-- Active filter chips -->
+            <div id="active-chips" class="filter-chips" aria-live="polite"></div>
+
+            <!-- Results -->
+            <div id="cert-results" class="cert-results-grid" aria-live="polite"></div>
+
+            <div class="ecosystem-header" style="margin-top:3rem;margin-bottom:1rem;">
+                <h2>Professional Development Courses</h2>
+                <p id="pd-modules-subtitle">Select a level to view included PD modules.</p>
+            </div>
+            <div id="pd-modules-grid" class="pd-grid"></div>
+
+            <!-- Level Checkout (appears when a Level is selected) -->
+            <div id="level-checkout" class="level-checkout" style="display:none;">
+                <div class="checkout-inner">
+                    <div class="price" id="checkout-price">Level Price</div>
+                    <div class="level-cta">
+                        <a id="checkout-cta" href="#" class="hero-primary-btn">Checkout</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- FAQs -->
+    <section class="faqs" id="faqs" style="background:#f9fafb;padding:4rem 0;">
+        <div class="ecosystem-container">
+            <div class="ecosystem-header">
+                <h2>Frequently Asked Questions</h2>
+            </div>
+            <div style="max-width:900px;margin:0 auto;display:grid;gap:0.75rem;">
+                <details><summary>How do I choose my first certification?</summary><p>Use the Levels framework and Role Tracks to pick a starting point aligned to your experience and goals. The Pre‑Assessment can also place you accurately.</p></details>
+                <details><summary>Do I have to start at Level 1?</summary><p>No. Experienced professionals can start at higher levels if prerequisites are met or verified via assessment.</p></details>
+                <details><summary>What qualifies as a prerequisite?</summary><p>Selected vendor or standards prerequisites, prior certifications, or successful pre‑assessment results.</p></details>
+                <details><summary>How are certifications verified for employers?</summary><p>We maintain verified records and provide employer‑facing profiles tied to your achieved certifications and PD history.</p></details>
+                <details><summary>Can I fast‑track across multiple levels?</summary><p>Yes — with proven experience, exam passes, and completion of required PD bundles.</p></details>
+                <details><summary>Is hands‑on practice included?</summary><p>Yes. Labs, simulators and project work complement theory for job‑ready capability.</p></details>
+                <details><summary>Can employers sponsor full cohorts?</summary><p>Yes. We design custom cohorts (e.g., 50 Level 2 Operators in 8 weeks) aligned with site needs.</p></details>
+            </div>
+        </div>
+    </section>
+
+    
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>&copy; <span id="year"></span> BTH Education Group</div>
+            <div style="display:flex;gap:1rem;">
+                <a href="../about.html">About</a>
+                <a href="../contact.html">Contact</a>
+                <a href="../program.html">Programs</a>
+            </div>
+        </div>
+    </footer>
+
+    <button id="back-to-top" aria-label="Back to top" title="Back to top">↑</button>
 
     <!-- JavaScript -->
     <script src="../assets/js/bth-session-manager.js"></script>
@@ -982,16 +1641,17 @@
         // Smooth scrolling for navigation
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (!href || href === '#') return;
                 e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
+                const target = document.querySelector(href);
                 if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
             });
         });
+
+        // Removed mobile filter toggle: no multi-filter UI in level explorer
 
         // Dynamic statistics animation
         function animateCounters() {
@@ -1031,14 +1691,831 @@
             statsObserver.observe(statsSection);
         }
 
-        // Parallax effect for hero section
+        // Back-to-top toggle only (parallax removed to avoid distortion)
         window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const hero = document.querySelector('.manufacturing-hero');
-            if (hero && scrolled < window.innerHeight) {
-                hero.style.transform = `translateY(${scrolled * 0.5}px)`;
-            }
+            const btt = document.getElementById('back-to-top');
+            if (btt) btt.style.display = (window.scrollY > 600) ? 'inline-flex' : 'none';
         });
+        document.getElementById('back-to-top')?.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    </script>
+    <script>
+    // Basic manufacturing certification dataset (can be expanded or wired to a global JSON)
+    let MANUFACTURING_CERTIFICATIONS = [
+        {
+            id: 'aws-certified-welder',
+            name: 'AWS Certified Welder',
+            level: 2,
+            domain: 'welding',
+            type: 'technical',
+            vendor: 'aws',
+            solutionAreas: ['welding', 'plate', 'pipe'],
+            rolePaths: ['Welder', 'Fabricator'],
+            description: 'Practical welding certification validating skills on plate and pipe across multiple processes.',
+            prerequisites: ['Welding safety fundamentals'],
+            skills: ['SMAW', 'GMAW', 'GTAW'],
+            nextCerts: ['aws-cwi'],
+            pdBundle: [
+                'Level 2: Workplace Communication for Trades',
+                'Level 2: 5S & Shopfloor Organization'
+            ]
+        },
+        {
+            id: 'aws-cwi',
+            name: 'AWS Certified Welding Inspector (CWI)',
+            level: 3,
+            domain: 'welding',
+            type: 'quality-type',
+            vendor: 'aws',
+            solutionAreas: ['inspection', 'codes'],
+            rolePaths: ['Welding Inspector', 'Quality Technician'],
+            description: 'Advanced welding inspection, codes and quality control credential for experienced professionals.',
+            prerequisites: ['aws-certified-welder or equivalent experience'],
+            skills: ['Visual inspection', 'NDT basics'],
+            nextCerts: [],
+            pdBundle: [
+                'Level 3: Root Cause Analysis',
+                'Level 3: Technical Report Writing'
+            ]
+        },
+        {
+            id: 'asq-cqe',
+            name: 'ASQ Certified Quality Engineer (CQE)',
+            level: 4,
+            domain: 'quality',
+            type: 'quality-type',
+            vendor: 'asq',
+            solutionAreas: ['quality', 'reliability', 'statistics'],
+            rolePaths: ['Quality Engineer', 'Process Engineer'],
+            description: 'Global credential in quality engineering, statistical methods, reliability and continuous improvement.',
+            prerequisites: ['Foundational statistics knowledge recommended'],
+            skills: ['SPC', 'MSA', 'DOE'],
+            nextCerts: ['iso-9001-la'],
+            pdBundle: [
+                'Level 4: Project Management for Engineers',
+                'Level 4: Leading Kaizen Events'
+            ]
+        },
+        {
+            id: 'apics-cpim',
+            name: 'APICS CPIM – Planning & Inventory Management',
+            level: 3,
+            domain: 'supply-chain',
+            type: 'technical',
+            vendor: 'apics',
+            solutionAreas: ['planning', 'inventory', 'MRP'],
+            rolePaths: ['Planner', 'Supply Chain Analyst'],
+            description: 'End-to-end understanding of planning, inventory and manufacturing execution in modern supply chains.',
+            prerequisites: [],
+            skills: ['MRP', 'S&OP'],
+            nextCerts: [],
+            pdBundle: [
+                'Level 3: Problem Solving & Decision Making',
+                'Level 3: Excel for Supply Chain'
+            ]
+        },
+        {
+            id: 'nebosh-igc',
+            name: 'NEBOSH International General Certificate (IGC)',
+            level: 3,
+            domain: 'ehs',
+            type: 'safety',
+            vendor: 'nebosh',
+            solutionAreas: ['EHS', 'risk'],
+            rolePaths: ['HSE Officer', 'Safety Supervisor'],
+            description: 'Health & safety credential recognized globally across industrial environments and manufacturing plants.',
+            prerequisites: [],
+            skills: ['Risk assessment', 'Incident investigation'],
+            nextCerts: [],
+            pdBundle: [
+                'Level 3: Safety Leadership on the Shop Floor',
+                'Level 3: Incident Investigation Skills'
+            ]
+        },
+        {
+            id: 'siemens-sce-plc',
+            name: 'Siemens SCE PLC Programming',
+            level: 2,
+            domain: 'automation',
+            type: 'technical',
+            vendor: 'siemens',
+            solutionAreas: ['PLC', 'TIA Portal'],
+            rolePaths: ['Automation Technician', 'Controls Technician'],
+            description: 'Foundational PLC programming skills on Siemens SIMATIC platforms for industrial automation.',
+            prerequisites: [],
+            skills: ['PLC basics', 'I/O addressing'],
+            nextCerts: ['rockwell-control-systems'],
+            pdBundle: [
+                'Level 2: Technical English for Manufacturing',
+                'Level 2: Industrial Documentation & SOPs'
+            ]
+        },
+        {
+            id: 'rockwell-control-systems',
+            name: 'Rockwell Automation Control Systems Certification',
+            level: 3,
+            domain: 'automation',
+            type: 'technical',
+            vendor: 'rockwell',
+            solutionAreas: ['controls', 'Allen-Bradley'],
+            rolePaths: ['Automation Engineer', 'Controls Engineer'],
+            description: 'Advanced control systems and industrial automation credential for Allen-Bradley platforms.',
+            prerequisites: ['PLC foundations (any vendor)'],
+            skills: ['Ladder logic', 'Drives'],
+            nextCerts: [],
+            pdBundle: [
+                'Level 3: Data-Driven Maintenance',
+                'Level 3: Cross-Functional Collaboration'
+            ]
+        },
+        {
+            id: 'smrp-cmrp',
+            name: 'SMRP Certified Maintenance & Reliability Professional (CMRP)',
+            level: 4,
+            domain: 'maintenance',
+            type: 'technical',
+            vendor: 'smrp',
+            solutionAreas: ['reliability', 'maintenance strategy'],
+            rolePaths: ['Reliability Engineer', 'Maintenance Manager'],
+            description: 'Global standard for maintenance and reliability practitioners overseeing equipment and asset performance.',
+            prerequisites: ['3+ years maintenance/reliability experience recommended'],
+            skills: ['Reliability engineering', 'Asset strategy'],
+            nextCerts: [],
+            pdBundle: [
+                'Level 4: Maintenance Strategy & Budgeting',
+                'Level 4: Leading Reliability Teams'
+            ]
+        },
+        {
+            id: 'iso-9001-la',
+            name: 'ISO 9001 Lead Auditor',
+            level: 4,
+            domain: 'quality',
+            type: 'quality-type',
+            vendor: 'iso',
+            solutionAreas: ['auditing', 'QMS'],
+            rolePaths: ['Lead Auditor', 'Quality Manager'],
+            description: 'Lead audit skills for implementing and auditing ISO 9001 quality management systems.',
+            prerequisites: ['Quality systems knowledge'],
+            skills: ['Audit planning', 'Nonconformity management'],
+            nextCerts: [],
+            pdBundle: [
+                'Level 4: Risk-Based Thinking in Quality',
+                'Level 4: Stakeholder Communication for Auditors'
+            ]
+        },
+        {
+            id: 'lean-six-sigma-gb',
+            name: 'Lean Six Sigma Green Belt',
+            level: 3,
+            domain: 'lean',
+            type: 'quality-type',
+            vendor: 'asq',
+            solutionAreas: ['lean', 'DMAIC'],
+            rolePaths: ['Process Improvement Specialist', 'Quality Engineer'],
+            description: 'Improvement methodology and tools for leading small to medium process improvement projects.',
+            prerequisites: [],
+            skills: ['Lean tools', 'Statistics basics'],
+            nextCerts: ['lean-six-sigma-bb'],
+            pdBundle: [
+                'Level 3: Facilitation Skills for Improvement Teams',
+                'Level 3: Data Analysis for Lean Six Sigma'
+            ]
+        },
+        {
+            id: 'lean-six-sigma-bb',
+            name: 'Lean Six Sigma Black Belt',
+            level: 4,
+            domain: 'lean',
+            type: 'quality-type',
+            vendor: 'asq',
+            solutionAreas: ['lean', 'leadership'],
+            rolePaths: ['Continuous Improvement Lead', 'Operational Excellence Manager'],
+            description: 'Advanced Lean Six Sigma tools, leadership and strategy for major improvement initiatives.',
+            prerequisites: ['Lean Six Sigma Green Belt or equivalent'],
+            skills: ['DOE', 'Change leadership'],
+            nextCerts: [],
+            pdBundle: [
+                'Level 4: Change Leadership for Transformation',
+                'Level 4: Strategic Problem Selection & Portfolio Management'
+            ]
+        },
+        {
+            id: 'industry4-specialist',
+            name: 'Industry 4.0 & Smart Factory Specialist',
+            level: 4,
+            domain: 'industry4',
+            type: 'digital',
+            vendor: 'iso',
+            solutionAreas: ['IIoT', 'data integration'],
+            rolePaths: ['Digital Manufacturing Engineer', 'Smart Factory Lead'],
+            description: 'Capabilities in IIoT, data integration and smart manufacturing technologies for Industry 4.0.',
+            prerequisites: [],
+            skills: ['IIoT', 'Data pipelines'],
+            nextCerts: [],
+            pdBundle: [
+                'Level 4: Data & Analytics for Manufacturing Leaders',
+                'Level 4: Digital Transformation Roadmapping'
+            ]
+        },
+        {
+            id: 'smrp-cmrt',
+            name: 'SMRP Certified Maintenance & Reliability Technician (CMRT)',
+            level: 2,
+            domain: 'maintenance',
+            type: 'technical',
+            vendor: 'smrp',
+            region: 'global',
+            solutionAreas: ['maintenance', 'troubleshooting'],
+            rolePaths: ['Maintenance Technician'],
+            description: 'Technician-level validation of maintenance and reliability troubleshooting and work practices.',
+            prerequisites: [],
+            skills: ['PM', 'Basic troubleshooting'],
+            nextCerts: ['smrp-cmrp'],
+            pdBundle: ['Level 2: SOP Mastery', 'Level 2: 5S & Visual Management']
+        },
+        {
+            id: 'iso-50001-la',
+            name: 'ISO 50001 Energy Management Systems – Lead Auditor',
+            level: 4,
+            domain: 'energy-utilities',
+            type: 'quality-type',
+            vendor: 'iso',
+            region: 'middle-east',
+            solutionAreas: ['energy', 'auditing'],
+            rolePaths: ['Energy Manager', 'Utilities Engineer'],
+            description: 'Lead audit practices for ISO 50001 energy management systems in industrial facilities.',
+            prerequisites: ['Energy systems basics'],
+            skills: ['Energy audits', 'EnPIs'],
+            nextCerts: [],
+            pdBundle: ['Level 4: Financial Decision Making for Operations', 'Level 4: Risk-Based Thinking']
+        },
+        {
+            id: 'mechatronics-tech',
+            name: 'Mechatronics Technician Fundamentals',
+            level: 2,
+            domain: 'mechatronics',
+            type: 'technical',
+            vendor: 'siemens',
+            region: 'africa',
+            solutionAreas: ['sensors', 'actuators', 'PLC'],
+            rolePaths: ['Mechatronics Technician', 'Automation Technician'],
+            description: 'Core mechatronics competencies across mechanics, electronics, and control systems.',
+            prerequisites: [],
+            skills: ['Sensors', 'Actuators', 'PLC I/O'],
+            nextCerts: ['siemens-sce-plc'],
+            pdBundle: ['Level 2: Technical Drawings', 'Level 2: Team Communication']
+        },
+        {
+            id: 'production-ops-supervisor',
+            name: 'Production & Operations Supervisor',
+            level: 3,
+            domain: 'production-ops',
+            type: 'leadership',
+            vendor: 'asq',
+            region: 'africa',
+            solutionAreas: ['oee', 'leadership', 'capacity'],
+            rolePaths: ['Production Supervisor', 'Line Leader'],
+            description: 'Foundational supervision skills for production operations with focus on OEE and people leadership.',
+            prerequisites: [],
+            skills: ['OEE', 'Shift leadership', 'Escalation'],
+            nextCerts: ['lean-six-sigma-gb'],
+            pdBundle: ['Level 3: Problem Solving & Decision Making', 'Level 3: Technical Report Writing']
+        },
+        {
+            id: 'industrial-data-analyst',
+            name: 'Industrial Data & Analytics Practitioner',
+            level: 3,
+            domain: 'data',
+            type: 'digital',
+            vendor: 'iso',
+            region: 'global',
+            solutionAreas: ['spc', 'dashboards', 'etl'],
+            rolePaths: ['Process Analyst', 'Data Technician'],
+            description: 'Practical analytics workflow for manufacturing KPIs, SPC, and dashboards.',
+            prerequisites: [],
+            skills: ['SPC', 'Visualization', 'ETL'],
+            nextCerts: ['industry4-specialist'],
+            pdBundle: ['Level 3: Data Analysis for Manufacturing', 'Level 3: Cross-Functional Collaboration']
+        },
+        {
+            id: 'nebosh-psm',
+            name: 'NEBOSH Process Safety Management',
+            level: 4,
+            domain: 'ehs',
+            type: 'safety',
+            vendor: 'nebosh',
+            region: 'middle-east',
+            solutionAreas: ['process-safety', 'risk'],
+            rolePaths: ['Process Safety Engineer', 'HSE Lead'],
+            description: 'Advanced process safety concepts for high-hazard manufacturing operations.',
+            prerequisites: ['NEBOSH IGC or equivalent'],
+            skills: ['HAZOP', 'Bow-tie'],
+            nextCerts: [],
+            pdBundle: ['Level 4: Change Management for Improvements', 'Level 4: Stakeholder Communication']
+        },
+        {
+            id: 'prod-ops-l4-lean-leader',
+            name: 'Lean Production Leader (Level 4)',
+            level: 4,
+            domain: 'production-ops',
+            type: 'leadership',
+            vendor: 'asq',
+            region: 'global',
+            solutionAreas: ['lean', 'oee', 'visual-management'],
+            rolePaths: ['Production Lead', 'Area Manager'],
+            description: 'Leadership in lean production systems with focus on OEE and flow.',
+            prerequisites: ['lean-six-sigma-gb recommended'],
+            skills: ['OEE', 'Line balancing', 'Daily management'],
+            nextCerts: ['lean-six-sigma-bb'],
+            pdBundle: ['Level 4: Coaching for Improvement', 'Level 4: Visual Management Systems']
+        },
+        {
+            id: 'prod-ops-l5-opex-manager',
+            name: 'Operational Excellence Manager (Level 5)',
+            level: 5,
+            domain: 'production-ops',
+            type: 'leadership',
+            vendor: 'asq',
+            region: 'global',
+            solutionAreas: ['strategy-deployment', 'kaizen', 'portfolio'],
+            rolePaths: ['Operations Manager', 'Plant OPEX Leader'],
+            description: 'Enterprise deployment of operational excellence with strategy deployment and portfolio management.',
+            prerequisites: ['lean-six-sigma-bb or equivalent'],
+            skills: ['Hoshin Kanri', 'Change leadership', 'Program governance'],
+            nextCerts: [],
+            pdBundle: ['Level 5: Strategy Deployment', 'Level 5: Executive Communication']
+        },
+        {
+            id: 'utilities-maint-tech',
+            name: 'Utilities Maintenance Technician',
+            level: 3,
+            domain: 'energy-utilities',
+            type: 'technical',
+            vendor: 'smrp',
+            region: 'middle-east',
+            solutionAreas: ['boilers', 'compressors', 'chillers'],
+            rolePaths: ['Utilities Technician', 'Maintenance Technician'],
+            description: 'Hands-on maintenance for industrial utilities: steam, compressed air, chilled water.',
+            prerequisites: [],
+            skills: ['PM', 'Condition monitoring', 'Safety isolation'],
+            nextCerts: ['smrp-cmrt'],
+            pdBundle: ['Level 3: LOTO & Permit to Work', 'Level 3: Condition Based Maintenance']
+        },
+        {
+            id: 'utilities-maint-supervisor',
+            name: 'Utilities Maintenance Supervisor',
+            level: 4,
+            domain: 'energy-utilities',
+            type: 'leadership',
+            vendor: 'smrp',
+            region: 'middle-east',
+            solutionAreas: ['utilities', 'planning', 'risk'],
+            rolePaths: ['Utilities Supervisor', 'Maintenance Planner'],
+            description: 'Supervision and planning for utilities systems with risk-based maintenance.',
+            prerequisites: ['utilities-maint-tech or equivalent'],
+            skills: ['Planning & scheduling', 'Risk assessment', 'Contractor management'],
+            nextCerts: ['smrp-cmrp'],
+            pdBundle: ['Level 4: Maintenance Planning & Scheduling', 'Level 4: Risk-Based Maintenance']
+        },
+        {
+            id: 'ot-cyber-practitioner',
+            name: 'OT Cybersecurity Practitioner (ISA/IEC 62443)',
+            level: 3,
+            domain: 'industry4',
+            type: 'digital',
+            vendor: 'isa',
+            region: 'middle-east',
+            solutionAreas: ['OT security', 'network-segmentation', 'standards'],
+            rolePaths: ['Automation Engineer', 'OT Security Analyst'],
+            description: 'Practical defenses for industrial control systems aligned to ISA/IEC 62443.',
+            prerequisites: ['Industrial networks basics'],
+            skills: ['Zoning', 'Access control', 'Asset inventory'],
+            nextCerts: ['ot-cyber-expert'],
+            pdBundle: ['Level 3: ICS Network Fundamentals', 'Level 3: Threat Modeling for OT']
+        },
+        {
+            id: 'ot-cyber-expert',
+            name: 'OT Cybersecurity Expert (ISA/IEC 62443)',
+            level: 4,
+            domain: 'industry4',
+            type: 'digital',
+            vendor: 'isa',
+            region: 'africa',
+            solutionAreas: ['risk', 'incident-response', 'compliance'],
+            rolePaths: ['OT Security Lead', 'ICS Cyber Engineer'],
+            description: 'Advanced risk, incident response and compliance for OT aligned to ISA/IEC 62443.',
+            prerequisites: ['ot-cyber-practitioner or equivalent'],
+            skills: ['Risk assessment', 'Incident response', 'Audit'],
+            nextCerts: [],
+            pdBundle: ['Level 4: Incident Response for OT', 'Level 4: 62443 Compliance & Audit']
+        }
+    ];
+
+    function formatDomainLabel(domain) {
+        const map = {
+            automation: 'Automation & Robotics',
+            maintenance: 'Industrial Maintenance & Reliability',
+            quality: 'Quality Control & Management',
+            lean: 'Lean & Continuous Improvement',
+            welding: 'Advanced Welding & Fabrication',
+            'supply-chain': 'Supply Chain & Plant Logistics',
+            ehs: 'EHS & Process Safety',
+            mechatronics: 'Mechatronics & Industrial Electronics',
+            industry4: 'Industry 4.0 & Smart Factory',
+            data: 'Industrial Data & Analytics',
+            'production-ops': 'Production & Operations Management',
+            'energy-utilities': 'Industrial Energy & Utilities'
+        };
+        return map[domain] || domain;
+    }
+
+    function formatTypeLabel(type) {
+        const map = {
+            technical: 'Technical Certification',
+            safety: 'Safety & Compliance',
+            'quality-type': 'Quality & Lean',
+            leadership: 'Leadership & Management',
+            digital: 'Digital & Data'
+        };
+        return map[type] || type;
+    }
+
+    function formatVendorLabel(vendor) {
+        const map = {
+            aws: 'American Welding Society (AWS)',
+            asq: 'ASQ',
+            apics: 'APICS / ASCM',
+            smrp: 'SMRP',
+            nebosh: 'NEBOSH / IOSH',
+            siemens: 'Siemens',
+            rockwell: 'Rockwell / Allen-Bradley',
+            isa: 'ISA / IEC 62443',
+            iso: 'ISO',
+            aee: 'AEE (Energy)',
+            fanuc: 'FANUC Robotics',
+            abb: 'ABB',
+            schneider: 'Schneider Electric',
+            parker: 'Parker Hannifin',
+            wonderware: 'Wonderware/AVEVA',
+            asnt: 'ASNT',
+            asme: 'ASME',
+            osha: 'OSHA',
+            sme: 'SME',
+            jipm: 'JIPM',
+            sap: 'SAP',
+            nfpa: 'NFPA',
+            nims: 'NIMS',
+            cisco: 'Cisco',
+            microsoft: 'Microsoft',
+            'ue-systems': 'UE Systems',
+            icml: 'ICML',
+            'vibration-institute': 'Vibration Institute',
+            niulpe: 'NIULPE'
+        };
+        return map[vendor] || vendor.toUpperCase();
+    }
+    function updateFilterChips(){
+        const wrap = document.getElementById('active-chips');
+        if (!wrap) return;
+        const domain = document.getElementById('filter-domain')?.value || '';
+        const level = document.getElementById('filter-level')?.value || '';
+        const type = document.getElementById('filter-type')?.value || '';
+        const region = document.getElementById('filter-region')?.value || '';
+        const solution = document.getElementById('filter-solution')?.value || '';
+        const search = document.getElementById('filter-search')?.value || '';
+        const vendors = getSelectedVendors();
+
+        const chips = [];
+        if (domain) chips.push({k:'domain', label:`Domain: ${formatDomainLabel(domain)}`});
+        if (level) chips.push({k:'level', label:`Level: ${level} (cumulative)`});
+        if (type) chips.push({k:'type', label:`Type: ${formatTypeLabel(type)}`});
+        vendors.forEach(v => chips.push({k:'vendor', v, label:`Vendor: ${formatVendorLabel(v)}`}));
+        if (region) chips.push({k:'region', label:`Region: ${region.replace(/-/g,' ')}`});
+        if (solution) chips.push({k:'solution', label:`Solution: ${solution}`});
+        if (search) chips.push({k:'search', label:`Search: ${search}`});
+
+        wrap.innerHTML = chips.map((c,i)=>`<span class="filter-chip" data-k="${c.k}" data-v="${c.v||''}">${c.label} <button aria-label="Clear ${c.label}" data-i="${i}">×</button></span>`).join('');
+        wrap.querySelectorAll('button').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const chip = e.currentTarget.closest('.filter-chip');
+                const key = chip?.getAttribute('data-k');
+                const val = chip?.getAttribute('data-v')||'';
+                if (!key) return;
+                const ids = {domain:'filter-domain', level:'filter-level', type:'filter-type', region:'filter-region', solution:'filter-solution', search:'filter-search'};
+                if (key === 'vendor'){
+                    const vend = document.getElementById('filter-vendor');
+                    if (vend) Array.from(vend.options).forEach(o => { if (o.value === val) o.selected = false; });
+                } else {
+                    const el = document.getElementById(ids[key]);
+                    if (el) el.value = '';
+                }
+                renderManufacturingCertifications();
+                updateFilterChips();
+            });
+        });
+    }
+
+    // Analytics helper
+    function trackDL(event, payload) {
+        try {
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({ event, sector: 'manufacturing', ...payload });
+        } catch (e) { /* no-op */ }
+    }
+
+    // Removed multi-filter state and chips: level-only explorer
+
+    async function loadCertifications() {
+        try {
+            // Prefer manufacturing-specific catalog if present
+            let data;
+            let res = await fetch('../assets/data/certifications.manufacturing.json', { cache: 'no-store' });
+            if (res.ok) {
+                data = await res.json();
+                MANUFACTURING_CERTIFICATIONS = Array.isArray(data) ? data : (data?.manufacturing || []);
+            } else {
+                res = await fetch('../assets/data/certifications.json', { cache: 'no-store' });
+                if (!res.ok) throw new Error('Failed to fetch');
+                data = await res.json();
+                if (Array.isArray(data)) {
+                    MANUFACTURING_CERTIFICATIONS = data;
+                } else if (data && Array.isArray(data.manufacturing)) {
+                    MANUFACTURING_CERTIFICATIONS = data.manufacturing;
+                }
+            }
+        } catch (e) {
+            // keep embedded fallback
+            console.warn('Using embedded manufacturing dataset (fetch failed).');
+        }
+    }
+
+    // Removed pricing strip and level card enhancers in favor of a simple level-driven view
+
+    // PD modules: externalized configuration
+    let PD_MODULES = {};
+        // Level pricing for checkout
+        let SECTOR_PRICING = { currency: 'USD', levelBundle: {1:8100,2:12000,3:16000,4:20000,5:26865}, ctaBase: '../apply.html?sector=manufacturing&level=' };
+        async function loadSectorPricing(){
+            try {
+                const res = await fetch('../assets/data/sector-pricing.json', { cache: 'no-store' });
+                if (!res.ok) throw new Error();
+                const data = await res.json();
+                if (data && data.manufacturing) SECTOR_PRICING = data.manufacturing;
+            } catch(e) {
+                console.warn('Using embedded pricing for manufacturing (checkout)');
+            }
+        }
+
+        function updateCheckoutForLevel(level){
+            const wrap = document.getElementById('level-checkout');
+            const priceEl = document.getElementById('checkout-price');
+            const cta = document.getElementById('checkout-cta');
+            if (!wrap || !priceEl || !cta) return;
+            const lv = Number(level || 0);
+            if (!lv) { wrap.style.display = 'none'; return; }
+            const price = SECTOR_PRICING.levelBundle?.[lv];
+            if (!price) { wrap.style.display = 'none'; return; }
+            priceEl.textContent = `Level ${lv} Total: ${SECTOR_PRICING.currency} ${Number(price).toLocaleString()}`;
+            cta.href = `${SECTOR_PRICING.ctaBase || '../apply.html?sector=manufacturing&level='}${lv}`;
+            cta.textContent = `Checkout Level ${lv}`;
+            wrap.style.display = 'block';
+        }
+    async function loadPDModules(){
+        try {
+            const res = await fetch('../assets/data/pd-modules.manufacturing.json', { cache: 'no-store' });
+            if (!res.ok) throw new Error('pd modules fetch failed');
+            const data = await res.json();
+            // support either {"1": [...]} or { manufacturing: { "1": [...] } }
+            if (data && data.manufacturing && data.manufacturing.levels) {
+                PD_MODULES = data.manufacturing.levels;
+            } else {
+                PD_MODULES = data || {};
+            }
+        } catch(e) {
+            console.warn('Using empty PD modules (fetch failed)');
+            PD_MODULES = {};
+        }
+    }
+
+    function renderPDModules(level){
+        const wrap = document.getElementById('pd-modules-grid');
+        const sub = document.getElementById('pd-modules-subtitle');
+        if (!wrap || !sub) return;
+        wrap.innerHTML = '';
+        const key = String(level || '');
+        const list = (PD_MODULES && PD_MODULES[key]) ? PD_MODULES[key] : [];
+        if (!key || !list.length) {
+            sub.textContent = 'Select a level to view included PD modules.';
+            return;
+        }
+        sub.textContent = `Level ${key} includes ${list.length} professional development modules.`;
+        wrap.innerHTML = list.map(m => `
+            <div class="pd-card">
+                <h3>${m.title}</h3>
+                ${m.desc ? `<p style="color:#4b5563;font-size:0.92rem;margin:0.25rem 0 0;">${m.desc}</p>` : ''}
+                ${m.hours ? `<p style="color:#6b7280;font-size:0.85rem;margin:0.2rem 0 0;">${m.hours}</p>` : ''}
+            </div>
+        `).join('');
+    }
+
+    // Multi-filter helpers
+    function getSelectedVendors() {
+        const el = document.getElementById('filter-vendor');
+        if (!el) return [];
+        return Array.from(el.selectedOptions || []).map(o => o.value);
+    }
+
+    function renderManufacturingCertifications(){
+        const resultsContainer = document.getElementById('cert-results');
+        const countEl = document.getElementById('cert-count');
+        if (!resultsContainer || !Array.isArray(MANUFACTURING_CERTIFICATIONS)) return;
+
+        const domain = document.getElementById('filter-domain')?.value || '';
+        const level = document.getElementById('filter-level')?.value || '';
+        const type = document.getElementById('filter-type')?.value || '';
+        const region = document.getElementById('filter-region')?.value || '';
+        const vendors = getSelectedVendors();
+        const solution = (document.getElementById('filter-solution')?.value || '').toLowerCase().trim();
+        const search = (document.getElementById('filter-search')?.value || '').toLowerCase().trim();
+
+        const filtered = MANUFACTURING_CERTIFICATIONS.filter(cert => {
+            if (domain && cert.domain !== domain) return false;
+            if (level && Number(cert.level) > Number(level)) return false; // cumulative: include all levels <= selected
+            if (type && cert.type !== type) return false;
+            if (vendors.length && !vendors.includes(cert.vendor)) return false;
+            if (region && (cert.region || 'global') !== region) return false;
+            if (solution) {
+                const hay = [ ...(cert.solutionAreas||[]), ...(cert.skills||[]) ].join(' ').toLowerCase();
+                if (!hay.includes(solution)) return false;
+            }
+            if (search) {
+                const haystack = (cert.name + ' ' + cert.description + ' ' + (cert.rolePaths||[]).join(' ')).toLowerCase();
+                if (!haystack.includes(search)) return false;
+            }
+            return true;
+        });
+
+        resultsContainer.innerHTML = '';
+        if (countEl) countEl.textContent = `${filtered.length} certification${filtered.length!==1?'s':''} found`;
+        if (!filtered.length) {
+            resultsContainer.innerHTML = '<p>No certifications found for the selected filters.</p>';
+            return;
+        }
+
+        filtered.forEach(cert => {
+            const card = document.createElement('div');
+            card.className = 'cert-card';
+            card.innerHTML = `
+                <div class="cert-header">
+                    <span class="cert-level-badge">Level ${cert.level}</span>
+                    <h3 class="cert-title">${cert.name}</h3>
+                </div>
+                <div class="cert-meta">
+                    <span class="cert-domain">${formatDomainLabel(cert.domain)}</span>
+                    <span class="cert-type">${formatTypeLabel(cert.type)}</span>
+                    <span class="cert-vendor">${formatVendorLabel(cert.vendor)}</span>
+                    ${cert.region ? `<span class="cert-region">${cert.region.replace(/-/g,' ')}</span>` : ''}
+                </div>
+                <p class="cert-description">${cert.description}</p>
+                ${cert.rolePaths && cert.rolePaths.length ? `<div class="cert-meta">${cert.rolePaths.map(r=>`<span>${r}</span>`).join('')}</div>` : ''}
+                <div class="cert-actions">
+                    <button type="button" class="hero-secondary-btn" data-action="details" data-cert-id="${cert.id}">Details</button>
+                    <a href="../apply.html?sector=manufacturing&amp;cert=${encodeURIComponent(cert.id)}" class="hero-primary-btn">Apply Path</a>
+                </div>
+            `;
+            resultsContainer.appendChild(card);
+        });
+
+        document.querySelectorAll('button[data-action="details"]').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const id = btn.getAttribute('data-cert-id');
+                const cert = MANUFACTURING_CERTIFICATIONS.find(c => c.id === id);
+                if (cert) openCertModal(cert);
+                trackDL('cert_details_open', { certId: id });
+            });
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        // Attach filter listeners
+        const filterIds = ['filter-domain','filter-level','filter-type','filter-vendor','filter-region','filter-search','filter-solution'];
+        filterIds.forEach(id => {
+            const el = document.getElementById(id);
+            if (!el) return;
+            const eventType = id === 'filter-search' || id === 'filter-solution' ? 'input' : 'change';
+            el.addEventListener(eventType, () => {
+                renderManufacturingCertifications();
+                updateFilterChips();
+                if (id === 'filter-level') {
+                    const lv = Number(document.getElementById('filter-level')?.value || 0);
+                    if (lv) { renderPDModules(lv); updateCheckoutForLevel(lv); }
+                    else { renderPDModules(''); updateCheckoutForLevel(0); }
+                }
+            });
+        });
+
+        // Reset
+        document.getElementById('reset-filters')?.addEventListener('click', () => {
+            ['filter-domain','filter-level','filter-type','filter-region'].forEach(id => { const el = document.getElementById(id); if (el) el.value = ''; });
+            const vend = document.getElementById('filter-vendor'); if (vend) Array.from(vend.options).forEach(o => o.selected = false);
+            const sol = document.getElementById('filter-solution'); if (sol) sol.value = '';
+            const q = document.getElementById('filter-search'); if (q) q.value = '';
+            renderManufacturingCertifications();
+            renderPDModules('');
+            updateCheckoutForLevel(0);
+        });
+
+        // Initial render
+        Promise.all([loadCertifications(), loadPDModules(), loadSectorPricing()]).then(() => {
+            const params = new URLSearchParams(location.search);
+            const urlLevel = Number(params.get('level'));
+            if (urlLevel && urlLevel>=1 && urlLevel<=5) {
+                const sel = document.getElementById('filter-level'); if (sel) sel.value = String(urlLevel);
+            }
+            renderManufacturingCertifications();
+            updateFilterChips();
+            const lv = Number(document.getElementById('filter-level')?.value || 0);
+            if (lv) { renderPDModules(lv); updateCheckoutForLevel(lv); }
+            const y = document.getElementById('year'); if (y) y.textContent = new Date().getFullYear();
+        });
+    });
+
+    // Modal for certification details
+    let _lastFocus = null;
+    function openCertModal(cert) {
+        let modal = document.getElementById('cert-modal');
+        if (!modal) {
+            modal = document.createElement('div');
+            modal.id = 'cert-modal';
+            modal.setAttribute('role', 'dialog');
+            modal.setAttribute('aria-modal', 'true');
+            modal.style.position = 'fixed';
+            modal.style.inset = '0';
+            modal.style.background = 'rgba(0,0,0,0.6)';
+            modal.style.display = 'flex';
+            modal.style.alignItems = 'center';
+            modal.style.justifyContent = 'center';
+            modal.innerHTML = `
+                <div id="cert-modal-inner" style="background:#fff;border-radius:16px;max-width:720px;width:92%;padding:1.25rem;max-height:85vh;overflow:auto;">
+                    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:0.5rem;">
+                        <h3 id="cert-modal-title" style="margin:0;font-size:1.4rem;"></h3>
+                        <button id="cert-modal-close" class="hero-secondary-btn" aria-label="Close details">Close</button>
+                    </div>
+                    <div id="cert-modal-body"></div>
+                </div>`;
+            document.body.appendChild(modal);
+            document.getElementById('cert-modal-close').addEventListener('click', closeCertModal);
+            modal.addEventListener('click', (e) => { if (e.target === modal) closeCertModal(); });
+            modal.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') { e.preventDefault(); closeCertModal(); }
+                if (e.key === 'Tab') {
+                    const focusables = modal.querySelectorAll('a, button, select, textarea, input, [tabindex]:not([tabindex="-1"])');
+                    const list = Array.from(focusables).filter(el => !el.hasAttribute('disabled'));
+                    if (!list.length) return;
+                    const first = list[0];
+                    const last = list[list.length - 1];
+                    if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+                    else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+                }
+            });
+        }
+        _lastFocus = document.activeElement;
+        document.getElementById('cert-modal-title').textContent = cert.name;
+        const body = document.getElementById('cert-modal-body');
+        body.innerHTML = `
+            <div class="cert-meta" style="margin-bottom:0.5rem;">
+                <span class="cert-level-badge">Level ${cert.level}</span>
+                <span>${formatDomainLabel(cert.domain)}</span>
+                <span>${formatTypeLabel(cert.type)}</span>
+                <span>${formatVendorLabel(cert.vendor)}</span>
+            </div>
+            <p>${cert.description}</p>
+            ${cert.prerequisites && cert.prerequisites.length ? `<div class="cert-pd"><h4>Prerequisites</h4><ul>${cert.prerequisites.map(p=>`<li>${p}</li>`).join('')}</ul></div>` : ''}
+            ${cert.skills && cert.skills.length ? `<div class="cert-meta" style="margin:0.5rem 0;">${cert.skills.map(s=>`<span>${s}</span>`).join('')}</div>` : ''}
+            ${cert.nextCerts && cert.nextCerts.length ? `<p><strong>Recommended next:</strong> ${cert.nextCerts.join(', ')}</p>` : ''}
+            <div class="cert-actions" style="margin-top:0.75rem;">
+                <a href="../apply.html?sector=manufacturing&amp;cert=${encodeURIComponent(cert.id)}" class="hero-primary-btn">Apply for this Path</a>
+                <a href="../contact.html?topic=manufacturing&amp;cert=${encodeURIComponent(cert.id)}" class="hero-secondary-btn">Book Info Call</a>
+            </div>
+        `;
+        modal.style.visibility = 'visible';
+        modal.style.opacity = '1';
+        const inner = document.getElementById('cert-modal-inner');
+        if (inner) inner.setAttribute('tabindex', '-1');
+        const closeBtn = document.getElementById('cert-modal-close');
+        if (closeBtn) closeBtn.focus();
+    }
+
+    function closeCertModal() {
+        const modal = document.getElementById('cert-modal');
+        if (modal) {
+            modal.style.visibility = 'hidden';
+            modal.style.opacity = '0';
+        }
+        if (_lastFocus && typeof _lastFocus.focus === 'function') {
+            _lastFocus.focus();
+        }
+    }
     </script>
 </body>
 </html>

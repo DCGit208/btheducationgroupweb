@@ -1,0 +1,674 @@
+[
+  {
+    "name": "FEMA Emergency Management - Level 1",
+    "vendor": "FEMA",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Emergency Management",
+    "focus": "Emergency Management expertise",
+    "exam": "FEMA-1001",
+    "tags": [
+      "emergency-management",
+      "level-1",
+      "fema"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/fema.svg"
+  },
+  {
+    "name": "NFPA Fire Safety - Level 1",
+    "vendor": "NFPA",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Fire Safety",
+    "focus": "Fire Safety expertise",
+    "exam": "NFPA-1002",
+    "tags": [
+      "fire-safety",
+      "level-1",
+      "nfpa"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/nfpa.svg"
+  },
+  {
+    "name": "ASIS Security Systems - Level 1",
+    "vendor": "ASIS",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Security Systems",
+    "focus": "Security Systems expertise",
+    "exam": "ASIS-1003",
+    "tags": [
+      "security-systems",
+      "level-1",
+      "asis"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/asis.svg"
+  },
+  {
+    "name": "DHS Public Safety Communications - Level 1",
+    "vendor": "DHS",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Public Safety Communications",
+    "focus": "Public Safety Communications expertise",
+    "exam": "DHS-1004",
+    "tags": [
+      "public-safety-communications",
+      "level-1",
+      "dhs"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/dhs.svg"
+  },
+  {
+    "name": "Motorola Solutions Emergency Management - Level 1",
+    "vendor": "Motorola Solutions",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Emergency Management",
+    "focus": "Emergency Management expertise",
+    "exam": "MOTOROLA SOLUTIONS-1005",
+    "tags": [
+      "emergency-management",
+      "level-1",
+      "motorola-solutions"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/motorolasolutions.svg"
+  },
+  {
+    "name": "FEMA Fire Safety - Level 1",
+    "vendor": "FEMA",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Fire Safety",
+    "focus": "Fire Safety expertise",
+    "exam": "FEMA-1006",
+    "tags": [
+      "fire-safety",
+      "level-1",
+      "fema"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/fema.svg"
+  },
+  {
+    "name": "NFPA Security Systems - Level 1",
+    "vendor": "NFPA",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Security Systems",
+    "focus": "Security Systems expertise",
+    "exam": "NFPA-1007",
+    "tags": [
+      "security-systems",
+      "level-1",
+      "nfpa"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/nfpa.svg"
+  },
+  {
+    "name": "ASIS Public Safety Communications - Level 1",
+    "vendor": "ASIS",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Public Safety Communications",
+    "focus": "Public Safety Communications expertise",
+    "exam": "ASIS-1008",
+    "tags": [
+      "public-safety-communications",
+      "level-1",
+      "asis"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/asis.svg"
+  },
+  {
+    "name": "FEMA Emergency Management - Level 2",
+    "vendor": "FEMA",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Emergency Management",
+    "focus": "Emergency Management expertise",
+    "exam": "FEMA-2009",
+    "tags": [
+      "emergency-management",
+      "level-2",
+      "fema"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/fema.svg"
+  },
+  {
+    "name": "NFPA Fire Safety - Level 2",
+    "vendor": "NFPA",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Fire Safety",
+    "focus": "Fire Safety expertise",
+    "exam": "NFPA-2010",
+    "tags": [
+      "fire-safety",
+      "level-2",
+      "nfpa"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/nfpa.svg"
+  },
+  {
+    "name": "ASIS Security Systems - Level 2",
+    "vendor": "ASIS",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Security Systems",
+    "focus": "Security Systems expertise",
+    "exam": "ASIS-2011",
+    "tags": [
+      "security-systems",
+      "level-2",
+      "asis"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/asis.svg"
+  },
+  {
+    "name": "DHS Public Safety Communications - Level 2",
+    "vendor": "DHS",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Public Safety Communications",
+    "focus": "Public Safety Communications expertise",
+    "exam": "DHS-2012",
+    "tags": [
+      "public-safety-communications",
+      "level-2",
+      "dhs"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/dhs.svg"
+  },
+  {
+    "name": "Motorola Solutions Emergency Management - Level 2",
+    "vendor": "Motorola Solutions",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Emergency Management",
+    "focus": "Emergency Management expertise",
+    "exam": "MOTOROLA SOLUTIONS-2013",
+    "tags": [
+      "emergency-management",
+      "level-2",
+      "motorola-solutions"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/motorolasolutions.svg"
+  },
+  {
+    "name": "FEMA Fire Safety - Level 2",
+    "vendor": "FEMA",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Fire Safety",
+    "focus": "Fire Safety expertise",
+    "exam": "FEMA-2014",
+    "tags": [
+      "fire-safety",
+      "level-2",
+      "fema"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/fema.svg"
+  },
+  {
+    "name": "NFPA Security Systems - Level 2",
+    "vendor": "NFPA",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Security Systems",
+    "focus": "Security Systems expertise",
+    "exam": "NFPA-2015",
+    "tags": [
+      "security-systems",
+      "level-2",
+      "nfpa"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/nfpa.svg"
+  },
+  {
+    "name": "ASIS Public Safety Communications - Level 2",
+    "vendor": "ASIS",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Public Safety Communications",
+    "focus": "Public Safety Communications expertise",
+    "exam": "ASIS-2016",
+    "tags": [
+      "public-safety-communications",
+      "level-2",
+      "asis"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/asis.svg"
+  },
+  {
+    "name": "DHS Emergency Management - Level 2",
+    "vendor": "DHS",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Emergency Management",
+    "focus": "Emergency Management expertise",
+    "exam": "DHS-2017",
+    "tags": [
+      "emergency-management",
+      "level-2",
+      "dhs"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/dhs.svg"
+  },
+  {
+    "name": "Motorola Solutions Fire Safety - Level 2",
+    "vendor": "Motorola Solutions",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Fire Safety",
+    "focus": "Fire Safety expertise",
+    "exam": "MOTOROLA SOLUTIONS-2018",
+    "tags": [
+      "fire-safety",
+      "level-2",
+      "motorola-solutions"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/motorolasolutions.svg"
+  },
+  {
+    "name": "FEMA Emergency Management - Level 3",
+    "vendor": "FEMA",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Emergency Management",
+    "focus": "Emergency Management expertise",
+    "exam": "FEMA-3019",
+    "tags": [
+      "emergency-management",
+      "level-3",
+      "fema"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/fema.svg"
+  },
+  {
+    "name": "NFPA Fire Safety - Level 3",
+    "vendor": "NFPA",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Fire Safety",
+    "focus": "Fire Safety expertise",
+    "exam": "NFPA-3020",
+    "tags": [
+      "fire-safety",
+      "level-3",
+      "nfpa"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/nfpa.svg"
+  },
+  {
+    "name": "ASIS Security Systems - Level 3",
+    "vendor": "ASIS",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Security Systems",
+    "focus": "Security Systems expertise",
+    "exam": "ASIS-3021",
+    "tags": [
+      "security-systems",
+      "level-3",
+      "asis"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/asis.svg"
+  },
+  {
+    "name": "DHS Public Safety Communications - Level 3",
+    "vendor": "DHS",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Public Safety Communications",
+    "focus": "Public Safety Communications expertise",
+    "exam": "DHS-3022",
+    "tags": [
+      "public-safety-communications",
+      "level-3",
+      "dhs"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/dhs.svg"
+  },
+  {
+    "name": "Motorola Solutions Emergency Management - Level 3",
+    "vendor": "Motorola Solutions",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Emergency Management",
+    "focus": "Emergency Management expertise",
+    "exam": "MOTOROLA SOLUTIONS-3023",
+    "tags": [
+      "emergency-management",
+      "level-3",
+      "motorola-solutions"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/motorolasolutions.svg"
+  },
+  {
+    "name": "FEMA Fire Safety - Level 3",
+    "vendor": "FEMA",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Fire Safety",
+    "focus": "Fire Safety expertise",
+    "exam": "FEMA-3024",
+    "tags": [
+      "fire-safety",
+      "level-3",
+      "fema"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/fema.svg"
+  },
+  {
+    "name": "NFPA Security Systems - Level 3",
+    "vendor": "NFPA",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Security Systems",
+    "focus": "Security Systems expertise",
+    "exam": "NFPA-3025",
+    "tags": [
+      "security-systems",
+      "level-3",
+      "nfpa"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/nfpa.svg"
+  },
+  {
+    "name": "ASIS Public Safety Communications - Level 3",
+    "vendor": "ASIS",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Public Safety Communications",
+    "focus": "Public Safety Communications expertise",
+    "exam": "ASIS-3026",
+    "tags": [
+      "public-safety-communications",
+      "level-3",
+      "asis"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/asis.svg"
+  },
+  {
+    "name": "FEMA Emergency Management - Level 4",
+    "vendor": "FEMA",
+    "level": 4,
+    "level_range": [
+      4,
+      5
+    ],
+    "category": "Emergency Management",
+    "focus": "Emergency Management expertise",
+    "exam": "FEMA-4027",
+    "tags": [
+      "emergency-management",
+      "level-4",
+      "fema"
+    ],
+    "vendor_stage": "Expert",
+    "price": 400,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/fema.svg"
+  },
+  {
+    "name": "NFPA Fire Safety - Level 4",
+    "vendor": "NFPA",
+    "level": 4,
+    "level_range": [
+      4,
+      5
+    ],
+    "category": "Fire Safety",
+    "focus": "Fire Safety expertise",
+    "exam": "NFPA-4028",
+    "tags": [
+      "fire-safety",
+      "level-4",
+      "nfpa"
+    ],
+    "vendor_stage": "Expert",
+    "price": 400,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/nfpa.svg"
+  },
+  {
+    "name": "ASIS Security Systems - Level 4",
+    "vendor": "ASIS",
+    "level": 4,
+    "level_range": [
+      4,
+      5
+    ],
+    "category": "Security Systems",
+    "focus": "Security Systems expertise",
+    "exam": "ASIS-4029",
+    "tags": [
+      "security-systems",
+      "level-4",
+      "asis"
+    ],
+    "vendor_stage": "Expert",
+    "price": 400,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/asis.svg"
+  },
+  {
+    "name": "DHS Public Safety Communications - Level 4",
+    "vendor": "DHS",
+    "level": 4,
+    "level_range": [
+      4,
+      5
+    ],
+    "category": "Public Safety Communications",
+    "focus": "Public Safety Communications expertise",
+    "exam": "DHS-4030",
+    "tags": [
+      "public-safety-communications",
+      "level-4",
+      "dhs"
+    ],
+    "vendor_stage": "Expert",
+    "price": 400,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/dhs.svg"
+  },
+  {
+    "name": "Motorola Solutions Emergency Management - Level 4",
+    "vendor": "Motorola Solutions",
+    "level": 4,
+    "level_range": [
+      4,
+      5
+    ],
+    "category": "Emergency Management",
+    "focus": "Emergency Management expertise",
+    "exam": "MOTOROLA SOLUTIONS-4031",
+    "tags": [
+      "emergency-management",
+      "level-4",
+      "motorola-solutions"
+    ],
+    "vendor_stage": "Expert",
+    "price": 400,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/motorolasolutions.svg"
+  },
+  {
+    "name": "FEMA Emergency Management - Level 5",
+    "vendor": "FEMA",
+    "level": 5,
+    "level_range": [
+      5,
+      5
+    ],
+    "category": "Emergency Management",
+    "focus": "Emergency Management expertise",
+    "exam": "FEMA-5032",
+    "tags": [
+      "emergency-management",
+      "level-5",
+      "fema"
+    ],
+    "vendor_stage": "Master",
+    "price": 450,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/fema.svg"
+  }
+]

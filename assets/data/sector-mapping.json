@@ -1,0 +1,40 @@
+{
+  "sectors": [
+    {
+      "slug": "information-technology",
+      "title": "Information Technology",
+      "includes": {
+        "categories": ["core-it", "software-devops", "cloud-platforms", "cybersecurity", "specialized-tech", "governance-agile", "emerging-tech"]
+      },
+      "hexadRules": { "minLevel": 3 }
+    },
+    {
+      "slug": "healthcare",
+      "title": "Healthcare Technology",
+      "includes": {
+        "vendors": ["ETA International", "HIMSS"],
+        "focusContains": ["Healthcare", "Clinical", "Hospital"]
+      },
+      "hexadRules": { "vendors": ["Epic", "Cerner", "Meditech", "WellSky", "Netsmart"] }
+    },
+
+    { "slug": "manufacturing-industrial", "title": "Manufacturing & Industrial", "includes": { "focusContains": ["Industrial", "OT", "ICS", "SCADA", "Manufacturing"] } },
+    { "slug": "automotive-technology", "title": "Automotive Technology", "includes": { "focusContains": ["Automotive", "Vehicle", "CAN", "ADAS"] } },
+    { "slug": "energy-renewable-systems", "title": "Energy & Renewable Systems", "includes": { "focusContains": ["Energy", "Power", "Renewable", "Solar", "Wind"] } },
+    { "slug": "construction-infrastructure", "title": "Construction & Infrastructure", "includes": { "focusContains": ["Construction", "Infrastructure", "BIM", "Civil"] } },
+    { "slug": "communications-telecommunications", "title": "Communications & Telecommunications", "includes": { "focusContains": ["Service Provider", "5G", "Telecom", "Carrier"], "vendors": ["Huawei", "Nokia"] } },
+    { "slug": "creative-arts-digital-design", "title": "Creative Arts & Digital Design", "includes": { "focusContains": ["Media", "Design", "Digital", "Creative", "Graphics"] } },
+    { "slug": "finance-accounting", "title": "Finance & Accounting", "includes": { "focusContains": ["Finance", "Accounting", "Audit", "Data Analytics"] } },
+    { "slug": "business-management", "title": "Business & Management", "includes": { "categories": ["governance-agile"], "focusContains": ["Project", "Program", "Portfolio", "Service Management"] } },
+    { "slug": "environmental-sustainability", "title": "Environmental & Sustainability", "includes": { "focusContains": ["Sustainability", "Green", "Environmental"] } },
+    { "slug": "public-safety-emergency-services", "title": "Public Safety & Emergency Services", "includes": { "focusContains": ["Public Safety", "Emergency", "First Responder"] } },
+    { "slug": "aerospace-defense", "title": "Aerospace & Defense", "includes": { "focusContains": ["Aerospace", "Defense", "Avionics"] } },
+    { "slug": "transportation-logistics", "title": "Transportation & Logistics", "includes": { "focusContains": ["Logistics", "Supply Chain", "Fleet", "Transportation"] } },
+    { "slug": "research-development", "title": "Research & Development", "includes": { "focusContains": ["Research", "R&D", "Innovation", "Lab"] } },
+    { "slug": "edtech", "title": "EdTech", "includes": { "focusContains": ["Education", "Learning", "Instructional"] } },
+    { "slug": "biotech-life-sciences", "title": "Biotech & Life Sciences", "includes": { "focusContains": ["Biotech", "Life Sciences", "Bio", "Clinical"] } },
+    { "slug": "web-development-software-engineering", "title": "Web Development & Software Engineering", "includes": { "categories": ["software-devops"], "focusContains": ["Programming", "Web", "Software", "DevOps"] } },
+    { "slug": "government-civic-technology", "title": "Government & Civic Technology", "includes": { "focusContains": ["Government", "Compliance", "Privacy", "Public Sector"], "vendors": ["IAPP", "ISACA", "ServiceNow"] } },
+    { "slug": "agriculture-technology", "title": "Agriculture Technology", "includes": { "focusContains": ["Agriculture", "AgTech", "IoT", "Drones"] } }
+  ]
+}

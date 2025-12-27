@@ -1,0 +1,590 @@
+[
+  {
+    "name": "Guidewire Policy Administration - Level 1",
+    "vendor": "Guidewire",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Policy Administration",
+    "focus": "Policy Administration expertise",
+    "exam": "GUIDEWIRE-1001",
+    "tags": [
+      "policy-administration",
+      "level-1",
+      "guidewire"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/guidewire.svg"
+  },
+  {
+    "name": "Duck Creek Claims Management - Level 1",
+    "vendor": "Duck Creek",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Claims Management",
+    "focus": "Claims Management expertise",
+    "exam": "DUCK CREEK-1002",
+    "tags": [
+      "claims-management",
+      "level-1",
+      "duck-creek"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/duckcreek.svg"
+  },
+  {
+    "name": "Majesco Underwriting - Level 1",
+    "vendor": "Majesco",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Underwriting",
+    "focus": "Underwriting expertise",
+    "exam": "MAJESCO-1003",
+    "tags": [
+      "underwriting",
+      "level-1",
+      "majesco"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/majesco.svg"
+  },
+  {
+    "name": "Sapiens Risk Assessment - Level 1",
+    "vendor": "Sapiens",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Risk Assessment",
+    "focus": "Risk Assessment expertise",
+    "exam": "SAPIENS-1004",
+    "tags": [
+      "risk-assessment",
+      "level-1",
+      "sapiens"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/sapiens.svg"
+  },
+  {
+    "name": "Insurity Policy Administration - Level 1",
+    "vendor": "Insurity",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Policy Administration",
+    "focus": "Policy Administration expertise",
+    "exam": "INSURITY-1005",
+    "tags": [
+      "policy-administration",
+      "level-1",
+      "insurity"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/insurity.svg"
+  },
+  {
+    "name": "Guidewire Claims Management - Level 1",
+    "vendor": "Guidewire",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Claims Management",
+    "focus": "Claims Management expertise",
+    "exam": "GUIDEWIRE-1006",
+    "tags": [
+      "claims-management",
+      "level-1",
+      "guidewire"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/guidewire.svg"
+  },
+  {
+    "name": "Duck Creek Underwriting - Level 1",
+    "vendor": "Duck Creek",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Underwriting",
+    "focus": "Underwriting expertise",
+    "exam": "DUCK CREEK-1007",
+    "tags": [
+      "underwriting",
+      "level-1",
+      "duck-creek"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/duckcreek.svg"
+  },
+  {
+    "name": "Guidewire Policy Administration - Level 2",
+    "vendor": "Guidewire",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Policy Administration",
+    "focus": "Policy Administration expertise",
+    "exam": "GUIDEWIRE-2008",
+    "tags": [
+      "policy-administration",
+      "level-2",
+      "guidewire"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/guidewire.svg"
+  },
+  {
+    "name": "Duck Creek Claims Management - Level 2",
+    "vendor": "Duck Creek",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Claims Management",
+    "focus": "Claims Management expertise",
+    "exam": "DUCK CREEK-2009",
+    "tags": [
+      "claims-management",
+      "level-2",
+      "duck-creek"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/duckcreek.svg"
+  },
+  {
+    "name": "Majesco Underwriting - Level 2",
+    "vendor": "Majesco",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Underwriting",
+    "focus": "Underwriting expertise",
+    "exam": "MAJESCO-2010",
+    "tags": [
+      "underwriting",
+      "level-2",
+      "majesco"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/majesco.svg"
+  },
+  {
+    "name": "Sapiens Risk Assessment - Level 2",
+    "vendor": "Sapiens",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Risk Assessment",
+    "focus": "Risk Assessment expertise",
+    "exam": "SAPIENS-2011",
+    "tags": [
+      "risk-assessment",
+      "level-2",
+      "sapiens"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/sapiens.svg"
+  },
+  {
+    "name": "Insurity Policy Administration - Level 2",
+    "vendor": "Insurity",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Policy Administration",
+    "focus": "Policy Administration expertise",
+    "exam": "INSURITY-2012",
+    "tags": [
+      "policy-administration",
+      "level-2",
+      "insurity"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/insurity.svg"
+  },
+  {
+    "name": "Guidewire Claims Management - Level 2",
+    "vendor": "Guidewire",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Claims Management",
+    "focus": "Claims Management expertise",
+    "exam": "GUIDEWIRE-2013",
+    "tags": [
+      "claims-management",
+      "level-2",
+      "guidewire"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/guidewire.svg"
+  },
+  {
+    "name": "Duck Creek Underwriting - Level 2",
+    "vendor": "Duck Creek",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Underwriting",
+    "focus": "Underwriting expertise",
+    "exam": "DUCK CREEK-2014",
+    "tags": [
+      "underwriting",
+      "level-2",
+      "duck-creek"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/duckcreek.svg"
+  },
+  {
+    "name": "Majesco Risk Assessment - Level 2",
+    "vendor": "Majesco",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Risk Assessment",
+    "focus": "Risk Assessment expertise",
+    "exam": "MAJESCO-2015",
+    "tags": [
+      "risk-assessment",
+      "level-2",
+      "majesco"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/majesco.svg"
+  },
+  {
+    "name": "Sapiens Policy Administration - Level 2",
+    "vendor": "Sapiens",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Policy Administration",
+    "focus": "Policy Administration expertise",
+    "exam": "SAPIENS-2016",
+    "tags": [
+      "policy-administration",
+      "level-2",
+      "sapiens"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/sapiens.svg"
+  },
+  {
+    "name": "Guidewire Policy Administration - Level 3",
+    "vendor": "Guidewire",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Policy Administration",
+    "focus": "Policy Administration expertise",
+    "exam": "GUIDEWIRE-3017",
+    "tags": [
+      "policy-administration",
+      "level-3",
+      "guidewire"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/guidewire.svg"
+  },
+  {
+    "name": "Duck Creek Claims Management - Level 3",
+    "vendor": "Duck Creek",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Claims Management",
+    "focus": "Claims Management expertise",
+    "exam": "DUCK CREEK-3018",
+    "tags": [
+      "claims-management",
+      "level-3",
+      "duck-creek"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/duckcreek.svg"
+  },
+  {
+    "name": "Majesco Underwriting - Level 3",
+    "vendor": "Majesco",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Underwriting",
+    "focus": "Underwriting expertise",
+    "exam": "MAJESCO-3019",
+    "tags": [
+      "underwriting",
+      "level-3",
+      "majesco"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/majesco.svg"
+  },
+  {
+    "name": "Sapiens Risk Assessment - Level 3",
+    "vendor": "Sapiens",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Risk Assessment",
+    "focus": "Risk Assessment expertise",
+    "exam": "SAPIENS-3020",
+    "tags": [
+      "risk-assessment",
+      "level-3",
+      "sapiens"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/sapiens.svg"
+  },
+  {
+    "name": "Insurity Policy Administration - Level 3",
+    "vendor": "Insurity",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Policy Administration",
+    "focus": "Policy Administration expertise",
+    "exam": "INSURITY-3021",
+    "tags": [
+      "policy-administration",
+      "level-3",
+      "insurity"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/insurity.svg"
+  },
+  {
+    "name": "Guidewire Claims Management - Level 3",
+    "vendor": "Guidewire",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Claims Management",
+    "focus": "Claims Management expertise",
+    "exam": "GUIDEWIRE-3022",
+    "tags": [
+      "claims-management",
+      "level-3",
+      "guidewire"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/guidewire.svg"
+  },
+  {
+    "name": "Duck Creek Underwriting - Level 3",
+    "vendor": "Duck Creek",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Underwriting",
+    "focus": "Underwriting expertise",
+    "exam": "DUCK CREEK-3023",
+    "tags": [
+      "underwriting",
+      "level-3",
+      "duck-creek"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/duckcreek.svg"
+  },
+  {
+    "name": "Guidewire Policy Administration - Level 4",
+    "vendor": "Guidewire",
+    "level": 4,
+    "level_range": [
+      4,
+      5
+    ],
+    "category": "Policy Administration",
+    "focus": "Policy Administration expertise",
+    "exam": "GUIDEWIRE-4024",
+    "tags": [
+      "policy-administration",
+      "level-4",
+      "guidewire"
+    ],
+    "vendor_stage": "Expert",
+    "price": 400,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/guidewire.svg"
+  },
+  {
+    "name": "Duck Creek Claims Management - Level 4",
+    "vendor": "Duck Creek",
+    "level": 4,
+    "level_range": [
+      4,
+      5
+    ],
+    "category": "Claims Management",
+    "focus": "Claims Management expertise",
+    "exam": "DUCK CREEK-4025",
+    "tags": [
+      "claims-management",
+      "level-4",
+      "duck-creek"
+    ],
+    "vendor_stage": "Expert",
+    "price": 400,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/duckcreek.svg"
+  },
+  {
+    "name": "Majesco Underwriting - Level 4",
+    "vendor": "Majesco",
+    "level": 4,
+    "level_range": [
+      4,
+      5
+    ],
+    "category": "Underwriting",
+    "focus": "Underwriting expertise",
+    "exam": "MAJESCO-4026",
+    "tags": [
+      "underwriting",
+      "level-4",
+      "majesco"
+    ],
+    "vendor_stage": "Expert",
+    "price": 400,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/majesco.svg"
+  },
+  {
+    "name": "Sapiens Risk Assessment - Level 4",
+    "vendor": "Sapiens",
+    "level": 4,
+    "level_range": [
+      4,
+      5
+    ],
+    "category": "Risk Assessment",
+    "focus": "Risk Assessment expertise",
+    "exam": "SAPIENS-4027",
+    "tags": [
+      "risk-assessment",
+      "level-4",
+      "sapiens"
+    ],
+    "vendor_stage": "Expert",
+    "price": 400,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/sapiens.svg"
+  },
+  {
+    "name": "Guidewire Policy Administration - Level 5",
+    "vendor": "Guidewire",
+    "level": 5,
+    "level_range": [
+      5,
+      5
+    ],
+    "category": "Policy Administration",
+    "focus": "Policy Administration expertise",
+    "exam": "GUIDEWIRE-5028",
+    "tags": [
+      "policy-administration",
+      "level-5",
+      "guidewire"
+    ],
+    "vendor_stage": "Master",
+    "price": 450,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/guidewire.svg"
+  }
+]

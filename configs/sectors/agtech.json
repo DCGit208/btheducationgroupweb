@@ -1,0 +1,28 @@
+{
+  "name": "Agriculture Technology",
+  "slug": "agtech",
+  "icon": "\ud83c\udf3e",
+  "subtitle": "Precision Agriculture",
+  "description": "Smart Farming, Agricultural Drones, IoT Agriculture, Precision Ag",
+  "description_long": "Transform farming with certifications in precision agriculture, drone systems, IoT sensors, smart irrigation, and agricultural data analytics.",
+  "hero_gradient": [
+    "#84cc16",
+    "#65a30d"
+  ],
+  "total_certifications": 27,
+  "total_vendors": 11,
+  "avg_salary": "$75,000",
+  "categories": [
+    "Precision Agriculture",
+    "Agricultural Drones",
+    "IoT Agriculture",
+    "Smart Irrigation"
+  ],
+  "featured_vendors": [
+    "John Deere",
+    "CNH Industrial",
+    "Trimble",
+    "DJI Agriculture",
+    "Climate FieldView"
+  ]
+}

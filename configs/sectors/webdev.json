@@ -1,0 +1,29 @@
+{
+  "name": "Web Development & Software Engineering",
+  "slug": "webdev",
+  "icon": "\ud83d\udcbb",
+  "subtitle": "Full-Stack & Cloud-Native",
+  "description": "Front-End, Back-End, Full-Stack, DevOps, Cloud-Native Development",
+  "description_long": "Build modern web applications with certifications in React, Node.js, Python, AWS, Docker, Kubernetes, and complete full-stack development frameworks.",
+  "hero_gradient": [
+    "#3b82f6",
+    "#1d4ed8"
+  ],
+  "total_certifications": 45,
+  "total_vendors": 18,
+  "avg_salary": "$110,000",
+  "categories": [
+    "Front-End",
+    "Back-End",
+    "Full-Stack",
+    "DevOps",
+    "Cloud-Native"
+  ],
+  "featured_vendors": [
+    "AWS",
+    "Microsoft",
+    "Google",
+    "Docker",
+    "Red Hat"
+  ]
+}

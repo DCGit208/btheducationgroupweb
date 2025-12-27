@@ -1,0 +1,49 @@
+{
+  "name": "Finance & Accounting",
+  "slug": "finance",
+  "icon": "\ud83d\udcb0",
+  "subtitle": "Excel in financial analysis, accounting systems, tax, audit, and regulatory compliance",
+  "description": "Master financial technology, accounting platforms, analytics, and compliance with certifications from CPA, CFA, Intuit, SAP, Oracle, and financial services leaders.",
+  "gradient_start": "#10b981",
+  "gradient_end": "#059669",
+  "cert_count": 34,
+  "vendor_count": 9,
+  "categories": [
+    {
+      "id": "accounting-systems",
+      "name": "Accounting Systems",
+      "icon": "\ud83d\udcca"
+    },
+    {
+      "id": "financial-analysis",
+      "name": "Financial Analysis",
+      "icon": "\ud83d\udcc8"
+    },
+    {
+      "id": "tax-compliance",
+      "name": "Tax & Compliance",
+      "icon": "\ud83d\udccb"
+    },
+    {
+      "id": "audit-controls",
+      "name": "Audit & Controls",
+      "icon": "\ud83d\udd0d"
+    },
+    {
+      "id": "fintech",
+      "name": "FinTech",
+      "icon": "\ud83d\udcb3"
+    }
+  ],
+  "vendors": [
+    "AICPA",
+    "CFA Institute",
+    "Intuit",
+    "SAP",
+    "Oracle",
+    "Microsoft",
+    "Bloomberg",
+    "Thomson Reuters",
+    "Workday"
+  ]
+}

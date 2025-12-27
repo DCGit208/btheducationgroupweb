@@ -1,0 +1,28 @@
+{
+  "name": "Human Resources Technology",
+  "slug": "hrtech",
+  "icon": "\ud83d\udc65",
+  "subtitle": "HR Systems & People Ops",
+  "description": "Workday, SAP SuccessFactors, Talent Management, HR Analytics",
+  "description_long": "Master enterprise HRIS platforms, talent acquisition, workforce planning, and people operations with industry-leading certifications from Workday, SAP, Oracle, and more.",
+  "hero_gradient": [
+    "#667eea",
+    "#764ba2"
+  ],
+  "total_certifications": 40,
+  "total_vendors": 15,
+  "avg_salary": "$95,000",
+  "categories": [
+    "HRIS Systems",
+    "Talent Management",
+    "Payroll & Benefits",
+    "HR Analytics"
+  ],
+  "featured_vendors": [
+    "Workday",
+    "SAP SuccessFactors",
+    "Oracle HCM",
+    "ADP",
+    "BambooHR"
+  ]
+}

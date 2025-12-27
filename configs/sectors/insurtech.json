@@ -1,0 +1,28 @@
+{
+  "name": "Insurance Technology",
+  "slug": "insurtech",
+  "icon": "\ud83d\udee1\ufe0f",
+  "subtitle": "InsurTech & Risk Management",
+  "description": "Insurance Systems, Claims Management, Underwriting, Risk Assessment",
+  "description_long": "Advance insurance operations with certifications in policy administration, claims processing, underwriting platforms, and actuarial technology systems.",
+  "hero_gradient": [
+    "#7c3aed",
+    "#5b21b6"
+  ],
+  "total_certifications": 30,
+  "total_vendors": 10,
+  "avg_salary": "$85,000",
+  "categories": [
+    "Policy Administration",
+    "Claims Management",
+    "Underwriting",
+    "Risk Assessment"
+  ],
+  "featured_vendors": [
+    "Guidewire",
+    "Duck Creek",
+    "Majesco",
+    "Sapiens",
+    "Insurity"
+  ]
+}

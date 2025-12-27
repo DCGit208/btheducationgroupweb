@@ -1,0 +1,50 @@
+{
+  "name": "Creative Arts & Digital Design",
+  "slug": "creative",
+  "icon": "\ud83c\udfa8",
+  "subtitle": "Master digital content creation, motion graphics, 3D modeling, and immersive experiences",
+  "description": "Build creative technology skills in design, video production, animation, VFX, and interactive media with certifications from Adobe, Autodesk, Unity, and creative industry leaders.",
+  "gradient_start": "#8b5cf6",
+  "gradient_end": "#6d28d9",
+  "cert_count": 36,
+  "vendor_count": 10,
+  "categories": [
+    {
+      "id": "graphic-design",
+      "name": "Graphic Design",
+      "icon": "\ud83c\udfa8"
+    },
+    {
+      "id": "video-production",
+      "name": "Video Production",
+      "icon": "\ud83c\udfac"
+    },
+    {
+      "id": "3d-animation",
+      "name": "3D & Animation",
+      "icon": "\ud83c\udfad"
+    },
+    {
+      "id": "ui-ux",
+      "name": "UI/UX Design",
+      "icon": "\ud83d\udcf1"
+    },
+    {
+      "id": "digital-media",
+      "name": "Digital Media",
+      "icon": "\ud83d\udcbb"
+    }
+  ],
+  "vendors": [
+    "Adobe",
+    "Autodesk",
+    "Unity",
+    "Maxon",
+    "Foundry",
+    "Avid",
+    "Blackmagic",
+    "Apple",
+    "Figma",
+    "Sketch"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "name": "Biotech & Life Sciences",
+  "slug": "biotech",
+  "icon": "\ud83e\uddec",
+  "subtitle": "Biomedical & Pharmaceutical Tech",
+  "description": "Biomedical Equipment, Clinical Research, Biotechnology, Pharma Tech",
+  "description_long": "Advance life sciences with certifications in biomedical equipment, clinical trial management, biotechnology systems, and pharmaceutical technology.",
+  "hero_gradient": [
+    "#8b5cf6",
+    "#6d28d9"
+  ],
+  "total_certifications": 34,
+  "total_vendors": 14,
+  "avg_salary": "$102,000",
+  "categories": [
+    "Biomedical Equipment",
+    "Clinical Trials",
+    "Biotechnology Systems",
+    "Pharmaceutical Tech"
+  ],
+  "featured_vendors": [
+    "Medtronic",
+    "Philips Healthcare",
+    "GE Healthcare",
+    "Siemens Healthineers",
+    "Abbott"
+  ]
+}

@@ -1,0 +1,569 @@
+[
+  {
+    "name": "FAA Aerospace Systems - Level 1",
+    "vendor": "FAA",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Aerospace Systems",
+    "focus": "Aerospace Systems expertise",
+    "exam": "FAA-1001",
+    "tags": [
+      "aerospace-systems",
+      "level-1",
+      "faa"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/faa.svg"
+  },
+  {
+    "name": "Boeing Avionics - Level 1",
+    "vendor": "Boeing",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Avionics",
+    "focus": "Avionics expertise",
+    "exam": "BOEING-1002",
+    "tags": [
+      "avionics",
+      "level-1",
+      "boeing"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/boeing.svg"
+  },
+  {
+    "name": "Lockheed Martin Defense Cybersecurity - Level 1",
+    "vendor": "Lockheed Martin",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Defense Cybersecurity",
+    "focus": "Defense Cybersecurity expertise",
+    "exam": "LOCKHEED MARTIN-1003",
+    "tags": [
+      "defense-cybersecurity",
+      "level-1",
+      "lockheed-martin"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/lockheedmartin.svg"
+  },
+  {
+    "name": "Northrop Grumman Aviation Operations - Level 1",
+    "vendor": "Northrop Grumman",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Aviation Operations",
+    "focus": "Aviation Operations expertise",
+    "exam": "NORTHROP GRUMMAN-1004",
+    "tags": [
+      "aviation-operations",
+      "level-1",
+      "northrop-grumman"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/northropgrumman.svg"
+  },
+  {
+    "name": "Raytheon Aerospace Systems - Level 1",
+    "vendor": "Raytheon",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Aerospace Systems",
+    "focus": "Aerospace Systems expertise",
+    "exam": "RAYTHEON-1005",
+    "tags": [
+      "aerospace-systems",
+      "level-1",
+      "raytheon"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/raytheon.svg"
+  },
+  {
+    "name": "FAA Avionics - Level 1",
+    "vendor": "FAA",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Avionics",
+    "focus": "Avionics expertise",
+    "exam": "FAA-1006",
+    "tags": [
+      "avionics",
+      "level-1",
+      "faa"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/faa.svg"
+  },
+  {
+    "name": "Boeing Defense Cybersecurity - Level 1",
+    "vendor": "Boeing",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Defense Cybersecurity",
+    "focus": "Defense Cybersecurity expertise",
+    "exam": "BOEING-1007",
+    "tags": [
+      "defense-cybersecurity",
+      "level-1",
+      "boeing"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/boeing.svg"
+  },
+  {
+    "name": "FAA Aerospace Systems - Level 2",
+    "vendor": "FAA",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Aerospace Systems",
+    "focus": "Aerospace Systems expertise",
+    "exam": "FAA-2008",
+    "tags": [
+      "aerospace-systems",
+      "level-2",
+      "faa"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/faa.svg"
+  },
+  {
+    "name": "Boeing Avionics - Level 2",
+    "vendor": "Boeing",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Avionics",
+    "focus": "Avionics expertise",
+    "exam": "BOEING-2009",
+    "tags": [
+      "avionics",
+      "level-2",
+      "boeing"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/boeing.svg"
+  },
+  {
+    "name": "Lockheed Martin Defense Cybersecurity - Level 2",
+    "vendor": "Lockheed Martin",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Defense Cybersecurity",
+    "focus": "Defense Cybersecurity expertise",
+    "exam": "LOCKHEED MARTIN-2010",
+    "tags": [
+      "defense-cybersecurity",
+      "level-2",
+      "lockheed-martin"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/lockheedmartin.svg"
+  },
+  {
+    "name": "Northrop Grumman Aviation Operations - Level 2",
+    "vendor": "Northrop Grumman",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Aviation Operations",
+    "focus": "Aviation Operations expertise",
+    "exam": "NORTHROP GRUMMAN-2011",
+    "tags": [
+      "aviation-operations",
+      "level-2",
+      "northrop-grumman"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/northropgrumman.svg"
+  },
+  {
+    "name": "Raytheon Aerospace Systems - Level 2",
+    "vendor": "Raytheon",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Aerospace Systems",
+    "focus": "Aerospace Systems expertise",
+    "exam": "RAYTHEON-2012",
+    "tags": [
+      "aerospace-systems",
+      "level-2",
+      "raytheon"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/raytheon.svg"
+  },
+  {
+    "name": "FAA Avionics - Level 2",
+    "vendor": "FAA",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Avionics",
+    "focus": "Avionics expertise",
+    "exam": "FAA-2013",
+    "tags": [
+      "avionics",
+      "level-2",
+      "faa"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/faa.svg"
+  },
+  {
+    "name": "Boeing Defense Cybersecurity - Level 2",
+    "vendor": "Boeing",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Defense Cybersecurity",
+    "focus": "Defense Cybersecurity expertise",
+    "exam": "BOEING-2014",
+    "tags": [
+      "defense-cybersecurity",
+      "level-2",
+      "boeing"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/boeing.svg"
+  },
+  {
+    "name": "Lockheed Martin Aviation Operations - Level 2",
+    "vendor": "Lockheed Martin",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Aviation Operations",
+    "focus": "Aviation Operations expertise",
+    "exam": "LOCKHEED MARTIN-2015",
+    "tags": [
+      "aviation-operations",
+      "level-2",
+      "lockheed-martin"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/lockheedmartin.svg"
+  },
+  {
+    "name": "FAA Aerospace Systems - Level 3",
+    "vendor": "FAA",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Aerospace Systems",
+    "focus": "Aerospace Systems expertise",
+    "exam": "FAA-3016",
+    "tags": [
+      "aerospace-systems",
+      "level-3",
+      "faa"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/faa.svg"
+  },
+  {
+    "name": "Boeing Avionics - Level 3",
+    "vendor": "Boeing",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Avionics",
+    "focus": "Avionics expertise",
+    "exam": "BOEING-3017",
+    "tags": [
+      "avionics",
+      "level-3",
+      "boeing"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/boeing.svg"
+  },
+  {
+    "name": "Lockheed Martin Defense Cybersecurity - Level 3",
+    "vendor": "Lockheed Martin",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Defense Cybersecurity",
+    "focus": "Defense Cybersecurity expertise",
+    "exam": "LOCKHEED MARTIN-3018",
+    "tags": [
+      "defense-cybersecurity",
+      "level-3",
+      "lockheed-martin"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/lockheedmartin.svg"
+  },
+  {
+    "name": "Northrop Grumman Aviation Operations - Level 3",
+    "vendor": "Northrop Grumman",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Aviation Operations",
+    "focus": "Aviation Operations expertise",
+    "exam": "NORTHROP GRUMMAN-3019",
+    "tags": [
+      "aviation-operations",
+      "level-3",
+      "northrop-grumman"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/northropgrumman.svg"
+  },
+  {
+    "name": "Raytheon Aerospace Systems - Level 3",
+    "vendor": "Raytheon",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Aerospace Systems",
+    "focus": "Aerospace Systems expertise",
+    "exam": "RAYTHEON-3020",
+    "tags": [
+      "aerospace-systems",
+      "level-3",
+      "raytheon"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/raytheon.svg"
+  },
+  {
+    "name": "FAA Avionics - Level 3",
+    "vendor": "FAA",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Avionics",
+    "focus": "Avionics expertise",
+    "exam": "FAA-3021",
+    "tags": [
+      "avionics",
+      "level-3",
+      "faa"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/faa.svg"
+  },
+  {
+    "name": "Boeing Defense Cybersecurity - Level 3",
+    "vendor": "Boeing",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Defense Cybersecurity",
+    "focus": "Defense Cybersecurity expertise",
+    "exam": "BOEING-3022",
+    "tags": [
+      "defense-cybersecurity",
+      "level-3",
+      "boeing"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/boeing.svg"
+  },
+  {
+    "name": "FAA Aerospace Systems - Level 4",
+    "vendor": "FAA",
+    "level": 4,
+    "level_range": [
+      4,
+      5
+    ],
+    "category": "Aerospace Systems",
+    "focus": "Aerospace Systems expertise",
+    "exam": "FAA-4023",
+    "tags": [
+      "aerospace-systems",
+      "level-4",
+      "faa"
+    ],
+    "vendor_stage": "Expert",
+    "price": 400,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/faa.svg"
+  },
+  {
+    "name": "Boeing Avionics - Level 4",
+    "vendor": "Boeing",
+    "level": 4,
+    "level_range": [
+      4,
+      5
+    ],
+    "category": "Avionics",
+    "focus": "Avionics expertise",
+    "exam": "BOEING-4024",
+    "tags": [
+      "avionics",
+      "level-4",
+      "boeing"
+    ],
+    "vendor_stage": "Expert",
+    "price": 400,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/boeing.svg"
+  },
+  {
+    "name": "Lockheed Martin Defense Cybersecurity - Level 4",
+    "vendor": "Lockheed Martin",
+    "level": 4,
+    "level_range": [
+      4,
+      5
+    ],
+    "category": "Defense Cybersecurity",
+    "focus": "Defense Cybersecurity expertise",
+    "exam": "LOCKHEED MARTIN-4025",
+    "tags": [
+      "defense-cybersecurity",
+      "level-4",
+      "lockheed-martin"
+    ],
+    "vendor_stage": "Expert",
+    "price": 400,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/lockheedmartin.svg"
+  },
+  {
+    "name": "Northrop Grumman Aviation Operations - Level 4",
+    "vendor": "Northrop Grumman",
+    "level": 4,
+    "level_range": [
+      4,
+      5
+    ],
+    "category": "Aviation Operations",
+    "focus": "Aviation Operations expertise",
+    "exam": "NORTHROP GRUMMAN-4026",
+    "tags": [
+      "aviation-operations",
+      "level-4",
+      "northrop-grumman"
+    ],
+    "vendor_stage": "Expert",
+    "price": 400,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/northropgrumman.svg"
+  },
+  {
+    "name": "FAA Aerospace Systems - Level 5",
+    "vendor": "FAA",
+    "level": 5,
+    "level_range": [
+      5,
+      5
+    ],
+    "category": "Aerospace Systems",
+    "focus": "Aerospace Systems expertise",
+    "exam": "FAA-5027",
+    "tags": [
+      "aerospace-systems",
+      "level-5",
+      "faa"
+    ],
+    "vendor_stage": "Master",
+    "price": 450,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/faa.svg"
+  }
+]

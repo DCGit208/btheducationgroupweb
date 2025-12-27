@@ -1,0 +1,48 @@
+{
+  "name": "Transportation & Logistics",
+  "slug": "transportation-logistics",
+  "icon": "\ud83d\ude9a",
+  "subtitle": "Optimize supply chains, fleet management, warehouse automation, and logistics technology",
+  "description": "Master transportation systems, supply chain technology, logistics operations, and fleet management with certifications from APICS, ISM, SAP, Oracle, and logistics leaders.",
+  "gradient_start": "#f97316",
+  "gradient_end": "#ea580c",
+  "cert_count": 30,
+  "vendor_count": 8,
+  "categories": [
+    {
+      "id": "supply-chain",
+      "name": "Supply Chain Management",
+      "icon": "\ud83d\udce6"
+    },
+    {
+      "id": "fleet-mgmt",
+      "name": "Fleet Management",
+      "icon": "\ud83d\ude9b"
+    },
+    {
+      "id": "warehouse-automation",
+      "name": "Warehouse Automation",
+      "icon": "\ud83c\udfed"
+    },
+    {
+      "id": "logistics-ops",
+      "name": "Logistics Operations",
+      "icon": "\ud83d\ude9a"
+    },
+    {
+      "id": "transportation-tech",
+      "name": "Transportation Tech",
+      "icon": "\ud83d\ude85"
+    }
+  ],
+  "vendors": [
+    "APICS",
+    "ISM",
+    "SAP",
+    "Oracle",
+    "Manhattan Associates",
+    "JDA",
+    "Blue Yonder",
+    "Trimble"
+  ]
+}

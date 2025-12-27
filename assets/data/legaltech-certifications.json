@@ -1,0 +1,569 @@
+[
+  {
+    "name": "Clio Case Management - Level 1",
+    "vendor": "Clio",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Case Management",
+    "focus": "Case Management expertise",
+    "exam": "CLIO-1001",
+    "tags": [
+      "case-management",
+      "level-1",
+      "clio"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/clio.svg"
+  },
+  {
+    "name": "LexisNexis E-Discovery - Level 1",
+    "vendor": "LexisNexis",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "E-Discovery",
+    "focus": "E-Discovery expertise",
+    "exam": "LEXISNEXIS-1002",
+    "tags": [
+      "e-discovery",
+      "level-1",
+      "lexisnexis"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/lexisnexis.svg"
+  },
+  {
+    "name": "Thomson Reuters Contract Lifecycle - Level 1",
+    "vendor": "Thomson Reuters",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Contract Lifecycle",
+    "focus": "Contract Lifecycle expertise",
+    "exam": "THOMSON REUTERS-1003",
+    "tags": [
+      "contract-lifecycle",
+      "level-1",
+      "thomson-reuters"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/thomsonreuters.svg"
+  },
+  {
+    "name": "Relativity Legal Research - Level 1",
+    "vendor": "Relativity",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Legal Research",
+    "focus": "Legal Research expertise",
+    "exam": "RELATIVITY-1004",
+    "tags": [
+      "legal-research",
+      "level-1",
+      "relativity"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/relativity.svg"
+  },
+  {
+    "name": "iManage Case Management - Level 1",
+    "vendor": "iManage",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Case Management",
+    "focus": "Case Management expertise",
+    "exam": "IMANAGE-1005",
+    "tags": [
+      "case-management",
+      "level-1",
+      "imanage"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/imanage.svg"
+  },
+  {
+    "name": "Clio E-Discovery - Level 1",
+    "vendor": "Clio",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "E-Discovery",
+    "focus": "E-Discovery expertise",
+    "exam": "CLIO-1006",
+    "tags": [
+      "e-discovery",
+      "level-1",
+      "clio"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/clio.svg"
+  },
+  {
+    "name": "LexisNexis Contract Lifecycle - Level 1",
+    "vendor": "LexisNexis",
+    "level": 1,
+    "level_range": [
+      1,
+      5
+    ],
+    "category": "Contract Lifecycle",
+    "focus": "Contract Lifecycle expertise",
+    "exam": "LEXISNEXIS-1007",
+    "tags": [
+      "contract-lifecycle",
+      "level-1",
+      "lexisnexis"
+    ],
+    "vendor_stage": "Foundation",
+    "price": 250,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/lexisnexis.svg"
+  },
+  {
+    "name": "Clio Case Management - Level 2",
+    "vendor": "Clio",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Case Management",
+    "focus": "Case Management expertise",
+    "exam": "CLIO-2008",
+    "tags": [
+      "case-management",
+      "level-2",
+      "clio"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/clio.svg"
+  },
+  {
+    "name": "LexisNexis E-Discovery - Level 2",
+    "vendor": "LexisNexis",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "E-Discovery",
+    "focus": "E-Discovery expertise",
+    "exam": "LEXISNEXIS-2009",
+    "tags": [
+      "e-discovery",
+      "level-2",
+      "lexisnexis"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/lexisnexis.svg"
+  },
+  {
+    "name": "Thomson Reuters Contract Lifecycle - Level 2",
+    "vendor": "Thomson Reuters",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Contract Lifecycle",
+    "focus": "Contract Lifecycle expertise",
+    "exam": "THOMSON REUTERS-2010",
+    "tags": [
+      "contract-lifecycle",
+      "level-2",
+      "thomson-reuters"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/thomsonreuters.svg"
+  },
+  {
+    "name": "Relativity Legal Research - Level 2",
+    "vendor": "Relativity",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Legal Research",
+    "focus": "Legal Research expertise",
+    "exam": "RELATIVITY-2011",
+    "tags": [
+      "legal-research",
+      "level-2",
+      "relativity"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/relativity.svg"
+  },
+  {
+    "name": "iManage Case Management - Level 2",
+    "vendor": "iManage",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Case Management",
+    "focus": "Case Management expertise",
+    "exam": "IMANAGE-2012",
+    "tags": [
+      "case-management",
+      "level-2",
+      "imanage"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/imanage.svg"
+  },
+  {
+    "name": "Clio E-Discovery - Level 2",
+    "vendor": "Clio",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "E-Discovery",
+    "focus": "E-Discovery expertise",
+    "exam": "CLIO-2013",
+    "tags": [
+      "e-discovery",
+      "level-2",
+      "clio"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/clio.svg"
+  },
+  {
+    "name": "LexisNexis Contract Lifecycle - Level 2",
+    "vendor": "LexisNexis",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Contract Lifecycle",
+    "focus": "Contract Lifecycle expertise",
+    "exam": "LEXISNEXIS-2014",
+    "tags": [
+      "contract-lifecycle",
+      "level-2",
+      "lexisnexis"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/lexisnexis.svg"
+  },
+  {
+    "name": "Thomson Reuters Legal Research - Level 2",
+    "vendor": "Thomson Reuters",
+    "level": 2,
+    "level_range": [
+      2,
+      5
+    ],
+    "category": "Legal Research",
+    "focus": "Legal Research expertise",
+    "exam": "THOMSON REUTERS-2015",
+    "tags": [
+      "legal-research",
+      "level-2",
+      "thomson-reuters"
+    ],
+    "vendor_stage": "Associate",
+    "price": 300,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/thomsonreuters.svg"
+  },
+  {
+    "name": "Clio Case Management - Level 3",
+    "vendor": "Clio",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Case Management",
+    "focus": "Case Management expertise",
+    "exam": "CLIO-3016",
+    "tags": [
+      "case-management",
+      "level-3",
+      "clio"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/clio.svg"
+  },
+  {
+    "name": "LexisNexis E-Discovery - Level 3",
+    "vendor": "LexisNexis",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "E-Discovery",
+    "focus": "E-Discovery expertise",
+    "exam": "LEXISNEXIS-3017",
+    "tags": [
+      "e-discovery",
+      "level-3",
+      "lexisnexis"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/lexisnexis.svg"
+  },
+  {
+    "name": "Thomson Reuters Contract Lifecycle - Level 3",
+    "vendor": "Thomson Reuters",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Contract Lifecycle",
+    "focus": "Contract Lifecycle expertise",
+    "exam": "THOMSON REUTERS-3018",
+    "tags": [
+      "contract-lifecycle",
+      "level-3",
+      "thomson-reuters"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/thomsonreuters.svg"
+  },
+  {
+    "name": "Relativity Legal Research - Level 3",
+    "vendor": "Relativity",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Legal Research",
+    "focus": "Legal Research expertise",
+    "exam": "RELATIVITY-3019",
+    "tags": [
+      "legal-research",
+      "level-3",
+      "relativity"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/relativity.svg"
+  },
+  {
+    "name": "iManage Case Management - Level 3",
+    "vendor": "iManage",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Case Management",
+    "focus": "Case Management expertise",
+    "exam": "IMANAGE-3020",
+    "tags": [
+      "case-management",
+      "level-3",
+      "imanage"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/imanage.svg"
+  },
+  {
+    "name": "Clio E-Discovery - Level 3",
+    "vendor": "Clio",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "E-Discovery",
+    "focus": "E-Discovery expertise",
+    "exam": "CLIO-3021",
+    "tags": [
+      "e-discovery",
+      "level-3",
+      "clio"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/clio.svg"
+  },
+  {
+    "name": "LexisNexis Contract Lifecycle - Level 3",
+    "vendor": "LexisNexis",
+    "level": 3,
+    "level_range": [
+      3,
+      5
+    ],
+    "category": "Contract Lifecycle",
+    "focus": "Contract Lifecycle expertise",
+    "exam": "LEXISNEXIS-3022",
+    "tags": [
+      "contract-lifecycle",
+      "level-3",
+      "lexisnexis"
+    ],
+    "vendor_stage": "Professional",
+    "price": 350,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/lexisnexis.svg"
+  },
+  {
+    "name": "Clio Case Management - Level 4",
+    "vendor": "Clio",
+    "level": 4,
+    "level_range": [
+      4,
+      5
+    ],
+    "category": "Case Management",
+    "focus": "Case Management expertise",
+    "exam": "CLIO-4023",
+    "tags": [
+      "case-management",
+      "level-4",
+      "clio"
+    ],
+    "vendor_stage": "Expert",
+    "price": 400,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/clio.svg"
+  },
+  {
+    "name": "LexisNexis E-Discovery - Level 4",
+    "vendor": "LexisNexis",
+    "level": 4,
+    "level_range": [
+      4,
+      5
+    ],
+    "category": "E-Discovery",
+    "focus": "E-Discovery expertise",
+    "exam": "LEXISNEXIS-4024",
+    "tags": [
+      "e-discovery",
+      "level-4",
+      "lexisnexis"
+    ],
+    "vendor_stage": "Expert",
+    "price": 400,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/lexisnexis.svg"
+  },
+  {
+    "name": "Thomson Reuters Contract Lifecycle - Level 4",
+    "vendor": "Thomson Reuters",
+    "level": 4,
+    "level_range": [
+      4,
+      5
+    ],
+    "category": "Contract Lifecycle",
+    "focus": "Contract Lifecycle expertise",
+    "exam": "THOMSON REUTERS-4025",
+    "tags": [
+      "contract-lifecycle",
+      "level-4",
+      "thomson-reuters"
+    ],
+    "vendor_stage": "Expert",
+    "price": 400,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/thomsonreuters.svg"
+  },
+  {
+    "name": "Relativity Legal Research - Level 4",
+    "vendor": "Relativity",
+    "level": 4,
+    "level_range": [
+      4,
+      5
+    ],
+    "category": "Legal Research",
+    "focus": "Legal Research expertise",
+    "exam": "RELATIVITY-4026",
+    "tags": [
+      "legal-research",
+      "level-4",
+      "relativity"
+    ],
+    "vendor_stage": "Expert",
+    "price": 400,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/relativity.svg"
+  },
+  {
+    "name": "Clio Case Management - Level 5",
+    "vendor": "Clio",
+    "level": 5,
+    "level_range": [
+      5,
+      5
+    ],
+    "category": "Case Management",
+    "focus": "Case Management expertise",
+    "exam": "CLIO-5027",
+    "tags": [
+      "case-management",
+      "level-5",
+      "clio"
+    ],
+    "vendor_stage": "Master",
+    "price": 450,
+    "retired": false,
+    "logo": "../assets/images/vendor-logos/clio.svg"
+  }
+]
