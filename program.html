@@ -784,11 +784,7 @@
     <div id="cert-portal" style="position:relative; top:-80px;"></div>
     <div id="cert-docs" style="position:relative; top:-80px;"></div>
     <div id="cert-results" style="position:relative; top:-80px;"></div>
-    <!-- Checkout Flow Indicator -->
-    <div id="checkoutFlowIndicator" class="checkout-flow-indicator is-hidden">
-        <h4>🛒 HEXAD Checkout Flow - Level <span id="checkoutLevel"></span> Professional Selection</h4>
-        <p>Select your professional certifications below, then return to complete your purchase.</p>
-    </div>
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -896,24 +892,10 @@
                 <p>Choose your industry sector and begin your certification journey</p>
             </div>
             
-            <!-- HEXAD Context Banner (Hidden by default, shown when coming from HEXAD) -->
-            <div id="hexadContextBanner" class="hexad-context-banner is-hidden">
-                <div class="hexad-banner-content">
-                    <div class="hexad-banner-icon">🎯</div>
-                    <div class="hexad-banner-text">
-                        <h3>HEXAD Professional Development Journey</h3>
-                        <p>You're continuing your HEXAD journey with professional certifications. Select an industry sector to explore certification pathways that align with your career goals.</p>
-                    </div>
-                    <div class="hexad-banner-level">
-                        <span class="level-badge">Level <span id="hexadLevel">1</span></span>
-                        <span class="pricing-info">Starting at $<span id="hexadPrice">8,100</span></span>
-                    </div>
-                </div>
-            </div>
-            
+
             <div class="sectors-grid">
                 <!-- 1. Information Technology -->
-                <div class="sector-card" data-sector="technology" onclick="navigateToSector('technology')">
+                <div class="sector-card" >
                     <div class="sector-header">
                         <div class="sector-icon">🖥️</div>
                         <div>
@@ -923,13 +905,13 @@
                     </div>
                     <p class="sector-description">Cloud, Cybersecurity, Networking, Software Development - Complete IT infrastructure foundation with comprehensive sub-domains covering all aspects of modern technology.</p>
                     <div class="sector-cta">
-                        <a href="programs/informationtechnology.html" class="explore-btn" onclick="event.stopPropagation();">Explore IT Certifications</a>
+                        <a href="programs/informationtechnology.html" class="explore-btn" >Explore IT Certifications</a>
                         <span class="vendor-count">50+ Certifications</span>
                     </div>
                 </div>
 
                 <!-- 2. Healthcare Technology -->
-                <div class="sector-card" data-sector="healthcare" onclick="navigateToSector('healthcare')">
+                <div class="sector-card" >
                     <div class="sector-header">
                         <div class="sector-icon">🏥</div>
                         <div>
@@ -939,13 +921,13 @@
                     </div>
                     <p class="sector-description">Health IT, EHR Systems, Medical Devices, Telemedicine - Transform healthcare delivery with comprehensive technology solutions and certification pathways.</p>
                     <div class="sector-cta">
-                        <a href="programs/healthcare.html" class="explore-btn" onclick="event.stopPropagation();">Explore Healthcare Certifications</a>
+                        <a href="programs/healthcare.html" class="explore-btn" >Explore Healthcare Certifications</a>
                         <span class="vendor-count">45+ Certifications</span>
                     </div>
                 </div>
 
                 <!-- 3. Manufacturing & Industrial -->
-                <div class="sector-card" data-sector="manufacturing" onclick="navigateToSector('manufacturing')">
+                <div class="sector-card" >
                     <div class="sector-header">
                         <div class="sector-icon">🏭</div>
                         <div>
@@ -955,13 +937,13 @@
                     </div>
                     <p class="sector-description">Automation, Quality Control, Lean Six Sigma, Welding - Advanced manufacturing processes with Industry 4.0 technologies and quality management systems.</p>
                     <div class="sector-cta">
-                        <a href="programs/manufacturing.html" class="explore-btn" onclick="event.stopPropagation();">Explore Manufacturing Certifications</a>
+                        <a href="programs/manufacturing.html" class="explore-btn" >Explore Manufacturing Certifications</a>
                         <span class="vendor-count">55+ Certifications</span>
                     </div>
                 </div>
 
                 <!-- 4. Automotive Technology -->
-                <div class="sector-card" data-sector="automotive" onclick="navigateToSector('automotive')">
+                <div class="sector-card" >
                     <div class="sector-header">
                         <div class="sector-icon">🚗</div>
                         <div>
@@ -971,13 +953,13 @@
                     </div>
                     <p class="sector-description">ICE, Electric Vehicles, Autonomous Systems, Collision Repair - Complete automotive technology stack from traditional service to cutting-edge EV and autonomous systems.</p>
                     <div class="sector-cta">
-                        <a href="programs/automotive.html" class="explore-btn" onclick="event.stopPropagation();">Explore Automotive Certifications</a>
+                        <a href="programs/automotive.html" class="explore-btn" >Explore Automotive Certifications</a>
                         <span class="vendor-count">60+ Certifications</span>
                     </div>
                 </div>
 
                 <!-- 5. Energy & Renewable Systems -->
-                <div class="sector-card" data-sector="renewable-energy" onclick="navigateToSector('renewable-energy')">
+                <div class="sector-card" >
                     <div class="sector-header">
                         <div class="sector-icon">⚡</div>
                         <div>
@@ -987,13 +969,13 @@
                     </div>
                     <p class="sector-description">Solar, Wind, Storage, Smart Grid, Energy Efficiency - Leading the clean energy transition with comprehensive renewable energy technology certifications.</p>
                     <div class="sector-cta">
-                        <a href="programs/renewable-energy.html" class="explore-btn" onclick="event.stopPropagation();">Explore Energy Certifications</a>
+                        <a href="programs/renewable-energy.html" class="explore-btn" >Explore Energy Certifications</a>
                         <span class="vendor-count">52+ Certifications</span>
                     </div>
                 </div>
 
                 <!-- 6. Construction & Infrastructure -->
-                <div class="sector-card" data-sector="architecture-engineering" onclick="navigateToSector('architecture-engineering')">
+                <div class="sector-card" >
                     <div class="sector-header">
                         <div class="sector-icon">🏗️</div>
                         <div>
@@ -1003,13 +985,13 @@
                     </div>
                     <p class="sector-description">General Construction, LEED, Electrical, Plumbing - Comprehensive construction and infrastructure development with green building and sustainable design focus.</p>
                     <div class="sector-cta">
-                        <a href="programs/architecture-engineering.html" class="explore-btn" onclick="event.stopPropagation();">Explore Construction Certifications</a>
+                        <a href="programs/architecture-engineering.html" class="explore-btn" >Explore Construction Certifications</a>
                         <span class="vendor-count">48+ Certifications</span>
                     </div>
                 </div>
 
                 <!-- 7. Communications & Telecommunications -->
-                <div class="sector-card" data-sector="telecommunications" onclick="navigateToSector('telecommunications')">
+                <div class="sector-card" >
                     <div class="sector-header">
                         <div class="sector-icon">📡</div>
                         <div>
@@ -1019,13 +1001,13 @@
                     </div>
                     <p class="sector-description">5G, Fiber Optics, Wireless Systems, Network Optimization - Advanced telecommunications infrastructure and next-generation communication systems.</p>
                     <div class="sector-cta">
-                        <a href="programs/telecommunications.html" class="explore-btn" onclick="event.stopPropagation();">Explore Telecom Certifications</a>
+                        <a href="programs/telecommunications.html" class="explore-btn" >Explore Telecom Certifications</a>
                         <span class="vendor-count">42+ Certifications</span>
                     </div>
                 </div>
 
                 <!-- 8. Creative Arts & Digital Design -->
-                <div class="sector-card" data-sector="creative-arts" onclick="navigateToSector('creative-arts')">
+                <div class="sector-card" >
                     <div class="sector-header">
                         <div class="sector-icon">🎨</div>
                         <div>
@@ -1035,13 +1017,13 @@
                     </div>
                     <p class="sector-description">Graphic Design, Digital Media, UX/UI, Adobe, Multimedia - Creative technology platforms and digital content creation with industry-standard tools and techniques.</p>
                     <div class="sector-cta">
-                        <a href="programs/creative-arts.html" class="explore-btn" onclick="event.stopPropagation();">Explore Creative Certifications</a>
+                        <a href="programs/creative-arts.html" class="explore-btn" >Explore Creative Certifications</a>
                         <span class="vendor-count">38+ Certifications</span>
                     </div>
                 </div>
 
                 <!-- 9. Finance & Accounting -->
-                <div class="sector-card" data-sector="finance" onclick="navigateToSector('finance')">
+                <div class="sector-card" >
                     <div class="sector-header">
                         <div class="sector-icon">💰</div>
                         <div>
@@ -1051,13 +1033,13 @@
                     </div>
                     <p class="sector-description">FinTech, Banking, Risk, Investment, Accounting - Modern financial systems, digital banking, and comprehensive accounting and investment management solutions.</p>
                     <div class="sector-cta">
-                        <a href="programs/finance.html" class="explore-btn" onclick="event.stopPropagation();">Explore Finance Certifications</a>
+                        <a href="programs/finance.html" class="explore-btn" >Explore Finance Certifications</a>
                         <span class="vendor-count">44+ Certifications</span>
                     </div>
                 </div>
 
                 <!-- 10. Business & Management -->
-                <div class="sector-card" data-sector="business-development" onclick="navigateToSector('business-development')">
+                <div class="sector-card" >
                     <div class="sector-header">
                         <div class="sector-icon">📊</div>
                         <div>
@@ -1067,7 +1049,7 @@
                     </div>
                     <p class="sector-description">Project Management, Business Analysis, Operations, Leadership - Comprehensive management methodologies and strategic business development frameworks.</p>
                     <div class="sector-cta">
-                        <a href="programs/business-development.html" class="explore-btn" onclick="event.stopPropagation();">Explore Business Certifications</a>
+                        <a href="programs/business-development.html" class="explore-btn" >Explore Business Certifications</a>
                         <span class="vendor-count">60+ Certifications</span>
                     </div>
                 </div>
