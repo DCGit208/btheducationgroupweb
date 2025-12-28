@@ -943,15 +943,7 @@
                     <h4><i class="fas fa-filter"></i> Focus Area</h4>
                     <select id="focusFilter">
                         <option value="">All Focus Areas</option>
-                        <option value="Foundations">Foundations</option>
-                        <option value="Enterprise R&S">Enterprise R&S</option>
-                        <option value="Wireless">Wireless</option>
-                        <option value="Public Cloud">Public Cloud</option>
-                        <option value="Virtualization">Virtualization</option>
-                        <option value="AI & ML">AI & ML</option>
-                        <option value="Cybersecurity">Cybersecurity</option>
-                        <option value="DevOps">DevOps</option>
-                        <!-- Add more as needed -->
+                        <!-- options populated dynamically from dataset -->
                     </select>
                 </div>
                 <div class="filter-group">
@@ -965,37 +957,7 @@
                     <h4><i class="fas fa-building"></i> Vendor <span class="vendor-count">(39)</span></h4>
                     <select id="vendorFilter">
                         <option value="">All Vendors</option>
-                        <option value="Juniper">Juniper</option>
-                        <option value="Aruba">Aruba</option>
-                        <option value="Nokia">Nokia</option>
-                        <option value="Huawei">Huawei</option>
-                        <option value="ZTE">ZTE</option>
-                        <option value="Salesforce">Salesforce</option>
-                        <option value="Fortinet">Fortinet</option>
-                        <option value="AWS">Amazon AWS</option>
-                        <option value="SUSE">SUSE</option>
-                        <option value="VMware/Omnissa">VMware/Omnissa</option>
-                        <option value="Snowflake">Snowflake</option>
-                        <option value="MongoDB">MongoDB</option>
-                        <option value="NetApp">NetApp</option>
-                        <option value="(ISC)²">(ISC)²</option>
-                        <option value="EC-Council">EC-Council</option>
-                        <option value="GIAC">GIAC</option>
-                        <option value="IAPP">IAPP</option>
-                        <option value="CSA">CSA</option>
-                        <option value="Scrum Alliance">Scrum Alliance</option>
-                        <option value="Veeam">Veeam</option>
-                        <option value="Splunk">Splunk</option>
-                        <option value="Citrix">Citrix</option>
-                        <option value="Teradata">Teradata</option>
-                        <option value="ForgeRock">ForgeRock</option>
-                        <option value="ETA International">ETA International</option>
-                        <option value="Linux Foundation">Linux Foundation</option>
-                        <option value="Unity">Unity</option>
-                        <option value="NVIDIA">NVIDIA</option>
-                        <option value="Zend">Zend</option>
-                        <option value="Qt">Qt</option>
-                        <option value="CNCF">CNCF</option>
+                        <!-- options populated dynamically from dataset -->
                     </select>
                 </div>
                 <div class="filter-group" id="vendorAreaGroup" style="display:none;">
@@ -1207,25 +1169,8 @@
 
     // Certification database (will be replaced by external JSON if available)
                 let certifications = [
-                        { id: 1, name: 'CompTIA Tech+', vendor: 'CompTIA', category: 'core-it', focus: 'Foundations', level: 1, retired: false, logo: 'https://www.comptia.org/_next/image/?url=https%3A%2F%2Fimages.cmp.optimizely.com%2F84c2ddbcb71111ef888eca5646afc7d8&w=256&q=90', premium: true, exam: 'FC0-U71',
-                            neutral: true, level_range: [1,1], tracks: ['support','network','security'], prereqTags: [], tags:['foundation-it'], time_estimate_months: 1.5, popularity: 0.7, salary_index: 0.4 },
-                        { id: 2, name: 'Foundation Certification', vendor: 'CompTIA', category: 'core-it', focus: 'Foundations', level: 1, retired: false, logo: 'assets/logos/comptia-aplus.png', premium: true, exam: '220-1201/220-1202',
-                            neutral: true, level_range: [1,2], tracks: ['support'], prereqTags: ['foundation-it'], tags:['endpoint-support','hardware'], time_estimate_months: 2.5, popularity: 0.85, salary_index: 0.5 },
-                        { id: 3, name: 'CompTIA Network+', vendor: 'CompTIA', category: 'core-it', focus: 'Foundations', level: 1, retired: false, logo: 'assets/logos/comptia-networkplus.png', premium: true, exam: 'N10-009',
-                            neutral: true, level_range: [1,2], tracks: ['network'], prereqTags: ['foundation-it'], tags:['foundation-network'], time_estimate_months: 2.5, popularity: 0.8, salary_index: 0.55 },
-                        { id: 4, name: 'Microsoft Azure Fundamentals', vendor: 'Microsoft', category: 'cloud-platforms', focus: 'Public Cloud', level: 1, retired: false, logo: 'assets/logos/azure-fundamentals.png', premium: true,
-                            neutral: false, level_range: [1,2], tracks: ['cloud'], prereqTags: ['foundation-it'], tags:['vendor-cloud-fund'], time_estimate_months: 1.5, popularity: 0.75, salary_index: 0.5 },
-                        { id: 5, name: 'Entry Level Certification', vendor: 'AWS', category: 'cloud-platforms', focus: 'Public Cloud', level: 1, retired: false, logo: 'assets/logos/aws-cloud-practitioner.png', premium: true,
-                            neutral: false, level_range: [1,2], tracks: ['cloud'], prereqTags: ['foundation-it'], tags:['vendor-cloud-fund'], time_estimate_months: 1.5, popularity: 0.82, salary_index: 0.52 },
-                        { id: 6, name: 'Cisco CCNA', vendor: 'Cisco', category: 'core-it', focus: 'Enterprise R&S', level: 2, retired: false, logo: 'assets/logos/cisco-ccna.png', premium: true,
-                            neutral: false, level_range: [2,3], tracks: ['network'], prereqTags: ['foundation-network'], tags:['routing-switching'], time_estimate_months: 4, popularity: 0.88, salary_index: 0.65 },
-                        { id: 7, name: 'Red Hat Certified System Admin', vendor: 'Red Hat', category: 'cloud-platforms', focus: 'Virtualization', level: 2, retired: false, logo: 'assets/logos/redhat-rhcsa.png', premium: false,
-                            neutral: false, level_range: [2,3], tracks: ['linux','cloud'], prereqTags: ['foundation-it'], tags:['linux-admin'], time_estimate_months: 4, popularity: 0.7, salary_index: 0.6 },
-                        { id: 8, name: 'Salesforce Certified Administrator', vendor: 'Salesforce', category: 'crm', focus: 'Foundations', level: 1, retired: false, logo: 'assets/logos/salesforce-admin.png', premium: true,
-                            neutral: false, level_range: [1,2], tracks: ['crm'], prereqTags: [], tags:['salesforce','crm'], time_estimate_months: 2, popularity: 0.8, salary_index: 0.55 },
-                        { id: 9, name: 'Salesforce Platform Developer I', vendor: 'Salesforce', category: 'crm', focus: 'Developer', level: 2, retired: false, logo: 'assets/logos/salesforce-dev1.png', premium: true,
-                            neutral: false, level_range: [2,3], tracks: ['crm','developer'], prereqTags: [], tags:['salesforce','developer'], time_estimate_months: 3, popularity: 0.75, salary_index: 0.6 },
-                ];
+                        // Certifications loaded from JSON file
+                    ];
 
         // Level duration guidance (overall per level)
         const levelDuration = {
@@ -4606,7 +4551,7 @@
                 return Array.isArray(list) ? list.map(derive) : list;
             }
             // Try to load external dataset
-            fetch('../assets/data/certifications.json', { cache: 'no-store' })
+            fetch('../assets/data/architecture-certifications.json', { cache: 'no-store' })
                 .then(r => (r.ok ? r.json() : Promise.reject(new Error('No dataset'))))
                 .then(data => {
                     if (Array.isArray(data) && data.length) {

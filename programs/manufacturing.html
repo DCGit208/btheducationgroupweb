@@ -2234,7 +2234,7 @@
                 data = await res.json();
                 MANUFACTURING_CERTIFICATIONS = Array.isArray(data) ? data : (data?.manufacturing || []);
             } else {
-                res = await fetch('../assets/data/certifications.json', { cache: 'no-store' });
+                res = await fetch('../assets/data/manufacturing-certifications.json', { cache: 'no-store' });
                 if (!res.ok) throw new Error('Failed to fetch');
                 data = await res.json();
                 if (Array.isArray(data)) {
