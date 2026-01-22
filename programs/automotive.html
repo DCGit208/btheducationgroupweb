@@ -940,13 +940,6 @@
                     </select>
                 </div>
                 <div class="filter-group">
-                    <h4><i class="fas fa-filter"></i> Focus Area</h4>
-                    <select id="focusFilter">
-                        <option value="">All Focus Areas</option>
-                        <!-- options populated dynamically from dataset -->
-                    </select>
-                </div>
-                <div class="filter-group">
                     <h4><i class="fas fa-share-nodes"></i> Track (multi-select)</h4>
                     <select id="trackFilter" multiple size="6" aria-label="Select one or more tracks">
                         <!-- populated from dataset -->
@@ -958,6 +951,13 @@
                     <select id="vendorFilter">
                         <option value="">All Vendors</option>
                         <!-- options populated dynamically from dataset -->
+                    </select>
+                </div>
+                <div class="filter-group" id="focusGroup" style="display:none;">
+                    <h4 id="focusLabel"><i class="fas fa-filter"></i> Focus Area</h4>
+                    <select id="focusFilter">
+                        <option value="">All Focus Areas</option>
+                        <!-- options populated dynamically based on selected vendor -->
                     </select>
                 </div>
                 <div class="filter-group" id="vendorAreaGroup" style="display:none;">
@@ -1758,6 +1758,7 @@
 
         // Build Focus filter options and update vendor count dynamically from dataset
         function buildFiltersFromDataset() {
+            console.log('buildFiltersFromDataset called. certifications count:', certifications.length, 'ASE count:', certifications.filter(c=>c.vendor==='ASE').length);
             try {
                 // Normalize dataset once per session
                 try {
@@ -1771,7 +1772,8 @@
                 } catch(_) {}
 
                 // Helper: compute a base eligible list honoring current state except a facet to skip
-                const computeBaseEligible = (skipFacet)=>{
+                const computeBaseEligible = (skipFacet, opts = {})=>{
+                    const { ignoreLevel = false } = opts;
                     const lvl = parseInt(document.getElementById('levelFilter')?.value);
                     const cat = document.getElementById('categoryFilter')?.value || '';
                     const foc = document.getElementById('focusFilter')?.value || '';
@@ -1792,7 +1794,7 @@
                         return null;
                     };
                     return certifications.filter(c=>!c.retired).filter(c=>{
-                        if (strictChron && lvl) {
+                        if (!ignoreLevel && strictChron && lvl) {
                             if (!isLevelException(c, lvl) && Array.isArray(c.level_range) && c.level_range.length===2) {
                                 const [mn,mx] = c.level_range; if (!(lvl>=mn && lvl<=mx)) return false;
                             }
@@ -1843,30 +1845,6 @@
                         catSelect.appendChild(opt);
                     });
                     if (finalList.includes(current) || current==='') catSelect.value = current; else catSelect.value='';
-                }
-
-                const focusSelect = document.getElementById('focusFilter');
-                if (focusSelect) {
-                    const current = focusSelect.value;
-                    // Clear and rebuild focus options
-                    while (focusSelect.firstChild) focusSelect.removeChild(focusSelect.firstChild);
-                    const all = document.createElement('option');
-                    all.value = '';
-                    all.textContent = 'All Focus Areas';
-                    focusSelect.appendChild(all);
-                    const base = computeBaseEligible('focus');
-                    const focusSet = new Set();
-                    const focusCounts = {};
-                    base.forEach(c => { if (c.focus){ focusSet.add(c.focus); focusCounts[c.focus]=(focusCounts[c.focus]||0)+1; } });
-                    Array.from(focusSet).sort().forEach(f => {
-                        const opt = document.createElement('option');
-                        opt.value = f;
-                        const count = focusCounts[f] || 0;
-                        opt.textContent = count ? `${f} (${count})` : f;
-                        focusSelect.appendChild(opt);
-                    });
-                    // Restore selection if still present
-                    if ([...focusSet, ''].includes(current)) focusSelect.value = current;
                 }
 
                 // Rebuild Vendor options from dataset and update count
@@ -4394,133 +4372,7 @@
                         out.vendor_area = 'Cloud Security';
                         out.vendor_stage = /CCSK/i.test(nm) ? 'Foundational' : 'Professional';
                     }
-                    // PeopleCert (ITIL/PRINCE2)
-                    if (out.vendor === 'PeopleCert') {
-                        if (/ITIL/i.test(nm)) {
-                            out.vendor_area = 'ITIL';
-                            out.vendor_stage = /Foundation/i.test(nm) ? 'Fundamentals' : (/Managing Professional|MP|Leader/i.test(nm) ? 'Professional' : 'Associate');
-                        } else if (/PRINCE2|PRINCE 2/i.test(nm)) {
-                            out.vendor_area = 'Project Management';
-                            out.vendor_stage = /Foundation/i.test(nm) ? 'Fundamentals' : 'Professional';
-                        } else {
-                            out.vendor_area = 'Service Mgmt';
-                        }
-                    }
-                    // PMI
-                    if (out.vendor === 'PMI') {
-                        out.vendor_area = /Agile|ACP/i.test(nm) ? 'Agile' : 'Project Management';
-                        out.vendor_stage = /CAPM/i.test(nm) ? 'Associate' : (/PMP|PgMP/i.test(nm) ? 'Professional' : 'Professional');
-                    }
-                    // Scrum Alliance
-                    if (out.vendor === 'Scrum Alliance') {
-                        if (/Product Owner|CSPO/i.test(nm)) out.vendor_area = 'Product Ownership';
-                        else if (/Developer|CSD/i.test(nm)) out.vendor_area = 'Developer';
-                        else out.vendor_area = 'Scrum Mastery';
-                        out.vendor_stage = /Advanced|A-CSM|A-CSPO/i.test(nm) ? 'Professional' : 'Associate';
-                    }
-                    // Veeam
-                    if (out.vendor === 'Veeam') {
-                        out.vendor_area = /Architect|VMCA/i.test(nm) ? 'Architecture' : 'Data Protection';
-                        out.vendor_stage = /Associate/i.test(nm) ? 'Associate' : (/Professional|Engineer|VMCE/i.test(nm) ? 'Professional' : 'Professional');
-                    }
-                    // Splunk
-                    if (out.vendor === 'Splunk') {
-                        if (/Core/i.test(nm)) out.vendor_area = 'Core'; else if (/Observability/i.test(nm)) out.vendor_area = 'Observability'; else out.vendor_area = 'Security';
-                        out.vendor_stage = /User/i.test(nm) ? 'Associate' : (/Admin|Architect/i.test(nm) ? 'Professional' : 'Professional');
-                    }
-                    // Citrix
-                    if (out.vendor === 'Citrix') {
-                        if (/CCA-V|Associate/i.test(nm)) out.vendor_stage = 'Associate'; else if (/CCP-V|Professional/i.test(nm)) out.vendor_stage = 'Professional'; else if (/CCE-V|Expert/i.test(nm)) out.vendor_stage = 'Expert';
-                        out.vendor_area = /Networking|ADC|NetScaler/i.test(nm) ? 'Networking' : 'Virtual Apps & Desktops';
-                    }
-                    // Teradata
-                    if (out.vendor === 'Teradata') {
-                        out.vendor_area = 'Data';
-                        out.vendor_stage = /Associate/i.test(nm) ? 'Associate' : (/Professional/i.test(nm) ? 'Professional' : (/Master/i.test(nm) ? 'Expert' : 'Professional'));
-                    }
-                    // ForgeRock
-                    if (out.vendor === 'ForgeRock') {
-                        out.vendor_area = 'Identity & Access Mgmt';
-                        out.vendor_stage = /Specialist|Professional/i.test(nm) ? 'Professional' : 'Associate';
-                    }
-                    // ETA International
-                    if (out.vendor === 'ETA International') {
-                        out.vendor_area = /Fiber|Telecom/i.test(nm) ? 'Telecom' : 'Electronics';
-                        out.vendor_stage = /Associate|Installer|Technician/i.test(nm) ? 'Associate' : 'Professional';
-                    }
-                    // Linux Foundation
-                    if (out.vendor === 'Linux Foundation') {
-                        if (/LFCA/i.test(nm)) out.vendor_stage = 'Foundational'; else if (/LFCS/i.test(nm)) out.vendor_stage = 'Associate'; else if (/LFCE/i.test(nm)) out.vendor_stage = 'Professional';
-                        out.vendor_area = /Kubernetes|CKA|CKAD|CKS|KCNA/i.test(nm) ? 'Kubernetes' : 'Linux';
-                    }
-                    // CNCF
-                    if (out.vendor === 'CNCF') {
-                        out.vendor_area = /KCNA/i.test(nm) ? 'Foundations' : (/CKA|CKAD|CKS/i.test(nm) ? 'Kubernetes' : 'Cloud Native');
-                        out.vendor_stage = /KCNA/i.test(nm) ? 'Foundational' : 'Professional';
-                    }
-                    // Unity
-                    if (out.vendor === 'Unity') {
-                        out.vendor_area = /Artist|Designer/i.test(nm) ? 'Design' : 'Game Dev';
-                        out.vendor_stage = /Associate/i.test(nm) ? 'Associate' : (/Professional|Expert/i.test(nm) ? 'Professional' : 'Associate');
-                    }
-                    // Huawei
-                    if (out.vendor === 'Huawei') {
-                        if (!out.vendor_area) {
-                            if (/Datacom/i.test(nm)) out.vendor_area = 'Datacom';
-                            else if (/Security/i.test(nm)) out.vendor_area = 'Security';
-                            else if (/Cloud Service/i.test(nm)) out.vendor_area = 'Cloud Service';
-                            else if (/5G|Carrier/i.test(nm)) out.vendor_area = '5G/Carrier';
-                        }
-                        if (/HCIA|Associate/i.test(nm)) out.vendor_stage = 'Associate';
-                        else if (/HCIP|Professional/i.test(nm)) out.vendor_stage = 'Professional';
-                        else if (/HCIE|Expert/i.test(nm)) out.vendor_stage = 'Expert';
-                        else out.vendor_stage = out.vendor_stage || 'Professional';
-                    }
-                    // ZTE
-                    if (out.vendor === 'ZTE') {
-                        if (!out.vendor_area) {
-                            if (/5G|Carrier/i.test(nm)) out.vendor_area = '5G/Carrier'; else out.vendor_area = 'Networking';
-                        }
-                        if (/ZCNE|Engineer/i.test(nm)) out.vendor_stage = 'Associate';
-                        else if (/ZCNP|Professional/i.test(nm)) out.vendor_stage = 'Professional';
-                        else if (/ZCIE|Expert/i.test(nm)) out.vendor_stage = 'Expert';
-                    }
-                    // NVIDIA
-                    if (out.vendor === 'NVIDIA') {
-                        out.vendor_area = /CUDA|Compute/i.test(nm) ? 'CUDA' : (/Omniverse|Graphics/i.test(nm) ? 'Graphics/Omniverse' : 'AI/ML');
-                        out.vendor_stage = /Associate/i.test(nm) ? 'Associate' : 'Professional';
-                    }
-                    // Zend
-                    if (out.vendor === 'Zend') {
-                        out.vendor_area = 'PHP Development';
-                        out.vendor_stage = 'Professional';
-                    }
-                    // Qt
-                    if (out.vendor === 'Qt') {
-                        out.vendor_area = /Designer/i.test(nm) ? 'UI/UX' : 'C++/Application Dev';
-                        out.vendor_stage = 'Professional';
-                    }
-                    // Generic fallback inference for any vendor not covered above
-                    if (!out.vendor_area) {
-                        const text = `${nm} ${String(out.focus||'')} ${String(out.category||'')} ${(out.tracks||[]).join(' ')}`.toLowerCase();
-                        if (/(security|soc|forensic|identity|iam|grc|privacy|siem)/i.test(text)) out.vendor_area = 'Security';
-                        else if (/(cloud|azure|aws|gcp|oci)/i.test(text)) out.vendor_area = 'Cloud';
-                        else if (/(data|database|sql|analytics|big data|warehouse)/i.test(text)) out.vendor_area = 'Data';
-                        else if (/(network|routing|switch|wireless|5g|sp|service provider)/i.test(text)) out.vendor_area = 'Networking';
-                        else if (/(devops|cicd|containers|kubernetes|platform|sre)/i.test(text)) out.vendor_area = 'DevOps';
-                        else if (/(virtualization|vsphere|horizon|euc)/i.test(text)) out.vendor_area = 'Virtualization';
-                        else if (/(storage|backup|protection)/i.test(text)) out.vendor_area = 'Storage';
-                        else if (/(developer|programming|application|software)/i.test(text)) out.vendor_area = 'Developer';
-                        else if (/(ai|ml|machine learning)/i.test(text)) out.vendor_area = 'AI/ML';
-                        else if (/(project|agile|scrum|itil|service)/i.test(text)) out.vendor_area = 'ITSM/PM';
-                        else out.vendor_area = (out.focus || out.category || 'General');
-                    }
-                    if (!out.vendor_stage) {
-                        if (/(foundation|fundamental|entry|beginner)/i.test(nm)) out.vendor_stage = 'Fundamentals';
-                        else if (/(associate|junior)/i.test(nm)) out.vendor_stage = 'Associate';
-                        else if (/(professional|engineer|administrator|architect)/i.test(nm)) out.vendor_stage = 'Professional';
-                        else if (/(expert|master|advanced)/i.test(nm)) out.vendor_stage = 'Expert';
-                    }
+                    // Automotive page: skip vendor_area/vendor_stage inference used for other tracks
                     // level_range: small window around stated level
                     if (!Array.isArray(out.level_range)) {
                         const lv = Number(out.level)||1; out.level_range = [Math.max(1, lv), Math.min(5, lv+1)];
@@ -4550,36 +4402,25 @@
                 };
                 return Array.isArray(list) ? list.map(derive) : list;
             }
-            // Try to load external dataset
-            fetch('../assets/data/automotive-certifications.json', { cache: 'no-store' })
-                .then(r => (r.ok ? r.json() : Promise.reject(new Error('No dataset'))))
+            // Load automotive.json as single source of truth
+            fetch('../assets/data/automotive.json?t=' + Date.now())
+                .then(response => response.json())
                 .then(data => {
-                    if (Array.isArray(data) && data.length) {
-                        certifications = enrichImportedCerts(data);
+                    if (Array.isArray(data)) {
+                        certifications = data;
+                        console.log(`Loaded ${certifications.length} certifications from automotive.json`);
                     }
-                    buildFiltersFromDataset();
-                    populateCategoryCardsFromDataset();
-                    try { applyFilters(); } catch (_) {}
                 })
-                .catch(() => {
-                    // Enrich inline seed too for consistent behavior
+                .catch(error => {
+                    console.warn('Failed to load automotive.json:', error);
+                    // Fallback to inline seed (currently empty)
+                })
+                .finally(() => {
                     try { certifications = enrichImportedCerts(certifications); } catch(_) {}
                     buildFiltersFromDataset();
                     populateCategoryCardsFromDataset();
                     try { applyFilters(); } catch (_) {}
                 });
-
-                                                // Load optional pricing overrides
-                                fetch('../assets/data/pricing.json', { cache: 'no-store' })
-                                    .then(r => (r.ok ? r.json() : Promise.resolve(null)))
-                                    .then(p => {
-                                        if (p && typeof p === 'object') {
-                                                                if (p.currency) pricingConfig.currency = p.currency;
-                                                                if (p.levelBundle && typeof p.levelBundle === 'object') pricingConfig.levelBundle = Object.assign({}, pricingConfig.levelBundle, p.levelBundle);
-                                        }
-                                        try { applyFilters(); } catch(_) {}
-                                    })
-                                    .catch(()=>{});
 
                 const selects = ['levelFilter', 'categoryFilter', 'focusFilter', 'trackFilter', 'vendorFilter', 'partnershipFilter', 'sortFilter']
                 .map(id => document.getElementById(id))
@@ -4592,8 +4433,9 @@
             document.getElementById('toggleEligibleOnly')?.addEventListener('change', ()=>{ try { setPage(1); applyFilters(); } catch(_){} });
             document.getElementById('toggleStrictChronology')?.addEventListener('change', ()=>{ try { setPage(1); applyFilters(); } catch(_){} });
             document.getElementById('toggleRecommendedFirst')?.addEventListener('change', ()=>{ try { setPage(1); applyFilters(); } catch(_){} });
-            // Rebuild vendor area options when vendor changes
-            document.getElementById('vendorFilter')?.addEventListener('change', ()=>{ try { rebuildVendorAreaOptions(); } catch(_){} });
+            // Rebuild focus and vendor area options when vendor changes
+            document.getElementById('vendorFilter')?.addEventListener('change', ()=>{ try { rebuildFocusOptions(); rebuildVendorAreaOptions(); setPage(1); applyFilters(); } catch(_){} });
+            document.getElementById('focusFilter')?.addEventListener('change', ()=>{ try { setPage(1); applyFilters(); } catch(_){} });
             document.getElementById('vendorAreaFilter')?.addEventListener('change', ()=>{ try { setPage(1); applyFilters(); } catch(_){} });
 
             // Copy shareable link
@@ -4724,6 +4566,73 @@
             'IAPP': ['Privacy'],
             'CSA': ['Cloud Security']
         };
+
+        function rebuildFocusOptions(){
+            try {
+                const group = document.getElementById('focusGroup');
+                const label = document.getElementById('focusLabel');
+                const select = document.getElementById('focusFilter');
+                const vendorSel = document.getElementById('vendorFilter');
+                if (!group || !select || !vendorSel) return;
+                const vendor = vendorSel.value;
+                
+                // If no vendor selected, hide focus dropdown
+                if (!vendor) {
+                    group.style.display = 'none';
+                    select.value = '';
+                    return;
+                }
+                
+                // Collect focus areas for selected vendor
+                const focusSet = new Set();
+                const focusCounts = {};
+                certifications.forEach(c => {
+                    if (c.vendor !== vendor) return;
+                    if (c.focus) {
+                        const f = String(c.focus).trim();
+                        focusSet.add(f);
+                        focusCounts[f] = (focusCounts[f] || 0) + 1;
+                    }
+                });
+                
+                const focuses = Array.from(focusSet).sort((a,b) => a.localeCompare(b));
+                
+                if (!focuses.length) {
+                    group.style.display = 'none';
+                    select.value = '';
+                    return;
+                }
+                
+                // Update label to show vendor-specific focus
+                label.innerHTML = `<i class="fas fa-filter"></i> ${vendor} Focus Area`;
+                
+                // Rebuild options
+                const current = select.value;
+                while (select.firstChild) select.removeChild(select.firstChild);
+                const all = document.createElement('option');
+                all.value = '';
+                all.textContent = 'All Focus Areas';
+                select.appendChild(all);
+                
+                focuses.forEach(f => {
+                    const opt = document.createElement('option');
+                    opt.value = f;
+                    const count = focusCounts[f] || 0;
+                    opt.textContent = count ? `${f} (${count})` : f;
+                    select.appendChild(opt);
+                });
+                
+                if (current && focuses.includes(current)) {
+                    select.value = current;
+                } else {
+                    select.value = '';
+                }
+                
+                group.style.display = '';
+            } catch(e) {
+                console.error('Error in rebuildFocusOptions:', e);
+            }
+        }
 
         function rebuildVendorAreaOptions(){
             try {
