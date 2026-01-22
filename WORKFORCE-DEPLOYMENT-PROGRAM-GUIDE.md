@@ -451,7 +451,7 @@ that monetizes real job roles — not course enrollments.
 
 🌍 **Global Reach:** Deploy certifications across 20 industry sectors with defined role pipelines
 
-🤝 **OEDP Network Membership:** Direct integration into workforce ecosystem trusted by enterprises
+🤝 **OEDP Network Membership:** Direct integration into capacity infrastructure ecosystem trusted by enterprises
 
 📈 **Career Advancement:** Leadership pathways to Sector Workforce Director roles
 
