@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Apply — BTH Sales Specialist Program</title>
-  <meta name="description" content="Apply to the BTH Education Group Sales Specialist Program. Submit your profile, sector preference, and motivation to join the 2,000-person workforce." />
+  <title>Apply — BTH Workforce Deployment Program</title>
+  <meta name="description" content="Apply to the BTH Education Group Workforce Deployment Program. Submit your profile, sector preference, and motivation to join the 2,000-person capacity deployment infrastructure." />
   <link rel="stylesheet" href="assets/css/main.css" />
   <style>
     body { margin: 0; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #111827; background: #f5f5f7; }
@@ -47,7 +47,9 @@
       return true;
     }
     function toMailtoBody(obj) {
+      const tierLabel = obj.tier === 'leadership' ? 'Sector Workforce Director (Leadership Tier)' : 'Workforce Deployment Specialist (Standard)';
       const lines = [
+        `Program Tier: ${tierLabel}`,
         `Full Name: ${obj.fullName}`,
         `Email: ${obj.email}`,
         `Phone: ${obj.phone}`,
@@ -56,7 +58,7 @@
         `City: ${obj.city}`,
         `Time Zone: ${obj.timezone || ''}`,
         `Education: ${obj.education || ''}`,
-        `Sales Experience (years): ${obj.experience}`,
+        `Professional Experience (years): ${obj.experience}`,
         `Preferred Sector: ${obj.sector}`,
         `LinkedIn: ${obj.linkedin || ''}`,
         `Website/Portfolio: ${obj.website || ''}`,
@@ -77,7 +79,8 @@
       if (!validateRequired(form)) { error.textContent = 'Please complete all required fields.'; error.style.display = 'block'; return; }
       const obj = collectData(form);
       const body = toMailtoBody(obj);
-      const subject = encodeURIComponent('Sales Specialist Application — ' + obj.fullName);
+      const tierLabel = obj.tier === 'leadership' ? 'Leadership Tier' : 'Standard';
+      const subject = encodeURIComponent(`Workforce Deployment Application (${tierLabel}) — ${obj.fullName}`);
       const to = 'info@btheducationgroup.org';
       try {
         window.dataLayer.push({
@@ -101,8 +104,10 @@
       error.style.display = 'none';
       if (!validateRequired(form)) { error.textContent = 'Please complete all required fields.'; error.style.display = 'block'; return; }
       const obj = collectData(form);
+      const tierLabel = obj.tier === 'leadership' ? 'Leadership Tier' : 'Standard';
       const message = [
-        '*Sales Specialist Application*',
+        '*Workforce Deployment Application*',
+        `Tier: ${tierLabel}`,
         `Name: ${obj.fullName}`,
         `Email: ${obj.email}`,
         `Phone: ${obj.phone}`,
@@ -136,6 +141,20 @@
       document.getElementById('submitEmail').addEventListener('click', onSubmitEmail);
       document.getElementById('submitWhatsApp').addEventListener('click', onSubmitWhatsApp);
       document.getElementById('savePDF').addEventListener('click', onSavePDF);
+      // Handle tier selection styling
+      const tierOptions = document.querySelectorAll('.tier-option');
+      tierOptions.forEach(opt => {
+        opt.addEventListener('click', function() {
+          tierOptions.forEach(o => o.style.borderColor = o.contains(this.querySelector('input')) ? (this.querySelector('input').value === 'leadership' ? '#facc15' : '#054ada') : '#e5e7eb');
+        });
+      });
+      // Pre-select tier from URL parameter
+      const urlParams = new URLSearchParams(window.location.search);
+      const tierParam = urlParams.get('tier');
+      if (tierParam === 'leadership') {
+        document.getElementById('tierLeadership').checked = true;
+        document.querySelector('label[for="tierLeadership"]').closest('.tier-option').style.borderColor = '#facc15';
+      }
     });
   </script>
   </head>
@@ -143,13 +162,45 @@
   <div class="page">
     <header class="hero">
       <a class="back" href="workforce-deployment.html">← Back to Program Overview</a>
-      <h1>Apply to the Sales Specialist Program</h1>
-      <p>Complete this application to be considered for the 2025/2026 cohort. All fields marked with * are required.</p>
+      <h1>Apply to the Workforce Deployment Program</h1>
+      <p>Complete this application to be considered for Cohort 2026. All fields marked with * are required.</p>
     </header>
 
     <section class="card">
       <form id="applicationForm" novalidate>
         <div class="form-grid">
+          <div class="col-12" style="background:#f3f4f6; padding:1rem; border-radius:0.75rem; margin-bottom:1rem;">
+            <label style="font-size:1rem; margin-bottom:0.75rem; color:#111827;">Program Tier *</label>
+            <div style="display:grid; gap:0.75rem;">
+              <label style="display:flex; align-items:flex-start; gap:0.75rem; padding:0.9rem; background:#ffffff; border:2px solid #e5e7eb; border-radius:0.75rem; cursor:pointer; font-weight:400;" class="tier-option">
+                <input type="radio" name="tier" value="standard" id="tierStandard" required style="margin-top:0.2rem;" />
+                <div>
+                  <div style="font-weight:700; color:#111827; font-size:1rem;">Workforce Deployment Specialist (Standard)</div>
+                  <div style="font-size:0.85rem; color:#6b7280; margin-top:0.25rem;">
+                    Deploy 50 certification units across Level 1–5 pathways<br>
+                    💰 1,066 USD/month remuneration for 36 months<br>
+                    🎓 8,100 USD family scholarship<br>
+                    👥 2,000 positions available
+                  </div>
+                </div>
+              </label>
+              <label style="display:flex; align-items:flex-start; gap:0.75rem; padding:0.9rem; background:#fef3c7; border:2px solid #facc15; border-radius:0.75rem; cursor:pointer; font-weight:400; position:relative;" class="tier-option">
+                <input type="radio" name="tier" value="leadership" id="tierLeadership" required style="margin-top:0.2rem;" />
+                <div style="flex:1;">
+                  <div style="display:flex; align-items:center; gap:0.5rem;">
+                    <div style="font-weight:700; color:#111827; font-size:1rem;">Sector Workforce Director (Leadership Tier)</div>
+                    <span style="background:#facc15; color:#111827; padding:0.2rem 0.5rem; border-radius:999px; font-size:0.7rem; font-weight:700; text-transform:uppercase; letter-spacing:0.05em;">Limited</span>
+                  </div>
+                  <div style="font-size:0.85rem; color:#78350f; margin-top:0.25rem;">
+                    Lead 100 Workforce Deployment Specialists in one sector<br>
+                    💼 10,660 USD/month leadership remuneration + 26,835 USD incentives<br>
+                    🌍 Sector-level strategic authority and enterprise partnerships<br>
+                    ⚠️ Only 20 positions globally (requires 5+ years experience)
+                  </div>
+                </div>
+              </label>
+            </div>
+          </div>
           <div class="col-12">
             <label for="fullName">Full Name *</label>
             <input id="fullName" name="fullName" type="text" autocomplete="name" required />
@@ -192,7 +243,7 @@
             <input id="education" name="education" type="text" placeholder="e.g., Bachelor of Business" />
           </div>
           <div class="col-6">
-            <label for="experience">Years of Sales Experience *</label>
+            <label for="experience">Years of Professional Experience *</label>
             <select id="experience" name="experience" required>
               <option value="">Select…</option>
               <option>0-1</option>
@@ -260,7 +311,7 @@
 
           <div class="col-12">
             <label for="motivation">Motivation Statement *</label>
-            <textarea id="motivation" name="motivation" placeholder="Why do you want to join the Sales Specialist Program? What strengths will you bring?" required></textarea>
+            <textarea id="motivation" name="motivation" placeholder="Why do you want to join the Workforce Deployment Program? How do you see yourself contributing to building professional capacity infrastructure?" required></textarea>
           </div>
 
           <div class="col-12">
