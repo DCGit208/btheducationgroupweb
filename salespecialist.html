@@ -289,6 +289,132 @@
     .levels-table tbody tr:nth-child(even) { background: #fafafa; }
     .levels-table td:nth-child(2), .levels-table td:nth-child(3) { text-align: right; }
 
+    /* Leadership Tier Premium Section */
+    .leadership-tier {
+      background: linear-gradient(135deg, #020617 0%, #1e293b 100%);
+      color: #f1f5f9;
+      padding: 3rem 2rem;
+      margin: 3rem -2rem 2rem;
+      border-radius: 1.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .leadership-tier::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(250, 204, 21, 0.15), transparent 70%);
+      pointer-events: none;
+    }
+    .leadership-tier .inner { position: relative; z-index: 1; max-width: 900px; margin: 0 auto; }
+    .leadership-tier .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.4rem 1rem;
+      background: rgba(250, 204, 21, 0.2);
+      border: 1px solid rgba(250, 204, 21, 0.4);
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #facc15;
+      margin-bottom: 1.5rem;
+    }
+    .leadership-tier h2 { color: #ffffff; font-size: 2.2rem; margin-bottom: 1rem; }
+    .leadership-tier .lead { color: #cbd5e1; font-size: 1.1rem; margin-bottom: 2rem; }
+    .leadership-tier .benefits {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+    .leadership-tier .benefit-card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 1rem;
+      padding: 1.5rem;
+    }
+    .leadership-tier .benefit-card h3 { color: #facc15; font-size: 1.1rem; margin-bottom: 0.5rem; }
+    .leadership-tier .benefit-card p { color: #e2e8f0; font-size: 0.95rem; line-height: 1.6; }
+    .leadership-tier .stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin: 2rem 0;
+      padding: 1.5rem 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .leadership-tier .stat {
+      flex: 1;
+      min-width: 200px;
+    }
+    .leadership-tier .stat-value {
+      font-size: 2rem;
+      font-weight: 800;
+      color: #facc15;
+      margin-bottom: 0.25rem;
+    }
+    .leadership-tier .stat-label {
+      font-size: 0.9rem;
+      color: #cbd5e1;
+    }
+    .leadership-tier .requirements {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      margin: 2rem 0;
+    }
+    .leadership-tier .requirements h3 { color: #ffffff; margin-bottom: 1rem; }
+    .leadership-tier .requirements ul { list-style: none; padding: 0; margin: 0; }
+    .leadership-tier .requirements li {
+      padding: 0.5rem 0;
+      color: #e2e8f0;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .leadership-tier .requirements li::before { content: "✓"; color: #facc15; font-weight: bold; }
+    .leadership-tier .not-for {
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .leadership-tier .not-for p {
+      color: #f87171;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .leadership-tier .not-for p::before { content: "❌"; }
+    .leadership-tier .cta-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    .leadership-tier .button {
+      background: linear-gradient(135deg, #facc15, #fb923c);
+      color: #111827;
+      padding: 1rem 2rem;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .leadership-tier .button.secondary {
+      background: transparent;
+      border: 2px solid rgba(250, 204, 21, 0.5);
+      color: #facc15;
+    }
+
     /* Focus and accessibility */
     a.button:focus-visible, button:focus-visible { outline: 3px solid #f59e0b; outline-offset: 3px; }
 
@@ -366,6 +492,7 @@
         <div class="links">
           <a href="#outcomes">Outcomes</a>
           <a href="#model">Model</a>
+          <a href="#leadership">Leadership Tier</a>
           <a href="#sectors">Sectors</a>
           <a href="#blueprint">Blueprint</a>
           <a href="#how-it-works">How it Works</a>
@@ -472,6 +599,113 @@
         Aggregated across 100 specialists per sector, this model produces more than <strong>65M USD</strong> in structured certification 
         capacity deployment per industry – scaled over 20 sectors in the BTH Workforce Development Blueprint.
       </p>
+    </section>
+
+    <section id="leadership" class="leadership-tier">
+      <div class="inner">
+        <div class="badge">Leadership Tier • 20 Positions Globally</div>
+        <h2>Sector Workforce Director Program</h2>
+        <p class="lead">
+          Lead the deployment of certified professional capacity at scale. Build, manage, and scale workforce infrastructure across an entire industry sector as part of the 2026 Workforce Development Blueprint.
+        </p>
+        <p style="font-size:1.05rem; color:#facc15; font-weight:600; margin-bottom:2rem;">
+          ⚠️ This is a leadership role, not a sales position.
+        </p>
+
+        <div class="stats">
+          <div class="stat">
+            <div class="stat-value">10,660 USD</div>
+            <div class="stat-label">Monthly Leadership Remuneration</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value">26,835 USD</div>
+            <div class="stat-label">Performance Deployment Incentives</div>
+          </div>
+          <div class="stat">
+            <div class="stat-value">100</div>
+            <div class="stat-label">Workforce Deployment Specialists Under Your Leadership</div>
+          </div>
+        </div>
+
+        <h3 style="color:#ffffff; font-size:1.4rem; margin:2rem 0 1rem;">Leadership Mandate</h3>
+        <p style="color:#cbd5e1; margin-bottom:1.5rem;">
+          As a Sector Workforce Director, you are responsible for building, structuring, and leading a team of 100 Workforce Deployment Specialists. You define and execute sector-specific workforce deployment strategies, oversee Level 1–5 professional capacity pathways, and establish enterprise-grade workforce partnerships.
+        </p>
+
+        <div class="benefits">
+          <div class="benefit-card">
+            <h3>👥 Team Leadership</h3>
+            <p>Recruit, train, and manage 100 Workforce Deployment Specialists in your assigned sector</p>
+          </div>
+          <div class="benefit-card">
+            <h3>🌍 Strategic Authority</h3>
+            <p>Define sector-level capacity deployment frameworks and enterprise partnership strategies</p>
+          </div>
+          <div class="benefit-card">
+            <h3>📊 Performance Oversight</h3>
+            <p>Ensure team KPIs align with the 2,000-person global deployment target and sector benchmarks</p>
+          </div>
+          <div class="benefit-card">
+            <h3>🚀 Executive Positioning</h3>
+            <p>Long-term trajectory toward VP Workforce Development or Chief Capacity Officer roles</p>
+          </div>
+        </div>
+
+        <div class="requirements">
+          <h3>Who This Is For</h3>
+          <p style="color:#cbd5e1; margin-bottom:1rem;">
+            This is for <strong style="color:#facc15;">builders, strategists, and systems thinkers</strong> who see workforce development as infrastructure, not transactions.
+          </p>
+          <ul>
+            <li>5+ years of professional or leadership experience</li>
+            <li>Deep sector expertise (IT, Healthcare, Logistics, etc.)</li>
+            <li>Proven team-building and communication skills</li>
+            <li>Think in systems, infrastructure, and long-term impact</li>
+            <li>Can operate at enterprise and executive level</li>
+            <li>Committed to a minimum 3-year leadership journey</li>
+          </ul>
+          <div class="not-for">
+            <p>Not suitable for commission-seekers, opportunists, or short-term hustlers</p>
+          </div>
+        </div>
+
+        <h3 style="color:#ffffff; font-size:1.4rem; margin:2rem 0 1rem;">Leadership Remuneration Model</h3>
+        <p style="color:#cbd5e1; margin-bottom:1.5rem;">
+          Leadership compensation is structured around three pillars:
+        </p>
+        <div style="background:rgba(255,255,255,0.05); border-radius:1rem; padding:1.5rem; margin-bottom:2rem;">
+          <ol style="color:#e2e8f0; line-height:1.8; padding-left:1.5rem;">
+            <li><strong style="color:#facc15;">Monthly Leadership Remuneration:</strong> 10,660 USD/month (10% of team capacity deployment revenue: 100 specialists × 1,066 USD × 10%)</li>
+            <li><strong style="color:#facc15;">Performance Deployment Incentives:</strong> Up to 26,835 USD earned through sector performance and leadership execution across deployment cycles</li>
+            <li><strong style="color:#facc15;">Long-Term Portfolio Equity:</strong> Positioning and authority in a multi-million USD capacity deployment system</li>
+          </ol>
+          <p style="color:#facc15; font-weight:600; margin-top:1rem; font-size:0.95rem;">
+            ⚡ This is not a transactional model. It is a leadership infrastructure role.
+          </p>
+        </div>
+
+        <div style="background:rgba(250,204,21,0.1); border:1px solid rgba(250,204,21,0.3); border-radius:1rem; padding:1.5rem; margin-bottom:2rem;">
+          <h3 style="color:#facc15; font-size:1.1rem; margin-bottom:0.75rem;">Leadership Program Investment</h3>
+          <p style="color:#e2e8f0; margin-bottom:0.5rem;">
+            <strong style="font-size:1.8rem; display:block; margin-bottom:0.25rem;">2,665 USD</strong>
+            One-time leadership program fee
+          </p>
+          <p style="color:#cbd5e1; font-size:0.9rem;">
+            Includes: Full leadership training, sector authority, CRM infrastructure, executive positioning within OEDP Work Network
+          </p>
+        </div>
+
+        <div class="cta-buttons">
+          <a href="apply-sales-specialist.html?tier=leadership&src=leadership-section" class="button" data-track-cta data-cta-location="leadership-section">
+            Apply for Leadership
+          </a>
+          <a href="#faq" class="button secondary">Learn More</a>
+        </div>
+
+        <p style="color:#94a3b8; font-size:0.85rem; margin-top:1.5rem;">
+          ⚠️ Limited to 20 Sector Workforce Director positions globally (1 per sector). Applications reviewed within 48 hours.
+        </p>
+      </div>
     </section>
 
     <section id="sectors">
