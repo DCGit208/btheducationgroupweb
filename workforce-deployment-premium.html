@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BTH Education Group | Workforce Deployment Program</title>
+  <meta name="description" content="Join the BTH Education Group Workforce Deployment Program: 2,000-person capacity deployment system building outcome-priced professional pathways across 20 industry sectors." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    :root {
+      --primary: #0066ff;
+      --secondary: #ff6b00;
+      --accent: #ffd700;
+      --dark: #0a0e27;
+      --light: #f8f9fa;
+    }
+    
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      color: #1a1a1a;
+      background: var(--light);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    
+    /* === HERO SECTION WITH ANIMATED SVG GRAPHICS === */
+    .hero-premium {
+      position: relative;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #0a0e27 0%, #1a1f4d 50%, #2a2f5d 100%);
+      color: white;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      padding: 4rem 2rem;
+    }
+    
+    /* Animated background particles */
+    .hero-particles {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+    }
+    
+    .particle {
+      position: absolute;
+      background: radial-gradient(circle, rgba(255,255,255,0.8), transparent);
+      border-radius: 50%;
+      animation: float 20s infinite ease-in-out;
+    }
+    
+    @keyframes float {
+      0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.3; }
+      25% { transform: translate(30px, -30px) scale(1.1); opacity: 0.6; }
+      50% { transform: translate(-20px, 20px) scale(0.9); opacity: 0.4; }
+      75% { transform: translate(40px, 10px) scale(1.05); opacity: 0.5; }
+    }
+    
+    /* Hero SVG illustration */
+    .hero-graphic {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 50%;
+      max-width: 600px;
+      opacity: 0.15;
+      z-index: 1;
+    }
+    
+    .hero-content-premium {
+      position: relative;
+      z-index: 10;
+      max-width: 1400px;
+      margin: 0 auto;
+      width: 100%;
+    }
+    
+    .authority-badges {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+      animation: fadeInUp 0.8s ease-out;
+    }
+    
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .badge {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 0.5rem 1.2rem;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      transition: all 0.3s;
+    }
+    
+    .badge:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: translateY(-2px);
+    }
+    
+    .hero-title {
+      font-size: clamp(2.5rem, 6vw, 5rem);
+      font-weight: 900;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+      background: linear-gradient(135deg, #fff 0%, #a8c0ff 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: fadeInUp 0.8s ease-out 0.2s both;
+    }
+    
+    .hero-subtitle {
+      font-size: 1.3rem;
+      max-width: 700px;
+      margin-bottom: 2rem;
+      opacity: 0.9;
+      animation: fadeInUp 0.8s ease-out 0.4s both;
+    }
+    
+    .hero-stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      margin: 3rem 0;
+      animation: fadeInUp 0.8s ease-out 0.6s both;
+    }
+    
+    .stat-card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 2rem;
+      border-radius: 20px;
+      text-align: center;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .stat-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+      transition: left 0.6s;
+    }
+    
+    .stat-card:hover::before {
+      left: 100%;
+    }
+    
+    .stat-card:hover {
+      transform: translateY(-10px);
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.3);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    }
+    
+    .stat-number {
+      font-size: 3rem;
+      font-weight: 900;
+      background: linear-gradient(135deg, var(--accent), var(--secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+    
+    .stat-label {
+      font-size: 0.9rem;
+      opacity: 0.8;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+    
+    .cta-group {
+      display: flex;
+      gap: 1rem;
+      margin-top: 2rem;
+      animation: fadeInUp 0.8s ease-out 0.8s both;
+    }
+    
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      padding: 1.2rem 3rem;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.3s;
+      border: none;
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .btn-primary::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.3);
+      transform: translate(-50%, -50%);
+      transition: width 0.6s, height 0.6s;
+    }
+    
+    .btn-primary:hover::before {
+      width: 300px;
+      height: 300px;
+    }
+    
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 15px 40px rgba(0, 102, 255, 0.4);
+    }
+    
+    .btn-secondary {
+      background: transparent;
+      color: white;
+      padding: 1.2rem 3rem;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      text-decoration: none;
+      display: inline-block;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      transition: all 0.3s;
+    }
+    
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: white;
+      transform: translateY(-3px);
+    }
+    
+    /* === INTERACTIVE 5-LEVEL VISUALIZATION === */
+    .model-section {
+      padding: 6rem 2rem;
+      background: white;
+      position: relative;
+    }
+    
+    .section-header {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 4rem;
+    }
+    
+    .section-title {
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      font-weight: 900;
+      margin-bottom: 1rem;
+      background: linear-gradient(135deg, var(--dark), var(--primary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .section-subtitle {
+      font-size: 1.2rem;
+      color: #666;
+      line-height: 1.8;
+    }
+    
+    /* Interactive level cards with SVG graphics */
+    .levels-interactive {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      gap: 2rem;
+    }
+    
+    .level-card {
+      background: linear-gradient(135deg, #f8f9fa 0%, #fff 100%);
+      border-radius: 24px;
+      padding: 2.5rem;
+      border: 2px solid transparent;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+    
+    .level-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent));
+      transform: scaleX(0);
+      transition: transform 0.4s;
+    }
+    
+    .level-card:hover::before {
+      transform: scaleX(1);
+    }
+    
+    .level-card:hover {
+      transform: translateX(10px);
+      border-color: var(--primary);
+      box-shadow: -10px 20px 60px rgba(0, 102, 255, 0.15);
+    }
+    
+    .level-header {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .level-icon {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      font-weight: 900;
+      color: white;
+      flex-shrink: 0;
+    }
+    
+    .level-info {
+      flex: 1;
+    }
+    
+    .level-title {
+      font-size: 1.8rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+    }
+    
+    .level-meta {
+      display: flex;
+      gap: 2rem;
+      font-size: 0.95rem;
+      color: #666;
+    }
+    
+    .level-price {
+      font-size: 2rem;
+      font-weight: 900;
+      color: var(--secondary);
+    }
+    
+    .level-description {
+      color: #555;
+      line-height: 1.8;
+    }
+    
+    /* === LEADERSHIP SECTION WITH 3D CARDS === */
+    .leadership-premium {
+      padding: 6rem 2rem;
+      background: linear-gradient(135deg, #0a0e27 0%, #1a1f4d 100%);
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .leadership-bg-graphic {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      opacity: 0.05;
+      pointer-events: none;
+    }
+    
+    .leadership-content {
+      max-width: 1400px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 10;
+    }
+    
+    .leadership-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: rgba(255, 215, 0, 0.2);
+      border: 2px solid var(--accent);
+      padding: 0.75rem 1.5rem;
+      border-radius: 50px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 2rem;
+      animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.8; transform: scale(1.05); }
+    }
+    
+    .leadership-cards-3d {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin: 4rem 0;
+      perspective: 1000px;
+    }
+    
+    .card-3d {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 24px;
+      padding: 2.5rem;
+      transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+      transform-style: preserve-3d;
+    }
+    
+    .card-3d:hover {
+      transform: rotateY(10deg) rotateX(5deg) translateY(-20px);
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+      border-color: rgba(255, 255, 255, 0.3);
+    }
+    
+    .card-icon {
+      font-size: 3rem;
+      margin-bottom: 1.5rem;
+      display: block;
+    }
+    
+    .card-title {
+      font-size: 1.5rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+      color: var(--accent);
+    }
+    
+    .card-description {
+      opacity: 0.9;
+      line-height: 1.8;
+    }
+    
+    /* === ANIMATED DEPLOYMENT FLOW === */
+    .deployment-flow {
+      padding: 6rem 2rem;
+      background: #f8f9fa;
+    }
+    
+    .flow-diagram {
+      max-width: 1200px;
+      margin: 4rem auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+    
+    .flow-step {
+      flex: 1;
+      min-width: 200px;
+      text-align: center;
+      position: relative;
+    }
+    
+    .flow-step::after {
+      content: '→';
+      position: absolute;
+      right: -2rem;
+      top: 30%;
+      font-size: 2rem;
+      color: var(--primary);
+      font-weight: 900;
+    }
+    
+    .flow-step:last-child::after {
+      display: none;
+    }
+    
+    .flow-circle {
+      width: 100px;
+      height: 100px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem;
+      font-size: 2.5rem;
+      color: white;
+      box-shadow: 0 10px 30px rgba(0, 102, 255, 0.3);
+      transition: all 0.4s;
+    }
+    
+    .flow-step:hover .flow-circle {
+      transform: scale(1.15) rotate(360deg);
+    }
+    
+    .flow-label {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    
+    .flow-description {
+      font-size: 0.9rem;
+      color: #666;
+    }
+    
+    /* === SECTORS GRID WITH ICONS === */
+    .sectors-section {
+      padding: 6rem 2rem;
+      background: white;
+    }
+    
+    .sectors-grid {
+      max-width: 1400px;
+      margin: 4rem auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+    
+    .sector-card {
+      background: linear-gradient(135deg, #f8f9fa, #fff);
+      border-radius: 16px;
+      padding: 2rem;
+      border: 2px solid #e9ecef;
+      transition: all 0.3s;
+      cursor: pointer;
+    }
+    
+    .sector-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--primary);
+      box-shadow: 0 10px 30px rgba(0, 102, 255, 0.1);
+    }
+    
+    .sector-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      display: block;
+    }
+    
+    .sector-name {
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--dark);
+    }
+    
+    /* === RESPONSIVE === */
+    @media (max-width: 768px) {
+      .hero-premium {
+        padding: 3rem 1.5rem;
+      }
+      
+      .hero-title {
+        font-size: 2rem;
+      }
+      
+      .hero-subtitle {
+        font-size: 1.1rem;
+      }
+      
+      .hero-stats-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+      
+      .cta-group {
+        flex-direction: column;
+      }
+      
+      .level-header {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .leadership-cards-3d {
+        grid-template-columns: 1fr;
+      }
+      
+      .flow-diagram {
+        flex-direction: column;
+      }
+      
+      .flow-step::after {
+        content: '↓';
+        right: auto;
+        top: auto;
+        bottom: -2rem;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  </style>
+</head>
+<body>
+  
+  <!-- HERO SECTION -->
+  <section class="hero-premium">
+    <!-- Animated Particles -->
+    <div class="hero-particles" id="particles"></div>
+    
+    <!-- Hero SVG Graphic -->
+    <svg class="hero-graphic" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:rgb(0,102,255);stop-opacity:0.8" />
+          <stop offset="100%" style="stop-color:rgb(255,107,0);stop-opacity:0.8" />
+        </linearGradient>
+      </defs>
+      <circle cx="250" cy="250" r="200" fill="url(#grad1)">
+        <animate attributeName="r" values="200;220;200" dur="4s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="250" cy="250" r="150" fill="none" stroke="url(#grad1)" stroke-width="3">
+        <animate attributeName="r" values="150;170;150" dur="3s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="250" cy="250" r="100" fill="none" stroke="url(#grad1)" stroke-width="2">
+        <animate attributeName="r" values="100;120;100" dur="2s" repeatCount="indefinite"/>
+      </circle>
+    </svg>
+    
+    <div class="hero-content-premium">
+      <div class="authority-badges">
+        <div class="badge"><i class="fas fa-certificate"></i> ISO 17024</div>
+        <div class="badge"><i class="fas fa-globe"></i> 120+ Countries</div>
+        <div class="badge"><i class="fas fa-users"></i> 5.8M+ Certified</div>
+      </div>
+      
+      <h1 class="hero-title">Build Professional Capacity at Scale</h1>
+      <p class="hero-subtitle">
+        Join 2,000 Workforce Deployment Specialists building certified career pathways across 20 global sectors. Structured remuneration. Real outcomes. Enterprise-grade infrastructure.
+      </p>
+      
+      <div class="hero-stats-grid">
+        <div class="stat-card">
+          <span class="stat-number" data-target="2000">0</span>
+          <span class="stat-label">Deployment Specialists</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">$1,066</span>
+          <span class="stat-label">Monthly Remuneration</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">20</span>
+          <span class="stat-label">Industry Sectors</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">$8,100</span>
+          <span class="stat-label">Family Scholarship</span>
+        </div>
+      </div>
+      
+      <div class="cta-group">
+        <a href="apply-sales-specialist.html" class="btn-primary">Apply Now</a>
+        <a href="#model" class="btn-secondary">See the Model</a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- 5-LEVEL MODEL SECTION -->
+  <section class="model-section" id="model">
+    <div class="section-header">
+      <h2 class="section-title">The 5-Level Deployment Model</h2>
+      <p class="section-subtitle">
+        Deploy 50 certification units across five professional development levels. Each pathway is outcome-priced and enterprise-backed.
+      </p>
+    </div>
+    
+    <div class="levels-interactive">
+      <div class="level-card">
+        <div class="level-header">
+          <div class="level-icon">1</div>
+          <div class="level-info">
+            <h3 class="level-title">Level 1: Foundation</h3>
+            <div class="level-meta">
+              <span><i class="fas fa-layer-group"></i> 20 Units</span>
+              <span class="level-price">$8,100</span>
+            </div>
+          </div>
+        </div>
+        <p class="level-description">
+          Technical foundations, entry-level certification, and job readiness. This level builds the base competency for professional deployment.
+        </p>
+      </div>
+      
+      <div class="level-card">
+        <div class="level-header">
+          <div class="level-icon" style="background: linear-gradient(135deg, #00c9ff, #92fe9d);">2</div>
+          <div class="level-info">
+            <h3 class="level-title">Level 2: Associate</h3>
+            <div class="level-meta">
+              <span><i class="fas fa-layer-group"></i> 15 Units</span>
+              <span class="level-price">$12,000</span>
+            </div>
+          </div>
+        </div>
+        <p class="level-description">
+          Associate-level specialization and productivity optimization. Professionals ready for operational roles.
+        </p>
+      </div>
+      
+      <div class="level-card">
+        <div class="level-header">
+          <div class="level-icon" style="background: linear-gradient(135deg, #f093fb, #f5576c);">3</div>
+          <div class="level-info">
+            <h3 class="level-title">Level 3: Advanced</h3>
+            <div class="level-meta">
+              <span><i class="fas fa-layer-group"></i> 5 Units</span>
+              <span class="level-price">$16,000</span>
+            </div>
+          </div>
+        </div>
+        <p class="level-description">
+          Advanced professional capacity, team leads, and project coordination expertise.
+        </p>
+      </div>
+      
+      <div class="level-card">
+        <div class="level-header">
+          <div class="level-icon" style="background: linear-gradient(135deg, #fa709a, #fee140);">4</div>
+          <div class="level-info">
+            <h3 class="level-title">Level 4: Management</h3>
+            <div class="level-meta">
+              <span><i class="fas fa-layer-group"></i> 5 Units</span>
+              <span class="level-price">$20,000</span>
+            </div>
+          </div>
+        </div>
+        <p class="level-description">
+          Management and strategic leadership within business units. Director-level positioning.
+        </p>
+      </div>
+      
+      <div class="level-card">
+        <div class="level-header">
+          <div class="level-icon" style="background: linear-gradient(135deg, #a8edea, #fed6e3);">5</div>
+          <div class="level-info">
+            <h3 class="level-title">Level 5: Executive</h3>
+            <div class="level-meta">
+              <span><i class="fas fa-layer-group"></i> 5 Units</span>
+              <span class="level-price">$26,865</span>
+            </div>
+          </div>
+        </div>
+        <p class="level-description">
+          C-suite leadership pathways: COO, CFO, CTO, CSO, CMO. Executive-level strategic authority.
+        </p>
+      </div>
+    </div>
+    
+    <div style="text-align: center; margin-top: 3rem; padding: 2rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 24px; color: white;">
+      <h3 style="font-size: 1.8rem; margin-bottom: 1rem;">Total Capacity Deployment</h3>
+      <p style="font-size: 3rem; font-weight: 900; margin: 0;">$656,325</p>
+      <p style="opacity: 0.9; margin-top: 0.5rem;">per Workforce Deployment Specialist</p>
+    </div>
+  </section>
+  
+  <!-- LEADERSHIP SECTION -->
+  <section class="leadership-premium" id="leadership">
+    <!-- Background graphic -->
+    <svg class="leadership-bg-graphic" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,500 Q250,300 500,500 T1000,500" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2"/>
+      <path d="M0,400 Q250,200 500,400 T1000,400" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2"/>
+      <path d="M0,600 Q250,400 500,600 T1000,600" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2"/>
+    </svg>
+    
+    <div class="leadership-content">
+      <div class="leadership-badge">
+        <i class="fas fa-crown"></i>
+        <span>Leadership Tier • 20 Positions Globally</span>
+      </div>
+      
+      <h2 class="section-title" style="color: white;">Sector Workforce Director</h2>
+      <p class="section-subtitle" style="color: rgba(255,255,255,0.9); max-width: 700px;">
+        Command a 100-person deployment force. Control $65M in certification infrastructure. Build professional capacity for an entire industry sector.
+      </p>
+      
+      <div class="leadership-cards-3d">
+        <div class="card-3d">
+          <span class="card-icon">⚡</span>
+          <h3 class="card-title">Deployment Force</h3>
+          <p class="card-description">
+            Lead 100 Workforce Deployment Specialists deploying 5,000 certification units annually—more than most companies build in a decade.
+          </p>
+        </div>
+        
+        <div class="card-3d">
+          <span class="card-icon">🏛️</span>
+          <h3 class="card-title">Enterprise Authority</h3>
+          <p class="card-description">
+            Direct C-suite negotiation with Fortune 1000 companies. Define sector-level workforce strategies with full autonomy.
+          </p>
+        </div>
+        
+        <div class="card-3d">
+          <span class="card-icon">💰</span>
+          <h3 class="card-title">$154,755 Year 1</h3>
+          <p class="card-description">
+            $10,660/month leadership remuneration + $26,835 performance incentives + strategic equity in $65M infrastructure.
+          </p>
+        </div>
+        
+        <div class="card-3d">
+          <span class="card-icon">🎯</span>
+          <h3 class="card-title">C-Level Trajectory</h3>
+          <p class="card-description">
+            5-year path to Chief Capacity Officer, VP Workforce Development, or sector-level executive authority.
+          </p>
+        </div>
+      </div>
+      
+      <div style="text-align: center; margin-top: 3rem;">
+        <a href="apply-sales-specialist.html?tier=leadership" class="btn-primary">Apply for Leadership Position</a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- DEPLOYMENT FLOW -->
+  <section class="deployment-flow">
+    <div class="section-header">
+      <h2 class="section-title">How It Works</h2>
+      <p class="section-subtitle">
+        From application to deployment in four structured phases. Every step is designed for success.
+      </p>
+    </div>
+    
+    <div class="flow-diagram">
+      <div class="flow-step">
+        <div class="flow-circle">📝</div>
+        <div class="flow-label">Apply</div>
+        <div class="flow-description">Submit application & screening</div>
+      </div>
+      
+      <div class="flow-step">
+        <div class="flow-circle">💳</div>
+        <div class="flow-label">Invest</div>
+        <div class="flow-description">$2,665 program fee</div>
+      </div>
+      
+      <div class="flow-step">
+        <div class="flow-circle">🎓</div>
+        <div class="flow-label">Train</div>
+        <div class="flow-description">Certification & deployment training</div>
+      </div>
+      
+      <div class="flow-step">
+        <div class="flow-circle">🚀</div>
+        <div class="flow-label">Deploy</div>
+        <div class="flow-description">$1,066/mo for 3 years</div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- SECTORS GRID -->
+  <section class="sectors-section">
+    <div class="section-header">
+      <h2 class="section-title">20 Industry Sectors</h2>
+      <p class="section-subtitle">
+        Deploy professional capacity across the full spectrum of global industries.
+      </p>
+    </div>
+    
+    <div class="sectors-grid">
+      <div class="sector-card">
+        <span class="sector-icon">💻</span>
+        <div class="sector-name">IT & Cybersecurity</div>
+      </div>
+      <div class="sector-card">
+        <span class="sector-icon">🏥</span>
+        <div class="sector-name">Healthcare</div>
+      </div>
+      <div class="sector-card">
+        <span class="sector-icon">💰</span>
+        <div class="sector-name">Finance & Accounting</div>
+      </div>
+      <div class="sector-card">
+        <span class="sector-icon">🏭</span>
+        <div class="sector-name">Manufacturing</div>
+      </div>
+      <div class="sector-card">
+        <span class="sector-icon">📱</span>
+        <div class="sector-name">Telecommunications</div>
+      </div>
+      <div class="sector-card">
+        <span class="sector-icon">🏗️</span>
+        <div class="sector-name">Construction</div>
+      </div>
+      <div class="sector-card">
+        <span class="sector-icon">⚡</span>
+        <div class="sector-name">Energy & Renewables</div>
+      </div>
+      <div class="sector-card">
+        <span class="sector-icon">🌾</span>
+        <div class="sector-name">Agricultural Tech</div>
+      </div>
+      <div class="sector-card">
+        <span class="sector-icon">🎨</span>
+        <div class="sector-name">Creative Arts</div>
+      </div>
+      <div class="sector-card">
+        <span class="sector-icon">🚚</span>
+        <div class="sector-name">Logistics</div>
+      </div>
+      <div class="sector-card">
+        <span class="sector-icon">🎓</span>
+        <div class="sector-name">Education Tech</div>
+      </div>
+      <div class="sector-card">
+        <span class="sector-icon">🏛️</span>
+        <div class="sector-name">Government & Civic</div>
+      </div>
+      <div class="sector-card">
+        <span class="sector-icon">🔬</span>
+        <div class="sector-name">Research & Development</div>
+      </div>
+      <div class="sector-card">
+        <span class="sector-icon">🧬</span>
+        <div class="sector-name">Biotech & Life Sciences</div>
+      </div>
+      <div class="sector-card">
+        <span class="sector-icon">✈️</span>
+        <div class="sector-name">Aerospace & Defense</div>
+      </div>
+      <div class="sector-card">
+        <span class="sector-icon">🎬</span>
+        <div class="sector-name">Media & Content</div>
+      </div>
+      <div class="sector-card">
+        <span class="sector-icon">🚗</span>
+        <div class="sector-name">Automotive</div>
+      </div>
+      <div class="sector-card">
+        <span class="sector-icon">🛡️</span>
+        <div class="sector-name">Public Safety</div>
+      </div>
+      <div class="sector-card">
+        <span class="sector-icon">💼</span>
+        <div class="sector-name">Business Management</div>
+      </div>
+      <div class="sector-card">
+        <span class="sector-icon">🎨</span>
+        <div class="sector-name">Digital Design</div>
+      </div>
+    </div>
+  </section>
+  
+  <script>
+    // Animated particles
+    const particlesContainer = document.getElementById('particles');
+    for (let i = 0; i < 50; i++) {
+      const particle = document.createElement('div');
+      particle.className = 'particle';
+      particle.style.width = Math.random() * 4 + 2 + 'px';
+      particle.style.height = particle.style.width;
+      particle.style.left = Math.random() * 100 + '%';
+      particle.style.top = Math.random() * 100 + '%';
+      particle.style.animationDelay = Math.random() * 20 + 's';
+      particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
+      particlesContainer.appendChild(particle);
+    }
+    
+    // Animated counter
+    const counters = document.querySelectorAll('.stat-number[data-target]');
+    counters.forEach(counter => {
+      const target = +counter.getAttribute('data-target');
+      const increment = target / 100;
+      let count = 0;
+      
+      const updateCounter = () => {
+        if (count < target) {
+          count += increment;
+          counter.textContent = Math.ceil(count).toLocaleString();
+          setTimeout(updateCounter, 20);
+        } else {
+          counter.textContent = target.toLocaleString();
+        }
+      };
+      
+      // Start animation when element is visible
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            updateCounter();
+            observer.unobserve(entry.target);
+          }
+        });
+      });
+      
+      observer.observe(counter);
+    });
+    
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>

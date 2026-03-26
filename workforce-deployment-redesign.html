@@ -1,0 +1,1472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BTH Education Group | Workforce Deployment Program</title>
+  <meta name="description" content="Join the BTH Education Group Workforce Deployment Program: 2,000-person capacity deployment system building outcome-priced professional pathways across 20 industry sectors." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    :root {
+      --primary-blue: #0066FF;
+      --vibrant-orange: #FF6B00;
+      --gold: #FFD700;
+      --deep-blue: #003D99;
+      --light-gray: #F8F9FA;
+      --white: #FFFFFF;
+      --text-dark: #1A1A1A;
+      --text-gray: #6B7280;
+    }
+    
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      color: var(--text-dark);
+      background: var(--white);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    
+    /* === HERO SECTION === */
+    .hero-premium {
+      position: relative;
+      background: linear-gradient(135deg, #FFFFFF 0%, #F0F7FF 100%);
+      padding: 6rem 2rem 4rem;
+      overflow: hidden;
+    }
+    
+    /* Animated background pattern */
+    .hero-pattern {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 50%;
+      height: 100%;
+      opacity: 0.4;
+    }
+    
+    .hero-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 10;
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+    
+    .hero-content {
+      animation: fadeInUp 0.8s ease-out;
+    }
+    
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .hero-kicker {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--primary-blue), var(--deep-blue));
+      color: white;
+      padding: 0.5rem 1.5rem;
+      border-radius: 50px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 2rem;
+    }
+    
+    .hero-title {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 900;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+      background: linear-gradient(135deg, var(--text-dark) 0%, var(--primary-blue) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .hero-subtitle {
+      font-size: 1.1rem;
+      color: var(--text-gray);
+      line-height: 1.8;
+      margin-bottom: 2rem;
+      max-width: 650px;
+    }
+    
+    .hero-metrics {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      margin-bottom: 2.5rem;
+    }
+    
+    .metric-badge {
+      background: var(--white);
+      border: 2px solid #E5E7EB;
+      border-radius: 16px;
+      padding: 1rem 1.25rem;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .metric-badge:hover {
+      border-color: var(--primary-blue);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px rgba(0, 102, 255, 0.1);
+    }
+    
+    .metric-value {
+      font-size: 1.5rem;
+      font-weight: 900;
+      color: var(--primary-blue);
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+    
+    .metric-label {
+      font-size: 0.85rem;
+      color: var(--text-gray);
+      font-weight: 500;
+    }
+    
+    .cta-primary {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--primary-blue), var(--deep-blue));
+      color: white;
+      padding: 1.25rem 3rem;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: all 0.3s;
+      box-shadow: 0 8px 24px rgba(0, 102, 255, 0.25);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .cta-primary::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.3);
+      transform: translate(-50%, -50%);
+      transition: width 0.6s, height 0.6s;
+    }
+    
+    .cta-primary:hover::before {
+      width: 400px;
+      height: 400px;
+    }
+    
+    .cta-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 16px 40px rgba(0, 102, 255, 0.35);
+    }
+    
+    /* Hero Investment Card */
+    .investment-card {
+      background: var(--white);
+      border-radius: 24px;
+      padding: 2.5rem;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+      border: 1px solid #E5E7EB;
+      position: sticky;
+      top: 2rem;
+      animation: fadeInUp 0.8s ease-out 0.3s both;
+    }
+    
+    .card-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--gold), var(--vibrant-orange));
+      color: var(--text-dark);
+      padding: 0.4rem 1rem;
+      border-radius: 50px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 1.5rem;
+    }
+    
+    .card-title {
+      font-size: 1.1rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 1rem;
+      color: var(--primary-blue);
+    }
+    
+    .price-highlight {
+      font-size: 2.5rem;
+      font-weight: 900;
+      color: var(--text-dark);
+      margin: 1rem 0 0.5rem;
+    }
+    
+    .price-original {
+      font-size: 0.9rem;
+      color: var(--text-gray);
+      text-decoration: line-through;
+    }
+    
+    .outcomes-list {
+      list-style: none;
+      margin-top: 1.5rem;
+      padding-top: 1.5rem;
+      border-top: 2px solid #F3F4F6;
+    }
+    
+    .outcomes-list li {
+      padding: 0.75rem 0;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+    
+    /* === STICKY SUBNAV === */
+    .subnav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid #E5E7EB;
+      padding: 1rem 2rem;
+    }
+    
+    .subnav-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 2rem;
+    }
+    
+    .subnav-links {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+    
+    .subnav-link {
+      color: var(--text-gray);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      transition: all 0.2s;
+    }
+    
+    .subnav-link:hover, .subnav-link.active {
+      background: var(--light-gray);
+      color: var(--primary-blue);
+    }
+    
+    /* === CONTENT SECTIONS === */
+    .content-section {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 5rem 2rem;
+    }
+    
+    .section-header {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto 4rem;
+    }
+    
+    .section-title {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 900;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+    
+    .section-lead {
+      font-size: 1.1rem;
+      color: var(--text-gray);
+      line-height: 1.8;
+    }
+    
+    /* === OUTCOMES CARDS === */
+    .outcomes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+    
+    .outcome-card {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 2.5rem;
+      border: 2px solid #E5E7EB;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .outcome-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 0;
+      background: linear-gradient(180deg, var(--primary-blue), var(--vibrant-orange));
+      transition: height 0.3s;
+    }
+    
+    .outcome-card:hover::before {
+      height: 100%;
+    }
+    
+    .outcome-card:hover {
+      transform: translateY(-8px);
+      border-color: var(--primary-blue);
+      box-shadow: 0 16px 48px rgba(0, 102, 255, 0.12);
+    }
+    
+    .outcome-card h3 {
+      font-size: 1.4rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+      color: var(--text-dark);
+    }
+    
+    .outcome-card p {
+      color: var(--text-gray);
+      line-height: 1.8;
+    }
+    
+    .highlight-banner {
+      background: linear-gradient(135deg, var(--text-dark), var(--deep-blue));
+      color: white;
+      border-radius: 20px;
+      padding: 3rem;
+      text-align: center;
+    }
+    
+    .highlight-banner h3 {
+      font-size: 1.8rem;
+      font-weight: 900;
+      margin-bottom: 1rem;
+    }
+    
+    .highlight-banner p {
+      font-size: 1.1rem;
+      opacity: 0.95;
+      line-height: 1.8;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    
+    /* === 5-LEVEL MODEL WITH SVG === */
+    .model-section {
+      background: var(--light-gray);
+    }
+    
+    .levels-visual {
+      background: var(--white);
+      border-radius: 24px;
+      padding: 3rem;
+      box-shadow: 0 16px 48px rgba(0, 0, 0, 0.06);
+      margin-bottom: 2rem;
+    }
+    
+    .level-row {
+      display: grid;
+      grid-template-columns: 80px 120px 150px 1fr;
+      gap: 2rem;
+      align-items: center;
+      padding: 2rem 0;
+      border-bottom: 2px solid #F3F4F6;
+      transition: all 0.3s;
+    }
+    
+    .level-row:last-child {
+      border-bottom: none;
+    }
+    
+    .level-row:hover {
+      background: #F9FAFB;
+      padding-left: 1rem;
+      border-radius: 12px;
+    }
+    
+    .level-number {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(135deg, var(--primary-blue), var(--vibrant-orange));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      font-weight: 900;
+      color: white;
+    }
+    
+    .level-units {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text-gray);
+    }
+    
+    .level-price {
+      font-size: 1.8rem;
+      font-weight: 900;
+      color: var(--vibrant-orange);
+    }
+    
+    .level-description {
+      font-size: 0.95rem;
+      color: var(--text-gray);
+      line-height: 1.6;
+    }
+    
+    .total-banner {
+      background: linear-gradient(135deg, var(--gold), var(--vibrant-orange));
+      color: var(--text-dark);
+      border-radius: 20px;
+      padding: 2.5rem;
+      text-align: center;
+    }
+    
+    .total-banner h3 {
+      font-size: 1.5rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+    
+    .total-value {
+      font-size: 3.5rem;
+      font-weight: 900;
+      margin: 0.5rem 0;
+    }
+    
+    .total-label {
+      font-size: 1.1rem;
+      font-weight: 600;
+      opacity: 0.9;
+    }
+    
+    /* === LEADERSHIP SECTION === */
+    .leadership-section {
+      background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .leadership-pattern {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 40%;
+      height: 100%;
+      opacity: 0.1;
+    }
+    
+    .leadership-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 10;
+    }
+    
+    .leadership-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: var(--white);
+      border: 3px solid var(--gold);
+      padding: 0.75rem 1.5rem;
+      border-radius: 50px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 2rem;
+      box-shadow: 0 8px 24px rgba(255, 193, 7, 0.25);
+    }
+    
+    .leadership-stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin: 3rem 0;
+    }
+    
+    .stat-card-premium {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 2.5rem;
+      text-align: center;
+      border: 2px solid var(--gold);
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s;
+    }
+    
+    .stat-card-premium:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+    }
+    
+    .stat-value-large {
+      font-size: 3rem;
+      font-weight: 900;
+      color: var(--vibrant-orange);
+      margin-bottom: 0.5rem;
+    }
+    
+    .stat-label-large {
+      font-size: 1rem;
+      color: var(--text-gray);
+      font-weight: 600;
+    }
+    
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin: 3rem 0;
+    }
+    
+    .benefit-card-premium {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 2rem;
+      border: 2px solid #E5E7EB;
+      transition: all 0.3s;
+    }
+    
+    .benefit-card-premium:hover {
+      border-color: var(--gold);
+      transform: translateY(-4px);
+    }
+    
+    .benefit-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      display: block;
+    }
+    
+    .benefit-title {
+      font-size: 1.3rem;
+      font-weight: 800;
+      margin-bottom: 0.75rem;
+      color: var(--text-dark);
+    }
+    
+    .requirements-box {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 3rem;
+      margin: 3rem 0;
+      border: 2px solid #E5E7EB;
+    }
+    
+    .requirements-box h3 {
+      font-size: 1.8rem;
+      font-weight: 900;
+      margin-bottom: 1.5rem;
+    }
+    
+    .requirements-list {
+      list-style: none;
+      margin-top: 1.5rem;
+    }
+    
+    .requirements-list li {
+      padding: 0.75rem 0 0.75rem 2.5rem;
+      position: relative;
+      font-size: 1rem;
+      line-height: 1.8;
+      color: var(--text-gray);
+    }
+    
+    .requirements-list li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--gold);
+      font-weight: 900;
+      font-size: 1.5rem;
+    }
+    
+    .not-for-box {
+      background: #FEE2E2;
+      border: 2px solid #EF4444;
+      border-radius: 16px;
+      padding: 1.5rem;
+      margin-top: 2rem;
+    }
+    
+    .not-for-box p {
+      color: #991B1B;
+      font-weight: 600;
+      margin: 0;
+    }
+    
+    .compensation-breakdown {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 3rem;
+      margin: 3rem 0;
+      border: 3px solid var(--gold);
+    }
+    
+    .comp-item {
+      padding: 2rem 0;
+      border-bottom: 2px solid #F3F4F6;
+    }
+    
+    .comp-item:last-child {
+      border-bottom: none;
+    }
+    
+    .comp-title {
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: var(--vibrant-orange);
+      margin-bottom: 0.5rem;
+    }
+    
+    .comp-description {
+      font-size: 1rem;
+      color: var(--text-gray);
+      line-height: 1.8;
+    }
+    
+    .year-total {
+      background: linear-gradient(135deg, var(--gold), var(--vibrant-orange));
+      padding: 2rem;
+      border-radius: 16px;
+      margin-top: 2rem;
+      text-align: center;
+    }
+    
+    .year-total-value {
+      font-size: 2.5rem;
+      font-weight: 900;
+      color: var(--text-dark);
+    }
+    
+    .cta-box-premium {
+      background: linear-gradient(135deg, var(--primary-blue), var(--deep-blue));
+      color: white;
+      border-radius: 24px;
+      padding: 3rem;
+      text-align: center;
+      margin: 3rem 0;
+    }
+    
+    .cta-box-premium h3 {
+      font-size: 2rem;
+      font-weight: 900;
+      margin-bottom: 1rem;
+    }
+    
+    .cta-deadline {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--gold);
+      margin-bottom: 1.5rem;
+    }
+    
+    /* === SECTORS GRID === */
+    .sectors-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    
+    .sector-category-card {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 2rem;
+      border: 2px solid #E5E7EB;
+      transition: all 0.3s;
+    }
+    
+    .sector-category-card:hover {
+      border-color: var(--primary-blue);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 36px rgba(0, 102, 255, 0.1);
+    }
+    
+    .sector-category-card h3 {
+      font-size: 1.3rem;
+      font-weight: 800;
+      margin-bottom: 1.5rem;
+      color: var(--text-dark);
+    }
+    
+    .sector-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+    
+    .sector-pill {
+      background: var(--light-gray);
+      padding: 0.5rem 1rem;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-gray);
+      transition: all 0.2s;
+    }
+    
+    .sector-pill:hover {
+      background: var(--primary-blue);
+      color: white;
+    }
+    
+    /* === STEPS === */
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+    
+    .step-card {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 2.5rem;
+      border: 2px solid #E5E7EB;
+      position: relative;
+      transition: all 0.3s;
+    }
+    
+    .step-card:hover {
+      border-color: var(--primary-blue);
+      transform: translateY(-4px);
+    }
+    
+    .step-number-badge {
+      position: absolute;
+      top: -1.5rem;
+      left: 2rem;
+      width: 50px;
+      height: 50px;
+      background: linear-gradient(135deg, var(--primary-blue), var(--vibrant-orange));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      font-weight: 900;
+      color: white;
+      box-shadow: 0 8px 24px rgba(0, 102, 255, 0.3);
+    }
+    
+    .step-card h3 {
+      font-size: 1.3rem;
+      font-weight: 800;
+      margin: 1rem 0 1rem;
+    }
+    
+    /* === FAQ === */
+    .faq-list {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    
+    .faq-item {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 2rem;
+      margin-bottom: 1rem;
+      border: 2px solid #E5E7EB;
+      transition: all 0.3s;
+    }
+    
+    .faq-item:hover {
+      border-color: var(--primary-blue);
+    }
+    
+    .faq-item summary {
+      font-size: 1.1rem;
+      font-weight: 700;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+    
+    .faq-item[open] summary {
+      margin-bottom: 1rem;
+      color: var(--primary-blue);
+    }
+    
+    .faq-item p {
+      color: var(--text-gray);
+      line-height: 1.8;
+    }
+    
+    /* === FOOTER === */
+    .footer-cta {
+      background: var(--text-dark);
+      color: white;
+      padding: 4rem 2rem;
+    }
+    
+    .footer-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 3rem;
+      flex-wrap: wrap;
+    }
+    
+    .footer-content h2 {
+      font-size: 2rem;
+      font-weight: 900;
+      margin-bottom: 0.75rem;
+    }
+    
+    .footer-contacts {
+      font-size: 0.95rem;
+      opacity: 0.9;
+      margin-top: 1rem;
+    }
+    
+    /* === RESPONSIVE === */
+    @media (max-width: 968px) {
+      .hero-container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+      
+      .investment-card {
+        position: relative;
+        top: 0;
+      }
+      
+      .level-row {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        text-align: center;
+      }
+      
+      .subnav-links {
+        gap: 0.5rem;
+      }
+      
+      .subnav-link {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.75rem;
+      }
+    }
+    
+    @media (max-width: 640px) {
+      .hero-metrics {
+        grid-template-columns: 1fr;
+      }
+      
+      .hero-premium {
+        padding: 3rem 1.5rem 2rem;
+      }
+      
+      .content-section {
+        padding: 3rem 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  
+  <!-- HERO SECTION -->
+  <section class="hero-premium">
+    <!-- Background SVG Pattern -->
+    <svg class="hero-pattern" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:#0066FF;stop-opacity:0.2" />
+          <stop offset="100%" style="stop-color:#FF6B00;stop-opacity:0.2" />
+        </linearGradient>
+      </defs>
+      <circle cx="100" cy="100" r="80" fill="url(#grad1)">
+        <animate attributeName="r" values="80;100;80" dur="8s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="350" cy="300" r="120" fill="url(#grad1)">
+        <animate attributeName="r" values="120;140;120" dur="10s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="450" cy="450" r="60" fill="url(#grad1)">
+        <animate attributeName="r" values="60;80;60" dur="6s" repeatCount="indefinite"/>
+      </circle>
+    </svg>
+    
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-kicker">BTH EDUCATION GROUP • OEDP WORK NETWORK</div>
+        <h1 class="hero-title">Build & Deploy Certified Professional Capacity Across 20 Global Sectors</h1>
+        <p class="hero-subtitle">
+          Participate in the <strong>2026 Workforce Development Blueprint</strong> – a 2,000-person workforce capacity deployment system aligned to real job outcomes across <strong>20 industry sectors</strong>. Structured remuneration of <strong>1,066 USD/month</strong>, <strong>8,100 USD family scholarship</strong>, and deploy outcome-priced Level 1–5 professional pathways trusted by global enterprises.
+        </p>
+        
+        <div class="hero-metrics">
+          <div class="metric-badge">
+            <span class="metric-value">2,000</span>
+            <span class="metric-label">Workforce Deployment Specialists</span>
+          </div>
+          <div class="metric-badge">
+            <span class="metric-value">20</span>
+            <span class="metric-label">Industry Sectors</span>
+          </div>
+          <div class="metric-badge">
+            <span class="metric-value">1,066 USD</span>
+            <span class="metric-label">/ month for 3 years</span>
+          </div>
+          <div class="metric-badge">
+            <span class="metric-value">8,100 USD</span>
+            <span class="metric-label">Family Scholarship</span>
+          </div>
+        </div>
+        
+        <a href="apply-sales-specialist.html?src=hero" class="cta-primary">Apply Now</a>
+      </div>
+      
+      <aside class="investment-card">
+        <div class="card-badge">Workforce Deployment Program • Cohort 2026</div>
+        <h3 class="card-title">Training Investment</h3>
+        <p style="font-size:0.95rem; color: var(--text-gray); margin-bottom: 0.5rem;">
+          One-time program fee for full training, certification & deployment:
+        </p>
+        <p class="price-highlight">Launch offer – 2,665 USD</p>
+        <p class="price-original">(Standard fee 4,425 USD)</p>
+        
+        <ul class="outcomes-list">
+          <li>💰 Monthly remuneration of <strong>1,066 USD</strong> for 3 years (based on performance).</li>
+          <li>🎓 <strong>8,100 USD</strong> fully funded Level 1 scholarship for a family member.</li>
+          <li>🌍 Certification exposure across <strong>25+ global industries</strong>.</li>
+          <li>🤝 Membership in the <strong>OEDP Work Network</strong> workforce ecosystem.</li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+  
+  <!-- STICKY SUBNAV -->
+  <nav class="subnav">
+    <div class="subnav-container">
+      <div class="subnav-links">
+        <a href="#outcomes" class="subnav-link">Outcomes</a>
+        <a href="#model" class="subnav-link">Model</a>
+        <a href="#leadership" class="subnav-link">Leadership Tier</a>
+        <a href="#sectors" class="subnav-link">Sectors</a>
+        <a href="#blueprint" class="subnav-link">Blueprint</a>
+        <a href="#how-it-works" class="subnav-link">How it Works</a>
+        <a href="#faq" class="subnav-link">FAQ</a>
+      </div>
+      <a href="apply-sales-specialist.html?src=subnav" class="cta-primary" style="padding: 0.75rem 2rem; font-size: 0.9rem;">Apply Now</a>
+    </div>
+  </nav>
+  
+  <!-- OUTCOMES SECTION -->
+  <section class="content-section" id="outcomes">
+    <div class="section-header">
+      <h2 class="section-title">What You Gain as a Workforce Deployment Specialist</h2>
+      <p class="section-lead">
+        The Workforce Deployment Program is more than a job – it is a complete professionalism, capacity monetization and leadership blueprint for the new global workforce. Every specialist is trained to operate at international standards and rewarded based on real outcomes.
+      </p>
+    </div>
+    
+    <div class="outcomes-grid">
+      <div class="outcome-card">
+        <h3>Structured Remuneration Pathway</h3>
+        <p>
+          Build a strong remuneration base with a structured plan of <strong>1,066 USD/month for 36 months</strong>, plus performance bonuses, deployment incentives and leadership advancement.
+        </p>
+      </div>
+      <div class="outcome-card">
+        <h3>Scholarship & Family Impact</h3>
+        <p>
+          Unlock a <strong>fully funded Level 1 certification</strong> (worth 8,100 USD) for a family member, multiplying the impact of your career across your household.
+        </p>
+      </div>
+      <div class="outcome-card">
+        <h3>Global Workforce Placement</h3>
+        <p>
+          Through the <strong>OEDP Work Network</strong>, Workforce Deployment Specialists are linked to companies that rely on BTH portfolios for workforce empowerment, operations and leadership development.
+        </p>
+      </div>
+    </div>
+    
+    <div class="highlight-banner">
+      <h3>Outcome-Based Pricing & Positioning</h3>
+      <p>
+        Our professional development certification pathways are priced by <strong>outcome and impact area</strong>. At Level 5, Chief Operating Officers (COO) roles range from <strong>350,000 – 800,000 USD/year</strong>. Each portfolio you deploy is a direct on-ramp to such roles – and your compensation reflects that value.
+      </p>
+    </div>
+  </section>
+  
+  <!-- 5-LEVEL MODEL -->
+  <section class="content-section model-section" id="model">
+    <div class="section-header">
+      <h2 class="section-title">The 5-Level Professional Capacity Deployment Model</h2>
+      <p class="section-lead">
+        Each Workforce Deployment Specialist is responsible for deploying <strong>50 certification units</strong> across 5 levels of professional development. This creates a predictable, high-value capacity deployment pipeline that is easy to explain to clients and enterprises.
+      </p>
+    </div>
+    
+    <div class="levels-visual">
+      <div class="level-row">
+        <div class="level-number">1</div>
+        <div class="level-units">20 Units</div>
+        <div class="level-price">$8,100</div>
+        <div class="level-description">Technical foundations, entry-level certification, job readiness.</div>
+      </div>
+      <div class="level-row">
+        <div class="level-number" style="background: linear-gradient(135deg, #00C9FF, #92FE9D);">2</div>
+        <div class="level-units">15 Units</div>
+        <div class="level-price">$12,000</div>
+        <div class="level-description">Associate-level specialization and productivity optimisation.</div>
+      </div>
+      <div class="level-row">
+        <div class="level-number" style="background: linear-gradient(135deg, #F093FB, #F5576C);">3</div>
+        <div class="level-units">5 Units</div>
+        <div class="level-price">$16,000</div>
+        <div class="level-description">Advanced professional, team leads and project coordination.</div>
+      </div>
+      <div class="level-row">
+        <div class="level-number" style="background: linear-gradient(135deg, #FA709A, #FEE140);">4</div>
+        <div class="level-units">5 Units</div>
+        <div class="level-price">$20,000</div>
+        <div class="level-description">Management & strategic leadership within business units.</div>
+      </div>
+      <div class="level-row">
+        <div class="level-number" style="background: linear-gradient(135deg, #A8EDEA, #FED6E3);">5</div>
+        <div class="level-units">5 Units</div>
+        <div class="level-price">$26,865</div>
+        <div class="level-description">C-suite leadership pathways: Operations (COO), Finance (CFO), Technology (CTO), Security (CSO), Marketing (CMO).</div>
+      </div>
+    </div>
+    
+    <div class="total-banner">
+      <h3>Total Capacity Deployment</h3>
+      <div class="total-value">$656,325</div>
+      <div class="total-label">per Workforce Deployment Specialist (50 Units across all levels)</div>
+    </div>
+    
+    <p style="font-size:0.95rem; color: var(--text-gray); margin-top: 2rem; text-align: center; max-width: 900px; margin-left: auto; margin-right: auto;">
+      Aggregated across 100 specialists per sector, this model produces more than <strong>65M USD</strong> in structured certification capacity deployment per industry – scaled over 20 sectors in the BTH Workforce Development Blueprint.
+    </p>
+  </section>
+  
+  <!-- LEADERSHIP SECTION -->
+  <section class="content-section leadership-section" id="leadership">
+    <!-- Background Pattern -->
+    <svg class="leadership-pattern" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="200" cy="200" r="150" fill="none" stroke="#FFD700" stroke-width="2" opacity="0.3">
+        <animate attributeName="r" values="150;170;150" dur="8s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="200" cy="200" r="100" fill="none" stroke="#FF6B00" stroke-width="2" opacity="0.3">
+        <animate attributeName="r" values="100;120;100" dur="6s" repeatCount="indefinite"/>
+      </circle>
+    </svg>
+    
+    <div class="leadership-container">
+      <div class="leadership-badge">
+        👑 Leadership Tier • 20 Positions Globally • Applications Close February 28, 2026
+      </div>
+      
+      <h2 class="section-title">Sector Workforce Director</h2>
+      <p class="section-lead">
+        Command a 100-person deployment force. Build professional capacity infrastructure for an entire industry sector. Control 65 million USD in structured certification pathways. This is not workforce management—it's sector-level strategic authority.
+      </p>
+      <p style="font-size: 1.2rem; font-weight: 700; color: var(--vibrant-orange); margin-top: 1.5rem; line-height: 1.6;">
+        ⚡ Only 20 people on earth will hold this position in 2026.<br>
+        ⚠️ This is not a sales job. This is infrastructure leadership.
+      </p>
+      
+      <div class="leadership-stats">
+        <div class="stat-card-premium">
+          <div class="stat-value-large">$10,660</div>
+          <div class="stat-label-large">Monthly Leadership Remuneration</div>
+        </div>
+        <div class="stat-card-premium">
+          <div class="stat-value-large">$26,835</div>
+          <div class="stat-label-large">Performance Deployment Incentives</div>
+        </div>
+        <div class="stat-card-premium">
+          <div class="stat-value-large">100</div>
+          <div class="stat-label-large">Workforce Deployment Specialists Under Your Leadership</div>
+        </div>
+      </div>
+      
+      <h3 style="font-size: 2rem; font-weight: 900; margin: 3rem 0 1.5rem;">Your Authority</h3>
+      <p style="font-size: 1.1rem; color: var(--text-gray); margin-bottom: 1.5rem;">
+        You're not managing people—you're building a deployment machine.
+      </p>
+      <ul style="list-style: none; font-size: 1.05rem; line-height: 2; color: var(--text-gray);">
+        <li>✓ Recruit, train, and deploy 100 Workforce Deployment Specialists in your sector</li>
+        <li>✓ Control 656,325 USD in capacity deployment per specialist (65M USD total sector throughput)</li>
+        <li>✓ Define Level 1–5 certification pathways for your industry (IT, Healthcare, Logistics, etc.)</li>
+        <li>✓ Negotiate enterprise workforce partnerships with Fortune 1000 companies</li>
+        <li>✓ Execute against the global 2,000-person deployment target with full strategic autonomy</li>
+      </ul>
+      
+      <div class="benefits-grid">
+        <div class="benefit-card-premium">
+          <span class="benefit-icon">⚡</span>
+          <h3 class="benefit-title">Deployment Force Command</h3>
+          <p style="color: var(--text-gray); line-height: 1.8;">
+            Lead 100 specialists deploying 5,000 certification units annually—more workforce capacity than most companies build in a decade
+          </p>
+        </div>
+        <div class="benefit-card-premium">
+          <span class="benefit-icon">🏛️</span>
+          <h3 class="benefit-title">Enterprise Access</h3>
+          <p style="color: var(--text-gray); line-height: 1.8;">
+            Direct C-suite negotiation authority with Fortune 1000 companies needing workforce infrastructure at scale
+          </p>
+        </div>
+        <div class="benefit-card-premium">
+          <span class="benefit-icon">💰</span>
+          <h3 class="benefit-title">Infrastructure Remuneration</h3>
+          <p style="color: var(--text-gray); line-height: 1.8;">
+            10,660 USD/month base + 26,835 USD incentives + equity positioning in a multi-million dollar capacity system
+          </p>
+        </div>
+        <div class="benefit-card-premium">
+          <span class="benefit-icon">🎯</span>
+          <h3 class="benefit-title">C-Level Trajectory</h3>
+          <p style="color: var(--text-gray); line-height: 1.8;">
+            5-year path to Chief Capacity Officer, VP Workforce Development, or sector-level executive authority
+          </p>
+        </div>
+      </div>
+      
+      <div class="requirements-box">
+        <h3>Selection Criteria</h3>
+        <p style="font-size: 1.1rem; color: var(--text-gray); margin-bottom: 1.5rem;">
+          We're not looking for managers. We're looking for <strong style="color: var(--vibrant-orange);">architects, operators, and infrastructure builders</strong> who can think in scale, systems, and decades.
+        </p>
+        <ul class="requirements-list">
+          <li><strong>5+ years leading people, projects, or operations</strong> — you've built teams or systems before</li>
+          <li><strong>Sector authority</strong> — deep expertise in IT, Healthcare, Logistics, Manufacturing, or another BTH vertical</li>
+          <li><strong>Enterprise fluency</strong> — can negotiate with C-suite executives, draft strategy documents, operate at board level</li>
+          <li><strong>Long-term orientation</strong> — thinking in 5-year cycles, not quarterly bonuses</li>
+          <li><strong>Infrastructure mindset</strong> — sees workforce development as capacity deployment, not transaction volume</li>
+          <li><strong>Strategic autonomy</strong> — can define and execute sector-level strategies with minimal oversight</li>
+        </ul>
+        <div class="not-for-box">
+          <p><strong>⚠️ Not for:</strong> Commission hunters • Opportunists • Short-term thinkers • People who need micromanagement • Anyone who doesn't understand the difference between sales and capacity infrastructure</p>
+        </div>
+      </div>
+      
+      <h3 style="font-size: 2rem; font-weight: 900; margin: 3rem 0 1.5rem;">How You're Compensated</h3>
+      <p style="font-size: 1.1rem; color: var(--text-gray); margin-bottom: 2rem;">
+        You're not paid for activity. You're paid for <strong style="color: var(--vibrant-orange);">infrastructure command</strong>.
+      </p>
+      
+      <div class="compensation-breakdown">
+        <div class="comp-item">
+          <div class="comp-title">💰 $10,660/month Leadership Remuneration</div>
+          <div class="comp-description">
+            Fixed leadership income—10% of team infrastructure revenue (100 specialists × 1,066 USD × 10%). Paid monthly for 36 months.
+          </div>
+        </div>
+        <div class="comp-item">
+          <div class="comp-title">⚡ $26,835 Performance Incentives</div>
+          <div class="comp-description">
+            Earned through sector deployment execution, Level 1–5 pathway performance, and enterprise partnership milestones.
+          </div>
+        </div>
+        <div class="comp-item">
+          <div class="comp-title">🏛️ Strategic Equity Position</div>
+          <div class="comp-description">
+            Authority and ownership in a 65M USD sector infrastructure system. Long-term trajectory toward Chief Capacity Officer roles.
+          </div>
+        </div>
+        <div class="year-total">
+          <div class="year-total-value">⚡ Year 1 Total: $154,755 USD minimum</div>
+          <div style="margin-top: 0.5rem; opacity: 0.9;">(not including long-term strategic equity)</div>
+        </div>
+      </div>
+      
+      <div style="background: var(--white); border-radius: 20px; padding: 2.5rem; margin: 3rem 0; border: 3px solid var(--gold); text-align: center;">
+        <h3 style="font-size: 1.5rem; font-weight: 800; margin-bottom: 1rem; color: var(--text-dark);">Leadership Program Investment</h3>
+        <div style="font-size: 3rem; font-weight: 900; color: var(--vibrant-orange); margin: 1rem 0;">$2,665</div>
+        <p style="color: var(--text-gray); font-size: 0.95rem;">
+          One-time leadership program fee<br>
+          <strong>Includes:</strong> Full leadership training, sector authority, CRM infrastructure, executive positioning within OEDP Work Network
+        </p>
+      </div>
+      
+      <div class="cta-box-premium">
+        <div class="cta-deadline">⏰ Applications close February 28, 2026</div>
+        <h3>Limited to 20 Global Positions</h3>
+        <p style="font-size: 1.1rem; margin: 1.5rem 0; opacity: 0.95;">
+          Only <strong>20 Sector Workforce Director positions</strong> exist globally (1 per sector). If you're qualified and serious, apply now. We review applications within 48 hours. If accepted, onboarding begins March 2026.
+        </p>
+        <a href="apply-sales-specialist.html?tier=leadership&src=leadership-section" class="cta-primary" style="background: linear-gradient(135deg, var(--gold), var(--vibrant-orange)); color: var(--text-dark); font-size: 1.1rem; padding: 1.25rem 3rem;">
+          Submit Leadership Application →
+        </a>
+        <p style="font-size: 0.9rem; margin-top: 2rem; opacity: 0.8;">
+          <strong>Selection Process:</strong> Application → 48-hour review → Strategic interview → Sector assignment → Leadership onboarding<br>
+          <strong>Start Date:</strong> March 2026 (Cohort 2026 leadership cycle)
+        </p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- SECTORS -->
+  <section class="content-section" id="sectors">
+    <div class="section-header">
+      <h2 class="section-title">20 Industry Sectors • 2,000-Person Capacity Infrastructure</h2>
+      <p class="section-lead">
+        The Workforce Deployment Program reflects BTH Education Group's <strong>2026 Workforce Development Blueprint</strong>: a standardized, interoperable and globally relevant skill architecture spanning 20 industry clusters.
+      </p>
+    </div>
+    
+    <div class="sectors-grid">
+      <div class="sector-category-card">
+        <h3>Technology & Infrastructure</h3>
+        <div class="sector-pills">
+          <span class="sector-pill">IT & Cybersecurity</span>
+          <span class="sector-pill">Telecommunications</span>
+          <span class="sector-pill">Web & Software Engineering</span>
+          <span class="sector-pill">EdTech</span>
+        </div>
+      </div>
+      <div class="sector-category-card">
+        <h3>Industry & Production</h3>
+        <div class="sector-pills">
+          <span class="sector-pill">Manufacturing & Industrial</span>
+          <span class="sector-pill">Automotive Technology</span>
+          <span class="sector-pill">Construction & Infrastructure</span>
+          <span class="sector-pill">Energy & Renewable Systems</span>
+          <span class="sector-pill">Agricultural Technology</span>
+        </div>
+      </div>
+      <div class="sector-category-card">
+        <h3>Services & Public Systems</h3>
+        <div class="sector-pills">
+          <span class="sector-pill">Healthcare</span>
+          <span class="sector-pill">Finance & Accounting</span>
+          <span class="sector-pill">Business & Management</span>
+          <span class="sector-pill">Government & Civic Tech</span>
+          <span class="sector-pill">Public Safety & Emergency Services</span>
+        </div>
+      </div>
+      <div class="sector-category-card">
+        <h3>Innovation & Future Skills</h3>
+        <div class="sector-pills">
+          <span class="sector-pill">Research & Development</span>
+          <span class="sector-pill">Biotech & Life Sciences</span>
+          <span class="sector-pill">Aerospace & Defense</span>
+          <span class="sector-pill">Transportation & Logistics</span>
+        </div>
+      </div>
+      <div class="sector-category-card">
+        <h3>Creative & Digital Economies</h3>
+        <div class="sector-pills">
+          <span class="sector-pill">Creative Arts</span>
+          <span class="sector-pill">Digital Design</span>
+          <span class="sector-pill">Media & Content</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- BLUEPRINT -->
+  <section class="content-section" style="background: var(--light-gray);" id="blueprint">
+    <div class="section-header">
+      <h2 class="section-title">The Workforce Development Blueprint</h2>
+      <p class="section-lead">
+        Each deployment portfolio is not just certification — it is a <strong>structured workforce capacity solution</strong>. Our programs are standardized across five core dimensions of professional life and business enablement.
+      </p>
+    </div>
+    
+    <div class="outcomes-grid">
+      <div class="outcome-card">
+        <h3>1. Standardisation & Professional Development</h3>
+        <p>
+          Unified competency frameworks that align individuals and organisations to global best practices, vendor certifications and regulated standards.
+        </p>
+      </div>
+      <div class="outcome-card">
+        <h3>2. Leadership & Customer Service</h3>
+        <p>
+          Leadership, customer success, service quality and soft-skills portfolios embedded into every industry pathway, preparing candidates for supervisory and client-facing roles.
+        </p>
+      </div>
+      <div class="outcome-card">
+        <h3>3. Entrepreneurship & Finance</h3>
+        <p>
+          Programs that equip talent to build ventures, manage budgets, understand ROI and integrate finance into daily business decisions.
+        </p>
+      </div>
+      <div class="outcome-card">
+        <h3>4. Interoperability & Inclusion</h3>
+        <p>
+          Pathways that work across borders, technologies and regulatory environments, designed to include diverse learners and enterprise realities.
+        </p>
+      </div>
+      <div class="outcome-card">
+        <h3>5. The OEDP Work Network</h3>
+        <p>
+          Every Workforce Deployment Specialist becomes a default member of the <strong>OEDP Work Network</strong>, the pristine portfolio that companies rely on for workforce empowerment, operations and development.
+        </p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- HOW IT WORKS -->
+  <section class="content-section" id="how-it-works">
+    <div class="section-header">
+      <h2 class="section-title">How the Program Works</h2>
+      <p class="section-lead">
+        We train you as a workforce deployment professional, embed you into our capacity infrastructure ecosystem, and deploy you with structured portfolios and CRM tools.
+      </p>
+    </div>
+    
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-number-badge">1</div>
+        <h3>Apply Online</h3>
+        <p style="color: var(--text-gray); line-height: 1.8;">
+          Submit your application and motivation statement. Our team screens for ambition, discipline, teachability and communication capacity.
+        </p>
+      </div>
+      <div class="step-card">
+        <div class="step-number-badge">2</div>
+        <h3>Pay Your Program Fee</h3>
+        <p style="color: var(--text-gray); line-height: 1.8;">
+          Secure your slot by paying the <strong>2,665 USD</strong> training investment. This unlocks your onboarding, core workforce deployment curriculum and industry briefings.
+        </p>
+      </div>
+      <div class="step-card">
+        <div class="step-number-badge">3</div>
+        <h3>Train, Certify & Be Deployed</h3>
+        <p style="color: var(--text-gray); line-height: 1.8;">
+          Complete the Workforce Deployment Specialist curriculum, earn your <strong>Workforce Deployment Certificate</strong> and <strong>CSS Certification</strong>, then receive your sector, pipeline and CRM access.
+        </p>
+      </div>
+      <div class="step-card">
+        <div class="step-number-badge">4</div>
+        <h3>Deploy & Scale Your Remuneration</h3>
+        <p style="color: var(--text-gray); line-height: 1.8;">
+          Work within the program's 50-unit model, hit your KPIs, and earn <strong>1,066 USD/month</strong> for 3 years – with upside for leadership advancement & performance bonuses.
+        </p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- FAQ -->
+  <section class="content-section" style="background: var(--light-gray);" id="faq">
+    <div class="section-header">
+      <h2 class="section-title">Frequently Asked Questions</h2>
+    </div>
+    
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>Who can apply to the Workforce Deployment Program?</summary>
+        <p>
+          Graduates, young professionals, entrepreneurs and mid-career individuals who are serious about building professional capacity infrastructure, structured remuneration and global professional standards. Strong communication and reliability are essential.
+        </p>
+      </details>
+      <details class="faq-item">
+        <summary>Is this a job or a business opportunity?</summary>
+        <p>
+          It is a workforce infrastructure role. You are trained as a professional Workforce Deployment Specialist within BTH Education Group's ecosystem, with structured remuneration and KPIs, but you also build a long-term capacity portfolio in your chosen sector.
+        </p>
+      </details>
+      <details class="faq-item">
+        <summary>How is the 1,066 USD/month remuneration paid?</summary>
+        <p>
+          Remuneration is tied to your active status and performance relative to the 50-unit capacity deployment model. Details are outlined in the Workforce Deployment Specialist Agreement during onboarding.
+        </p>
+      </details>
+      <details class="faq-item">
+        <summary>Can I work from anywhere?</summary>
+        <p>
+          Yes. The program is designed to be location-flexible, with digital CRM tools, online meetings and hybrid field operations where necessary.
+        </p>
+      </details>
+    </div>
+  </section>
+  
+  <!-- FINAL CTA -->
+  <section class="content-section">
+    <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+      <h2 class="section-title">Ready to Build Professional Capacity at Scale?</h2>
+      <p class="section-lead" style="text-align: center; margin: 0 auto 2rem;">
+        If you are ready to be measured by outcomes and rewarded by impact, this program is for you. Apply now to join the BTH Education Group Workforce Deployment Program and become part of the 2026 Workforce Development Blueprint.
+      </p>
+      <a href="apply-sales-specialist.html?src=section-apply" class="cta-primary" style="font-size: 1.1rem; padding: 1.25rem 3rem;">Start Your Application</a>
+      <p style="font-size: 0.9rem; color: var(--text-gray); margin-top: 1.5rem;">
+        After submitting your application, our team will contact you with interview dates, payment channels and onboarding details.
+      </p>
+    </div>
+  </section>
+  
+  <!-- FOOTER -->
+  <footer class="footer-cta">
+    <div class="footer-container">
+      <div class="footer-content">
+        <h2>Speak with Our Workforce Deployment Team</h2>
+        <p style="opacity: 0.9; margin: 0.75rem 0;">We can help you understand the model, the remuneration structure and how the program fits your career.</p>
+        <p class="footer-contacts">WhatsApp: +237 680 289 956 • Tel: +237 653 795 603 • Email: info@btheducationgroup.org</p>
+      </div>
+      <a href="#" class="cta-primary" style="background: linear-gradient(135deg, var(--gold), var(--vibrant-orange)); color: var(--text-dark);">Back to Top</a>
+    </div>
+  </footer>
+  
+  <script>
+    // Smooth scroll for navigation
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+    
+    // Active nav link on scroll
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.subnav-link');
+    
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (pageYOffset >= sectionTop - 200) {
+          current = section.getAttribute('id');
+        }
+      });
+      
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href').slice(1) === current) {
+          link.classList.add('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
