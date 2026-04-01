@@ -1,0 +1,21 @@
+{
+  "timestamp": "2026-03-26 19:21:02",
+  "tag": "informationtechnology-20260326-192102",
+  "files": [
+    {
+      "path": "programs/backups/informationtechnology-20260326-192102.html",
+      "size": 373716,
+      "sha256": "89103c6fd04f56efffb0058de5a1d3632367a8a7004b77209951a98b3256fed1"
+    }
+    ,{
+      "path": "assets/data/backups/pricing-20260326-192102.json",
+      "size": 126,
+      "sha256": "40718a56e068faf734bcef9eac51005be9063a04f632d7dfda18e5e55eb44eca"
+    }
+    ,{
+      "path": "assets/data/backups/certifications-20260326-192102.json",
+      "size": 139395,
+      "sha256": "011d194b13daa60b9c44b494de8be1eb009a5527b7ef204042922531c8f01c8c"
+    }
+  ]
+}
