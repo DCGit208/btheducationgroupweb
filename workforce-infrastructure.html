@@ -13,844 +13,107 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=DM+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-  <style>
-    /* ─── RESET & BASE ─────────────────────────────────────────── */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; font-size: 16px; }
-    body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Inter", sans-serif;
-      background: #F5F5F7;
-      color: #111827;
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-    }
-    a { color: #054ADA; text-decoration: none; }
-    a:focus-visible, .btn:focus-visible, button:focus-visible {
-      outline: 3px solid #0EA5E9;
-      outline-offset: 3px;
-    }
-    .skip-link {
-      position: absolute;
-      left: -9999px;
-      top: auto;
-      width: 1px;
-      height: 1px;
-      overflow: hidden;
-      z-index: 10001;
-      padding: 0.75rem 1.25rem;
-      background: #054ADA;
-      color: #fff !important;
-      font-weight: 700;
-      font-size: 0.9rem;
-      border-radius: 8px;
-    }
-    .skip-link:focus {
-      left: 1rem;
-      top: 1rem;
-      width: auto;
-      height: auto;
-      overflow: visible;
-    }
+  <link rel="stylesheet" href="assets/css/workforce-infrastructure.css" />
 
-    /* ─── LAYOUT ───────────────────────────────────────────────── */
-    .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
-    .section { padding: 100px 0; }
-
-    /* ─── TYPOGRAPHY ───────────────────────────────────────────── */
-    .eyebrow {
-      display: inline-block;
-      font-size: 0.75rem; font-weight: 700;
-      letter-spacing: 0.18em; text-transform: uppercase;
-      color: #054ADA; margin-bottom: 1rem;
-    }
-    .eyebrow-gold { color: #FACC15; }
-    h1 { font-size: clamp(2.4rem, 5vw, 3.8rem); font-weight: 900; line-height: 1.05; letter-spacing: -0.02em; }
-    h2 { font-size: clamp(1.7rem, 3vw, 2.4rem); font-weight: 800; line-height: 1.15; letter-spacing: -0.015em; }
-    h3 { font-size: 1.1rem; font-weight: 700; line-height: 1.3; }
-    .lead { font-size: 1.05rem; color: #6B7280; line-height: 1.75; max-width: 46rem; }
-
-    /* ─── BUTTONS ──────────────────────────────────────────────── */
-    .btn {
-      display: inline-flex; align-items: center; gap: 0.4rem;
-      padding: 0.875rem 2rem; border-radius: 999px;
-      font-weight: 700; font-size: 0.9rem; letter-spacing: 0.01em;
-      transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s;
-      cursor: pointer; border: none; white-space: nowrap;
-    }
-    .btn:hover { transform: translateY(-2px); }
-    .btn-primary {
-      background: linear-gradient(135deg, #054ADA, #0EA5E9);
-      color: #fff; box-shadow: 0 4px 24px rgba(5,74,218,0.35);
-    }
-    .btn-primary:hover { box-shadow: 0 8px 32px rgba(5,74,218,0.45); }
-    .btn-outline { background: transparent; color: #fff; border: 1.5px solid rgba(255,255,255,0.4); }
-    .btn-outline:hover { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.7); }
-    .btn-outline-dark { background: transparent; color: #054ADA; border: 1.5px solid #054ADA; }
-    .btn-outline-dark:hover { background: #EFF6FF; }
-    .btn-gold {
-      background: linear-gradient(135deg, #FACC15, #FB923C);
-      color: #0F172A; box-shadow: 0 4px 20px rgba(250,204,21,0.3);
-    }
-    .btn-gold:hover { box-shadow: 0 8px 28px rgba(250,204,21,0.45); }
-    .btn-lg { padding: 1.1rem 2.5rem; font-size: 1rem; }
-
-    /* ─── NAV ──────────────────────────────────────────────────── */
-    .topnav {
-      position: sticky; top: 0; z-index: 100;
-      background: rgba(255,255,255,0.92);
-      backdrop-filter: blur(16px);
-      border-bottom: 1px solid rgba(0,0,0,0.06);
-    }
-    .topnav-inner {
-      max-width: 1200px; margin: 0 auto; padding: 0 2rem;
-      height: 64px; display: flex; align-items: center;
-      justify-content: space-between; gap: 2rem;
-    }
-    .nav-brand { font-size: 0.85rem; font-weight: 800; color: #0F172A; letter-spacing: 0.02em; }
-    .nav-brand span { color: #054ADA; }
-    .nav-links { display: flex; gap: 0.25rem; }
-    .nav-links a {
-      font-size: 0.85rem; font-weight: 600; color: #374151;
-      padding: 0.4rem 0.9rem; border-radius: 999px;
-      transition: background 0.15s, color 0.15s;
-    }
-    .nav-links a:hover { background: #F1F5F9; color: #054ADA; }
-    .nav-cta { display: flex; gap: 0.75rem; align-items: center; }
-
-    /* ─── HERO ─────────────────────────────────────────────────── */
-    .hero {
-      background: linear-gradient(135deg, #0F172A 0%, #0F2060 55%, #0F172A 100%);
-      padding: 120px 0 100px; position: relative; overflow: hidden;
-    }
-    .hero::before {
-      content: ""; position: absolute; inset: 0;
-      background:
-        radial-gradient(circle at 20% 80%, rgba(5,74,218,0.3) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(14,165,233,0.25) 0%, transparent 50%),
-        radial-gradient(circle at 40% 40%, rgba(250,204,21,0.08) 0%, transparent 50%);
-      animation: backgroundShift 20s ease-in-out infinite;
-      pointer-events: none;
-    }
-    .hero::after {
-      content: ""; position: absolute; inset: 0;
-      background: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M0 0h80v80H0V0zm20 20v40h40V20H20zm20 35a15 15 0 1 1 0-30 15 15 0 0 1 0 30z' fill-rule='evenodd'/%3E%3C/g%3E%3C/svg%3E");
-      animation: patternFloat 30s linear infinite;
-      pointer-events: none;
-    }
-    .hero-grid {
-      position: relative; z-index: 1;
-      display: grid; grid-template-columns: 1fr 1fr;
-      gap: 4rem; align-items: center;
-      max-width: 1200px; margin: 0 auto; padding: 0 2rem;
-    }
-    .hero-badge {
-      display: inline-flex; align-items: center; gap: 0.5rem;
-      padding: 0.3rem 0.9rem; border-radius: 999px;
-      background: rgba(5,74,218,0.25); border: 1px solid rgba(5,74,218,0.4);
-      font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em;
-      text-transform: uppercase; color: #90BDFF; margin-bottom: 1.5rem;
-      animation: fadeInUp 0.8s ease-out 0.1s both;
-    }
-    .hero h1 {
-      background: linear-gradient(100deg, #ffffff 0%, #dceeff 35%, #aaccff 50%, #dceeff 65%, #ffffff 100%);
-      background-size: 250% auto;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      margin-bottom: 1.25rem;
-      animation: shimmerText 5s linear infinite, fadeInUp 0.8s ease-out 0.3s both;
-    }
-    .hero h1 em {
-      font-style: normal;
-      background: linear-gradient(135deg, #FACC15 0%, #FB923C 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-    .hero-tagline { font-size: 1.1rem; font-weight: 700; color: #FACC15; margin-bottom: 1.25rem; animation: fadeInUp 0.8s ease-out 0.45s both; }
-    .hero-para { font-size: 1rem; color: rgba(255,255,255,0.75); line-height: 1.75; max-width: 34rem; margin-bottom: 2.5rem; animation: fadeInUp 0.8s ease-out 0.55s both; }
-    .hero-cta-row { display: flex; flex-wrap: wrap; gap: 1rem; animation: fadeInUp 0.8s ease-out 0.7s both; }
-
-    .hero-stat-panel {
-      background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1);
-      border-radius: 1.5rem; padding: 2.5rem; backdrop-filter: blur(12px);
-      animation: fadeInUp 0.8s ease-out 0.5s both;
-    }
-    .hsp-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 2rem; }
-    .hsp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
-    .hsp-value { font-size: 2.1rem; font-weight: 900; color: #fff; line-height: 1; margin-bottom: 0.25rem; }
-    .hsp-value.gold { color: #FACC15; }
-    .hsp-key { font-size: 0.78rem; color: rgba(255,255,255,0.45); }
-    .hsp-divider { grid-column: 1 / -1; height: 1px; background: rgba(255,255,255,0.08); }
-    .hsp-cta { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.08); font-size: 0.8rem; color: rgba(255,255,255,0.4); line-height: 1.6; }
-
-    /* ─── AUTHORITY STRIP ──────────────────────────────────────── */
-    .authority-strip { background: #fff; border-bottom: 1px solid #E5E7EB; }
-    .authority-inner {
-      max-width: 1200px; margin: 0 auto; padding: 1.5rem 2rem;
-      display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap;
-    }
-    .authority-left { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #9CA3AF; }
-    .authority-logos { display: flex; align-items: center; gap: 2rem; flex-wrap: wrap; }
-    .authority-tag { font-size: 0.82rem; font-weight: 700; color: #374151; letter-spacing: 0.04em; white-space: nowrap; }
-    .authority-tag span { display: inline-block; padding: 0.2rem 0.55rem; background: #F1F5F9; border-radius: 4px; margin-right: 0.3rem; font-size: 0.72rem; color: #054ADA; }
-
-    /* ─── PROBLEM ──────────────────────────────────────────────── */
-    .problem-section { background: #fff; }
-    .problem-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
-    .problem-list { list-style: none; margin-top: 2rem; display: flex; flex-direction: column; gap: 1.25rem; }
-    .problem-item { display: flex; gap: 1rem; align-items: flex-start; }
-    .problem-icon { width: 36px; height: 36px; flex-shrink: 0; border-radius: 8px; background: #FEF2F2; display: flex; align-items: center; justify-content: center; font-size: 1rem; margin-top: 0.1rem; }
-    .problem-item h3 { font-size: 0.95rem; margin-bottom: 0.2rem; color: #111827; }
-    .problem-item p { font-size: 0.85rem; color: #6B7280; line-height: 1.6; }
-    .problem-callout { background: linear-gradient(135deg, #0F172A, #1E3A8A); border-radius: 1.5rem; padding: 3rem 2.5rem; color: #fff; }
-    .problem-callout-stat { font-size: 3.5rem; font-weight: 900; color: #FACC15; line-height: 1; margin-bottom: 0.5rem; }
-    .problem-callout-label { font-size: 0.95rem; color: rgba(255,255,255,0.7); margin-bottom: 2rem; }
-    .problem-callout-list { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
-    .problem-callout-list li { font-size: 0.88rem; color: rgba(255,255,255,0.8); display: flex; gap: 0.65rem; align-items: flex-start; }
-    .problem-callout-list li::before { content: "—"; color: #FACC15; flex-shrink: 0; }
-
-    /* ─── SOLUTION ─────────────────────────────────────────────── */
-    .solution-section { background: #F5F5F7; }
-    .solution-header { text-align: center; max-width: 640px; margin: 0 auto 4rem; }
-    .solution-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
-    .solution-card {
-      background: #fff; border-radius: 1.25rem; padding: 2rem 1.75rem;
-      box-shadow: 0 2px 20px rgba(15,23,42,0.05); border: 1px solid #E5E7EB;
-      transition: box-shadow 0.25s, transform 0.25s;
-    }
-    .solution-card:hover { box-shadow: 0 12px 40px rgba(15,23,42,0.1); transform: translateY(-4px); }
-    .solution-card-icon { width: 48px; height: 48px; border-radius: 12px; background: #EFF6FF; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; margin-bottom: 1.25rem; }
-    .solution-card h3 { margin-bottom: 0.6rem; color: #0F172A; }
-    .solution-card p { font-size: 0.88rem; color: #6B7280; line-height: 1.7; }
-    .solution-highlight {
-      margin-top: 3rem; background: linear-gradient(135deg, #054ADA, #0EA5E9);
-      border-radius: 1.5rem; padding: 3rem; color: #fff;
-      display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap;
-    }
-    .solution-highlight h3 { font-size: 1.5rem; max-width: 28rem; }
-    .solution-highlight p { font-size: 0.9rem; color: rgba(255,255,255,0.8); max-width: 26rem; margin-top: 0.5rem; }
-
-    /* ─── LIFECYCLE ────────────────────────────────────────────── */
-    .lifecycle-section { background: #fff; }
-    .lifecycle-header { text-align: center; max-width: 640px; margin: 0 auto 4rem; }
-    .lifecycle-track { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; position: relative; }
-    .lifecycle-track::before {
-      content: ""; position: absolute; top: 40px; left: 12%; right: 12%;
-      height: 2px; background: linear-gradient(90deg, #054ADA, #0EA5E9); z-index: 0;
-    }
-    .lifecycle-card {
-      position: relative; z-index: 1; background: #fff;
-      border-radius: 1.25rem; padding: 2rem 1.5rem; border: 1px solid #E5E7EB;
-      box-shadow: 0 2px 16px rgba(15,23,42,0.05); transition: box-shadow 0.25s, transform 0.25s;
-    }
-    .lifecycle-card:hover { box-shadow: 0 12px 40px rgba(15,23,42,0.1); transform: translateY(-4px); }
-    .lc-step {
-      width: 44px; height: 44px; border-radius: 50%;
-      background: linear-gradient(135deg, #054ADA, #0EA5E9); color: #fff;
-      font-weight: 900; font-size: 1.1rem; display: flex; align-items: center; justify-content: center;
-      margin-bottom: 1.25rem; box-shadow: 0 4px 16px rgba(5,74,218,0.3);
-    }
-    .lc-icon { font-size: 1.6rem; margin-bottom: 0.75rem; }
-    .lifecycle-card h3 { font-size: 1.1rem; margin-bottom: 0.75rem; color: #0F172A; }
-    .lc-list { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
-    .lc-list li { font-size: 0.83rem; color: #6B7280; display: flex; gap: 0.5rem; align-items: flex-start; }
-    .lc-list li::before { content: "✓"; color: #054ADA; font-weight: 700; flex-shrink: 0; }
-
-    /* ─── COHORT MODEL ─────────────────────────────────────────── */
-    .cohort-section {
-      background: linear-gradient(135deg, #0F172A 0%, #0F2060 100%);
-      padding: 100px 0; position: relative; overflow: hidden;
-    }
-    .cohort-section::before {
-      content: ""; position: absolute; inset: 0;
-      background: radial-gradient(ellipse 50% 70% at 80% 50%, rgba(14,165,233,0.1), transparent);
-      pointer-events: none;
-    }
-    .cohort-inner { position: relative; z-index: 1; }
-    .cohort-header { max-width: 640px; margin-bottom: 4rem; }
-    .cohort-header h2 { color: #fff; }
-    .cohort-header p { color: rgba(255,255,255,0.65); margin-top: 1rem; font-size: 1rem; line-height: 1.75; }
-    .cohort-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
-    .cohort-bar-row { display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1rem; }
-    .cohort-bar-label { display: flex; justify-content: space-between; align-items: baseline; font-size: 0.85rem; font-weight: 700; color: rgba(255,255,255,0.8); }
-    .cohort-bar-label span { font-size: 0.78rem; color: rgba(255,255,255,0.4); font-weight: 400; }
-    .cohort-bar-track { background: rgba(255,255,255,0.08); border-radius: 999px; height: 8px; overflow: hidden; }
-    .cohort-bar-fill { height: 100%; border-radius: 999px; width: 0; transition: width 1.6s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
-    .fill-l1 { background: linear-gradient(90deg, #0EA5E9, #38BDF8); }
-    .fill-l2 { background: linear-gradient(90deg, #054ADA, #3B82F6); }
-    .fill-l3 { background: linear-gradient(90deg, #7C3AED, #A78BFA); }
-    .fill-l4 { background: linear-gradient(90deg, #D97706, #FBBF24); }
-    .fill-l5 { background: linear-gradient(90deg, #FACC15, #FB923C); }
-    .cohort-metrics { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
-    .cohort-metric-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 1rem; padding: 1.5rem 1.25rem; }
-    .cohort-metric-value { font-size: 2rem; font-weight: 900; color: #FACC15; margin-bottom: 0.25rem; line-height: 1; }
-    .cohort-metric-key { font-size: 0.8rem; color: rgba(255,255,255,0.45); }
-    .cohort-total {
-      grid-column: 1 / -1;
-      background: linear-gradient(135deg, rgba(5,74,218,0.3), rgba(14,165,233,0.2));
-      border: 1px solid rgba(5,74,218,0.4); border-radius: 1rem; padding: 1.75rem; text-align: center;
-    }
-    .cohort-total-value { font-size: 2.5rem; font-weight: 900; color: #fff; line-height: 1; }
-    .cohort-total-label { font-size: 0.85rem; color: rgba(255,255,255,0.5); margin-top: 0.4rem; }
-
-    /* ─── SECTORS ──────────────────────────────────────────────── */
-    .sectors-section { background: #F5F5F7; }
-    .sectors-header { text-align: center; max-width: 560px; margin: 0 auto 3rem; }
-    .sectors-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 0.875rem; }
-    .sector-tile {
-      background: #fff; border-radius: 0.875rem; padding: 1.1rem 1rem;
-      border: 1px solid #E5E7EB;
-      transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
-    }
-    .sector-tile:hover { border-color: #BFDBFE; box-shadow: 0 4px 20px rgba(5,74,218,0.1); transform: translateY(-2px); }
-    .st-icon { font-size: 1.3rem; margin-bottom: 0.4rem; }
-    .st-name { font-size: 0.85rem; font-weight: 700; color: #111827; line-height: 1.3; }
-    .st-sub { font-size: 0.72rem; color: #9CA3AF; margin-top: 0.2rem; }
-    .sectors-cta { text-align: center; margin-top: 3rem; }
-
-    /* ─── ENTERPRISE VALUE ─────────────────────────────────────── */
-    .value-section { background: #fff; }
-    .value-header { max-width: 560px; margin-bottom: 4rem; }
-    .value-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
-    .value-card { border-radius: 1.25rem; padding: 2rem 1.75rem; transition: transform 0.2s, box-shadow 0.2s; }
-    .value-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(15,23,42,0.1); }
-    .value-card.blue { background: linear-gradient(135deg, #EFF6FF, #DBEAFE); border: 1px solid #BFDBFE; }
-    .value-card.green { background: linear-gradient(135deg, #F0FDF4, #DCFCE7); border: 1px solid #BBF7D0; }
-    .value-card.gold { background: linear-gradient(135deg, #FEFCE8, #FEF9C3); border: 1px solid #FDE68A; }
-    .value-card.purple { background: linear-gradient(135deg, #FDF4FF, #F3E8FF); border: 1px solid #E9D5FF; }
-    .value-card.slate { background: linear-gradient(135deg, #F8FAFC, #F1F5F9); border: 1px solid #E2E8F0; }
-    .value-card.indigo { background: linear-gradient(135deg, #EEF2FF, #E0E7FF); border: 1px solid #C7D2FE; }
-    .vc-icon { font-size: 1.75rem; margin-bottom: 1rem; }
-    .value-card h3 { font-size: 1rem; margin-bottom: 0.5rem; color: #0F172A; }
-    .value-card p { font-size: 0.85rem; color: #4B5563; line-height: 1.7; }
-
-    /* ─── ENGAGEMENT ───────────────────────────────────────────── */
-    .engagement-section { background: #F5F5F7; }
-    .engagement-header { text-align: center; max-width: 560px; margin: 0 auto 3.5rem; }
-    .engagement-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
-    .engagement-card {
-      background: #fff; border-radius: 1.5rem; padding: 2.5rem 2rem;
-      border: 1px solid #E5E7EB; box-shadow: 0 2px 20px rgba(15,23,42,0.04);
-      display: flex; flex-direction: column; transition: box-shadow 0.25s, transform 0.25s;
-    }
-    .engagement-card:hover { box-shadow: 0 16px 48px rgba(15,23,42,0.1); transform: translateY(-4px); }
-    .engagement-card.featured { background: linear-gradient(160deg, #0F2060, #0F172A); border-color: rgba(5,74,218,0.4); color: #fff; }
-    .ec-badge { display: inline-block; padding: 0.25rem 0.75rem; border-radius: 999px; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 1.5rem; background: #EFF6FF; color: #054ADA; }
-    .ec-badge-featured { background: rgba(250,204,21,0.15); color: #FACC15; }
-    .engagement-card h3 { font-size: 1.15rem; margin-bottom: 0.75rem; }
-    .engagement-card.featured h3 { color: #fff; }
-    .engagement-card p { font-size: 0.88rem; color: #6B7280; line-height: 1.7; flex-grow: 1; }
-    .engagement-card.featured p { color: rgba(255,255,255,0.65); }
-    .ec-list { list-style: none; margin: 1.5rem 0; display: flex; flex-direction: column; gap: 0.6rem; }
-    .ec-list li { font-size: 0.85rem; display: flex; gap: 0.6rem; align-items: flex-start; color: #374151; }
-    .ec-list li.white { color: rgba(255,255,255,0.8); }
-    .ec-list li::before { content: "✓"; color: #054ADA; font-weight: 700; flex-shrink: 0; }
-    .ec-list li.white::before { color: #FACC15; }
-
-    /* ─── CTA ──────────────────────────────────────────────────── */
-    .cta-section { background: #0F172A; padding: 120px 0; position: relative; overflow: hidden; }
-    .cta-section::before {
-      content: ""; position: absolute; inset: 0;
-      background: radial-gradient(ellipse 60% 80% at 50% 50%, rgba(5,74,218,0.15), transparent);
-      pointer-events: none;
-    }
-    .cta-inner { position: relative; z-index: 1; text-align: center; max-width: 760px; margin: 0 auto; padding: 0 2rem; }
-    .cta-overline { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-bottom: 1.5rem; }
-    .cta-section h2 { font-size: clamp(2rem, 4vw, 3rem); color: #fff; margin-bottom: 1.25rem; }
-    .cta-section h2 em { font-style: normal; color: #FACC15; }
-    .cta-section p { font-size: 1.05rem; color: rgba(255,255,255,0.6); line-height: 1.75; margin-bottom: 3rem; }
-    .cta-buttons { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; }
-    .cta-note { margin-top: 2rem; font-size: 0.8rem; color: rgba(255,255,255,0.28); }
-
-    /* ─── FOOTER ───────────────────────────────────────────────── */
-    footer { background: #0A0F1E; color: rgba(255,255,255,0.5); border-top: 1px solid rgba(255,255,255,0.06); padding: 48px 0 32px; }
-    .footer-inner { max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 4rem; }
-    .footer-brand { font-size: 0.9rem; font-weight: 800; color: #fff; letter-spacing: 0.02em; margin-bottom: 0.75rem; }
-    .footer-brand span { color: #054ADA; }
-    .footer-tagline { font-size: 0.82rem; line-height: 1.7; margin-bottom: 1.5rem; }
-    .footer-contact p { font-size: 0.82rem; margin-bottom: 0.4rem; }
-    .footer-col-title { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.28); margin-bottom: 1.25rem; }
-    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
-    .footer-links a { font-size: 0.85rem; color: rgba(255,255,255,0.4); transition: color 0.15s; }
-    .footer-links a:hover { color: #fff; }
-    .footer-bottom { max-width: 1200px; margin: 2.5rem auto 0; padding: 1.5rem 2rem 0; border-top: 1px solid rgba(255,255,255,0.06); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; font-size: 0.78rem; }
-
-    /* ─── HERO ORBS ─────────────────────────────────────────── */
-    .hero-orb { position: absolute; border-radius: 50%; pointer-events: none; filter: blur(70px); z-index: 0; }
-    .orb-1 { width: 520px; height: 520px; background: radial-gradient(circle, rgba(5,74,218,0.22), transparent 70%); top: -20%; left: -12%; animation: orbFloat 14s ease-in-out infinite; }
-    .orb-2 { width: 400px; height: 400px; background: radial-gradient(circle, rgba(14,165,233,0.18), transparent 70%); bottom: -14%; right: -10%; animation: orbFloat 18s ease-in-out infinite reverse; }
-    .orb-3 { width: 260px; height: 260px; background: radial-gradient(circle, rgba(250,204,21,0.12), transparent 70%); top: 30%; right: 10%; animation: orbFloat 11s ease-in-out infinite 3s; }
-
-    /* ─── BUTTON SHIMMER ────────────────────────────────────── */
-    .btn-gold, .btn-primary { position: relative; overflow: hidden; }
-    .btn-gold::after, .btn-primary::after { content: ""; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.28), transparent); transition: left 0.55s ease; }
-    .btn-gold:hover::after, .btn-primary:hover::after { left: 100%; }
-
-    /* ─── LIFECYCLE STEP PULSE ──────────────────────────────── */
-    @keyframes pulseShadow {
-      0%, 100% { box-shadow: 0 4px 16px rgba(5,74,218,0.35), 0 0 0 0 rgba(5,74,218,0.5); }
-      50%       { box-shadow: 0 4px 28px rgba(5,74,218,0.6), 0 0 0 14px rgba(5,74,218,0); }
-    }
-    .lc-step { animation: pulseShadow 2.8s ease-in-out infinite; }
-
-    /* ─── STAT GLOWS ─────────────────────────────────────────── */
-    @keyframes goldGlow {
-      0%, 100% { text-shadow: 0 0 18px rgba(250,204,21,0.35); }
-      50%       { text-shadow: 0 0 45px rgba(250,204,21,0.8), 0 0 80px rgba(250,204,21,0.25); }
-    }
-    .hsp-value.gold { animation: goldGlow 2.8s ease-in-out infinite; }
-    .cohort-metric-value { animation: goldGlow 3s ease-in-out infinite; }
-    .problem-callout-stat { animation: goldGlow 3.5s ease-in-out infinite; }
-
-    /* ─── SHIMMER TEXT ───────────────────────────────────────── */
-    @keyframes shimmerText {
-      0%   { background-position: -250% center; }
-      100% { background-position:  250% center; }
-    }
-
-    /* ─── ORB FLOAT ──────────────────────────────────────────── */
-    @keyframes orbFloat {
-      0%, 100% { transform: translate(0, 0) scale(1); }
-      33%       { transform: translate(30px, -24px) scale(1.05); }
-      66%       { transform: translate(-20px, 20px) scale(0.96); }
-    }
-
-    /* ─── AUTHORITY MARQUEE ──────────────────────────────────── */
-    @keyframes marquee {
-      0%   { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
-    .authority-logos-track { overflow: hidden; flex: 1; -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
-    .authority-logos-inner { display: flex; gap: 2.5rem; width: max-content; flex-wrap: nowrap; animation: marquee 30s linear infinite; align-items: center; }
-    .authority-logos-inner:hover { animation-play-state: paused; }
-
-    /* ─── ICON BOUNCE ────────────────────────────────────────── */
-    @keyframes iconBounce {
-      0%, 100% { transform: scale(1) rotate(0deg); }
-      40%       { transform: scale(1.28) rotate(-6deg); }
-      70%       { transform: scale(1.1) rotate(3deg); }
-    }
-    .solution-card:hover .solution-card-icon { animation: iconBounce 0.45s ease-out; }
-    .lifecycle-card:hover .lc-icon { animation: iconBounce 0.45s ease-out; }
-
-    /* ─── CTA GLOW ───────────────────────────────────────────── */
-    @keyframes ctaPulse {
-      0%, 100% { transform: scale(1);    opacity: 0.65; }
-      50%       { transform: scale(1.1); opacity: 1; }
-    }
-    .cta-section::before { animation: ctaPulse 6s ease-in-out infinite; }
-
-    /* ─── SECTOR TILE GLOW ───────────────────────────────────── */
-    .sector-tile { position: relative; overflow: hidden; }
-    .sector-tile::after { content: ""; position: absolute; inset: 0; border-radius: inherit; background: linear-gradient(135deg, rgba(5,74,218,0.06), rgba(14,165,233,0.06)); opacity: 0; transition: opacity 0.3s; }
-    .sector-tile:hover::after { opacity: 1; }
-    .st-icon { display: inline-block; transition: transform 0.3s ease; }
-    .sector-tile:hover .st-icon { transform: scale(1.3) rotate(-5deg); }
-
-    /* ─── ENGAGEMENT FEATURED PULSE ─────────────────────────── */
-    @keyframes borderPulse {
-      0%, 100% { border-color: rgba(5,74,218,0.4); box-shadow: 0 0 0 0 rgba(5,74,218,0.2); }
-      50%       { border-color: rgba(14,165,233,0.7); box-shadow: 0 0 0 8px rgba(5,74,218,0); }
-    }
-    .engagement-card.featured { animation: borderPulse 3.5s ease-in-out infinite; }
-
-    @keyframes backgroundShift {
-      0%, 100% { 
-        background: 
-          radial-gradient(circle at 20% 80%, rgba(5,74,218,0.3) 0%, transparent 50%),
-          radial-gradient(circle at 80% 20%, rgba(14,165,233,0.25) 0%, transparent 50%);
+  <!-- ─── JSON-LD STRUCTURED DATA ───────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://www.btheducationgroup.org/#org",
+        "name": "BTH Education Group",
+        "alternateName": "BTH",
+        "url": "https://www.btheducationgroup.org",
+        "logo": "https://www.btheducationgroup.org/assets/images/bthlogo.png",
+        "sameAs": [
+          "https://invest.btheducationgroup.com"
+        ],
+        "contactPoint": [{
+          "@type": "ContactPoint",
+          "telephone": "+237-653-795-603",
+          "contactType": "enterprise inquiries",
+          "email": "info@btheducationgroup.org",
+          "areaServed": "Worldwide",
+          "availableLanguage": ["English", "French"]
+        }]
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://www.btheducationgroup.org/workforce-infrastructure#page",
+        "url": "https://www.btheducationgroup.org/workforce-infrastructure",
+        "name": "Enterprise Workforce Infrastructure — BTH Education Group",
+        "description": "WDDAM — Workforce Development, Deployment, Acquisition & Management — through the OEDP Work Network. Institutional workforce infrastructure for enterprises, governments, and capital partners across 26 global sectors.",
+        "isPartOf": { "@id": "https://www.btheducationgroup.org/#org" },
+        "primaryImageOfPage": "https://www.btheducationgroup.org/assets/images/og-image.jpg",
+        "inLanguage": "en"
+      },
+      {
+        "@type": "Service",
+        "@id": "https://www.btheducationgroup.org/workforce-infrastructure#wddam",
+        "name": "WDDAM — Workforce Development, Deployment, Acquisition & Management",
+        "serviceType": "Workforce Infrastructure",
+        "provider": { "@id": "https://www.btheducationgroup.org/#org" },
+        "audience": [
+          {"@type": "Audience", "audienceType": "Enterprise / Corporate"},
+          {"@type": "Audience", "audienceType": "Government / Public Sector"},
+          {"@type": "Audience", "audienceType": "Multilateral / Development Agency"},
+          {"@type": "Audience", "audienceType": "Capital Partner / Institutional Investor"}
+        ],
+        "areaServed": "Global",
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "WDDAM engagement models",
+          "itemListElement": [
+            {"@type": "Offer", "name": "Internal Workforce Development (commissioned cohort)"},
+            {"@type": "Offer", "name": "Sponsored Workforce Programs (50-professional cohort)"},
+            {"@type": "Offer", "name": "Infrastructure Co-Investment (workforce pod operations)"}
+          ]
+        },
+        "description": "End-to-end institutional workforce infrastructure delivered through the OEDP Work Network: Develop (Level 1-5 certified pathways), Deploy (placement into live programmes), Acquire (institutional acquisition of structured pipelines), Manage (governed lifecycle performance) — across 26 sectors."
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://www.btheducationgroup.org/workforce-infrastructure#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is WDDAM?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "WDDAM is BTH's institutional workforce stack: Workforce Development, Deployment, Acquisition & Management. It treats workforce as infrastructure — produced, deployed, acquired, and managed at institutional scale."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Who is the BTH Workforce Infrastructure page for?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Enterprises, governments, multilateral programmes, NGOs at scale, and capital partners that commission workforce as institutional infrastructure — not individual course buyers."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the OEDP Work Network?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The OEDP Work Network is BTH's delivery spine for workforce placement, CRM-tracked outcomes, and governance aligned to enterprise and public-sector procurement realities."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is a BTH workforce cohort?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A 50-professional engagement that delivers a complete Level 1–5 pipeline (Foundation through Executive/Director) in one sector — vendor-aligned credentials, auditable competency documentation, and deployment readiness."
+            }
+          }
+        ]
       }
-      33% { 
-        background: 
-          radial-gradient(circle at 60% 70%, rgba(14,165,233,0.3) 0%, transparent 50%),
-          radial-gradient(circle at 30% 30%, rgba(5,74,218,0.3) 0%, transparent 50%);
-      }
-      66% { 
-        background: 
-          radial-gradient(circle at 80% 60%, rgba(250,204,21,0.1) 0%, transparent 50%),
-          radial-gradient(circle at 20% 40%, rgba(14,165,233,0.25) 0%, transparent 50%);
-      }
-    }
-    @keyframes patternFloat {
-      0% { transform: translateY(0px) rotate(0deg); }
-      100% { transform: translateY(-80px) rotate(360deg); }
-    }
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    /* ─── ANIMATE ──────────────────────────────────────────────── */
-    .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.65s ease, transform 0.65s ease; }
-    .reveal.visible { opacity: 1; transform: none; }
-    .reveal-delay-1 { transition-delay: 0.1s; }
-    .reveal-delay-2 { transition-delay: 0.2s; }
-    .reveal-delay-3 { transition-delay: 0.3s; }
-    .reveal-delay-4 { transition-delay: 0.4s; }
-
-    /* ─── RESPONSIVE ───────────────────────────────────────────── */
-    @media (max-width: 1024px) {
-      .solution-cards { grid-template-columns: 1fr 1fr; }
-      .value-grid { grid-template-columns: 1fr 1fr; }
-    }
-    @media (max-width: 900px) {
-      .hero-grid { grid-template-columns: 1fr; }
-      .hero-stat-panel { display: none; }
-      .problem-grid { grid-template-columns: 1fr; gap: 3rem; }
-      .cohort-layout { grid-template-columns: 1fr; }
-      .lifecycle-track { grid-template-columns: 1fr 1fr; }
-      .lifecycle-track::before { display: none; }
-      .engagement-grid { grid-template-columns: 1fr; }
-      .footer-inner { grid-template-columns: 1fr 1fr; }
-    }
-    @media (max-width: 640px) {
-      .section { padding: 64px 0; }
-      .solution-cards { grid-template-columns: 1fr; }
-      .value-grid { grid-template-columns: 1fr; }
-      .lifecycle-track { grid-template-columns: 1fr; }
-      .nav-links { display: none; }
-      .cohort-metrics { grid-template-columns: 1fr 1fr; }
-      .footer-inner { grid-template-columns: 1fr; gap: 2.5rem; }
-      .sectors-grid { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); }
-    }
-
-    /* ═══════════════════════════════════════════════════════════
-       ELITE VISUAL ENGINE — Phase II
-       Neural Canvas · 3D Tilt · Typewriter · Magnetic Buttons
-       Parallax · Glassmorphism · SVG Donut · Watermarks
-    ═══════════════════════════════════════════════════════════ */
-
-    /* ─── FONT OVERRIDES ──────────────────────────────────────── */
-    body { font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
-    h1, h2, h3 { font-family: 'Inter', system-ui, sans-serif; }
-    .hsp-value, .cohort-metric-value, .cohort-total-value, .problem-callout-stat { font-family: 'DM Mono', 'Courier New', monospace; }
-
-    /* ─── CSS @PROPERTY ──────────────────────────────────────────── */
-    @property --btn-glow { syntax: '<color>'; inherits: false; initial-value: rgba(5,74,218,0.35); }
-
-    /* ─── SCROLL PROGRESS BAR ────────────────────────────────────── */
-    .scroll-progress {
-      position: fixed; top: 0; left: 0; z-index: 9999;
-      height: 3px; width: 0%;
-      background: linear-gradient(90deg, #054ADA 0%, #0EA5E9 40%, #FACC15 80%, #FB923C 100%);
-      transition: width 0.06s linear; pointer-events: none;
-    }
-
-    /* ─── NEURAL CANVAS ──────────────────────────────────────────── */
-    #neural-canvas {
-      position: absolute; inset: 0; z-index: 0;
-      pointer-events: none; opacity: 0.48;
-      width: 100%; height: 100%;
-    }
-
-    /* ─── PARALLAX PHOTO LAYER ───────────────────────────────────── */
-    .hero-photo-layer {
-      position: absolute; top: -15%; left: 0; right: 0; bottom: -15%;
-      z-index: 0; will-change: transform;
-      background-image: url('https://images.pexels.com/photos/1550337/pexels-photo-1550337.jpeg?auto=compress&cs=tinysrgb&w=1920&q=75');
-      background-size: cover; background-position: center;
-      opacity: 0.18; pointer-events: none;
-    }
-
-    /* ─── TYPEWRITER CURSOR ──────────────────────────────────────── */
-    #tw-cursor {
-      display: inline-block;
-      border-right: 2.5px solid #FACC15;
-      animation: blinkCaret 0.72s step-end infinite;
-      margin-left: 2px; vertical-align: text-bottom;
-    }
-    @keyframes blinkCaret { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
-
-    /* ─── GLASSMORPHISM STAT PANEL ───────────────────────────────── */
-    .hero-stat-panel {
-      background: rgba(255,255,255,0.05) !important;
-      border: 1px solid rgba(255,255,255,0.16) !important;
-      backdrop-filter: blur(30px) saturate(200%) !important;
-      -webkit-backdrop-filter: blur(30px) saturate(200%) !important;
-      box-shadow: 0 8px 48px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.1) !important;
-    }
-
-    /* ─── SECTION WATERMARKS ─────────────────────────────────────── */
-    .wm { position: relative; overflow: hidden; }
-    .wm::before {
-      content: attr(data-wm);
-      position: absolute;
-      font-family: 'Inter', sans-serif;
-      font-size: clamp(80px, 15vw, 210px);
-      font-weight: 900;
-      letter-spacing: -0.05em;
-      white-space: nowrap;
-      pointer-events: none; user-select: none;
-      opacity: 0; color: #054ADA;
-      top: 50%; left: 50%;
-      transform: translate(-50%, -50%);
-      z-index: 0; transition: opacity 1.2s ease;
-    }
-    .wm.wm-dark::before { color: #fff; }
-    .wm.wm-show::before { opacity: 0.028; }
-    .wm > .container { position: relative; z-index: 1; }
-    .wm > .cohort-inner { position: relative; z-index: 1; }
-    .bridge-outcome-section.wm > .container { position: relative; z-index: 1; }
-
-    /* ─── MAGNETIC BUTTON OVERRIDE ───────────────────────────────── */
-    .btn-gold, .btn-primary {
-      transition: transform 0.28s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.22s ease !important;
-    }
-
-    /* ─── SECTOR DONUT CHART ─────────────────────────────────────── */
-    .sectors-donut-wrap {
-      position: relative; width: 200px; height: 200px;
-      margin: 0 auto 3rem; flex-shrink: 0;
-    }
-    .sectors-donut-wrap svg { position: absolute; top: 0; left: 0; transform: rotate(-90deg); }
-    .sectors-donut-wrap .donut-label {
-      position: absolute; top: 50%; left: 50%;
-      transform: translate(-50%, -50%);
-      text-align: center; pointer-events: none;
-    }
-    .donut-label-num {
-      display: block; font-family: 'DM Mono', 'Courier New', monospace;
-      font-size: 2.2rem; font-weight: 700; color: #054ADA; line-height: 1;
-    }
-    .donut-label-sub {
-      display: block; font-size: 0.7rem; color: #9CA3AF;
-      font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
-      margin-top: 0.2rem;
-    }
-
-    /* ─── CARD FLIP REVEAL ───────────────────────────────────────── */
-    @keyframes flipReveal {
-      from { opacity: 0; transform: perspective(700px) rotateY(-12deg) translateY(18px); filter: blur(4px); }
-      to   { opacity: 1; transform: perspective(700px) rotateY(0deg) translateY(0);    filter: blur(0); }
-    }
-    .flip-in { opacity: 0; }
-    .flip-in.visible { animation: flipReveal 0.7s cubic-bezier(0.23, 1, 0.32, 1) both; }
-    .flip-in.reveal-delay-1.visible { animation-delay: 0.09s; }
-    .flip-in.reveal-delay-2.visible { animation-delay: 0.18s; }
-    .flip-in.reveal-delay-3.visible { animation-delay: 0.27s; }
-    .flip-in.reveal-delay-4.visible { animation-delay: 0.36s; }
-
-    /* ─── 3D TILT TRANSITION RESET ───────────────────────────────── */
-    .solution-card, .value-card, .lifecycle-card {
-      transition: transform 0.18s ease, box-shadow 0.18s ease !important;
-    }
-
-    /* ─── PROBLEM SECTION — CINEMATIC SPLIT ─────────────────────── */
-    .section.problem-section { padding: 0 !important; display: flex; min-height: 80vh; }
-    .problem-photo-half { flex: 0 0 40%; position: relative; overflow: hidden; min-height: 560px; }
-    .problem-photo-half img { width: 100%; height: 100%; object-fit: cover; display: block; }
-    .problem-photo-overlay { position: absolute; inset: 0; background: linear-gradient(160deg, rgba(5,74,218,0.78) 0%, rgba(10,15,30,0.9) 100%); }
-    .problem-photo-stat { position: absolute; bottom: 3rem; left: 3rem; color: #fff; }
-    .pps-num { font-family: 'DM Mono', monospace; font-size: clamp(3.5rem, 7vw, 5.5rem); font-weight: 700; color: #FACC15; line-height: 1; }
-    .pps-label { font-size: 0.88rem; color: rgba(255,255,255,0.62); margin-top: 0.6rem; max-width: 200px; line-height: 1.4; }
-    .problem-editorial { flex: 1; background: #0A0F1E; padding: clamp(3rem, 6vw, 6rem) clamp(2rem, 5vw, 5rem); display: flex; flex-direction: column; justify-content: center; }
-    .problem-editorial h2 { color: #fff; }
-    .problem-section.wm .problem-photo-half, .problem-section.wm .problem-editorial { position: relative; z-index: 1; }
-    .problem-lines { margin-top: 2.5rem; display: flex; flex-direction: column; gap: 0; }
-    .pl-row { display: flex; align-items: flex-start; gap: 1.5rem; padding: 1.3rem 0; border-bottom: 1px solid rgba(255,255,255,0.07); }
-    .pl-num { font-family: 'DM Mono', monospace; font-size: 0.68rem; font-weight: 700; color: rgba(14,165,233,0.55); letter-spacing: 0.1em; padding-top: 0.25rem; flex-shrink: 0; width: 2.2rem; }
-    .pl-title { font-weight: 700; color: #fff; font-size: 0.93rem; margin-bottom: 0.3rem; }
-    .pl-desc { font-size: 0.82rem; color: rgba(255,255,255,0.4); line-height: 1.55; }
-    .problem-data-strip { display: flex; gap: 2.5rem; margin-top: 2.5rem; flex-wrap: wrap; }
-    .pds-item { display: flex; flex-direction: column; gap: 0.2rem; }
-    .pds-val { font-family: 'DM Mono', monospace; font-size: 1.3rem; font-weight: 700; color: #FACC15; }
-    .pds-key { font-size: 0.68rem; color: rgba(255,255,255,0.3); letter-spacing: 0.07em; }
-
-    /* ─── SOLUTION SECTION — MANIFESTO ROWS ──────────────────────── */
-    .solution-section { background: #111827 !important; }
-    .solution-section h2 { color: #fff; }
-    .sol-header { text-align: center; max-width: 760px; margin: 0 auto 4rem; }
-    .manifesto-rows { display: flex; flex-direction: column; gap: 0; border-top: 1px solid rgba(255,255,255,0.08); }
-    .manifesto-row { display: grid; grid-template-columns: 5rem 4px 1fr; align-items: stretch; gap: 0 1.8rem; padding: 2rem 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.08); transition: background 0.3s ease; }
-    .manifesto-row:hover { background: rgba(5,74,218,0.07); }
-    .mr-counter { font-family: 'DM Mono', monospace; font-size: 0.65rem; font-weight: 700; color: rgba(255,255,255,0.18); letter-spacing: 0.08em; display: flex; align-items: center; }
-    .mr-bar { width: 4px; background: linear-gradient(180deg, #054ADA, #0EA5E9); border-radius: 4px; opacity: 0; transition: opacity 0.3s ease; }
-    .manifesto-row:hover .mr-bar { opacity: 1; }
-    .mr-body { padding: 0.15rem 0; }
-    .mr-body h3 { font-size: 1.1rem; font-weight: 800; color: #fff; margin-bottom: 0.4rem; }
-    .mr-body p { font-size: 0.88rem; color: rgba(255,255,255,0.42); line-height: 1.65; }
-    .sol-closer { text-align: center; padding-top: 3.5rem; }
-    .sol-rule { border: none; border-top: 1px solid rgba(255,255,255,0.1); margin-bottom: 2.5rem; }
-    .sol-statement { font-size: clamp(1rem, 2.2vw, 1.45rem); font-weight: 800; color: rgba(255,255,255,0.8); max-width: 660px; margin: 0 auto; line-height: 1.4; }
-
-    /* ─── LIFECYCLE SECTION — EDITORIAL ROWS ─────────────────────── */
-    .lifecycle-section { background: #1A2332 !important; }
-    .lifecycle-section h2 { color: #fff; }
-    .lc-editorial-rows { display: flex; flex-direction: column; gap: 0; }
-    .lc-editorial-row { display: grid; grid-template-columns: 5px 1fr auto; align-items: center; gap: 0 2.5rem; padding: 3.5rem 1rem; border-bottom: 1px solid rgba(255,255,255,0.05); position: relative; overflow: hidden; }
-    .lc-ghost-num { position: absolute; font-family: 'Inter', sans-serif; font-size: clamp(90px, 14vw, 160px); font-weight: 900; color: #fff; opacity: 0.025; right: 0; top: 50%; transform: translateY(-50%); line-height: 1; pointer-events: none; user-select: none; z-index: 0; }
-    .lc-left-accent { width: 5px; border-radius: 5px; align-self: stretch; }
-    .lc-content { position: relative; z-index: 1; }
-    .lc-step-badge { font-family: 'DM Mono', monospace; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(14,165,233,0.65); margin-bottom: 0.55rem; }
-    .lc-content h3 { font-size: clamp(1.4rem, 2.8vw, 1.9rem); font-weight: 900; color: #fff; margin-bottom: 0.65rem; }
-    .lc-content p { font-size: 0.88rem; color: rgba(255,255,255,0.42); line-height: 1.7; max-width: 500px; }
-    .lc-icon-large { font-size: 3.2rem; opacity: 0.5; position: relative; z-index: 1; flex-shrink: 0; }
-    .lc-team-photo { position: relative; height: 300px; border-radius: 1rem; overflow: hidden; margin: 1rem 0; }
-    .lc-team-photo img { width: 100%; height: 100%; object-fit: cover; display: block; transform: scale(1.05); transition: transform 8s ease; }
-    .lc-team-photo:hover img { transform: scale(1); }
-    .lc-photo-caption { position: absolute; bottom: 0; left: 0; right: 0; padding: 1rem 1.5rem; background: linear-gradient(transparent, rgba(10,15,30,0.88)); font-size: 0.76rem; color: rgba(255,255,255,0.55); font-style: italic; }
-
-    /* ─── VALUE SECTION — DARK EDITORIAL ROWS ────────────────────── */
-    .value-section { background: #0A0F1E !important; }
-    .value-section h2 { color: #fff; }
-    .value-ed-rows { display: flex; flex-direction: column; gap: 0; border-top: 1px solid rgba(255,255,255,0.07); }
-    .value-ed-row { display: grid; grid-template-columns: 5px 3rem 1fr auto; align-items: center; gap: 0 2rem; padding: 2.2rem 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.07); transition: background 0.3s ease; }
-    .value-ed-row:hover { background: rgba(255,255,255,0.025); }
-    .ver-accent { width: 5px; border-radius: 5px; align-self: stretch; }
-    .ver-icon { font-size: 1.75rem; flex-shrink: 0; }
-    .ver-body h3 { font-size: 1.02rem; font-weight: 800; color: #fff; margin-bottom: 0.3rem; }
-    .ver-body p { font-size: 0.85rem; color: rgba(255,255,255,0.38); line-height: 1.6; }
-    .ver-stat { font-family: 'DM Mono', monospace; font-size: 0.95rem; font-weight: 700; color: #fff; display: flex; flex-direction: column; gap: 0.15rem; text-align: right; flex-shrink: 0; min-width: 120px; }
-    .ver-stat span { font-size: 0.62rem; font-weight: 400; color: rgba(255,255,255,0.28); letter-spacing: 0.06em; }
-
-    /* ─── ENGAGEMENT — PHOTO CARD HEADERS ───────────────────────── */
-    .ec-photo-header { width: calc(100% + 4rem); margin: -2.5rem -2rem 1.5rem; height: 210px; position: relative; overflow: hidden; border-radius: 1.5rem 1.5rem 0 0; }
-    .ec-photo-header img { width: 100%; height: 100%; object-fit: cover; display: block; }
-    .ec-photo-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(10,15,30,0.12) 0%, rgba(10,15,30,0.52) 100%); }
-
-    /* ─── CTA WATERMARK Z-INDEX FIX ──────────────────────────────── */
-    .wm > .cta-inner { position: relative; z-index: 2; }
-
-    /* ─── RESPONSIVE FOR NEW SECTIONS ────────────────────────────── */
-    @media (max-width: 960px) {
-      .section.problem-section { flex-direction: column; min-height: auto; }
-      .problem-photo-half { flex: 0 0 300px; min-height: 300px; width: 100%; }
-      .problem-photo-stat { bottom: 2rem; left: 2rem; }
-      .lc-editorial-row { grid-template-columns: 5px 1fr; gap: 1.5rem; padding: 2.5rem 0.5rem; }
-      .lc-icon-large { display: none; }
-      .value-ed-row { grid-template-columns: 5px 3rem 1fr; }
-      .ver-stat { display: none; }
-    }
-    @media (max-width: 640px) {
-      .problem-data-strip { gap: 1.2rem; }
-      .manifesto-row { grid-template-columns: 3.5rem 1fr; gap: 0 1rem; }
-      .mr-bar { display: none; }
-      .ec-photo-header { height: 160px; margin: -2.5rem -2rem 1.2rem; }
-      .value-ed-row { grid-template-columns: 5px 1fr; }
-      .ver-icon { display: none; }
-    }
-
-    /* ─── POST-HERO THESIS & AT-A-GLANCE ─────────────────────────── */
-    .thesis-band { background: #fff; border-bottom: 1px solid #E5E7EB; padding: 2.5rem 0; }
-    .thesis-inner { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
-    .thesis-kicker {
-      font-size: 0.72rem; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase;
-      color: #054ADA; margin-bottom: 0.75rem;
-    }
-    .thesis-title { font-size: clamp(1.15rem, 2.2vw, 1.45rem); font-weight: 800; color: #0F172A; line-height: 1.25; margin-bottom: 1rem; max-width: 52rem; }
-    .thesis-body { font-size: 0.95rem; color: #4B5563; line-height: 1.75; max-width: 52rem; }
-    .thesis-body ul { margin: 0.85rem 0 0 1.1rem; }
-    .thesis-body li { margin-bottom: 0.35rem; }
-    .thesis-em { color: #111827; font-weight: 700; }
-    .at-a-glance { background: linear-gradient(180deg, #F8FAFC 0%, #F1F5F9 100%); padding: 2rem 0 2.5rem; border-bottom: 1px solid #E5E7EB; }
-    .aag-inner { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
-    .aag-label { font-size: 0.68rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: #9CA3AF; margin-bottom: 1rem; }
-    .aag-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
-    .aag-card { background: #fff; border: 1px solid #E5E7EB; border-radius: 12px; padding: 1.25rem 1.35rem; }
-    .aag-card strong { display: block; font-size: 0.88rem; color: #0F172A; margin-bottom: 0.35rem; }
-    .aag-card span { font-size: 0.82rem; color: #6B7280; line-height: 1.55; }
-    @media (max-width: 900px) { .aag-grid { grid-template-columns: 1fr; } }
-
-    /* ─── HERO AUDIENCE LINE ─────────────────────────────────────── */
-    .hero-audience-line {
-      font-size: clamp(0.88rem, 1.5vw, 0.98rem); font-weight: 600; color: rgba(255,255,255,0.82);
-      max-width: 36rem; line-height: 1.55; margin: -0.5rem 0 0.25rem;
-      animation: fadeInUp 0.8s ease-out 0.22s both;
-    }
-
-    /* ─── HUMAN CAPITAL THESIS (PROBLEM) ─────────────────────────── */
-    .human-capital-panel {
-      margin-top: 2.5rem; padding: 1.75rem 1.5rem;
-      border-radius: 14px;
-      border: 1px solid rgba(14,165,233,0.22);
-      background: rgba(5,74,218,0.12);
-    }
-    .human-capital-panel h3 { font-size: 0.82rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: #0EA5E9; margin-bottom: 0.65rem; }
-    .human-capital-panel p { font-size: 0.88rem; color: rgba(255,255,255,0.78); line-height: 1.65; margin-bottom: 0.75rem; }
-    .human-capital-panel ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.45rem; }
-    .human-capital-panel li { font-size: 0.82rem; color: rgba(255,255,255,0.55); padding-left: 1rem; position: relative; }
-    .human-capital-panel li::before { content: ""; position: absolute; left: 0; top: 0.55em; width: 5px; height: 5px; border-radius: 50%; background: #FACC15; }
-    .human-capital-closing { font-size: 0.9rem; font-weight: 700; color: #FACC15; margin-top: 1rem; line-height: 1.45; }
-
-    /* ─── WDDAM (SOLUTION TOP) ───────────────────────────────────── */
-    .wddam-block { max-width: 900px; margin: 0 auto 3.5rem; padding: 2rem 2rem 2.25rem; border-radius: 16px; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.04); }
-    .wddam-block .wddam-title { font-family: 'DM Mono', monospace; font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 700; color: #FACC15; letter-spacing: 0.04em; margin-bottom: 0.5rem; }
-    .wddam-block .wddam-full { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-bottom: 1rem; }
-    .wddam-block .wddam-lead { font-size: 0.95rem; color: rgba(255,255,255,0.72); line-height: 1.7; margin-bottom: 1.25rem; }
-    .wddam-block .wddam-lead strong { color: #fff; }
-    .wddam-matrix { width: 100%; border-collapse: collapse; font-size: 0.78rem; }
-    .wddam-matrix th, .wddam-matrix td { border: 1px solid rgba(255,255,255,0.1); padding: 0.65rem 0.75rem; text-align: left; vertical-align: top; }
-    .wddam-matrix th { background: rgba(5,74,218,0.35); color: #E0E7FF; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; font-size: 0.68rem; }
-    .wddam-matrix td:first-child { font-weight: 800; color: #FACC15; font-family: 'DM Mono', monospace; width: 3.2rem; white-space: nowrap; }
-    .wddam-matrix td { color: rgba(255,255,255,0.55); line-height: 1.5; }
-    .wddam-matrix .wm-example { color: rgba(255,255,255,0.38); font-size: 0.72rem; display: block; margin-top: 0.35rem; }
-    @media (max-width: 720px) {
-      .wddam-matrix { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; }
-    }
-
-    /* ─── BRIDGE (SOLUTION → LIFECYCLE) ──────────────────────────── */
-    .bridge-outcome-section { background: #0F172A; padding: 3.5rem 0; border-top: 1px solid rgba(255,255,255,0.06); border-bottom: 1px solid rgba(255,255,255,0.06); }
-    .bridge-outcome-section .container { max-width: 900px; }
-    .bridge-outcome-section h2 { font-size: clamp(1.25rem, 2.4vw, 1.65rem); color: #fff; margin-bottom: 1rem; }
-    .bridge-outcome-section p { font-size: 0.95rem; color: rgba(255,255,255,0.55); line-height: 1.75; margin-bottom: 0.85rem; }
-    .bridge-outcome-section p:last-child { margin-bottom: 0; }
-
-    /* ─── WDDAM ENGINES (VALUE) ──────────────────────────────────── */
-    .wddam-engines-wrap { margin-top: 2.5rem; padding-top: 2.5rem; border-top: 1px solid rgba(255,255,255,0.08); }
-    .wddam-engines-wrap h3 { font-size: 1rem; font-weight: 800; color: #fff; margin-bottom: 0.5rem; }
-    .wddam-engines-wrap > p { font-size: 0.88rem; color: rgba(255,255,255,0.42); margin-bottom: 1.5rem; line-height: 1.65; }
-    .wddam-engines-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
-    .wddam-engine-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 1.15rem 1.25rem; }
-    .wddam-engine-card .we-num { font-family: 'DM Mono', monospace; font-size: 0.65rem; font-weight: 700; color: #0EA5E9; letter-spacing: 0.1em; margin-bottom: 0.35rem; }
-    .wddam-engine-card h4 { font-size: 0.92rem; font-weight: 800; color: #fff; margin-bottom: 0.4rem; }
-    .wddam-engine-card p { font-size: 0.78rem; color: rgba(255,255,255,0.45); line-height: 1.55; }
-    @media (max-width: 720px) { .wddam-engines-grid { grid-template-columns: 1fr; } }
-
-    /* ─── HEXAD TEASER (LIFECYCLE) ─────────────────────────────────── */
-    .hexad-teaser { margin-top: 1rem; padding: 1rem 1.1rem; border-radius: 10px; background: rgba(5,74,218,0.15); border: 1px solid rgba(5,74,218,0.25); max-width: 500px; }
-    .hexad-teaser p { font-size: 0.8rem !important; color: rgba(255,255,255,0.55) !important; margin: 0 !important; line-height: 1.6 !important; }
-    .hexad-teaser a { font-weight: 700; color: #7DD3FC !important; text-decoration: underline; text-underline-offset: 3px; }
-
-    /* ─── GLOBAL SCALE STRIP (SECTORS) ───────────────────────────── */
-    .global-scale-strip {
-      display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 2rem 3rem;
-      margin: 2rem auto 0; max-width: 720px; padding: 1.5rem 1.25rem;
-      background: rgba(5,74,218,0.06); border: 1px solid #E5E7EB; border-radius: 14px;
-    }
-    .gss-item { text-align: center; }
-    .gss-val { font-family: 'DM Mono', monospace; font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 800; color: #054ADA; line-height: 1.1; }
-    .gss-key { font-size: 0.72rem; color: #6B7280; font-weight: 600; letter-spacing: 0.04em; margin-top: 0.35rem; max-width: 12rem; margin-left: auto; margin-right: auto; line-height: 1.35; }
-    .gss-disclaimer { width: 100%; text-align: center; font-size: 0.68rem; color: #9CA3AF; margin-top: 1rem; line-height: 1.45; font-style: italic; }
-
-    /* ─── INVESTOR DISCLOSURE (ENGAGEMENT) ───────────────────────── */
-    .invest-disclosure { font-size: 0.76rem; color: #6B7280; line-height: 1.55; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #E5E7EB; }
-    .invest-disclosure a { font-weight: 700; }
-
-    /* ─── CTA ENHANCEMENTS ───────────────────────────────────────── */
-    .cta-lead-global { font-size: 0.95rem; color: rgba(255,255,255,0.55); max-width: 40rem; margin: 0 auto 1.25rem; line-height: 1.65; }
-    .cta-invite-wrap { text-align: left; max-width: 42rem; margin: 0 auto 2rem; }
-    .cta-invite-wrap h3 { font-size: 0.72rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-bottom: 0.75rem; text-align: center; }
-    .cta-invite-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem 2rem; font-size: 0.82rem; color: rgba(255,255,255,0.55); list-style: none; margin: 0; padding: 0; }
-    .cta-invite-grid li { margin-bottom: 0.35rem; padding-left: 0.5rem; border-left: 2px solid rgba(250,204,21,0.35); }
-    .cta-closing-line { font-size: 0.92rem; font-weight: 700; color: #FACC15; margin: 2rem auto 0; max-width: 38rem; line-height: 1.45; }
-    .cta-buttons .btn-cta-secondary { opacity: 0.92; }
-    @media (max-width: 640px) { .cta-invite-grid { grid-template-columns: 1fr; } }
-
-    /* ─── REDUCED MOTION ─────────────────────────────────────────── */
-    @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-      .hero::before, .hero::after { animation: none !important; }
-      .hero h1 { animation: none !important; }
-      .hero-badge, .hero-tagline, .hero-para, .hero-cta-row, .hero-audience-line { animation: none !important; }
-      .hero-stat-panel { animation: none !important; }
-      #tw-cursor { animation: none !important; border-right-color: rgba(250,204,21,0.35); }
-      .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
-      .flip-in { opacity: 1 !important; animation: none !important; }
-      .cta-section::before { animation: none !important; }
-      .engagement-card.featured { animation: none !important; }
-    }
-  </style>
+    ]
+  }
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#hero">Skip to main content</a>
@@ -870,7 +133,7 @@
       </div>
       <div class="nav-cta">
         <a href="index.html" class="btn btn-outline-dark" style="padding:0.5rem 1.1rem;font-size:0.82rem;">&#8592; BTH Group</a>
-        <a href="#cta" class="btn btn-primary" style="padding:0.55rem 1.25rem;font-size:0.85rem;">Schedule Briefing</a>
+        <a href="workforce-engage.html?intent=briefing" class="btn btn-primary" style="padding:0.55rem 1.25rem;font-size:0.85rem;">Schedule Briefing</a>
       </div>
     </div>
   </nav>
@@ -890,8 +153,8 @@
         <p class="hero-tagline" style="margin-top:1.25rem;"><span id="tw-text">Build. Deploy. Acquire. Manage.</span><span id="tw-cursor">&nbsp;</span></p>
         <p class="hero-para">Through the <strong>OEDP Work Network</strong>, BTH delivers <strong>WDDAM</strong> &#8212; Workforce Development, Deployment, Acquisition &amp; Management &#8212; as full-stack infrastructure: certified pipelines, real deployment contracts, acquisition-ready cohorts, and managed lifecycle performance across <strong>26 global sectors</strong>.</p>
         <div class="hero-cta-row">
-          <a href="#cta" class="btn btn-gold btn-lg">Schedule Executive Briefing</a>
-          <a href="program.html" class="btn btn-outline btn-lg">Request Workforce Cohort</a>
+          <a href="workforce-engage.html?intent=briefing" class="btn btn-gold btn-lg">Schedule Executive Briefing</a>
+          <a href="workforce-engage.html?intent=cohort" class="btn btn-outline btn-lg">Request Workforce Cohort</a>
         </div>
       </div>
       <aside class="hero-stat-panel">
@@ -913,45 +176,95 @@
 
   <div class="thesis-band">
     <div class="thesis-inner">
-      <div class="thesis-kicker">The next global infrastructure era</div>
-      <p class="thesis-title">For more than a century, nations invested in energy, transportation, telecommunications, finance, and digital infrastructure &#8212; while workforce infrastructure stayed fragmented.</p>
-      <div class="thesis-body">
-        <p><span class="thesis-em">Not training. Not recruitment alone. Not conventional course delivery.</span> Workforce infrastructure is the systematic production, deployment, acquisition, and management of deployable professional capacity at institutional scale. The defining constraint on growth is no longer abstract &#8220;talent&#8221; &#8212; it is whether institutions can operate <strong>workforce systems</strong> with the same rigor as any other critical infrastructure layer.</p>
+      <p class="thesis-kicker-top">The next global infrastructure era</p>
+      <div class="thesis-layout">
+        <div class="thesis-rail">
+          <div class="thesis-rail-line" aria-hidden="true"></div>
+        </div>
+        <div class="thesis-copy">
+          <p class="thesis-deck">For more than a century, nations invested in energy, transportation, telecommunications, finance, and digital infrastructure &#8212; while workforce infrastructure stayed fragmented.</p>
+          <div class="thesis-body">
+            <p class="thesis-pull">Not training. Not recruitment alone. Not conventional course delivery.</p>
+            <p><strong class="thesis-em">Workforce infrastructure</strong> is the systematic production, deployment, acquisition, and management of deployable professional capacity at institutional scale.</p>
+            <p>The defining constraint on growth is no longer abstract &#8220;talent&#8221; &#8212; it is whether institutions can operate <strong>workforce systems</strong> with the same rigor as any other critical infrastructure layer.</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 
   <div class="at-a-glance">
     <div class="aag-inner">
-      <div class="aag-label">At a glance</div>
+      <div class="aag-head">
+        <span class="aag-label">At a glance</span>
+        <span class="aag-head-rule" aria-hidden="true"></span>
+      </div>
       <div class="aag-grid">
-        <div class="aag-card"><strong>WDDAM full stack</strong><span>Develop certified capacity, deploy into live operations, enable acquisition contracts, and manage lifecycle performance &#8212; sector-specific pathways (e.g. IT, biomedical, energy, gov).</span></div>
-        <div class="aag-card"><strong>OEDP Work Network</strong><span>Delivery spine for placement, CRM-tracked outcomes, and governance aligned to enterprise and public-sector procurement realities.</span></div>
-        <div class="aag-card"><strong>50-person enterprise cohorts</strong><span>Level 1&#8211;5 pipeline in one engagement; vendor-aligned credentials and auditable competency documentation.</span></div>
+        <article class="aag-tile aag-tile--wddam reveal" data-step="01">
+          <h3 class="aag-tile-h">WDDAM full stack</h3>
+          <p class="aag-tile-p">Develop certified capacity, deploy into live operations, enable acquisition contracts, and manage lifecycle performance &#8212; sector-specific pathways (e.g. IT, biomedical, energy, gov).</p>
+          <span class="aag-tile-tag">Formula</span>
+        </article>
+        <article class="aag-tile aag-tile--oedp reveal reveal-delay-1" data-step="02">
+          <h3 class="aag-tile-h">OEDP Work Network</h3>
+          <p class="aag-tile-p">Delivery spine for placement, CRM-tracked outcomes, and governance aligned to enterprise and public-sector procurement realities.</p>
+          <span class="aag-tile-tag">Delivery spine</span>
+        </article>
+        <article class="aag-tile aag-tile--cohort reveal reveal-delay-2" data-step="03">
+          <h3 class="aag-tile-h">50-person enterprise cohorts</h3>
+          <p class="aag-tile-p">Level 1&#8211;5 pipeline in one engagement; vendor-aligned credentials and auditable competency documentation.</p>
+          <span class="aag-tile-tag">Unit of scale</span>
+        </article>
       </div>
     </div>
   </div>
 
-  <!-- AUTHORITY STRIP -->
-  <div class="authority-strip">
+  <!-- AUTHORITY STRIP — STATIC ALIGNMENT GRID -->
+  <div class="authority-strip-v2" aria-label="Vendor and standards alignment">
     <div class="authority-inner">
-      <div class="authority-left">Globally Aligned</div>
-      <div class="authority-logos-track">
-        <div class="authority-logos-inner">
-          <div class="authority-tag"><span>AWS</span> Aligned</div>
-          <div class="authority-tag"><span>Microsoft</span> Partner Track</div>
-          <div class="authority-tag"><span>CompTIA</span> Certified</div>
-          <div class="authority-tag"><span>Cisco</span> Curriculum</div>
-          <div class="authority-tag"><span>ASE</span> Automotive</div>
-          <div class="authority-tag"><span>SDG 16</span> Aligned</div>
-          <div class="authority-tag"><span>ISO 17024</span> Framework</div>
-          <div class="authority-tag"><span>AWS</span> Aligned</div>
-          <div class="authority-tag"><span>Microsoft</span> Partner Track</div>
-          <div class="authority-tag"><span>CompTIA</span> Certified</div>
-          <div class="authority-tag"><span>Cisco</span> Curriculum</div>
-          <div class="authority-tag"><span>ASE</span> Automotive</div>
-          <div class="authority-tag"><span>SDG 16</span> Aligned</div>
-          <div class="authority-tag"><span>ISO 17024</span> Framework</div>
+      <div class="authority-left">Vendor &amp; Standards<br>Alignment</div>
+      <div class="authority-grid">
+        <div class="auth-cell" title="AWS — Cloud certifications">
+          <svg viewBox="0 0 80 24" aria-hidden="true" focusable="false">
+            <text x="40" y="17" text-anchor="middle" font-family="Inter, system-ui" font-weight="800" font-size="16" fill="currentColor" letter-spacing="0.04em">AWS</text>
+          </svg>
+          <span class="auth-name">Aligned</span>
+        </div>
+        <div class="auth-cell" title="Microsoft — Partner track">
+          <svg viewBox="0 0 110 24" aria-hidden="true" focusable="false">
+            <text x="55" y="17" text-anchor="middle" font-family="Inter, system-ui" font-weight="800" font-size="14" fill="currentColor" letter-spacing="0.04em">MICROSOFT</text>
+          </svg>
+          <span class="auth-name">Partner Track</span>
+        </div>
+        <div class="auth-cell" title="CompTIA — Industry certifications">
+          <svg viewBox="0 0 110 24" aria-hidden="true" focusable="false">
+            <text x="55" y="17" text-anchor="middle" font-family="Inter, system-ui" font-weight="800" font-size="14" fill="currentColor" letter-spacing="0.04em">CompTIA</text>
+          </svg>
+          <span class="auth-name">Certified</span>
+        </div>
+        <div class="auth-cell" title="Cisco — Networking curriculum">
+          <svg viewBox="0 0 80 24" aria-hidden="true" focusable="false">
+            <text x="40" y="17" text-anchor="middle" font-family="Inter, system-ui" font-weight="800" font-size="16" fill="currentColor" letter-spacing="0.04em">CISCO</text>
+          </svg>
+          <span class="auth-name">Curriculum</span>
+        </div>
+        <div class="auth-cell" title="ASE — Automotive certifications">
+          <svg viewBox="0 0 80 24" aria-hidden="true" focusable="false">
+            <text x="40" y="17" text-anchor="middle" font-family="Inter, system-ui" font-weight="800" font-size="16" fill="currentColor" letter-spacing="0.04em">ASE</text>
+          </svg>
+          <span class="auth-name">Automotive</span>
+        </div>
+        <div class="auth-cell" title="ISO 17024 — Personnel certification framework">
+          <svg viewBox="0 0 110 24" aria-hidden="true" focusable="false">
+            <text x="55" y="17" text-anchor="middle" font-family="Inter, system-ui" font-weight="800" font-size="14" fill="currentColor" letter-spacing="0.04em">ISO 17024</text>
+          </svg>
+          <span class="auth-name">Framework</span>
+        </div>
+        <div class="auth-cell" title="UN SDG 16 — Strong institutions">
+          <svg viewBox="0 0 80 24" aria-hidden="true" focusable="false">
+            <text x="40" y="17" text-anchor="middle" font-family="Inter, system-ui" font-weight="800" font-size="14" fill="currentColor" letter-spacing="0.04em">SDG 16</text>
+          </svg>
+          <span class="auth-name">Aligned</span>
         </div>
       </div>
     </div>
@@ -960,7 +273,7 @@
   <!-- THE PROBLEM -->
   <section class="section problem-section" id="problem">
     <div class="problem-photo-half">
-      <img src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1400&q=75" alt="Executive team strategic workforce meeting" loading="lazy" />
+      <img src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1400&q=75" alt="Executive team strategic workforce meeting" loading="lazy" width="1400" height="934" />
       <div class="problem-photo-overlay"></div>
       <div class="problem-photo-stat">
         <div class="pps-num" data-count="73" data-suffix="%">0%</div>
@@ -1128,8 +441,8 @@
         <hr class="sol-rule" />
         <div class="sol-statement">Other organizations sell courses. BTH builds the human capital infrastructure behind enterprises, governments, and investors &#8212; then manages it long-term.</div>
         <div style="display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;margin-top:2rem;align-items:center;">
-          <a href="#cta" class="btn btn-gold btn-lg">Schedule Executive Briefing &#8594;</a>
-          <a href="program.html" class="btn btn-outline-dark btn-lg" style="border-color:rgba(255,255,255,0.35);color:#fff;">Request Workforce Cohort</a>
+          <a href="workforce-engage.html?intent=briefing" class="btn btn-gold btn-lg">Schedule Executive Briefing &#8594;</a>
+          <a href="workforce-engage.html?intent=cohort" class="btn btn-outline-dark btn-lg" style="border-color:rgba(255,255,255,0.35);color:#fff;">Request Workforce Cohort</a>
         </div>
       </div>
     </div>
@@ -1151,53 +464,60 @@
         <h2>A Complete Workforce Lifecycle System</h2>
         <p class="lead" style="margin-top:1rem;color:rgba(255,255,255,0.5);">Four integrated stages map directly to <strong>WDDAM</strong> &#8212; one coherent, institutional-grade pipeline. See also <a href="#economic-output" style="color:#7DD3FC;text-decoration:underline;text-underline-offset:3px;">from education output to economic infrastructure</a>.</p>
       </div>
-      <div class="lc-editorial-rows">
-        <div class="lc-editorial-row reveal reveal-delay-1">
-          <div class="lc-ghost-num">01</div>
-          <div class="lc-left-accent" style="background:#054ADA;"></div>
-          <div class="lc-content">
-            <div class="lc-step-badge">Stage 01</div>
+      <!-- FOUR-STEP HORIZONTAL FLOW (W-D-A-M) -->
+      <div class="lc-flow-wrap">
+        <div class="lc-flow" role="list" aria-label="WDDAM four-stage lifecycle">
+          <article class="lc-step-card reveal" data-step="01" role="listitem">
+            <div class="lc-step-circle">01</div>
+            <div class="lc-step-letter">W &#183; Develop</div>
             <h3>Develop</h3>
-            <p>Level 1&#8211;5 certification pathways across 26 sectors. Vendor-aligned credentials: CompTIA, AWS, Cisco, Red Hat. OEDP HEXAD + AWIS institutional methodology. Cohort-based, performance-benchmarked development.</p>
-            <div class="hexad-teaser">
-              <p>Professionals are conditioned through the <strong>Hexad Workforce Conditioning System</strong> (personal, professional, occupational, financial, relationship, and truth-education dimensions) so capacity is institutionally productive &#8212; not only classroom-complete. <a href="oedp.html">Read the OEDP / methodology overview &#8594;</a></p>
+            <p>Build certified capacity through structured Level&nbsp;1&#8211;5 pathways across 26 sectors.</p>
+            <ul class="lc-step-bullets">
+              <li>Vendor-aligned credentials (CompTIA, AWS, Cisco, ASE)</li>
+              <li>OEDP HEXAD + AWIS methodology</li>
+              <li>Cohort-based, performance-benchmarked</li>
+            </ul>
+            <div class="lc-hexad-link">
+              Conditioned through the <strong>Hexad Workforce Conditioning System</strong>. <a href="oedp.html">OEDP overview &#8594;</a>
             </div>
-          </div>
-          <div class="lc-icon-large">&#x1F528;</div>
-        </div>
-        <div class="lc-team-photo reveal">
-          <img src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=1400&q=75" alt="BTH professional enterprise workforce team" loading="lazy" />
-          <div class="lc-photo-caption">Enterprise cohort &#8212; deployment-ready professionals across 26 global sectors</div>
-        </div>
-        <div class="lc-editorial-row reveal reveal-delay-2">
-          <div class="lc-ghost-num">02</div>
-          <div class="lc-left-accent" style="background:#0EA5E9;"></div>
-          <div class="lc-content">
-            <div class="lc-step-badge">Stage 02</div>
+          </article>
+          <article class="lc-step-card reveal reveal-delay-1" data-step="02" role="listitem">
+            <div class="lc-step-circle">02</div>
+            <div class="lc-step-letter">D &#183; Deploy</div>
             <h3>Deploy</h3>
-            <p>OEDP Work Network placement infrastructure. Enterprise-linked deployment pipeline. 2,000-specialist deployment capacity in active cohort. CRM-tracked performance visibility from day one.</p>
-          </div>
-          <div class="lc-icon-large">&#x1F680;</div>
-        </div>
-        <div class="lc-editorial-row reveal reveal-delay-3">
-          <div class="lc-ghost-num">03</div>
-          <div class="lc-left-accent" style="background:#FACC15;"></div>
-          <div class="lc-content">
-            <div class="lc-step-badge">Stage 03</div>
+            <p>Place capacity into live enterprise, sector, and government programmes.</p>
+            <ul class="lc-step-bullets">
+              <li>OEDP Work Network placement infrastructure</li>
+              <li>2,000-specialist active deployment capacity</li>
+              <li>CRM-tracked performance from day one</li>
+            </ul>
+          </article>
+          <article class="lc-step-card reveal reveal-delay-2" data-step="03" role="listitem">
+            <div class="lc-step-circle">03</div>
+            <div class="lc-step-letter">A &#183; Acquire</div>
             <h3>Acquire</h3>
-            <p>Ready-to-deploy cohorts segmented by sector &amp; level. Sponsorship and direct acquisition contract models. Custom cohort design for enterprise operational needs. Contracted talent with verified, auditable credentials.</p>
-          </div>
-          <div class="lc-icon-large">&#x1F91D;</div>
-        </div>
-        <div class="lc-editorial-row reveal reveal-delay-1">
-          <div class="lc-ghost-num">04</div>
-          <div class="lc-left-accent" style="background:#FB923C;"></div>
-          <div class="lc-content">
-            <div class="lc-step-badge">Stage 04</div>
+            <p>Institutional acquisition of verified pipelines and cohort segments.</p>
+            <ul class="lc-step-bullets">
+              <li>Ready cohorts segmented by sector &amp; level</li>
+              <li>Sponsorship + direct acquisition contracts</li>
+              <li>Auditable, verified credentials</li>
+            </ul>
+          </article>
+          <article class="lc-step-card reveal reveal-delay-3" data-step="04" role="listitem">
+            <div class="lc-step-circle">04</div>
+            <div class="lc-step-letter">M &#183; Manage</div>
             <h3>Manage</h3>
-            <p>Sector Workforce Director oversight and governance. Ongoing performance tracking and capacity optimization. Level progression and leadership pipeline development. Long-term workforce scaling and compliance documentation.</p>
-          </div>
-          <div class="lc-icon-large">&#x1F4CA;</div>
+            <p>Operate the workforce as a governed, optimizable institutional system.</p>
+            <ul class="lc-step-bullets">
+              <li>Sector Workforce Director oversight</li>
+              <li>Performance, upskilling, level progression</li>
+              <li>Compliance + ESG documentation</li>
+            </ul>
+          </article>
+        </div>
+        <div class="lc-team-photo reveal" style="margin-top:2.5rem;">
+          <img src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=1400&q=75" alt="BTH professional enterprise workforce team" loading="lazy" width="1400" height="788" />
+          <div class="lc-photo-caption">Enterprise cohort &#8212; deployment-ready professionals across 26 global sectors</div>
         </div>
       </div>
     </div>
@@ -1213,25 +533,41 @@
       </div>
       <div class="cohort-layout">
         <div class="reveal">
-          <div style="font-size:0.75rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-bottom:1.5rem;">Cohort Composition &#8212; 50 Professionals</div>
-          <div class="cohort-bar-row">
-            <div class="cohort-bar-label">Level 1 &#8212; Foundation <span>20 professionals &nbsp;&#183;&nbsp; $8,100 ea.</span></div>
-            <div class="cohort-bar-track"><div class="cohort-bar-fill fill-l1" data-width="60%"></div></div>
+          <div style="font-size:0.75rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-bottom:0.75rem;">Cohort Composition &#8212; 50 Professionals</div>
+          <p class="cohort-caption">Bars below show <strong>share of cohort headcount</strong> (not investment). All five levels are delivered in one engagement; pricing varies by level and is summarized in <strong>Total Cohort Investment</strong>.</p>
+          <div class="cohort-bar-row" style="margin-top:1.25rem;">
+            <div class="cohort-bar-label">
+              <span class="cb-lvl">Level 1 &#183; Foundation</span>
+              <span><span class="cb-pct">40%</span> &nbsp;&#183;&nbsp; <span class="cb-count">20 of 50 &#183; $8,100 ea.</span></span>
+            </div>
+            <div class="cohort-bar-track"><div class="cohort-bar-fill fill-l1" data-width="40%"></div></div>
           </div>
           <div class="cohort-bar-row">
-            <div class="cohort-bar-label">Level 2 &#8212; Specialist <span>10 professionals &nbsp;&#183;&nbsp; $12,000 ea.</span></div>
+            <div class="cohort-bar-label">
+              <span class="cb-lvl">Level 2 &#183; Specialist</span>
+              <span><span class="cb-pct">20%</span> &nbsp;&#183;&nbsp; <span class="cb-count">10 of 50 &#183; $12,000 ea.</span></span>
+            </div>
             <div class="cohort-bar-track"><div class="cohort-bar-fill fill-l2" data-width="20%"></div></div>
           </div>
           <div class="cohort-bar-row">
-            <div class="cohort-bar-label">Level 3 &#8212; Senior Specialist <span>8 professionals &nbsp;&#183;&nbsp; $16,000 ea.</span></div>
+            <div class="cohort-bar-label">
+              <span class="cb-lvl">Level 3 &#183; Senior Specialist</span>
+              <span><span class="cb-pct">16%</span> &nbsp;&#183;&nbsp; <span class="cb-count">8 of 50 &#183; $16,000 ea.</span></span>
+            </div>
             <div class="cohort-bar-track"><div class="cohort-bar-fill fill-l3" data-width="16%"></div></div>
           </div>
           <div class="cohort-bar-row">
-            <div class="cohort-bar-label">Level 4 &#8212; Principal <span>7 professionals &nbsp;&#183;&nbsp; $20,000 ea.</span></div>
+            <div class="cohort-bar-label">
+              <span class="cb-lvl">Level 4 &#183; Principal</span>
+              <span><span class="cb-pct">14%</span> &nbsp;&#183;&nbsp; <span class="cb-count">7 of 50 &#183; $20,000 ea.</span></span>
+            </div>
             <div class="cohort-bar-track"><div class="cohort-bar-fill fill-l4" data-width="14%"></div></div>
           </div>
           <div class="cohort-bar-row">
-            <div class="cohort-bar-label">Level 5 &#8212; Executive / Director <span>5 professionals &nbsp;&#183;&nbsp; $26,865 ea.</span></div>
+            <div class="cohort-bar-label">
+              <span class="cb-lvl">Level 5 &#183; Executive / Director</span>
+              <span><span class="cb-pct">10%</span> &nbsp;&#183;&nbsp; <span class="cb-count">5 of 50 &#183; $26,865 ea.</span></span>
+            </div>
             <div class="cohort-bar-track"><div class="cohort-bar-fill fill-l5" data-width="10%"></div></div>
           </div>
           <div style="margin-top:2rem;padding:1.75rem;background:rgba(250,204,21,0.08);border:1px solid rgba(250,204,21,0.2);border-radius:1rem;">
@@ -1291,33 +627,42 @@
           <span class="donut-label-sub">sectors</span>
         </div>
       </div>
+      <div class="sectors-filter" role="group" aria-label="Filter sectors by category">
+        <button type="button" class="sec-chip" data-filter="all" aria-pressed="true">All <span class="chip-count">26</span></button>
+        <button type="button" class="sec-chip" data-filter="tech" aria-pressed="false">Technology &amp; Cloud <span class="chip-count">8</span></button>
+        <button type="button" class="sec-chip" data-filter="industry" aria-pressed="false">Industry &amp; Energy <span class="chip-count">6</span></button>
+        <button type="button" class="sec-chip" data-filter="business" aria-pressed="false">Business &amp; Finance <span class="chip-count">5</span></button>
+        <button type="button" class="sec-chip" data-filter="public" aria-pressed="false">Public &amp; Social <span class="chip-count">4</span></button>
+        <button type="button" class="sec-chip" data-filter="healthcare" aria-pressed="false">Healthcare &amp; Life Sci <span class="chip-count">2</span></button>
+        <button type="button" class="sec-chip" data-filter="creative" aria-pressed="false">Creative <span class="chip-count">1</span></button>
+      </div>
       <div class="sectors-grid">
-        <div class="sector-tile reveal"><div class="st-icon">&#x1F4BB;</div><div class="st-name">Information Technology</div><div class="st-sub">CompTIA &middot; Cisco &middot; Dev</div></div>
-        <div class="sector-tile reveal reveal-delay-1"><div class="st-icon">&#x2601;&#xFE0F;</div><div class="st-name">Intelligent Cloud &amp; AI</div><div class="st-sub">AWS &middot; Azure &middot; ML</div></div>
-        <div class="sector-tile reveal reveal-delay-2"><div class="st-icon">&#x1F510;</div><div class="st-name">Cybersecurity</div><div class="st-sub">Defense &middot; Risk &middot; Compliance</div></div>
-        <div class="sector-tile reveal reveal-delay-3"><div class="st-icon">&#x1F3E5;</div><div class="st-name">Healthcare &amp; Medical Tech</div><div class="st-sub">HIT &middot; Life Sciences</div></div>
-        <div class="sector-tile reveal"><div class="st-icon">&#x26A1;</div><div class="st-name">Renewable Energy</div><div class="st-sub">Solar &middot; Wind &middot; Green</div></div>
-        <div class="sector-tile reveal reveal-delay-1"><div class="st-icon">&#x1F3D7;&#xFE0F;</div><div class="st-name">Architecture &amp; Construction</div><div class="st-sub">AEC &middot; BIM &middot; PM</div></div>
-        <div class="sector-tile reveal reveal-delay-2"><div class="st-icon">&#x1F50C;</div><div class="st-name">Smart Home &amp; Automation</div><div class="st-sub">IoT &middot; ETA Certified</div></div>
-        <div class="sector-tile reveal reveal-delay-3"><div class="st-icon">&#x1F4E1;</div><div class="st-name">Fiber Optics &amp; Cabling</div><div class="st-sub">Network Infrastructure</div></div>
-        <div class="sector-tile reveal"><div class="st-icon">&#x1F4F6;</div><div class="st-name">Communications &amp; Satellite</div><div class="st-sub">5G &middot; RF &middot; Telecom</div></div>
-        <div class="sector-tile reveal reveal-delay-1"><div class="st-icon">&#x1F3ED;</div><div class="st-name">Manufacturing &amp; Industrial</div><div class="st-sub">Automation &middot; Quality</div></div>
-        <div class="sector-tile reveal reveal-delay-2"><div class="st-icon">&#x1F697;</div><div class="st-name">Automotive Technology</div><div class="st-sub">ASE Certified &middot; EV</div></div>
-        <div class="sector-tile reveal reveal-delay-3"><div class="st-icon">&#x1F4B0;</div><div class="st-name">Finance &amp; Accounting</div><div class="st-sub">Management &middot; FinTech</div></div>
-        <div class="sector-tile reveal"><div class="st-icon">&#x1F4C8;</div><div class="st-name">Business Development</div><div class="st-sub">Strategy &middot; Operations</div></div>
-        <div class="sector-tile reveal reveal-delay-1"><div class="st-icon">&#x1F4E3;</div><div class="st-name">Marketing &amp; Sales</div><div class="st-sub">Digital &middot; Revenue</div></div>
-        <div class="sector-tile reveal reveal-delay-2"><div class="st-icon">&#x1F3DB;&#xFE0F;</div><div class="st-name">Government &amp; Civic Tech</div><div class="st-sub">GovTech &middot; Public Admin</div></div>
-        <div class="sector-tile reveal reveal-delay-3"><div class="st-icon">&#x1F33E;</div><div class="st-name">Agricultural Technology</div><div class="st-sub">AgriTech &middot; Precision</div></div>
-        <div class="sector-tile reveal"><div class="st-icon">&#x1F6A8;</div><div class="st-name">Public Safety</div><div class="st-sub">Emergency &middot; Security</div></div>
-        <div class="sector-tile reveal reveal-delay-1"><div class="st-icon">&#x1F9EC;</div><div class="st-name">Biotech &amp; Life Sciences</div><div class="st-sub">Research &middot; Pharma</div></div>
-        <div class="sector-tile reveal reveal-delay-2"><div class="st-icon">&#x1F680;</div><div class="st-name">Aerospace &amp; Defense</div><div class="st-sub">Aviation &middot; Defense</div></div>
-        <div class="sector-tile reveal reveal-delay-3"><div class="st-icon">&#x1F69A;</div><div class="st-name">Transportation &amp; Logistics</div><div class="st-sub">Supply Chain &middot; Fleet</div></div>
-        <div class="sector-tile reveal"><div class="st-icon">&#x1F3A8;</div><div class="st-name">Creative &amp; Digital Design</div><div class="st-sub">Media &middot; UX &middot; Content</div></div>
-        <div class="sector-tile reveal reveal-delay-1"><div class="st-icon">&#x1F310;</div><div class="st-name">EdTech &amp; Education Systems</div><div class="st-sub">LMS &middot; Instructional</div></div>
-        <div class="sector-tile reveal reveal-delay-2"><div class="st-icon">&#x1F3E0;</div><div class="st-name">Real Estate &amp; Facilities</div><div class="st-sub">Property &middot; Asset Ops</div></div>
-        <div class="sector-tile reveal reveal-delay-3"><div class="st-icon">&#x2696;&#xFE0F;</div><div class="st-name">Legal &amp; Compliance</div><div class="st-sub">Corporate &middot; Regulatory</div></div>
-        <div class="sector-tile reveal"><div class="st-icon">&#x1F916;</div><div class="st-name">Research &amp; Development</div><div class="st-sub">Innovation &middot; Systems</div></div>
-        <div class="sector-tile reveal reveal-delay-1"><div class="st-icon">&#x2764;&#xFE0F;</div><div class="st-name">Family &amp; Social Development</div><div class="st-sub">PECE &middot; CRLA &middot; Community</div></div>
+        <div class="sector-tile reveal" data-categories="tech"><div class="st-icon">&#x1F4BB;</div><div class="st-name">Information Technology</div><div class="st-sub">CompTIA &middot; Cisco &middot; Dev</div></div>
+        <div class="sector-tile reveal reveal-delay-1" data-categories="tech"><div class="st-icon">&#x2601;&#xFE0F;</div><div class="st-name">Intelligent Cloud &amp; AI</div><div class="st-sub">AWS &middot; Azure &middot; ML</div></div>
+        <div class="sector-tile reveal reveal-delay-2" data-categories="tech"><div class="st-icon">&#x1F510;</div><div class="st-name">Cybersecurity</div><div class="st-sub">Defense &middot; Risk &middot; Compliance</div></div>
+        <div class="sector-tile reveal reveal-delay-3" data-categories="healthcare"><div class="st-icon">&#x1F3E5;</div><div class="st-name">Healthcare &amp; Medical Tech</div><div class="st-sub">HIT &middot; Life Sciences</div></div>
+        <div class="sector-tile reveal" data-categories="industry"><div class="st-icon">&#x26A1;</div><div class="st-name">Renewable Energy</div><div class="st-sub">Solar &middot; Wind &middot; Green</div></div>
+        <div class="sector-tile reveal reveal-delay-1" data-categories="industry"><div class="st-icon">&#x1F3D7;&#xFE0F;</div><div class="st-name">Architecture &amp; Construction</div><div class="st-sub">AEC &middot; BIM &middot; PM</div></div>
+        <div class="sector-tile reveal reveal-delay-2" data-categories="tech"><div class="st-icon">&#x1F50C;</div><div class="st-name">Smart Home &amp; Automation</div><div class="st-sub">IoT &middot; ETA Certified</div></div>
+        <div class="sector-tile reveal reveal-delay-3" data-categories="tech"><div class="st-icon">&#x1F4E1;</div><div class="st-name">Fiber Optics &amp; Cabling</div><div class="st-sub">Network Infrastructure</div></div>
+        <div class="sector-tile reveal" data-categories="tech"><div class="st-icon">&#x1F4F6;</div><div class="st-name">Communications &amp; Satellite</div><div class="st-sub">5G &middot; RF &middot; Telecom</div></div>
+        <div class="sector-tile reveal reveal-delay-1" data-categories="industry"><div class="st-icon">&#x1F3ED;</div><div class="st-name">Manufacturing &amp; Industrial</div><div class="st-sub">Automation &middot; Quality</div></div>
+        <div class="sector-tile reveal reveal-delay-2" data-categories="industry"><div class="st-icon">&#x1F697;</div><div class="st-name">Automotive Technology</div><div class="st-sub">ASE Certified &middot; EV</div></div>
+        <div class="sector-tile reveal reveal-delay-3" data-categories="business"><div class="st-icon">&#x1F4B0;</div><div class="st-name">Finance &amp; Accounting</div><div class="st-sub">Management &middot; FinTech</div></div>
+        <div class="sector-tile reveal" data-categories="business"><div class="st-icon">&#x1F4C8;</div><div class="st-name">Business Development</div><div class="st-sub">Strategy &middot; Operations</div></div>
+        <div class="sector-tile reveal reveal-delay-1" data-categories="business"><div class="st-icon">&#x1F4E3;</div><div class="st-name">Marketing &amp; Sales</div><div class="st-sub">Digital &middot; Revenue</div></div>
+        <div class="sector-tile reveal reveal-delay-2" data-categories="public"><div class="st-icon">&#x1F3DB;&#xFE0F;</div><div class="st-name">Government &amp; Civic Tech</div><div class="st-sub">GovTech &middot; Public Admin</div></div>
+        <div class="sector-tile reveal reveal-delay-3" data-categories="public"><div class="st-icon">&#x1F33E;</div><div class="st-name">Agricultural Technology</div><div class="st-sub">AgriTech &middot; Precision</div></div>
+        <div class="sector-tile reveal" data-categories="public"><div class="st-icon">&#x1F6A8;</div><div class="st-name">Public Safety</div><div class="st-sub">Emergency &middot; Security</div></div>
+        <div class="sector-tile reveal reveal-delay-1" data-categories="healthcare"><div class="st-icon">&#x1F9EC;</div><div class="st-name">Biotech &amp; Life Sciences</div><div class="st-sub">Research &middot; Pharma</div></div>
+        <div class="sector-tile reveal reveal-delay-2" data-categories="industry"><div class="st-icon">&#x1F680;</div><div class="st-name">Aerospace &amp; Defense</div><div class="st-sub">Aviation &middot; Defense</div></div>
+        <div class="sector-tile reveal reveal-delay-3" data-categories="industry"><div class="st-icon">&#x1F69A;</div><div class="st-name">Transportation &amp; Logistics</div><div class="st-sub">Supply Chain &middot; Fleet</div></div>
+        <div class="sector-tile reveal" data-categories="creative"><div class="st-icon">&#x1F3A8;</div><div class="st-name">Creative &amp; Digital Design</div><div class="st-sub">Media &middot; UX &middot; Content</div></div>
+        <div class="sector-tile reveal reveal-delay-1" data-categories="tech"><div class="st-icon">&#x1F310;</div><div class="st-name">EdTech &amp; Education Systems</div><div class="st-sub">LMS &middot; Instructional</div></div>
+        <div class="sector-tile reveal reveal-delay-2" data-categories="business"><div class="st-icon">&#x1F3E0;</div><div class="st-name">Real Estate &amp; Facilities</div><div class="st-sub">Property &middot; Asset Ops</div></div>
+        <div class="sector-tile reveal reveal-delay-3" data-categories="business"><div class="st-icon">&#x2696;&#xFE0F;</div><div class="st-name">Legal &amp; Compliance</div><div class="st-sub">Corporate &middot; Regulatory</div></div>
+        <div class="sector-tile reveal" data-categories="tech"><div class="st-icon">&#x1F916;</div><div class="st-name">Research &amp; Development</div><div class="st-sub">Innovation &middot; Systems</div></div>
+        <div class="sector-tile reveal reveal-delay-1" data-categories="public"><div class="st-icon">&#x2764;&#xFE0F;</div><div class="st-name">Family &amp; Social Development</div><div class="st-sub">PECE &middot; CRLA &middot; Community</div></div>
       </div>
       <div class="sectors-cta reveal">
         <a href="program.html" class="btn btn-primary btn-lg">Browse All 26 Sector Programs &#8594;</a>
@@ -1418,6 +763,53 @@
     </div>
   </section>
 
+  <!-- RESULTS / PROOF STRIP — 3 anonymized references -->
+  <section class="proof-strip-section" id="results" aria-label="Engagement signals and reference examples">
+    <div class="proof-strip-inner">
+      <div class="proof-strip-header reveal">
+        <div class="eyebrow">Engagement Signals</div>
+        <h2>What WDDAM looks like in practice</h2>
+        <p>Three illustrative reference profiles drawn from BTH&#8217;s engagement footprint &#8212; structured to show the shape of institutional workforce contracts rather than to identify any specific counterparty.</p>
+      </div>
+      <div class="proof-grid">
+        <article class="proof-card reveal">
+          <span class="proof-tag">REF 01 &#183; Enterprise &#183; IT &amp; Cloud</span>
+          <h3>National telecoms operator &#8212; cloud &amp; cyber capability build-out</h3>
+          <p class="proof-context">Multi-sector operator commissions Level 1&#8211;5 cohort across cloud, cyber, and network operations &#8212; full WDDAM stack, managed delivery, governance reporting.</p>
+          <div class="proof-metrics">
+            <div class="proof-metric"><div class="pm-val">50</div><div class="pm-key">cohort headcount</div></div>
+            <div class="proof-metric"><div class="pm-val">L1&#8211;L5</div><div class="pm-key">pipeline depth</div></div>
+            <div class="proof-metric"><div class="pm-val">36mo</div><div class="pm-key">managed window</div></div>
+            <div class="proof-metric"><div class="pm-val">CRM</div><div class="pm-key">tracked outcomes</div></div>
+          </div>
+        </article>
+        <article class="proof-card reveal reveal-delay-1">
+          <span class="proof-tag">REF 02 &#183; Government &#183; Digital Skills Mandate</span>
+          <h3>Public-sector digital workforce programme</h3>
+          <p class="proof-context">Government workforce unit commissions sector pathways under a national digital skills mandate &#8212; structured pathways, sectoral compliance, ESG-aligned reporting.</p>
+          <div class="proof-metrics">
+            <div class="proof-metric"><div class="pm-val">Multi</div><div class="pm-key">sector pathways</div></div>
+            <div class="proof-metric"><div class="pm-val">SDG&nbsp;8/16</div><div class="pm-key">alignment</div></div>
+            <div class="proof-metric"><div class="pm-val">ISO 17024</div><div class="pm-key">certification framework</div></div>
+            <div class="proof-metric"><div class="pm-val">Audit</div><div class="pm-key">documentable evidence</div></div>
+          </div>
+        </article>
+        <article class="proof-card reveal reveal-delay-2">
+          <span class="proof-tag">REF 03 &#183; Capital Partner &#183; Infrastructure Pod</span>
+          <h3>Infrastructure investor &#8212; workforce production pod</h3>
+          <p class="proof-context">Capital partner co-operates a Workforce Infrastructure Pod &#8212; sector-specific cohorts placed under deployment and acquisition contracts; recurring revenue model.</p>
+          <div class="proof-metrics">
+            <div class="proof-metric"><div class="pm-val">Pod</div><div class="pm-key">operating unit</div></div>
+            <div class="proof-metric"><div class="pm-val">50&#8211;2k+</div><div class="pm-key">scaling range</div></div>
+            <div class="proof-metric"><div class="pm-val">Recurring</div><div class="pm-key">contract revenue</div></div>
+            <div class="proof-metric"><div class="pm-val">Multi</div><div class="pm-key">sector coverage</div></div>
+          </div>
+        </article>
+      </div>
+      <p class="proof-disclaimer">Reference profiles are descriptive of engagement structure only. Named references, full case studies, and contract documentation are shared under NDA during executive briefings.</p>
+    </div>
+  </section>
+
   <!-- ENGAGEMENT MODEL -->
   <section class="section engagement-section" id="partner">
     <div class="container">
@@ -1426,13 +818,10 @@
         <h2>How Organizations Engage With BTH</h2>
         <p class="lead" style="margin-top:1rem;">We structure engagement models to fit your organizational context &#8212; whether acquiring ready talent, commissioning development programs, or co-investing in infrastructure.</p>
       </div>
-      <div class="engagement-grid">
+      <div class="engagement-grid engagement-grid-v2">
         <div class="engagement-card reveal">
-          <div class="ec-photo-header">
-            <img src="https://images.pexels.com/photos/1544946/pexels-photo-1544946.jpeg?auto=compress&cs=tinysrgb&w=900&q=75" alt="Corporate workforce engagement boardroom" loading="lazy" />
-            <div class="ec-photo-overlay"></div>
-          </div>
           <div class="ec-badge">Model 01</div>
+          <p class="ec-meta">Commission &#183; Managed delivery</p>
           <h3>Internal Workforce Development</h3>
           <p>Commission BTH to develop a certified workforce pipeline tailored to your organization&#8217;s sector, operational needs, and talent architecture &#8212; entirely managed under your institutional brief.</p>
           <ul class="ec-list">
@@ -1441,10 +830,11 @@
             <li>Dedicated Sector Workforce Director</li>
             <li>End-to-end managed delivery</li>
           </ul>
-          <a href="#cta" class="btn btn-outline-dark" style="margin-top:auto;">Request a Proposal &#8594;</a>
+          <a href="workforce-engage.html?intent=proposal" class="btn btn-outline-dark ec-cta">Request a Proposal &#8594;</a>
         </div>
         <div class="engagement-card featured reveal reveal-delay-2">
           <div class="ec-badge ec-badge-featured">Recommended</div>
+          <p class="ec-meta">Sponsor &#183; Acquire ready cohorts</p>
           <h3>Sponsored Workforce Programs</h3>
           <p>Sponsor the development of a 50-professional cohort &#8212; acquiring deployment-ready, certified talent across your target sector while maximizing ESG and strategic HR impact.</p>
           <ul class="ec-list">
@@ -1454,14 +844,11 @@
             <li class="white">CRM-tracked performance reporting</li>
             <li class="white">Preferred acquisition rights included</li>
           </ul>
-          <a href="program.html" class="btn btn-gold" style="margin-top:auto;">Request Workforce Cohort &#8594;</a>
+          <a href="workforce-engage.html?intent=cohort" class="btn btn-gold ec-cta">Request Workforce Cohort &#8594;</a>
         </div>
         <div class="engagement-card reveal reveal-delay-3">
-          <div class="ec-photo-header">
-            <img src="https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg?auto=compress&cs=tinysrgb&w=900&q=75" alt="Enterprise infrastructure co-investment operations" loading="lazy" />
-            <div class="ec-photo-overlay"></div>
-          </div>
           <div class="ec-badge">Model 03</div>
+          <p class="ec-meta">Co-invest &#183; Operate a pod</p>
           <h3>Infrastructure Co-Investment</h3>
           <p>Own or co-operate a BTH Workforce Infrastructure Pod &#8212; a structured revenue-generating unit delivering workforce development, deployment, and acquisition contracts at scale.</p>
           <ul class="ec-list">
@@ -1470,8 +857,8 @@
             <li>Multi-sector revenue infrastructure</li>
             <li>Scalable from 50 to 2,000+ professionals</li>
           </ul>
-          <p class="invest-disclosure">Detailed investment mechanics (including sector investor structures, schedules, and portfolio models) are published on the <a href="https://invest.btheducationgroup.com" target="_blank" rel="noopener">Investor Platform</a> for qualified review. Nothing on this page constitutes an offer of securities; engagements are subject to due diligence, jurisdiction, and contract.</p>
-          <a href="https://invest.btheducationgroup.com" target="_blank" rel="noopener" class="btn btn-outline-dark" style="margin-top:auto;">Explore Investor Platform &#8594;</a>
+          <p class="invest-disclosure">Detailed investment mechanics are published on the <a href="https://invest.btheducationgroup.com" target="_blank" rel="noopener">Investor Platform</a> for qualified review. Nothing on this page constitutes an offer of securities; engagements are subject to due diligence, jurisdiction, and contract.</p>
+          <a href="https://invest.btheducationgroup.com" target="_blank" rel="noopener" class="btn btn-outline-dark ec-cta">Explore Investor Platform &#8594;</a>
         </div>
       </div>
     </div>
@@ -1496,8 +883,8 @@
         </ul>
       </div>
       <div class="cta-buttons">
-        <a href="mailto:info@btheducationgroup.org?subject=Executive%20Briefing%20Request" class="btn btn-gold btn-lg">Schedule Executive Briefing</a>
-        <a href="program.html" class="btn btn-outline btn-lg btn-cta-secondary">Request Workforce Cohort</a>
+        <a href="workforce-engage.html?intent=briefing" class="btn btn-gold btn-lg">Schedule Executive Briefing</a>
+        <a href="workforce-engage.html?intent=cohort" class="btn btn-outline btn-lg btn-cta-secondary">Request Workforce Cohort</a>
       </div>
       <p class="cta-closing-line">The 20th century was built on industrial infrastructure. The 21st century is being built on workforce infrastructure &#8212; and the institutions that control workforce systems will shape global economic outcomes.</p>
       <div class="cta-note">WhatsApp: +237 680 289 956 &nbsp;&middot;&nbsp; Tel: +237 653 795 603 &nbsp;&middot;&nbsp; info@btheducationgroup.org</div>
@@ -1531,7 +918,7 @@
         <ul class="footer-links">
           <li><a href="#partner">Partnership Models</a></li>
           <li><a href="program.html">Request Cohort</a></li>
-          <li><a href="mailto:info@btheducationgroup.org?subject=Executive%20Briefing">Schedule Briefing</a></li>
+          <li><a href="workforce-engage.html?intent=briefing">Schedule Briefing</a></li>
           <li><a href="index.html">&#8592; BTH Group Home</a></li>
         </ul>
       </div>
@@ -1542,280 +929,7 @@
     </div>
   </footer>
 
-  <script>
-    /* ═══════════════════════════════════════════════════════════════
-       ELITE INTERACTIVE ENGINE — BTH Workforce Infrastructure v2
-       Neural Canvas · 3D Tilt · Typewriter · Magnetic · Parallax
-       Donut SVG · Watermarks · Flip Reveals · Scroll Bar
-    ═══════════════════════════════════════════════════════════════ */
-
-    var PRM = typeof window.matchMedia === 'function' && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-    /* ── SCROLL PROGRESS BAR ──────────────────────────────────── */
-    (function() {
-      const bar = document.getElementById('scrollProgress');
-      if (!bar) return;
-      window.addEventListener('scroll', function() {
-        var max = document.documentElement.scrollHeight - window.innerHeight;
-        if (max > 0) bar.style.width = ((window.scrollY / max) * 100) + '%';
-      }, { passive: true });
-    })();
-
-    /* ── SECTION WATERMARKS ───────────────────────────────────── */
-    (function() {
-      var map = [
-        ['.problem-section',   'CHALLENGE',      false],
-        ['.solution-section',  'INFRASTRUCTURE', false],
-        ['.bridge-outcome-section', 'OUTPUT',   false],
-        ['.lifecycle-section', 'LIFECYCLE',       false],
-        ['.sectors-section',   'SECTORS',         false],
-        ['.value-section',     'VALUE',           false],
-        ['.engagement-section','ENGAGE',          false],
-        ['.cohort-section',    'COHORT',          true]
-      ];
-      map.forEach(function(item) {
-        var el = document.querySelector(item[0]);
-        if (!el) return;
-        el.classList.add('wm');
-        if (item[2]) el.classList.add('wm-dark');
-        el.setAttribute('data-wm', item[1]);
-      });
-      var wmIO = new IntersectionObserver(function(entries) {
-        entries.forEach(function(e) {
-          if (e.isIntersecting) e.target.classList.add('wm-show');
-          else e.target.classList.remove('wm-show');
-        });
-      }, { threshold: 0.04 });
-      document.querySelectorAll('.wm').forEach(function(el) { wmIO.observe(el); });
-    })();
-
-    /* ── CANVAS NEURAL NETWORK ────────────────────────────────── */
-    (function() {
-      var canvas = document.getElementById('neural-canvas');
-      if (!canvas || PRM) return;
-      var ctx = canvas.getContext('2d');
-      var NODES = 52, MAX_D = 130, SPD = 0.34;
-      var W = 0, H = 0, nodes = [], raf = null;
-
-      function resize() {
-        var p = canvas.parentElement;
-        W = canvas.width  = p.offsetWidth;
-        H = canvas.height = p.offsetHeight;
-      }
-
-      function spawn() {
-        nodes = [];
-        for (var i = 0; i < NODES; i++) {
-          nodes.push({
-            x: Math.random() * W, y: Math.random() * H,
-            vx: (Math.random() - 0.5) * SPD,
-            vy: (Math.random() - 0.5) * SPD,
-            r: Math.random() * 1.8 + 1.1
-          });
-        }
-      }
-
-      function frame() {
-        ctx.clearRect(0, 0, W, H);
-        for (var i = 0; i < nodes.length; i++) {
-          var n = nodes[i];
-          n.x += n.vx; n.y += n.vy;
-          if (n.x < 0 || n.x > W) n.vx *= -1;
-          if (n.y < 0 || n.y > H) n.vy *= -1;
-          ctx.beginPath();
-          ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
-          ctx.fillStyle = 'rgba(14,165,233,0.75)';
-          ctx.fill();
-        }
-        for (var i = 0; i < nodes.length; i++) {
-          for (var j = i + 1; j < nodes.length; j++) {
-            var dx = nodes[i].x - nodes[j].x;
-            var dy = nodes[i].y - nodes[j].y;
-            var d2 = dx * dx + dy * dy;
-            if (d2 < MAX_D * MAX_D) {
-              var alpha = (1 - Math.sqrt(d2) / MAX_D) * 0.4;
-              ctx.beginPath();
-              ctx.moveTo(nodes[i].x, nodes[i].y);
-              ctx.lineTo(nodes[j].x, nodes[j].y);
-              ctx.strokeStyle = 'rgba(14,165,233,' + alpha + ')';
-              ctx.lineWidth = 0.75;
-              ctx.stroke();
-            }
-          }
-        }
-        raf = requestAnimationFrame(frame);
-      }
-
-      function start() { if (!raf) frame(); }
-      function stop()  { if (raf)  { cancelAnimationFrame(raf); raf = null; } }
-
-      resize(); spawn(); start();
-
-      new ResizeObserver(function() { resize(); spawn(); }).observe(canvas.parentElement);
-      new IntersectionObserver(function(entries) {
-        entries.forEach(function(e) { e.isIntersecting ? start() : stop(); });
-      }, { threshold: 0 }).observe(canvas.parentElement);
-    })();
-
-    /* ── PARALLAX HERO PHOTO ──────────────────────────────────── */
-    (function() {
-      var layer = document.getElementById('heroPhotoLayer');
-      if (!layer || PRM) return;
-      window.addEventListener('scroll', function() {
-        layer.style.transform = 'translateY(' + (window.scrollY * 0.28) + 'px)';
-      }, { passive: true });
-    })();
-
-    /* ── TYPEWRITER ENGINE ────────────────────────────────────── */
-    (function() {
-      var el = document.getElementById('tw-text');
-      if (!el) return;
-      if (PRM) {
-        el.textContent = 'WDDAM: Develop. Deploy. Acquire. Manage.';
-        return;
-      }
-      var phrases = [
-        'WDDAM: Develop. Deploy. Acquire. Manage.',
-        'Build. Deploy. Acquire. Manage.',
-        'From Certification to Deployment.',
-        'Certified. Verified. Deployed.',
-        'Enterprise Grade. Institutional Scale.',
-        'Not Training. Workforce Infrastructure.'
-      ];
-      var pi = 0, ci = 0, del = false;
-      function tick() {
-        var ph = phrases[pi];
-        if (!del) {
-          el.textContent = ph.slice(0, ++ci);
-          if (ci === ph.length) { del = true; return setTimeout(tick, 2300); }
-          setTimeout(tick, 54);
-        } else {
-          el.textContent = ph.slice(0, --ci);
-          if (ci === 0) {
-            del = false;
-            pi = (pi + 1) % phrases.length;
-            return setTimeout(tick, 380);
-          }
-          setTimeout(tick, 25);
-        }
-      }
-      setTimeout(tick, 1100);
-    })();
-
-    /* ── 3D PERSPECTIVE TILT CARDS ────────────────────────────── */
-    (function() {
-      if (PRM) return;
-      var sel = '.solution-card, .value-card, .engagement-card:not(.featured), .lifecycle-card';
-      document.querySelectorAll(sel).forEach(function(card) {
-        card.addEventListener('mousemove', function(e) {
-          var r = card.getBoundingClientRect();
-          var rx = ((e.clientY - r.top  - r.height / 2) / (r.height / 2)) * -8;
-          var ry = ((e.clientX - r.left - r.width  / 2) / (r.width  / 2)) *  8;
-          card.style.transform = 'perspective(900px) rotateX(' + rx + 'deg) rotateY(' + ry + 'deg) translateY(-4px) scale(1.02)';
-          card.style.boxShadow = (-ry * 1.3) + 'px ' + (rx * 1.3) + 'px 40px rgba(15,23,42,0.14)';
-        });
-        card.addEventListener('mouseleave', function() {
-          card.style.transform = '';
-          card.style.boxShadow = '';
-        });
-      });
-    })();
-
-    /* ── MAGNETIC BUTTONS ─────────────────────────────────────── */
-    (function() {
-      if (PRM) return;
-      document.querySelectorAll('.btn-gold, .btn-primary').forEach(function(btn) {
-        btn.addEventListener('mousemove', function(e) {
-          var r = btn.getBoundingClientRect();
-          var dx = (e.clientX - (r.left + r.width  / 2)) * 0.32;
-          var dy = (e.clientY - (r.top  + r.height / 2)) * 0.32;
-          btn.style.transform = 'translate(' + dx + 'px,' + dy + 'px) translateY(-2px)';
-        });
-        btn.addEventListener('mouseleave', function() { btn.style.transform = ''; });
-      });
-    })();
-
-    /* ── FLIP CARD REVEAL CLASSES ─────────────────────────────── */
-    document.querySelectorAll('.solution-card, .value-card, .engagement-card').forEach(function(card) {
-      card.classList.add('flip-in');
-    });
-
-    /* ── SCROLL REVEAL ────────────────────────────────────────── */
-    var revealIO = new IntersectionObserver(function(entries) {
-      entries.forEach(function(e) {
-        if (e.isIntersecting) { e.target.classList.add('visible'); revealIO.unobserve(e.target); }
-      });
-    }, { threshold: 0.06, rootMargin: '0px 0px -30px 0px' });
-    document.querySelectorAll('.reveal, .flip-in').forEach(function(el) { revealIO.observe(el); });
-
-    /* ── COUNT-UP ANIMATION (easeOutExpo) ────────────────────── */
-    var _counted = new Set();
-    function animateCount(el) {
-      if (_counted.has(el)) return;
-      _counted.add(el);
-      var target = parseInt(el.dataset.count.replace(/\D/g, ''), 10);
-      var prefix = el.dataset.prefix || '';
-      var suffix = el.dataset.suffix || '';
-      if (PRM || isNaN(target)) {
-        el.textContent = prefix + (isNaN(target) ? '0' : Math.round(target).toLocaleString()) + suffix;
-        return;
-      }
-      var dur = 1800, t0 = performance.now();
-      (function tick(now) {
-        var p = Math.min((now - t0) / dur, 1);
-        var ease = p === 1 ? 1 : 1 - Math.pow(2, -10 * p);
-        el.textContent = prefix + Math.round(ease * target).toLocaleString() + suffix;
-        if (p < 1) requestAnimationFrame(tick);
-      })(t0);
-    }
-    var countIO = new IntersectionObserver(function(entries) {
-      entries.forEach(function(e) {
-        if (e.isIntersecting) { animateCount(e.target); countIO.unobserve(e.target); }
-      });
-    }, { threshold: 0.08, rootMargin: '0px 0px -20px 0px' });
-    document.querySelectorAll('[data-count]').forEach(function(el) { countIO.observe(el); });
-    /* Safety: fire count-up for any element already in view at load */
-    window.addEventListener('load', function() {
-      var vh = window.innerHeight;
-      document.querySelectorAll('[data-count]').forEach(function(el) {
-        var r = el.getBoundingClientRect();
-        if (r.top < vh && r.bottom > 0) { countIO.unobserve(el); animateCount(el); }
-      });
-    });
-
-    /* ── COHORT BAR CHART ANIMATION ───────────────────────────── */
-    var barIO = new IntersectionObserver(function(entries) {
-      entries.forEach(function(e) {
-        if (e.isIntersecting) {
-          if (PRM) {
-            e.target.style.width = e.target.dataset.width;
-          } else {
-            setTimeout(function() { e.target.style.width = e.target.dataset.width; }, 260);
-          }
-          barIO.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.08, rootMargin: '0px 0px -20px 0px' });
-    document.querySelectorAll('.cohort-bar-fill[data-width]').forEach(function(el) { barIO.observe(el); });
-
-    /* ── SECTOR DONUT CHART ───────────────────────────────────── */
-    (function() {
-      var arc = document.getElementById('donut-arc');
-      if (!arc) return;
-      var donutIO = new IntersectionObserver(function(entries) {
-        entries.forEach(function(e) {
-          if (e.isIntersecting) {
-            if (PRM) {
-              arc.style.transition = 'none';
-            }
-            arc.style.strokeDashoffset = '0';
-            donutIO.unobserve(arc);
-          }
-        });
-      }, { threshold: 0.15 });
-      donutIO.observe(arc);
-    })();
-  </script>
+  <script src="assets/js/workforce-infrastructure.js" defer></script>
 
   <!-- BTH Intelligent Assistant loads below -->
   <script src="assets/js/bth-chatbot.js"></script>

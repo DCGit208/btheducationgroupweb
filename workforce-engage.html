@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Engage BTH Workforce Infrastructure — Intake</title>
+  <meta name="description" content="Structured intake form for organisations engaging BTH Education Group on WDDAM workforce infrastructure — request a briefing, a workforce cohort, or a proposal." />
+  <meta property="og:title" content="Engage BTH Workforce Infrastructure — Intake" />
+  <meta property="og:description" content="Briefings, cohort requests, and proposals for institutional WDDAM workforce engagements." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.btheducationgroup.org/workforce-engage" />
+  <meta name="robots" content="noindex" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=DM+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/workforce-infrastructure.css" />
+
+  <style>
+    body { background: #F5F5F7; }
+
+    .engage-shell { min-height: 100vh; display: flex; flex-direction: column; }
+    .engage-hero { background: linear-gradient(135deg, #0F172A 0%, #0F2060 55%, #0F172A 100%); color: #fff; padding: 80px 0 64px; position: relative; overflow: hidden; }
+    .engage-hero::before {
+      content: ""; position: absolute; inset: 0;
+      background: radial-gradient(circle at 20% 30%, rgba(5,74,218,0.25), transparent 60%),
+                  radial-gradient(circle at 80% 70%, rgba(14,165,233,0.2), transparent 60%);
+      pointer-events: none;
+    }
+    .engage-hero-inner { position: relative; z-index: 1; max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+    .engage-hero .eyebrow { color: #FACC15; }
+    .engage-hero h1 { font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 800; line-height: 1.15; letter-spacing: -0.015em; margin-bottom: 1rem; }
+    .engage-hero p { font-size: 1.02rem; color: rgba(255,255,255,0.72); line-height: 1.7; max-width: 44rem; }
+
+    .engage-body { max-width: 1100px; margin: -3rem auto 0; padding: 0 2rem 80px; position: relative; z-index: 2; flex: 1; }
+
+    .intent-bar {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem;
+      margin-bottom: 1.5rem;
+    }
+    .intent-card {
+      display: block;
+      background: #fff;
+      border: 1.5px solid #E5E7EB;
+      border-radius: 14px;
+      padding: 1.1rem 1.2rem;
+      cursor: pointer;
+      transition: border-color 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
+    }
+    .intent-card:hover { border-color: #BFDBFE; transform: translateY(-2px); box-shadow: 0 12px 32px rgba(15,23,42,0.07); }
+    .intent-card input { position: absolute; opacity: 0; pointer-events: none; }
+    .intent-card.is-active { border-color: #054ADA; box-shadow: 0 0 0 3px rgba(5,74,218,0.12); }
+    .intent-card .ic-key {
+      font-family: 'DM Mono', monospace; font-size: 0.7rem; font-weight: 700;
+      letter-spacing: 0.12em; text-transform: uppercase; color: #054ADA; margin-bottom: 0.35rem;
+    }
+    .intent-card h3 { font-size: 0.98rem; font-weight: 800; color: #0F172A; margin-bottom: 0.3rem; }
+    .intent-card p { font-size: 0.8rem; color: #6B7280; line-height: 1.45; margin: 0; }
+
+    .engage-form-card {
+      background: #fff;
+      border: 1px solid #E5E7EB;
+      border-radius: 18px;
+      padding: 2rem 2.25rem;
+      box-shadow: 0 12px 36px rgba(15,23,42,0.06);
+    }
+    .engage-form h2 { font-size: 1.2rem; font-weight: 800; color: #0F172A; margin-bottom: 0.35rem; }
+    .engage-form .sub { font-size: 0.88rem; color: #6B7280; margin-bottom: 1.5rem; line-height: 1.6; }
+    .field-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem 1.25rem; }
+    .field { display: flex; flex-direction: column; gap: 0.4rem; }
+    .field.full { grid-column: 1 / -1; }
+    .field label { font-size: 0.78rem; font-weight: 700; color: #1F2937; letter-spacing: 0.02em; }
+    .field label .req { color: #DC2626; margin-left: 0.15rem; }
+    .field input, .field select, .field textarea {
+      font-family: inherit;
+      font-size: 0.92rem;
+      color: #111827;
+      background: #fff;
+      border: 1.5px solid #E5E7EB;
+      border-radius: 10px;
+      padding: 0.7rem 0.85rem;
+      transition: border-color 0.18s ease, box-shadow 0.18s ease;
+      width: 100%;
+    }
+    .field textarea { resize: vertical; min-height: 110px; }
+    .field input:focus, .field select:focus, .field textarea:focus {
+      outline: none; border-color: #054ADA;
+      box-shadow: 0 0 0 3px rgba(5,74,218,0.14);
+    }
+    .field .hint { font-size: 0.72rem; color: #9CA3AF; }
+
+    .checkrow { display: flex; gap: 0.6rem; align-items: flex-start; font-size: 0.84rem; color: #374151; line-height: 1.55; margin-top: 1rem; }
+    .checkrow input[type="checkbox"] { margin-top: 0.25rem; flex-shrink: 0; }
+
+    .engage-actions { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1.75rem; align-items: center; }
+    .engage-actions .small {
+      font-size: 0.74rem; color: #6B7280; line-height: 1.5; max-width: 22rem;
+    }
+
+    .engage-aside {
+      background: linear-gradient(180deg, #0F172A 0%, #0F2060 100%);
+      color: #fff;
+      border-radius: 18px;
+      padding: 1.85rem 1.6rem;
+    }
+    .engage-aside h3 { font-size: 0.78rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: #FACC15; margin-bottom: 1rem; }
+    .engage-aside ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.75rem; }
+    .engage-aside li { font-size: 0.85rem; color: rgba(255,255,255,0.72); line-height: 1.55; padding-left: 1.1rem; position: relative; }
+    .engage-aside li::before { content: ""; position: absolute; left: 0; top: 0.55em; width: 6px; height: 6px; border-radius: 50%; background: #0EA5E9; }
+    .engage-contact { margin-top: 1.5rem; padding-top: 1.25rem; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.8rem; color: rgba(255,255,255,0.55); line-height: 1.6; }
+    .engage-contact strong { color: #fff; }
+
+    .engage-layout {
+      display: grid; grid-template-columns: minmax(0, 1fr) 320px;
+      gap: 1.5rem; margin-top: 1rem;
+    }
+    @media (max-width: 900px) {
+      .engage-layout { grid-template-columns: 1fr; }
+      .field-grid { grid-template-columns: 1fr; }
+      .intent-bar { grid-template-columns: 1fr; }
+    }
+
+    .success-panel {
+      display: none;
+      padding: 2.25rem 2.25rem;
+      text-align: center;
+    }
+    .success-panel.is-visible { display: block; }
+    .success-panel h2 { color: #054ADA; }
+    .success-panel p { color: #374151; font-size: 0.95rem; line-height: 1.7; max-width: 32rem; margin: 0.75rem auto 0; }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#engage-form">Skip to intake form</a>
+
+  <div class="engage-shell">
+    <nav class="topnav">
+      <div class="topnav-inner">
+        <div class="nav-brand">BTH <span>Education</span> Group</div>
+        <div class="nav-links">
+          <a href="workforce-infrastructure.html#problem">The Problem</a>
+          <a href="workforce-infrastructure.html#wddam-framework">WDDAM</a>
+          <a href="workforce-infrastructure.html#lifecycle">Approach</a>
+          <a href="workforce-infrastructure.html#cohort">Cohort</a>
+          <a href="workforce-infrastructure.html#sectors">Sectors</a>
+        </div>
+        <div class="nav-cta">
+          <a href="workforce-infrastructure.html" class="btn btn-outline-dark" style="padding:0.5rem 1.1rem;font-size:0.82rem;">&#8592; Back to Overview</a>
+        </div>
+      </div>
+    </nav>
+
+    <header class="engage-hero">
+      <div class="engage-hero-inner">
+        <div class="eyebrow">BTH Workforce Infrastructure &#183; Intake</div>
+        <h1 id="hero-title">Engage BTH on Workforce Infrastructure</h1>
+        <p id="hero-sub">Tell us about your institutional brief. We respond to qualified enterprise, government, and capital partner requests within two business days &#8212; in English or French.</p>
+      </div>
+    </header>
+
+    <main class="engage-body">
+      <div class="engage-form-card">
+        <fieldset class="intent-bar" style="border:none;padding:0;margin:0 0 1.25rem;" aria-label="Select engagement intent">
+          <label class="intent-card" data-intent="briefing">
+            <input type="radio" name="intent" value="briefing" />
+            <div class="ic-key">Intent 01</div>
+            <h3>Schedule an Executive Briefing</h3>
+            <p>Structured 45&#8211;60min session on WDDAM fit for your institution.</p>
+          </label>
+          <label class="intent-card" data-intent="cohort">
+            <input type="radio" name="intent" value="cohort" />
+            <div class="ic-key">Intent 02</div>
+            <h3>Request a Workforce Cohort</h3>
+            <p>Scope a 50-professional Level&nbsp;1&#8211;5 pipeline for your sector.</p>
+          </label>
+          <label class="intent-card" data-intent="proposal">
+            <input type="radio" name="intent" value="proposal" />
+            <div class="ic-key">Intent 03</div>
+            <h3>Request a Proposal</h3>
+            <p>Co-investment, sponsored programmes, or sector pod commissioning.</p>
+          </label>
+        </fieldset>
+
+        <div class="engage-layout">
+          <form id="engage-form" class="engage-form" novalidate>
+            <h2 id="form-title">Tell us about your institution</h2>
+            <p class="sub" id="form-sub">All fields marked <span style="color:#DC2626;">*</span> are required. We use these inputs to route your request to the appropriate Sector Workforce Director.</p>
+
+            <div class="field-grid">
+              <div class="field">
+                <label for="f-org">Organization <span class="req">*</span></label>
+                <input id="f-org" name="organization" type="text" autocomplete="organization" required />
+              </div>
+              <div class="field">
+                <label for="f-type">Organization type <span class="req">*</span></label>
+                <select id="f-type" name="org_type" required>
+                  <option value="">Select &hellip;</option>
+                  <option value="enterprise">Enterprise / Corporate</option>
+                  <option value="government">Government / Public sector</option>
+                  <option value="multilateral">Multilateral / Development agency</option>
+                  <option value="ngo">NGO / Foundation</option>
+                  <option value="investor">Family office / Investor</option>
+                  <option value="prime">Sector prime / System integrator</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="f-name">Your name <span class="req">*</span></label>
+                <input id="f-name" name="contact_name" type="text" autocomplete="name" required />
+              </div>
+              <div class="field">
+                <label for="f-role">Role / Title</label>
+                <input id="f-role" name="role" type="text" autocomplete="organization-title" />
+              </div>
+              <div class="field">
+                <label for="f-email">Work email <span class="req">*</span></label>
+                <input id="f-email" name="email" type="email" autocomplete="email" required />
+              </div>
+              <div class="field">
+                <label for="f-phone">Phone / WhatsApp</label>
+                <input id="f-phone" name="phone" type="tel" autocomplete="tel" />
+              </div>
+              <div class="field">
+                <label for="f-country">Country / Region <span class="req">*</span></label>
+                <input id="f-country" name="country" type="text" autocomplete="country-name" required />
+              </div>
+              <div class="field">
+                <label for="f-sector">Primary sector of interest</label>
+                <select id="f-sector" name="sector">
+                  <option value="">Select &hellip;</option>
+                  <option>Information Technology</option>
+                  <option>Intelligent Cloud &amp; AI</option>
+                  <option>Cybersecurity</option>
+                  <option>Healthcare &amp; Medical Tech</option>
+                  <option>Renewable Energy</option>
+                  <option>Architecture &amp; Construction</option>
+                  <option>Smart Home &amp; Automation</option>
+                  <option>Fiber Optics &amp; Cabling</option>
+                  <option>Communications &amp; Satellite</option>
+                  <option>Manufacturing &amp; Industrial</option>
+                  <option>Automotive Technology</option>
+                  <option>Finance &amp; Accounting</option>
+                  <option>Business Development</option>
+                  <option>Marketing &amp; Sales</option>
+                  <option>Government &amp; Civic Tech</option>
+                  <option>Agricultural Technology</option>
+                  <option>Public Safety</option>
+                  <option>Biotech &amp; Life Sciences</option>
+                  <option>Aerospace &amp; Defense</option>
+                  <option>Transportation &amp; Logistics</option>
+                  <option>Creative &amp; Digital Design</option>
+                  <option>EdTech &amp; Education Systems</option>
+                  <option>Real Estate &amp; Facilities</option>
+                  <option>Legal &amp; Compliance</option>
+                  <option>Research &amp; Development</option>
+                  <option>Family &amp; Social Development</option>
+                  <option>Multi-sector / Not sure yet</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="f-scale">Approximate workforce scale</label>
+                <select id="f-scale" name="scale">
+                  <option value="">Select &hellip;</option>
+                  <option>1 cohort (50 professionals)</option>
+                  <option>2&ndash;5 cohorts (100&ndash;250)</option>
+                  <option>5&ndash;20 cohorts (250&ndash;1,000)</option>
+                  <option>1,000&ndash;2,000+</option>
+                  <option>National / multi-country programme</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="f-timeline">Target start window</label>
+                <select id="f-timeline" name="timeline">
+                  <option value="">Select &hellip;</option>
+                  <option>0&ndash;3 months</option>
+                  <option>3&ndash;6 months</option>
+                  <option>6&ndash;12 months</option>
+                  <option>12&ndash;24 months</option>
+                  <option>Exploratory &mdash; no fixed window</option>
+                </select>
+              </div>
+              <div class="field full">
+                <label for="f-context">Institutional context <span class="req">*</span></label>
+                <textarea id="f-context" name="context" placeholder="Briefly describe the workforce gap, the contract or programme it relates to, and what an ideal outcome looks like for your institution." required></textarea>
+                <span class="hint">Treated as confidential. Shared only with the assigned BTH workforce lead.</span>
+              </div>
+            </div>
+
+            <label class="checkrow">
+              <input type="checkbox" name="nda" />
+              <span>I would like to discuss this under NDA.</span>
+            </label>
+            <label class="checkrow">
+              <input type="checkbox" name="consent" required />
+              <span>I confirm that I am authorised to engage on behalf of this organisation, and consent to BTH Education Group contacting me about this enquiry. <span style="color:#DC2626;">*</span></span>
+            </label>
+
+            <div class="engage-actions">
+              <button type="submit" class="btn btn-primary btn-lg" id="engage-submit">Send Intake &#8594;</button>
+              <a href="workforce-infrastructure.html" class="btn btn-outline-dark">Back to overview</a>
+              <p class="small">No public mailing list. We respond to qualified requests within two business days. For urgent contact, WhatsApp <strong>+237 680 289 956</strong>.</p>
+            </div>
+          </form>
+
+          <aside class="engage-aside">
+            <h3>What happens next</h3>
+            <ul>
+              <li><strong style="color:#fff;">Day 0&#8211;1:</strong> Intake reviewed and routed to the appropriate Sector Workforce Director.</li>
+              <li><strong style="color:#fff;">Day 1&#8211;2:</strong> Response with a fit assessment, suggested next step, and (if relevant) an NDA template.</li>
+              <li><strong style="color:#fff;">Day 5&#8211;14:</strong> Executive briefing or scoping session &#8212; remote or in-region depending on programme size.</li>
+              <li><strong style="color:#fff;">Beyond:</strong> Proposal, MSA / SOW, programme commissioning, deployment.</li>
+            </ul>
+            <div class="engage-contact">
+              <strong>BTH Education Group</strong><br>
+              WhatsApp: +237 680 289 956<br>
+              Tel: +237 653 795 603<br>
+              info@btheducationgroup.org
+            </div>
+          </aside>
+        </div>
+
+        <div class="success-panel" id="success-panel" aria-live="polite">
+          <h2>Thank you &#8212; intake received.</h2>
+          <p>Your request is routed to a BTH Sector Workforce Director. You will receive a fit assessment and proposed next step within two business days. For urgent matters, contact us directly on WhatsApp <strong>+237 680 289 956</strong>.</p>
+          <p style="margin-top:1.5rem;"><a href="workforce-infrastructure.html" class="btn btn-outline-dark">Back to Workforce Infrastructure overview</a></p>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    (function () {
+      var qs = new URLSearchParams(window.location.search);
+      var intent = (qs.get('intent') || '').toLowerCase();
+      var titles = {
+        briefing: {
+          h1: 'Schedule an Executive Briefing',
+          sub: 'A structured 45&ndash;60 minute session focused on WDDAM fit for your institution &mdash; conducted with a BTH executive lead.',
+          form: 'Briefing intake',
+          formSub: 'Tell us about your institution so we can route this to the right Sector Workforce Director.'
+        },
+        cohort: {
+          h1: 'Request a Workforce Cohort',
+          sub: 'Scope a 50-professional Level&nbsp;1&ndash;5 pipeline aligned to your sector, country, and operational timeline.',
+          form: 'Cohort scoping intake',
+          formSub: 'These inputs help us return a tailored cohort outline within two business days.'
+        },
+        proposal: {
+          h1: 'Request a Proposal',
+          sub: 'For co-investment, sponsored programmes, multi-sector engagement, or pod commissioning &mdash; we structure to fit your institutional context.',
+          form: 'Proposal request intake',
+          formSub: 'A proposal lead will respond with a structured scoping note within two business days.'
+        }
+      };
+      var t = titles[intent];
+      if (t) {
+        document.getElementById('hero-title').textContent = t.h1.replace(/&[a-zA-Z]+;/g, function(s){ return ({'&nbsp;':'\u00a0','&ndash;':'\u2013','&mdash;':'\u2014'})[s] || s; });
+        document.getElementById('hero-sub').innerHTML = t.sub;
+        document.getElementById('form-title').textContent = t.form;
+        document.getElementById('form-sub').innerHTML = t.formSub;
+        var card = document.querySelector('.intent-card[data-intent="' + intent + '"]');
+        if (card) {
+          card.classList.add('is-active');
+          var input = card.querySelector('input[type="radio"]');
+          if (input) input.checked = true;
+        }
+      } else {
+        var first = document.querySelector('.intent-card[data-intent="briefing"]');
+        if (first) {
+          first.classList.add('is-active');
+          var fi = first.querySelector('input'); if (fi) fi.checked = true;
+        }
+      }
+
+      document.querySelectorAll('.intent-card').forEach(function (card) {
+        card.addEventListener('click', function () {
+          document.querySelectorAll('.intent-card').forEach(function (c) { c.classList.remove('is-active'); });
+          card.classList.add('is-active');
+          var input = card.querySelector('input[type="radio"]');
+          if (input) input.checked = true;
+        });
+      });
+
+      var form = document.getElementById('engage-form');
+      var success = document.getElementById('success-panel');
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        if (!form.checkValidity()) {
+          form.reportValidity();
+          return;
+        }
+        var fd = new FormData(form);
+        var intentInput = document.querySelector('input[name="intent"]:checked');
+        var payload = {
+          intent: intentInput ? intentInput.value : 'briefing',
+          submitted_at: new Date().toISOString()
+        };
+        fd.forEach(function (v, k) { payload[k] = v; });
+
+        try {
+          var key = 'bth_engage_submissions_v1';
+          var current = JSON.parse(localStorage.getItem(key) || '[]');
+          current.push(payload);
+          localStorage.setItem(key, JSON.stringify(current));
+        } catch (err) {
+          // ignore storage errors silently
+        }
+
+        form.style.display = 'none';
+        document.querySelector('.engage-aside').style.display = 'none';
+        document.querySelector('.intent-bar').style.display = 'none';
+        success.classList.add('is-visible');
+        success.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    })();
+  </script>
+  <script src="assets/js/bth-chatbot.js"></script>
+</body>
+</html>

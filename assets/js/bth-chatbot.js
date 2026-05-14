@@ -48,6 +48,67 @@ A 6-dimensional workforce development system: Education → Assessment → Certi
       suggestions: ['OEDP framework', 'Certifications', 'Apply now', 'Contact us']
     },
 
+    // ── WDDAM (Workforce Infrastructure formula) ─────────────────────────────
+    wddam: {
+      keywords: [
+        'wddam', 'w-d-d-a-m', 'wddam framework', 'wddam stack',
+        'workforce development deployment acquisition management',
+        'workforce infrastructure framework', 'workforce stack',
+        'develop deploy acquire manage', 'workforce formula',
+        'institutional workforce', 'workforce infrastructure',
+        'enterprise workforce infrastructure', 'workforce as infrastructure'
+      ],
+      response: `🧭 <strong>WDDAM — BTH's Workforce Infrastructure Formula</strong>
+
+WDDAM is how BTH names the full institutional workforce stack — delivered through the <strong>OEDP Work Network</strong>:
+
+1️⃣ <strong>Develop</strong> — Certified Level 1–5 pathways across 26 sectors. Vendor-aligned credentials (CompTIA, AWS, Cisco, ASE). Cohort-based, performance-benchmarked.
+2️⃣ <strong>Deploy</strong> — Place capacity into live enterprise, sector, and government programmes. 2,000-specialist active deployment capacity. CRM-tracked from day one.
+3️⃣ <strong>Acquire</strong> — Institutional acquisition of verified pipelines. Sponsorship and direct acquisition contracts. Auditable, verified credentials.
+4️⃣ <strong>Manage</strong> — Operate the workforce as a governed system. Sector Workforce Director oversight. Performance, upskilling, compliance documentation.
+
+<strong>Who WDDAM is for:</strong>
+🏢 Enterprises &amp; corporate workforce budgets
+🏛️ Governments &amp; sovereign institutions
+🌍 Multilateral / development agencies
+💼 Capital partners &amp; infrastructure investors
+🤝 Sector primes &amp; system integrators
+
+<strong>Unit of scale:</strong> a 50-professional cohort delivering the full Level 1–5 pipeline in one engagement — across any of 26 global sectors.
+
+📍 <a href="workforce-infrastructure.html#wddam-framework" class="bth-chat-link">WDDAM framework matrix →</a>
+📍 <a href="workforce-engage.html?intent=briefing" class="bth-chat-link">Schedule an Executive Briefing →</a>`,
+      suggestions: ['OEDP Work Network', 'Workforce cohort', 'Sectors covered', 'Schedule briefing']
+    },
+
+    // ── OEDP WORK NETWORK (delivery spine) ───────────────────────────────────
+    oedpWorkNetwork: {
+      keywords: [
+        'oedp work network', 'work network', 'delivery network',
+        'placement network', 'deployment spine', 'oedp delivery',
+        'how does bth place', 'how does deployment work',
+        'crm tracking', 'sector workforce director', 'sector director'
+      ],
+      response: `🛰️ <strong>OEDP Work Network — BTH's Delivery Spine</strong>
+
+The OEDP Work Network is the operating layer that turns certifications into deployable workforce. It is how BTH actually delivers <strong>WDDAM</strong> at institutional scale.
+
+<strong>What the Work Network provides:</strong>
+• Placement infrastructure across 26 sectors
+• Enterprise, government, and prime-contractor deployment channels
+• CRM-tracked outcomes from day one of deployment
+• Sector Workforce Directors who own each engagement
+• Governance reporting aligned to enterprise &amp; public-sector procurement
+
+<strong>How it differs from training:</strong>
+Training ends at certification. The Work Network continues into <strong>deployment</strong>, <strong>acquisition transfer</strong>, and <strong>managed lifecycle performance</strong> — auditable, optimizable, and scalable.
+
+📍 <a href="workforce-infrastructure.html#lifecycle" class="bth-chat-link">See the lifecycle →</a>
+📍 <a href="oedp.html" class="bth-chat-link">OEDP framework overview →</a>
+📍 <a href="workforce-engage.html?intent=proposal" class="bth-chat-link">Request a proposal →</a>`,
+      suggestions: ['WDDAM', 'Workforce cohort', 'Sectors', 'Schedule briefing']
+    },
+
     // ── OEDP / AWIS ─────────────────────────────────────────────────────────
     oedp: {
       keywords: [
@@ -1177,11 +1238,12 @@ I can help you with:
 
       <!-- Quick nav chips -->
       <div style="padding:0.75rem 1rem 0;display:flex;flex-wrap:wrap;gap:0.4rem;flex-shrink:0;border-bottom:1px solid rgba(255,255,255,0.07);padding-bottom:0.75rem;">
+        <button class="bth-qnav" data-q="WDDAM workforce infrastructure">WDDAM</button>
+        <button class="bth-qnav" data-q="OEDP Work Network">Work Network</button>
         <button class="bth-qnav" data-q="All programs">All Programs</button>
         <button class="bth-qnav" data-q="Apply now">Apply Now</button>
         <button class="bth-qnav" data-q="Certifications">Certifications</button>
         <button class="bth-qnav" data-q="Workforce deployment program">WDP</button>
-        <button class="bth-qnav" data-q="Franchise">Franchise</button>
         <button class="bth-qnav" data-q="Corporate training">Enterprise</button>
         <button class="bth-qnav" data-q="Contact">Contact</button>
       </div>
