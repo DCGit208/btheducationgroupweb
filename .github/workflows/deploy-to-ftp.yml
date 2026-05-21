@@ -4,21 +4,28 @@ on:
   push:
     branches:
       - main
-  workflow_dispatch: # Allows manual triggering from GitHub UI
+  workflow_dispatch:
+
+concurrency:
+  group: ftp-deploy-main
+  cancel-in-progress: false
 
 jobs:
   ftp-deploy:
     name: Deploy to FTP Server
     runs-on: ubuntu-latest
-    
+    timeout-minutes: 45
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0 # Get full history for better sync
-      
-      - name: Deploy to FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+          fetch-depth: 1
+
+      - name: Deploy to FTP (attempt 1)
+        id: ftp1
+        continue-on-error: true
+        uses: SamKirkland/FTP-Deploy-Action@v4.4.0
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
@@ -27,20 +34,125 @@ jobs:
           protocol: ftp
           local-dir: ./
           server-dir: /Revised/
+          timeout: 300000
+          log-level: minimal
+          dangerous-clean-slate: false
+          dry-run: false
           exclude: |
-            **/.git**
-            **/.github**
+            **/.git*
+            **/.git*/**
+            **/.github/**
             **/node_modules/**
             **/.DS_Store
             **/Thumbs.db
             **/*.log
-            **/README.md
+            **/COMPLETE_BACKUP/**
+            **/content-materials/**
+            **/mirror/**
+            **/backup*/
+            **/*backup*/
+            **/scripts/**
+            **/api/**
+            **/02_SHARED_SERVICES/**
+            **/configs/**
+            **/frontend/**
+            **/backend-ruby/**
+            **/tools/**
+            **/docs/**
+            **/LAUNCH_*.md
             **/TESTING_*.md
             **/ROLLBACK_*.md
-            **/backup*/**
-            **/COMPLETE_BACKUP/**
-            **/*backup*.html
-            **/*test*.js
-            **/*TEST*.js
+            **/COMPREHENSIVE_*.md
+            **/STRIPE-*.md
+            **/WORKFORCE-DEPLOYMENT-PROGRAM-GUIDE.md
+            **/deployment-test.txt
+
+      - name: Deploy to FTP (attempt 2)
+        if: steps.ftp1.outcome == 'failure'
+        id: ftp2
+        continue-on-error: true
+        uses: SamKirkland/FTP-Deploy-Action@v4.4.0
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          port: ${{ secrets.FTP_PORT }}
+          protocol: ftp
+          local-dir: ./
+          server-dir: /Revised/
+          timeout: 300000
+          log-level: minimal
           dangerous-clean-slate: false
           dry-run: false
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/.github/**
+            **/node_modules/**
+            **/.DS_Store
+            **/Thumbs.db
+            **/*.log
+            **/COMPLETE_BACKUP/**
+            **/content-materials/**
+            **/mirror/**
+            **/backup*/
+            **/*backup*/
+            **/scripts/**
+            **/api/**
+            **/02_SHARED_SERVICES/**
+            **/configs/**
+            **/frontend/**
+            **/backend-ruby/**
+            **/tools/**
+            **/docs/**
+            **/LAUNCH_*.md
+            **/TESTING_*.md
+            **/ROLLBACK_*.md
+            **/COMPREHENSIVE_*.md
+            **/STRIPE-*.md
+            **/WORKFORCE-DEPLOYMENT-PROGRAM-GUIDE.md
+            **/deployment-test.txt
+
+      - name: Deploy to FTP (attempt 3)
+        if: steps.ftp2.outcome == 'failure'
+        uses: SamKirkland/FTP-Deploy-Action@v4.4.0
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          port: ${{ secrets.FTP_PORT }}
+          protocol: ftp
+          local-dir: ./
+          server-dir: /Revised/
+          timeout: 300000
+          log-level: minimal
+          dangerous-clean-slate: false
+          dry-run: false
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/.github/**
+            **/node_modules/**
+            **/.DS_Store
+            **/Thumbs.db
+            **/*.log
+            **/COMPLETE_BACKUP/**
+            **/content-materials/**
+            **/mirror/**
+            **/backup*/
+            **/*backup*/
+            **/scripts/**
+            **/api/**
+            **/02_SHARED_SERVICES/**
+            **/configs/**
+            **/frontend/**
+            **/backend-ruby/**
+            **/tools/**
+            **/docs/**
+            **/LAUNCH_*.md
+            **/TESTING_*.md
+            **/ROLLBACK_*.md
+            **/COMPREHENSIVE_*.md
+            **/STRIPE-*.md
+            **/WORKFORCE-DEPLOYMENT-PROGRAM-GUIDE.md
+            **/deployment-test.txt
