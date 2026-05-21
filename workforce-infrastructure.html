@@ -14,6 +14,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=DM+Mono:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/workforce-infrastructure.css" />
+  <link rel="stylesheet" href="assets/css/workforce-expansion.css" />
+  <link rel="stylesheet" href="assets/css/workforce-audience.css" />
+  <link rel="stylesheet" href="assets/css/workforce-wddam-light.css" />
 
   <!-- ─── JSON-LD STRUCTURED DATA ───────────────────────────── -->
   <script type="application/ld+json">
@@ -56,9 +59,10 @@
         "serviceType": "Workforce Infrastructure",
         "provider": { "@id": "https://www.btheducationgroup.org/#org" },
         "audience": [
-          {"@type": "Audience", "audienceType": "Enterprise / Corporate"},
-          {"@type": "Audience", "audienceType": "Government / Public Sector"},
-          {"@type": "Audience", "audienceType": "Multilateral / Development Agency"},
+          {"@type": "Audience", "audienceType": "United Nations / Multilateral / IGO"},
+          {"@type": "Audience", "audienceType": "Government / Public Sector / Sovereign"},
+          {"@type": "Audience", "audienceType": "Enterprise / Corporation"},
+          {"@type": "Audience", "audienceType": "Certification Body / Exam Sponsor / Credential Publisher"},
           {"@type": "Audience", "audienceType": "Capital Partner / Institutional Investor"}
         ],
         "areaServed": "Global",
@@ -124,12 +128,13 @@
     <div class="topnav-inner">
       <div class="nav-brand">BTH <span>Education</span> Group</div>
       <div class="nav-links">
-        <a href="#problem">The Problem</a>
+        <a href="#audiences">Buyers</a>
+        <a href="#programme-scale">At scale</a>
+        <a href="#vendor-alignment">Vendors</a>
+        <a href="#enterprise-modes">Engage</a>
         <a href="#wddam-framework">WDDAM</a>
-        <a href="#lifecycle">Our Approach</a>
-        <a href="#cohort">Cohort Model</a>
-        <a href="#sectors">Sectors</a>
-        <a href="#partner">Engage</a>
+        <a href="workforce-diligence.html">Diligence</a>
+        <a href="#partner">Partner</a>
       </div>
       <div class="nav-cta">
         <a href="index.html" class="btn btn-outline-dark" style="padding:0.5rem 1.1rem;font-size:0.82rem;">&#8592; BTH Group</a>
@@ -149,13 +154,20 @@
       <div>
         <div class="hero-badge"><span>&#x25CF;</span> Enterprise Workforce Infrastructure</div>
         <h1>Workforce Systems<br>Built to <em>Close</em><br>Institutional Gaps.</h1>
-        <p class="hero-audience-line">Built for <strong>enterprises</strong>, <strong>governments</strong>, and <strong>capital partners</strong> commissioning workforce at institutional scale &#8212; not for individual course buyers.</p>
+        <p class="hero-audience-line">Built for the <strong>UN &amp; multilateral programmes</strong>, <strong>governments</strong>, <strong>enterprises</strong>, and <strong>certification bodies / exam sponsors</strong> commissioning workforce infrastructure at scale &#8212; not for individual course buyers.</p>
         <p class="hero-tagline" style="margin-top:1.25rem;"><span id="tw-text">Build. Deploy. Acquire. Manage.</span><span id="tw-cursor">&nbsp;</span></p>
         <p class="hero-para">Through the <strong>OEDP Work Network</strong>, BTH delivers <strong>WDDAM</strong> &#8212; Workforce Development, Deployment, Acquisition &amp; Management &#8212; as full-stack infrastructure: certified pipelines, real deployment contracts, acquisition-ready cohorts, and managed lifecycle performance across <strong>26 global sectors</strong>.</p>
         <div class="hero-cta-row">
           <a href="workforce-engage.html?intent=briefing" class="btn btn-gold btn-lg">Schedule Executive Briefing</a>
           <a href="workforce-engage.html?intent=cohort" class="btn btn-outline btn-lg">Request Workforce Cohort</a>
         </div>
+        <nav class="hero-audience-rail" aria-label="Jump to institutional buyer sections">
+          <a class="har-chip har-chip--un" href="#un-mandate">UN / IGO</a>
+          <a class="har-chip har-chip--gov" href="#gov">Government</a>
+          <a class="har-chip har-chip--ent" href="#enterprise-modes">Enterprise</a>
+          <a class="har-chip har-chip--cert" href="#certification-partners">Cert bodies</a>
+          <a class="har-chip har-chip--inv" href="#partner">Investors</a>
+        </nav>
       </div>
       <aside class="hero-stat-panel">
         <div class="hsp-label">System Capacity Overview</div>
@@ -164,12 +176,13 @@
           <div><div class="hsp-value">Level&nbsp;1&#8211;5</div><div class="hsp-key">Certification Depth</div></div>
           <div class="hsp-divider"></div>
           <div><div class="hsp-value" data-count="50">0</div><div class="hsp-key">Professionals Per Cohort</div></div>
-          <div><div class="hsp-value gold" data-count="695" data-prefix="$" data-suffix="K">$0K</div><div class="hsp-key">Workforce Investment / Cohort</div></div>
+          <div><div class="hsp-value gold" data-count="695825" data-prefix="$">$0</div><div class="hsp-key">Workforce Investment / Cohort</div></div>
           <div class="hsp-divider"></div>
           <div><div class="hsp-value" data-count="2000" data-suffix="+">0+</div><div class="hsp-key">Deployment Capacity</div></div>
           <div><div class="hsp-value" data-count="4">0</div><div class="hsp-key">Lifecycle Stages</div></div>
         </div>
-        <div class="hsp-cta">Designed for enterprises, governments &amp; investors closing infrastructure-level talent gaps &#8212; not individual learners.</div>
+        <div class="hsp-cta">Designed for UN &amp; multilateral programmes, governments, enterprises, certification bodies, and capital partners &#8212; not individual learners.</div>
+        <p class="hero-stat-footnote"><strong>Canonical cohort investment:</strong> $695,825 per 50-professional Level&nbsp;1&#8211;5 pipeline (SWD-INV memorandum). See <a href="#definitions" style="color:#7DD3FC;text-decoration:underline;">definitions</a> &amp; <a href="workforce-diligence.html" style="color:#7DD3FC;text-decoration:underline;">diligence pack</a>.</p>
       </aside>
     </div>
   </section>
@@ -219,56 +232,398 @@
     </div>
   </div>
 
-  <!-- AUTHORITY STRIP — STATIC ALIGNMENT GRID -->
-  <div class="authority-strip-v2" aria-label="Vendor and standards alignment">
-    <div class="authority-inner">
-      <div class="authority-left">Vendor &amp; Standards<br>Alignment</div>
-      <div class="authority-grid">
-        <div class="auth-cell" title="AWS — Cloud certifications">
-          <svg viewBox="0 0 80 24" aria-hidden="true" focusable="false">
-            <text x="40" y="17" text-anchor="middle" font-family="Inter, system-ui" font-weight="800" font-size="16" fill="currentColor" letter-spacing="0.04em">AWS</text>
-          </svg>
-          <span class="auth-name">Aligned</span>
-        </div>
-        <div class="auth-cell" title="Microsoft — Partner track">
-          <svg viewBox="0 0 110 24" aria-hidden="true" focusable="false">
-            <text x="55" y="17" text-anchor="middle" font-family="Inter, system-ui" font-weight="800" font-size="14" fill="currentColor" letter-spacing="0.04em">MICROSOFT</text>
-          </svg>
-          <span class="auth-name">Partner Track</span>
-        </div>
-        <div class="auth-cell" title="CompTIA — Industry certifications">
-          <svg viewBox="0 0 110 24" aria-hidden="true" focusable="false">
-            <text x="55" y="17" text-anchor="middle" font-family="Inter, system-ui" font-weight="800" font-size="14" fill="currentColor" letter-spacing="0.04em">CompTIA</text>
-          </svg>
-          <span class="auth-name">Certified</span>
-        </div>
-        <div class="auth-cell" title="Cisco — Networking curriculum">
-          <svg viewBox="0 0 80 24" aria-hidden="true" focusable="false">
-            <text x="40" y="17" text-anchor="middle" font-family="Inter, system-ui" font-weight="800" font-size="16" fill="currentColor" letter-spacing="0.04em">CISCO</text>
-          </svg>
-          <span class="auth-name">Curriculum</span>
-        </div>
-        <div class="auth-cell" title="ASE — Automotive certifications">
-          <svg viewBox="0 0 80 24" aria-hidden="true" focusable="false">
-            <text x="40" y="17" text-anchor="middle" font-family="Inter, system-ui" font-weight="800" font-size="16" fill="currentColor" letter-spacing="0.04em">ASE</text>
-          </svg>
-          <span class="auth-name">Automotive</span>
-        </div>
-        <div class="auth-cell" title="ISO 17024 — Personnel certification framework">
-          <svg viewBox="0 0 110 24" aria-hidden="true" focusable="false">
-            <text x="55" y="17" text-anchor="middle" font-family="Inter, system-ui" font-weight="800" font-size="14" fill="currentColor" letter-spacing="0.04em">ISO 17024</text>
-          </svg>
-          <span class="auth-name">Framework</span>
-        </div>
-        <div class="auth-cell" title="UN SDG 16 — Strong institutions">
-          <svg viewBox="0 0 80 24" aria-hidden="true" focusable="false">
-            <text x="40" y="17" text-anchor="middle" font-family="Inter, system-ui" font-weight="800" font-size="14" fill="currentColor" letter-spacing="0.04em">SDG 16</text>
-          </svg>
-          <span class="auth-name">Aligned</span>
+
+
+  <!-- WHO WE SERVE — INSTITUTIONAL AUDIENCES -->
+  <section class="audience-section" id="audiences" aria-labelledby="audiences-heading">
+    <div class="audience-inner">
+      <header class="audience-hero reveal">
+        <p class="audience-kicker">Who we serve</p>
+        <h2 id="audiences-heading">Built for institutions that commission workforce at scale</h2>
+        <p class="audience-lead">One WDDAM infrastructure system — multilateral programmes, sovereign governments, global enterprises, certification bodies, and capital partners. Select your mandate.</p>
+      </header>
+
+      <div class="audience-command reveal reveal-delay-1" id="audience-command">
+        <input type="radio" name="audience-mandate" id="mandate-un" class="audience-radio" checked>
+        <input type="radio" name="audience-mandate" id="mandate-gov" class="audience-radio">
+        <input type="radio" name="audience-mandate" id="mandate-ent" class="audience-radio">
+        <input type="radio" name="audience-mandate" id="mandate-cert" class="audience-radio">
+        <input type="radio" name="audience-mandate" id="mandate-inv" class="audience-radio">
+        <div class="audience-command-grid">
+        <nav class="audience-nav" aria-label="Institutional audience profiles">
+          <label class="audience-nav-btn" for="mandate-un">
+            <span class="audience-nav-code">UN</span>
+            <span class="audience-nav-text">
+              <span class="audience-nav-title">UN &amp; multilateral</span>
+              <span class="audience-nav-sub">Programme mandates · SDG&nbsp;8 &amp; 16</span>
+            </span>
+          </label>
+          <label class="audience-nav-btn" for="mandate-gov">
+            <span class="audience-nav-code">GOV</span>
+            <span class="audience-nav-text">
+              <span class="audience-nav-title">Government</span>
+              <span class="audience-nav-sub">National pipelines · procurement-grade</span>
+            </span>
+          </label>
+          <label class="audience-nav-btn" for="mandate-ent">
+            <span class="audience-nav-code">ENT</span>
+            <span class="audience-nav-text">
+              <span class="audience-nav-title">Enterprise</span>
+              <span class="audience-nav-sub">CHRO cohorts · deploy · sponsor</span>
+            </span>
+          </label>
+          <label class="audience-nav-btn" for="mandate-cert">
+            <span class="audience-nav-code">CERT</span>
+            <span class="audience-nav-text">
+              <span class="audience-nav-title">Cert &amp; exam sponsors</span>
+              <span class="audience-nav-sub">Pathway volume · Pearson VUE 89828</span>
+            </span>
+          </label>
+          <label class="audience-nav-btn" for="mandate-inv">
+            <span class="audience-nav-code">INV</span>
+            <span class="audience-nav-text">
+              <span class="audience-nav-title">Investors</span>
+              <span class="audience-nav-sub">Pods · acquisition · diligence</span>
+            </span>
+          </label>
+        </nav>
+          <div class="audience-viewport">
+            <article class="audience-panel" id="aud-panel-un" data-audience-panel="un">
+              <div class="audience-panel-accent audience-panel-accent--un" aria-hidden="true"></div>
+              <header class="audience-panel-head">
+                <div class="audience-panel-head-main">
+                  <span class="audience-panel-badge">Multilateral · IGO</span>
+                  <h3>UN, IGOs &amp; multilateral programmes</h3>
+                  <p>Flagship workforce infrastructure for programme-scale mandates — SDG&nbsp;8, SDG&nbsp;16, multi-country cohorts, and results-framework reporting.</p>
+                </div>
+                <ul class="audience-metrics" aria-label="Programme signals">
+                  <li><strong>SDG</strong> 8 &amp; 16</li>
+                  <li><strong>Scale</strong> Multi-country</li>
+                  <li><strong>Evidence</strong> Audit-ready</li>
+                </ul>
+              </header>
+              <div class="audience-pillars">
+                <div class="audience-pillar" data-pillar="01">
+                  <span class="audience-pillar-num">01</span>
+                  <span class="audience-pillar-label">Why BTH</span>
+                  <p>Harmonized Level&nbsp;1&#8211;5 pathways and audit-ready evidence across field programmes — not fragmented training vendors.</p>
+                </div>
+                <div class="audience-pillar" data-pillar="02">
+                  <span class="audience-pillar-num">02</span>
+                  <span class="audience-pillar-label">How you engage</span>
+                  <p>Programme commissioning and institutional development agreements under WDDAM and the OEDP Work Network.</p>
+                </div>
+                <div class="audience-pillar" data-pillar="03">
+                  <span class="audience-pillar-num">03</span>
+                  <span class="audience-pillar-label">What you get</span>
+                  <p>Full-stack develop &#8594; deploy &#8594; acquire &#8594; manage with governance-grade documentation for donors and boards.</p>
+                </div>
+              </div>
+              <footer class="audience-panel-foot">
+                <a href="workforce-engage.html?intent=briefing&amp;audience=un" class="btn btn-gold audience-btn">UN / multilateral briefing</a>
+                <a href="workforce-infrastructure.html#un-mandate" class="audience-panel-link">UDHR &amp; mandate alignment &#8594;</a>
+              </footer>
+            </article>
+
+            <article class="audience-panel" id="aud-panel-gov" data-audience-panel="gov">
+              <div class="audience-panel-accent audience-panel-accent--gov" aria-hidden="true"></div>
+              <header class="audience-panel-head">
+                <div class="audience-panel-head-main">
+                  <span class="audience-panel-badge">Sovereign · Public sector</span>
+                  <h3>Governments &amp; public sector</h3>
+                  <p>Sovereign skills agencies and ministries executing national workforce mandates with procurement-grade governed pipelines.</p>
+                </div>
+                <ul class="audience-metrics" aria-label="Programme signals">
+                  <li><strong>Sectors</strong> 26 pathways</li>
+                  <li><strong>Frame</strong> ISO&nbsp;17024</li>
+                  <li><strong>Unit</strong> Cohort scale</li>
+                </ul>
+              </header>
+              <div class="audience-pillars">
+                <div class="audience-pillar" data-pillar="01">
+                  <span class="audience-pillar-num">01</span>
+                  <span class="audience-pillar-label">Why BTH</span>
+                  <p>National pipelines that connect public mandates to enterprise deployment, credential delivery, and measurable outcomes.</p>
+                </div>
+                <div class="audience-pillar" data-pillar="02">
+                  <span class="audience-pillar-num">02</span>
+                  <span class="audience-pillar-label">How you engage</span>
+                  <p>National digital skills and sector workforce contracts — cohort units at programme scale.</p>
+                </div>
+                <div class="audience-pillar" data-pillar="03">
+                  <span class="audience-pillar-num">03</span>
+                  <span class="audience-pillar-label">What you get</span>
+                  <p>ISO&nbsp;17024 reporting frame, procurement documentation, and Level&nbsp;1&#8211;5 pathways across 26 sectors.</p>
+                </div>
+              </div>
+              <footer class="audience-panel-foot">
+                <a href="workforce-engage.html?intent=briefing&amp;audience=government" class="btn btn-gold audience-btn">Government briefing</a>
+              </footer>
+            </article>
+
+            <article class="audience-panel" id="aud-panel-ent" data-audience-panel="ent">
+              <div class="audience-panel-accent audience-panel-accent--ent" aria-hidden="true"></div>
+              <header class="audience-panel-head">
+                <div class="audience-panel-head-main">
+                  <span class="audience-panel-badge">CHRO · Corporate</span>
+                  <h3>Enterprises &amp; corporations</h3>
+                  <p>CHRO-led workforce infrastructure — structured WDDAM instead of randomized L&amp;D, recruitment-only plays, or disconnected catalogues.</p>
+                </div>
+                <ul class="audience-metrics" aria-label="Programme signals">
+                  <li><strong>Cohort</strong> $695,825</li>
+                  <li><strong>Size</strong> 50 professionals</li>
+                  <li><strong>Modes</strong> 3 engagement paths</li>
+                </ul>
+              </header>
+              <div class="audience-pillars">
+                <div class="audience-pillar" data-pillar="01">
+                  <span class="audience-pillar-num">01</span>
+                  <span class="audience-pillar-label">Why BTH</span>
+                  <p>Pre-certified cohorts, deployment MSAs, sponsor programmes, and investor-grade lifecycle visibility on one pipeline.</p>
+                </div>
+                <div class="audience-pillar" data-pillar="02">
+                  <span class="audience-pillar-num">02</span>
+                  <span class="audience-pillar-label">How you engage</span>
+                  <p>Commission cohorts ($695,825 canonical per 50 professionals), sponsor development, or co-invest in infrastructure pods.</p>
+                </div>
+                <div class="audience-pillar" data-pillar="03">
+                  <span class="audience-pillar-num">03</span>
+                  <span class="audience-pillar-label">What you get</span>
+                  <p>CRM-tracked outcomes, ramp-time economics, leadership pipeline L3&#8211;L5, and preferred acquisition rights.</p>
+                </div>
+              </div>
+              <footer class="audience-panel-foot">
+                <a href="workforce-engage.html?intent=cohort&amp;audience=enterprise" class="btn btn-gold audience-btn">Request enterprise cohort</a>
+                <a href="workforce-infrastructure.html#enterprise-modes" class="audience-panel-link">Three engagement modes &#8594;</a>
+              </footer>
+            </article>
+
+            <article class="audience-panel" id="aud-panel-cert" data-audience-panel="cert">
+              <div class="audience-panel-accent audience-panel-accent--cert" aria-hidden="true"></div>
+              <header class="audience-panel-head">
+                <div class="audience-panel-head-main">
+                  <span class="audience-panel-badge">Credential publishers</span>
+                  <h3>Certification bodies &amp; exam sponsors</h3>
+                  <p>Infrastructure for credential publishers — channel volume through institutional mandates, not retail competition with your brand.</p>
+                </div>
+                <ul class="audience-metrics" aria-label="Programme signals">
+                  <li><strong>PVUE</strong> Site 89828</li>
+                  <li><strong>Model</strong> 2,500+ bundles</li>
+                  <li><strong>Align</strong> ISO&nbsp;17024</li>
+                </ul>
+              </header>
+              <div class="audience-pillars">
+                <div class="audience-pillar" data-pillar="01">
+                  <span class="audience-pillar-num">01</span>
+                  <span class="audience-pillar-label">Why BTH</span>
+                  <p>Aggregates UN, government, and enterprise demand — illustrative 5,000-person IT programmes can drive 2,500+ credential bundles (modelled).</p>
+                </div>
+                <div class="audience-pillar" data-pillar="02">
+                  <span class="audience-pillar-num">02</span>
+                  <span class="audience-pillar-label">How you engage</span>
+                  <p>Pathway partnership, cohort orchestration, Pearson&nbsp;VUE authorized delivery (Site&nbsp;89828).</p>
+                </div>
+                <div class="audience-pillar" data-pillar="03">
+                  <span class="audience-pillar-num">03</span>
+                  <span class="audience-pillar-label">What you get</span>
+                  <p>Exam logistics, sponsor channels, and ISO&nbsp;17024-aligned reporting for institutional programmes.</p>
+                </div>
+              </div>
+              <footer class="audience-panel-foot">
+                <a href="workforce-engage.html?intent=cert-partnership&amp;audience=cert-body" class="btn btn-gold audience-btn">Volume &amp; channel briefing</a>
+                <a href="workforce-cert-channel.html" class="audience-panel-link">Cert-body one-pager &#8594;</a>
+              </footer>
+            </article>
+
+            <article class="audience-panel" id="aud-panel-inv" data-audience-panel="inv">
+              <div class="audience-panel-accent audience-panel-accent--inv" aria-hidden="true"></div>
+              <header class="audience-panel-head">
+                <div class="audience-panel-head-main">
+                  <span class="audience-panel-badge">Capital · Infrastructure</span>
+                  <h3>Capital &amp; infrastructure investors</h3>
+                  <p>Workforce infrastructure as a governed asset class — pods, acquisition structures, and managed lifecycle economics.</p>
+                </div>
+                <ul class="audience-metrics" aria-label="Programme signals">
+                  <li><strong>Model</strong> Develop &#8594; manage</li>
+                  <li><strong>Asset</strong> Cohort inventory</li>
+                  <li><strong>Access</strong> NDA diligence</li>
+                </ul>
+              </header>
+              <div class="audience-pillars">
+                <div class="audience-pillar" data-pillar="01">
+                  <span class="audience-pillar-num">01</span>
+                  <span class="audience-pillar-label">Why BTH</span>
+                  <p>Develop &#8594; deploy &#8594; acquire &#8594; manage produces auditable cohort inventory and recurring institutional demand.</p>
+                </div>
+                <div class="audience-pillar" data-pillar="02">
+                  <span class="audience-pillar-num">02</span>
+                  <span class="audience-pillar-label">How you engage</span>
+                  <p>Co-investment in workforce production pods; diligence materials via Investor Platform where applicable.</p>
+                </div>
+                <div class="audience-pillar" data-pillar="03">
+                  <span class="audience-pillar-num">03</span>
+                  <span class="audience-pillar-label">What you get</span>
+                  <p>Sector diversification, NDA diligence pack, and visibility into pipeline and deployment performance.</p>
+                </div>
+              </div>
+              <footer class="audience-panel-foot">
+                <a href="workforce-engage.html?intent=investor&amp;audience=investor" class="btn btn-gold audience-btn">Investor diligence</a>
+                <a href="https://invest.btheducationgroup.com" class="audience-panel-link" target="_blank" rel="noopener">Investor platform &#8594;</a>
+              </footer>
+            </article>
+
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
+
+
+  <!-- VENDOR & STANDARDS ALIGNMENT -->
+  <section class="vendor-align-section" id="vendor-alignment" aria-labelledby="vendor-align-heading">
+    <div class="vendor-align-inner">
+      <header class="vendor-align-header reveal">
+        <p class="vendor-align-kicker">Institutional delivery stack</p>
+        <h2 id="vendor-align-heading" class="vendor-align-title">Vendor <span class="vat-amp">&amp;</span> Standards Alignment</h2>
+        <p class="vendor-align-lead">Authorized exam delivery, certification-body partnerships, and competency frameworks — integrated into BTH&#8217;s Level&nbsp;1&#8211;5 cohort infrastructure for UN programmes, governments, enterprises, and credential publishers worldwide.</p>
+      </header>
+
+      <div class="vendor-align-board reveal reveal-delay-1">
+        <div class="vendor-tier">
+          <div class="vendor-tier-head">
+            <span class="vendor-tier-num" aria-hidden="true">01</span>
+            <h3 class="vendor-tier-title">Exam delivery &amp; curriculum vendors</h3>
+          </div>
+          <ul class="vendor-grid vendor-grid--six" role="list">
+            <li class="vendor-card vendor-card--featured">
+              <span class="vendor-card-code">PVUE</span>
+              <span class="vendor-card-name">Pearson VUE</span>
+              <span class="vendor-card-status vendor-card-status--auth">Authorized delivery</span>
+              <span class="vendor-card-meta">Site ID 89828</span>
+            </li>
+            <li class="vendor-card">
+              <span class="vendor-card-code">COMPTIA</span>
+              <span class="vendor-card-name">CompTIA</span>
+              <span class="vendor-card-status">Partner</span>
+            </li>
+            <li class="vendor-card">
+              <span class="vendor-card-code">ECC</span>
+              <span class="vendor-card-name">EC-Council</span>
+              <span class="vendor-card-status">Partner</span>
+            </li>
+            <li class="vendor-card">
+              <span class="vendor-card-code">MSFT</span>
+              <span class="vendor-card-name">Microsoft</span>
+              <span class="vendor-card-status">Curriculum</span>
+            </li>
+            <li class="vendor-card">
+              <span class="vendor-card-code">AWS</span>
+              <span class="vendor-card-name">Amazon Web Services</span>
+              <span class="vendor-card-status">Aligned</span>
+            </li>
+            <li class="vendor-card">
+              <span class="vendor-card-code">CSCO</span>
+              <span class="vendor-card-name">Cisco</span>
+              <span class="vendor-card-status">Curriculum</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="vendor-tier-divider" aria-hidden="true"></div>
+
+        <div class="vendor-tier">
+          <div class="vendor-tier-head">
+            <span class="vendor-tier-num" aria-hidden="true">02</span>
+            <h3 class="vendor-tier-title">Standards &amp; institutional frameworks</h3>
+          </div>
+          <ul class="vendor-grid vendor-grid--four" role="list">
+            <li class="vendor-card vendor-card--std">
+              <span class="vendor-card-code">ISO</span>
+              <span class="vendor-card-name">ISO 17024</span>
+              <span class="vendor-card-status">Personnel certification</span>
+            </li>
+            <li class="vendor-card vendor-card--std">
+              <span class="vendor-card-code">SDG</span>
+              <span class="vendor-card-name">SDG 8</span>
+              <span class="vendor-card-status">Decent work &amp; growth</span>
+            </li>
+            <li class="vendor-card vendor-card--std">
+              <span class="vendor-card-code">SDG</span>
+              <span class="vendor-card-name">SDG 16</span>
+              <span class="vendor-card-status">Peace &amp; institutions</span>
+            </li>
+            <li class="vendor-card vendor-card--std vendor-card--un">
+              <span class="vendor-card-code">UN</span>
+              <span class="vendor-card-name">UN programmes</span>
+              <span class="vendor-card-status">Procurement-ready</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="vendor-align-footnote reveal reveal-delay-2">Trademark names belong to their respective owners. Partnership and delivery status documented in the <a href="workforce-diligence.html">diligence pack</a>.</p>
+    </div>
+  </section>
+
+
+  <!-- ENTERPRISE ENGAGEMENT MODES -->
+  <section class="enterprise-modes-section" id="enterprise-modes" aria-labelledby="em-heading">
+    <div class="em-inner">
+      <header class="em-header reveal">
+        <p class="em-kicker">For corporations &amp; CHRO-led institutions</p>
+        <h2 id="em-heading">Three ways enterprises engage BTH</h2>
+        <p class="em-lead">Structured workforce infrastructure — not randomized L&amp;D. Commission cohorts, sponsor national programmes, or invest in production infrastructure on the same WDDAM pipeline.</p>
+      </header>
+      <div class="em-modes-grid reveal reveal-delay-1">
+        <article class="em-mode-card">
+          <div class="em-mode-num">Mode 01</div>
+          <h3>Commission cohorts</h3>
+          <p>CHRO-led engagement: 50-person Level&nbsp;1&#8211;5 pipeline per sector — deployment-ready capacity under MSA / SOW.</p>
+          <ul class="em-mode-list"><li>Canonical $695,825 cohort (SWD-INV)</li><li>CRM-tracked performance</li><li>Preferred acquisition rights</li></ul>
+          <a class="em-mode-cta" href="workforce-engage.html?intent=cohort&amp;audience=enterprise">Request enterprise cohort &#8594;</a>
+        </article>
+        <article class="em-mode-card em-mode-card--featured">
+          <div class="em-mode-num">Mode 02</div>
+          <h3>Sponsor programmes</h3>
+          <p>Fund workforce development for a region, sector, or supplier ecosystem — CSR, foundation, or strategic HR sponsorship.</p>
+          <ul class="em-mode-list"><li>Sponsor-funded cohorts</li><li>ESG &amp; impact reporting</li><li>May not directly employ graduates</li></ul>
+          <a class="em-mode-cta" href="workforce-engage.html?intent=sponsor&amp;audience=enterprise">Sponsor programme briefing &#8594;</a>
+        </article>
+        <article class="em-mode-card">
+          <div class="em-mode-num">Mode 03</div>
+          <h3>Invest / acquire infrastructure</h3>
+          <p>Co-invest in workforce production pods or acquire structured pipeline segments — profit-center economics via Acquire stage.</p>
+          <ul class="em-mode-list"><li>Pod co-investment models</li><li>Investor diligence pack</li><li>Separate securities disclosures apply</li></ul>
+          <a class="em-mode-cta" href="workforce-engage.html?intent=investor">Investor diligence &#8594;</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- UN MANDATE & UDHR -->
+  <section class="un-mandate-section" id="un-mandate" aria-labelledby="un-mandate-heading">
+    <div class="un-inner">
+      <div class="un-quote-panel reveal">
+        <span class="un-udhr-tag">UDHR Article 26 (2)</span>
+        <blockquote class="un-quote">&#8220;Education shall be directed to the full development of the human personality and to the strengthening of respect for human rights and fundamental freedoms.&#8221;</blockquote>
+        <cite>Universal Declaration of Human Rights</cite>
+      </div>
+      <div class="un-bridge reveal reveal-delay-1">
+        <h2 id="un-mandate-heading">UN &amp; multilateral workforce infrastructure</h2>
+        <p>BTH provides a <strong>flagship workforce system</strong> for institutions that must operationalize human development at programme scale — with competency evidence, not course completion alone.</p>
+        <div class="un-hexad-teaser">
+          <h3>Hexad Workforce Conditioning</h3>
+          <p>The <strong>Hexad</strong> maturation system conditions professionals through structured development aligned to UDHR&nbsp;26(2) — integrated in WDDAM <em>Develop</em> and documented for institutional audit. <a href="oedp.html">OEDP overview &#8594;</a></p>
+        </div>
+        <div class="un-results-mini">
+          <div class="un-rm-item"><div class="un-rm-val">SDG 8</div><div class="un-rm-key">Decent work</div></div>
+          <div class="un-rm-item"><div class="un-rm-val">SDG 16</div><div class="un-rm-key">Institutions</div></div>
+          <div class="un-rm-item"><div class="un-rm-val">Cohort</div><div class="un-rm-key">unit of scale</div></div>
+        </div>
+        <p style="margin-top:1rem;font-size:0.85rem;color:#4B5563;"><a href="workforce-engage.html?intent=briefing&amp;audience=un" style="color:#054ADA;font-weight:700;">Schedule multilateral programme briefing &#8594;</a></p>
+      </div>
+    </div>
+  </section>
 
   <!-- THE PROBLEM -->
   <section class="section problem-section" id="problem">
@@ -330,6 +685,7 @@
         </ul>
         <p class="human-capital-closing">The defining resource of this century is deployable human capability &#8212; produced and governed like infrastructure.</p>
       </div>
+      <p class="problem-stat-source">Benchmark statistics (e.g. 73% talent-gap survey) are illustrative industry references used in institutional workforce business cases &#8212; not BTH proprietary audited data. Client-specific baselines are established during scoping.</p>
       <div class="problem-data-strip">
         <div class="pds-item"><span class="pds-val">12mo</span><span class="pds-key">avg time-to-fill</span></div>
         <div class="pds-item"><span class="pds-val">$500K+</span><span class="pds-key">lost per unfilled senior role</span></div>
@@ -340,57 +696,179 @@
 
   <!-- THE SOLUTION -->
   <section class="section solution-section" id="solution">
+    <div class="wddam-suite" id="wddam-framework">
     <div class="container">
-      <div class="wddam-block reveal" id="wddam-framework">
+      <div class="wddam-intro reveal">
         <div class="wddam-title">WDDAM</div>
         <div class="wddam-full">Workforce Development, Deployment, Acquisition &amp; Management</div>
+        <ul class="wddam-pillars" aria-label="WDDAM lifecycle phases">
+          <li>Develop</li>
+          <li>Deploy</li>
+          <li>Acquire</li>
+          <li>Manage</li>
+        </ul>
         <p class="wddam-lead">WDDAM is how BTH, through the <strong>OEDP Work Network</strong>, names the full stack: build certified capacity, place teams into real economic systems under deployment contracts, enable institutional acquisition of structured pipelines, and manage lifecycle performance with governance-grade visibility. The same formula reads across sectors &#8212; whether you are closing gaps in <strong>IT &amp; cloud</strong>, <strong>biomedical &amp; healthcare</strong>, <strong>energy &amp; industrial operations</strong>, or <strong>government programmes</strong>.</p>
-        <table class="wddam-matrix" role="table" aria-label="WDDAM counterparties and contract surfaces">
-          <thead>
-            <tr>
-              <th scope="col">Phase</th>
-              <th scope="col">Who typically engages</th>
-              <th scope="col">What is delivered</th>
-              <th scope="col">Example relationship</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Develop</td>
-              <td>Enterprise workforce budgets; government programmes; sponsors; co-investors</td>
-              <td>Designed cohorts, Level 1&#8211;5 pathways, vendor-aligned credentials</td>
-              <td>Institutional development &amp; commissioning agreements<span class="wm-example">e.g. national digital skills mandate, enterprise academy</span></td>
-            </tr>
-            <tr>
-              <td>Deploy</td>
-              <td>Operators, primes, system integrators, agencies running live programmes</td>
-              <td>Deployment-ready teams in sector contexts</td>
-              <td>MSAs, SOWs, programme placement, sector deployment schedules<span class="wm-example">e.g. hospital systems, energy operators, GovTech rollouts</span></td>
-            </tr>
-            <tr>
-              <td>Acquire</td>
-              <td>Corporate HR / procurement; public-sector workforce units; large NGOs</td>
-              <td>Acquisition of verified pipelines and cohort segments</td>
-              <td>Preferred hire rights, cohort acquisition, contracted talent transfer<span class="wm-example">e.g. bulk acquisition by level &amp; sector</span></td>
-            </tr>
-            <tr>
-              <td>Manage</td>
-              <td>Enterprise &amp; government as ongoing operators of the relationship</td>
-              <td>Performance, upskilling, compliance evidence, capacity optimization</td>
-              <td>Managed workforce performance, governance reporting, lifecycle systems<span class="wm-example">e.g. Sector Workforce Director oversight</span></td>
-            </tr>
-          </tbody>
-        </table>
       </div>
+    </div>
+
+  <section class="wddam-contrast-section" id="wddam-contrast" aria-labelledby="wcc-heading">
+        <div class="wcc-inner">
+          <header class="wcc-header reveal">
+            <h2 id="wcc-heading">Randomized training vs. WDDAM infrastructure</h2>
+            <p>Why institutions commission a governed system — not a catalogue of disconnected courses.</p>
+          </header>
+          <div class="wcc-split reveal reveal-delay-1">
+            <div class="wcc-panel wcc-panel--legacy">
+              <h3>Fragmented model</h3>
+              <ul>
+                <li>Ad hoc courses &amp; vendor sprawl</li>
+                <li>No deployment contract</li>
+                <li>Unauditable competency evidence</li>
+                <li>Recruitment still required at scale</li>
+                <li>Cert purchases disconnected from mandates</li>
+              </ul>
+            </div>
+            <div class="wcc-vs">VS</div>
+            <div class="wcc-panel wcc-panel--wddam">
+              <h3>WDDAM infrastructure</h3>
+              <ul>
+                <li>Level&nbsp;1&#8211;5 cohort pathways (50 professionals)</li>
+                <li>Deploy into live programmes (OEDP)</li>
+                <li>Acquire structured pipelines</li>
+                <li>Manage lifecycle &amp; compliance</li>
+                <li>Cert volume via institutional sponsors</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+  </section>
+
+    <div class="container wddam-phases-wrap">
+      <section class="wddam-phases reveal" id="wddam-phases" aria-labelledby="wddam-phases-heading">
+        <header class="wddam-phases-head">
+          <p class="wddam-phases-kicker">Lifecycle architecture</p>
+          <h3 id="wddam-phases-heading">Phases, counterparties &amp; contract surfaces</h3>
+          <p class="wddam-phases-lead">Who engages at each stage of the WDDAM lifecycle — and what institutional relationships look like in practice.</p>
+        </header>
+
+        <div class="wddam-lifecycle-rail" aria-hidden="true">
+          <span class="wlr-step wlr-step--develop">Develop</span>
+          <span class="wlr-line"></span>
+          <span class="wlr-step wlr-step--deploy">Deploy</span>
+          <span class="wlr-line"></span>
+          <span class="wlr-step wlr-step--acquire">Acquire</span>
+          <span class="wlr-line"></span>
+          <span class="wlr-step wlr-step--manage">Manage</span>
+        </div>
+
+        <div class="wddam-phase-grid" role="list">
+          <article class="wddam-phase-card wddam-phase-card--develop" role="listitem">
+            <div class="wpc-top">
+              <span class="wpc-num">01</span>
+              <h4 class="wpc-name">Develop</h4>
+            </div>
+            <div class="wpc-body">
+              <div class="wpc-row">
+                <span class="wpc-label">Who engages</span>
+                <p>Enterprise workforce budgets; government programmes; sponsors; co-investors</p>
+              </div>
+              <div class="wpc-row">
+                <span class="wpc-label">Delivered</span>
+                <p>Designed cohorts, Level&nbsp;1&#8211;5 pathways, vendor-aligned credentials</p>
+              </div>
+              <div class="wpc-row wpc-row--rel">
+                <span class="wpc-label">Contract surface</span>
+                <p>Institutional development &amp; commissioning agreements</p>
+                <span class="wpc-example">e.g. national digital skills mandate, enterprise academy</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="wddam-phase-card wddam-phase-card--deploy" role="listitem">
+            <div class="wpc-top">
+              <span class="wpc-num">02</span>
+              <h4 class="wpc-name">Deploy</h4>
+            </div>
+            <div class="wpc-body">
+              <div class="wpc-row">
+                <span class="wpc-label">Who engages</span>
+                <p>Operators, primes, system integrators, agencies running live programmes</p>
+              </div>
+              <div class="wpc-row">
+                <span class="wpc-label">Delivered</span>
+                <p>Deployment-ready teams in sector contexts</p>
+              </div>
+              <div class="wpc-row wpc-row--rel">
+                <span class="wpc-label">Contract surface</span>
+                <p>MSAs, SOWs, programme placement, sector deployment schedules</p>
+                <span class="wpc-example">e.g. hospital systems, energy operators, GovTech rollouts</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="wddam-phase-card wddam-phase-card--acquire" role="listitem">
+            <div class="wpc-top">
+              <span class="wpc-num">03</span>
+              <h4 class="wpc-name">Acquire</h4>
+            </div>
+            <div class="wpc-body">
+              <div class="wpc-row">
+                <span class="wpc-label">Who engages</span>
+                <p>Corporate HR / procurement; public-sector workforce units; large NGOs</p>
+              </div>
+              <div class="wpc-row">
+                <span class="wpc-label">Delivered</span>
+                <p>Acquisition of verified pipelines and cohort segments</p>
+              </div>
+              <div class="wpc-row wpc-row--rel">
+                <span class="wpc-label">Contract surface</span>
+                <p>Preferred hire rights, cohort acquisition, contracted talent transfer</p>
+                <span class="wpc-example">e.g. bulk acquisition by level &amp; sector</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="wddam-phase-card wddam-phase-card--manage" role="listitem">
+            <div class="wpc-top">
+              <span class="wpc-num">04</span>
+              <h4 class="wpc-name">Manage</h4>
+            </div>
+            <div class="wpc-body">
+              <div class="wpc-row">
+                <span class="wpc-label">Who engages</span>
+                <p>Enterprise &amp; government as ongoing operators of the relationship</p>
+              </div>
+              <div class="wpc-row">
+                <span class="wpc-label">Delivered</span>
+                <p>Performance, upskilling, compliance evidence, capacity optimization</p>
+              </div>
+              <div class="wpc-row wpc-row--rel">
+                <span class="wpc-label">Contract surface</span>
+                <p>Managed workforce performance, governance reporting, lifecycle systems</p>
+                <span class="wpc-example">e.g. Sector Workforce Director oversight</span>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <aside class="wddam-cert-banner">
+          <span class="wddam-cert-badge">Certification bodies</span>
+          <p>BTH provides infrastructure for credential publishers — cohort orchestration, exam logistics (Pearson&nbsp;VUE Site&nbsp;89828), and institutional sponsor channels. We do not compete with your brand.</p>
+        </aside>
+      </section>
+    </div>
+
+    </div>
+
+    <div class="container solution-manifesto-wrap">
       <div class="sol-header reveal">
-        <div class="eyebrow" style="color:#FACC15;">Our Response</div>
+        <div class="eyebrow sol-eyebrow">Our Response</div>
         <h2>Enterprise Workforce Infrastructure</h2>
-        <p class="lead" style="margin-top:1rem;color:rgba(255,255,255,0.55);">This is not a training platform. This is a system &#8212; a complete end-to-end workforce lifecycle infrastructure built for organizations operating at institutional scale.</p>
+        <p class="lead sol-lead">This is not a training platform. This is a system &#8212; a complete end-to-end workforce lifecycle infrastructure built for organizations operating at institutional scale.</p>
       </div>
       <div class="manifesto-rows">
         <div class="manifesto-row reveal reveal-delay-1">
           <div class="mr-counter">01 / 06</div>
-          <div class="mr-bar"></div>
           <div class="mr-body">
             <h3>Not Training. Infrastructure.</h3>
             <p>BTH builds the workforce system your organization needs &#8212; designing, staffing, and managing a complete human capital pipeline from Level 1 through executive leadership.</p>
@@ -398,7 +876,6 @@
         </div>
         <div class="manifesto-row reveal reveal-delay-2">
           <div class="mr-counter">02 / 06</div>
-          <div class="mr-bar"></div>
           <div class="mr-body">
             <h3>Structured. Certified. Verified.</h3>
             <p>Every professional is developed through a standardized Level 1&#8211;5 certification pathway with vendor-aligned credentials &#8212; CompTIA, AWS, Cisco, ASE, and more.</p>
@@ -406,7 +883,6 @@
         </div>
         <div class="manifesto-row reveal reveal-delay-3">
           <div class="mr-counter">03 / 06</div>
-          <div class="mr-bar"></div>
           <div class="mr-body">
             <h3>End-to-End Lifecycle.</h3>
             <p>We don&#8217;t stop at certification. We develop, deploy, enable acquisition, and manage ongoing workforce performance &#8212; a closed-loop system with measurable outcomes.</p>
@@ -414,7 +890,6 @@
         </div>
         <div class="manifesto-row reveal reveal-delay-1">
           <div class="mr-counter">04 / 06</div>
-          <div class="mr-bar"></div>
           <div class="mr-body">
             <h3>26 Sector Coverage.</h3>
             <p>From technology and healthcare to energy, government, and creative industries &#8212; our frameworks are built for real sector-specific operational deployment.</p>
@@ -422,7 +897,6 @@
         </div>
         <div class="manifesto-row reveal reveal-delay-2">
           <div class="mr-counter">05 / 06</div>
-          <div class="mr-bar"></div>
           <div class="mr-body">
             <h3>CRM-Tracked Performance.</h3>
             <p>Workforce outcomes are tracked from day one. Organizations receive visibility into cohort performance, level progression, and deployment ROI in real time.</p>
@@ -430,7 +904,6 @@
         </div>
         <div class="manifesto-row reveal reveal-delay-3">
           <div class="mr-counter">06 / 06</div>
-          <div class="mr-bar"></div>
           <div class="mr-body">
             <h3>Multiple Engagement Models.</h3>
             <p>Acquire ready cohorts, sponsor development programs, or co-invest in workforce production infrastructure &#8212; we structure engagements to fit organizational context.</p>
@@ -439,10 +912,10 @@
       </div>
       <div class="sol-closer reveal">
         <hr class="sol-rule" />
-        <div class="sol-statement">Other organizations sell courses. BTH builds the human capital infrastructure behind enterprises, governments, and investors &#8212; then manages it long-term.</div>
-        <div style="display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;margin-top:2rem;align-items:center;">
+        <p class="sol-statement">Other organizations sell courses. BTH builds the human capital infrastructure behind enterprises, governments, and investors &#8212; then manages it long-term.</p>
+        <div class="sol-cta-row">
           <a href="workforce-engage.html?intent=briefing" class="btn btn-gold btn-lg">Schedule Executive Briefing &#8594;</a>
-          <a href="workforce-engage.html?intent=cohort" class="btn btn-outline-dark btn-lg" style="border-color:rgba(255,255,255,0.35);color:#fff;">Request Workforce Cohort</a>
+          <a href="workforce-engage.html?intent=cohort" class="btn btn-outline btn-lg">Request Workforce Cohort</a>
         </div>
       </div>
     </div>
@@ -453,6 +926,129 @@
       <h2>From education output to economic infrastructure</h2>
       <p>Traditional workforce models often stop at certification or course completion. WDDAM continues into <strong>deployment</strong> (teams operating inside live programmes and enterprises), <strong>monetization and transfer economics</strong> through acquisition structures, and <strong>managed lifecycle performance</strong> so capability is auditable, optimizable, and scalable.</p>
       <p>That is the shift from selling educational output to operating <strong>workforce infrastructure</strong> as a recurring institutional system &#8212; aligned to procurement, compliance, and sector-specific deployment realities.</p>
+    </div>
+  </section>
+
+
+  <!-- CERTIFICATION BODY INFRASTRUCTURE -->
+  <section class="cert-infra-section" id="certification-partners" aria-labelledby="cert-infra-heading">
+    <div class="cert-infra-inner">
+      <div class="cert-infra-layout">
+        <div class="cert-infra-copy-main reveal">
+          <div class="eyebrow">For certification bodies &amp; exam sponsors</div>
+          <h2 id="cert-infra-heading">Infrastructure for the world&#8217;s credential programmes</h2>
+          <p>BTH is not competing with certification bodies &#8212; we provide the <strong>operating infrastructure</strong> they need to scale: cohort design, authorized exam delivery, candidate pipelines, and governed workforce outcomes across countries and sectors.</p>
+          <p>Through our <strong>Pearson&nbsp;VUE Authorized Test Center</strong> (Site&nbsp;ID&nbsp;89828) and partnerships with bodies such as <strong>CompTIA</strong> and <strong>EC-Council</strong>, BTH connects credential publishers to institutional buyers &#8212; enterprises, governments, and multilateral programmes &#8212; that commission workforce at scale.</p>
+          <ul class="cert-infra-points">
+            <li>Level&nbsp;1&#8211;5 pathways mapped to your credential catalogue</li>
+            <li>Exam scheduling, delivery logistics, and results governance</li>
+            <li>Cohort-based development aligned to corporate and public-sector sponsors</li>
+            <li>ISO&nbsp;17024-aligned personnel certification framework for institutional reporting</li>
+          </ul>
+        </div>
+        <div class="cert-infra-panel reveal reveal-delay-1">
+            <h3>Partner &amp; delivery stack</h3>
+            <div class="cert-partner-row">
+              <span class="cp-code">PVUE</span>
+              <div class="cp-body">
+                <h4>Pearson&nbsp;VUE</h4>
+                <p>Authorized exam delivery partner &#8212; global test-center operations (Site&nbsp;89828).</p>
+              </div>
+            </div>
+            <div class="cert-partner-row">
+              <span class="cp-code">CPT</span>
+              <div class="cp-body">
+                <h4>CompTIA</h4>
+                <p>Partner &#8212; A+, Network+, Security+, Cloud+, and enterprise workforce pathways.</p>
+              </div>
+            </div>
+            <div class="cert-partner-row">
+              <span class="cp-code">ECC</span>
+              <div class="cp-body">
+                <h4>EC-Council</h4>
+                <p>Partner &#8212; cyber workforce and ethical-hacking credential infrastructure.</p>
+              </div>
+            </div>
+            <div class="cert-partner-row">
+              <span class="cp-code">+26</span>
+              <div class="cp-body">
+                <h4>Global vendor catalogue</h4>
+                <p>Microsoft, AWS, Cisco, ASE, and sector credentials integrated into WDDAM cohort systems.</p>
+              </div>
+            </div>
+          </div>
+        <div class="cert-volume-callout reveal">
+          <h3>Illustrative programme economics (cert bodies)</h3>
+          <div class="cv-metrics">
+            <div class="cv-metric"><div class="cv-val">5,000</div><div class="cv-key">professionals (IT programme)</div></div>
+            <div class="cv-metric"><div class="cv-val">2,500+</div><div class="cv-key">credential bundles (e.g. CompTIA A+)</div></div>
+            <div class="cv-metric"><div class="cv-val">PVUE</div><div class="cv-key">Site 89828 delivery</div></div>
+          </div>
+          <p>Modelled illustration for channel partnerships — actual volumes defined per mandate under contract. <a href="workforce-cert-channel.html" style="color:#7DD3FC;">Cert-body one-pager &#8594;</a></p>
+        </div>
+        <div class="cert-infra-cta cert-infra-cta--below-panel reveal reveal-delay-1">
+          <a href="workforce-engage.html?intent=cert-partnership&amp;audience=cert-body" class="btn btn-gold">Volume &amp; channel briefing</a>
+          <a href="workforce-diligence.html#cert-delivery" class="btn btn-outline">Delivery &amp; exam infrastructure</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- PROGRAMME ECONOMICS & FLYWHEEL -->
+  <section class="programme-economics-section" id="programme-scale" aria-labelledby="pe-heading">
+    <div class="pe-inner">
+      <header class="pe-header reveal">
+        <div class="eyebrow">Programme scale</div>
+        <h2 id="pe-heading">One infrastructure system — scaled to your mandate</h2>
+        <p>Whether you are commissioning a national programme, deploying enterprise cohorts, or extending credential reach — the same WDDAM pipeline delivers governed outcomes: certified capacity, live deployment, auditable competency evidence, and lifecycle management.</p>
+      </header>
+      <div class="pe-layout reveal reveal-delay-1">
+        <div class="pe-flywheel-wrap" aria-hidden="true">
+          <svg viewBox="0 0 320 320" role="img" aria-label="Institutional workforce flywheel">
+            <defs>
+              <linearGradient id="peGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#054ADA"/>
+                <stop offset="100%" stop-color="#0EA5E9"/>
+              </linearGradient>
+            </defs>
+            <circle cx="160" cy="160" r="140" fill="none" stroke="rgba(5,74,218,0.12)" stroke-width="2"/>
+            <g class="pe-ring">
+              <circle cx="160" cy="160" r="118" fill="none" stroke="url(#peGrad)" stroke-width="3" stroke-dasharray="12 8" opacity="0.85"/>
+              <text x="160" y="42" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" font-weight="800" fill="#054ADA">UN / IGO MANDATE</text>
+              <text x="278" y="168" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" font-weight="800" fill="#054ADA">GOVERNMENT</text>
+              <text x="160" y="292" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" font-weight="800" fill="#054ADA">ENTERPRISE</text>
+              <text x="42" y="168" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" font-weight="800" fill="#7C3AED">CREDENTIAL PATHWAYS</text>
+            </g>
+            <circle cx="160" cy="160" r="52" fill="#fff" stroke="#FACC15" stroke-width="2"/>
+          </svg>
+          <div class="pe-flywheel-center">WDDAM<span>OEDP Work Network</span></div>
+        </div>
+        <div class="pe-stats">
+          <article class="pe-stat-card pe-stat-card--featured">
+            <span class="pe-stat-icon">IT</span>
+            <div>
+              <div class="pe-stat-val">5,000 professionals &#183; 2,500+ credential bundles</div>
+              <p class="pe-stat-key"><strong>Illustrative national IT programme:</strong> Level&nbsp;1&#8211;2 track with CompTIA A+ and progression (Net+, Sec+, Cloud+) &#8212; sponsor-funded cohorts, Pearson&nbsp;VUE delivery (Site&nbsp;89828).</p>
+            </div>
+          </article>
+          <article class="pe-stat-card">
+            <span class="pe-stat-icon">50</span>
+            <div>
+              <div class="pe-stat-val">$695,825 per enterprise cohort</div>
+              <p class="pe-stat-key">Canonical Level&nbsp;1&#8211;5 pipeline (50 professionals) &#8212; SWD-INV memorandum. Commissioning unit for CHRO-led engagements.</p>
+            </div>
+          </article>
+          <article class="pe-stat-card">
+            <span class="pe-stat-icon">4</span>
+            <div>
+              <div class="pe-stat-val">Develop &#8594; Deploy &#8594; Acquire &#8594; Manage</div>
+              <p class="pe-stat-key">Structured infrastructure vs. randomized training purchases &#8212; auditable from mandate through deployment and lifecycle management.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+      <p class="pe-disclaimer reveal reveal-delay-2">Figures below are <strong>modelled illustrations</strong> for institutional business cases. Client-specific volumes, pricing, and outcomes are defined in proposals and contracts under NDA.</p>
     </div>
   </section>
 
@@ -637,35 +1233,36 @@
         <button type="button" class="sec-chip" data-filter="creative" aria-pressed="false">Creative <span class="chip-count">1</span></button>
       </div>
       <div class="sectors-grid">
-        <div class="sector-tile reveal" data-categories="tech"><div class="st-icon">&#x1F4BB;</div><div class="st-name">Information Technology</div><div class="st-sub">CompTIA &middot; Cisco &middot; Dev</div></div>
-        <div class="sector-tile reveal reveal-delay-1" data-categories="tech"><div class="st-icon">&#x2601;&#xFE0F;</div><div class="st-name">Intelligent Cloud &amp; AI</div><div class="st-sub">AWS &middot; Azure &middot; ML</div></div>
-        <div class="sector-tile reveal reveal-delay-2" data-categories="tech"><div class="st-icon">&#x1F510;</div><div class="st-name">Cybersecurity</div><div class="st-sub">Defense &middot; Risk &middot; Compliance</div></div>
-        <div class="sector-tile reveal reveal-delay-3" data-categories="healthcare"><div class="st-icon">&#x1F3E5;</div><div class="st-name">Healthcare &amp; Medical Tech</div><div class="st-sub">HIT &middot; Life Sciences</div></div>
-        <div class="sector-tile reveal" data-categories="industry"><div class="st-icon">&#x26A1;</div><div class="st-name">Renewable Energy</div><div class="st-sub">Solar &middot; Wind &middot; Green</div></div>
-        <div class="sector-tile reveal reveal-delay-1" data-categories="industry"><div class="st-icon">&#x1F3D7;&#xFE0F;</div><div class="st-name">Architecture &amp; Construction</div><div class="st-sub">AEC &middot; BIM &middot; PM</div></div>
-        <div class="sector-tile reveal reveal-delay-2" data-categories="tech"><div class="st-icon">&#x1F50C;</div><div class="st-name">Smart Home &amp; Automation</div><div class="st-sub">IoT &middot; ETA Certified</div></div>
-        <div class="sector-tile reveal reveal-delay-3" data-categories="tech"><div class="st-icon">&#x1F4E1;</div><div class="st-name">Fiber Optics &amp; Cabling</div><div class="st-sub">Network Infrastructure</div></div>
-        <div class="sector-tile reveal" data-categories="tech"><div class="st-icon">&#x1F4F6;</div><div class="st-name">Communications &amp; Satellite</div><div class="st-sub">5G &middot; RF &middot; Telecom</div></div>
-        <div class="sector-tile reveal reveal-delay-1" data-categories="industry"><div class="st-icon">&#x1F3ED;</div><div class="st-name">Manufacturing &amp; Industrial</div><div class="st-sub">Automation &middot; Quality</div></div>
-        <div class="sector-tile reveal reveal-delay-2" data-categories="industry"><div class="st-icon">&#x1F697;</div><div class="st-name">Automotive Technology</div><div class="st-sub">ASE Certified &middot; EV</div></div>
-        <div class="sector-tile reveal reveal-delay-3" data-categories="business"><div class="st-icon">&#x1F4B0;</div><div class="st-name">Finance &amp; Accounting</div><div class="st-sub">Management &middot; FinTech</div></div>
-        <div class="sector-tile reveal" data-categories="business"><div class="st-icon">&#x1F4C8;</div><div class="st-name">Business Development</div><div class="st-sub">Strategy &middot; Operations</div></div>
-        <div class="sector-tile reveal reveal-delay-1" data-categories="business"><div class="st-icon">&#x1F4E3;</div><div class="st-name">Marketing &amp; Sales</div><div class="st-sub">Digital &middot; Revenue</div></div>
-        <div class="sector-tile reveal reveal-delay-2" data-categories="public"><div class="st-icon">&#x1F3DB;&#xFE0F;</div><div class="st-name">Government &amp; Civic Tech</div><div class="st-sub">GovTech &middot; Public Admin</div></div>
-        <div class="sector-tile reveal reveal-delay-3" data-categories="public"><div class="st-icon">&#x1F33E;</div><div class="st-name">Agricultural Technology</div><div class="st-sub">AgriTech &middot; Precision</div></div>
-        <div class="sector-tile reveal" data-categories="public"><div class="st-icon">&#x1F6A8;</div><div class="st-name">Public Safety</div><div class="st-sub">Emergency &middot; Security</div></div>
-        <div class="sector-tile reveal reveal-delay-1" data-categories="healthcare"><div class="st-icon">&#x1F9EC;</div><div class="st-name">Biotech &amp; Life Sciences</div><div class="st-sub">Research &middot; Pharma</div></div>
-        <div class="sector-tile reveal reveal-delay-2" data-categories="industry"><div class="st-icon">&#x1F680;</div><div class="st-name">Aerospace &amp; Defense</div><div class="st-sub">Aviation &middot; Defense</div></div>
-        <div class="sector-tile reveal reveal-delay-3" data-categories="industry"><div class="st-icon">&#x1F69A;</div><div class="st-name">Transportation &amp; Logistics</div><div class="st-sub">Supply Chain &middot; Fleet</div></div>
-        <div class="sector-tile reveal" data-categories="creative"><div class="st-icon">&#x1F3A8;</div><div class="st-name">Creative &amp; Digital Design</div><div class="st-sub">Media &middot; UX &middot; Content</div></div>
-        <div class="sector-tile reveal reveal-delay-1" data-categories="tech"><div class="st-icon">&#x1F310;</div><div class="st-name">EdTech &amp; Education Systems</div><div class="st-sub">LMS &middot; Instructional</div></div>
-        <div class="sector-tile reveal reveal-delay-2" data-categories="business"><div class="st-icon">&#x1F3E0;</div><div class="st-name">Real Estate &amp; Facilities</div><div class="st-sub">Property &middot; Asset Ops</div></div>
-        <div class="sector-tile reveal reveal-delay-3" data-categories="business"><div class="st-icon">&#x2696;&#xFE0F;</div><div class="st-name">Legal &amp; Compliance</div><div class="st-sub">Corporate &middot; Regulatory</div></div>
-        <div class="sector-tile reveal" data-categories="tech"><div class="st-icon">&#x1F916;</div><div class="st-name">Research &amp; Development</div><div class="st-sub">Innovation &middot; Systems</div></div>
-        <div class="sector-tile reveal reveal-delay-1" data-categories="public"><div class="st-icon">&#x2764;&#xFE0F;</div><div class="st-name">Family &amp; Social Development</div><div class="st-sub">PECE &middot; CRLA &middot; Community</div></div>
+        <div class="sector-tile reveal" data-categories="tech"><div class="st-icon">&#x1F4BB;</div><span class="st-code">IT</span><div class="st-name">Information Technology</div><div class="st-sub">CompTIA &middot; Cisco &middot; Dev</div></div>
+        <div class="sector-tile reveal reveal-delay-1" data-categories="tech"><div class="st-icon">&#x2601;&#xFE0F;</div><span class="st-code">CLD</span><div class="st-name">Intelligent Cloud &amp; AI</div><div class="st-sub">AWS &middot; Azure &middot; ML</div></div>
+        <div class="sector-tile reveal reveal-delay-2" data-categories="tech"><div class="st-icon">&#x1F510;</div><span class="st-code">CYB</span><div class="st-name">Cybersecurity</div><div class="st-sub">Defense &middot; Risk &middot; Compliance</div></div>
+        <div class="sector-tile reveal reveal-delay-3" data-categories="healthcare"><div class="st-icon">&#x1F3E5;</div><span class="st-code">HLT</span><div class="st-name">Healthcare &amp; Medical Tech</div><div class="st-sub">HIT &middot; Life Sciences</div></div>
+        <div class="sector-tile reveal" data-categories="industry"><div class="st-icon">&#x26A1;</div><span class="st-code">ENR</span><div class="st-name">Renewable Energy</div><div class="st-sub">Solar &middot; Wind &middot; Green</div></div>
+        <div class="sector-tile reveal reveal-delay-1" data-categories="industry"><div class="st-icon">&#x1F3D7;&#xFE0F;</div><span class="st-code">AEC</span><div class="st-name">Architecture &amp; Construction</div><div class="st-sub">AEC &middot; BIM &middot; PM</div></div>
+        <div class="sector-tile reveal reveal-delay-2" data-categories="tech"><div class="st-icon">&#x1F50C;</div><span class="st-code">IOT</span><div class="st-name">Smart Home &amp; Automation</div><div class="st-sub">IoT &middot; ETA Certified</div></div>
+        <div class="sector-tile reveal reveal-delay-3" data-categories="tech"><div class="st-icon">&#x1F4E1;</div><span class="st-code">FIB</span><div class="st-name">Fiber Optics &amp; Cabling</div><div class="st-sub">Network Infrastructure</div></div>
+        <div class="sector-tile reveal" data-categories="tech"><div class="st-icon">&#x1F4F6;</div><span class="st-code">COM</span><div class="st-name">Communications &amp; Satellite</div><div class="st-sub">5G &middot; RF &middot; Telecom</div></div>
+        <div class="sector-tile reveal reveal-delay-1" data-categories="industry"><div class="st-icon">&#x1F3ED;</div><span class="st-code">MFG</span><div class="st-name">Manufacturing &amp; Industrial</div><div class="st-sub">Automation &middot; Quality</div></div>
+        <div class="sector-tile reveal reveal-delay-2" data-categories="industry"><div class="st-icon">&#x1F697;</div><span class="st-code">AUT</span><div class="st-name">Automotive Technology</div><div class="st-sub">ASE Certified &middot; EV</div></div>
+        <div class="sector-tile reveal reveal-delay-3" data-categories="business"><div class="st-icon">&#x1F4B0;</div><span class="st-code">FIN</span><div class="st-name">Finance &amp; Accounting</div><div class="st-sub">Management &middot; FinTech</div></div>
+        <div class="sector-tile reveal" data-categories="business"><div class="st-icon">&#x1F4C8;</div><span class="st-code">BD</span><div class="st-name">Business Development</div><div class="st-sub">Strategy &middot; Operations</div></div>
+        <div class="sector-tile reveal reveal-delay-1" data-categories="business"><div class="st-icon">&#x1F4E3;</div><span class="st-code">MKT</span><div class="st-name">Marketing &amp; Sales</div><div class="st-sub">Digital &middot; Revenue</div></div>
+        <div class="sector-tile reveal reveal-delay-2" data-categories="public"><div class="st-icon">&#x1F3DB;&#xFE0F;</div><span class="st-code">GOV</span><div class="st-name">Government &amp; Civic Tech</div><div class="st-sub">GovTech &middot; Public Admin</div></div>
+        <div class="sector-tile reveal reveal-delay-3" data-categories="public"><div class="st-icon">&#x1F33E;</div><span class="st-code">AGR</span><div class="st-name">Agricultural Technology</div><div class="st-sub">AgriTech &middot; Precision</div></div>
+        <div class="sector-tile reveal" data-categories="public"><div class="st-icon">&#x1F6A8;</div><span class="st-code">PSF</span><div class="st-name">Public Safety</div><div class="st-sub">Emergency &middot; Security</div></div>
+        <div class="sector-tile reveal reveal-delay-1" data-categories="healthcare"><div class="st-icon">&#x1F9EC;</div><span class="st-code">BIO</span><div class="st-name">Biotech &amp; Life Sciences</div><div class="st-sub">Research &middot; Pharma</div></div>
+        <div class="sector-tile reveal reveal-delay-2" data-categories="industry"><div class="st-icon">&#x1F680;</div><span class="st-code">AER</span><div class="st-name">Aerospace &amp; Defense</div><div class="st-sub">Aviation &middot; Defense</div></div>
+        <div class="sector-tile reveal reveal-delay-3" data-categories="industry"><div class="st-icon">&#x1F69A;</div><span class="st-code">LOG</span><div class="st-name">Transportation &amp; Logistics</div><div class="st-sub">Supply Chain &middot; Fleet</div></div>
+        <div class="sector-tile reveal" data-categories="creative"><div class="st-icon">&#x1F3A8;</div><span class="st-code">CRD</span><div class="st-name">Creative &amp; Digital Design</div><div class="st-sub">Media &middot; UX &middot; Content</div></div>
+        <div class="sector-tile reveal reveal-delay-1" data-categories="tech"><div class="st-icon">&#x1F310;</div><span class="st-code">EDU</span><div class="st-name">EdTech &amp; Education Systems</div><div class="st-sub">LMS &middot; Instructional</div></div>
+        <div class="sector-tile reveal reveal-delay-2" data-categories="business"><div class="st-icon">&#x1F3E0;</div><span class="st-code">RES</span><div class="st-name">Real Estate &amp; Facilities</div><div class="st-sub">Property &middot; Asset Ops</div></div>
+        <div class="sector-tile reveal reveal-delay-3" data-categories="business"><div class="st-icon">&#x2696;&#xFE0F;</div><span class="st-code">LEG</span><div class="st-name">Legal &amp; Compliance</div><div class="st-sub">Corporate &middot; Regulatory</div></div>
+        <div class="sector-tile reveal" data-categories="tech"><div class="st-icon">&#x1F916;</div><span class="st-code">RND</span><div class="st-name">Research &amp; Development</div><div class="st-sub">Innovation &middot; Systems</div></div>
+        <div class="sector-tile reveal reveal-delay-1" data-categories="public"><div class="st-icon">&#x2764;&#xFE0F;</div><span class="st-code">FAM</span><div class="st-name">Family &amp; Social Development</div><div class="st-sub">PECE &middot; CRLA &middot; Community</div></div>
       </div>
       <div class="sectors-cta reveal">
-        <a href="program.html" class="btn btn-primary btn-lg">Browse All 26 Sector Programs &#8594;</a>
+        <a href="workforce-engage.html?intent=briefing" class="btn btn-primary btn-lg">Request sector briefing &#8594;</a>
+        <a href="program.html" class="btn btn-outline-dark btn-lg" style="margin-left:0.75rem;">Browse sector programs</a>
       </div>
     </div>
   </section>
@@ -711,6 +1308,7 @@
           <div class="ver-body">
             <h3>Eliminate Recruitment Cost</h3>
             <p>Pre-certified cohorts remove per-hire recruitment fees of $4,000&#8211;$40,000. A single cohort of 50 saves an estimated $200K&#8211;$2M in traditional hiring cost.</p>
+            <span class="roi-footnote">Benchmark range; modelled in proposal using client hiring volumes and role mix.</span>
           </div>
           <div class="ver-stat">$200K&#8211;$2M<span>saved per cohort</span></div>
         </div>
@@ -719,6 +1317,7 @@
           <div class="ver-icon" style="color:#10B981;">&#x26A1;</div>
           <div class="ver-body">
             <h3>Accelerate Workforce Productivity</h3>
+            <span class="roi-footnote">Directional benchmark; client-specific ramp modelled in proposal.</span>
             <p>Deployment-ready professionals reduce ramp time from 6&#8211;12 months to days. Structured Level 1&#8211;5 pathways ensure role-fit from day one.</p>
           </div>
           <div class="ver-stat">6&#8211;12mo<span>ramp eliminated</span></div>
@@ -728,6 +1327,7 @@
           <div class="ver-icon" style="color:#FACC15;">&#x1F451;</div>
           <div class="ver-body">
             <h3>Build a Leadership Pipeline</h3>
+            <span class="roi-footnote">Executive hiring cost multiple — industry composite; not a guarantee.</span>
             <p>Level 3&#8211;5 professionals are pre-positioned for senior and executive leadership &#8212; reducing dependency on external executive hiring at 150&#8211;200% of annual salary.</p>
           </div>
           <div class="ver-stat">150&#8211;200%<span>hiring cost avoided</span></div>
@@ -737,6 +1337,7 @@
           <div class="ver-icon" style="color:#8B5CF6;">&#x1F4CB;</div>
           <div class="ver-body">
             <h3>Strengthen Compliance Posture</h3>
+            <span class="roi-footnote">Subject to sector regulatory requirements per engagement.</span>
             <p>Vendor-aligned credentials, sectoral certifications, and documented Level pathways provide auditable evidence of workforce competency for regulatory and governance requirements.</p>
           </div>
           <div class="ver-stat">100%<span>auditable credentials</span></div>
@@ -746,6 +1347,7 @@
           <div class="ver-icon" style="color:#06B6D4;">&#x1F331;</div>
           <div class="ver-body">
             <h3>Deliver ESG Workforce Impact</h3>
+            <span class="roi-footnote">Reporting framework mapped per sponsor / UN programme requirements.</span>
             <p>Structured workforce development programs aligned to SDG 8, SDG 16, and UDHR Article 26:2 provide measurable ESG reporting evidence across 26 sectors.</p>
           </div>
           <div class="ver-stat">SDG 8 + 16<span>fully aligned</span></div>
@@ -755,6 +1357,7 @@
           <div class="ver-icon" style="color:#FB923C;">&#x1F4CA;</div>
           <div class="ver-body">
             <h3>Generate Infrastructure ROI</h3>
+            <span class="roi-footnote">Investor mechanics on separate platform; not an offer of securities on this page.</span>
             <p>Investors and infrastructure operators generate recurring revenue through workforce production pods &#8212; transforming talent development from cost center to profit center.</p>
           </div>
           <div class="ver-stat">Profit center<span>conversion</span></div>
@@ -769,40 +1372,51 @@
       <div class="proof-strip-header reveal">
         <div class="eyebrow">Engagement Signals</div>
         <h2>What WDDAM looks like in practice</h2>
-        <p>Three illustrative reference profiles drawn from BTH&#8217;s engagement footprint &#8212; structured to show the shape of institutional workforce contracts rather than to identify any specific counterparty.</p>
+        <p>Four institutional engagement profiles &#8212; UN/multilateral, government, enterprise, and certification-body infrastructure &#8212; structured to show the shape of institutional workforce contracts rather than to identify any specific counterparty.</p>
       </div>
-      <div class="proof-grid">
-        <article class="proof-card reveal">
-          <span class="proof-tag">REF 01 &#183; Enterprise &#183; IT &amp; Cloud</span>
-          <h3>National telecoms operator &#8212; cloud &amp; cyber capability build-out</h3>
-          <p class="proof-context">Multi-sector operator commissions Level 1&#8211;5 cohort across cloud, cyber, and network operations &#8212; full WDDAM stack, managed delivery, governance reporting.</p>
+      <div class="proof-grid proof-grid--four">
+        <article class="proof-card proof-card--quantified reveal">
+          <span class="proof-tag">UN / Multilateral</span>
+          <h3>Digital skills &amp; workforce programme mandate</h3>
+          <p class="proof-context">National or regional mandate delivered through structured cohorts, sector pathways, and results-framework reporting aligned to SDG&nbsp;8 and SDG&nbsp;16.</p>
           <div class="proof-metrics">
-            <div class="proof-metric"><div class="pm-val">50</div><div class="pm-key">cohort headcount</div></div>
-            <div class="proof-metric"><div class="pm-val">L1&#8211;L5</div><div class="pm-key">pipeline depth</div></div>
+            <div class="proof-metric"><div class="pm-val">5K+</div><div class="pm-key">professionals (model)</div></div>
+            <div class="proof-metric"><div class="pm-val">Cohort</div><div class="pm-key">unit of scale</div></div>
+            <div class="proof-metric"><div class="pm-val">Audit</div><div class="pm-key">ready evidence</div></div>
+            <div class="proof-metric"><div class="pm-val">WDDAM</div><div class="pm-key">full stack</div></div>
+          </div>
+        </article>
+        <article class="proof-card proof-card--quantified reveal reveal-delay-1">
+          <span class="proof-tag">Government</span>
+          <h3>Sovereign workforce &amp; public-sector pipeline</h3>
+          <p class="proof-context">Ministry or agency commissioning Level&nbsp;1&#8211;5 pathways with procurement-grade documentation and governed deployment into live programmes.</p>
+          <div class="proof-metrics">
+            <div class="proof-metric"><div class="pm-val">Gov</div><div class="pm-key">procurement fit</div></div>
+            <div class="proof-metric"><div class="pm-val">26</div><div class="pm-key">sectors</div></div>
+            <div class="proof-metric"><div class="pm-val">ISO</div><div class="pm-key">17024 frame</div></div>
             <div class="proof-metric"><div class="pm-val">36mo</div><div class="pm-key">managed window</div></div>
-            <div class="proof-metric"><div class="pm-val">CRM</div><div class="pm-key">tracked outcomes</div></div>
           </div>
         </article>
-        <article class="proof-card reveal reveal-delay-1">
-          <span class="proof-tag">REF 02 &#183; Government &#183; Digital Skills Mandate</span>
-          <h3>Public-sector digital workforce programme</h3>
-          <p class="proof-context">Government workforce unit commissions sector pathways under a national digital skills mandate &#8212; structured pathways, sectoral compliance, ESG-aligned reporting.</p>
+        <article class="proof-card proof-card--quantified reveal reveal-delay-2">
+          <span class="proof-tag">Enterprise</span>
+          <h3>Corporate workforce infrastructure engagement</h3>
+          <p class="proof-context">Enterprise commissions 50-professional cohort with deployment-ready capacity, CRM-tracked outcomes, and preferred acquisition economics.</p>
           <div class="proof-metrics">
-            <div class="proof-metric"><div class="pm-val">Multi</div><div class="pm-key">sector pathways</div></div>
-            <div class="proof-metric"><div class="pm-val">SDG&nbsp;8/16</div><div class="pm-key">alignment</div></div>
-            <div class="proof-metric"><div class="pm-val">ISO 17024</div><div class="pm-key">certification framework</div></div>
-            <div class="proof-metric"><div class="pm-val">Audit</div><div class="pm-key">documentable evidence</div></div>
+            <div class="proof-metric"><div class="pm-val">50</div><div class="pm-key">professionals</div></div>
+            <div class="proof-metric"><div class="pm-val">$695,825</div><div class="pm-key">cohort (canonical)</div></div>
+            <div class="proof-metric"><div class="pm-val">L1&#8211;L5</div><div class="pm-key">pipeline</div></div>
+            <div class="proof-metric"><div class="pm-val">CRM</div><div class="pm-key">tracked</div></div>
           </div>
         </article>
-        <article class="proof-card reveal reveal-delay-2">
-          <span class="proof-tag">REF 03 &#183; Capital Partner &#183; Infrastructure Pod</span>
-          <h3>Infrastructure investor &#8212; workforce production pod</h3>
-          <p class="proof-context">Capital partner co-operates a Workforce Infrastructure Pod &#8212; sector-specific cohorts placed under deployment and acquisition contracts; recurring revenue model.</p>
+        <article class="proof-card proof-card--quantified reveal reveal-delay-3">
+          <span class="proof-tag">Cert body / Exam sponsor</span>
+          <h3>Credential programme infrastructure partnership</h3>
+          <p class="proof-context">Certification body scales delivery through BTH cohort systems, Pearson&nbsp;VUE authorized testing, and institutional sponsor channels (enterprise &amp; government).</p>
           <div class="proof-metrics">
-            <div class="proof-metric"><div class="pm-val">Pod</div><div class="pm-key">operating unit</div></div>
-            <div class="proof-metric"><div class="pm-val">50&#8211;2k+</div><div class="pm-key">scaling range</div></div>
-            <div class="proof-metric"><div class="pm-val">Recurring</div><div class="pm-key">contract revenue</div></div>
-            <div class="proof-metric"><div class="pm-val">Multi</div><div class="pm-key">sector coverage</div></div>
+            <div class="proof-metric"><div class="pm-val">PVUE</div><div class="pm-key">Site 89828</div></div>
+            <div class="proof-metric"><div class="pm-val">CompTIA</div><div class="pm-key">+ EC-Council</div></div>
+            <div class="proof-metric"><div class="pm-val">Global</div><div class="pm-key">exam logistics</div></div>
+            <div class="proof-metric"><div class="pm-val">Cohort</div><div class="pm-key">orchestration</div></div>
           </div>
         </article>
       </div>
@@ -891,6 +1505,45 @@
     </div>
   </section>
 
+
+  <!-- DEFINITIONS & ASSUMPTIONS -->
+  <section class="definitions-section" id="definitions" aria-labelledby="definitions-heading">
+    <div class="definitions-inner">
+      <h2 id="definitions-heading">Definitions &amp; assumptions</h2>
+      <p class="def-lead">Figures on this page are governed by the SWD-INV / enterprise workforce memorandum unless noted. Expand any item for the institutional definition used in proposals and diligence.</p>
+      <div class="def-accordion">
+                <details class="def-item">
+          <summary>Programme economics (illustrative — 5,000 / 2,500+ bundles)</summary>
+          <div class="def-body">National-scale IT workforce illustrations on the public page are <strong>modelled</strong> for cert-body and UN/gov business cases — not committed inventory. Contract-specific models under NDA.</div>
+        </details>
+        <details class="def-item">
+          <summary>Canonical cohort investment ($695,825)</summary>
+          <div class="def-body">Total investment for one 50-professional enterprise cohort across Level&nbsp;1&#8211;5: (20&#215;$8,100) + (10&#215;$12,000) + (8&#215;$16,000) + (7&#215;$20,000) + (5&#215;$26,865) = <strong>$695,825</strong>. Hero panel may display rounded figures for layout; contract values use the canonical total.</div>
+        </details>
+        <details class="def-item">
+          <summary>Deployment capacity (2,000+)</summary>
+          <div class="def-body">Active specialist deployment capacity within the OEDP Work Network operating model &#8212; not a guarantee of immediate placement in every sector. Confirmed per engagement in the deployment schedule.</div>
+        </details>
+        <details class="def-item">
+          <summary>Global scale targets (5,000 / 130,000)</summary>
+          <div class="def-body">Strategic target architecture for scaling WDDAM: certified capacity per sector and aggregate structure across 26 sectors. Not a commitment of current inventory; actual cohort composition and timelines are set per contract.</div>
+        </details>
+        <details class="def-item">
+          <summary>Pearson&nbsp;VUE, CompTIA, EC-Council references</summary>
+          <div class="def-body">BTH operates as an authorized Pearson&nbsp;VUE exam delivery partner (Site&nbsp;ID&nbsp;89828) and maintains partnerships / curriculum alignment with certification bodies including CompTIA and EC-Council. Trademark names belong to their respective owners; partnership status is documented in the <a href="workforce-diligence.html">diligence pack</a>.</div>
+        </details>
+        <details class="def-item">
+          <summary>ROI and benchmark statistics (value section)</summary>
+          <div class="def-body">Recruitment-cost, ramp-time, and hiring-cost ranges are directional benchmarks used in institutional business cases &#8212; sourced from composite enterprise workforce economics and BTH programme models. Client-specific ROI is modelled in proposals; not a guaranteed outcome.</div>
+        </details>
+        <details class="def-item">
+          <summary>Illustrative reference profiles (#results)</summary>
+          <div class="def-body">Engagement-shape examples for procurement conversations. Named references, contract excerpts, and outcome data are available under NDA during executive briefings.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
   <!-- FOOTER -->
   <footer>
     <div class="footer-inner">
@@ -917,8 +1570,10 @@
         <div class="footer-col-title">Engage</div>
         <ul class="footer-links">
           <li><a href="#partner">Partnership Models</a></li>
-          <li><a href="program.html">Request Cohort</a></li>
+          <li><a href="workforce-engage.html?intent=cohort">Request Cohort</a></li>
           <li><a href="workforce-engage.html?intent=briefing">Schedule Briefing</a></li>
+          <li><a href="workforce-diligence.html">Diligence Pack</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
           <li><a href="index.html">&#8592; BTH Group Home</a></li>
         </ul>
       </div>
@@ -930,6 +1585,7 @@
   </footer>
 
   <script src="assets/js/workforce-infrastructure.js" defer></script>
+  <script src="assets/js/workforce-audience-tabs.js" defer></script>
 
   <!-- BTH Intelligent Assistant loads below -->
   <script src="assets/js/bth-chatbot.js"></script>

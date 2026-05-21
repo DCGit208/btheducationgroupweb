@@ -20,8 +20,9 @@
     /* ── SECTION WATERMARKS ───────────────────────────────────── */
     (function() {
       var map = [
+        ['.audience-section',  'MANDATES',       true],
         ['.problem-section',   'CHALLENGE',      false],
-        ['.solution-section',  'INFRASTRUCTURE', false],
+        ['.wddam-suite',       'WDDAM',          false],
         ['.bridge-outcome-section', 'OUTPUT',   false],
         ['.lifecycle-section', 'LIFECYCLE',       false],
         ['.sectors-section',   'SECTORS',         false],
@@ -126,11 +127,21 @@
     (function() {
       var el = document.getElementById('tw-text');
       if (!el) return;
+      var isFr = (document.documentElement.lang || '').toLowerCase().indexOf('fr') === 0;
       if (PRM) {
-        el.textContent = 'WDDAM: Develop. Deploy. Acquire. Manage.';
+        el.textContent = isFr
+          ? 'WDDAM : Développer. Déployer. Acquérir. Gouverner.'
+          : 'WDDAM: Develop. Deploy. Acquire. Manage.';
         return;
       }
-      var phrases = [
+      var phrases = isFr ? [
+        'WDDAM : Développer. Déployer. Acquérir. Gouverner.',
+        'Produire. Déployer. Acquérir. Gouverner.',
+        'De la certification au déploiement.',
+        'Certifié. Vérifié. Déployé.',
+        'Grade entreprise. Échelle institutionnelle.',
+        'Architecture de capacité. Mandat institutionnel.'
+      ] : [
         'WDDAM: Develop. Deploy. Acquire. Manage.',
         'Build. Deploy. Acquire. Manage.',
         'From Certification to Deployment.',
@@ -272,6 +283,8 @@
       donutIO.observe(arc);
     })();
 
+  /* Audience mandate tabs: assets/js/workforce-audience-tabs.js + workforce-audience.css (CSS radio pattern) */
+
   /* ── SECTORS FILTER CHIPS (added: Phase 2) ─────────────────── */
   (function() {
     var chips = document.querySelectorAll('.sectors-filter .sec-chip');
@@ -294,4 +307,103 @@
         applyFilter(chip.dataset.filter || 'all');
       });
     });
+  })();
+
+  /* ── V2 TOP NAV — mobile panel, page map, scroll spy ─────── */
+  (function() {
+    var nav = document.querySelector('.topnav--v2');
+    if (!nav) return;
+
+    window.addEventListener('scroll', function() {
+      nav.classList.toggle('is-scrolled', window.scrollY > 12);
+    }, { passive: true });
+
+    var toggle = document.getElementById('nav-toggle-v2');
+    var panel = document.getElementById('nav-panel-v2');
+    var mapWrap = document.getElementById('nav-page-map');
+    var mapTrigger = document.getElementById('nav-sitemap-trigger');
+    var mapMenu = document.getElementById('nav-sitemap-menu');
+    var primaryLinks = nav.querySelectorAll('.nav-primary a[data-nav-section]');
+
+    function closeMap() {
+      if (!mapTrigger || !mapMenu) return;
+      mapTrigger.setAttribute('aria-expanded', 'false');
+      mapMenu.hidden = true;
+      if (mapWrap) mapWrap.classList.remove('is-open');
+    }
+
+    function openMap() {
+      if (!mapTrigger || !mapMenu) return;
+      mapTrigger.setAttribute('aria-expanded', 'true');
+      mapMenu.hidden = false;
+      if (mapWrap) mapWrap.classList.add('is-open');
+    }
+
+    function closeMobile() {
+      if (!toggle || !panel) return;
+      toggle.setAttribute('aria-expanded', 'false');
+      panel.classList.remove('is-open');
+      document.body.classList.remove('nav-open');
+    }
+
+    if (toggle && panel) {
+      toggle.addEventListener('click', function() {
+        var open = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', open ? 'false' : 'true');
+        panel.classList.toggle('is-open', !open);
+        document.body.classList.toggle('nav-open', !open);
+        if (!open) closeMap();
+      });
+    }
+
+    if (mapTrigger && mapMenu) {
+      mapTrigger.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        if (mapTrigger.getAttribute('aria-expanded') === 'true') {
+          closeMap();
+        } else {
+          openMap();
+        }
+      });
+    }
+
+    document.addEventListener('click', function(e) {
+      if (mapWrap && !mapWrap.contains(e.target)) closeMap();
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        closeMap();
+        closeMobile();
+      }
+    });
+
+    nav.querySelectorAll('a[href^="#"]').forEach(function(link) {
+      link.addEventListener('click', function() {
+        closeMap();
+        closeMobile();
+      });
+    });
+
+    if (primaryLinks.length && 'IntersectionObserver' in window) {
+      var sectionIds = [];
+      primaryLinks.forEach(function(link) {
+        var id = link.getAttribute('data-nav-section');
+        var el = id && document.getElementById(id);
+        if (el) sectionIds.push({ id: id, el: el, link: link });
+      });
+      var spy = new IntersectionObserver(function(entries) {
+        var visible = entries.filter(function(e) { return e.isIntersecting; });
+        if (!visible.length) return;
+        var best = visible[0];
+        for (var i = 1; i < visible.length; i++) {
+          if (visible[i].intersectionRatio > best.intersectionRatio) best = visible[i];
+        }
+        sectionIds.forEach(function(item) {
+          item.link.classList.toggle('is-active', item.el === best.target);
+        });
+      }, { rootMargin: '-40% 0px -50% 0px', threshold: [0, 0.15, 0.35, 0.55, 0.75, 1] });
+      sectionIds.forEach(function(item) { spy.observe(item.el); });
+    }
   })();

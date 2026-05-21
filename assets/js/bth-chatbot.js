@@ -48,6 +48,115 @@ A 6-dimensional workforce development system: Education → Assessment → Certi
       suggestions: ['OEDP framework', 'Certifications', 'Apply now', 'Contact us']
     },
 
+    // ── INSTITUTIONAL WORKFORCE (UN / GOV / ENTERPRISE) ───────────────────────
+    institutionalWorkforce: {
+      keywords: [
+        'workforce infrastructure', 'institutional workforce', 'un workforce',
+        'united nations workforce', 'government workforce programme',
+        'national workforce', 'multilateral workforce', 'igo workforce',
+        'sovereign workforce', 'enterprise workforce infrastructure',
+        'workforce at scale', 'cohort commissioning', 'national digital skills',
+        'public sector workforce', 'workforce mandate'
+      ],
+      response: `🏛️ <strong>BTH Workforce Infrastructure — Institutional Programmes</strong>
+
+This page is built for organisations that commission workforce as <strong>infrastructure</strong> — not individual courses:
+
+🇺🇳 <strong>UN / IGOs / Multilateral</strong> — programme-scale mandates, SDG 8 &amp; 16 reporting, multi-country cohorts
+🏛️ <strong>Governments</strong> — sovereign skills agencies, procurement-grade pathways, public-sector deployment
+🏢 <strong>Enterprises</strong> — 50-person Level 1–5 cohorts, MSAs/SOWs, deployment &amp; acquisition economics
+
+<strong>WDDAM:</strong> Develop → Deploy → Acquire → Manage via the OEDP Work Network.
+
+📍 <a href="workforce-infrastructure.html#audiences" class="bth-chat-link">Who we serve →</a>
+📍 <a href="workforce-diligence.html" class="bth-chat-link">Diligence pack →</a>
+📍 <a href="workforce-engage.html?intent=briefing" class="bth-chat-link">Schedule briefing →</a>`,
+      suggestions: ['Certification body partnership', 'WDDAM explained', 'Cohort pricing', 'Pearson VUE delivery']
+    },
+
+    // ── CERTIFICATION BODIES / EXAM SPONSORS ─────────────────────────────────
+    certificationBodyPartners: {
+      keywords: [
+        'certification body', 'exam sponsor', 'credential publisher', 'pearson vue',
+        'exam delivery', 'test center', 'testing center', 'ec-council partner',
+        'comptia partner', 'credential infrastructure', 'exam infrastructure',
+        'certification programme infrastructure', 'authorized test center',
+        'site 89828', 'global exam delivery'
+      ],
+      response: `📜 <strong>Certification Bodies &amp; Exam Sponsors</strong>
+
+BTH provides <strong>workforce infrastructure</strong> for credential publishers — we do not compete with your certification; we operationalize it at scale:
+
+• <strong>Pearson VUE</strong> — Authorized exam delivery (Site ID <strong>89828</strong>)
+• <strong>CompTIA</strong> — Partner pathways (A+, Net+, Sec+, Cloud+)
+• <strong>EC-Council</strong> — Partner; cyber workforce infrastructure
+• <strong>Microsoft, AWS, Cisco, ASE</strong> — Integrated into Level 1–5 cohort systems
+
+<strong>What you get:</strong> cohort orchestration, institutional sponsor channels (enterprise &amp; government), exam logistics, ISO 17024-aligned reporting frame.
+
+📍 <a href="workforce-infrastructure.html#certification-partners" class="bth-chat-link">Certification infrastructure →</a>
+📍 <a href="workforce-cert-channel.html" class="bth-chat-link">Cert-body one-pager →</a>
+📍 <a href="workforce-engage.html?intent=cert-partnership&amp;audience=cert-body" class="bth-chat-link">Volume &amp; channel briefing →</a>`,
+      suggestions: ['Programme economics', 'WDDAM for institutions', 'Enterprise sponsor mode', 'Diligence pack']
+    },
+
+    programmeEconomics: {
+      keywords: [
+        'programme economics', '5000 workforce', '2500 comptia', 'bundle volume',
+        'credential bundles', 'national it programme', 'flywheel', 'cert volume',
+        'channel sales', 'institutional mandate'
+      ],
+      response: `📊 <strong>Programme Economics (Illustrative)</strong>
+
+BTH's flywheel: <strong>UN/gov mandate → cohort production → enterprise deployment → cert exam volume</strong>.
+
+<strong>Modelled example (IT sector):</strong>
+• 5,000 professionals in a national programme
+• 2,500+ credential bundles (e.g. CompTIA A+ and progression)
+• Pearson VUE authorized delivery (Site <strong>89828</strong>)
+• Enterprise cohort unit: <strong>$695,825</strong> per 50-person Level 1–5 pipeline
+
+Figures are illustrations for business cases — contract-specific models under NDA.
+
+📍 <a href="workforce-infrastructure.html#programme-scale" class="bth-chat-link">Programme scale →</a>`,
+      suggestions: ['Certification body partnership', 'Enterprise three modes', 'UDHR / UN mandate', 'Cohort pricing']
+    },
+
+    enterpriseEngagementModes: {
+      keywords: [
+        'sponsor programme', 'sponsor workforce', 'commission cohort', 'investor diligence',
+        'co-invest', 'infrastructure pod', 'three ways', 'enterprise modes', 'anti-randomized',
+        'randomized training', 'official partner'
+      ],
+      response: `🏢 <strong>Three Enterprise Engagement Modes</strong>
+
+1️⃣ <strong>Commission</strong> — CHRO-led 50-person Level 1–5 cohorts ($695,825 canonical). MSAs/SOWs.
+2️⃣ <strong>Sponsor</strong> — Fund development for region/sector (CSR, foundation, strategic HR) without necessarily employing graduates.
+3️⃣ <strong>Invest / Acquire</strong> — Co-invest in workforce production pods; pipeline acquisition economics.
+
+Structured <strong>WDDAM</strong> vs. fragmented L&amp;D purchases.
+
+📍 <a href="workforce-infrastructure.html#enterprise-modes" class="bth-chat-link">Enterprise modes →</a>
+📍 <a href="workforce-engage.html?intent=sponsor" class="bth-chat-link">Sponsor intake →</a>`,
+      suggestions: ['UN / multilateral', 'Programme economics', 'WDDAM explained', 'Investor platform']
+    },
+
+    unUdhrMandate: {
+      keywords: [
+        'udhr', 'article 26', 'human personality', 'hexad', 'un programme',
+        'multilateral mandate', 'sdg 8', 'sdg 16', 'results framework', 'flagship workforce'
+      ],
+      response: `🇺🇳 <strong>UN / IGO — UDHR &amp; Hexad</strong>
+
+BTH positions workforce as <strong>flagship infrastructure</strong> aligned to <strong>UDHR Article 26(2)</strong> — education directed to the full development of the human personality.
+
+The <strong>Hexad Workforce Conditioning System</strong> supports maturation through WDDAM <em>Develop</em>, with SDG&nbsp;8 and SDG&nbsp;16 reporting for institutional audit.
+
+📍 <a href="workforce-infrastructure.html#un-mandate" class="bth-chat-link">UN mandate section →</a>
+📍 <a href="workforce-engage.html?intent=briefing&amp;audience=un" class="bth-chat-link">Multilateral briefing →</a>`,
+      suggestions: ['Programme economics', 'WDDAM explained', 'Government briefing', 'Diligence pack']
+    },
+
     // ── WDDAM (Workforce Infrastructure formula) ─────────────────────────────
     wddam: {
       keywords: [

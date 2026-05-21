@@ -38,6 +38,12 @@
       display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem;
       margin-bottom: 1.5rem;
     }
+    .intent-bar.intent-bar--five {
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+    @media (max-width: 1100px) {
+      .intent-bar.intent-bar--five { grid-template-columns: repeat(3, 1fr); }
+    }
     .intent-card {
       display: block;
       background: #fff;
@@ -160,24 +166,36 @@
 
     <main class="engage-body">
       <div class="engage-form-card">
-        <fieldset class="intent-bar" style="border:none;padding:0;margin:0 0 1.25rem;" aria-label="Select engagement intent">
+        <fieldset class="intent-bar intent-bar--five" style="border:none;padding:0;margin:0 0 1.25rem;" aria-label="Select engagement intent">
           <label class="intent-card" data-intent="briefing">
             <input type="radio" name="intent" value="briefing" />
-            <div class="ic-key">Intent 01</div>
-            <h3>Schedule an Executive Briefing</h3>
-            <p>Structured 45&#8211;60min session on WDDAM fit for your institution.</p>
+            <div class="ic-key">01</div>
+            <h3>Executive Briefing</h3>
+            <p>45&#8211;60min WDDAM fit session for your institution.</p>
           </label>
           <label class="intent-card" data-intent="cohort">
             <input type="radio" name="intent" value="cohort" />
-            <div class="ic-key">Intent 02</div>
-            <h3>Request a Workforce Cohort</h3>
-            <p>Scope a 50-professional Level&nbsp;1&#8211;5 pipeline for your sector.</p>
+            <div class="ic-key">02</div>
+            <h3>Workforce Cohort</h3>
+            <p>50-professional Level&nbsp;1&#8211;5 pipeline ($695,825 canonical).</p>
           </label>
-          <label class="intent-card" data-intent="proposal">
-            <input type="radio" name="intent" value="proposal" />
-            <div class="ic-key">Intent 03</div>
-            <h3>Request a Proposal</h3>
-            <p>Co-investment, sponsored programmes, or sector pod commissioning.</p>
+          <label class="intent-card" data-intent="sponsor">
+            <input type="radio" name="intent" value="sponsor" />
+            <div class="ic-key">03</div>
+            <h3>Sponsor Programme</h3>
+            <p>Fund development for region, sector, or ecosystem.</p>
+          </label>
+          <label class="intent-card" data-intent="cert-partnership">
+            <input type="radio" name="intent" value="cert-partnership" />
+            <div class="ic-key">04</div>
+            <h3>Cert-Body Channel</h3>
+            <p>Volume &amp; pathway partnership (CompTIA, EC-Council, etc.).</p>
+          </label>
+          <label class="intent-card" data-intent="investor">
+            <input type="radio" name="intent" value="investor" />
+            <div class="ic-key">05</div>
+            <h3>Investor Diligence</h3>
+            <p>Co-investment in workforce infrastructure pods.</p>
           </label>
         </fieldset>
 
@@ -195,13 +213,14 @@
                 <label for="f-type">Organization type <span class="req">*</span></label>
                 <select id="f-type" name="org_type" required>
                   <option value="">Select &hellip;</option>
-                  <option value="enterprise">Enterprise / Corporate</option>
-                  <option value="government">Government / Public sector</option>
-                  <option value="multilateral">Multilateral / Development agency</option>
-                  <option value="ngo">NGO / Foundation</option>
-                  <option value="investor">Family office / Investor</option>
+                  <option value="un_multilateral">UN / IGO / Multilateral programme</option>
+                  <option value="government">Government / Public sector / Sovereign</option>
+                  <option value="enterprise">Enterprise / Corporation</option>
+                  <option value="cert_body">Certification body / Exam sponsor / Credential publisher</option>
+                  <option value="multilateral">Development agency / NGO at scale</option>
+                  <option value="investor">Family office / Infrastructure investor</option>
                   <option value="prime">Sector prime / System integrator</option>
-                  <option value="other">Other</option>
+                  <option value="other">Other institutional buyer</option>
                 </select>
               </div>
               <div class="field">
@@ -292,7 +311,7 @@
             </label>
             <label class="checkrow">
               <input type="checkbox" name="consent" required />
-              <span>I confirm that I am authorised to engage on behalf of this organisation, and consent to BTH Education Group contacting me about this enquiry. <span style="color:#DC2626;">*</span></span>
+              <span>I confirm that I am authorised to engage on behalf of this organisation, and consent to BTH Education Group contacting me about this enquiry per the <a href="privacy.html" target="_blank" rel="noopener">Privacy Policy</a>. <span style="color:#DC2626;">*</span></span>
             </label>
 
             <div class="engage-actions">
@@ -332,6 +351,19 @@
     (function () {
       var qs = new URLSearchParams(window.location.search);
       var intent = (qs.get('intent') || '').toLowerCase();
+      var audience = (qs.get('audience') || '').toLowerCase();
+      var audienceMap = {
+        un: 'un_multilateral',
+        government: 'government',
+        enterprise: 'enterprise',
+        'cert-body': 'cert_body',
+        cert: 'cert_body',
+        investor: 'investor'
+      };
+      if (audienceMap[audience]) {
+        var typeEl = document.getElementById('f-type');
+        if (typeEl) typeEl.value = audienceMap[audience];
+      }
       var titles = {
         briefing: {
           h1: 'Schedule an Executive Briefing',
@@ -344,6 +376,24 @@
           sub: 'Scope a 50-professional Level&nbsp;1&ndash;5 pipeline aligned to your sector, country, and operational timeline.',
           form: 'Cohort scoping intake',
           formSub: 'These inputs help us return a tailored cohort outline within two business days.'
+        },
+        sponsor: {
+          h1: 'Sponsor a Workforce Programme',
+          sub: 'Fund cohort development for a region, sector, or supplier ecosystem — CSR, foundation, or strategic HR sponsorship.',
+          form: 'Sponsor programme intake',
+          formSub: 'Describe the population, geography, and reporting requirements for your sponsored mandate.'
+        },
+        'cert-partnership': {
+          h1: 'Certification Body — Volume & Channel Briefing',
+          sub: 'Partner on pathway infrastructure, exam delivery (Pearson VUE Site 89828), and institutional sponsor channels.',
+          form: 'Certification partnership intake',
+          formSub: 'Share your credential catalogue and target volume economics for a structured response.'
+        },
+        investor: {
+          h1: 'Infrastructure Investor Diligence',
+          sub: 'Co-investment in workforce production pods and acquisition economics — materials on the Investor Platform under NDA where applicable.',
+          form: 'Investor diligence intake',
+          formSub: 'Qualified institutional investors only. This is not an offer of securities on this form.'
         },
         proposal: {
           h1: 'Request a Proposal',
@@ -405,6 +455,27 @@
         } catch (err) {
           // ignore storage errors silently
         }
+
+        var subject = encodeURIComponent('BTH Workforce Infrastructure — ' + (payload.intent || 'briefing').toUpperCase() + ' — ' + (payload.organization || 'Institutional enquiry'));
+        var bodyLines = [
+          'BTH Workforce Infrastructure — Institutional Intake',
+          'Intent: ' + (payload.intent || ''),
+          'Organization: ' + (payload.organization || ''),
+          'Type: ' + (payload.org_type || ''),
+          'Contact: ' + (payload.contact_name || '') + ' (' + (payload.role || '') + ')',
+          'Email: ' + (payload.email || ''),
+          'Phone: ' + (payload.phone || ''),
+          'Country: ' + (payload.country || ''),
+          'Sector: ' + (payload.sector || ''),
+          'Scale: ' + (payload.scale || ''),
+          'Timeline: ' + (payload.timeline || ''),
+          'NDA requested: ' + (payload.nda ? 'Yes' : 'No'),
+          '',
+          'Context:',
+          payload.context || ''
+        ];
+        var mailto = 'mailto:info@btheducationgroup.org?subject=' + subject + '&body=' + encodeURIComponent(bodyLines.join('\n'));
+        window.location.href = mailto;
 
         form.style.display = 'none';
         document.querySelector('.engage-aside').style.display = 'none';

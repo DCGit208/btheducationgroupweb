@@ -1,0 +1,173 @@
+{
+  "locale": "fr",
+  "scope": "workforce",
+  "ui": {
+    "toggleLabel": "Ouvrir l'assistant infrastructure",
+    "title": "Assistant infrastructure · BTH",
+    "subtitle": "WDDAM · mandats institutionnels · engagement",
+    "placeholder": "Posez une question sur l'infrastructure de main-d'œuvre…",
+    "send": "Envoyer",
+    "typing": "L'assistant prépare une réponse…",
+    "footer": "BTH Education Group · doctrine institutionnelle",
+    "welcome": "Bonjour. Je peux vous orienter sur la <strong>doctrine WDDAM</strong>, les <strong>mandats institutionnels</strong> (ONU, États, entreprises, certification, capital), le <strong>modèle de cohorte</strong> et les voies d'<strong>engagement</strong> — alignées sur cette page.",
+    "welcomeBullets": [
+      "<strong>WDDAM</strong> — Développer · Déployer · Acquérir · Gouverner",
+      "<strong>Cohorte</strong> — 50 capacités déployables · pipeline Level 1–5",
+      "<strong>Économie</strong> — SWD-INV · rendements récurrents sur le cycle",
+      "<strong>Engagement</strong> — briefing exécutif · cohorte · diligence"
+    ],
+    "chips": [
+      { "q": "Qu'est-ce que WDDAM ?", "label": "WDDAM" },
+      { "q": "Modèle de cohorte 50 capacités", "label": "Cohorte" },
+      { "q": "Mandat ONU multilatéral", "label": "ONU" },
+      { "q": "Économie SWD-INV", "label": "Économie" },
+      { "q": "Infrastructure certification Pearson", "label": "Certification" },
+      { "q": "Planifier un briefing exécutif", "label": "Briefing" }
+    ]
+  },
+  "intents": [
+    {
+      "id": "wddam",
+      "keywords": [
+        "wddam", "développer", "deployer", "déployer", "acquérir", "gouverner",
+        "gouvernance", "quatre phases", "cycle de vie", "oedp work network",
+        "work network", "architecture wddam", "cadre wddam"
+      ],
+      "response": "🧭 <strong>WDDAM — architecture de cycle de vie</strong>\n\n<strong>Développer · Déployer · Acquérir · Gouverner</strong> : cadre institutionnel de production, déploiement, acquisition et gouvernance de capacité — via le <strong>OEDP Work Network</strong>, distinct des prestations de formation ou du recrutement fragmenté.\n\n• <strong>Développer</strong> — production certifiée (Level 1–5)\n• <strong>Déployer</strong> — intégration opérationnelle (OEDP Work Network)\n• <strong>Acquérir</strong> — économie de pipelines structurés\n• <strong>Gouverner</strong> — gouvernance de performance sur le cycle institutionnel\n\n📍 <a href=\"workforce-infrastructure-fr.html#wddam-framework\" class=\"bth-chat-link\">Cadre WDDAM sur cette page →</a>\n📍 <a href=\"workforce-infrastructure-fr.html#lifecycle\" class=\"bth-chat-link\">Cycle de vie en quatre étapes →</a>",
+      "suggestions": ["Modèle de cohorte", "Économie SWD-INV", "Mandats institutionnels", "Planifier un briefing"]
+    },
+    {
+      "id": "cohort",
+      "keywords": [
+        "cohorte", "50 capacités", "50 capacites", "level 1", "level 5",
+        "pipeline level", "695825", "695 825", "commandite de cohorte",
+        "capacités déployables", "capacites deployables", "unité d'échelle"
+      ],
+      "response": "📦 <strong>Modèle de cohorte professionnelle</strong>\n\nEngagement canonique : <strong>50 capacités déployables</strong> sur un pipeline <strong>Level 1–5</strong>, selon architecture sectorielle et cadre contractuel institutionnel — certifications alignées fournisseurs et déploiement par <strong>mandat</strong> sectoriel (non catalogue L&amp;D au détail).\n\nRéférence modélisée cohorte : <strong>695&nbsp;825&nbsp;$</strong> (mémorandum SWD-INV — détail sous NDA).\n\n📍 <a href=\"workforce-infrastructure-fr.html#cohort\" class=\"bth-chat-link\">Section cohorte →</a>\n📍 <a href=\"workforce-engage.html?intent=cohort\" class=\"bth-chat-link\">Demander une cohorte →</a>",
+      "suggestions": ["Modes d'engagement entreprise", "WDDAM", "Briefing exécutif", "Diligence"]
+    },
+    {
+      "id": "swd-inv",
+      "keywords": [
+        "swd-inv", "swd inv", "économie", "economie", "rendements récurrents",
+        "rendements recurrents", "1.81", "1,81", "md$", "moteur de développement",
+        "moteurs de revenus", "flywheel", "portefeuille", "130 000", "130000"
+      ],
+      "response": "📊 <strong>Économie SWD-INV — système à rendements récurrents</strong>\n\nL'architecture ne repose pas sur un revenu linéaire de cursus : la valeur se compose sur le <strong>cycle WDDAM</strong> — développement, déploiement, acquisition et gouvernance.\n\n<strong>Références directionnelles (page) :</strong>\n• Moteur développement modélisé : <strong>1,81&nbsp;Md$+</strong>\n• Cible architecture : <strong>130&nbsp;000</strong> capacités · <strong>1&nbsp;300</strong> portefeuilles SWD-INV\n• <strong>4</strong> moteurs de revenus récurrents\n\nModèles contractuels complets sous NDA.\n\n📍 <a href=\"workforce-infrastructure-fr.html#programme-scale\" class=\"bth-chat-link\">Économie SWD-INV →</a>\n📍 <a href=\"workforce-infrastructure-fr.html#economic-output\" class=\"bth-chat-link\">Passerelle production économique →</a>",
+      "suggestions": ["WDDAM", "Investisseur infrastructure", "Définitions et hypothèses", "Briefing"]
+    },
+    {
+      "id": "problem",
+      "keywords": [
+        "contrainte", "crise", "problème", "probleme", "fragmenté", "fragmente",
+        "déficit", "deficit", "recrutement", "conformité", "esg", "73%"
+      ],
+      "response": "⚠️ <strong>Contrainte institutionnelle</strong>\n\nLes systèmes fragmentés de main-d'œuvre fragilisent les institutions : déficits de capacité, coûts d'acquisition non viables, pipelines publics fragiles, conformité sans architecture auditable.\n\n<strong>Références directionnelles :</strong> délais de pourvoi, coût postes seniors vacants, part des dépenses main-d'œuvre à rendement non gouverné.\n\nLa réponse relève d'une <strong>infrastructure de main-d'œuvre gouvernée</strong> — non d'achats ponctuels de formation.\n\n📍 <a href=\"workforce-infrastructure-fr.html#problem\" class=\"bth-chat-link\">Section contrainte →</a>\n📍 <a href=\"workforce-infrastructure-fr.html#wddam-framework\" class=\"bth-chat-link\">Réponse WDDAM →</a>",
+      "suggestions": ["Doctrine stratégique", "WDDAM", "Mandats institutionnels", "Briefing"]
+    },
+    {
+      "id": "thesis",
+      "keywords": [
+        "thèse", "these", "doctrine", "infrastructure de main-d'œuvre",
+        "infrastructure de main-doeuvre", "ère intelligente", "ere intelligente",
+        "ères d'infrastructure", "capital humain", "systèmes de main-d'œuvre"
+      ],
+      "response": "🏛️ <strong>Doctrine — infrastructure de main-d'œuvre</strong>\n\nProduction, déploiement, acquisition et <strong>gouvernance</strong> systématique d'une capacité professionnelle à l'échelle institutionnelle — rigueur comparable aux infrastructures énergétiques, financières et numériques.\n\nTriptyque d'ère : l'infrastructure énergétique a structuré l'ère industrielle ; l'infrastructure numérique, l'ère informationnelle ; <strong>l'infrastructure de main-d'œuvre structurera l'ère intelligente.</strong>\n\n📍 <a href=\"workforce-infrastructure-fr.html#global-thesis\" class=\"bth-chat-link\">Thèse mondiale →</a>\n📍 <a href=\"workforce-infrastructure-fr.html#infrastructure-eras\" class=\"bth-chat-link\">Trois ères d'infrastructure →</a>",
+      "suggestions": ["WDDAM", "Économie SWD-INV", "Avenir des systèmes", "Briefing"]
+    },
+    {
+      "id": "audiences-un",
+      "keywords": [
+        "onu", "nations unies", "multilatéral", "multilateral", "oig", "igo",
+        "odd 8", "odd 16", "sdg", "bailleur", "mandat multilatéral", "udhr"
+      ],
+      "response": "🇺🇳 <strong>ONU · OIG · programmes multilatéraux</strong>\n\nInfrastructure de main-d'œuvre à l'<strong>échelle programme</strong> : cohortes multi-pays, reporting cadre de résultats (ODD&nbsp;8 &amp; 16), preuves auditables — systèmes WDDAM gouvernés pour bailleurs et conseils.\n\nAlignement <strong>DUDH art.&nbsp;26(2)</strong> — développement humain à l'échelle institutionnelle.\n\n📍 <a href=\"workforce-infrastructure-fr.html#audiences\" class=\"bth-chat-link\">Mandats institutionnels →</a>\n📍 <a href=\"workforce-infrastructure-fr.html#un-mandate\" class=\"bth-chat-link\">Section ONU / multilatéral →</a>\n📍 <a href=\"workforce-engage.html?intent=briefing&amp;audience=un\" class=\"bth-chat-link\">Briefing multilatéral →</a>",
+      "suggestions": ["Gouvernement souverain", "Entreprise cohorte", "Certification", "Diligence"]
+    },
+    {
+      "id": "audiences-gov",
+      "keywords": [
+        "gouvernement", "état", "etat", "souverain", "secteur public",
+        "marchés publics", "marches publics", "agence nationale", "mandat national"
+      ],
+      "response": "🏛️ <strong>Gouvernements &amp; secteur public</strong>\n\n<strong>Mandats</strong> nationaux de main-d'œuvre avec pipelines gouvernés de niveau marchés publics sur <strong>26 secteurs</strong> — cadre ISO&nbsp;17024, unité d'échelle par cohorte.\n\nDistinct de la <strong>commandite</strong> entreprise ou des programmes multilatéraux — même architecture WDDAM, surface contractuelle souveraine.\n\n📍 <a href=\"workforce-infrastructure-fr.html#audiences\" class=\"bth-chat-link\">Profils institutionnels →</a>\n📍 <a href=\"workforce-engage.html?intent=briefing&amp;audience=government\" class=\"bth-chat-link\">Briefing gouvernemental →</a>",
+      "suggestions": ["ONU multilatéral", "WDDAM", "Cohorte", "Briefing"]
+    },
+    {
+      "id": "audiences-ent",
+      "keywords": [
+        "entreprise", "corporate", "msa", "l&d", "formation entreprise",
+        "modes d'engagement", "commandite", "parrainage", "co-investissement"
+      ],
+      "response": "🏢 <strong>Entreprises internationales</strong>\n\nArchitecture WDDAM structurée — distincte des achats L&amp;D aléatoires et du seul recrutement.\n\n<strong>Trois modes d'engagement :</strong>\n1. <strong>Commandite de cohortes</strong> — 50 capacités déployables\n2. <strong>Programmes parrainés</strong> — production par région/secteur, reporting ESG\n3. <strong>Co-investissement infrastructurel</strong> — pods · phase Acquérir\n\n📍 <a href=\"workforce-infrastructure-fr.html#enterprise-modes\" class=\"bth-chat-link\">Modes d'engagement →</a>\n📍 <a href=\"workforce-engage.html?intent=cohort&amp;audience=enterprise\" class=\"bth-chat-link\">Demander une cohorte →</a>",
+      "suggestions": ["Modèle de cohorte", "WDDAM", "Briefing exécutif", "Certification"]
+    },
+    {
+      "id": "audiences-cert",
+      "keywords": [
+        "certification", "pearson", "vue", "comptia", "ec-council", "ecc",
+        "éditeur", "editeur", "exam sponsor", "89828", "iso 17024", "credential"
+      ],
+      "response": "📜 <strong>Infrastructure de certification</strong>\n\nBTH déploie l'<strong>architecture opérationnelle</strong> des éditeurs — cohortes institutionnelles, logistique d'examen, montée en échelle — <strong>sans concurrence</strong> avec les architectures de marque partenaires.\n\n<strong>Stack :</strong> Pearson&nbsp;VUE (site&nbsp;<strong>89828</strong>) · CompTIA · EC-Council · ISO&nbsp;17024 · Microsoft · AWS — intégrés aux cohortes WDDAM.\n\n📍 <a href=\"workforce-infrastructure-fr.html#certification-partners\" class=\"bth-chat-link\">Infrastructure certification →</a>\n📍 <a href=\"workforce-cert-channel.html\" class=\"bth-chat-link\">Canal organismes cert. →</a>\n📍 <a href=\"workforce-engage.html?intent=cert-partnership\" class=\"bth-chat-link\">Briefing canal →</a>",
+      "suggestions": ["WDDAM", "Cohorte", "Normes fournisseurs", "Briefing"]
+    },
+    {
+      "id": "audiences-inv",
+      "keywords": [
+        "investisseur", "capital", "infrastructure investor", "pod", "nda",
+        "diligence", "swd-inv invest", "actif", "centre de profit"
+      ],
+      "response": "💼 <strong>Investisseurs en infrastructure</strong>\n\nMain-d'œuvre comme <strong>classe d'actifs gouvernée</strong> — pods, structures d'acquisition, économie portefeuille SWD-INV · rendements récurrents sur le cycle WDDAM.\n\nAccès diligence et modèles complets sous <strong>NDA</strong>.\n\n📍 <a href=\"workforce-infrastructure-fr.html#value\" class=\"bth-chat-link\">Rendements investissables →</a>\n📍 <a href=\"workforce-diligence.html\" class=\"bth-chat-link\">Dossier de diligence →</a>\n📍 <a href=\"https://invest.btheducationgroup.com\" class=\"bth-chat-link\" target=\"_blank\" rel=\"noopener\">Plateforme investisseur →</a>",
+      "suggestions": ["Économie SWD-INV", "Co-investissement entreprise", "Briefing", "Définitions"]
+    },
+    {
+      "id": "mandat-commandite",
+      "keywords": [
+        "mandat", "commandite", "différence mandat", "sponsor", "parrainage",
+        "engagement institutionnel", "contractuel"
+      ],
+      "response": "📋 <strong>Mandat vs commandite</strong>\n\n• <strong>Mandat</strong> — cadre institutionnel souverain ou multilatéral (État, ONU/OIG, programme public) : pipelines gouvernés, reporting de résultats, échelle nationale ou multi-pays.\n\n• <strong>Commandite</strong> — engagement entreprise sur cohorte ou programme parrainé : surfaces contractuelles corporate (MSA/SOW), distinctes du mandat public.\n\nLes deux s'inscrivent dans la même <strong>architecture WDDAM</strong> — surfaces contractuelles différentes.\n\n📍 <a href=\"workforce-infrastructure-fr.html#audiences\" class=\"bth-chat-link\">Mandats par profil →</a>",
+      "suggestions": ["ONU", "Entreprise", "Cohorte 50 capacités", "Briefing"]
+    },
+    {
+      "id": "briefing",
+      "keywords": [
+        "briefing", "briefing exécutif", "planifier", "rendez-vous", "contact",
+        "réunion", "reunion", "engager", "parler", "appeler", "whatsapp"
+      ],
+      "response": "📅 <strong>Engagement exécutif</strong>\n\n<strong>Briefing exécutif</strong> — cadrage mandat, architecture sectorielle, surfaces contractuelles WDDAM.\n\n<strong>Demande de cohorte</strong> — pipeline 50 capacités Level 1–5.\n\n<strong>Diligence infrastructurelle</strong> — mémorandum et modèles sous NDA.\n\n📞 +237 680 289 956 · +237 653 795 603 · workforce@btheducationgroup.com\n\n📍 <a href=\"workforce-engage.html?intent=briefing\" class=\"bth-chat-link\">Planifier un briefing →</a>\n📍 <a href=\"workforce-engage.html?intent=cohort\" class=\"bth-chat-link\">Demander une cohorte →</a>\n📍 <a href=\"workforce-diligence.html\" class=\"bth-chat-link\">Dossier de diligence →</a>",
+      "suggestions": ["WDDAM", "Mandat ONU", "Modèle de cohorte", "Définitions"]
+    },
+    {
+      "id": "diligence",
+      "keywords": [
+        "diligence", "nda", "mémorandum", "memorandum", "hypothèses",
+        "définitions", "definitions", "chiffres", "modèle économique"
+      ],
+      "response": "📁 <strong>Diligence &amp; hypothèses</strong>\n\nChiffres de référence (1,81&nbsp;Md$+ moteur développement, cohorte 695&nbsp;825&nbsp;$, cibles 130&nbsp;000 / 1&nbsp;300) — <strong>architecture stratégique modélisée</strong>, non inventaire actuel ; détail contractuel sous NDA · mémorandum SWD-INV.\n\n📍 <a href=\"workforce-infrastructure-fr.html#definitions\" class=\"bth-chat-link\">Définitions &amp; hypothèses →</a>\n📍 <a href=\"workforce-diligence.html\" class=\"bth-chat-link\">Dossier de diligence →</a>",
+      "suggestions": ["Économie SWD-INV", "Briefing exécutif", "Investisseur", "Cohorte"]
+    },
+    {
+      "id": "sectors",
+      "keywords": [
+        "secteur", "26 secteurs", "industrie", "pipeline sectoriel", "donut",
+        "échelle mondiale", "1300", "5 000"
+      ],
+      "response": "🌐 <strong>Architecture sectorielle</strong>\n\n<strong>26 secteurs mondiaux</strong> — cadres de compétence et infrastructure de déploiement par industrie ; modèles structurés selon exigences opérationnelles, réglementaires et économiques (détail en briefing/diligence).\n\n📍 <a href=\"workforce-infrastructure-fr.html#sectors\" class=\"bth-chat-link\">26 secteurs →</a>\n📍 <a href=\"workforce-infrastructure-fr.html#global-scale\" class=\"bth-chat-link\">Échelle souveraine →</a>",
+      "suggestions": ["WDDAM", "Cohorte", "Briefing", "Économie"]
+    },
+    {
+      "id": "future",
+      "keywords": [
+        "avenir", "futur", "prochaine configuration", "compétitivité",
+        "systèmes de main-d'œuvre", "global future", "ère"
+      ],
+      "response": "🔭 <strong>Avenir des systèmes de main-d'œuvre</strong>\n\nLes économies se différencient par leur capacité à opérer des systèmes de main-d'œuvre hautement productifs — WDDAM inscrit les quatre phases dans une architecture unique de prestation de cycle institutionnel.\n\n📍 <a href=\"workforce-infrastructure-fr.html#global-future\" class=\"bth-chat-link\">Section avenir →</a>\n📍 <a href=\"workforce-engage.html?intent=briefing\" class=\"bth-chat-link\">Briefing exécutif →</a>",
+      "suggestions": ["Doctrine", "WDDAM", "Mandats", "Cohorte"]
+    }
+  ],
+  "fallback": {
+    "response": "Je peux vous orienter sur cette doctrine institutionnelle : <strong>WDDAM</strong>, <strong>mandats</strong> (ONU, État, entreprise, certification, capital), <strong>cohortes de 50 capacités</strong> et <strong>engagement</strong> (briefing, diligence).\n\nFormulez une question courte — ex. «&nbsp;WDDAM&nbsp;», «&nbsp;cohorte&nbsp;», «&nbsp;ONU&nbsp;», «&nbsp;briefing&nbsp;».\n\n📍 <a href=\"workforce-infrastructure-fr.html#hero\" class=\"bth-chat-link\">Vue d'ensemble →</a>\n📍 <a href=\"workforce-engage.html?intent=briefing\" class=\"bth-chat-link\">Planifier un briefing →</a>",
+    "suggestions": ["WDDAM", "Modèle de cohorte", "Mandat ONU", "Briefing exécutif"]
+  }
+}
