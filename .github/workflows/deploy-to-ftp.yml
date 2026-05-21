@@ -51,6 +51,10 @@ jobs:
             **/mirror/**
             **/backup*/
             **/*backup*/
+            **/backup of program html/**
+            **/backup technology html/**
+            **/backup_obsolete_programs/**
+            **/assets/data/backups/**
             **/scripts/**
             **/api/**
             **/02_SHARED_SERVICES/**
@@ -97,6 +101,10 @@ jobs:
             **/mirror/**
             **/backup*/
             **/*backup*/
+            **/backup of program html/**
+            **/backup technology html/**
+            **/backup_obsolete_programs/**
+            **/assets/data/backups/**
             **/scripts/**
             **/api/**
             **/02_SHARED_SERVICES/**
@@ -141,6 +149,10 @@ jobs:
             **/mirror/**
             **/backup*/
             **/*backup*/
+            **/backup of program html/**
+            **/backup technology html/**
+            **/backup_obsolete_programs/**
+            **/assets/data/backups/**
             **/scripts/**
             **/api/**
             **/02_SHARED_SERVICES/**
