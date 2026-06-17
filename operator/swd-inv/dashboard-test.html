@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>SWD-INV Dashboard (Trial) | GWIX Operator Network</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="../../assets/css/gois.css?v=20260617gois1">
+</head>
+<body class="gois-app" data-gois-rank="swd_inv">
+  <div class="gois-test-banner">
+    <span>PREVIEW — SWD-INV Participant · Not an investor</span>
+    <a href="../steward/dashboard-test.html">Steward</a>
+    <a href="../swi/dashboard-test.html">SWI</a>
+    <a href="../wds/dashboard-test.html">WDS</a>
+    <a href="../../gwix-trial.html">GWIX Exchange</a>
+  </div>
+
+  <div id="goisLoginOverlay" class="gois-login-overlay">
+    <div class="gois-login-box">
+      <h2>SWD-INV Participant Sign In</h2>
+      <p style="font-size:12px;color:#64748b;text-align:center;margin:-8px 0 16px">Strategic Workforce Development Infrastructure Participant — not an investor.</p>
+      <div id="goisLoginError" class="gois-login-error"></div>
+      <form id="goisLoginForm">
+        <div class="gois-form-group"><label for="goisLoginEmail">Email</label><input type="email" id="goisLoginEmail" required></div>
+        <div class="gois-form-group"><label for="goisLoginPassword">Password</label><input type="password" id="goisLoginPassword" required></div>
+        <button type="submit" class="gois-btn gois-btn-primary" style="width:100%;justify-content:center">Sign in</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="goisApp" class="gois-layout gois-hidden">
+    <aside class="gois-sidebar">
+      <div class="gois-brand"><h1>GWIX Operator</h1><p>SWD-INV Participant</p></div>
+      <div class="gois-nav-label">Sections</div>
+      <nav class="gois-nav" id="goisSidebarNav"></nav>
+      <div class="gois-sidebar-footer">
+        <a href="../../workforce-deployment.html#swd-inv-structure"><i class="fa-solid fa-book"></i> SWD-INV doctrine</a>
+        <a href="../../gwix-trial.html"><i class="fa-solid fa-chart-line"></i> GWIX Exchange</a>
+      </div>
+    </aside>
+    <div class="gois-main">
+      <header class="gois-topbar">
+        <div>
+          <h2 id="goisPageTitle">Command center</h2>
+          <div class="gois-topbar-meta" id="goisTopbarMeta">Loading…</div>
+          <div class="gois-phase-pill" id="goisPhasePill"></div>
+          <div style="font-size:13px;margin-top:8px"><strong id="goisUserName">—</strong> · <code id="goisUserCode">—</code></div>
+        </div>
+        <div class="gois-topbar-actions">
+          <button type="button" class="gois-btn gois-btn-danger" id="goisLogout"><i class="fa-solid fa-right-from-bracket"></i> Logout</button>
+        </div>
+      </header>
+      <main class="gois-content">
+        <section class="gois-section active" data-section="overview">
+          <div class="gois-overview-hint">Expansion-layer participant — drive portfolio development, institutional coordination, and WDS scaling. Track revenue engines across Development and Acquisition.</div>
+          <div class="gois-kpi-grid" id="goisOverviewKpis"></div>
+        </section>
+        <section class="gois-section" data-section="role-duties"><div id="goisRoleDutiesMount"></div></section>
+        <section class="gois-section" data-section="expansion-ops"><div id="goisExpansionOpsMount"></div></section>
+        <section class="gois-section" data-section="revenue-engines"><div id="goisRevenueEnginesMount"></div></section>
+        <section class="gois-section" data-section="network"><div id="goisNetworkMount"></div></section>
+        <section class="gois-section" data-section="activities"><div class="gois-card"><h3><i class="fa-solid fa-list-check"></i> Activity log</h3><div id="goisActivitiesMount"></div></div></section>
+        <section class="gois-section" data-section="documents"><div id="goisDocumentsMount"></div></section>
+        <section class="gois-section" data-section="reports"><div id="goisReportsMount"></div></section>
+      </main>
+    </div>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+  <script src="../../assets/js/firebase-config.js?v=20260617gois2"></script>
+  <script src="../../assets/js/gois/gois-config.js?v=20260617gois2"></script>
+  <script src="../../assets/js/gois/gois-router.js?v=20260617gois2"></script>
+  <script src="../../assets/js/gois/gois-routes.js?v=20260617gois2"></script>
+  <script src="../../assets/js/gois/gois-auth.js?v=20260617gois2"></script>
+  <script src="../../assets/js/gois/gois-data.js?v=20260617gois2"></script>
+  <script src="../../assets/js/gois/gois-charter.js?v=20260617gois2"></script>
+  <script src="../../assets/js/gois/gois-revenue-engines.js?v=20260617gois2"></script>
+  <script src="../../assets/js/gois/gois-network.js?v=20260617gois2"></script>
+  <script src="../../assets/js/gois/gois-activity.js?v=20260617gois2"></script>
+  <script src="../../assets/js/gois/gois-reporting.js?v=20260617gois2"></script>
+  <script src="../../assets/js/gois/gois-dashboard.js?v=20260617gois2"></script>
+  <script>document.addEventListener('DOMContentLoaded', function () { GOISDashboard.init(); });</script>
+</body>
+</html>

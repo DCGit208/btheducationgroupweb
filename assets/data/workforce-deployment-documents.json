@@ -1,0 +1,98 @@
+[
+  {
+    "id": "01",
+    "title": "Executive Invitation Note",
+    "purpose": "High-level institutional invitation to secure executive interest and briefing meetings.",
+    "audience": ["executive", "institutional", "government", "multilateral"],
+    "roles": ["Executive", "SWI", "Institutional"],
+    "pdf": "assets/docs/workforce-deployment/01-executive-invitation-note.docx"
+  },
+  {
+    "id": "02",
+    "title": "Strategic Workforce Infrastructure Partner Brief",
+    "purpose": "Master institutional briefing on workforce infrastructure thesis, WDDAM doctrine, and governance architecture.",
+    "audience": ["executive", "swi", "swd-inv", "institutional", "government", "multilateral"],
+    "roles": ["Executive", "SWI", "SWD-INV", "Institutional"],
+    "pdf": "assets/docs/workforce-deployment/02-swi-partner-brief.docx"
+  },
+  {
+    "id": "03",
+    "title": "Legal & Governance Memorandum",
+    "purpose": "Legal clarity, governance credibility, and compliance seriousness for institutional evaluation.",
+    "audience": ["executive", "swi", "swd-inv", "institutional", "government", "multilateral"],
+    "roles": ["Executive", "SWI", "SWD-INV", "Institutional"],
+    "pdf": "assets/docs/workforce-deployment/03-legal-governance-memorandum.docx"
+  },
+  {
+    "id": "04",
+    "title": "Institutional Presentation Deck",
+    "purpose": "Executive visual presentation for strategic briefings, forums, and institutional consultations.",
+    "audience": ["executive", "swi", "institutional", "government", "multilateral"],
+    "roles": ["Executive", "SWI", "Institutional"],
+    "pdf": "assets/docs/workforce-deployment/04-institutional-presentation-deck.docx"
+  },
+  {
+    "id": "05",
+    "title": "Portfolio Economics Appendix",
+    "purpose": "Analytical appendix covering cohort, division, sector, and portfolio workforce infrastructure economics.",
+    "audience": ["executive", "swi", "swd-inv", "institutional", "government"],
+    "roles": ["Executive", "SWI", "SWD-INV", "Institutional"],
+    "pdf": "assets/docs/workforce-deployment/05-portfolio-economics-appendix.docx"
+  },
+  {
+    "id": "06",
+    "title": "Deployment & Workforce Operations Manual",
+    "purpose": "Operational doctrine for deployment standards, governance operations, reporting, and escalation.",
+    "audience": ["swi", "swd-inv", "wds"],
+    "roles": ["SWI", "SWD-INV", "WDS"],
+    "pdf": "assets/docs/workforce-deployment/06-deployment-operations-manual.docx"
+  },
+  {
+    "id": "07",
+    "title": "Executive FAQ Memorandum",
+    "purpose": "Executive clarification on governance, economics, and operational misconceptions.",
+    "audience": ["executive", "swi", "swd-inv", "institutional", "government", "multilateral"],
+    "roles": ["Executive", "SWI", "SWD-INV", "Institutional"],
+    "pdf": "assets/docs/workforce-deployment/07-executive-faq-memorandum.docx"
+  },
+  {
+    "id": "08",
+    "title": "Institutional NDA Package",
+    "purpose": "Confidentiality framework protecting governance systems, economics, and strategic operations.",
+    "audience": ["executive", "swi", "swd-inv", "wds", "institutional", "government", "multilateral"],
+    "roles": ["Executive", "SWI", "SWD-INV", "WDS", "Institutional"],
+    "pdf": "assets/docs/workforce-deployment/08-institutional-nda-package.docx"
+  },
+  {
+    "id": "09",
+    "title": "Strategic Partner Onboarding Manual",
+    "purpose": "Official SWI Partner onboarding, governance, reporting, and stewardship responsibilities.",
+    "audience": ["swi"],
+    "roles": ["SWI"],
+    "pdf": "assets/docs/workforce-deployment/09-swi-onboarding-manual.docx"
+  },
+  {
+    "id": "10",
+    "title": "Sovereign Workforce Infrastructure Whitepaper",
+    "purpose": "Macroeconomic doctrine and sovereign workforce infrastructure thought leadership.",
+    "audience": ["executive", "swi", "institutional", "government", "multilateral"],
+    "roles": ["Executive", "SWI", "Institutional", "Government", "Multilateral"],
+    "pdf": "assets/docs/workforce-deployment/10-sovereign-whitepaper.docx"
+  },
+  {
+    "id": "11",
+    "title": "Governed Operational Revenue Participation Framework Agreement",
+    "purpose": "Master GORP instrument defining governed operational participation across infrastructure layers.",
+    "audience": ["swi", "swd-inv", "wds", "institutional"],
+    "roles": ["SWI", "SWD-INV", "WDS", "Institutional"],
+    "pdf": "assets/docs/workforce-deployment/11-gorp-framework-agreement.docx"
+  },
+  {
+    "id": "12",
+    "title": "Master Operational Participation Agreement",
+    "purpose": "Master operational participation architecture governing divisional workforce infrastructure engagement.",
+    "audience": ["swi", "swd-inv", "wds", "institutional"],
+    "roles": ["SWI", "SWD-INV", "WDS", "Institutional"],
+    "pdf": "assets/docs/workforce-deployment/12-master-operational-participation-agreement.docx"
+  }
+]

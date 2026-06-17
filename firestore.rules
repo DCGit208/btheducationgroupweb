@@ -1,0 +1,65 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function signedIn() {
+      return request.auth != null;
+    }
+
+    function userData() {
+      return get(/databases/$(database)/documents/users/$(request.auth.uid)).data;
+    }
+
+    function hasProfile() {
+      return signedIn() && exists(/databases/$(database)/documents/users/$(request.auth.uid));
+    }
+
+    function role() {
+      return hasProfile() ? userData().role : '';
+    }
+
+    function isSteward() {
+      return hasProfile() && role() in ['steward', 'bth_steward', 'admin'];
+    }
+
+    function isOperator() {
+      return hasProfile() && role() in ['steward', 'bth_steward', 'admin', 'swi', 'swd_inv', 'wds'];
+    }
+
+    function operatorCode() {
+      return hasProfile() && userData().operatorCode is string ? userData().operatorCode : '';
+    }
+
+    // Operator auth profile — created by steward / Admin SDK
+    match /users/{uid} {
+      allow read: if signedIn() && (request.auth.uid == uid || isSteward());
+      allow create, update, delete: if isSteward();
+    }
+
+    // Registered operators (SWI · SWD-INV · WDS)
+    match /operators/{operatorId} {
+      allow read: if isOperator();
+      allow create: if signedIn();
+      allow update, delete: if isSteward();
+    }
+
+    // Per-operator activity log
+    match /operator_activities/{activityId} {
+      allow read: if isOperator() && (
+        isSteward() ||
+        resource.data.operatorCode == operatorCode()
+      );
+      allow create: if isOperator() && (
+        request.resource.data.operatorCode == operatorCode() || isSteward()
+      );
+      allow update, delete: if isSteward();
+    }
+
+    // Public GWIX econometric feed (read) — steward publishes (write)
+    match /gwix_econometric_events/{eventId} {
+      allow read: if true;
+      allow create: if isSteward();
+      allow update, delete: if isSteward();
+    }
+  }
+}

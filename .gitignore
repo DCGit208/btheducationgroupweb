@@ -1,0 +1,9 @@
+assets/js/firebase-config.local.js
+scripts/serviceAccountKey.json
+scripts/gois-steward-credentials.local.txt
+.firebase/
+node_modules/
+functions/node_modules/
+.DS_Store
+firepit-log.txt
+*.local.txt

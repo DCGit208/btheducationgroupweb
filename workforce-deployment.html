@@ -1,1138 +1,929 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Workforce Infrastructure Investment — BTH Education Group</title>
-  <meta name="description" content="Invest in workforce infrastructure — the system that powers companies, industries, and economies. Structured sector-based investment into workforce development, deployment, acquisition, and management across 26 global sectors." />
-  <meta property="og:title" content="Workforce Infrastructure Investment — BTH Education Group" />
-  <meta property="og:description" content="Not training. Not education. Workforce infrastructure investment. Multi-layer revenue across development, deployment, acquisition, and management." />
+  <title>Workforce Infrastructure Deployment Architecture — BTH Education Group</title>
+  <meta name="description" content="Institutional portal for BTH workforce infrastructure participation — WDDAM architecture, division and sector portfolio systems, and governed operational frameworks across 26 strategic sectors." />
+  <meta property="og:title" content="Workforce Infrastructure Deployment Architecture — BTH Education Group" />
+  <meta property="og:description" content="Institutional systems for workforce production, deployment, acquisition and governance. SWI · SWD-INV · WDS · OEDP Work Network." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="assets/images/og-workforce-infrastructure.jpg" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Workforce Infrastructure Investment — BTH Education Group" />
-  <meta name="twitter:description" content="Infrastructure-class investment into workforce systems. Multi-revenue model spanning development, deployment, acquisition, and management." />
-  <link rel="stylesheet" href="assets/css/main.css" />
-  <style>
-    /* Minimal fallback styling – can be overridden by main.css */
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      color: #111827;
-      background: #f5f5f7;
-      line-height: 1.6;
-    }
-    a { color: #054ada; text-decoration: none; }
-    a.button {
-      display: inline-block;
-      padding: 0.9rem 1.8rem;
-      border-radius: 999px;
-      background: linear-gradient(135deg, #054ada, #f59e0b);
-      color: #ffffff;
-      font-weight: 600;
-      letter-spacing: 0.03em;
-      text-transform: uppercase;
-      font-size: 0.9rem;
-    }
-    .page {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 1.5rem;
-    }
-    header.hero {
-      background: radial-gradient(circle at top left, #facc15 0, #054ada 45%, #020617 100%);
-      color: #ffffff;
-      border-radius: 1.5rem;
-      padding: 2.5rem 2rem 3.5rem;
-      margin-bottom: 2.5rem;
-      position: relative;
-      overflow: hidden;
-    }
-    header.hero::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at bottom right, rgba(255,255,255,0.18), transparent 55%);
-      pointer-events: none;
-    }
-    .hero-inner {
-      position: relative;
-      z-index: 1;
-      display: grid;
-      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
-      gap: 2rem;
-      align-items: center;
-    }
-    .hero-kicker {
-      font-size: 0.85rem;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      font-weight: 600;
-      margin-bottom: 0.75rem;
-      opacity: 0.9;
-    }
-    .hero-title {
-      font-size: clamp(2.2rem, 3.1vw, 3.4rem);
-      font-weight: 800;
-      line-height: 1.1;
-      margin-bottom: 0.75rem;
-    }
-    .hero-subtitle {
-      font-size: 1rem;
-      max-width: 36rem;
-      opacity: 0.92;
-      margin-bottom: 1.5rem;
-    }
-    .hero-metrics {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      margin-bottom: 1.75rem;
-    }
-    .hero-metric {
-      padding: 0.75rem 1rem;
-      border-radius: 999px;
-      background: rgba(15,23,42,0.35);
-      font-size: 0.85rem;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.45rem;
-    }
-    .hero-metric span.value { font-weight: 700; }
-    .hero-deadline {
-      margin-top: 0.85rem;
-      font-size: 0.85rem;
-      opacity: 0.92;
-    }
-    .hero-card {
-      background: rgba(15,23,42,0.7);
-      border-radius: 1.25rem;
-      padding: 1.5rem 1.25rem;
-      box-shadow: 0 18px 45px rgba(15,23,42,0.35);
-      backdrop-filter: blur(10px);
-    }
-    .hero-card h3 {
-      margin: 0 0 0.75rem;
-      font-size: 1rem;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: #facc15;
-    }
-    .hero-card ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      font-size: 0.9rem;
-    }
-    .hero-card li { margin-bottom: 0.5rem; }
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      padding: 0.25rem 0.7rem;
-      border-radius: 999px;
-      background: rgba(15,23,42,0.6);
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      margin-bottom: 0.5rem;
-    }
-    section {
-      margin-bottom: 3rem;
-    }
-    section h2 {
-      font-size: 1.6rem;
-      margin-bottom: 0.75rem;
-    }
-    section p.lead {
-      max-width: 46rem;
-      font-size: 0.98rem;
-      color: #4b5563;
-      margin-bottom: 1.5rem;
-    }
-    .grid-3 {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1.4rem;
-    }
-    .card {
-      background: #ffffff;
-      border-radius: 1rem;
-      padding: 1.25rem 1.35rem;
-      box-shadow: 0 10px 25px rgba(15,23,42,0.06);
-    }
-    .card h3 {
-      margin-top: 0;
-      font-size: 1rem;
-      margin-bottom: 0.45rem;
-    }
-    .pill-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.55rem;
-      margin-top: 0.4rem;
-    }
-    .pill {
-      font-size: 0.78rem;
-      padding: 0.25rem 0.7rem;
-      border-radius: 999px;
-      background: #e5e7eb;
-    }
-    .highlight-box {
-      border-radius: 1rem;
-      padding: 1.4rem 1.5rem;
-      background: #111827;
-      color: #f9fafb;
-      display: grid;
-      gap: 0.75rem;
-      margin-top: 1rem;
-    }
-    .highlight-box h3 { margin: 0; font-size: 1.05rem; }
-    .highlight-box p { margin: 0; font-size: 0.92rem; }
-    .levels-table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 0.9rem;
-      background: #ffffff;
-      border-radius: 0.75rem;
-      overflow: hidden;
-      box-shadow: 0 10px 25px rgba(15,23,42,0.06);
-    }
-    .levels-table th,
-    .levels-table td {
-      padding: 0.7rem 0.75rem;
-      border-bottom: 1px solid #e5e7eb;
-      text-align: left;
-      white-space: nowrap;
-    }
-    .levels-table th { background: #f3f4f6; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em; }
-    .levels-table tfoot td { font-weight: 700; background: #f9fafb; }
-    .steps {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1.4rem;
-    }
-    .step-number {
-      width: 2rem;
-      height: 2rem;
-      border-radius: 999px;
-      background: #111827;
-      color: #f9fafb;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.9rem;
-      font-weight: 600;
-      margin-bottom: 0.4rem;
-    }
-    .faq-item {
-      background: #ffffff;
-      border-radius: 0.9rem;
-      padding: 1rem 1.1rem;
-      margin-bottom: 0.75rem;
-      box-shadow: 0 1px 0 rgba(15,23,42,0.05);
-    }
-    .faq-item h3 {
-      font-size: 0.98rem;
-      margin: 0 0 0.3rem;
-    }
-    footer.cta-footer {
-      background: #020617;
-      color: #e5e7eb;
-      padding: 2rem 1.5rem 2.5rem;
-      margin-top: 1rem;
-    }
-    footer .inner {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1.5rem;
-    }
-    footer h2 { margin: 0 0 0.35rem; font-size: 1.4rem; }
-    footer p { margin: 0.1rem 0; font-size: 0.9rem; }
-    footer .contacts { font-size: 0.88rem; opacity: 0.9; }
-
-    /* Sub-navigation */
-    .subnav {
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      background: rgba(255,255,255,0.85);
-      backdrop-filter: saturate(150%) blur(8px);
-      border-bottom: 1px solid #e5e7eb;
-    }
-    .subnav .inner {
-      max-width: 1200px; margin: 0 auto; padding: 0.6rem 1.5rem;
-      display: flex; gap: 1rem; align-items: center; justify-content: space-between;
-    }
-    .subnav .links { display: flex; flex-wrap: wrap; gap: 0.75rem; }
-    .subnav a { color: #111827; font-size: 0.9rem; padding: 0.35rem 0.55rem; border-radius: 0.5rem; }
-    .subnav a:focus-visible { outline: 2px solid #054ada; outline-offset: 2px; }
-    .subnav a.active { background: #e5e7eb; }
-    .subnav .cta { margin-left: auto; }
-
-    /* Sticky bottom CTA */
-    .sticky-cta { position: fixed; left: 0; right: 0; bottom: -120px; transition: bottom 220ms ease; }
-    .sticky-cta.visible { bottom: 0; }
-    .sticky-cta .bar { background: #111827; color: #f9fafb; padding: 0.8rem 1rem; display: flex; justify-content: center; gap: 0.8rem; align-items: center; }
-    .sticky-cta .bar .button { background: linear-gradient(135deg, #facc15, #fb923c); color: #111827; }
-    :root { --sticky-cta-height: 72px; }
-    body.has-sticky-padding { padding-bottom: var(--sticky-cta-height); }
-
-    /* Table refinements */
-    .levels-table tbody tr:nth-child(even) { background: #fafafa; }
-    .levels-table td:nth-child(2), .levels-table td:nth-child(3) { text-align: right; }
-
-    /* Leadership Tier Premium Section */
-    .leadership-tier {
-      background: linear-gradient(135deg, #020617 0%, #1e293b 100%);
-      color: #f1f5f9;
-      padding: 3rem 2rem;
-      margin: 3rem -2rem 2rem;
-      border-radius: 1.5rem;
-      position: relative;
-      overflow: hidden;
-    }
-    .leadership-tier::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 400px;
-      height: 400px;
-      background: radial-gradient(circle, rgba(250, 204, 21, 0.15), transparent 70%);
-      pointer-events: none;
-    }
-    .leadership-tier .inner { position: relative; z-index: 1; max-width: 900px; margin: 0 auto; }
-    .leadership-tier .badge {
-      display: inline-flex;
-      align-items: center;
-      padding: 0.4rem 1rem;
-      background: rgba(250, 204, 21, 0.2);
-      border: 1px solid rgba(250, 204, 21, 0.4);
-      border-radius: 999px;
-      font-size: 0.8rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: #facc15;
-      margin-bottom: 1.5rem;
-    }
-    .leadership-tier h2 { color: #ffffff; font-size: 2.2rem; margin-bottom: 1rem; }
-    .leadership-tier .lead { color: #cbd5e1; font-size: 1.1rem; margin-bottom: 2rem; }
-    .leadership-tier .benefits {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-      margin: 2rem 0;
-    }
-    .leadership-tier .benefit-card {
-      background: rgba(255, 255, 255, 0.05);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 1rem;
-      padding: 1.5rem;
-    }
-    .leadership-tier .benefit-card h3 { color: #facc15; font-size: 1.1rem; margin-bottom: 0.5rem; }
-    .leadership-tier .benefit-card p { color: #e2e8f0; font-size: 0.95rem; line-height: 1.6; }
-    .leadership-tier .stats {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      margin: 2rem 0;
-      padding: 1.5rem 0;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    }
-    .leadership-tier .stat {
-      flex: 1;
-      min-width: 200px;
-    }
-    .leadership-tier .stat-value {
-      font-size: 2rem;
-      font-weight: 800;
-      color: #facc15;
-      margin-bottom: 0.25rem;
-    }
-    .leadership-tier .stat-label {
-      font-size: 0.9rem;
-      color: #cbd5e1;
-    }
-    .leadership-tier .requirements {
-      background: rgba(255, 255, 255, 0.05);
-      border-radius: 1rem;
-      padding: 1.5rem;
-      margin: 2rem 0;
-    }
-    .leadership-tier .requirements h3 { color: #ffffff; margin-bottom: 1rem; }
-    .leadership-tier .requirements ul { list-style: none; padding: 0; margin: 0; }
-    .leadership-tier .requirements li {
-      padding: 0.5rem 0;
-      color: #e2e8f0;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-    .leadership-tier .requirements li::before { content: "✓"; color: #facc15; font-weight: bold; }
-    .leadership-tier .not-for {
-      margin-top: 1rem;
-      padding-top: 1rem;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-    }
-    .leadership-tier .not-for p {
-      color: #f87171;
-      font-size: 0.9rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-    .leadership-tier .not-for p::before { content: "❌"; }
-    .leadership-tier .cta-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      margin-top: 2rem;
-    }
-    .leadership-tier .button {
-      background: linear-gradient(135deg, #facc15, #fb923c);
-      color: #111827;
-      padding: 1rem 2rem;
-      border-radius: 999px;
-      font-weight: 700;
-      font-size: 1rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-    .leadership-tier .button.secondary {
-      background: transparent;
-      border: 2px solid rgba(250, 204, 21, 0.5);
-      color: #facc15;
-    }
-
-    /* Focus and accessibility */
-    a.button:focus-visible, button:focus-visible { outline: 3px solid #f59e0b; outline-offset: 3px; }
-
-    @media (max-width: 768px) {
-      .hero-inner {
-        grid-template-columns: minmax(0, 1fr);
-      }
-      header.hero {
-        padding: 2rem 1.5rem 2.5rem;
-      }
-      .subnav .inner { padding: 0.5rem 1rem; }
-      .sticky-cta .bar { padding: 0.7rem; }
-    }
-  </style>
+  <meta property="og:url" content="https://www.btheducationgroup.org/workforce-deployment" />
+  <meta property="og:image" content="assets/images/og-image.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=DM+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/workforce-infrastructure.css?v=20260617d" />
+  <link rel="stylesheet" href="assets/css/workforce-infrastructure-v2.css?v=20260617d" />
+  <link rel="stylesheet" href="assets/css/workforce-expansion.css?v=20260617d" />
+  <link rel="stylesheet" href="assets/css/workforce-deployment-v2.css?v=20260617d" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "InvestmentOrSavingsProduct",
-    "name": "Sector Workforce Infrastructure Investment (SWD-INV)",
-    "description": "Structured, sector-based investment into workforce development, deployment, acquisition, and management of certified workforce capacity systems",
-    "provider": {
-      "@type": "Organization",
-      "name": "BTH Education Group",
-      "url": "https://www.btheducationgroup.org"
-    },
-    "category": "Workforce Infrastructure Investment",
-    "feesAndCommissionsSpecification": "Multi-layer revenue model across four distinct engines"
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://www.btheducationgroup.org/#org",
+        "name": "BTH Education Group",
+        "url": "https://www.btheducationgroup.org"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://www.btheducationgroup.org/workforce-deployment#page",
+        "url": "https://www.btheducationgroup.org/workforce-deployment",
+        "name": "Workforce Infrastructure Deployment Architecture",
+        "description": "Institutional workforce infrastructure participation portal — WDDAM, SWI, SWD-INV, WDS, and OEDP Work Network."
+      }
+    ]
   }
   </script>
 </head>
-<body>
-  <div class="page">
+<body class="wf-v2 wf-deployment-v2">
+  <div class="scroll-progress" id="scrollProgress"></div>
+  <a class="skip-link" href="#hero">Skip to main content</a>
 
-    <header class="hero" id="top">
-      <div class="hero-inner">
-        <div>
-          <div class="hero-kicker">BTH EDUCATION GROUP • WORKFORCE INFRASTRUCTURE INVESTMENT</div>
-          <h1 class="hero-title">Workforce Infrastructure is the Engine of Every Economy</h1>
-          <p class="hero-subtitle">
-            <strong>This is not an investment in education.</strong><br>
-            <strong>This is not an investment in training.</strong><br><br>
-            This is an investment in <strong>workforce infrastructure</strong> — the system that powers companies, industries, and economies. A structured, sector-based investment model enabling investors to participate directly in the creation and operation of certified workforce capacity systems across <strong>26 global sectors</strong>.
-          </p>
-          <div class="hero-metrics">
-            <div class="hero-metric"><span class="value">$18,000</span> Investment Entry</div>
-            <div class="hero-metric"><span class="value">2 Cohorts</span> 100 Workforce Capacity</div>
-            <div class="hero-metric"><span class="value">4 Revenue</span> Engines</div>
-            <div class="hero-metric"><span class="value">$69,582.50</span> ROI (3 years)</div>
-          </div>
-          <div style="display:flex; flex-wrap:wrap; gap:1rem; margin-top:1.5rem;">
-            <a href="#investment-structure" class="button" data-track-cta data-cta-location="hero" style="background:linear-gradient(135deg,#facc15,#fb923c); color:#111827;">View Investment Structure</a>
-            <a href="#roi-calculator" class="button" data-track-cta data-cta-location="hero" style="background:transparent; border:2px solid rgba(255,255,255,0.5); color:#fff;">Calculate Returns</a>
-          </div>
-        </div>
-        <aside class="hero-card">
-          <div class="badge">Investment Classification • Infrastructure</div>
-          <h3>Sector Workforce Director – Investor (SWD-INV)</h3>
-          <p style="font-size:0.95rem; margin-bottom:1rem; line-height:1.6;">
-            Participate in the design, production, deployment, acquisition, and management of sector-level workforce capacity systems.
-          </p>
-          <hr style="border:none;border-top:1px solid rgba(148,163,184,0.5);margin:1rem 0;" />
-          <h3 style="margin-bottom:0.75rem;">Multi-Layer Revenue Architecture</h3>
-          <ul style="font-size:0.9rem; line-height:1.8;">
-            <li>🔨 <strong>Workforce Development</strong> — 5% revenue share</li>
-            <li>🚀 <strong>Workforce Deployment</strong> — 5% revenue share</li>
-            <li>🤝 <strong>Workforce Acquisition</strong> — 5% revenue share</li>
-            <li>📊 <strong>Workforce Management</strong> — 5% revenue share</li>
-          </ul>
-          <hr style="border:none;border-top:1px solid rgba(148,163,184,0.5);margin:1rem 0;" />
-          <p style="font-size:0.85rem; opacity:0.9; line-height:1.6;">
-            <strong>Key Principle:</strong> The same workforce generates value multiple times across its lifecycle — creating recurring, infrastructure-level returns.
-          </p>
-        </aside>
-      </div>
-    </header>
+  <nav class="topnav topnav--v2" aria-label="Workforce deployment navigation">
+    <div class="topnav__shell">
+    <div class="topnav-inner">
+      <a href="index.html" class="nav-brand" aria-label="BTH Education Group — homepage">
+        BTH <span>Education</span> Group
+      </a>
 
-    <nav class="subnav" aria-label="Section navigation">
-      <div class="inner">
-        <div class="links">
-          <a href="#positioning">Positioning</a>
-          <a href="#investment-structure">Investment Structure</a>
-          <a href="#two-roles">Two-Role Architecture</a>
-          <a href="#cohort-engine">Cohort Engine</a>
-          <a href="#revenue-engines">Revenue Engines</a>
-          <a href="#roi-calculator">ROI Calculator</a>
-          <a href="#sectors">26 Sectors</a>
-          <a href="#enterprise">Enterprise Alignment</a>
-        </div>
-        <div class="cta">
-          <a href="mailto:investment@btheducationgroup.org?subject=SWD-INV Strategic Briefing Request" class="button" data-track-cta data-cta-location="subnav">Request Briefing</a>
-        </div>
-      </div>
-    </nav>
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="nav-panel-v2" id="nav-toggle-v2">
+        <span class="nav-toggle__label">Menu</span>
+        <span class="nav-toggle__bars" aria-hidden="true"></span>
+      </button>
 
-    <section id="positioning">
-      <h2>What is Workforce Infrastructure?</h2>
-      <p class="lead">
-        This is not training. This is not recruitment. This is not outsourcing.<br><br>
-        <strong>This is workforce infrastructure</strong> — the foundational system that develops, deploys, and manages certified professional capacity at scale across industries and economies.
-      </p>
-      <div class="grid-3">
-        <div class="card">
-          <h3>🏗️ Infrastructure, Not Education</h3>
-          <p>
-            BTH Education Group operates as a <strong>Workforce Capacity Deployment Organization</strong> — designing and operating systems that build, supply, and manage talent pipelines for enterprises at scale.
-          </p>
+      <div class="nav-panel" id="nav-panel-v2">
+        <div class="nav-primary" role="menubar" aria-label="Primary sections">
+          <a href="#executive-thesis" role="menuitem" data-nav-section="executive-thesis">Thesis</a>
+          <a href="#wddam-architecture" role="menuitem" data-nav-section="wddam-architecture">WDDAM</a>
+          <a href="#sector-portfolio" role="menuitem" data-nav-section="sector-portfolio">Portfolio</a>
+          <a href="#swi-partners" role="menuitem" data-nav-section="swi-partners">Roles</a>
+          <a href="#documentation-center" role="menuitem" data-nav-section="documentation-center">Documents</a>
         </div>
-        <div class="card">
-          <h3>🔄 Multi-Layer Value Chain</h3>
-          <p>
-            Unlike traditional models where value is realized once, workforce infrastructure generates <strong>multiple revenue cycles</strong> from the same asset: human capital — across development, deployment, acquisition, and management.
-          </p>
-        </div>
-        <div class="card">
-          <h3>📈 Infrastructure-Class Returns</h3>
-          <p>
-            Linked to <strong>real economic activity</strong>, not speculative markets. Demand-driven, sector-aligned, and anchored in perpetual workforce requirements across 26 global industries.
-          </p>
-        </div>
-      </div>
-      <div class="highlight-box">
-        <h3>Core Economic Principle</h3>
-        <p>
-          <strong>The same workforce generates value multiple times across its lifecycle.</strong> This creates recurring revenue, scalable economic output, and infrastructure-level returns. This is not linear income — this is compounded workforce value generation.
-        </p>
-      </div>
-    </section>
 
-    <section id="investment-structure">
-      <h2>Investment Structure: Sector Workforce Director – Investor (SWD-INV)</h2>
-      <p class="lead">
-        A structured entry position that activates a complete workforce production system across a designated industry sector.
-      </p>
-      <div class="highlight-box" style="background:linear-gradient(135deg,#0F172A,#1E3A8A); color:#fff;">
-        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:2rem; margin-bottom:1.5rem;">
-          <div>
-            <h3 style="color:#FACC15; margin-bottom:0.5rem;">Investment Value</h3>
-            <p style="font-size:2rem; font-weight:800; margin:0;">$18,000 USD</p>
-            <p style="font-size:0.85rem; opacity:0.7; margin:0.25rem 0 0;">(≈ 10,000,000 FCFA equivalent)</p>
-          </div>
-          <div>
-            <h3 style="color:#FACC15; margin-bottom:0.5rem;">Classification</h3>
-            <p style="font-size:1.2rem; font-weight:700; margin:0;">Workforce Infrastructure Investment</p>
-            <p style="font-size:0.85rem; opacity:0.7; margin:0.25rem 0 0;">26 Industry Sectors</p>
-          </div>
-          <div>
-            <h3 style="color:#FACC15; margin-bottom:0.5rem;">Platform</h3>
-            <p style="font-size:1.2rem; font-weight:700; margin:0;">OEDP Work Network</p>
-            <p style="font-size:0.85rem; opacity:0.7; margin:0.25rem 0 0;">BTH Education Group</p>
+        <div class="nav-panel__aux">
+        <a href="workforce-infrastructure.html" class="nav-link-aux">Global Doctrine</a>
+        <a href="gwix-trial.html" class="nav-link-aux">GWIX Exchange</a>
+        <a href="#executive-briefing" class="nav-link-aux">Engage</a>
+
+        <div class="nav-dropdown" id="nav-page-map">
+          <button type="button" class="nav-dropdown__trigger" aria-expanded="false" aria-controls="nav-sitemap-menu" id="nav-sitemap-trigger">
+            On this page
+            <span class="nav-dropdown__chev" aria-hidden="true"></span>
+          </button>
+          <div class="nav-dropdown__menu" id="nav-sitemap-menu" role="menu" aria-label="Page sections" hidden>
+            <div class="nav-sitemap">
+              <div class="nav-sitemap__col">
+                <p class="nav-sitemap__label">Architecture</p>
+                <a href="#hero" role="menuitem">Overview</a>
+                <a href="#executive-thesis" role="menuitem">Executive thesis</a>
+                <a href="#wddam-architecture" role="menuitem">WDDAM framework</a>
+                <a href="#sector-portfolio" role="menuitem">26-sector portfolio</a>
+                <a href="#division-architecture" role="menuitem">Division architecture</a>
+                <a href="#global-portfolio" role="menuitem">Global portfolio</a>
+              </div>
+              <div class="nav-sitemap__col">
+                <p class="nav-sitemap__label">Roles &amp; economics</p>
+                <a href="#swi-partners" role="menuitem">SWI Partners</a>
+                <a href="#swd-inv-structure" role="menuitem">SWD-INV</a>
+                <a href="#wds-structure" role="menuitem">WDS</a>
+                <a href="#cohort-architecture" role="menuitem">Cohort model</a>
+                <a href="#four-engines" role="menuitem">Four engines</a>
+                <a href="#gorp-framework" role="menuitem">GORP framework</a>
+              </div>
+              <div class="nav-sitemap__col">
+                <p class="nav-sitemap__label">Participation</p>
+                <a href="#documentation-center" role="menuitem">Documentation center</a>
+                <a href="#participation-pathways" role="menuitem">Pathways</a>
+                <a href="#executive-briefing" role="menuitem">Executive briefing</a>
+                <a href="#closing-doctrine" role="menuitem">Closing doctrine</a>
+              </div>
+              <div class="nav-sitemap__col nav-sitemap__col--utility">
+                <p class="nav-sitemap__label">Resources</p>
+                <a href="index.html" role="menuitem">BTH Group homepage</a>
+                <a href="gwix-trial.html" role="menuitem">GWIX Exchange</a>
+                <a href="workforce-infrastructure.html" role="menuitem">Global Doctrine</a>
+                <a href="workforce-diligence.html" role="menuitem">Diligence pack</a>
+                <a href="workforce-engage.html?intent=briefing" role="menuitem">Schedule briefing</a>
+              </div>
+            </div>
           </div>
         </div>
-        <h3 style="color:#fff; margin:1.5rem 0 1rem;">Deployment Architecture</h3>
-        <p style="margin-bottom:1rem;">Each SWD-INV investment activates:</p>
-        <ul style="line-height:1.9;">
-          <li><strong>2 Workforce Deployment Specialists (WDS)</strong> — execution layer</li>
-          <li><strong>2 Workforce Cohorts</strong> — 50 professionals each</li>
-          <li><strong>Total Capacity:</strong> 100 certified professionals (Level 1–5)</li>
-          <li><strong>Sector Control:</strong> Defined industry focus with enterprise alignment</li>
+        </div>
+
+        <a href="workforce-engage.html?intent=briefing" class="btn btn-primary nav-cta-btn nav-cta-btn--in-panel">Executive Briefing</a>
+      </div>
+
+      <div class="nav-actions">
+        <a href="workforce-engage.html?intent=briefing" class="btn btn-primary nav-cta-btn">Executive Briefing</a>
+      </div>
+    </div>
+    </div>
+  </nav>
+
+  <!-- SECTION 01 — HERO -->
+  <section class="hero" id="hero">
+    <canvas id="neural-canvas"></canvas>
+
+    <div class="hero-photo-layer" id="heroPhotoLayer"></div>
+    <div class="hero-orb orb-1"></div>
+    <div class="hero-orb orb-2"></div>
+    <div class="hero-orb orb-3"></div>
+    <div class="hero-grid">
+      <div>
+        <div class="hero-badge"><span>&#x25CF;</span> Workforce Infrastructure Deployment Portal</div>
+        <h1>Workforce Infrastructure<br>Deployment <em>Architecture</em></h1>
+        <p class="hero-audience-line">Institutional systems for workforce production, deployment, acquisition and governance — for <strong>sovereign institutions</strong>, <strong>multilateral programmes</strong>, <strong>enterprises</strong>, and <strong>SWI · SWD-INV · WDS</strong> operators.</p>
+        <p class="hero-tagline" style="margin-top:1.25rem;"><span id="tw-text">Develop. Deploy. Acquire. Govern.</span><span id="tw-cursor">&nbsp;</span></p>
+        <p class="hero-para"><strong>WDDAM</strong> through the <strong>OEDP Work Network</strong>: governed workforce infrastructure participation across <strong>26 strategic sectors</strong>, <strong>130 divisions</strong>, and <strong>130,000 workforce capacity</strong>.</p>
+        <div class="hero-cta-row">
+          <a href="workforce-engage.html?intent=briefing" class="btn btn-gold btn-lg">Executive Briefing</a>
+          <a href="#documentation-center" class="btn btn-outline btn-lg">Download Workforce Infrastructure Documents</a>
+          <a href="operator/login.html" class="btn btn-outline btn-lg">Operator sign in</a>
+        </div>
+        <nav class="hero-audience-rail" aria-label="Portal sections">
+          <a class="har-chip har-chip--gov" href="#sector-portfolio">26 Sectors</a>
+          <a class="har-chip har-chip--ent" href="#division-architecture">Divisions</a>
+          <a class="har-chip har-chip--un" href="#swi-partners">SWI · SWD-INV · WDS</a>
+          <a class="har-chip har-chip--cert" href="#documentation-center">Documents</a>
+          <a class="har-chip har-chip--inv" href="#executive-briefing">Engage</a>
+        </nav>
+      </div>
+      <aside class="hero-stat-panel">
+        <div class="hsp-label">Global portfolio architecture</div>
+        <div class="hsp-grid">
+          <div><div class="hsp-value" data-count="26">0</div><div class="hsp-key">Strategic sectors</div></div>
+          <div><div class="hsp-value" data-count="130">0</div><div class="hsp-key">Divisions</div></div>
+          <div class="hsp-divider"></div>
+          <div><div class="hsp-value" data-count="130000">0</div><div class="hsp-key">Workforce capacity</div></div>
+          <div><div class="hsp-value gold">1.1388T</div><div class="hsp-key">FCFA · Development Engine</div></div>
+          <div class="hsp-divider"></div>
+          <div><div class="hsp-value" data-count="4">0</div><div class="hsp-key">Workforce infrastructure engines</div></div>
+          <div><div class="hsp-value">WDDAM</div><div class="hsp-key">Lifecycle architecture</div></div>
+        </div>
+        <div class="hsp-cta">Four engines — Development · Deployment · Acquisition · Governance — governed operational participation, not linear transactional spend.</div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- SECTION 02 — EXECUTIVE THESIS -->
+  <section class="wfd-thesis reveal" id="executive-thesis" aria-labelledby="executive-thesis-heading">
+    <div class="wfd-thesis-inner">
+      <p class="wfd-section-eyebrow">Executive thesis</p>
+      <h2 id="executive-thesis-heading">The next major infrastructure economy is governed workforce capacity.</h2>
+      <p class="wfd-thesis-lead">For more than a century, nations invested in energy, transport, telecommunications, and digital systems — while workforce capacity remained fragmented, ungoverned, and disconnected from institutional deployment continuity.</p>
+      <div class="wfd-thesis-body">
+        <p><strong>Workforce infrastructure</strong> is the institutional production, deployment, acquisition, and governance of deployable professional capacity under governed operational systems — not training programmes, recruitment agencies, or staffing transactions.</p>
+        <p><strong>Institutional capacity</strong> now depends on whether governments, enterprises, and multilateral actors can operate workforce systems with the same rigor applied to energy grids, digital networks, and sovereign finance infrastructure.</p>
+        <p><strong>Deployment systems</strong> integrate certified capacity into live economic operations through structured continuity — placement, supervision, reporting, and lifecycle governance via the OEDP Work Network.</p>
+        <p><strong>Workforce governance</strong> protects portfolio continuity, operational accountability, and long-horizon institutional trust across divisional and sector architectures.</p>
+      </div>
+
+      <div class="wfd-infra-trio" role="list" aria-label="Three infrastructure eras">
+        <article class="wfd-infra-card" role="listitem">
+          <p class="wfd-infra-card__era">Industrial age</p>
+          <h3>Energy infrastructure</h3>
+          <p>Power, transport, and physical industrial systems that enabled modern economies.</p>
+        </article>
+        <article class="wfd-infra-card" role="listitem">
+          <p class="wfd-infra-card__era">Information age</p>
+          <h3>Digital infrastructure</h3>
+          <p>Networks, data platforms, and connectivity layers that accelerated global integration.</p>
+        </article>
+        <article class="wfd-infra-card wfd-infra-card--active" role="listitem">
+          <p class="wfd-infra-card__era">Intelligent age</p>
+          <h3>Workforce infrastructure</h3>
+          <p>Governed production, deployment, acquisition, and lifecycle governance of professional capacity at institutional scale.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 03 — WDDAM ARCHITECTURE -->
+  <section class="wfd-wddam" id="wddam-architecture" aria-labelledby="wddam-heading">
+    <div class="wfd-wddam-header reveal">
+      <p class="wfd-section-eyebrow">Workforce infrastructure architecture</p>
+      <div class="wfd-wddam-acronym" aria-hidden="true">WDDAM</div>
+      <p class="wfd-wddam-full">Workforce Development · Deployment · Acquisition · Governance</p>
+      <ul class="wfd-wddam-pillars" aria-label="WDDAM phases">
+        <li>Develop</li>
+        <li>Deploy</li>
+        <li>Acquire</li>
+        <li>Govern</li>
+      </ul>
+      <h2 id="wddam-heading">Workforce lifecycle architecture under institutional governance</h2>
+      <p>WDDAM operates workforce capacity as governed infrastructure — structuring production, operational deployment, institutional acquisition, and lifecycle governance as an integrated architecture across 26 sector portfolios.</p>
+    </div>
+
+    <div class="wfd-phase-grid reveal" role="list">
+      <article class="wfd-phase-card" role="listitem">
+        <div class="wfd-phase-num">PHASE 01</div>
+        <h3>Develop</h3>
+        <p>Workforce production and readiness preparation across Level&nbsp;1–5 pathways within governed cohort structures.</p>
+        <ul>
+          <li>Candidate assessment and pathway assignment</li>
+          <li>Certification alignment and operational readiness</li>
+          <li>Deployable workforce capacity output</li>
         </ul>
+      </article>
+      <article class="wfd-phase-card" role="listitem">
+        <div class="wfd-phase-num">PHASE 02</div>
+        <h3>Deploy</h3>
+        <p>Operational integration of workforce capacity into active institutional and enterprise systems.</p>
+        <ul>
+          <li>Deployment coordination and institutional placement</li>
+          <li>Operational supervision and continuity management</li>
+          <li>Productive workforce integration output</li>
+        </ul>
+      </article>
+      <article class="wfd-phase-card" role="listitem">
+        <div class="wfd-phase-num">PHASE 03</div>
+        <h3>Acquire</h3>
+        <p>Institutional workforce transfer and acquisition coordination under governed continuity frameworks.</p>
+        <ul>
+          <li>Institutional acquisition management</li>
+          <li>Deployment rights and transfer governance</li>
+          <li>Governed institutional workforce continuity</li>
+        </ul>
+      </article>
+      <article class="wfd-phase-card" role="listitem">
+        <div class="wfd-phase-num">PHASE 04</div>
+        <h3>Govern</h3>
+        <p>Lifecycle workforce oversight, compliance, reporting, and continuity governance across portfolio operations.</p>
+        <ul>
+          <li>Performance supervision and compliance management</li>
+          <li>Operational reporting and escalation structures</li>
+          <li>Long-horizon workforce stability output</li>
+        </ul>
+      </article>
+    </div>
+
+    <div class="wfd-not-wddam reveal">
+      <div class="wfd-not-wddam-inner" aria-label="What WDDAM is not">
+        <span class="wfd-not-tag">WDDAM is not <span>training</span></span>
+        <span class="wfd-not-tag">WDDAM is not <span>recruitment</span></span>
+        <span class="wfd-not-tag">WDDAM is not <span>staffing</span></span>
       </div>
-    </section>
+    </div>
 
-    <section id="two-roles">
-      <h2>Two-Role Architecture: Investor Layer & Execution Layer</h2>
-      <p class="lead">
-        The SWD-INV model separates strategic investment from operational execution through a two-tier structure designed for scalability and clarity.
-      </p>
-      <div style="display:grid; grid-template-columns:1fr 1fr; gap:2rem; margin-top:2rem;">
-        <!-- SWD-INV Card -->
-        <div style="background:linear-gradient(135deg,#FEFCE8,#FDE68A); border:2px solid #FACC15; border-radius:1.5rem; padding:2rem;">
-          <div style="display:inline-block; padding:0.3rem 0.75rem; background:#FACC15; color:#111827; border-radius:999px; font-size:0.75rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:1.25rem;">Investor Tier</div>
-          <h3 style="font-size:1.5rem; margin-bottom:0.75rem; color:#111827;">SWD-INV<br><span style="font-size:0.9rem; font-weight:400; color:#78350F;">Sector Workforce Director – Investor</span></h3>
-          <div style="margin:1.5rem 0;">
-            <div style="font-size:0.85rem; color:#78350F; margin-bottom:0.5rem;">Investment:</div>
-            <div style="font-size:2rem; font-weight:800; color:#111827;">$18,000 USD</div>
-          </div>
-          <hr style="border:none; border-top:1px solid #D97706; margin:1.5rem 0;">
-          <h4 style="font-size:0.95rem; margin-bottom:0.75rem; color:#111827;">Controls:</h4>
-          <ul style="line-height:1.8; font-size:0.9rem; color:#292524;">
-            <li>2 Workforce Deployment Specialists (WDS)</li>
-            <li>2 Cohorts (100 workforce capacity)</li>
-            <li>Sector-level strategic authority</li>
-          </ul>
-          <hr style="border:none; border-top:1px solid #D97706; margin:1.5rem 0;">
-          <h4 style="font-size:0.95rem; margin-bottom:0.75rem; color:#111827;">Revenue:</h4>
-          <p style="font-size:0.9rem; color:#292524; margin:0;"><strong>5% of TOTAL revenue</strong> from 2 cohorts<br>Across ALL four engines</p>
-        </div>
+    <div class="wfd-wddam-doctrine reveal">
+      <p>The same workforce asset generates value across <strong>development, deployment, acquisition, and governance</strong> — creating recurring workforce infrastructure economics governed through divisional oversight, not linear transactional spend.</p>
+    </div>
+  </section>
 
-        <!-- WDS Card -->
-        <div style="background:linear-gradient(135deg,#EFF6FF,#DBEAFE); border:2px solid#3B82F6; border-radius:1.5rem; padding:2rem;">
-          <div style="display:inline-block; padding:0.3rem 0.75rem; background:#3B82F6; color:#fff; border-radius:999px; font-size:0.75rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:1.25rem;">Execution Tier</div>
-          <h3 style="font-size:1.5rem; margin-bottom:0.75rem; color:#111827;">WDS<br><span style="font-size:0.9rem; font-weight:400; color:#1E3A8A;">Workforce Deployment Specialist</span></h3>
-          <div style="margin:1.5rem 0;">
-            <div style="font-size:0.85rem; color:#1E3A8A; margin-bottom:0.5rem;">Operational Role:</div>
-            <div style="font-size:1.3rem; font-weight:700; color:#111827;">Builds Cohorts</div>
-          </div>
-          <hr style="border:none; border-top:1px solid #60A5FA; margin:1.5rem 0;">
-          <h4 style="font-size:0.95rem; margin-bottom:0.75rem; color:#111827;">Responsibility:</h4>
-          <ul style="line-height:1.8; font-size:0.9rem; color:#1E3A8A;">
-            <li>Build 1 Cohort (50 workforce)</li>
-            <li>Deploy Level 1–5 pathways</li>
-            <li>Execute sector operations</li>
-          </ul>
-          <hr style="border:none; border-top:1px solid #60A5FA; margin:1.5rem 0;">
-          <h4 style="font-size:0.95rem; margin-bottom:0.75rem; color:#111827;">Revenue:</h4>
-          <p style="font-size:0.9rem; color:#1E3A8A; margin:0;"><strong>5% of their cohort</strong> revenue<br>OR<br><strong>2.5%</strong> of total 2-cohort revenue</p>
+  <!-- SECTION 04 — 26-SECTOR PORTFOLIO -->
+  <section class="wfd-portfolio wfd-portfolio--light" id="sector-portfolio" aria-labelledby="sector-portfolio-heading">
+    <div class="wfd-container">
+      <header class="wfd-section-header reveal">
+        <p class="wfd-section-eyebrow">Portfolio architecture</p>
+        <h2 id="sector-portfolio-heading">The 26-Sector Portfolio</h2>
+        <p class="wfd-section-lead">Each strategic sector operates as a governed workforce infrastructure portfolio — five divisions, unified competency frameworks, and sector-aligned deployment continuity through WDDAM.</p>
+      </header>
+
+      <div class="wfd-capacity-model reveal" aria-label="Sector capacity model">
+        <div class="wfd-capacity-model__label">Standard sector capacity model</div>
+        <div class="wfd-capacity-model__grid">
+          <div class="wfd-capacity-stat"><span class="wfd-capacity-stat__val">5</span><span class="wfd-capacity-stat__key">Divisions</span></div>
+          <div class="wfd-capacity-stat"><span class="wfd-capacity-stat__val">5,000</span><span class="wfd-capacity-stat__key">Workforce capacity</span></div>
+          <div class="wfd-capacity-stat wfd-capacity-stat--highlight"><span class="wfd-capacity-stat__val">43.8B</span><span class="wfd-capacity-stat__key">FCFA · Development Engine value</span></div>
         </div>
       </div>
-    </section>
 
-    <section id="cohort-engine">
-      <h2>Cohort Engine: The Multi-Layer Value Chain</h2>
-      <p class="lead">
-        Each Workforce Deployment Specialist builds <strong>1 cohort of 50 certified professionals</strong> across 5 levels of professional development. This creates a predictable, high-value capacity deployment pipeline aligned to real enterprise demand.
-      </p>
-      <div style="overflow-x:auto;">
-        <table class="levels-table">
-          <thead>
-            <tr>
-              <th>Level</th>
-              <th>Count per Cohort</th>
-              <th>Value per Unit (USD)</th>
-              <th>Total Value (USD)</th>
-              <th>Role / Outcome</th>
-            </tr>
-          </thead>
+      <div class="sectors-filter wfd-sectors-filter reveal" role="group" aria-label="Filter sectors">
+        <button type="button" class="sec-chip" data-filter="all" aria-pressed="true">All</button>
+        <button type="button" class="sec-chip" data-filter="tech" aria-pressed="false">Technology</button>
+        <button type="button" class="sec-chip" data-filter="industry" aria-pressed="false">Industry</button>
+        <button type="button" class="sec-chip" data-filter="business" aria-pressed="false">Business</button>
+        <button type="button" class="sec-chip" data-filter="public" aria-pressed="false">Public</button>
+        <button type="button" class="sec-chip" data-filter="healthcare" aria-pressed="false">Healthcare</button>
+      </div>
+      <div class="sectors-grid wfd-sectors-grid reveal">
+        <a href="programs/informationtechnology.html" class="sector-tile" data-categories="tech"><span class="st-code">IT</span><div class="st-name">Information Technology</div></a>
+        <a href="programs/healthcare.html" class="sector-tile" data-categories="healthcare"><span class="st-code">HLT</span><div class="st-name">Healthcare Technology</div></a>
+        <a href="programs/manufacturing.html" class="sector-tile" data-categories="industry"><span class="st-code">MFG</span><div class="st-name">Manufacturing &amp; Industrial</div></a>
+        <a href="programs/automotive.html" class="sector-tile" data-categories="industry"><span class="st-code">AUT</span><div class="st-name">Automotive Technology</div></a>
+        <a href="programs/renewable-energy.html" class="sector-tile" data-categories="industry"><span class="st-code">ENR</span><div class="st-name">Energy &amp; Renewable Systems</div></a>
+        <a href="programs/architecture.html" class="sector-tile" data-categories="industry"><span class="st-code">CON</span><div class="st-name">Construction &amp; Infrastructure</div></a>
+        <a href="programs/communications.html" class="sector-tile" data-categories="tech"><span class="st-code">COM</span><div class="st-name">Communications &amp; Telecommunications</div></a>
+        <a href="programs/creative.html" class="sector-tile" data-categories="tech"><span class="st-code">CRD</span><div class="st-name">Creative Arts &amp; Digital Design</div></a>
+        <a href="programs/finance.html" class="sector-tile" data-categories="business"><span class="st-code">FIN</span><div class="st-name">Finance &amp; Accounting</div></a>
+        <a href="programs/business.html" class="sector-tile" data-categories="business"><span class="st-code">BUS</span><div class="st-name">Business &amp; Management</div></a>
+        <a href="programs/environmental-sustainability.html" class="sector-tile" data-categories="public"><span class="st-code">ENV</span><div class="st-name">Environmental &amp; Sustainability</div></a>
+        <a href="programs/public-safety.html" class="sector-tile" data-categories="public"><span class="st-code">PSF</span><div class="st-name">Public Safety &amp; Emergency Services</div></a>
+        <a href="programs/aerospace.html" class="sector-tile" data-categories="industry"><span class="st-code">AER</span><div class="st-name">Aerospace &amp; Defense</div></a>
+        <a href="programs/transportation-logistics.html" class="sector-tile" data-categories="industry"><span class="st-code">LOG</span><div class="st-name">Transportation &amp; Logistics</div></a>
+        <a href="programs/research.html" class="sector-tile" data-categories="tech"><span class="st-code">RND</span><div class="st-name">Research &amp; Development</div></a>
+        <a href="programs/edtech.html" class="sector-tile" data-categories="tech"><span class="st-code">EDU</span><div class="st-name">EdTech</div></a>
+        <a href="programs/biotech.html" class="sector-tile" data-categories="healthcare"><span class="st-code">BIO</span><div class="st-name">Biotech &amp; Life Sciences</div></a>
+        <a href="programs/webdev.html" class="sector-tile" data-categories="tech"><span class="st-code">WEB</span><div class="st-name">Web Development &amp; Software Engineering</div></a>
+        <a href="programs/government.html" class="sector-tile" data-categories="public"><span class="st-code">GOV</span><div class="st-name">Government &amp; Civic Technology</div></a>
+        <a href="programs/agtech.html" class="sector-tile" data-categories="public"><span class="st-code">AGR</span><div class="st-name">Agriculture Technology</div></a>
+        <a href="programs/hospitality.html" class="sector-tile" data-categories="business"><span class="st-code">HSP</span><div class="st-name">Hospitality &amp; Tourism Technology</div></a>
+        <a href="programs/retail.html" class="sector-tile" data-categories="business"><span class="st-code">RTL</span><div class="st-name">Retail &amp; E-commerce</div></a>
+        <a href="programs/legaltech.html" class="sector-tile" data-categories="business"><span class="st-code">LEG</span><div class="st-name">Legal Technology</div></a>
+        <a href="programs/hrtech.html" class="sector-tile" data-categories="business"><span class="st-code">HRT</span><div class="st-name">Human Resources Technology</div></a>
+        <a href="programs/media.html" class="sector-tile" data-categories="tech"><span class="st-code">MED</span><div class="st-name">Media &amp; Entertainment Technology</div></a>
+        <a href="programs/insurtech.html" class="sector-tile" data-categories="business"><span class="st-code">INS</span><div class="st-name">Insurance Technology</div></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 05 — DIVISION ARCHITECTURE -->
+  <section class="wfd-portfolio wfd-portfolio--dark" id="division-architecture" aria-labelledby="division-arch-heading">
+    <div class="wfd-container wfd-split">
+      <div class="wfd-split-copy reveal">
+        <p class="wfd-section-eyebrow wfd-section-eyebrow--light">Division architecture</p>
+        <h2 id="division-arch-heading">One Division · Governed Command Structure</h2>
+        <p class="wfd-section-lead wfd-section-lead--light">A division is the foundational operational unit of workforce infrastructure — integrating executive stewardship, expansion coordination, and cohort production under WDDAM governance.</p>
+        <table class="wfd-spec-table">
           <tbody>
-            <tr>
-              <td><strong>Level 1</strong></td>
-              <td>15</td>
-              <td>$8,100</td>
-              <td><strong>$121,500</strong></td>
-              <td>Technical foundations, entry-level certification, job readiness</td>
-            </tr>
-            <tr>
-              <td><strong>Level 2</strong></td>
-              <td>15</td>
-              <td>$12,000</td>
-              <td><strong>$180,000</strong></td>
-              <td>Associate-level specialization and productivity optimization</td>
-            </tr>
-            <tr>
-              <td><strong>Level 3</strong></td>
-              <td>10</td>
-              <td>$16,000</td>
-              <td><strong>$160,000</strong></td>
-              <td>Advanced professional, team leads and project coordination</td>
-            </tr>
-            <tr>
-              <td><strong>Level 4</strong></td>
-              <td>5</td>
-              <td>$20,000</td>
-              <td><strong>$100,000</strong></td>
-              <td>Management &amp; strategic leadership within business units</td>
-            </tr>
-            <tr>
-              <td><strong>Level 5</strong></td>
-              <td>5</td>
-              <td>$26,865</td>
-              <td><strong>$134,325</strong></td>
-              <td>C-suite pathways: COO, CFO, CTO, CSO, CMO (350K–800K USD/year roles)</td>
-            </tr>
+            <tr><th scope="row">SWI Partner</th><td>1</td></tr>
+            <tr><th scope="row">SWD-INV</th><td>10</td></tr>
+            <tr><th scope="row">WDS</th><td>20</td></tr>
+            <tr><th scope="row">Cohorts</th><td>50</td></tr>
+            <tr><th scope="row">Workforce capacity</th><td>1,000</td></tr>
+            <tr><th scope="row">Development Engine value</th><td><strong>8,760,000,000 FCFA</strong></td></tr>
           </tbody>
-          <tfoot>
-            <tr>
-              <td colspan="3"><strong>Total per Cohort (50 Workforce)</strong></td>
-              <td colspan="2"><strong>$695,825 USD</strong></td>
-            </tr>
-            <tr style="background:linear-gradient(135deg,#FEF3C7,#FDE68A);">
-              <td colspan="3"><strong>SWD-INV Portfolio (2 Cohorts × 50)</strong></td>
-              <td colspan="2"><strong style="color:#78350F; font-size:1.2rem;">$1,391,650 USD</strong></td>
-            </tr>
-          </tfoot>
         </table>
       </div>
-      <p style="font-size:0.86rem;color:#6b7280;margin-top:1rem; line-height:1.6;">
-        <strong>Critical Insight:</strong> This workforce value is realized <strong>multiple times</strong> across the four revenue engines (Development, Deployment, Acquisition, Management) — not just once. This is the core of the infrastructure model: compounded value generation from the same human capital asset.
-      </p>
-    </section>
+      <div class="wfd-diagram-wrap reveal" aria-hidden="true">
+        <svg class="wfd-command-svg" viewBox="0 0 420 480" role="img" aria-label="Division command structure: SWI Partner oversees SWD-INV operators, WDS structures, and cohort production">
+          <rect x="130" y="16" width="160" height="44" rx="6" fill="#054ADA"/><text x="210" y="44" text-anchor="middle" fill="#fff" font-size="11" font-weight="700">SWI PARTNER</text>
+          <line x1="210" y1="60" x2="210" y2="88" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+          <rect x="110" y="88" width="200" height="36" rx="6" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.15)"/><text x="210" y="110" text-anchor="middle" fill="#fff" font-size="10" font-weight="600">10 SWD-INV · Expansion &amp; coordination</text>
+          <line x1="210" y1="124" x2="210" y2="152" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+          <rect x="95" y="152" width="230" height="36" rx="6" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.12)"/><text x="210" y="174" text-anchor="middle" fill="rgba(255,255,255,0.85)" font-size="10" font-weight="600">20 WDS · Cohort operations</text>
+          <line x1="210" y1="188" x2="210" y2="216" stroke="rgba(255,255,255,0.25)" stroke-width="1.5"/>
+          <rect x="70" y="216" width="280" height="36" rx="6" fill="rgba(250,204,21,0.12)" stroke="rgba(250,204,21,0.35)"/><text x="210" y="238" text-anchor="middle" fill="#FACC15" font-size="10" font-weight="700">50 COHORTS · 1,000 CAPACITY</text>
+          <line x1="210" y1="252" x2="210" y2="280" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+          <rect x="40" y="280" width="340" height="52" rx="6" fill="rgba(5,74,218,0.15)" stroke="rgba(5,74,218,0.35)"/><text x="210" y="304" text-anchor="middle" fill="#fff" font-size="10" font-weight="600">WDDAM · Develop · Deploy · Acquire · Govern</text><text x="210" y="320" text-anchor="middle" fill="rgba(255,255,255,0.55)" font-size="9">OEDP Work Network · deployment continuity</text>
+          <text x="210" y="370" text-anchor="middle" fill="rgba(255,255,255,0.45)" font-size="9" font-family="DM Mono, monospace">8.76B FCFA · DEVELOPMENT ENGINE</text>
+        </svg>
+      </div>
+    </div>
+  </section>
 
-    <section id="revenue-engines" style="background:linear-gradient(135deg,#0F172A,#0F2060); color:#fff; padding:4rem 2rem; margin:3rem -2rem; border-radius:1.5rem;">
-      <div style="max-width:1100px; margin:0 auto;">
-        <div style="text-align:center; margin-bottom:3rem;">
-          <div style="display:inline-block; padding:0.3rem 0.9rem; background:rgba(250,204,21,0.2); border:1px solid rgba(250,204,21,0.4); border-radius:999px; font-size:0.75rem; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#FACC15; margin-bottom:1.5rem;">Multi-Layer Revenue Architecture</div>
-          <h2 style="color:#fff; margin-bottom:1rem;">Four Revenue Engines — One Workforce Asset</h2>
-          <p style="max-width:640px; margin:0 auto; color:rgba(255,255,255,0.7); font-size:1rem; line-height:1.7;">
-            The defining strength of workforce infrastructure is its <strong>layered revenue structure</strong>. Unlike traditional models where value is realized once, this system generates four distinct revenue streams from the same workforce across its lifecycle.
-          </p>
-        </div>
-
-        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:1.5rem; margin-bottom:3rem;">
-          <!-- Engine 1 -->
-          <div style="background:rgba(255,255,255,0.05); backdrop-filter:blur(10px); border:1px solid rgba(255,255,255,0.1); border-radius:1.25rem; padding:2rem 1.75rem;">
-            <div style="font-size:2rem; margin-bottom:1rem;">🔨</div>
-            <h3 style="color:#FACC15; font-size:1.1rem; margin-bottom:0.75rem;">ENGINE 1<br>Workforce Development</h3>
-            <p style="font-size:0.88rem; color:rgba(255,255,255,0.7); line-height:1.7; margin-bottom:1.25rem;">
-              Revenue from certification pathways (Level 1–5). Structured, predictable, and repeatable workforce production.
-            </p>
-            <div style="background:rgba(250,204,21,0.1); border-radius:0.75rem; padding:1rem; border:1px solid rgba(250,204,21,0.3);">
-              <div style="font-size:0.75rem; color:#FACC15; margin-bottom:0.25rem;">SWD-INV Share:</div>
-              <div style="font-size:1.5rem; font-weight:800; color:#fff;">5%</div>
-            </div>
-          </div>
-
-          <!-- Engine 2 -->
-          <div style="background:rgba(255,255,255,0.05); backdrop-filter:blur(10px); border:1px solid rgba(255,255,255,0.1); border-radius:1.25rem; padding:2rem 1.75rem;">
-            <div style="font-size:2rem; margin-bottom:1rem;">🚀</div>
-            <h3 style="color:#FACC15; font-size:1.1rem; margin-bottom:0.75rem;">ENGINE 2<br>Workforce Deployment</h3>
-            <p style="font-size:0.88rem; color:rgba(255,255,255,0.7); line-height:1.7; margin-bottom:1.25rem;">
-              Revenue when workforce is deployed into enterprise contracts, operational projects, and sector-specific roles.
-            </p>
-            <div style="background:rgba(250,204,21,0.1); border-radius:0.75rem; padding:1rem; border:1px solid rgba(250,204,21,0.3);">
-              <div style="font-size:0.75rem; color:#FACC15; margin-bottom:0.25rem;">SWD-INV Share:</div>
-              <div style="font-size:1.5rem; font-weight:800; color:#fff;">5%</div>
-            </div>
-          </div>
-
-          <!-- Engine 3 -->
-          <div style="background:rgba(255,255,255,0.05); backdrop-filter:blur(10px); border:1px solid rgba(255,255,255,0.1); border-radius:1.25rem; padding:2rem 1.75rem;">
-            <div style="font-size:2rem; margin-bottom:1rem;">🤝</div>
-            <h3 style="color:#FACC15; font-size:1.1rem; margin-bottom:0.75rem;">ENGINE 3<br>Workforce Acquisition</h3>
-            <p style="font-size:0.88rem; color:rgba(255,255,255,0.7); line-height:1.7; margin-bottom:1.25rem;">
-              Revenue when organizations sponsor workforce cohorts or acquire pre-trained talent pipelines at scale.
-            </p>
-            <div style="background:rgba(250,204,21,0.1); border-radius:0.75rem; padding:1rem; border:1px solid rgba(250,204,21,0.3);">
-              <div style="font-size:0.75rem; color:#FACC15; margin-bottom:0.25rem;">SWD-INV Share:</div>
-              <div style="font-size:1.5rem; font-weight:800; color:#fff;">5%</div>
-            </div>
-          </div>
-
-          <!-- Engine 4 -->
-          <div style="background:rgba(255,255,255,0.05); backdrop-filter:blur(10px); border:1px solid rgba(255,255,255,0.1); border-radius:1.25rem; padding:2rem 1.75rem;">
-            <div style="font-size:2rem; margin-bottom:1rem;">📊</div>
-            <h3 style="color:#FACC15; font-size:1.1rem; margin-bottom:0.75rem;">ENGINE 4<br>Workforce Management</h3>
-            <p style="font-size:0.88rem; color:rgba(255,255,255,0.7); line-height:1.7; margin-bottom:1.25rem;">
-              Revenue through workforce performance management, enterprise contracts, and upskilling across lifecycle.
-            </p>
-            <div style="background:rgba(250,204,21,0.1); border-radius:0.75rem; padding:1rem; border:1px solid rgba(250,204,21,0.3);">
-              <div style="font-size:0.75rem; color:#FACC15; margin-bottom:0.25rem;">SWD-INV Share:</div>
-              <div style="font-size:1.5rem; font-weight:800; color:#fff;">5%</div>
-            </div>
-          </div>
-        </div>
-
-        <div style="background:rgba(14,165,233,0.1); border:1px solid rgba(14,165,233,0.3); border-radius:1rem; padding:2rem; text-align:center;">
-          <p style="font-size:1rem; color:rgba(255,255,255,0.8); margin-bottom:0.5rem;">This creates:</p>
-          <p style="font-size:1.3rem; font-weight:700; color:#fff; line-height:1.6;">
-            <span style="color:#FACC15;">Recurring revenue</span> • 
-            <span style="color:#FACC15;">Scalable output</span> • 
-            <span style="color:#FACC15;">Infrastructure-level returns</span>
-          </p>
-          <p style="font-size:0.9rem; color:rgba(255,255,255,0.6); margin-top:1rem; font-style:italic;">
-            This is not linear income. This is <strong>compounded workforce value generation</strong>.
-          </p>
+  <!-- SECTION 06 — FIVE-DIVISION MODEL -->
+  <section class="wfd-portfolio wfd-portfolio--light" id="five-division-model" aria-labelledby="five-division-heading">
+    <div class="wfd-container">
+      <header class="wfd-section-header reveal">
+        <p class="wfd-section-eyebrow">Sector structure</p>
+        <h2 id="five-division-heading">The Five-Division Model</h2>
+        <p class="wfd-section-lead">Each sector comprises five equivalent divisions — each with identical structure, cohort volume, and operational requirements under WDDAM governance.</p>
+      </header>
+      <div class="wfd-division-equal-grid reveal" role="list" aria-label="Five equivalent divisions per sector">
+        <article class="wfd-division-equal" role="listitem">
+          <h3 class="wfd-division-equal__title">Division I</h3>
+          <ul class="wfd-division-equal__list">
+            <li>1 SWI Partner</li>
+            <li>10 SWD-INVs</li>
+            <li>20 WDS</li>
+            <li>50 Cohorts</li>
+            <li>1,000 Workforce capacity</li>
+            <li><strong>8.76B FCFA</strong> Development Engine</li>
+          </ul>
+        </article>
+        <article class="wfd-division-equal" role="listitem">
+          <h3 class="wfd-division-equal__title">Division II</h3>
+          <ul class="wfd-division-equal__list">
+            <li>1 SWI Partner</li>
+            <li>10 SWD-INVs</li>
+            <li>20 WDS</li>
+            <li>50 Cohorts</li>
+            <li>1,000 Workforce capacity</li>
+            <li><strong>8.76B FCFA</strong> Development Engine</li>
+          </ul>
+        </article>
+        <article class="wfd-division-equal" role="listitem">
+          <h3 class="wfd-division-equal__title">Division III</h3>
+          <ul class="wfd-division-equal__list">
+            <li>1 SWI Partner</li>
+            <li>10 SWD-INVs</li>
+            <li>20 WDS</li>
+            <li>50 Cohorts</li>
+            <li>1,000 Workforce capacity</li>
+            <li><strong>8.76B FCFA</strong> Development Engine</li>
+          </ul>
+        </article>
+        <article class="wfd-division-equal" role="listitem">
+          <h3 class="wfd-division-equal__title">Division IV</h3>
+          <ul class="wfd-division-equal__list">
+            <li>1 SWI Partner</li>
+            <li>10 SWD-INVs</li>
+            <li>20 WDS</li>
+            <li>50 Cohorts</li>
+            <li>1,000 Workforce capacity</li>
+            <li><strong>8.76B FCFA</strong> Development Engine</li>
+          </ul>
+        </article>
+        <article class="wfd-division-equal" role="listitem">
+          <h3 class="wfd-division-equal__title">Division V</h3>
+          <ul class="wfd-division-equal__list">
+            <li>1 SWI Partner</li>
+            <li>10 SWD-INVs</li>
+            <li>20 WDS</li>
+            <li>50 Cohorts</li>
+            <li>1,000 Workforce capacity</li>
+            <li><strong>8.76B FCFA</strong> Development Engine</li>
+          </ul>
+        </article>
+      </div>
+      <div class="wfd-sector-totals reveal">
+        <div class="wfd-sector-totals__grid">
+          <div><span class="wfd-sector-totals__val">5</span><span class="wfd-sector-totals__key">SWI Partners</span></div>
+          <div><span class="wfd-sector-totals__val">50</span><span class="wfd-sector-totals__key">SWD-INVs</span></div>
+          <div><span class="wfd-sector-totals__val">100</span><span class="wfd-sector-totals__key">WDS</span></div>
+          <div><span class="wfd-sector-totals__val">250</span><span class="wfd-sector-totals__key">Cohorts</span></div>
+          <div><span class="wfd-sector-totals__val">5,000</span><span class="wfd-sector-totals__key">Workforce capacity</span></div>
+          <div class="wfd-sector-totals__highlight"><span class="wfd-sector-totals__val">43.8B</span><span class="wfd-sector-totals__key">FCFA · per sector</span></div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="roi-calculator">
-      <h2>ROI Calculator: Infrastructure-Class Returns</h2>
-      <p class="lead">
-        SWD-INV returns are calculated on the <strong>Workforce Development engine</strong> alone (the most predictable of the four engines). Additional revenue from Deployment, Acquisition, and Management engines creates upside beyond the base calculation shown here.
-      </p>
-      <div style="background:linear-gradient(135deg,#F9FAFB,#F3F4F6); border-radius:1.5rem; padding:3rem 2.5rem; margin-top:2rem;">
-        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:2rem; margin-bottom:2.5rem;">
-          <div>
-            <div style="font-size:0.8rem; color:#6B7280; text-transform:uppercase; letter-spacing:0.1em; margin-bottom:0.5rem;">Investment</div>
-            <div style="font-size:2.2rem; font-weight:900; color:#111827;">$18,000</div>
-            <div style="font-size:0.85rem; color:#9CA3AF; margin-top:0.25rem;">USD (Entry Capital)</div>
-          </div>
-          <div>
-            <div style="font-size:0.8rem; color:#6B7280; text-transform:uppercase; letter-spacing:0.1em; margin-bottom:0.5rem;">Portfolio Value</div>
-            <div style="font-size:2.2rem; font-weight:900; color:#111827;">$1,391,650</div>
-            <div style="font-size:0.85rem; color:#9CA3AF; margin-top:0.25rem;">2 Cohorts × 50 Workforce</div>
-          </div>
-          <div>
-            <div style="font-size:0.8rem; color:#6B7280; text-transform:uppercase; letter-spacing:0.1em; margin-bottom:0.5rem;">Revenue Share</div>
-            <div style="font-size:2.2rem; font-weight:900; color:#111827;">5%</div>
-            <div style="font-size:0.85rem; color:#9CA3AF; margin-top:0.25rem;">Across All Engines</div>
-          </div>
+  <!-- SECTION 07 — GLOBAL PORTFOLIO -->
+  <section class="wfd-portfolio wfd-portfolio--navy" id="global-portfolio" aria-labelledby="global-portfolio-heading">
+    <div class="wfd-container">
+      <header class="wfd-section-header reveal">
+        <p class="wfd-section-eyebrow wfd-section-eyebrow--light">Global portfolio</p>
+        <h2 id="global-portfolio-heading">Sovereign-Scale Workforce Infrastructure</h2>
+        <p class="wfd-section-lead wfd-section-lead--light">The complete WDDAM portfolio architecture — 26 sectors, 130 divisions, and 130,000 governed workforce capacity operating as institutional infrastructure.</p>
+      </header>
+      <div class="wfd-global-layout reveal">
+        <div class="wfd-global-map" aria-hidden="true">
+          <svg viewBox="0 0 800 360" class="wfd-map-svg" role="img" aria-label="Global workforce infrastructure map showing 26 sector nodes">
+            <rect width="800" height="360" fill="rgba(255,255,255,0.02)" rx="12"/>
+            <g fill="rgba(14,165,233,0.35)" stroke="rgba(14,165,233,0.6)" stroke-width="1">
+              <circle cx="120" cy="140" r="4"/><circle cx="180" cy="120" r="4"/><circle cx="240" cy="100" r="4"/>
+              <circle cx="320" cy="90" r="5"/><circle cx="400" cy="110" r="4"/><circle cx="480" cy="95" r="4"/>
+              <circle cx="560" cy="120" r="4"/><circle cx="640" cy="140" r="5"/><circle cx="700" cy="160" r="4"/>
+              <circle cx="150" cy="200" r="4"/><circle cx="220" cy="180" r="4"/><circle cx="300" cy="170" r="5"/>
+              <circle cx="380" cy="165" r="4"/><circle cx="460" cy="175" r="4"/><circle cx="540" cy="190" r="4"/>
+              <circle cx="620" cy="210" r="4"/><circle cx="680" cy="230" r="4"/><circle cx="100" cy="260" r="4"/>
+              <circle cx="200" cy="250" r="4"/><circle cx="350" cy="240" r="5"/><circle cx="500" cy="255" r="4"/>
+              <circle cx="600" cy="270" r="4"/><circle cx="720" cy="280" r="4"/><circle cx="400" cy="280" r="6"/>
+              <circle cx="250" cy="300" r="4"/><circle cx="550" cy="300" r="4"/>
+            </g>
+            <text x="400" y="40" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-size="11" letter-spacing="0.2em">26 SECTORS · GLOBAL DEPLOYMENT ARCHITECTURE</text>
+          </svg>
         </div>
-
-        <div style="background:#fff; border-radius:1rem; padding:2rem; border:2px solid #FACC15; box-shadow:0 10px 40px rgba(250,204,21,0.2);">
-          <div style="text-align:center; margin-bottom:1.5rem;">
-            <div style="font-size:0.85rem; color:#78350F; margin-bottom:0.5rem; font-weight:600;">Total ROI (Development Engine Only)</div>
-            <div style="font-size:3.5rem; font-weight:900; color:#111827; line-height:1;">$69,582.50</div>
-            <div style="font-size:0.9rem; color:#78350F; margin-top:0.75rem;">Paid over 3 years • Commencing Year 2 post-investment</div>
-          </div>
-          <hr style="border:none; border-top:1px solid #E5E7EB; margin:1.5rem 0;">
-          <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:1.5rem; text-align:center;">
-            <div>
-              <div style="font-size:0.75rem; color:#6B7280; margin-bottom:0.5rem;">Year 1</div>
-              <div style="font-size:1.3rem; font-weight:700; color:#111827;">$0</div>
-              <div style="font-size:0.75rem; color:#9CA3AF;">(Development phase)</div>
-            </div>
-            <div>
-              <div style="font-size:0.75rem; color:#6B7280; margin-bottom:0.5rem;">Years 2-4</div>
-              <div style="font-size:1.3rem; font-weight:700; color:#111827;">$23,194.17</div>
-              <div style="font-size:0.75rem; color:#9CA3AF;">/year</div>
-            </div>
-            <div>
-              <div style="font-size:0.75rem; color:#6B7280; margin-bottom:0.5rem;">Total Return</div>
-              <div style="font-size:1.3rem; font-weight:700; color:#FACC15;">386.6%</div>
-              <div style="font-size:0.75rem; color:#9CA3AF;">over 4 years</div>
-            </div>
-          </div>
-        </div>
-
-        <div style="margin-top:2rem; padding:1.5rem; background:rgba(59,130,246,0.08); border-radius:0.875rem; border:1px solid rgba(59,130,246,0.2);">
-          <p style="font-size:0.9rem; color:#1E3A8A; line-height:1.7; margin:0;">
-            <strong>⚡ Important:</strong> This calculation shows <strong>only the Development engine</strong> (the foundational and most predictable revenue stream). Additional returns from <strong>Deployment, Acquisition, and Management engines</strong> create substantial upside beyond this base ROI. These engines activate as workforce enters operational cycles, creating compounded long-term value.
-          </p>
-        </div>
+        <table class="wfd-global-table">
+          <caption class="visually-hidden">Global portfolio totals</caption>
+          <tbody>
+            <tr><th scope="row">Sectors</th><td>26</td></tr>
+            <tr><th scope="row">Divisions</th><td>130</td></tr>
+            <tr><th scope="row">SWI Partners</th><td>130</td></tr>
+            <tr><th scope="row">SWD-INVs</th><td>1,300</td></tr>
+            <tr><th scope="row">WDS</th><td>2,600</td></tr>
+            <tr><th scope="row">Cohorts</th><td>6,500</td></tr>
+            <tr><th scope="row">Workforce capacity</th><td>130,000</td></tr>
+            <tr class="wfd-global-table__total"><th scope="row">Development Engine value</th><td><strong>1,138,800,000,000 FCFA</strong></td></tr>
+          </tbody>
+        </table>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="strategic-advantages" style="margin-top:4rem;">
-      <h2>Strategic Advantages of Workforce Infrastructure Investment</h2>
-      <div class="grid-3">
-        <div class="card">
-          <h3>🏗️ Infrastructure-Class Asset</h3>
-          <p>
-            Linked to <strong>real economic activity</strong>, not speculative markets. Demand-driven, non-cyclical, and anchored in perpetual workforce requirements across industries.
-          </p>
+  <!-- SECTION 08 — SWI PARTNERS -->
+  <section class="wfd-roles" id="swi-partners" aria-labelledby="swi-heading">
+    <div class="wfd-container">
+      <header class="wfd-section-header reveal">
+        <p class="wfd-section-eyebrow">Executive layer</p>
+        <h2 id="swi-heading">Strategic Workforce Infrastructure Partners</h2>
+        <p class="wfd-section-lead">Executive-level institutional participants operating as the senior governance and stewardship layer across divisional workforce infrastructure portfolios.</p>
+      </header>
+      <article class="wfd-role-card wfd-role-card--swi reveal">
+        <div class="wfd-role-card__badge">SWI Partner</div>
+        <h3>Executive Workforce Infrastructure Leadership</h3>
+        <p class="wfd-role-def"><strong>Strategic Workforce Infrastructure Partner</strong> — not a recruiter, broker, or sales representative. An institutional steward of governed workforce capacity.</p>
+        <div class="wfd-role-grid">
+          <div><h4>Governance</h4><ul><li>Divisional oversight and portfolio protection</li><li>Reporting and escalation coordination</li><li>Compliance and conduct standards</li></ul></div>
+          <div><h4>Institutional stewardship</h4><ul><li>Executive and institutional relationship continuity</li><li>Strategic ecosystem development</li><li>Operational continuity oversight</li></ul></div>
+          <div><h4>Expansion oversight</h4><ul><li>Workforce infrastructure expansion leadership</li><li>Portfolio coordination across SWD-INV and WDS layers</li><li>Strategic consultation and governance activation</li></ul></div>
         </div>
-        <div class="card">
-          <h3>🎯 Sector-Level Control</h3>
-          <p>
-            Defined industry focus with structured scalability. Clear enterprise alignment and strategic positioning within specific markets.
-          </p>
-        </div>
-        <div class="card">
-          <h3>🔄 Multi-Revenue Model</h3>
-          <p>
-            Four independent revenue engines that reinforce and compound value cycles. Same asset generates multiple revenue streams across its lifecycle.
-          </p>
-        </div>
-        <div class="card">
-          <h3>📈 Long-Term Relevance</h3>
-          <p>
-            Workforce demand is <strong>perpetual</strong>. Industry evolution requires continuous capacity. Infrastructure remains relevant across economic cycles.
-          </p>
-        </div>
-        <div class="card">
-          <h3>⚙️ Operational Scalability</h3>
-          <p>
-            WDS execution layer handles operational deployment. Investor focuses on strategic oversight, not day-to-day management.
-          </p>
-        </div>
-        <div class="card">
-          <h3>🌍 Global Platform Integration</h3>
-          <p>
-            Built on <strong>OEDP Work Network</strong> — established infrastructure trusted by enterprises for workforce capacity at scale.
-          </p>
-        </div>
-      </div>
-    </section>
+      </article>
+    </div>
+  </section>
 
-    <section id="sectors">
-      <h2>26 Industry Sectors • Global Infrastructure Coverage</h2>
-      <p class="lead">
-        The SWD-INV model spans 26 industry sectors — creating a diversified, sector-aligned infrastructure investment framework anchored in real workforce demand across the global economy.
-      </p>
-      <div class="grid-3">
-        <div class="card">
-          <h3>Technology &amp; Infrastructure</h3>
-          <div class="pill-row">
-            <span class="pill">IT &amp; Cybersecurity</span>
-            <span class="pill">Telecommunications</span>
-            <span class="pill">Web &amp; Software Engineering</span>
-            <span class="pill">EdTech</span>
-            <span class="pill">Cloud & DevOps</span>
-          </div>
-        </div>
-        <div class="card">
-          <h3>Industry &amp; Production</h3>
-          <div class="pill-row">
-            <span class="pill">Manufacturing &amp; Industrial</span>
-            <span class="pill">Automotive Technology</span>
-            <span class="pill">Construction &amp; Infrastructure</span>
-            <span class="pill">Energy &amp; Renewable Systems</span>
-            <span class="pill">Agricultural Technology</span>
-          </div>
-        </div>
-        <div class="card">
-          <h3>Services &amp; Public Systems</h3>
-          <div class="pill-row">
-            <span class="pill">Healthcare & Medical</span>
-            <span class="pill">Finance &amp; Accounting</span>
-            <span class="pill">Business &amp; Management</span>
-            <span class="pill">Government &amp; Civic Tech</span>
-            <span class="pill">Public Safety &amp; Emergency</span>
-            <span class="pill">Legal & Compliance</span>
-          </div>
-        </div>
-        <div class="card">
-          <h3>Innovation &amp; Future Skills</h3>
-          <div class="pill-row">
-            <span class="pill">Research &amp; Development</span>
-            <span class="pill">Biotech &amp; Life Sciences</span>
-            <span class="pill">Aerospace &amp; Defense</span>
-            <span class="pill">Transportation &amp; Logistics</span>
-            <span class="pill">Data Science & AI</span>
-          </div>
-        </div>
-        <div class="card">
-          <h3>Creative &amp; Digital Economies</h3>
-          <div class="pill-row">
-            <span class="pill">Creative Arts</span>
-            <span class="pill">Digital Design &amp; UX</span>
-            <span class="pill">Media &amp; Content</span>
-            <span class="pill">Marketing & Communications</span>
-          </div>
-        </div>
-        <div class="card">
-          <h3>Emerging Markets</h3>
-          <div class="pill-row">
-            <span class="pill">Smart Cities</span>
-            <span class="pill">Sustainability</span>
-            <span class="pill">Quantum Computing</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="enterprise">
-      <h2>Enterprise Alignment: How This Connects to Organizations</h2>
-      <p class="lead">
-        The SWD-INV infrastructure model is designed to integrate seamlessly with enterprise workforce needs. Organizations can engage through acquisition, sponsorship, or strategic partnership frameworks.
-      </p>
-      <div class="highlight-box" style="background:linear-gradient(135deg,#EFF6FF,#DBEAFE); color:#111827; border:2px solid #3B82F6;">
-        <h3 style="color:#1E3A8A; margin-bottom:1rem;">🏢 Enterprise Workforce Infrastructure Portal</h3>
-        <p style="margin-bottom:1rem; line-height:1.7;">
-          For organizations, governments, and enterprises seeking structured workforce capacity at scale — explore our dedicated <strong>B2B Workforce Infrastructure platform</strong> which provides:
-        </p>
-        <ul style="line-height:1.9; margin-bottom:1.5rem;">
-          <li>Pre-trained workforce cohort acquisition</li>
-          <li>Custom Level 1–5 pathway development for your industry</li>
-          <li>Turnkey talent pipeline solutions</li>
-          <li>Long-term workforce management contracts</li>
+  <!-- SECTION 09 — SWD-INV -->
+  <section class="wfd-roles wfd-roles--alt" id="swd-inv-structure" aria-labelledby="swd-inv-heading">
+    <div class="wfd-container">
+      <header class="wfd-section-header reveal">
+        <p class="wfd-section-eyebrow">Expansion layer</p>
+        <h2 id="swd-inv-heading">SWD-INV Structure</h2>
+        <p class="wfd-section-lead">Strategic Workforce Development Infrastructure Participants coordinate workforce expansion, portfolio structuring, and institutional alignment — governed operational participation, not passive investment.</p>
+      </header>
+      <article class="wfd-role-card reveal">
+        <div class="wfd-role-card__badge wfd-role-card__badge--swd">SWD-INV</div>
+        <h3>Strategic Workforce Development Infrastructure Participant</h3>
+        <p class="wfd-role-not">This role is <strong>not an investor</strong>. SWD-INV denotes governed infrastructure participation and operational coordination within the WDDAM architecture.</p>
+        <ul class="wfd-role-list">
+          <li>Workforce capacity scaling and expansion operations</li>
+          <li>Portfolio structuring and institutional coordination</li>
+          <li>Deployment continuity and workforce pipeline development</li>
+          <li>Institutional alignment and sector expansion support</li>
         </ul>
-        <a href="workforce-infrastructure.html" class="button" style="background:linear-gradient(135deg,#054ada,#0ea5e9); color:#fff; display:inline-block;">
-          View Enterprise Workforce Infrastructure →
-        </a>
-      </div>
-    </section>
+      </article>
+    </div>
+  </section>
 
-    <section id="blueprint">
-      <h2>The Workforce Development Blueprint: 5 Core Dimensions</h2>
-      <p class="lead">
-        Every workforce cohort is built across five interconnected dimensions that align individuals and organizations to global best practices, creating workforce that performs at international standards.
-      </p>
-      <div class="grid-3">
-        <div class="card">
-          <h3>1. Standardization &amp; Professional Development</h3>
-          <p>
-            Unified competency frameworks that align individuals and organizations to global best practices, vendor certifications, and regulated standards.
-          </p>
-        </div>
-        <div class="card">
-          <h3>2. Leadership &amp; Customer Service</h3>
-          <p>
-            Leadership, customer success, service quality, and soft-skills portfolios embedded into every industry pathway — preparing workforce for supervisory and client-facing roles.
-          </p>
-        </div>
-        <div class="card">
-          <h3>3. Entrepreneurship &amp; Finance</h3>
-          <p>
-            Programs that equip talent to build ventures, manage budgets, understand ROI, and integrate financial literacy into daily business decisions.
-          </p>
-        </div>
-        <div class="card">
-          <h3>4. Interoperability &amp; Inclusion</h3>
-          <p>
-            Pathways that work across borders, technologies, and regulatory environments — designed to include diverse learners and enterprise realities.
-          </p>
-        </div>
-        <div class="card">
-          <h3>5. The OEDP Work Network</h3>
-          <p>
-            Every professional becomes integrated into the <strong>OEDP Work Network</strong> — the platform that enterprises rely on for workforce capacity, operations, and development at scale.
-          </p>
+  <!-- SECTION 10 — WDS -->
+  <section class="wfd-roles" id="wds-structure" aria-labelledby="wds-heading">
+    <div class="wfd-container">
+      <header class="wfd-section-header reveal">
+        <p class="wfd-section-eyebrow">Operational layer</p>
+        <h2 id="wds-heading">Workforce Development Structure</h2>
+        <p class="wfd-section-lead">WDS structures execute workforce production, cohort operations, deployment readiness, and performance supervision at the operational continuity layer.</p>
+      </header>
+      <article class="wfd-role-card reveal">
+        <div class="wfd-role-card__badge wfd-role-card__badge--wds">WDS</div>
+        <h3>Workforce Development Structure</h3>
+        <ul class="wfd-role-list wfd-role-list--cols">
+          <li>Cohort operations and production standards</li>
+          <li>Deployment readiness verification</li>
+          <li>Workforce continuity and performance management</li>
+          <li>Deployment preparation and operational reporting</li>
+          <li>Certification alignment and governance registration</li>
+          <li>Escalation to SWD-INV and SWI governance layers</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- SECTION 11 — COHORT ARCHITECTURE -->
+  <section class="wfd-cohort" id="cohort-architecture" aria-labelledby="cohort-heading">
+    <div class="wfd-container">
+      <header class="wfd-section-header reveal">
+        <p class="wfd-section-eyebrow">Production unit</p>
+        <h2 id="cohort-heading">50-Capacity Cohort Architecture</h2>
+        <p class="wfd-section-lead">The cohort is the foundational workforce production and deployment unit — structured across Level&nbsp;1–5 pathways with governed deployment readiness and institutional documentation.</p>
+      </header>
+      <div class="wfd-cohort-summary reveal">
+        <div class="wfd-cohort-summary__stat"><span class="wfd-cohort-summary__val">50</span><span class="wfd-cohort-summary__key">Workforce capacity per cohort</span></div>
+        <div class="wfd-cohort-summary__stat wfd-cohort-summary__stat--highlight"><span class="wfd-cohort-summary__val">438M</span><span class="wfd-cohort-summary__key">FCFA · cohort Development Engine value</span></div>
+      </div>
+      <div class="wfd-table-wrap reveal">
+        <table class="wfd-data-table">
+          <thead>
+            <tr><th scope="col">Level</th><th scope="col">Positioning</th><th scope="col">Unit value (FCFA)</th><th scope="col">Capacity</th><th scope="col">Level total</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>L1</td><td>Foundation workforce capacity</td><td>4,500,000</td><td>20</td><td>90,000,000</td></tr>
+            <tr><td>L2</td><td>Specialist workforce capacity</td><td>6,700,000</td><td>10</td><td>67,000,000</td></tr>
+            <tr><td>L3</td><td>Senior specialist capacity</td><td>9,000,000</td><td>8</td><td>72,000,000</td></tr>
+            <tr><td>L4</td><td>Principal workforce capacity</td><td>12,500,000</td><td>7</td><td>87,500,000</td></tr>
+            <tr><td>L5</td><td>Executive / director capacity</td><td>15,000,000</td><td>5</td><td>75,000,000</td></tr>
+            <tr class="wfd-data-table__total"><td colspan="4"><strong>Total cohort value</strong></td><td><strong>438,000,000 FCFA</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 12 — FOUR ENGINES -->
+  <section class="wfd-engines" id="four-engines" aria-labelledby="engines-heading">
+    <div class="wfd-container">
+      <header class="wfd-section-header reveal">
+        <p class="wfd-section-eyebrow">Workforce infrastructure economics</p>
+        <h2 id="engines-heading">Four Workforce Infrastructure Engines</h2>
+        <p class="wfd-section-lead">The same workforce asset generates governed economic continuity across four integrated engines — recurring workforce infrastructure economics, not linear transactional revenue.</p>
+      </header>
+      <div class="wfd-engines-grid reveal">
+        <article class="wfd-engine-card"><span class="wfd-engine-card__num">01</span><h3>Development</h3><p>Workforce production economics — certification pathways, cohort structuring, and operational readiness formation.</p></article>
+        <article class="wfd-engine-card"><span class="wfd-engine-card__num">02</span><h3>Deployment</h3><p>Operational continuity economics — workforce placement, institutional contracts, and deployment retention systems.</p></article>
+        <article class="wfd-engine-card"><span class="wfd-engine-card__num">03</span><h3>Acquisition</h3><p>Institutional transfer economics — governed workforce acquisition, deployment rights, and continuity agreements.</p></article>
+        <article class="wfd-engine-card"><span class="wfd-engine-card__num">04</span><h3>Governance</h3><p>Lifecycle oversight economics — performance supervision, compliance reporting, and long-horizon continuity governance.</p></article>
+      </div>
+      <p class="wfd-engines-note reveal">Economics are framed as <strong>Governed Operational Revenue Participation</strong> within workforce infrastructure operations — subject to execution, governance, continuity, deployment, and operational performance.</p>
+    </div>
+  </section>
+
+  <!-- SECTION 13 — GOVERNANCE -->
+  <section class="wfd-governance" id="governance-architecture" aria-labelledby="governance-heading">
+    <div class="wfd-container">
+      <header class="wfd-section-header reveal">
+        <p class="wfd-section-eyebrow">Governance architecture</p>
+        <h2 id="governance-heading">WDDAM Governance Framework</h2>
+        <p class="wfd-section-lead">All workforce operations remain governed, traceable, and auditable — protecting institutional continuity, deployment quality, and portfolio accountability.</p>
+      </header>
+      <div class="wfd-gov-grid reveal">
+        <article class="wfd-gov-card"><h3>Reporting structures</h3><p>WDS weekly operational reporting · SWD-INV monthly coordination · SWI quarterly portfolio oversight · executive strategic review cycles.</p></article>
+        <article class="wfd-gov-card"><h3>Escalation protocols</h3><p>Structured escalation from WDS operational intervention through SWD-INV coordination, SWI strategic escalation, to executive governance intervention.</p></article>
+        <article class="wfd-gov-card"><h3>Compliance &amp; audit readiness</h3><p>Documentation verification, identity validation, certification governance, and mandatory governance records at all operational levels.</p></article>
+        <article class="wfd-gov-card"><h3>Portfolio protection</h3><p>Divisional oversight, operational continuity standards, quality assurance controls, and deployment suspension authority where governance requires.</p></article>
+      </div>
+      <table class="wfd-gov-table reveal">
+        <thead><tr><th scope="col">Governance layer</th><th scope="col">Responsibility</th></tr></thead>
+        <tbody>
+          <tr><td>BTH Governance</td><td>Strategic oversight and institutional systems</td></tr>
+          <tr><td>SWI Partners</td><td>Institutional stewardship and divisional coordination</td></tr>
+          <tr><td>SWD-INV</td><td>Expansion operations and portfolio structuring</td></tr>
+          <tr><td>WDS</td><td>Workforce continuity and cohort operations</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- SECTION 14 — GORP -->
+  <section class="wfd-gorp" id="gorp-framework" aria-labelledby="gorp-heading">
+    <div class="wfd-container wfd-container--narrow">
+      <header class="wfd-section-header reveal">
+        <p class="wfd-section-eyebrow">Participation framework</p>
+        <h2 id="gorp-heading">Governed Operational Revenue Participation</h2>
+        <p class="wfd-section-lead">GORP defines governed operational participation within workforce infrastructure operations — distinct from passive investment, guaranteed returns, or securities issuance.</p>
+      </header>
+      <div class="wfd-gorp-body reveal">
+        <p>Operational participation is structured across SWI, SWD-INV, and WDS layers within divisional workforce infrastructure portfolios. Participation capacity aligns to governed operational frameworks documented in the GORP Framework Agreement and Master Operational Participation Agreement.</p>
+        <ul class="wfd-gorp-list">
+          <li>Participation depends upon operational execution and governance adherence</li>
+          <li>Economics vary with deployment continuity and institutional performance</li>
+          <li>No guaranteed returns, passive income, or investor-return framing applies</li>
+          <li>All participation operates under institutional conduct and confidentiality standards</li>
+        </ul>
+        <p class="wfd-gorp-disclaimer"><strong>Institutional notice:</strong> Workforce infrastructure economics are governed operational frameworks subject to performance, continuity, and compliance conditions. This portal provides architectural orientation only — not an offer, guarantee, or securities solicitation.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 15 — DOCUMENTATION CENTER -->
+  <section class="wfd-docs" id="documentation-center" aria-labelledby="docs-heading">
+    <div class="wfd-container">
+      <header class="wfd-section-header wfd-section-header--center reveal">
+        <p class="wfd-section-eyebrow">Documentation center</p>
+        <h2 id="docs-heading">Workforce Infrastructure Documents</h2>
+        <p class="wfd-section-lead">Documents are provided as Microsoft Word (`.docx`) files — the authoritative source format from the institutional document library.</p>
+      </header>
+      <div class="wfd-docs-filter reveal" role="group" aria-label="Filter documents by pathway">
+        <button type="button" class="wfd-docs-chip is-active" data-doc-filter="all">All documents</button>
+        <button type="button" class="wfd-docs-chip" data-doc-filter="executive">Executive</button>
+        <button type="button" class="wfd-docs-chip" data-doc-filter="swi">SWI Partner</button>
+        <button type="button" class="wfd-docs-chip" data-doc-filter="swd-inv">SWD-INV</button>
+        <button type="button" class="wfd-docs-chip" data-doc-filter="wds">WDS</button>
+        <button type="button" class="wfd-docs-chip" data-doc-filter="institutional">Institutional</button>
+        <button type="button" class="wfd-docs-chip" data-doc-filter="government">Government</button>
+        <button type="button" class="wfd-docs-chip" data-doc-filter="multilateral">Multilateral</button>
+      </div>
+      <div class="wfd-docs-grid reveal" id="wfd-docs-grid">
+        <article class="wfd-doc-card" data-audience="executive swi institutional government multilateral">
+          <span class="wfd-doc-card__num">01</span>
+          <h3>Executive Invitation Note</h3>
+          <p class="wfd-doc-card__purpose">High-level institutional invitation to secure executive interest and briefing meetings.</p>
+          <p class="wfd-doc-card__meta"><strong>Audience:</strong> Executives · institutional directors · sovereign networks</p>
+          <a href="assets/docs/workforce-deployment/01-executive-invitation-note.docx" class="btn btn-primary wfd-doc-dl" download>Download document</a>
+        </article>
+        <article class="wfd-doc-card" data-audience="executive swi swd-inv institutional government multilateral">
+          <span class="wfd-doc-card__num">02</span>
+          <h3>Strategic Workforce Infrastructure Partner Brief</h3>
+          <p class="wfd-doc-card__purpose">Master briefing on workforce infrastructure thesis, WDDAM doctrine, and governance architecture.</p>
+          <p class="wfd-doc-card__meta"><strong>Audience:</strong> SWI prospects · strategic committees · expansion decision-makers</p>
+          <a href="assets/docs/workforce-deployment/02-swi-partner-brief.docx" class="btn btn-primary wfd-doc-dl" download>Download document</a>
+        </article>
+        <article class="wfd-doc-card" data-audience="executive swi swd-inv institutional government multilateral">
+          <span class="wfd-doc-card__num">03</span>
+          <h3>Legal &amp; Governance Memorandum</h3>
+          <p class="wfd-doc-card__purpose">Legal clarity, governance credibility, and compliance seriousness for institutional evaluation.</p>
+          <p class="wfd-doc-card__meta"><strong>Audience:</strong> Legal teams · compliance · governance personnel</p>
+          <a href="assets/docs/workforce-deployment/03-legal-governance-memorandum.docx" class="btn btn-primary wfd-doc-dl" download>Download document</a>
+        </article>
+        <article class="wfd-doc-card" data-audience="executive swi swd-inv institutional government multilateral">
+          <span class="wfd-doc-card__num">04</span>
+          <h3>Institutional Presentation Deck</h3>
+          <p class="wfd-doc-card__purpose">Executive visual presentation for strategic briefings, forums, and institutional consultations.</p>
+          <p class="wfd-doc-card__meta"><strong>Audience:</strong> Executives · institutional audiences · strategic forums</p>
+          <a href="assets/docs/workforce-deployment/04-institutional-presentation-deck.docx" class="btn btn-primary wfd-doc-dl" download>Download document</a>
+        </article>
+        <article class="wfd-doc-card" data-audience="executive swi swd-inv institutional government">
+          <span class="wfd-doc-card__num">05</span>
+          <h3>Portfolio Economics Appendix</h3>
+          <p class="wfd-doc-card__purpose">Analytical appendix — cohort, division, sector, and portfolio workforce infrastructure economics.</p>
+          <p class="wfd-doc-card__meta"><strong>Audience:</strong> Finance executives · analysts · institutional reviewers</p>
+          <a href="assets/docs/workforce-deployment/05-portfolio-economics-appendix.docx" class="btn btn-primary wfd-doc-dl" download>Download document</a>
+        </article>
+        <article class="wfd-doc-card" data-audience="swi swd-inv wds">
+          <span class="wfd-doc-card__num">06</span>
+          <h3>Deployment &amp; Workforce Operations Manual</h3>
+          <p class="wfd-doc-card__purpose">Operational doctrine — deployment standards, governance operations, reporting, and escalation.</p>
+          <p class="wfd-doc-card__meta"><strong>Audience:</strong> SWI · SWD-INV · WDS · deployment coordinators</p>
+          <a href="assets/docs/workforce-deployment/06-deployment-operations-manual.docx" class="btn btn-primary wfd-doc-dl" download>Download document</a>
+        </article>
+        <article class="wfd-doc-card" data-audience="executive swi swd-inv institutional government multilateral">
+          <span class="wfd-doc-card__num">07</span>
+          <h3>Executive FAQ Memorandum</h3>
+          <p class="wfd-doc-card__purpose">Executive clarification on governance, economics, and operational misconceptions.</p>
+          <p class="wfd-doc-card__meta"><strong>Audience:</strong> Executives · institutional reviewers · legal reviewers</p>
+          <a href="assets/docs/workforce-deployment/07-executive-faq-memorandum.docx" class="btn btn-primary wfd-doc-dl" download>Download document</a>
+        </article>
+        <article class="wfd-doc-card" data-audience="executive swi swd-inv wds institutional government multilateral">
+          <span class="wfd-doc-card__num">08</span>
+          <h3>Institutional NDA Package</h3>
+          <p class="wfd-doc-card__purpose">Confidentiality framework protecting governance systems, economics, and strategic operations.</p>
+          <p class="wfd-doc-card__meta"><strong>Audience:</strong> Advanced-stage participants · legal teams</p>
+          <a href="assets/docs/workforce-deployment/08-institutional-nda-package.docx" class="btn btn-primary wfd-doc-dl" download>Download document</a>
+        </article>
+        <article class="wfd-doc-card" data-audience="swi">
+          <span class="wfd-doc-card__num">09</span>
+          <h3>Strategic Partner Onboarding Manual</h3>
+          <p class="wfd-doc-card__purpose">Official SWI Partner onboarding, governance, reporting, and stewardship responsibilities.</p>
+          <p class="wfd-doc-card__meta"><strong>Audience:</strong> Confirmed SWI Partners · governance teams</p>
+          <a href="assets/docs/workforce-deployment/09-swi-onboarding-manual.docx" class="btn btn-primary wfd-doc-dl" download>Download document</a>
+        </article>
+        <article class="wfd-doc-card" data-audience="executive swi institutional government multilateral">
+          <span class="wfd-doc-card__num">10</span>
+          <h3>Sovereign Workforce Infrastructure Whitepaper</h3>
+          <p class="wfd-doc-card__purpose">Macroeconomic doctrine and sovereign workforce infrastructure thought leadership.</p>
+          <p class="wfd-doc-card__meta"><strong>Audience:</strong> Governments · multilateral institutions · policy groups</p>
+          <a href="assets/docs/workforce-deployment/10-sovereign-whitepaper.docx" class="btn btn-primary wfd-doc-dl" download>Download document</a>
+        </article>
+        <article class="wfd-doc-card" data-audience="swi swd-inv wds institutional">
+          <span class="wfd-doc-card__num">11</span>
+          <h3>Governed Operational Revenue Participation Framework Agreement</h3>
+          <p class="wfd-doc-card__purpose">Master GORP instrument defining governed operational participation across infrastructure layers.</p>
+          <p class="wfd-doc-card__meta"><strong>Audience:</strong> SWI · SWD-INV · WDS · institutional participants</p>
+          <a href="assets/docs/workforce-deployment/11-gorp-framework-agreement.docx" class="btn btn-primary wfd-doc-dl" download>Download document</a>
+        </article>
+        <article class="wfd-doc-card" data-audience="swi swd-inv wds institutional">
+          <span class="wfd-doc-card__num">12</span>
+          <h3>Master Operational Participation Agreement</h3>
+          <p class="wfd-doc-card__purpose">Master operational participation architecture governing divisional workforce infrastructure engagement.</p>
+          <p class="wfd-doc-card__meta"><strong>Audience:</strong> SWI · SWD-INV · WDS · legal review teams</p>
+          <a href="assets/docs/workforce-deployment/12-master-operational-participation-agreement.docx" class="btn btn-primary wfd-doc-dl" download>Download document</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 16 — INSTITUTIONAL LEGITIMACY -->
+  <section class="wfd-legitimacy" id="institutional-legitimacy" aria-labelledby="legitimacy-heading">
+    <div class="wfd-container">
+      <header class="wfd-section-header reveal">
+        <p class="wfd-section-eyebrow">Certification infrastructure ecosystem</p>
+        <h2 id="legitimacy-heading">Institutional Legitimacy &amp; Standards Alignment</h2>
+        <p class="wfd-section-lead">Workforce infrastructure operates within a global certification ecosystem — aligned to vendor credential infrastructure and ISO-oriented personnel certification frameworks. Not endorsement claims.</p>
+      </header>
+      <div class="wfd-legitimacy-grid reveal">
+        <div class="wfd-legitimacy-item"><span class="wfd-legitimacy-item__name">Pearson VUE</span><span class="wfd-legitimacy-item__desc">Authorized exam delivery infrastructure</span></div>
+        <div class="wfd-legitimacy-item"><span class="wfd-legitimacy-item__name">CompTIA</span><span class="wfd-legitimacy-item__desc">Professional workforce credential pathways</span></div>
+        <div class="wfd-legitimacy-item"><span class="wfd-legitimacy-item__name">EC-Council</span><span class="wfd-legitimacy-item__desc">Cyber workforce certification alignment</span></div>
+        <div class="wfd-legitimacy-item"><span class="wfd-legitimacy-item__name">ETA International</span><span class="wfd-legitimacy-item__desc">Technical workforce validation standards</span></div>
+        <div class="wfd-legitimacy-item"><span class="wfd-legitimacy-item__name">OEDP Work Network</span><span class="wfd-legitimacy-item__desc">Deployment coordination infrastructure</span></div>
+        <div class="wfd-legitimacy-item"><span class="wfd-legitimacy-item__name">ISO-Aligned Structures</span><span class="wfd-legitimacy-item__desc">Personnel certification framework alignment</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 17 — PARTICIPATION PATHWAYS -->
+  <section class="wfd-pathways" id="participation-pathways" aria-labelledby="pathways-heading">
+    <div class="wfd-container">
+      <header class="wfd-section-header reveal">
+        <p class="wfd-section-eyebrow">Institutional onboarding</p>
+        <h2 id="pathways-heading">Participation Pathways</h2>
+        <p class="wfd-section-lead">Governed pathways for institutional engagement across executive, operational, and sovereign mandates.</p>
+      </header>
+      <div class="wfd-pathways-grid reveal">
+        <article class="wfd-pathway-card"><h3>Executive Pathway</h3><p>Strategic briefing, institutional evaluation, and governance discussion for senior decision-makers.</p><a href="workforce-engage.html?intent=briefing">Request briefing →</a></article>
+        <article class="wfd-pathway-card"><h3>SWI Partner Pathway</h3><p>Executive stewardship layer — divisional governance, portfolio coordination, and ecosystem development.</p><a href="#documentation-center" data-doc-filter-trigger="swi">SWI documents →</a></article>
+        <article class="wfd-pathway-card"><h3>SWD-INV Pathway</h3><p>Expansion and portfolio structuring — workforce capacity scaling under governed operational participation.</p><a href="#documentation-center" data-doc-filter-trigger="swd-inv">SWD-INV documents →</a></article>
+        <article class="wfd-pathway-card"><h3>WDS Pathway</h3><p>Operational workforce development — cohort production, deployment readiness, and continuity supervision.</p><a href="#documentation-center" data-doc-filter-trigger="wds">WDS documents →</a></article>
+        <article class="wfd-pathway-card"><h3>Institutional Pathway</h3><p>Enterprise and institutional workforce infrastructure commissioning and acquisition frameworks.</p><a href="workforce-diligence.html">Institutional diligence →</a></article>
+        <article class="wfd-pathway-card"><h3>Government Pathway</h3><p>Sovereign workforce programmes, national capacity mandates, and procurement-grade infrastructure.</p><a href="#documentation-center" data-doc-filter-trigger="government">Government documents →</a></article>
+        <article class="wfd-pathway-card wfd-pathway-card--wide"><h3>Multilateral Pathway</h3><p>Programme-scale workforce mandates, continental competitiveness frameworks, and development-finance alignment.</p><a href="#documentation-center" data-doc-filter-trigger="multilateral">Multilateral documents →</a></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 18 — NATIONAL & CONTINENTAL IMPACT -->
+  <section class="wfd-impact" id="national-impact" aria-labelledby="impact-heading">
+    <div class="wfd-container">
+      <header class="wfd-section-header reveal">
+        <p class="wfd-section-eyebrow">National &amp; continental impact</p>
+        <h2 id="impact-heading">Workforce Infrastructure &amp; Economic Continuity</h2>
+        <p class="wfd-section-lead">Governed workforce infrastructure produces institutional and continental effects beyond workforce production alone.</p>
+      </header>
+      <div class="wfd-impact-grid reveal">
+        <article class="wfd-impact-card"><h3>Youth employment</h3><p>Structured workforce integration, long-horizon employability, and governed career continuity.</p></article>
+        <article class="wfd-impact-card"><h3>Industrial capacity</h3><p>Deployment-ready workforce supporting industrial expansion and operational productivity.</p></article>
+        <article class="wfd-impact-card"><h3>Workforce retention</h3><p>Continuity systems reducing replacement pressure and institutional workforce instability.</p></article>
+        <article class="wfd-impact-card"><h3>Productivity growth</h3><p>Reduced operational gaps and accelerated readiness across governed deployment systems.</p></article>
+        <article class="wfd-impact-card"><h3>Family economic stability</h3><p>Professional capacity pathways supporting sustained household economic continuity.</p></article>
+        <article class="wfd-impact-card"><h3>Continental competitiveness</h3><p>Sovereign workforce strengthening and industrial independence at scale.</p></article>
+        <article class="wfd-impact-card"><h3>Institutional capacity</h3><p>Auditable workforce governance supporting public and private institutional resilience.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 19 — EXECUTIVE BRIEFING -->
+  <section class="wfd-briefing" id="executive-briefing" aria-labelledby="briefing-heading">
+    <div class="wfd-container wfd-briefing-inner reveal">
+      <div class="wfd-briefing-copy">
+        <p class="wfd-section-eyebrow wfd-section-eyebrow--light">Executive briefing</p>
+        <h2 id="briefing-heading">Request Institutional Engagement</h2>
+        <p>Request an executive briefing, institutional documents, governance discussion, or NDA execution to begin workforce infrastructure participation evaluation.</p>
+        <ul class="wfd-briefing-actions">
+          <li><a href="workforce-engage.html?intent=briefing" class="btn btn-gold btn-lg">Request Briefing</a></li>
+          <li><a href="#documentation-center" class="btn btn-outline btn-lg">Download Documents</a></li>
+          <li><a href="mailto:workforce@btheducationgroup.org?subject=Governance%20Discussion%20%E2%80%94%20Workforce%20Infrastructure" class="btn btn-outline btn-lg">Schedule Governance Discussion</a></li>
+          <li><a href="assets/docs/workforce-deployment/08-institutional-nda-package.docx" class="btn btn-outline btn-lg" download>Request NDA Package</a></li>
+        </ul>
+      </div>
+      <aside class="wfd-briefing-contact">
+        <h3>Institutional contact</h3>
+        <p><a href="mailto:workforce@btheducationgroup.org">workforce@btheducationgroup.org</a></p>
+        <p><a href="mailto:info@btheducationgroup.org">info@btheducationgroup.org</a></p>
+        <p><a href="tel:+237680289956">+237 680 28 99 56</a></p>
+        <p><a href="tel:+237223362120">+237 223 36 21 20</a></p>
+      </aside>
+    </div>
+  </section>
+
+  <!-- SECTION 20 — CLOSING DOCTRINE -->
+  <section class="wfd-closing" id="closing-doctrine" aria-labelledby="closing-heading">
+    <div class="wfd-container wfd-container--narrow reveal">
+      <p class="wfd-section-eyebrow wfd-section-eyebrow--light">Closing doctrine</p>
+      <h2 id="closing-heading">Workforce Infrastructure as Economic Infrastructure</h2>
+      <blockquote class="wfd-closing-quote">
+        <p>Workforce infrastructure is emerging as a strategic layer of economic infrastructure.</p>
+        <p>The institutions that govern workforce capacity will determine the productivity, continuity, and competitiveness of future economies.</p>
+        <p>BTH Education Group operates workforce infrastructure systems through WDDAM, SWD-INV, and the OEDP Work Network.</p>
+      </blockquote>
+      <div class="wfd-closing-cta">
+        <a href="workforce-infrastructure.html" class="btn btn-outline">Global Workforce Infrastructure Doctrine →</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer site-footer--v2">
+    <div class="footer-inner">
+      <div class="footer-brand-col">
+        <div class="footer-brand">BTH <span>Education</span> Group</div>
+        <p class="footer-tagline">Workforce Infrastructure Deployment Architecture — institutional participation portal for WDDAM, SWI Partners, SWD-INVs, and WDS structures across 26 global sectors.</p>
+        <div class="footer-contact">
+          <p><a href="https://wa.me/237680289956" target="_blank" rel="noopener">WhatsApp: +237 680 289 956</a></p>
+          <p><a href="tel:+237223362120">Tel: +237 223 36 21 20</a></p>
+          <p><a href="mailto:workforce@btheducationgroup.org">workforce@btheducationgroup.org</a></p>
         </div>
       </div>
-    </section>
-
-    <section id="investment-positioning" style="background:linear-gradient(135deg,#0F172A,#1E3A8A); color:#fff; padding:4rem 2rem; margin:3rem -2rem; border-radius:1.5rem;">
-      <div style="max-width:900px; margin:0 auto; text-align:center;">
-        <div style="display:inline-block; padding:0.3rem 0.9rem; background:rgba(250,204,21,0.2); border:1px solid rgba(250,204,21,0.4); border-radius:999px; font-size:0.75rem; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#FACC15; margin-bottom:1.5rem;">Strategic Shift</div>
-        <h2 style="font-size:clamp(1.8rem, 3.5vw, 2.8rem); margin-bottom:1.5rem; line-height:1.2;">From Investing in Companies…<br>to Investing in the Workforce Systems<br>That Power Companies</h2>
-        <p style="font-size:1.05rem; color:rgba(255,255,255,0.75); line-height:1.8; max-width:680px; margin:0 auto 2.5rem;">
-          The SWD-INV portfolio introduces a new investment category: <strong style="color:#FACC15;">Workforce Infrastructure</strong> — the engine of every economy. It is structured, scalable, sector-aligned, and economically grounded in real demand.
-        </p>
-        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(160px, 1fr)); gap:1.5rem; max-width:700px; margin:0 auto;">
-          <div>
-            <div style="font-size:0.75rem; color:rgba(255,255,255,0.5); margin-bottom:0.5rem;">Infrastructure-Class</div>
-            <div style="font-size:1.2rem; font-weight:700; color:#fff;">Structured</div>
-          </div>
-          <div>
-            <div style="font-size:0.75rem; color:rgba(255,255,255,0.5); margin-bottom:0.5rem;">Multi-Revenue</div>
-            <div style="font-size:1.2rem; font-weight:700; color:#fff;">Scalable</div>
-          </div>
-          <div>
-            <div style="font-size:0.75rem; color:rgba(255,255,255,0.5); margin-bottom:0.5rem;">26 Sectors</div>
-            <div style="font-size:1.2rem; font-weight:700; color:#fff;">Diversified</div>
-          </div>
-          <div>
-            <div style="font-size:0.75rem; color:rgba(255,255,255,0.5); margin-bottom:0.5rem;">Real Demand</div>
-            <div style="font-size:1.2rem; font-weight:700; color:#fff;">Grounded</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="next-steps">
-      <h2>Request Strategic Briefing</h2>
-      <p class="lead">
-        The SWD-INV investment model is designed for strategic investors, institutions, and individuals seeking infrastructure-class returns through workforce capacity systems. To receive a confidential investment briefing, contact our investment team.
-      </p>
-      <div style="background:linear-gradient(135deg,#F9FAFB,#F3F4F6); border-radius:1.5rem; padding:3rem 2.5rem; margin-top:2rem;">
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:3rem; align-items:center;">
-          <div>
-            <h3 style="margin-bottom:1rem; color:#111827;">Investment Briefing Includes:</h3>
-            <ul style="line-height:2; color:#374151;">
-              <li>✓ Full SWD-INV investment memorandum</li>
-              <li>✓ Sector allocation overview (26 industries)</li>
-              <li>✓ Revenue engine projections across 4 layers</li>
-              <li>✓ WDS execution framework documentation</li>
-              <li>✓ Cohort economics and ROI analysis</li>
-              <li>✓ Platform integration (OEDP Work Network)</li>
-              <li>✓ Legal structure and investor agreements</li>
-            </ul>
-          </div>
-          <div>
-            <div style="background:#fff; border-radius:1rem; padding:2rem; border:2px solid #3B82F6;">
-              <h4 style="font-size:0.9rem; color:#6B7280; margin-bottom:1.5rem; text-transform:uppercase; letter-spacing:0.1em;">Contact Investment Team</h4>
-              <div style="margin-bottom:1.25rem;">
-                <div style="font-size:0.8rem; color:#9CA3AF; margin-bottom:0.25rem;">Email:</div>
-                <a href="mailto:investment@btheducationgroup.org?subject=SWD-INV Strategic Briefing Request" style="font-size:1.05rem; font-weight:700; color:#054ADA;">investment@btheducationgroup.org</a>
-              </div>
-              <div style="margin-bottom:1.25rem;">
-                <div style="font-size:0.8rem; color:#9CA3AF; margin-bottom:0.25rem;">WhatsApp:</div>
-                <a href="https://wa.me/237680289956" style="font-size:1.05rem; font-weight:700; color:#054ADA;">+237 680 289 956</a>
-              </div>
-              <div style="margin-bottom:1.75rem;">
-                <div style="font-size:0.8rem; color:#9CA3AF; margin-bottom:0.25rem;">Tel:</div>
-                <a href="tel:+237653795603" style="font-size:1.05rem; font-weight:700; color:#054ADA;">+237 653 795 603</a>
-              </div>
-              <a href="mailto:investment@btheducationgroup.org?subject=SWD-INV Strategic Briefing Request&body=I am interested in receiving a strategic briefing on the SWD-INV Workforce Infrastructure Investment model.%0D%0A%0D%0AName:%0D%0AOrganization (if applicable):%0D%0APreferred contact method:" class="button" style="width:100%; text-align:center; background:linear-gradient(135deg,#054ada,#0ea5e9); color:#fff; padding:0.9rem 1.5rem; display:block;">
-                Request Briefing →
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
-
-  <footer class="cta-footer">
-    <div class="inner">
       <div>
-        <h2>SWD-INV Investment Inquiries</h2>
-        <p>Our investment team can provide detailed briefings on the workforce infrastructure model, revenue architecture, and sector allocation framework.</p>
-        <p class="contacts">WhatsApp: +237 680 289 956 • Tel: +237 653 795 603 • Email: investment@btheducationgroup.org</p>
+        <div class="footer-col-title">Portal</div>
+        <ul class="footer-links">
+          <li><a href="gwix-trial.html">GWIX Exchange</a></li>
+          <li><a href="#wddam-architecture">WDDAM Architecture</a></li>
+          <li><a href="#sector-portfolio">26-Sector Portfolio</a></li>
+          <li><a href="#documentation-center">Documentation Center</a></li>
+          <li><a href="workforce-infrastructure.html">Global Doctrine</a></li>
+          <li><a href="workforce-diligence.html">Diligence Pack</a></li>
+        </ul>
       </div>
       <div>
-        <a href="#top" class="button" style="background:linear-gradient(135deg,#facc15,#fb923c); color:#111827;">Back to Top</a>
+        <div class="footer-col-title">Engage</div>
+        <ul class="footer-links">
+          <li><a href="#participation-pathways">Participation Pathways</a></li>
+          <li><a href="workforce-engage.html?intent=briefing">Schedule Briefing</a></li>
+          <li><a href="#executive-briefing">Institutional Contact</a></li>
+          <li><a href="index.html">&#8592; BTH Group Home</a></li>
+        </ul>
       </div>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; 2026 BTH Education Group. All rights reserved.</div>
+      <div>Workforce Infrastructure Deployment &nbsp;&middot;&nbsp; 26 Sectors &nbsp;&middot;&nbsp; 130 Divisions &nbsp;&middot;&nbsp; WDDAM Governance</div>
     </div>
   </footer>
 
+  <script src="assets/js/workforce-infrastructure.js?v=20260617d" defer></script>
   <script>
-  <script>
-    (function(){
-      window.dataLayer = window.dataLayer || [];
-      // Track CTA clicks
-      const ctas = document.querySelectorAll('[data-track-cta]');
-      ctas.forEach(function(el){
-        el.addEventListener('click', function(){
-          window.dataLayer.push({
-            event: 'cta_click',
-            cta_location: el.getAttribute('data-cta-location') || 'unknown',
-            cta_label: (el.textContent || '').trim(),
-            destination: el.getAttribute('href')
-          });
+    (function() {
+      var chips = document.querySelectorAll('.wfd-docs-chip');
+      var cards = document.querySelectorAll('.wfd-doc-card');
+      function filterDocs(filter) {
+        cards.forEach(function(card) {
+          var audiences = (card.getAttribute('data-audience') || '').split(/\s+/);
+          var show = filter === 'all' || audiences.indexOf(filter) !== -1;
+          card.classList.toggle('is-hidden', !show);
+        });
+        chips.forEach(function(chip) {
+          chip.classList.toggle('is-active', chip.getAttribute('data-doc-filter') === filter);
+        });
+      }
+      chips.forEach(function(chip) {
+        chip.addEventListener('click', function() {
+          filterDocs(chip.getAttribute('data-doc-filter'));
         });
       });
-      // Subnav active state on scroll
-      const subnav = document.querySelector('.subnav');
-      if (subnav){
-        const links = Array.from(subnav.querySelectorAll('.links a'));
-        links.forEach(function(a){
-          a.addEventListener('click', function(){
-            window.dataLayer.push({ event: 'subnav_click', target_section: a.getAttribute('href') });
-          });
-        });
-        const sectionIds = links.map(a => a.getAttribute('href')).filter(Boolean).map(href => href.replace('#',''));
-        const sections = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
-        function updateActive(){
-          let current = null;
-          for (const sec of sections){
-            const top = sec.getBoundingClientRect().top;
-            if (top <= 90) current = sec.id;
+      document.querySelectorAll('[data-doc-filter-trigger]').forEach(function(link) {
+        link.addEventListener('click', function(e) {
+          var f = link.getAttribute('data-doc-filter-trigger');
+          if (f) {
+            filterDocs(f);
+            setTimeout(function() {
+              var el = document.getElementById('documentation-center');
+              if (el) el.scrollIntoView({ behavior: 'smooth' });
+            }, 50);
           }
-          links.forEach(a => {
-            const target = a.getAttribute('href').replace('#','');
-            if (target === current){ a.classList.add('active'); a.setAttribute('aria-current','true'); }
-            else { a.classList.remove('active'); a.removeAttribute('aria-current'); }
-          });
-        }
-        document.addEventListener('scroll', updateActive, { passive: true });
-        window.addEventListener('resize', updateActive);
-        updateActive();
-      }
+        });
+      });
     })();
   </script>
-
-  <!-- BTH Intelligent Assistant -->
-<script src="assets/js/bth-chatbot.js"></script>
 </body>
 </html>

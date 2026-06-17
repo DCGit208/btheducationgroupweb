@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Operator Login | GWIX Operator Network</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/gois.css?v=20260617gois3">
+</head>
+<body class="gois-app" style="min-height:100vh">
+
+  <div class="gois-login-overlay" style="position:relative;min-height:calc(100vh - 42px)">
+    <div class="gois-login-box">
+      <h2>GWIX Operator Sign In</h2>
+      <p style="font-size:13px;color:#64748b;text-align:center;margin:-8px 0 20px">You will be routed to your role dashboard after authentication.</p>
+      <div id="goisLoginError" class="gois-login-error"></div>
+      <form id="goisUnifiedLoginForm">
+        <div class="gois-form-group">
+          <label for="goisLoginEmail">Email</label>
+          <input type="email" id="goisLoginEmail" required autocomplete="username">
+        </div>
+        <div class="gois-form-group">
+          <label for="goisLoginPassword">Password</label>
+          <input type="password" id="goisLoginPassword" required autocomplete="current-password">
+        </div>
+        <button type="submit" class="gois-btn gois-btn-primary" style="width:100%;justify-content:center">Sign in</button>
+      </form>
+      <div style="margin-top:20px;font-size:12px;color:#64748b;text-align:center">
+        Role dashboards (auth required):<br>
+        <a href="steward/dashboard.html">Steward</a> ·
+        <a href="swi/dashboard.html">SWI</a> ·
+        <a href="swd-inv/dashboard.html">SWD-INV</a> ·
+        <a href="wds/dashboard.html">WDS</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+  <script src="../assets/js/firebase-config.js?v=20260617gois3"></script>
+  <script src="../assets/js/gois/gois-routes.js?v=20260617gois3"></script>
+  <script>
+    (function () {
+      var form = document.getElementById('goisUnifiedLoginForm');
+      var errEl = document.getElementById('goisLoginError');
+      function showErr(msg) {
+        errEl.textContent = msg;
+        errEl.classList.add('show');
+      }
+      form.addEventListener('submit', async function (e) {
+        e.preventDefault();
+        if (!window.auth || !window.db) {
+          showErr('Configure assets/js/firebase-config.js with your Firebase project first.');
+          return;
+        }
+        try {
+          var cred = await auth.signInWithEmailAndPassword(
+            document.getElementById('goisLoginEmail').value.trim(),
+            document.getElementById('goisLoginPassword').value
+          );
+          var snap = await db.collection('users').doc(cred.user.uid).get();
+          if (!snap.exists) {
+            await auth.signOut();
+            showErr('No operator profile found for this account.');
+            return;
+          }
+          var role = snap.data().role;
+          GOISRoutes.redirectToRoleDashboard(role, true);
+        } catch (err) {
+          showErr(err.message || 'Login failed.');
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

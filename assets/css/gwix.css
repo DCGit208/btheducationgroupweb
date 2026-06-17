@@ -1,0 +1,885 @@
+/* GWIX — Global Workforce Infrastructure Exchange (trial surface) */
+
+body.gwix-trial {
+  background: #f5f5f7;
+}
+
+.gwix-trial-banner {
+  position: sticky;
+  top: 0;
+  z-index: 300;
+  background: linear-gradient(90deg, #78350f, #92400e);
+  color: #fef3c7;
+  text-align: center;
+  padding: 0.45rem 1rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.gwix-trial-banner a {
+  color: #fff;
+  margin-left: 0.75rem;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+body.gwix-trial .topnav--v2 {
+  top: 2rem;
+}
+
+body.gwix-trial.nav-open .gwix-trial-banner {
+  z-index: 250;
+}
+
+.gwix-state {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.45rem;
+  border-radius: 4px;
+  border: 1px solid transparent;
+}
+
+.gwix-state--arch {
+  color: #1d4ed8;
+  background: rgba(29, 78, 216, 0.08);
+  border-color: rgba(29, 78, 216, 0.18);
+}
+
+.gwix-state--framework {
+  color: #0f766e;
+  background: rgba(15, 118, 110, 0.08);
+  border-color: rgba(15, 118, 110, 0.18);
+}
+
+.gwix-state--modeled {
+  color: #7c3aed;
+  background: rgba(124, 58, 237, 0.08);
+  border-color: rgba(124, 58, 237, 0.18);
+}
+
+.gwix-state--operational {
+  color: #15803d;
+  background: rgba(21, 128, 61, 0.08);
+  border-color: rgba(21, 128, 61, 0.18);
+}
+
+.gwix-hero .hero-badge {
+  background: rgba(5, 74, 218, 0.2);
+  border-color: rgba(96, 165, 250, 0.35);
+}
+
+.gwix-hero h1 {
+  font-size: clamp(1.85rem, 4.2vw, 3.15rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+
+.gwix-hero h1 em {
+  font-style: normal;
+  color: #38bdf8;
+}
+
+.gwix-status-line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.65rem;
+  margin: 1rem 0 0.5rem;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.gwix-status-line .gwix-pulse {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #22c55e;
+  box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.6);
+  animation: gwixPulse 2s ease infinite;
+}
+
+@keyframes gwixPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.5); }
+  50% { box-shadow: 0 0 0 6px rgba(34, 197, 94, 0); }
+}
+
+.gwix-telemetry-strip {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.65rem;
+  margin-top: 1.5rem;
+}
+
+.gwix-tel {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 0.85rem 0.75rem;
+}
+
+.gwix-tel__val {
+  font-family: 'DM Mono', monospace;
+  font-size: clamp(0.95rem, 1.8vw, 1.25rem);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.1;
+}
+
+.gwix-tel__val.gold { color: #fbbf24; }
+
+.gwix-tel__key {
+  font-size: 0.62rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 0.25rem;
+  line-height: 1.35;
+}
+
+.gwix-tel__state {
+  margin-top: 0.35rem;
+}
+
+.gwix-markets-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.65rem;
+  margin-top: 1rem;
+}
+
+.gwix-market-chip {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  padding: 0.85rem;
+  transition: border-color 0.2s, background 0.2s, transform 0.2s;
+}
+
+.gwix-market-chip:hover {
+  border-color: rgba(56, 189, 248, 0.45);
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-1px);
+}
+
+.gwix-market-chip__num {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.58rem;
+  color: #38bdf8;
+  letter-spacing: 0.08em;
+}
+
+.gwix-market-chip__title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0.25rem 0;
+  line-height: 1.3;
+}
+
+.gwix-market-chip__meta {
+  font-size: 0.62rem;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.4;
+}
+
+.gwix-section {
+  padding: clamp(3rem, 6vw, 5rem) 0;
+}
+
+.gwix-section--dark {
+  background: linear-gradient(180deg, #0a0f1e 0%, #0f172a 100%);
+  color: #fff;
+}
+
+.gwix-section--light {
+  background: #f5f5f7;
+}
+
+.gwix-section--white {
+  background: #fff;
+}
+
+.gwix-container {
+  max-width: var(--page-max, min(96vw, 1520px));
+  margin: 0 auto;
+  padding: 0 var(--page-gutter, clamp(1.25rem, 4vw, 3rem));
+}
+
+.gwix-section-header {
+  max-width: 720px;
+  margin-bottom: 2rem;
+}
+
+.gwix-section-header--center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gwix-eyebrow {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #054ada;
+  margin-bottom: 0.65rem;
+}
+
+.gwix-section--dark .gwix-eyebrow { color: #38bdf8; }
+
+.gwix-section-header h2 {
+  font-size: clamp(1.45rem, 3vw, 2.15rem);
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+  color: #0f172a;
+  margin-bottom: 0.75rem;
+}
+
+.gwix-section--dark .gwix-section-header h2 { color: #fff; }
+
+.gwix-lead {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #4b5563;
+}
+
+.gwix-section--dark .gwix-lead { color: rgba(255, 255, 255, 0.65); }
+
+.gwix-command-wrap {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(280px, 0.6fr);
+  gap: 1.25rem;
+  align-items: stretch;
+}
+
+.gwix-topology {
+  position: relative;
+  min-height: 420px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.gwix-topology canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+}
+
+.gwix-topology-label {
+  position: absolute;
+  top: 0.85rem;
+  left: 0.85rem;
+  right: 0.85rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.5rem;
+  pointer-events: none;
+}
+
+.gwix-topology-label span {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.62rem;
+  color: rgba(255, 255, 255, 0.55);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.gwix-command-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.gwix-cmd-stat {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 0.85rem 1rem;
+}
+
+.gwix-cmd-stat__val {
+  font-family: 'DM Mono', monospace;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.gwix-cmd-stat__key {
+  font-size: 0.68rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 0.2rem;
+}
+
+.gwix-monitor-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.gwix-monitor-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1rem;
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+.gwix-monitor-card:hover {
+  border-color: #bfdbfe;
+  box-shadow: 0 8px 24px rgba(5, 74, 218, 0.08);
+}
+
+.gwix-monitor-card__cat {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.58rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #6b7280;
+  margin-bottom: 0.35rem;
+}
+
+.gwix-monitor-card__val {
+  font-family: 'DM Mono', monospace;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.gwix-monitor-card__desc {
+  font-size: 0.72rem;
+  color: #6b7280;
+  margin-top: 0.35rem;
+  line-height: 1.45;
+}
+
+.gwix-monitor-card__state {
+  margin-top: 0.5rem;
+}
+
+.gwix-dual-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.gwix-feed {
+  background: #0f172a;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.gwix-feed__head {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  flex-shrink: 0;
+  padding: 0.75rem 1rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.gwix-feed__head-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  padding-bottom: 0.65rem;
+}
+
+.gwix-feed__head h3 {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.04em;
+  margin: 0;
+}
+
+.gwix-feed__tabs {
+  display: flex;
+  gap: 0.35rem;
+  overflow-x: auto;
+  padding-bottom: 0.65rem;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.gwix-feed__tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.gwix-feed-tab {
+  flex: 0 0 auto;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.04);
+  color: rgba(255, 255, 255, 0.65);
+  font-family: 'DM Mono', monospace;
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.6rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.gwix-feed-tab:hover {
+  color: #fff;
+  border-color: rgba(56, 189, 248, 0.35);
+}
+
+.gwix-feed-tab.is-active {
+  background: rgba(5, 74, 218, 0.35);
+  border-color: rgba(56, 189, 248, 0.45);
+  color: #fff;
+}
+
+.gwix-feed-panel {
+  display: none;
+  height: 100%;
+  flex-direction: column;
+}
+
+.gwix-feed-panel.is-active {
+  display: flex;
+  height: 100%;
+}
+
+.gwix-feed-panel__desc {
+  flex-shrink: 0;
+  font-size: 0.62rem;
+  color: rgba(255, 255, 255, 0.45);
+  padding: 0.5rem 1rem 0;
+  font-family: 'DM Mono', monospace;
+  letter-spacing: 0.03em;
+  margin: 0;
+}
+
+.gwix-feed-panel__body {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.gwix-feed-panel__body::before,
+.gwix-feed-panel__body::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 1.25rem;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.gwix-feed-panel__body::before {
+  top: 0;
+  background: linear-gradient(180deg, #0f172a 0%, transparent 100%);
+}
+
+.gwix-feed-panel__body::after {
+  bottom: 0;
+  background: linear-gradient(0deg, #0f172a 0%, transparent 100%);
+}
+
+.gwix-feed__track {
+  overflow: hidden;
+  flex: 1 1 auto;
+  position: relative;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.gwix-feed__scroll {
+  animation: gwixFeedScroll 90s linear infinite;
+}
+
+.gwix-feed__scroll:hover {
+  animation-play-state: paused;
+}
+
+@keyframes gwixFeedScroll {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-50%); }
+}
+
+.gwix-feed-item {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 0.65rem;
+  align-items: start;
+  padding: 0.65rem 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  font-size: 0.72rem;
+  line-height: 1.45;
+}
+
+.gwix-feed-item time {
+  font-family: 'DM Mono', monospace;
+  color: rgba(255, 255, 255, 0.4);
+  white-space: nowrap;
+}
+
+.gwix-feed-item__body {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.gwix-feed-item__body strong {
+  color: #38bdf8;
+  font-weight: 600;
+}
+
+.gwix-feed-item__delta {
+  font-family: 'DM Mono', monospace;
+  font-weight: 700;
+  color: #4ade80;
+  white-space: nowrap;
+}
+
+.gwix-feed-item--live {
+  background: rgba(21, 128, 61, 0.08);
+  border-left: 2px solid #4ade80;
+}
+
+.gwix-feed-item--live time {
+  color: #4ade80;
+}
+
+.gwix-indices-panel {
+  background: #0f172a;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.gwix-indices-panel__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.gwix-indices-panel__head h3 {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.04em;
+  margin: 0;
+}
+
+.gwix-indices-panel__body {
+  padding: 0.85rem;
+  flex: 1;
+}
+
+.gwix-indices-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.65rem;
+}
+
+.gwix-index {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 10px;
+  padding: 0.85rem;
+}
+
+.gwix-index__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.gwix-index__code {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.04em;
+}
+
+.gwix-index__val {
+  font-family: 'DM Mono', monospace;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #4ade80;
+}
+
+.gwix-index__name {
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.78);
+  margin-top: 0.35rem;
+  line-height: 1.4;
+}
+
+.gwix-index__trend {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: #86efac;
+  margin-top: 0.4rem;
+}
+
+.gwix-index--composite {
+  grid-column: 1 / -1;
+  background: rgba(5, 74, 218, 0.15);
+  border-color: rgba(56, 189, 248, 0.25);
+}
+
+.gwix-markets-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.gwix-market-panel {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 1.35rem;
+  border-top: 3px solid #054ada;
+}
+
+.gwix-market-panel:nth-child(2) { border-top-color: #0ea5e9; }
+.gwix-market-panel:nth-child(3) { border-top-color: #8b5cf6; }
+.gwix-market-panel:nth-child(4) { border-top-color: #f59e0b; }
+
+.gwix-market-panel__num {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.62rem;
+  color: #054ada;
+  letter-spacing: 0.1em;
+}
+
+.gwix-market-panel h3 {
+  font-size: 1rem;
+  margin: 0.35rem 0 0.65rem;
+  color: #0f172a;
+}
+
+.gwix-market-panel ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem;
+}
+
+.gwix-market-panel li {
+  font-size: 0.78rem;
+  color: #4b5563;
+  padding: 0.35rem 0;
+  border-bottom: 1px solid #f3f4f6;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.gwix-market-panel li span:last-child {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.68rem;
+  color: #054ada;
+  white-space: nowrap;
+}
+
+.gwix-sector-exchange .sectors-grid {
+  margin-top: 1rem;
+}
+
+a.sector-tile {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.gwix-division-row {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.gwix-division-unit {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.gwix-division-unit__label {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #38bdf8;
+  margin-bottom: 0.5rem;
+}
+
+.gwix-division-unit__val {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.gwix-division-unit__key {
+  font-size: 0.62rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 0.2rem;
+}
+
+.gwix-entry-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.gwix-entry-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 1.35rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+
+.gwix-entry-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+  border-color: #bfdbfe;
+}
+
+.gwix-entry-card__role {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #054ada;
+}
+
+.gwix-entry-card h3 {
+  font-size: 0.95rem;
+  margin: 0.45rem 0;
+  color: #0f172a;
+  line-height: 1.3;
+}
+
+.gwix-entry-card p {
+  font-size: 0.78rem;
+  color: #4b5563;
+  line-height: 1.55;
+  flex: 1;
+}
+
+.gwix-entry-card .btn {
+  margin-top: 1rem;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+}
+
+.gwix-pathway-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.gwix-pathway {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.gwix-pathway:hover {
+  border-color: #054ada;
+  box-shadow: 0 6px 20px rgba(5, 74, 218, 0.08);
+}
+
+.gwix-pathway h4 {
+  font-size: 0.85rem;
+  color: #0f172a;
+  margin-bottom: 0.35rem;
+}
+
+.gwix-pathway p {
+  font-size: 0.72rem;
+  color: #6b7280;
+  line-height: 1.45;
+}
+
+.gwix-docs-note {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 0.82rem;
+  color: #6b7280;
+}
+
+.gwix-docs-note a {
+  color: #054ada;
+  font-weight: 600;
+}
+
+@media (max-width: 1100px) {
+  .gwix-telemetry-strip { grid-template-columns: repeat(3, 1fr); }
+  .gwix-markets-strip { grid-template-columns: repeat(2, 1fr); }
+  .gwix-command-wrap { grid-template-columns: 1fr; }
+  .gwix-monitor-grid { grid-template-columns: repeat(2, 1fr); }
+  .gwix-entry-grid { grid-template-columns: repeat(2, 1fr); }
+  .gwix-division-row { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 720px) {
+  .gwix-telemetry-strip,
+  .gwix-markets-strip,
+  .gwix-monitor-grid,
+  .gwix-markets-grid,
+  .gwix-dual-panel,
+  .gwix-indices-grid,
+  .gwix-entry-grid,
+  .gwix-pathway-grid,
+  .gwix-division-row {
+    grid-template-columns: 1fr;
+  }
+
+  body.gwix-trial .topnav--v2 { top: 2.35rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gwix-feed__scroll { animation: none; }
+  .gwix-status-line .gwix-pulse { animation: none; }
+}
