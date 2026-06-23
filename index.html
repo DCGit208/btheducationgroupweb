@@ -738,6 +738,149 @@
       transform: translateY(-2px);
     }
 
+    /* Workforce Infrastructure Gateway — 3-page ladder */
+    .wf-gateway {
+      padding: 88px 0;
+      background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+      color: #fff;
+      position: relative;
+    }
+
+    .wf-gateway .container { position: relative; z-index: 2; }
+
+    .wf-gateway-header {
+      text-align: center;
+      max-width: 820px;
+      margin: 0 auto 3rem;
+    }
+
+    .wf-gateway-badge {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #38bdf8;
+      margin-bottom: 0.75rem;
+    }
+
+    .wf-gateway-header h2 {
+      font-size: clamp(0.82rem, 2.35vw, 2.75rem);
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 1rem;
+      color: #fff;
+      white-space: nowrap;
+      letter-spacing: -0.02em;
+    }
+
+    .wf-gateway-header p {
+      font-size: 1.05rem;
+      line-height: 1.65;
+      color: rgba(255, 255, 255, 0.65);
+    }
+
+    .wf-gateway-flow-label {
+      text-align: center;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.4);
+      margin-bottom: 1.25rem;
+    }
+
+    .wf-gateway-ladder {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.25rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .wf-gateway-card {
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      color: inherit;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 16px;
+      padding: 1.75rem 1.5rem;
+      transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+      position: relative;
+    }
+
+    .wf-gateway-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(56, 189, 248, 0.45);
+      box-shadow: 0 20px 48px rgba(0, 0, 0, 0.25);
+    }
+
+    .wf-gateway-card--primary {
+      background: rgba(5, 74, 218, 0.12);
+      border-color: rgba(56, 189, 248, 0.35);
+    }
+
+    .wf-gateway-step {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: #38bdf8;
+      margin-bottom: 0.5rem;
+    }
+
+    .wf-gateway-card-title {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 0.35rem;
+      line-height: 1.25;
+    }
+
+    .wf-gateway-card-sub {
+      font-size: 0.78rem;
+      color: rgba(255, 255, 255, 0.5);
+      margin-bottom: 0.85rem;
+      line-height: 1.4;
+    }
+
+    .wf-gateway-card-desc {
+      font-size: 0.88rem;
+      line-height: 1.6;
+      color: rgba(255, 255, 255, 0.72);
+      flex: 1;
+      margin-bottom: 1.25rem;
+    }
+
+    .wf-gateway-card-cta {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #38bdf8;
+    }
+
+    .wf-gateway-card--primary .wf-gateway-card-cta { color: #fbbf24; }
+
+    .wf-gateway-card-arrow {
+      position: absolute;
+      right: -0.85rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: rgba(255, 255, 255, 0.25);
+      font-size: 1.25rem;
+      pointer-events: none;
+      display: none;
+    }
+
+    @media (min-width: 900px) {
+      .wf-gateway-card:not(:last-child) .wf-gateway-card-arrow { display: block; }
+    }
+
+    @media (max-width: 900px) {
+      .wf-gateway-ladder { grid-template-columns: 1fr; }
+    }
+
     /* Mobile Responsive */
     @media (max-width: 768px) {
       .hero-revolutionary {
@@ -1284,6 +1427,15 @@
       <div class="nav-links" id="navLinks">
         <a href="about.html" class="nav-link">About</a>
         <div class="nav-dropdown">
+          <a href="gwix-trial.html" class="nav-link dropdown-toggle">Workforce Infrastructure <i class="fas fa-chevron-down"></i></a>
+          <div class="dropdown-menu">
+            <a href="gwix-trial.html" class="dropdown-item">GWIX Exchange</a>
+            <a href="workforce-deployment.html" class="dropdown-item">Participation Portal</a>
+            <a href="workforce-infrastructure.html" class="dropdown-item">Global Doctrine</a>
+            <a href="program.html" class="dropdown-item">26-Sector Registry</a>
+          </div>
+        </div>
+        <div class="nav-dropdown">
           <a href="program.html" class="nav-link dropdown-toggle">Programs <i class="fas fa-chevron-down"></i></a>
           <div class="dropdown-menu">
             <a href="oedp.html" class="dropdown-item">OEDP</a>
@@ -1352,8 +1504,46 @@
       <div class="cta-section-revolutionary">
         <div class="cta-buttons-revolutionary">
           <a href="oedp.html" class="cta-primary-revolutionary">🚀 Start Your Transformation</a>
+          <a href="gwix-trial.html" class="cta-secondary-revolutionary">🏛️ GWIX Exchange</a>
           <a href="/frontend/payment.html?sku=career-assessment" class="cta-secondary-revolutionary">🎯 Free Career Assessment</a>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Workforce Infrastructure Gateway -->
+  <section class="wf-gateway" id="workforce-infrastructure">
+    <div class="container">
+      <header class="wf-gateway-header">
+        <div class="wf-gateway-badge">Workforce Infrastructure Economy</div>
+        <h2>GWIX Exchange · Participation Portal · Global Doctrine</h2>
+        <p>BTH operates a three-layer workforce infrastructure system. Enter through the exchange, proceed to institutional participation, then review sovereign doctrine.</p>
+      </header>
+      <p class="wf-gateway-flow-label">Exchange → Portal → Doctrine</p>
+      <div class="wf-gateway-ladder">
+        <a href="gwix-trial.html" class="wf-gateway-card wf-gateway-card--primary">
+          <span class="wf-gateway-step">01 · Exchange</span>
+          <div class="wf-gateway-card-title">GWIX Exchange</div>
+          <div class="wf-gateway-card-sub">Global Workforce Infrastructure Exchange</div>
+          <p class="wf-gateway-card-desc">Live economy telemetry, four WDDAM markets, 26-sector exchange, command center, and stakeholder entry points.</p>
+          <span class="wf-gateway-card-cta">Enter GWIX Exchange →</span>
+          <span class="wf-gateway-card-arrow" aria-hidden="true">→</span>
+        </a>
+        <a href="workforce-deployment.html" class="wf-gateway-card">
+          <span class="wf-gateway-step">02 · Portal</span>
+          <div class="wf-gateway-card-title">Participation Portal</div>
+          <div class="wf-gateway-card-sub">Workforce Infrastructure Participation Portal</div>
+          <p class="wf-gateway-card-desc">Division and sector architecture, SWI · SWD-INV · WDS roles, GORP framework, documentation exchange, and onboarding pathways.</p>
+          <span class="wf-gateway-card-cta">Open Participation Portal →</span>
+          <span class="wf-gateway-card-arrow" aria-hidden="true">→</span>
+        </a>
+        <a href="workforce-infrastructure.html" class="wf-gateway-card">
+          <span class="wf-gateway-step">03 · Doctrine</span>
+          <div class="wf-gateway-card-title">Global Doctrine</div>
+          <div class="wf-gateway-card-sub">Global Workforce Infrastructure Doctrine</div>
+          <p class="wf-gateway-card-desc">Sovereign workforce infrastructure framing, WDDAM doctrine, institutional economics, and certification infrastructure ecosystem.</p>
+          <span class="wf-gateway-card-cta">Read Global Doctrine →</span>
+        </a>
       </div>
     </div>
   </section>
@@ -1362,9 +1552,9 @@
   <section class="programs-showcase">
     <div class="container">
       <div class="section-header-revolutionary">
-        <div class="section-badge-revolutionary">Education Investment Platforms</div>
-        <h2 class="section-title-revolutionary">Workforce Infrastructure, Education Platforms &amp; Investment Systems</h2>
-        <p class="section-description-revolutionary">A multi-stakeholder ecosystem — for enterprises acquiring certified workforce, institutions building capacity, investors owning infrastructure, and individuals advancing careers across 26 global sectors.</p>
+        <div class="section-badge-revolutionary">Education &amp; Institutional Platforms</div>
+        <h2 class="section-title-revolutionary">Corporate Methodology, Industry Programs &amp; Partnership Systems</h2>
+        <p class="section-description-revolutionary">Certification pathways, enterprise training frameworks, and institutional partnerships across 26 global sectors. Workforce infrastructure entry: <a href="gwix-trial.html" style="color:#054ada;font-weight:600;">GWIX Exchange</a> → <a href="workforce-deployment.html" style="color:#054ada;font-weight:600;">Participation Portal</a> → <a href="workforce-infrastructure.html" style="color:#054ada;font-weight:600;">Global Doctrine</a>.</p>
       </div>
 
       <div class="programs-grid-revolutionary">
@@ -1433,22 +1623,6 @@
           <span class="program-cta">Build Strong Families</span>
         </a>
 
-        <!-- Workforce Infrastructure -->
-        <a href="workforce-infrastructure.html" class="program-card-revolutionary">
-          <div class="program-badge">🏗️ Workforce Infrastructure</div>
-          <h3 class="program-title">🔨 Workforce Development, Deployment &amp; Talent Pipeline</h3>
-          <p class="program-description">
-            A complete institutional-grade workforce lifecycle system — Develop certified professionals (Level 1–5), Deploy into real roles, enable orgs to Acquire ready talent pipelines, and Manage workforce at scale across 26 global sectors.
-          </p>
-          <div class="program-features">
-            <span class="feature-tag">Develop L1–5 Talent</span>
-            <span class="feature-tag">Deploy Into Real Roles</span>
-            <span class="feature-tag">Corporate Acquisition</span>
-            <span class="feature-tag">End-to-End Management</span>
-          </div>
-          <span class="program-cta">Explore Workforce Program →</span>
-        </a>
-
         <!-- Investor Education Work Network -->
         <a href="https://invest.btheducationgroup.com" class="program-card-revolutionary" target="_blank" rel="noopener">
           <div class="program-badge">⭐ Investor-Grade (Recommended)</div>
@@ -1482,21 +1656,6 @@
           <span class="program-cta">Explore All Programs</span>
         </a>
 
-        <!-- Sales Specialist Program Card -->
-        <a href="workforce-deployment.html" class="program-card-revolutionary" style="border:1px solid #dbeafe;">
-          <div class="program-badge">💼 Workforce Income</div>
-          <h3 class="program-title">💰 Sales Specialist Program — Structured Income & Certification Sales</h3>
-          <p class="program-description">
-            Join a <strong>2,000-person sales workforce</strong> selling Level 1–5 certification portfolios across <strong>20 industry sectors</strong>. Earn <strong>1,066 USD/month for 3 years</strong>, operate a predictable <strong>50-unit model</strong>, and unlock an <strong>8,100 USD family scholarship</strong>.
-          </p>
-          <div class="program-features">
-            <span class="feature-tag">1,066 USD/mo</span>
-            <span class="feature-tag">50 Units Model</span>
-            <span class="feature-tag">20 Sectors</span>
-            <span class="feature-tag">Family Scholarship</span>
-          </div>
-          <span class="program-cta">Explore & Apply</span>
-        </a>
       </div>
     </div>
   </section>
@@ -1714,15 +1873,15 @@
         </ul>
       </div>
 
-      <!-- Workforce Opportunities -->
+      <!-- Workforce Infrastructure -->
       <div class="footer-section">
-        <h4>Workforce Opportunities</h4>
+        <h4>Workforce Infrastructure</h4>
         <ul class="footer-links">
-          <li><a href="workforce-deployment.html">Workforce Deployment Program (1,066 USD/mo)</a></li>
-          <li><a href="apply-sales-specialist.html">Apply – Sales Specialist</a></li>
-          <li><a href="fast-track-deployment.html">Fast-Track Deployment</a></li>
-          <li><a href="oedp.html">OEDP Work Network</a></li>
-          <li><a href="family-maturation-programs.html">Family Scholarship Path</a></li>
+          <li><a href="gwix-trial.html">GWIX Exchange</a></li>
+          <li><a href="workforce-deployment.html">Participation Portal</a></li>
+          <li><a href="workforce-infrastructure.html">Global Doctrine</a></li>
+          <li><a href="program.html">26-Sector Registry</a></li>
+          <li><a href="workforce-engage.html?intent=briefing">Executive Briefing</a></li>
         </ul>
       </div>
     </div>

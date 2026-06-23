@@ -1,0 +1,1138 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Workforce Infrastructure Investment — BTH Education Group</title>
+  <meta name="description" content="Invest in workforce infrastructure — the system that powers companies, industries, and economies. Structured sector-based investment into workforce development, deployment, acquisition, and management across 26 global sectors." />
+  <meta property="og:title" content="Workforce Infrastructure Investment — BTH Education Group" />
+  <meta property="og:description" content="Not training. Not education. Workforce infrastructure investment. Multi-layer revenue across development, deployment, acquisition, and management." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/images/og-workforce-infrastructure.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Workforce Infrastructure Investment — BTH Education Group" />
+  <meta name="twitter:description" content="Infrastructure-class investment into workforce systems. Multi-revenue model spanning development, deployment, acquisition, and management." />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <style>
+    /* Minimal fallback styling – can be overridden by main.css */
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: #111827;
+      background: #f5f5f7;
+      line-height: 1.6;
+    }
+    a { color: #054ada; text-decoration: none; }
+    a.button {
+      display: inline-block;
+      padding: 0.9rem 1.8rem;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #054ada, #f59e0b);
+      color: #ffffff;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+    }
+    .page {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1.5rem;
+    }
+    header.hero {
+      background: radial-gradient(circle at top left, #facc15 0, #054ada 45%, #020617 100%);
+      color: #ffffff;
+      border-radius: 1.5rem;
+      padding: 2.5rem 2rem 3.5rem;
+      margin-bottom: 2.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    header.hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at bottom right, rgba(255,255,255,0.18), transparent 55%);
+      pointer-events: none;
+    }
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+      gap: 2rem;
+      align-items: center;
+    }
+    .hero-kicker {
+      font-size: 0.85rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      opacity: 0.9;
+    }
+    .hero-title {
+      font-size: clamp(2.2rem, 3.1vw, 3.4rem);
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 0.75rem;
+    }
+    .hero-subtitle {
+      font-size: 1rem;
+      max-width: 36rem;
+      opacity: 0.92;
+      margin-bottom: 1.5rem;
+    }
+    .hero-metrics {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 1.75rem;
+    }
+    .hero-metric {
+      padding: 0.75rem 1rem;
+      border-radius: 999px;
+      background: rgba(15,23,42,0.35);
+      font-size: 0.85rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+    }
+    .hero-metric span.value { font-weight: 700; }
+    .hero-deadline {
+      margin-top: 0.85rem;
+      font-size: 0.85rem;
+      opacity: 0.92;
+    }
+    .hero-card {
+      background: rgba(15,23,42,0.7);
+      border-radius: 1.25rem;
+      padding: 1.5rem 1.25rem;
+      box-shadow: 0 18px 45px rgba(15,23,42,0.35);
+      backdrop-filter: blur(10px);
+    }
+    .hero-card h3 {
+      margin: 0 0 0.75rem;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #facc15;
+    }
+    .hero-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: 0.9rem;
+    }
+    .hero-card li { margin-bottom: 0.5rem; }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.25rem 0.7rem;
+      border-radius: 999px;
+      background: rgba(15,23,42,0.6);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 0.5rem;
+    }
+    section {
+      margin-bottom: 3rem;
+    }
+    section h2 {
+      font-size: 1.6rem;
+      margin-bottom: 0.75rem;
+    }
+    section p.lead {
+      max-width: 46rem;
+      font-size: 0.98rem;
+      color: #4b5563;
+      margin-bottom: 1.5rem;
+    }
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.4rem;
+    }
+    .card {
+      background: #ffffff;
+      border-radius: 1rem;
+      padding: 1.25rem 1.35rem;
+      box-shadow: 0 10px 25px rgba(15,23,42,0.06);
+    }
+    .card h3 {
+      margin-top: 0;
+      font-size: 1rem;
+      margin-bottom: 0.45rem;
+    }
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+      margin-top: 0.4rem;
+    }
+    .pill {
+      font-size: 0.78rem;
+      padding: 0.25rem 0.7rem;
+      border-radius: 999px;
+      background: #e5e7eb;
+    }
+    .highlight-box {
+      border-radius: 1rem;
+      padding: 1.4rem 1.5rem;
+      background: #111827;
+      color: #f9fafb;
+      display: grid;
+      gap: 0.75rem;
+      margin-top: 1rem;
+    }
+    .highlight-box h3 { margin: 0; font-size: 1.05rem; }
+    .highlight-box p { margin: 0; font-size: 0.92rem; }
+    .levels-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+      background: #ffffff;
+      border-radius: 0.75rem;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(15,23,42,0.06);
+    }
+    .levels-table th,
+    .levels-table td {
+      padding: 0.7rem 0.75rem;
+      border-bottom: 1px solid #e5e7eb;
+      text-align: left;
+      white-space: nowrap;
+    }
+    .levels-table th { background: #f3f4f6; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em; }
+    .levels-table tfoot td { font-weight: 700; background: #f9fafb; }
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.4rem;
+    }
+    .step-number {
+      width: 2rem;
+      height: 2rem;
+      border-radius: 999px;
+      background: #111827;
+      color: #f9fafb;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+    }
+    .faq-item {
+      background: #ffffff;
+      border-radius: 0.9rem;
+      padding: 1rem 1.1rem;
+      margin-bottom: 0.75rem;
+      box-shadow: 0 1px 0 rgba(15,23,42,0.05);
+    }
+    .faq-item h3 {
+      font-size: 0.98rem;
+      margin: 0 0 0.3rem;
+    }
+    footer.cta-footer {
+      background: #020617;
+      color: #e5e7eb;
+      padding: 2rem 1.5rem 2.5rem;
+      margin-top: 1rem;
+    }
+    footer .inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+    }
+    footer h2 { margin: 0 0 0.35rem; font-size: 1.4rem; }
+    footer p { margin: 0.1rem 0; font-size: 0.9rem; }
+    footer .contacts { font-size: 0.88rem; opacity: 0.9; }
+
+    /* Sub-navigation */
+    .subnav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: saturate(150%) blur(8px);
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .subnav .inner {
+      max-width: 1200px; margin: 0 auto; padding: 0.6rem 1.5rem;
+      display: flex; gap: 1rem; align-items: center; justify-content: space-between;
+    }
+    .subnav .links { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+    .subnav a { color: #111827; font-size: 0.9rem; padding: 0.35rem 0.55rem; border-radius: 0.5rem; }
+    .subnav a:focus-visible { outline: 2px solid #054ada; outline-offset: 2px; }
+    .subnav a.active { background: #e5e7eb; }
+    .subnav .cta { margin-left: auto; }
+
+    /* Sticky bottom CTA */
+    .sticky-cta { position: fixed; left: 0; right: 0; bottom: -120px; transition: bottom 220ms ease; }
+    .sticky-cta.visible { bottom: 0; }
+    .sticky-cta .bar { background: #111827; color: #f9fafb; padding: 0.8rem 1rem; display: flex; justify-content: center; gap: 0.8rem; align-items: center; }
+    .sticky-cta .bar .button { background: linear-gradient(135deg, #facc15, #fb923c); color: #111827; }
+    :root { --sticky-cta-height: 72px; }
+    body.has-sticky-padding { padding-bottom: var(--sticky-cta-height); }
+
+    /* Table refinements */
+    .levels-table tbody tr:nth-child(even) { background: #fafafa; }
+    .levels-table td:nth-child(2), .levels-table td:nth-child(3) { text-align: right; }
+
+    /* Leadership Tier Premium Section */
+    .leadership-tier {
+      background: linear-gradient(135deg, #020617 0%, #1e293b 100%);
+      color: #f1f5f9;
+      padding: 3rem 2rem;
+      margin: 3rem -2rem 2rem;
+      border-radius: 1.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .leadership-tier::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(250, 204, 21, 0.15), transparent 70%);
+      pointer-events: none;
+    }
+    .leadership-tier .inner { position: relative; z-index: 1; max-width: 900px; margin: 0 auto; }
+    .leadership-tier .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.4rem 1rem;
+      background: rgba(250, 204, 21, 0.2);
+      border: 1px solid rgba(250, 204, 21, 0.4);
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #facc15;
+      margin-bottom: 1.5rem;
+    }
+    .leadership-tier h2 { color: #ffffff; font-size: 2.2rem; margin-bottom: 1rem; }
+    .leadership-tier .lead { color: #cbd5e1; font-size: 1.1rem; margin-bottom: 2rem; }
+    .leadership-tier .benefits {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+    .leadership-tier .benefit-card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 1rem;
+      padding: 1.5rem;
+    }
+    .leadership-tier .benefit-card h3 { color: #facc15; font-size: 1.1rem; margin-bottom: 0.5rem; }
+    .leadership-tier .benefit-card p { color: #e2e8f0; font-size: 0.95rem; line-height: 1.6; }
+    .leadership-tier .stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin: 2rem 0;
+      padding: 1.5rem 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .leadership-tier .stat {
+      flex: 1;
+      min-width: 200px;
+    }
+    .leadership-tier .stat-value {
+      font-size: 2rem;
+      font-weight: 800;
+      color: #facc15;
+      margin-bottom: 0.25rem;
+    }
+    .leadership-tier .stat-label {
+      font-size: 0.9rem;
+      color: #cbd5e1;
+    }
+    .leadership-tier .requirements {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      margin: 2rem 0;
+    }
+    .leadership-tier .requirements h3 { color: #ffffff; margin-bottom: 1rem; }
+    .leadership-tier .requirements ul { list-style: none; padding: 0; margin: 0; }
+    .leadership-tier .requirements li {
+      padding: 0.5rem 0;
+      color: #e2e8f0;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .leadership-tier .requirements li::before { content: "✓"; color: #facc15; font-weight: bold; }
+    .leadership-tier .not-for {
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .leadership-tier .not-for p {
+      color: #f87171;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .leadership-tier .not-for p::before { content: "❌"; }
+    .leadership-tier .cta-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    .leadership-tier .button {
+      background: linear-gradient(135deg, #facc15, #fb923c);
+      color: #111827;
+      padding: 1rem 2rem;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .leadership-tier .button.secondary {
+      background: transparent;
+      border: 2px solid rgba(250, 204, 21, 0.5);
+      color: #facc15;
+    }
+
+    /* Focus and accessibility */
+    a.button:focus-visible, button:focus-visible { outline: 3px solid #f59e0b; outline-offset: 3px; }
+
+    @media (max-width: 768px) {
+      .hero-inner {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      header.hero {
+        padding: 2rem 1.5rem 2.5rem;
+      }
+      .subnav .inner { padding: 0.5rem 1rem; }
+      .sticky-cta .bar { padding: 0.7rem; }
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "InvestmentOrSavingsProduct",
+    "name": "Sector Workforce Infrastructure Investment (SWD-INV)",
+    "description": "Structured, sector-based investment into workforce development, deployment, acquisition, and management of certified workforce capacity systems",
+    "provider": {
+      "@type": "Organization",
+      "name": "BTH Education Group",
+      "url": "https://www.btheducationgroup.org"
+    },
+    "category": "Workforce Infrastructure Investment",
+    "feesAndCommissionsSpecification": "Multi-layer revenue model across four distinct engines"
+  }
+  </script>
+</head>
+<body>
+  <div class="page">
+
+    <header class="hero" id="top">
+      <div class="hero-inner">
+        <div>
+          <div class="hero-kicker">BTH EDUCATION GROUP • WORKFORCE INFRASTRUCTURE INVESTMENT</div>
+          <h1 class="hero-title">Workforce Infrastructure is the Engine of Every Economy</h1>
+          <p class="hero-subtitle">
+            <strong>This is not an investment in education.</strong><br>
+            <strong>This is not an investment in training.</strong><br><br>
+            This is an investment in <strong>workforce infrastructure</strong> — the system that powers companies, industries, and economies. A structured, sector-based investment model enabling investors to participate directly in the creation and operation of certified workforce capacity systems across <strong>26 global sectors</strong>.
+          </p>
+          <div class="hero-metrics">
+            <div class="hero-metric"><span class="value">$18,000</span> Investment Entry</div>
+            <div class="hero-metric"><span class="value">2 Cohorts</span> 100 Workforce Capacity</div>
+            <div class="hero-metric"><span class="value">4 Revenue</span> Engines</div>
+            <div class="hero-metric"><span class="value">$69,582.50</span> ROI (3 years)</div>
+          </div>
+          <div style="display:flex; flex-wrap:wrap; gap:1rem; margin-top:1.5rem;">
+            <a href="#investment-structure" class="button" data-track-cta data-cta-location="hero" style="background:linear-gradient(135deg,#facc15,#fb923c); color:#111827;">View Investment Structure</a>
+            <a href="#roi-calculator" class="button" data-track-cta data-cta-location="hero" style="background:transparent; border:2px solid rgba(255,255,255,0.5); color:#fff;">Calculate Returns</a>
+          </div>
+        </div>
+        <aside class="hero-card">
+          <div class="badge">Investment Classification • Infrastructure</div>
+          <h3>Sector Workforce Director – Investor (SWD-INV)</h3>
+          <p style="font-size:0.95rem; margin-bottom:1rem; line-height:1.6;">
+            Participate in the design, production, deployment, acquisition, and management of sector-level workforce capacity systems.
+          </p>
+          <hr style="border:none;border-top:1px solid rgba(148,163,184,0.5);margin:1rem 0;" />
+          <h3 style="margin-bottom:0.75rem;">Multi-Layer Revenue Architecture</h3>
+          <ul style="font-size:0.9rem; line-height:1.8;">
+            <li>🔨 <strong>Workforce Development</strong> — 5% revenue share</li>
+            <li>🚀 <strong>Workforce Deployment</strong> — 5% revenue share</li>
+            <li>🤝 <strong>Workforce Acquisition</strong> — 5% revenue share</li>
+            <li>📊 <strong>Workforce Management</strong> — 5% revenue share</li>
+          </ul>
+          <hr style="border:none;border-top:1px solid rgba(148,163,184,0.5);margin:1rem 0;" />
+          <p style="font-size:0.85rem; opacity:0.9; line-height:1.6;">
+            <strong>Key Principle:</strong> The same workforce generates value multiple times across its lifecycle — creating recurring, infrastructure-level returns.
+          </p>
+        </aside>
+      </div>
+    </header>
+
+    <nav class="subnav" aria-label="Section navigation">
+      <div class="inner">
+        <div class="links">
+          <a href="#positioning">Positioning</a>
+          <a href="#investment-structure">Investment Structure</a>
+          <a href="#two-roles">Two-Role Architecture</a>
+          <a href="#cohort-engine">Cohort Engine</a>
+          <a href="#revenue-engines">Revenue Engines</a>
+          <a href="#roi-calculator">ROI Calculator</a>
+          <a href="#sectors">26 Sectors</a>
+          <a href="#enterprise">Enterprise Alignment</a>
+        </div>
+        <div class="cta">
+          <a href="mailto:investment@btheducationgroup.org?subject=SWD-INV Strategic Briefing Request" class="button" data-track-cta data-cta-location="subnav">Request Briefing</a>
+        </div>
+      </div>
+    </nav>
+
+    <section id="positioning">
+      <h2>What is Workforce Infrastructure?</h2>
+      <p class="lead">
+        This is not training. This is not recruitment. This is not outsourcing.<br><br>
+        <strong>This is workforce infrastructure</strong> — the foundational system that develops, deploys, and manages certified professional capacity at scale across industries and economies.
+      </p>
+      <div class="grid-3">
+        <div class="card">
+          <h3>🏗️ Infrastructure, Not Education</h3>
+          <p>
+            BTH Education Group operates as a <strong>Workforce Capacity Deployment Organization</strong> — designing and operating systems that build, supply, and manage talent pipelines for enterprises at scale.
+          </p>
+        </div>
+        <div class="card">
+          <h3>🔄 Multi-Layer Value Chain</h3>
+          <p>
+            Unlike traditional models where value is realized once, workforce infrastructure generates <strong>multiple revenue cycles</strong> from the same asset: human capital — across development, deployment, acquisition, and management.
+          </p>
+        </div>
+        <div class="card">
+          <h3>📈 Infrastructure-Class Returns</h3>
+          <p>
+            Linked to <strong>real economic activity</strong>, not speculative markets. Demand-driven, sector-aligned, and anchored in perpetual workforce requirements across 26 global industries.
+          </p>
+        </div>
+      </div>
+      <div class="highlight-box">
+        <h3>Core Economic Principle</h3>
+        <p>
+          <strong>The same workforce generates value multiple times across its lifecycle.</strong> This creates recurring revenue, scalable economic output, and infrastructure-level returns. This is not linear income — this is compounded workforce value generation.
+        </p>
+      </div>
+    </section>
+
+    <section id="investment-structure">
+      <h2>Investment Structure: Sector Workforce Director – Investor (SWD-INV)</h2>
+      <p class="lead">
+        A structured entry position that activates a complete workforce production system across a designated industry sector.
+      </p>
+      <div class="highlight-box" style="background:linear-gradient(135deg,#0F172A,#1E3A8A); color:#fff;">
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:2rem; margin-bottom:1.5rem;">
+          <div>
+            <h3 style="color:#FACC15; margin-bottom:0.5rem;">Investment Value</h3>
+            <p style="font-size:2rem; font-weight:800; margin:0;">$18,000 USD</p>
+            <p style="font-size:0.85rem; opacity:0.7; margin:0.25rem 0 0;">(≈ 10,000,000 FCFA equivalent)</p>
+          </div>
+          <div>
+            <h3 style="color:#FACC15; margin-bottom:0.5rem;">Classification</h3>
+            <p style="font-size:1.2rem; font-weight:700; margin:0;">Workforce Infrastructure Investment</p>
+            <p style="font-size:0.85rem; opacity:0.7; margin:0.25rem 0 0;">26 Industry Sectors</p>
+          </div>
+          <div>
+            <h3 style="color:#FACC15; margin-bottom:0.5rem;">Platform</h3>
+            <p style="font-size:1.2rem; font-weight:700; margin:0;">OEDP Work Network</p>
+            <p style="font-size:0.85rem; opacity:0.7; margin:0.25rem 0 0;">BTH Education Group</p>
+          </div>
+        </div>
+        <h3 style="color:#fff; margin:1.5rem 0 1rem;">Deployment Architecture</h3>
+        <p style="margin-bottom:1rem;">Each SWD-INV investment activates:</p>
+        <ul style="line-height:1.9;">
+          <li><strong>2 Workforce Deployment Specialists (WDS)</strong> — execution layer</li>
+          <li><strong>2 Workforce Cohorts</strong> — 50 professionals each</li>
+          <li><strong>Total Capacity:</strong> 100 certified professionals (Level 1–5)</li>
+          <li><strong>Sector Control:</strong> Defined industry focus with enterprise alignment</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="two-roles">
+      <h2>Two-Role Architecture: Investor Layer & Execution Layer</h2>
+      <p class="lead">
+        The SWD-INV model separates strategic investment from operational execution through a two-tier structure designed for scalability and clarity.
+      </p>
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:2rem; margin-top:2rem;">
+        <!-- SWD-INV Card -->
+        <div style="background:linear-gradient(135deg,#FEFCE8,#FDE68A); border:2px solid #FACC15; border-radius:1.5rem; padding:2rem;">
+          <div style="display:inline-block; padding:0.3rem 0.75rem; background:#FACC15; color:#111827; border-radius:999px; font-size:0.75rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:1.25rem;">Investor Tier</div>
+          <h3 style="font-size:1.5rem; margin-bottom:0.75rem; color:#111827;">SWD-INV<br><span style="font-size:0.9rem; font-weight:400; color:#78350F;">Sector Workforce Director – Investor</span></h3>
+          <div style="margin:1.5rem 0;">
+            <div style="font-size:0.85rem; color:#78350F; margin-bottom:0.5rem;">Investment:</div>
+            <div style="font-size:2rem; font-weight:800; color:#111827;">$18,000 USD</div>
+          </div>
+          <hr style="border:none; border-top:1px solid #D97706; margin:1.5rem 0;">
+          <h4 style="font-size:0.95rem; margin-bottom:0.75rem; color:#111827;">Controls:</h4>
+          <ul style="line-height:1.8; font-size:0.9rem; color:#292524;">
+            <li>2 Workforce Deployment Specialists (WDS)</li>
+            <li>2 Cohorts (100 workforce capacity)</li>
+            <li>Sector-level strategic authority</li>
+          </ul>
+          <hr style="border:none; border-top:1px solid #D97706; margin:1.5rem 0;">
+          <h4 style="font-size:0.95rem; margin-bottom:0.75rem; color:#111827;">Revenue:</h4>
+          <p style="font-size:0.9rem; color:#292524; margin:0;"><strong>5% of TOTAL revenue</strong> from 2 cohorts<br>Across ALL four engines</p>
+        </div>
+
+        <!-- WDS Card -->
+        <div style="background:linear-gradient(135deg,#EFF6FF,#DBEAFE); border:2px solid#3B82F6; border-radius:1.5rem; padding:2rem;">
+          <div style="display:inline-block; padding:0.3rem 0.75rem; background:#3B82F6; color:#fff; border-radius:999px; font-size:0.75rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:1.25rem;">Execution Tier</div>
+          <h3 style="font-size:1.5rem; margin-bottom:0.75rem; color:#111827;">WDS<br><span style="font-size:0.9rem; font-weight:400; color:#1E3A8A;">Workforce Deployment Specialist</span></h3>
+          <div style="margin:1.5rem 0;">
+            <div style="font-size:0.85rem; color:#1E3A8A; margin-bottom:0.5rem;">Operational Role:</div>
+            <div style="font-size:1.3rem; font-weight:700; color:#111827;">Builds Cohorts</div>
+          </div>
+          <hr style="border:none; border-top:1px solid #60A5FA; margin:1.5rem 0;">
+          <h4 style="font-size:0.95rem; margin-bottom:0.75rem; color:#111827;">Responsibility:</h4>
+          <ul style="line-height:1.8; font-size:0.9rem; color:#1E3A8A;">
+            <li>Build 1 Cohort (50 workforce)</li>
+            <li>Deploy Level 1–5 pathways</li>
+            <li>Execute sector operations</li>
+          </ul>
+          <hr style="border:none; border-top:1px solid #60A5FA; margin:1.5rem 0;">
+          <h4 style="font-size:0.95rem; margin-bottom:0.75rem; color:#111827;">Revenue:</h4>
+          <p style="font-size:0.9rem; color:#1E3A8A; margin:0;"><strong>5% of their cohort</strong> revenue<br>OR<br><strong>2.5%</strong> of total 2-cohort revenue</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="cohort-engine">
+      <h2>Cohort Engine: The Multi-Layer Value Chain</h2>
+      <p class="lead">
+        Each Workforce Deployment Specialist builds <strong>1 cohort of 50 certified professionals</strong> across 5 levels of professional development. This creates a predictable, high-value capacity deployment pipeline aligned to real enterprise demand.
+      </p>
+      <div style="overflow-x:auto;">
+        <table class="levels-table">
+          <thead>
+            <tr>
+              <th>Level</th>
+              <th>Count per Cohort</th>
+              <th>Value per Unit (USD)</th>
+              <th>Total Value (USD)</th>
+              <th>Role / Outcome</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Level 1</strong></td>
+              <td>15</td>
+              <td>$8,100</td>
+              <td><strong>$121,500</strong></td>
+              <td>Technical foundations, entry-level certification, job readiness</td>
+            </tr>
+            <tr>
+              <td><strong>Level 2</strong></td>
+              <td>15</td>
+              <td>$12,000</td>
+              <td><strong>$180,000</strong></td>
+              <td>Associate-level specialization and productivity optimization</td>
+            </tr>
+            <tr>
+              <td><strong>Level 3</strong></td>
+              <td>10</td>
+              <td>$16,000</td>
+              <td><strong>$160,000</strong></td>
+              <td>Advanced professional, team leads and project coordination</td>
+            </tr>
+            <tr>
+              <td><strong>Level 4</strong></td>
+              <td>5</td>
+              <td>$20,000</td>
+              <td><strong>$100,000</strong></td>
+              <td>Management &amp; strategic leadership within business units</td>
+            </tr>
+            <tr>
+              <td><strong>Level 5</strong></td>
+              <td>5</td>
+              <td>$26,865</td>
+              <td><strong>$134,325</strong></td>
+              <td>C-suite pathways: COO, CFO, CTO, CSO, CMO (350K–800K USD/year roles)</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="3"><strong>Total per Cohort (50 Workforce)</strong></td>
+              <td colspan="2"><strong>$695,825 USD</strong></td>
+            </tr>
+            <tr style="background:linear-gradient(135deg,#FEF3C7,#FDE68A);">
+              <td colspan="3"><strong>SWD-INV Portfolio (2 Cohorts × 50)</strong></td>
+              <td colspan="2"><strong style="color:#78350F; font-size:1.2rem;">$1,391,650 USD</strong></td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+      <p style="font-size:0.86rem;color:#6b7280;margin-top:1rem; line-height:1.6;">
+        <strong>Critical Insight:</strong> This workforce value is realized <strong>multiple times</strong> across the four revenue engines (Development, Deployment, Acquisition, Management) — not just once. This is the core of the infrastructure model: compounded value generation from the same human capital asset.
+      </p>
+    </section>
+
+    <section id="revenue-engines" style="background:linear-gradient(135deg,#0F172A,#0F2060); color:#fff; padding:4rem 2rem; margin:3rem -2rem; border-radius:1.5rem;">
+      <div style="max-width:1100px; margin:0 auto;">
+        <div style="text-align:center; margin-bottom:3rem;">
+          <div style="display:inline-block; padding:0.3rem 0.9rem; background:rgba(250,204,21,0.2); border:1px solid rgba(250,204,21,0.4); border-radius:999px; font-size:0.75rem; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#FACC15; margin-bottom:1.5rem;">Multi-Layer Revenue Architecture</div>
+          <h2 style="color:#fff; margin-bottom:1rem;">Four Revenue Engines — One Workforce Asset</h2>
+          <p style="max-width:640px; margin:0 auto; color:rgba(255,255,255,0.7); font-size:1rem; line-height:1.7;">
+            The defining strength of workforce infrastructure is its <strong>layered revenue structure</strong>. Unlike traditional models where value is realized once, this system generates four distinct revenue streams from the same workforce across its lifecycle.
+          </p>
+        </div>
+
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:1.5rem; margin-bottom:3rem;">
+          <!-- Engine 1 -->
+          <div style="background:rgba(255,255,255,0.05); backdrop-filter:blur(10px); border:1px solid rgba(255,255,255,0.1); border-radius:1.25rem; padding:2rem 1.75rem;">
+            <div style="font-size:2rem; margin-bottom:1rem;">🔨</div>
+            <h3 style="color:#FACC15; font-size:1.1rem; margin-bottom:0.75rem;">ENGINE 1<br>Workforce Development</h3>
+            <p style="font-size:0.88rem; color:rgba(255,255,255,0.7); line-height:1.7; margin-bottom:1.25rem;">
+              Revenue from certification pathways (Level 1–5). Structured, predictable, and repeatable workforce production.
+            </p>
+            <div style="background:rgba(250,204,21,0.1); border-radius:0.75rem; padding:1rem; border:1px solid rgba(250,204,21,0.3);">
+              <div style="font-size:0.75rem; color:#FACC15; margin-bottom:0.25rem;">SWD-INV Share:</div>
+              <div style="font-size:1.5rem; font-weight:800; color:#fff;">5%</div>
+            </div>
+          </div>
+
+          <!-- Engine 2 -->
+          <div style="background:rgba(255,255,255,0.05); backdrop-filter:blur(10px); border:1px solid rgba(255,255,255,0.1); border-radius:1.25rem; padding:2rem 1.75rem;">
+            <div style="font-size:2rem; margin-bottom:1rem;">🚀</div>
+            <h3 style="color:#FACC15; font-size:1.1rem; margin-bottom:0.75rem;">ENGINE 2<br>Workforce Deployment</h3>
+            <p style="font-size:0.88rem; color:rgba(255,255,255,0.7); line-height:1.7; margin-bottom:1.25rem;">
+              Revenue when workforce is deployed into enterprise contracts, operational projects, and sector-specific roles.
+            </p>
+            <div style="background:rgba(250,204,21,0.1); border-radius:0.75rem; padding:1rem; border:1px solid rgba(250,204,21,0.3);">
+              <div style="font-size:0.75rem; color:#FACC15; margin-bottom:0.25rem;">SWD-INV Share:</div>
+              <div style="font-size:1.5rem; font-weight:800; color:#fff;">5%</div>
+            </div>
+          </div>
+
+          <!-- Engine 3 -->
+          <div style="background:rgba(255,255,255,0.05); backdrop-filter:blur(10px); border:1px solid rgba(255,255,255,0.1); border-radius:1.25rem; padding:2rem 1.75rem;">
+            <div style="font-size:2rem; margin-bottom:1rem;">🤝</div>
+            <h3 style="color:#FACC15; font-size:1.1rem; margin-bottom:0.75rem;">ENGINE 3<br>Workforce Acquisition</h3>
+            <p style="font-size:0.88rem; color:rgba(255,255,255,0.7); line-height:1.7; margin-bottom:1.25rem;">
+              Revenue when organizations sponsor workforce cohorts or acquire pre-trained talent pipelines at scale.
+            </p>
+            <div style="background:rgba(250,204,21,0.1); border-radius:0.75rem; padding:1rem; border:1px solid rgba(250,204,21,0.3);">
+              <div style="font-size:0.75rem; color:#FACC15; margin-bottom:0.25rem;">SWD-INV Share:</div>
+              <div style="font-size:1.5rem; font-weight:800; color:#fff;">5%</div>
+            </div>
+          </div>
+
+          <!-- Engine 4 -->
+          <div style="background:rgba(255,255,255,0.05); backdrop-filter:blur(10px); border:1px solid rgba(255,255,255,0.1); border-radius:1.25rem; padding:2rem 1.75rem;">
+            <div style="font-size:2rem; margin-bottom:1rem;">📊</div>
+            <h3 style="color:#FACC15; font-size:1.1rem; margin-bottom:0.75rem;">ENGINE 4<br>Workforce Management</h3>
+            <p style="font-size:0.88rem; color:rgba(255,255,255,0.7); line-height:1.7; margin-bottom:1.25rem;">
+              Revenue through workforce performance management, enterprise contracts, and upskilling across lifecycle.
+            </p>
+            <div style="background:rgba(250,204,21,0.1); border-radius:0.75rem; padding:1rem; border:1px solid rgba(250,204,21,0.3);">
+              <div style="font-size:0.75rem; color:#FACC15; margin-bottom:0.25rem;">SWD-INV Share:</div>
+              <div style="font-size:1.5rem; font-weight:800; color:#fff;">5%</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="background:rgba(14,165,233,0.1); border:1px solid rgba(14,165,233,0.3); border-radius:1rem; padding:2rem; text-align:center;">
+          <p style="font-size:1rem; color:rgba(255,255,255,0.8); margin-bottom:0.5rem;">This creates:</p>
+          <p style="font-size:1.3rem; font-weight:700; color:#fff; line-height:1.6;">
+            <span style="color:#FACC15;">Recurring revenue</span> • 
+            <span style="color:#FACC15;">Scalable output</span> • 
+            <span style="color:#FACC15;">Infrastructure-level returns</span>
+          </p>
+          <p style="font-size:0.9rem; color:rgba(255,255,255,0.6); margin-top:1rem; font-style:italic;">
+            This is not linear income. This is <strong>compounded workforce value generation</strong>.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="roi-calculator">
+      <h2>ROI Calculator: Infrastructure-Class Returns</h2>
+      <p class="lead">
+        SWD-INV returns are calculated on the <strong>Workforce Development engine</strong> alone (the most predictable of the four engines). Additional revenue from Deployment, Acquisition, and Management engines creates upside beyond the base calculation shown here.
+      </p>
+      <div style="background:linear-gradient(135deg,#F9FAFB,#F3F4F6); border-radius:1.5rem; padding:3rem 2.5rem; margin-top:2rem;">
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:2rem; margin-bottom:2.5rem;">
+          <div>
+            <div style="font-size:0.8rem; color:#6B7280; text-transform:uppercase; letter-spacing:0.1em; margin-bottom:0.5rem;">Investment</div>
+            <div style="font-size:2.2rem; font-weight:900; color:#111827;">$18,000</div>
+            <div style="font-size:0.85rem; color:#9CA3AF; margin-top:0.25rem;">USD (Entry Capital)</div>
+          </div>
+          <div>
+            <div style="font-size:0.8rem; color:#6B7280; text-transform:uppercase; letter-spacing:0.1em; margin-bottom:0.5rem;">Portfolio Value</div>
+            <div style="font-size:2.2rem; font-weight:900; color:#111827;">$1,391,650</div>
+            <div style="font-size:0.85rem; color:#9CA3AF; margin-top:0.25rem;">2 Cohorts × 50 Workforce</div>
+          </div>
+          <div>
+            <div style="font-size:0.8rem; color:#6B7280; text-transform:uppercase; letter-spacing:0.1em; margin-bottom:0.5rem;">Revenue Share</div>
+            <div style="font-size:2.2rem; font-weight:900; color:#111827;">5%</div>
+            <div style="font-size:0.85rem; color:#9CA3AF; margin-top:0.25rem;">Across All Engines</div>
+          </div>
+        </div>
+
+        <div style="background:#fff; border-radius:1rem; padding:2rem; border:2px solid #FACC15; box-shadow:0 10px 40px rgba(250,204,21,0.2);">
+          <div style="text-align:center; margin-bottom:1.5rem;">
+            <div style="font-size:0.85rem; color:#78350F; margin-bottom:0.5rem; font-weight:600;">Total ROI (Development Engine Only)</div>
+            <div style="font-size:3.5rem; font-weight:900; color:#111827; line-height:1;">$69,582.50</div>
+            <div style="font-size:0.9rem; color:#78350F; margin-top:0.75rem;">Paid over 3 years • Commencing Year 2 post-investment</div>
+          </div>
+          <hr style="border:none; border-top:1px solid #E5E7EB; margin:1.5rem 0;">
+          <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:1.5rem; text-align:center;">
+            <div>
+              <div style="font-size:0.75rem; color:#6B7280; margin-bottom:0.5rem;">Year 1</div>
+              <div style="font-size:1.3rem; font-weight:700; color:#111827;">$0</div>
+              <div style="font-size:0.75rem; color:#9CA3AF;">(Development phase)</div>
+            </div>
+            <div>
+              <div style="font-size:0.75rem; color:#6B7280; margin-bottom:0.5rem;">Years 2-4</div>
+              <div style="font-size:1.3rem; font-weight:700; color:#111827;">$23,194.17</div>
+              <div style="font-size:0.75rem; color:#9CA3AF;">/year</div>
+            </div>
+            <div>
+              <div style="font-size:0.75rem; color:#6B7280; margin-bottom:0.5rem;">Total Return</div>
+              <div style="font-size:1.3rem; font-weight:700; color:#FACC15;">386.6%</div>
+              <div style="font-size:0.75rem; color:#9CA3AF;">over 4 years</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:2rem; padding:1.5rem; background:rgba(59,130,246,0.08); border-radius:0.875rem; border:1px solid rgba(59,130,246,0.2);">
+          <p style="font-size:0.9rem; color:#1E3A8A; line-height:1.7; margin:0;">
+            <strong>⚡ Important:</strong> This calculation shows <strong>only the Development engine</strong> (the foundational and most predictable revenue stream). Additional returns from <strong>Deployment, Acquisition, and Management engines</strong> create substantial upside beyond this base ROI. These engines activate as workforce enters operational cycles, creating compounded long-term value.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="strategic-advantages" style="margin-top:4rem;">
+      <h2>Strategic Advantages of Workforce Infrastructure Investment</h2>
+      <div class="grid-3">
+        <div class="card">
+          <h3>🏗️ Infrastructure-Class Asset</h3>
+          <p>
+            Linked to <strong>real economic activity</strong>, not speculative markets. Demand-driven, non-cyclical, and anchored in perpetual workforce requirements across industries.
+          </p>
+        </div>
+        <div class="card">
+          <h3>🎯 Sector-Level Control</h3>
+          <p>
+            Defined industry focus with structured scalability. Clear enterprise alignment and strategic positioning within specific markets.
+          </p>
+        </div>
+        <div class="card">
+          <h3>🔄 Multi-Revenue Model</h3>
+          <p>
+            Four independent revenue engines that reinforce and compound value cycles. Same asset generates multiple revenue streams across its lifecycle.
+          </p>
+        </div>
+        <div class="card">
+          <h3>📈 Long-Term Relevance</h3>
+          <p>
+            Workforce demand is <strong>perpetual</strong>. Industry evolution requires continuous capacity. Infrastructure remains relevant across economic cycles.
+          </p>
+        </div>
+        <div class="card">
+          <h3>⚙️ Operational Scalability</h3>
+          <p>
+            WDS execution layer handles operational deployment. Investor focuses on strategic oversight, not day-to-day management.
+          </p>
+        </div>
+        <div class="card">
+          <h3>🌍 Global Platform Integration</h3>
+          <p>
+            Built on <strong>OEDP Work Network</strong> — established infrastructure trusted by enterprises for workforce capacity at scale.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="sectors">
+      <h2>26 Industry Sectors • Global Infrastructure Coverage</h2>
+      <p class="lead">
+        The SWD-INV model spans 26 industry sectors — creating a diversified, sector-aligned infrastructure investment framework anchored in real workforce demand across the global economy.
+      </p>
+      <div class="grid-3">
+        <div class="card">
+          <h3>Technology &amp; Infrastructure</h3>
+          <div class="pill-row">
+            <span class="pill">IT &amp; Cybersecurity</span>
+            <span class="pill">Telecommunications</span>
+            <span class="pill">Web &amp; Software Engineering</span>
+            <span class="pill">EdTech</span>
+            <span class="pill">Cloud & DevOps</span>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Industry &amp; Production</h3>
+          <div class="pill-row">
+            <span class="pill">Manufacturing &amp; Industrial</span>
+            <span class="pill">Automotive Technology</span>
+            <span class="pill">Construction &amp; Infrastructure</span>
+            <span class="pill">Energy &amp; Renewable Systems</span>
+            <span class="pill">Agricultural Technology</span>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Services &amp; Public Systems</h3>
+          <div class="pill-row">
+            <span class="pill">Healthcare & Medical</span>
+            <span class="pill">Finance &amp; Accounting</span>
+            <span class="pill">Business &amp; Management</span>
+            <span class="pill">Government &amp; Civic Tech</span>
+            <span class="pill">Public Safety &amp; Emergency</span>
+            <span class="pill">Legal & Compliance</span>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Innovation &amp; Future Skills</h3>
+          <div class="pill-row">
+            <span class="pill">Research &amp; Development</span>
+            <span class="pill">Biotech &amp; Life Sciences</span>
+            <span class="pill">Aerospace &amp; Defense</span>
+            <span class="pill">Transportation &amp; Logistics</span>
+            <span class="pill">Data Science & AI</span>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Creative &amp; Digital Economies</h3>
+          <div class="pill-row">
+            <span class="pill">Creative Arts</span>
+            <span class="pill">Digital Design &amp; UX</span>
+            <span class="pill">Media &amp; Content</span>
+            <span class="pill">Marketing & Communications</span>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Emerging Markets</h3>
+          <div class="pill-row">
+            <span class="pill">Smart Cities</span>
+            <span class="pill">Sustainability</span>
+            <span class="pill">Quantum Computing</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="enterprise">
+      <h2>Enterprise Alignment: How This Connects to Organizations</h2>
+      <p class="lead">
+        The SWD-INV infrastructure model is designed to integrate seamlessly with enterprise workforce needs. Organizations can engage through acquisition, sponsorship, or strategic partnership frameworks.
+      </p>
+      <div class="highlight-box" style="background:linear-gradient(135deg,#EFF6FF,#DBEAFE); color:#111827; border:2px solid #3B82F6;">
+        <h3 style="color:#1E3A8A; margin-bottom:1rem;">🏢 Enterprise Workforce Infrastructure Portal</h3>
+        <p style="margin-bottom:1rem; line-height:1.7;">
+          For organizations, governments, and enterprises seeking structured workforce capacity at scale — explore our dedicated <strong>B2B Workforce Infrastructure platform</strong> which provides:
+        </p>
+        <ul style="line-height:1.9; margin-bottom:1.5rem;">
+          <li>Pre-trained workforce cohort acquisition</li>
+          <li>Custom Level 1–5 pathway development for your industry</li>
+          <li>Turnkey talent pipeline solutions</li>
+          <li>Long-term workforce management contracts</li>
+        </ul>
+        <a href="workforce-infrastructure.html" class="button" style="background:linear-gradient(135deg,#054ada,#0ea5e9); color:#fff; display:inline-block;">
+          View Enterprise Workforce Infrastructure →
+        </a>
+      </div>
+    </section>
+
+    <section id="blueprint">
+      <h2>The Workforce Development Blueprint: 5 Core Dimensions</h2>
+      <p class="lead">
+        Every workforce cohort is built across five interconnected dimensions that align individuals and organizations to global best practices, creating workforce that performs at international standards.
+      </p>
+      <div class="grid-3">
+        <div class="card">
+          <h3>1. Standardization &amp; Professional Development</h3>
+          <p>
+            Unified competency frameworks that align individuals and organizations to global best practices, vendor certifications, and regulated standards.
+          </p>
+        </div>
+        <div class="card">
+          <h3>2. Leadership &amp; Customer Service</h3>
+          <p>
+            Leadership, customer success, service quality, and soft-skills portfolios embedded into every industry pathway — preparing workforce for supervisory and client-facing roles.
+          </p>
+        </div>
+        <div class="card">
+          <h3>3. Entrepreneurship &amp; Finance</h3>
+          <p>
+            Programs that equip talent to build ventures, manage budgets, understand ROI, and integrate financial literacy into daily business decisions.
+          </p>
+        </div>
+        <div class="card">
+          <h3>4. Interoperability &amp; Inclusion</h3>
+          <p>
+            Pathways that work across borders, technologies, and regulatory environments — designed to include diverse learners and enterprise realities.
+          </p>
+        </div>
+        <div class="card">
+          <h3>5. The OEDP Work Network</h3>
+          <p>
+            Every professional becomes integrated into the <strong>OEDP Work Network</strong> — the platform that enterprises rely on for workforce capacity, operations, and development at scale.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="investment-positioning" style="background:linear-gradient(135deg,#0F172A,#1E3A8A); color:#fff; padding:4rem 2rem; margin:3rem -2rem; border-radius:1.5rem;">
+      <div style="max-width:900px; margin:0 auto; text-align:center;">
+        <div style="display:inline-block; padding:0.3rem 0.9rem; background:rgba(250,204,21,0.2); border:1px solid rgba(250,204,21,0.4); border-radius:999px; font-size:0.75rem; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#FACC15; margin-bottom:1.5rem;">Strategic Shift</div>
+        <h2 style="font-size:clamp(1.8rem, 3.5vw, 2.8rem); margin-bottom:1.5rem; line-height:1.2;">From Investing in Companies…<br>to Investing in the Workforce Systems<br>That Power Companies</h2>
+        <p style="font-size:1.05rem; color:rgba(255,255,255,0.75); line-height:1.8; max-width:680px; margin:0 auto 2.5rem;">
+          The SWD-INV portfolio introduces a new investment category: <strong style="color:#FACC15;">Workforce Infrastructure</strong> — the engine of every economy. It is structured, scalable, sector-aligned, and economically grounded in real demand.
+        </p>
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(160px, 1fr)); gap:1.5rem; max-width:700px; margin:0 auto;">
+          <div>
+            <div style="font-size:0.75rem; color:rgba(255,255,255,0.5); margin-bottom:0.5rem;">Infrastructure-Class</div>
+            <div style="font-size:1.2rem; font-weight:700; color:#fff;">Structured</div>
+          </div>
+          <div>
+            <div style="font-size:0.75rem; color:rgba(255,255,255,0.5); margin-bottom:0.5rem;">Multi-Revenue</div>
+            <div style="font-size:1.2rem; font-weight:700; color:#fff;">Scalable</div>
+          </div>
+          <div>
+            <div style="font-size:0.75rem; color:rgba(255,255,255,0.5); margin-bottom:0.5rem;">26 Sectors</div>
+            <div style="font-size:1.2rem; font-weight:700; color:#fff;">Diversified</div>
+          </div>
+          <div>
+            <div style="font-size:0.75rem; color:rgba(255,255,255,0.5); margin-bottom:0.5rem;">Real Demand</div>
+            <div style="font-size:1.2rem; font-weight:700; color:#fff;">Grounded</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="next-steps">
+      <h2>Request Strategic Briefing</h2>
+      <p class="lead">
+        The SWD-INV investment model is designed for strategic investors, institutions, and individuals seeking infrastructure-class returns through workforce capacity systems. To receive a confidential investment briefing, contact our investment team.
+      </p>
+      <div style="background:linear-gradient(135deg,#F9FAFB,#F3F4F6); border-radius:1.5rem; padding:3rem 2.5rem; margin-top:2rem;">
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:3rem; align-items:center;">
+          <div>
+            <h3 style="margin-bottom:1rem; color:#111827;">Investment Briefing Includes:</h3>
+            <ul style="line-height:2; color:#374151;">
+              <li>✓ Full SWD-INV investment memorandum</li>
+              <li>✓ Sector allocation overview (26 industries)</li>
+              <li>✓ Revenue engine projections across 4 layers</li>
+              <li>✓ WDS execution framework documentation</li>
+              <li>✓ Cohort economics and ROI analysis</li>
+              <li>✓ Platform integration (OEDP Work Network)</li>
+              <li>✓ Legal structure and investor agreements</li>
+            </ul>
+          </div>
+          <div>
+            <div style="background:#fff; border-radius:1rem; padding:2rem; border:2px solid #3B82F6;">
+              <h4 style="font-size:0.9rem; color:#6B7280; margin-bottom:1.5rem; text-transform:uppercase; letter-spacing:0.1em;">Contact Investment Team</h4>
+              <div style="margin-bottom:1.25rem;">
+                <div style="font-size:0.8rem; color:#9CA3AF; margin-bottom:0.25rem;">Email:</div>
+                <a href="mailto:investment@btheducationgroup.org?subject=SWD-INV Strategic Briefing Request" style="font-size:1.05rem; font-weight:700; color:#054ADA;">investment@btheducationgroup.org</a>
+              </div>
+              <div style="margin-bottom:1.25rem;">
+                <div style="font-size:0.8rem; color:#9CA3AF; margin-bottom:0.25rem;">WhatsApp:</div>
+                <a href="https://wa.me/237680289956" style="font-size:1.05rem; font-weight:700; color:#054ADA;">+237 680 289 956</a>
+              </div>
+              <div style="margin-bottom:1.75rem;">
+                <div style="font-size:0.8rem; color:#9CA3AF; margin-bottom:0.25rem;">Tel:</div>
+                <a href="tel:+237653795603" style="font-size:1.05rem; font-weight:700; color:#054ADA;">+237 653 795 603</a>
+              </div>
+              <a href="mailto:investment@btheducationgroup.org?subject=SWD-INV Strategic Briefing Request&body=I am interested in receiving a strategic briefing on the SWD-INV Workforce Infrastructure Investment model.%0D%0A%0D%0AName:%0D%0AOrganization (if applicable):%0D%0APreferred contact method:" class="button" style="width:100%; text-align:center; background:linear-gradient(135deg,#054ada,#0ea5e9); color:#fff; padding:0.9rem 1.5rem; display:block;">
+                Request Briefing →
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer class="cta-footer">
+    <div class="inner">
+      <div>
+        <h2>SWD-INV Investment Inquiries</h2>
+        <p>Our investment team can provide detailed briefings on the workforce infrastructure model, revenue architecture, and sector allocation framework.</p>
+        <p class="contacts">WhatsApp: +237 680 289 956 • Tel: +237 653 795 603 • Email: investment@btheducationgroup.org</p>
+      </div>
+      <div>
+        <a href="#top" class="button" style="background:linear-gradient(135deg,#facc15,#fb923c); color:#111827;">Back to Top</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+  <script>
+    (function(){
+      window.dataLayer = window.dataLayer || [];
+      // Track CTA clicks
+      const ctas = document.querySelectorAll('[data-track-cta]');
+      ctas.forEach(function(el){
+        el.addEventListener('click', function(){
+          window.dataLayer.push({
+            event: 'cta_click',
+            cta_location: el.getAttribute('data-cta-location') || 'unknown',
+            cta_label: (el.textContent || '').trim(),
+            destination: el.getAttribute('href')
+          });
+        });
+      });
+      // Subnav active state on scroll
+      const subnav = document.querySelector('.subnav');
+      if (subnav){
+        const links = Array.from(subnav.querySelectorAll('.links a'));
+        links.forEach(function(a){
+          a.addEventListener('click', function(){
+            window.dataLayer.push({ event: 'subnav_click', target_section: a.getAttribute('href') });
+          });
+        });
+        const sectionIds = links.map(a => a.getAttribute('href')).filter(Boolean).map(href => href.replace('#',''));
+        const sections = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
+        function updateActive(){
+          let current = null;
+          for (const sec of sections){
+            const top = sec.getBoundingClientRect().top;
+            if (top <= 90) current = sec.id;
+          }
+          links.forEach(a => {
+            const target = a.getAttribute('href').replace('#','');
+            if (target === current){ a.classList.add('active'); a.setAttribute('aria-current','true'); }
+            else { a.classList.remove('active'); a.removeAttribute('aria-current'); }
+          });
+        }
+        document.addEventListener('scroll', updateActive, { passive: true });
+        window.addEventListener('resize', updateActive);
+        updateActive();
+      }
+    })();
+  </script>
+
+  <!-- BTH Intelligent Assistant -->
+<script src="assets/js/bth-chatbot.js"></script>
+</body>
+</html>
