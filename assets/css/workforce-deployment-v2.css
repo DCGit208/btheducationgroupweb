@@ -27,38 +27,7 @@ body.wf-deployment-v2 .topnav--v2 .topnav-inner {
   grid-template-columns: auto minmax(0, 1fr);
 }
 
-/* Executive Briefing — hero top-right above stats panel (not in nav bar) */
-body.wf-deployment-v2 .hero-right-col {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  align-items: stretch;
-}
-
-body.wf-deployment-v2 .hero-briefing-cta {
-  align-self: stretch;
-  text-align: center;
-  padding: 0.65rem 1.35rem;
-  font-size: 0.8125rem;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  border-radius: 10px;
-  white-space: nowrap;
-  box-shadow: 0 4px 18px rgba(5, 74, 218, 0.35);
-  animation: fadeInUp 0.8s ease-out 0.35s both;
-}
-
-body.wf-deployment-v2 .hero-briefing-cta:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 8px 24px rgba(5, 74, 218, 0.42);
-}
-
-@media (max-width: 1024px) {
-  body.wf-deployment-v2 .hero-briefing-cta,
-  body.wf-deployment-v2 .hero-right-col {
-    display: none;
-  }
-}
+/* Hero briefing CTA styles — shared in workforce-infrastructure-v2.css */
 
 /* Hero uses .hero from workforce-infrastructure.css — no other hero overrides */
 
