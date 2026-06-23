@@ -50,6 +50,18 @@
           }
         ]
       }
+    ],
+    "redirects": [
+      {
+        "source": "/gwix-trial",
+        "destination": "/gwix",
+        "type": 301
+      },
+      {
+        "source": "/gwix-trial.html",
+        "destination": "/gwix",
+        "type": 301
+      }
     ]
   }
 }

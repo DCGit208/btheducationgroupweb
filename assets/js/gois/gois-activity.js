@@ -140,7 +140,7 @@
     mountEl.innerHTML =
       '<div class="gois-card">' +
       '<h3><i class="fa-solid fa-satellite-dish"></i> Econometric registry</h3>' +
-      '<p style="font-size:13px;color:#64748b;margin:0 0 16px">Publish verified events to Firestore → live on <a href="../../gwix-trial.html" target="_blank" rel="noopener">GWIX Exchange</a> Market Activity Feed.</p>' +
+      '<p style="font-size:13px;color:#64748b;margin:0 0 16px">Publish verified events to Firestore → live on <a href="../../gwix.html" target="_blank" rel="noopener">GWIX Exchange</a> Market Activity Feed.</p>' +
       '<form id="goisEconometricForm">' +
       '<div class="gois-form-group"><label>Event type</label>' +
       '<select id="goisEventType" style="width:100%;padding:10px;border:2px solid #e2e8f0;border-radius:8px">' + typeOptions + '</select></div>' +

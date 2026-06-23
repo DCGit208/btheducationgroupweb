@@ -83,7 +83,7 @@
       '<ul style="margin:0;padding-left:20px;font-size:14px;line-height:1.7;color:#334155">' + list + '</ul>' +
       '<div style="margin-top:16px;display:flex;flex-wrap:wrap;gap:8px">' +
       '<a class="gois-btn gois-btn-primary" href="../../workforce-deployment.html#documentation-center"><i class="fa-solid fa-folder"></i> Documentation exchange</a>' +
-      '<a class="gois-btn" href="../../gwix-trial.html"><i class="fa-solid fa-chart-line"></i> GWIX Exchange</a>' +
+      '<a class="gois-btn" href="../../gwix.html"><i class="fa-solid fa-chart-line"></i> GWIX Exchange</a>' +
       '</div></div>';
   }
 

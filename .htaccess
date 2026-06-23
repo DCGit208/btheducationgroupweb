@@ -2,6 +2,9 @@
 RewriteEngine On
 RewriteBase /
 
+# Legacy GWIX trial URL → production exchange
+RewriteRule ^gwix-trial/?$ /gwix [R=301,L]
+
 # Remove .html extension from URLs (clean URLs)
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d

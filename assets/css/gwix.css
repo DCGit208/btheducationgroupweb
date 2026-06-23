@@ -1,37 +1,7 @@
-/* GWIX — Global Workforce Infrastructure Exchange (trial surface) */
+/* GWIX — Global Workforce Infrastructure Exchange */
 
-body.gwix-trial {
+body.gwix {
   background: #f5f5f7;
-}
-
-.gwix-trial-banner {
-  position: sticky;
-  top: 0;
-  z-index: 300;
-  background: linear-gradient(90deg, #78350f, #92400e);
-  color: #fef3c7;
-  text-align: center;
-  padding: 0.45rem 1rem;
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-}
-
-.gwix-trial-banner a {
-  color: #fff;
-  margin-left: 0.75rem;
-  text-decoration: underline;
-  text-underline-offset: 2px;
-}
-
-body.gwix-trial .topnav--v2 {
-  top: 2rem;
-}
-
-body.gwix-trial.nav-open .gwix-trial-banner {
-  z-index: 250;
 }
 
 .gwix-state {
@@ -876,7 +846,6 @@ a.sector-tile {
     grid-template-columns: 1fr;
   }
 
-  body.gwix-trial .topnav--v2 { top: 2.35rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
