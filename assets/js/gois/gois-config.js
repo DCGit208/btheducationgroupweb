@@ -41,6 +41,10 @@
   };
 
   var PORTFOLIO = {
+    cohortValueUsd: 730000,
+    divisionValueUsd: 14600000,
+    sectorValueUsd: 73000000,
+    globalValueUsd: 1898000000,
     cohortValueFcfa: 438000000,
     divisionValueFcfa: 8760000000,
     sectorValueFcfa: 43800000000,

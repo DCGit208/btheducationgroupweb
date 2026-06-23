@@ -11,8 +11,10 @@
     { key: 'govern', label: 'Governance', icon: 'fa-solid fa-scale-balanced', desc: 'Lifecycle oversight & compliance' }
   ];
 
-  function fmtFcfa(n) {
-    if (n >= 1e12) return (n / 1e12).toFixed(4) + 'T';
+  function fmtUsd(n) {
+    if (global.BTHPortfolio && global.BTHPortfolio.fmtUsd) {
+      return global.BTHPortfolio.fmtUsd(n, { compact: true }).replace(/^\$/, '');
+    }
     if (n >= 1e9) return (n / 1e9).toFixed(2) + 'B';
     if (n >= 1e6) return (n / 1e6).toFixed(1) + 'M';
     return Number(n || 0).toLocaleString();
@@ -30,7 +32,7 @@
     if (!mountEl) return;
     var p = global.GOISConfig ? global.GOISConfig.PORTFOLIO : {};
     var scope = scopeMultiplier(rank, profile);
-    var base = p.globalValueFcfa || 1138800000000;
+    var base = p.globalValueUsd || 1898000000;
     var scopedBase = Math.round(base * scope.mult);
     var op = operatorData || {};
 
@@ -43,7 +45,7 @@
         : '<span class="gois-badge gois-badge--arch">Architecture</span>';
       return '<div class="gois-engine-card">' +
         '<h4><i class="' + eng.icon + '"></i> ' + eng.label + ' ' + badge + '</h4>' +
-        '<div class="gois-engine-val">' + fmtFcfa(val) + ' FCFA</div>' +
+        '<div class="gois-engine-val">' + fmtUsd(val) + ' USD</div>' +
         '<div class="gois-engine-sub">' + eng.desc + '</div></div>';
     }).join('');
 

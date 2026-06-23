@@ -14,10 +14,22 @@
     return getRank() === 'steward';
   }
 
-  function fmtFcfaShort(n) {
-    if (n >= 1e12) return '1.1388T';
+  function fmtUsd(n) {
+    if (global.BTHPortfolio && global.BTHPortfolio.fmtUsd) {
+      return global.BTHPortfolio.fmtUsd(n, { compact: true });
+    }
+    if (n >= 1e9) return '$' + (n / 1e9).toFixed(2) + 'B';
+    if (n >= 1e6) return '$' + (n / 1e6).toFixed(1) + 'M';
+    if (n >= 1e3) return '$' + (n / 1e3).toFixed(1) + 'K';
+    return '$' + Number(n || 0).toLocaleString();
+  }
+
+  function fmtUsdShort(n) {
+    if (global.BTHPortfolio && global.BTHPortfolio.fmtUsdShort) {
+      return global.BTHPortfolio.fmtUsdShort(n);
+    }
     if (n >= 1e9) return (n / 1e9).toFixed(2) + 'B';
-    return Number(n || 0).toLocaleString();
+    return String(n);
   }
 
   function kpi(label, value, sub) {
@@ -36,14 +48,14 @@
 
     if (rank === 'steward') {
       mount.innerHTML =
-        kpi('Global economy', fmtFcfaShort(p.globalValueFcfa) + ' FCFA', 'Development engine') +
+        kpi('Global economy', fmtUsd(p.globalValueUsd || 1898000000), 'Development engine') +
         kpi('Active operators', gs.activeOperators != null ? gs.activeOperators : 1, (gs.pendingOperators || 0) + ' pending') +
         kpi('SWI · SWD · WDS', (gs.swi || 0) + ' · ' + (gs.swdInv || 0) + ' · ' + (gs.wds || 0), 'Live registry') +
         kpi('Econometric events', state.eventCount != null ? state.eventCount : '—', 'GWIX feed source');
     } else if (rank === 'swi') {
       var net = state.downline || op.network || {};
       mount.innerHTML =
-        kpi('Division value', fmtFcfaShort(p.divisionValueFcfa) + ' FCFA', op.sectorId + ' · Div ' + (op.divisionId || '—')) +
+        kpi('Division value', fmtUsd(p.divisionValueUsd || 14600000), op.sectorId + ' · Div ' + (op.divisionId || '—')) +
         kpi('SWD-INV', net.swdInv != null ? net.swdInv : 0, 'Active in network') +
         kpi('WDS', net.wds != null ? net.wds : 0, 'Operational layer') +
         kpi('Status', (op.status || 'active').toUpperCase(), op.code || '—');
