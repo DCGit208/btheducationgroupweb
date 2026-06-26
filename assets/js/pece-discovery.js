@@ -30,6 +30,14 @@
       return slide ? slide.offsetWidth + GAP : 0;
     }
 
+    function syncViewportHeight() {
+      var activeSlide = slides[index];
+      if (!activeSlide || !viewport) return;
+      global.requestAnimationFrame(function () {
+        viewport.style.height = activeSlide.offsetHeight + 'px';
+      });
+    }
+
     function updatePosition() {
       var step = slideStep();
       var viewportWidth = viewport.offsetWidth;
@@ -56,6 +64,7 @@
       if (nextBtn) nextBtn.disabled = index === slides.length - 1;
 
       root.setAttribute('data-active-slide', String(index + 1));
+      syncViewportHeight();
     }
 
     function goTo(i) {
@@ -111,6 +120,10 @@
       clearTimeout(resizeTimer);
       resizeTimer = setTimeout(updatePosition, 120);
     });
+
+    if (global.document && global.document.fonts && global.document.fonts.ready) {
+      global.document.fonts.ready.then(function () { updatePosition(); });
+    }
 
     goTo(0);
   }
