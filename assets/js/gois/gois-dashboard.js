@@ -48,14 +48,14 @@
 
     if (rank === 'steward') {
       mount.innerHTML =
-        kpi('Global economy', fmtUsd(p.globalValueUsd || 1898000000), 'Development engine') +
+        kpi('Global economy', fmtUsd(p.globalValueUsd || 2049823601), 'Development engine') +
         kpi('Active operators', gs.activeOperators != null ? gs.activeOperators : 1, (gs.pendingOperators || 0) + ' pending') +
         kpi('SWI · SWD · WDS', (gs.swi || 0) + ' · ' + (gs.swdInv || 0) + ' · ' + (gs.wds || 0), 'Live registry') +
         kpi('Econometric events', state.eventCount != null ? state.eventCount : '—', 'GWIX feed source');
     } else if (rank === 'swi') {
       var net = state.downline || op.network || {};
       mount.innerHTML =
-        kpi('Division value', fmtUsd(p.divisionValueUsd || 14600000), op.sectorId + ' · Div ' + (op.divisionId || '—')) +
+        kpi('Division value', fmtUsd(p.divisionValueUsd || 15767874), op.sectorId + ' · Div ' + (op.divisionId || '—')) +
         kpi('SWD-INV', net.swdInv != null ? net.swdInv : 0, 'Active in network') +
         kpi('WDS', net.wds != null ? net.wds : 0, 'Operational layer') +
         kpi('Status', (op.status || 'active').toUpperCase(), op.code || '—');

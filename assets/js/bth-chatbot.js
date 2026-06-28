@@ -114,7 +114,7 @@ BTH's flywheel: <strong>UN/gov mandate → cohort production → enterprise depl
 • 5,000 professionals in a national programme
 • 2,500+ credential bundles (e.g. CompTIA A+ and progression)
 • Pearson VUE authorized delivery (Site <strong>89828</strong>)
-• Enterprise cohort unit: <strong>$695,825</strong> per 50-person Level 1–5 pipeline
+• Enterprise cohort unit: <strong>$788,394</strong> per 50-person Level 1–5 pipeline (438M FCFA · 15/10/9/7/9)
 
 Figures are illustrations for business cases — contract-specific models under NDA.
 
@@ -130,7 +130,7 @@ Figures are illustrations for business cases — contract-specific models under 
       ],
       response: `🏢 <strong>Three Enterprise Engagement Modes</strong>
 
-1️⃣ <strong>Commission</strong> — CHRO-led 50-person Level 1–5 cohorts ($695,825 canonical). MSAs/SOWs.
+1️⃣ <strong>Commission</strong> — CHRO-led 50-person Level 1–5 cohorts ($788,394 · 438M FCFA). MSAs/SOWs.
 2️⃣ <strong>Sponsor</strong> — Fund development for region/sector (CSR, foundation, strategic HR) without necessarily employing graduates.
 3️⃣ <strong>Invest / Acquire</strong> — Co-invest in workforce production pods; pipeline acquisition economics.
 

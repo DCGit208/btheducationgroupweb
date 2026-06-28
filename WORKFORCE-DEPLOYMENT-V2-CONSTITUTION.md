@@ -128,15 +128,17 @@ WDDAM is **not** training, recruitment, or staffing. It is workforce infrastruct
 | Attribute | Value |
 |-----------|-------|
 | Workforce capacity | 50 |
-| Total cohort value (Development Engine) | **438,000,000 FCFA** |
+| Total cohort value (Development Engine) | **438,000,000 FCFA** (~**$788,394 USD** at FCFA ÷ 555.56) |
 
-| Level | Unit value (FCFA) |
-|-------|-------------------|
-| L1 | 4,500,000 |
-| L2 | 6,700,000 |
-| L3 | 9,000,000 |
-| L4 | 12,500,000 |
-| L5 | 15,000,000 |
+| Level | Positioning | Capacity | Unit value (FCFA) | Unit value (USD) |
+|-------|-------------|---------:|------------------:|-----------------:|
+| L1 | Foundation workforce capacity | 15 | 4,500,000 | 8,100 |
+| L2 | Technical Operations | 10 | 6,700,000 | 12,060 |
+| L3 | Advanced Technical Operations | 9 | 9,000,000 | 16,200 |
+| L4 | Principal Operations | 7 | 12,500,000 | 22,500 |
+| L5 | Executive & Strategic Operations | 9 | 15,000,000 | 27,000 |
+
+**Canonical cohort mix:** 15 / 10 / 9 / 7 / 9 = **50 capacity** → **438,000,000 FCFA** modeled Development Engine value.
 
 **Source:** `PORTFOLIO ECONOMICS APPENDIX.docx` Table 1
 
@@ -149,7 +151,7 @@ WDDAM is **not** training, recruitment, or staffing. It is workforce infrastruct
 | WDS | 20 |
 | Cohorts | **50** |
 | Workforce capacity | 1,000 |
-| Development Engine value | **8,760,000,000 FCFA** |
+| Development Engine value | **8,760,000,000 FCFA** (~**$15,767,874 USD**) |
 
 ### One sector (26 total)
 
@@ -161,7 +163,7 @@ WDDAM is **not** training, recruitment, or staffing. It is workforce infrastruct
 | WDS | 100 |
 | Cohorts | 250 |
 | Workforce capacity | 5,000 |
-| Development Engine value | **43,800,000,000 FCFA** |
+| Development Engine value | **43,800,000,000 FCFA** (~**$78,839,369 USD**) |
 
 ### Global portfolio
 
@@ -173,10 +175,12 @@ WDDAM is **not** training, recruitment, or staffing. It is workforce infrastruct
 | SWD-INVs | 1,300 |
 | WDS | 2,600 |
 | Cohorts | 6,500 |
-| Workforce capacity | 130,000 |
-| Development Engine value | **1,138,800,000,000 FCFA** |
+| Workforce capacity | **130,000** |
+| Development Engine value | **1,138,800,000,000 FCFA** (~**$2,049,823,601 USD**) |
 
-Display shorthand: **1.1388 Trillion FCFA**
+Display shorthand: **1.1388 Trillion FCFA** · **$2.05B USD** (Development engine alone · FCFA ÷ 555.56)
+
+**Roll-up rule:** Division Development Engine = cohort value × **20** (modeled active engine equivalent per division, not × 50 structural cohort count).
 
 ---
 
@@ -190,6 +194,8 @@ Display shorthand: **1.1388 Trillion FCFA**
 | **Governance** | Lifecycle oversight — performance, compliance, reporting, continuity |
 
 Frame as **recurring workforce infrastructure economics**. Never as investment returns.
+
+**Development Engine values above = Engine 01 (Development) alone** for modeled workforce production economics. Deployment, Acquisition, and Governance (Engines 02–04) accrue as **additional lifecycle economics** beyond this baseline — the same workforce asset generates value across all four engines over its lifecycle.
 
 **Source:** `PORTFOLIO ECONOMICS APPENDIX.docx` §3, Operations Manual §2
 

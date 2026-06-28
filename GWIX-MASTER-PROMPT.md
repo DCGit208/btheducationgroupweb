@@ -147,15 +147,17 @@ Every design decision must reinforce this.
 | Attribute | Value |
 |-----------|-------|
 | Workforce capacity | 50 |
-| Development Engine value | **438,000,000 FCFA** |
+| Development Engine value | **438,000,000 FCFA** (~**$788,394 USD** at FCFA ÷ 555.56) |
 
-| Level | Unit value (FCFA) |
-|-------|-------------------|
-| L1 | 4,500,000 |
-| L2 | 6,700,000 |
-| L3 | 9,000,000 |
-| L4 | 12,500,000 |
-| L5 | 15,000,000 |
+| Level | Positioning | Capacity | Unit value (FCFA) | Unit value (USD) |
+|-------|-------------|---------:|------------------:|-----------------:|
+| L1 | Foundation workforce capacity | 15 | 4,500,000 | 8,100 |
+| L2 | Technical Operations | 10 | 6,700,000 | 12,060 |
+| L3 | Advanced Technical Operations | 9 | 9,000,000 | 16,200 |
+| L4 | Principal Operations | 7 | 12,500,000 | 22,500 |
+| L5 | Executive & Strategic Operations | 9 | 15,000,000 | 27,000 |
+
+**Canonical cohort mix:** 15 / 10 / 9 / 7 / 9 = **50 capacity** → **438,000,000 FCFA**.
 
 ### 3.2 One division
 
@@ -166,7 +168,7 @@ Every design decision must reinforce this.
 | WDS | 20 |
 | Cohorts | 50 |
 | Workforce capacity | 1,000 |
-| Development Engine value | **8,760,000,000 FCFA** |
+| Development Engine value | **8,760,000,000 FCFA** (~**$15,767,874 USD**) |
 
 ### 3.3 One sector (26 total)
 
@@ -178,7 +180,7 @@ Every design decision must reinforce this.
 | WDS | 100 |
 | Cohorts | 250 |
 | Workforce capacity | 5,000 |
-| Development Engine value | **43,800,000,000 FCFA** |
+| Development Engine value | **43,800,000,000 FCFA** (~**$78,839,369 USD**) |
 
 ### 3.4 Global portfolio
 
@@ -190,24 +192,27 @@ Every design decision must reinforce this.
 | SWD-INVs | 1,300 |
 | WDS | 2,600 |
 | Cohorts | 6,500 |
-| Workforce capacity | 130,000 |
-| Development Engine value | **1,138,800,000,000 FCFA** |
+| Workforce capacity | **130,000** |
+| Development Engine value | **1,138,800,000,000 FCFA** (~**$2,049,823,601 USD**) |
 
-**Display shorthand:** 1.1388 Trillion FCFA
+**Display shorthand:** 1.1388 Trillion FCFA · $2.05B USD (Development engine alone · FCFA ÷ 555.56)
+
+**Roll-up:** Division Development Engine = cohort × **20** (modeled engine equivalent; 50 cohorts structurally per division).
 
 ### 3.5 Hero telemetry — approved values only
 
 Lead with **global architecture**, not pilot-scale numbers.
 
-| Telemetry label | Value | State | Scope |
-|-----------------|-------|-------|-------|
-| Global Development Engine | 1.1388T FCFA | ARCHITECTURE | 26 sectors |
-| Sector Development Engine | 43.8B FCFA | ARCHITECTURE | 1 sector |
-| Division Development Engine | 8.76B FCFA | ARCHITECTURE | 1 division |
-| Active Sectors | 26 | ARCHITECTURE | Global portfolio |
-| Active Divisions | 130 | ARCHITECTURE | Global portfolio |
-| Workforce Capacity | 130,000 | ARCHITECTURE | Global portfolio |
-| Cohorts | 6,500 | ARCHITECTURE | Global portfolio |
+| Telemetry label | Value (FCFA) | Value (USD) | State | Scope |
+|-----------------|-------------|-------------|-------|-------|
+| Global Development Engine | 1.1388T FCFA | $2.05B | ARCHITECTURE | 26 sectors · 130,000 capacity |
+| Sector Development Engine | 43.8B FCFA | $78.8M | ARCHITECTURE | 1 sector · 5,000 capacity |
+| Division Development Engine | 8.76B FCFA | $15.8M | ARCHITECTURE | 1 division · 1,000 capacity |
+| Cohort Development Engine | 438M FCFA | $788K | ARCHITECTURE | 1 cohort · 50 engine units |
+| Active Sectors | 26 | — | ARCHITECTURE | Global portfolio |
+| Active Divisions | 130 | — | ARCHITECTURE | Global portfolio |
+| Workforce Capacity | 130,000 | — | ARCHITECTURE | Global portfolio |
+| Cohorts | 6,500 | — | ARCHITECTURE | Global portfolio |
 
 **Do not display** unapproved figures (e.g. 87.6B FCFA deployment market) unless a formula and source document are added to this registry first.
 
@@ -643,13 +648,15 @@ CTA: **JOIN WDS NETWORK** → `workforce-engage.html?intent=wds`
 
 Display Levels 1–5 with economic value, career pathway, certification pathway, deployment pathway.
 
-| Level | Unit value (FCFA) |
-|-------|-------------------|
-| L1 | 4,500,000 |
-| L2 | 6,700,000 |
-| L3 | 9,000,000 |
-| L4 | 12,500,000 |
-| L5 | 15,000,000 |
+| Level | Positioning | Capacity | Unit value (FCFA) | Unit value (USD) |
+|-------|-------------|---------:|------------------:|-----------------:|
+| L1 | Foundation workforce capacity | 15 | 4,500,000 | 8,100 |
+| L2 | Technical Operations | 10 | 6,700,000 | 12,060 |
+| L3 | Advanced Technical Operations | 9 | 9,000,000 | 16,200 |
+| L4 | Principal Operations | 7 | 12,500,000 | 22,500 |
+| L5 | Executive & Strategic Operations | 9 | 15,000,000 | 27,000 |
+
+**Cohort total:** 50 capacity · **438,000,000 FCFA** (~$788,394 USD · FCFA ÷ 555.56)
 
 CTA: **JOIN A COHORT** → `program.html` or pathway intake
 
