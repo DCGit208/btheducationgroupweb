@@ -10,10 +10,11 @@
     <!-- Advanced Preloading -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     
     <!-- Advanced Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/pece-hero.css?v=20260628h23">
     <link rel="stylesheet" href="assets/css/pece-discovery.css?v=20260626pd5">
     
     <style>
@@ -137,255 +138,6 @@
         .nav-link:hover {
             background: var(--glass-light);
             transform: translateY(-2px);
-        }
-
-        /* Hero Section */
-        .pece-hero {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: 7.5rem 0 4rem;
-            background:
-                radial-gradient(circle at 12% 18%, rgba(251, 146, 60, 0.22) 0%, transparent 42%),
-                radial-gradient(circle at 88% 72%, rgba(244, 114, 182, 0.18) 0%, transparent 40%),
-                linear-gradient(155deg, #0f172a 0%, #1e1b4b 42%, #312e81 100%);
-            position: relative;
-            overflow: hidden;
-            color: #fff;
-        }
-
-        .pece-hero::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.025'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/svg%3E");
-            pointer-events: none;
-        }
-
-        .pece-hero__container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 var(--space-xl);
-            position: relative;
-            z-index: 2;
-            width: 100%;
-        }
-
-        .pece-hero__grid {
-            display: grid;
-            grid-template-columns: 1.05fr 0.95fr;
-            gap: var(--space-4xl);
-            align-items: center;
-        }
-
-        .pece-hero__eyebrow {
-            display: inline-block;
-            font-size: 0.68rem;
-            font-weight: 800;
-            letter-spacing: 0.14em;
-            text-transform: uppercase;
-            color: #fdba74;
-            margin-bottom: var(--space-md);
-        }
-
-        .pece-hero__slogan {
-            font-size: clamp(2.2rem, 4.5vw, 3.75rem);
-            font-weight: 900;
-            line-height: 1.05;
-            letter-spacing: -0.03em;
-            margin: 0 0 var(--space-lg);
-            background: linear-gradient(135deg, #fff7ed 0%, #fed7aa 35%, #fb7185 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .pece-hero__title {
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            font-weight: 900;
-            line-height: 1;
-            letter-spacing: -0.04em;
-            margin: 0 0 var(--space-sm);
-            color: #fff;
-        }
-
-        .pece-hero__subtitle {
-            font-size: 1.15rem;
-            font-weight: 600;
-            color: rgba(255, 255, 255, 0.82);
-            margin-bottom: var(--space-lg);
-        }
-
-        .pece-hero__lead {
-            font-size: 1.02rem;
-            line-height: 1.7;
-            color: rgba(255, 255, 255, 0.68);
-            max-width: 36rem;
-            margin-bottom: var(--space-xl);
-        }
-
-        .pece-hero__journeys {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.55rem;
-            margin-bottom: var(--space-xl);
-        }
-
-        .pece-hero__journey {
-            display: inline-flex;
-            flex-direction: column;
-            gap: 0.1rem;
-            padding: 0.55rem 0.85rem;
-            border-radius: 10px;
-            background: rgba(255, 255, 255, 0.07);
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            min-width: 5.5rem;
-        }
-
-        .pece-hero__journey-age {
-            font-size: 0.72rem;
-            font-weight: 800;
-            letter-spacing: 0.06em;
-            color: #fdba74;
-        }
-
-        .pece-hero__journey-name {
-            font-size: 0.78rem;
-            font-weight: 600;
-            color: rgba(255, 255, 255, 0.88);
-        }
-
-        .pece-hero__actions {
-            display: flex;
-            flex-wrap: wrap;
-            gap: var(--space-md);
-        }
-
-        .pece-hero__btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 0.85rem 1.35rem;
-            border-radius: 12px;
-            font-weight: 700;
-            font-size: 0.92rem;
-            text-decoration: none;
-            transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
-        }
-
-        .pece-hero__btn--primary {
-            background: linear-gradient(135deg, #fb923c 0%, #f43f5e 100%);
-            color: #fff;
-            box-shadow: 0 12px 32px rgba(244, 63, 94, 0.35);
-        }
-
-        .pece-hero__btn--primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 16px 40px rgba(244, 63, 94, 0.45);
-        }
-
-        .pece-hero__btn--ghost {
-            background: rgba(255, 255, 255, 0.06);
-            border: 1px solid rgba(255, 255, 255, 0.22);
-            color: #fff;
-        }
-
-        .pece-hero__btn--ghost:hover {
-            background: rgba(255, 255, 255, 0.12);
-            transform: translateY(-2px);
-        }
-
-        .pece-hero__visual {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: var(--space-md);
-        }
-
-        .pece-hero__phase {
-            padding: 1.25rem 1.1rem;
-            border-radius: 16px;
-            background: rgba(255, 255, 255, 0.06);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(8px);
-            transition: transform 0.25s ease, border-color 0.25s ease;
-        }
-
-        .pece-hero__phase:hover {
-            transform: translateY(-4px);
-            border-color: rgba(251, 146, 60, 0.45);
-        }
-
-        .pece-hero__phase-icon {
-            font-size: 1.75rem;
-            margin-bottom: 0.65rem;
-            display: block;
-        }
-
-        .pece-hero__phase-age {
-            font-size: 0.62rem;
-            font-weight: 800;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            color: #fdba74;
-            margin-bottom: 0.25rem;
-        }
-
-        .pece-hero__phase-name {
-            font-size: 1rem;
-            font-weight: 800;
-            color: #fff;
-            margin-bottom: 0.35rem;
-            line-height: 1.2;
-        }
-
-        .pece-hero__phase-desc {
-            font-size: 0.78rem;
-            line-height: 1.45;
-            color: rgba(255, 255, 255, 0.58);
-        }
-
-        .pece-hero__stats {
-            display: grid;
-            grid-template-columns: repeat(4, minmax(0, 1fr));
-            gap: var(--space-md);
-            margin-top: var(--space-3xl);
-            padding-top: var(--space-2xl);
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .pece-hero__stat {
-            text-align: center;
-            padding: var(--space-lg) var(--space-md);
-            border-radius: 14px;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-        }
-
-        .pece-hero__stat-val {
-            display: block;
-            font-size: 1.65rem;
-            font-weight: 900;
-            color: #fff;
-            line-height: 1.1;
-        }
-
-        .pece-hero__stat-val--text {
-            font-size: 1.05rem;
-            letter-spacing: 0.04em;
-        }
-
-        .pece-hero__stat-label {
-            display: block;
-            margin-top: 0.35rem;
-            font-size: 0.72rem;
-            color: rgba(255, 255, 255, 0.52);
-            line-height: 1.35;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
         }
 
         /* Framework Section */
@@ -730,24 +482,6 @@
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            .pece-hero__grid {
-                grid-template-columns: 1fr;
-                gap: var(--space-2xl);
-            }
-
-            .pece-hero__visual {
-                order: -1;
-            }
-
-            .pece-hero__stats {
-                grid-template-columns: repeat(2, minmax(0, 1fr));
-            }
-
-            .pece-hero__actions {
-                flex-direction: column;
-                align-items: stretch;
-            }
-
             .methodology-grid {
                 grid-template-columns: 1fr;
             }
@@ -781,78 +515,235 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="pece-hero">
-        <div class="pece-hero__container">
-            <div class="pece-hero__grid">
-                <div class="pece-hero__content">
-                    <span class="pece-hero__eyebrow">BTH Education Group · Early Child Education Platform</span>
-                    <p class="pece-hero__slogan">Children Deserve Better.</p>
-                    <h1 class="pece-hero__title">PECE</h1>
-                    <p class="pece-hero__subtitle">Professional Early Child Education</p>
-                    <p class="pece-hero__lead">
-                        Full education journeys, mentorings, and guided development for children — not fragmented programmes,
-                        but a complete 17-level system spanning four age pathways from foundation years through organizational readiness.
-                        UNESCO-UNEVOC-UN aligned · UDHR Article 26 · SDG 4, 8, 16 &amp; 17.
+    <section class="pece-hero pece-hero--dark" aria-labelledby="pece-hero-heading">
+        <div class="pece-hero__texture" aria-hidden="true"></div>
+        <div class="pece-hero__embers" aria-hidden="true"></div>
+
+        <div class="pece-hero__inner">
+            <div class="pece-hero__copy">
+                    <span class="pece-hero__eyebrow" data-reveal>BTH Education Group &bull; Early Child Education Platform</span>
+                    <h1 class="pece-hero__heading" id="pece-hero-heading" data-reveal>Children Deserve <span class="pece-hero__heading-accent">Better.</span></h1>
+                    <p class="pece-hero__thesis" data-reveal>Developing The Whole Child For Life, Leadership, And The Future Of Work.</p>
+
+                    <div class="pece-hero__brand" data-reveal>
+                        <p class="pece-hero__program">PECE <span class="pece-hero__program-sep" aria-hidden="true">|</span> <span class="pece-hero__program-sub">Professional Early Child Education</span></p>
+                    </div>
+                    <span class="pece-hero__badge" data-reveal>A Complete Human Development System</span>
+
+                    <p class="pece-hero__lead" data-reveal>
+                        PECE is a family-governed human development system that develops children personally, professionally, financially, occupationally, relationally, and morally from early childhood through leadership readiness.
+                        <span class="pece-hero__lead-em">More than schooling. Complete education for life.</span>
                     </p>
 
-                    <div class="pece-hero__journeys" aria-label="Age pathways">
-                        <span class="pece-hero__journey"><span class="pece-hero__journey-age">Ages 1–5</span><span class="pece-hero__journey-name">PENTAD</span></span>
-                        <span class="pece-hero__journey"><span class="pece-hero__journey-age">Ages 5–10</span><span class="pece-hero__journey-name">TENNER</span></span>
-                        <span class="pece-hero__journey"><span class="pece-hero__journey-age">Ages 10–15</span><span class="pece-hero__journey-name">Post-Industrial</span></span>
-                        <span class="pece-hero__journey"><span class="pece-hero__journey-age">Ages 15–17</span><span class="pece-hero__journey-name">Organizational</span></span>
-                    </div>
+                    <ul class="pece-hero__trust" data-reveal>
+                        <li class="pece-hero__trust-item">
+                            <svg class="pece-hero__trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg>
+                            UNESCO-UNEVOC Inspired
+                        </li>
+                        <li class="pece-hero__trust-item">
+                            <svg class="pece-hero__trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M12 3v18M7 8h10M9 12h6"/></svg>
+                            UDHR Article 26 Aligned
+                        </li>
+                        <li class="pece-hero__trust-item">
+                            <svg class="pece-hero__trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3a15 15 0 010 18M12 3a15 15 0 000 18M3 12h18"/></svg>
+                            SDG 4 &bull; 8 &bull; 16 &bull; 17
+                        </li>
+                        <li class="pece-hero__trust-item">
+                            <svg class="pece-hero__trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><circle cx="9" cy="7" r="3"/><circle cx="15" cy="7" r="3"/><path d="M3 20c0-3 3-5 6-5s6 2 6 5"/></svg>
+                            Family-Governed Development
+                        </li>
+                    </ul>
 
-                    <div class="pece-hero__actions">
-                        <a href="apply.html?program=pece" class="pece-hero__btn pece-hero__btn--primary">Begin PECE Journey</a>
-                        <a href="#development-phases" class="pece-hero__btn pece-hero__btn--ghost">View Development Phases</a>
+                    <div class="pece-hero__pillars" data-reveal>
+                        <h2 class="pece-hero__pillars-title">6 Pillars Of Complete Education</h2>
+                        <ul class="pece-hero__pillars-grid">
+                            <li class="pece-hero__pillar pece-hero__pillar--personal">
+                                <span class="pece-hero__pillar-ring"><svg class="pece-hero__pillar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 00-7.8 0L12 5.6l-1-1a5.5 5.5 0 00-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 000-7.8z"/></svg></span>
+                                <span class="pece-hero__pillar-label">Personal</span>
+                            </li>
+                            <li class="pece-hero__pillar pece-hero__pillar--professional">
+                                <span class="pece-hero__pillar-ring"><svg class="pece-hero__pillar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg></span>
+                                <span class="pece-hero__pillar-label">Professional</span>
+                            </li>
+                            <li class="pece-hero__pillar pece-hero__pillar--occupational">
+                                <span class="pece-hero__pillar-ring"><svg class="pece-hero__pillar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg></span>
+                                <span class="pece-hero__pillar-label">Occupational</span>
+                            </li>
+                            <li class="pece-hero__pillar pece-hero__pillar--financial">
+                                <span class="pece-hero__pillar-ring"><svg class="pece-hero__pillar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M3 3v18h18M7 16l4-4 3 3 5-6"/></svg></span>
+                                <span class="pece-hero__pillar-label">Financial</span>
+                            </li>
+                            <li class="pece-hero__pillar pece-hero__pillar--relationship">
+                                <span class="pece-hero__pillar-ring"><svg class="pece-hero__pillar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><circle cx="9" cy="7" r="3"/><circle cx="15" cy="7" r="3"/><path d="M3 20c0-3 3-5 6-5s6 2 6 5"/></svg></span>
+                                <span class="pece-hero__pillar-label">Relationship</span>
+                            </li>
+                            <li class="pece-hero__pillar pece-hero__pillar--truth">
+                                <span class="pece-hero__pillar-ring"><svg class="pece-hero__pillar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M4 4.5A2.5 2.5 0 016.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15z"/></svg></span>
+                                <span class="pece-hero__pillar-label">Truth</span>
+                            </li>
+                        </ul>
                     </div>
-                </div>
+            </div>
 
-                <div class="pece-hero__visual" aria-hidden="true">
-                    <div class="pece-hero__phase">
-                        <span class="pece-hero__phase-icon">🌟</span>
-                        <div class="pece-hero__phase-age">Ages 1–5</div>
-                        <div class="pece-hero__phase-name">PENTAD</div>
-                        <p class="pece-hero__phase-desc">Personal development foundation — early mentoring and guided discovery.</p>
-                    </div>
-                    <div class="pece-hero__phase">
-                        <span class="pece-hero__phase-icon">🔬</span>
-                        <div class="pece-hero__phase-age">Ages 5–10</div>
-                        <div class="pece-hero__phase-name">TENNER</div>
-                        <p class="pece-hero__phase-desc">Matter development — curiosity, competence, and structured learning journeys.</p>
-                    </div>
-                    <div class="pece-hero__phase">
-                        <span class="pece-hero__phase-icon">⚙️</span>
-                        <div class="pece-hero__phase-age">Ages 10–15</div>
-                        <div class="pece-hero__phase-name">Post-Industrial</div>
-                        <p class="pece-hero__phase-desc">Occupational development — applied capability and vocational orientation.</p>
-                    </div>
-                    <div class="pece-hero__phase">
-                        <span class="pece-hero__phase-icon">🏛️</span>
-                        <div class="pece-hero__phase-age">Ages 15–17</div>
-                        <div class="pece-hero__phase-name">Organizational</div>
-                        <p class="pece-hero__phase-desc">Organizational development — leadership readiness and institutional contribution.</p>
+            <div class="pece-hero__ecosystem">
+                <div class="pece-hero__diagram" data-reveal>
+                    <svg class="pece-hero__orbit" viewBox="0 0 820 620" role="img" aria-label="The Whole Child development orbit with four growth stages">
+                        <defs>
+                            <radialGradient id="peceOrb" cx="42%" cy="38%" r="70%">
+                                <stop offset="0%" stop-color="#fff1c2"/>
+                                <stop offset="50%" stop-color="#f9cf63"/>
+                                <stop offset="100%" stop-color="#eea426"/>
+                            </radialGradient>
+                            <radialGradient id="peceBgGlow" cx="50%" cy="50%" r="50%">
+                                <stop offset="0%" stop-color="#fbb43d" stop-opacity="0.30"/>
+                                <stop offset="45%" stop-color="#f7a93a" stop-opacity="0.10"/>
+                                <stop offset="100%" stop-color="#f7a93a" stop-opacity="0"/>
+                            </radialGradient>
+                            <linearGradient id="peceArc" gradientUnits="userSpaceOnUse" x1="440" y1="128" x2="440" y2="492">
+                                <stop offset="0%" stop-color="#16a34a"/>
+                                <stop offset="34%" stop-color="#2563eb"/>
+                                <stop offset="67%" stop-color="#d97706"/>
+                                <stop offset="100%" stop-color="#9333ea"/>
+                            </linearGradient>
+                            <filter id="peceNodeShadow" x="-60%" y="-60%" width="220%" height="220%">
+                                <feDropShadow dx="0" dy="5" stdDeviation="7" flood-color="#1a2332" flood-opacity="0.18"/>
+                            </filter>
+                        </defs>
+
+                        <!-- warm bloom that fills the centre -->
+                        <circle class="pece-orb__bloom" cx="280" cy="310" r="275" fill="url(#peceBgGlow)"/>
+
+                        <!-- concentric rings -->
+                        <g class="pece-orbit__rings" fill="none" stroke="#e7ddcb">
+                            <circle cx="280" cy="310" r="155" stroke-width="1.3"/>
+                            <circle cx="280" cy="310" r="185" stroke-width="1.3"/>
+                            <circle class="pece-orbit__ring--spin" cx="280" cy="310" r="215" stroke-dasharray="2 8" stroke-width="1.6"/>
+                        </g>
+
+                        <!-- decorative orbit dots on the left sweep -->
+                        <g class="pece-orbit__dots">
+                            <circle cx="166" cy="128" r="4" fill="#16a34a" opacity="0.45"/>
+                            <circle cx="81"  cy="230" r="4" fill="#2563eb" opacity="0.45"/>
+                            <circle cx="81"  cy="390" r="4" fill="#d97706" opacity="0.45"/>
+                            <circle cx="166" cy="492" r="4" fill="#9333ea" opacity="0.45"/>
+                        </g>
+
+                        <!-- colored growth arc through the four nodes -->
+                        <path class="pece-orbit__arc" d="M394 128 A215 215 0 0 1 394 492" fill="none" stroke="url(#peceArc)" stroke-width="4" stroke-linecap="round"/>
+                        <g class="pece-orbit__arc-dots">
+                            <circle cx="447" cy="175" r="5" fill="#2563eb"/>
+                            <circle cx="495" cy="310" r="5" fill="#d97706"/>
+                            <circle cx="447" cy="445" r="5" fill="#9333ea"/>
+                        </g>
+
+                        <!-- curved connectors (node → evenly-spaced card), flowing with the orbit -->
+                        <g class="pece-hero__connectors">
+                            <path class="pece-hero__connector" data-stage="pentad" d="M424 128 C512 128 512 93 600 93" stroke="#16a34a"/>
+                            <path class="pece-hero__connector" data-stage="tenner" d="M512 237 C556 237 556 237 600 237" stroke="#2563eb"/>
+                            <path class="pece-hero__connector" data-stage="post" d="M512 384 C556 384 556 382 600 382" stroke="#d97706"/>
+                            <path class="pece-hero__connector" data-stage="org" d="M424 492 C512 492 512 527 600 527" stroke="#9333ea"/>
+                            <circle class="pece-hero__connector-dot" data-stage="pentad" cx="600" cy="93" r="4.5" fill="#16a34a"/>
+                            <circle class="pece-hero__connector-dot" data-stage="tenner" cx="600" cy="237" r="4.5" fill="#2563eb"/>
+                            <circle class="pece-hero__connector-dot" data-stage="post" cx="600" cy="382" r="4.5" fill="#d97706"/>
+                            <circle class="pece-hero__connector-dot" data-stage="org" cx="600" cy="527" r="4.5" fill="#9333ea"/>
+                        </g>
+
+                        <!-- central orb -->
+                        <circle class="pece-orb__halo" cx="280" cy="310" r="150" fill="url(#peceOrb)" opacity="0.20"/>
+                        <circle class="pece-orb__core" cx="280" cy="310" r="120" fill="url(#peceOrb)"/>
+                        <text class="pece-hero__orb-text" x="280" y="310" text-anchor="middle">
+                            <tspan x="280" dy="-0.12em">WHOLE</tspan>
+                            <tspan x="280" dy="1.05em">CHILD</tspan>
+                        </text>
+
+                        <!-- icon nodes -->
+                        <g class="pece-hero__node" data-stage="pentad">
+                            <circle cx="394" cy="128" r="31" fill="#ffffff" stroke="#16a34a" stroke-width="3" filter="url(#peceNodeShadow)"/>
+                            <g transform="translate(379 113) scale(1.25)" fill="none" stroke="#16a34a" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M7 20h10"/>
+                                <path d="M10 20c5.5-2.5.8-6.4 3-10"/>
+                                <path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"/>
+                                <path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"/>
+                            </g>
+                        </g>
+                        <g class="pece-hero__node" data-stage="tenner">
+                            <circle cx="482" cy="237" r="31" fill="#ffffff" stroke="#2563eb" stroke-width="3" filter="url(#peceNodeShadow)"/>
+                            <g transform="translate(467 222) scale(1.25)" fill="none" stroke="#2563eb" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M6 18h8"/>
+                                <path d="M3 22h18"/>
+                                <path d="M14 22a7 7 0 1 0 0-14h-1"/>
+                                <path d="M9 14h2"/>
+                                <path d="M9 12a2 2 0 0 1-2-2V6h6v4a2 2 0 0 1-2 2Z"/>
+                                <path d="M12 6V3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3"/>
+                            </g>
+                        </g>
+                        <g class="pece-hero__node" data-stage="post">
+                            <circle cx="482" cy="384" r="31" fill="#ffffff" stroke="#d97706" stroke-width="3" filter="url(#peceNodeShadow)"/>
+                            <g transform="translate(467 369) scale(1.25)" fill="none" stroke="#d97706" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/>
+                                <circle cx="12" cy="12" r="3"/>
+                            </g>
+                        </g>
+                        <g class="pece-hero__node" data-stage="org">
+                            <circle cx="394" cy="492" r="31" fill="#ffffff" stroke="#9333ea" stroke-width="3" filter="url(#peceNodeShadow)"/>
+                            <g transform="translate(379 477) scale(1.25)" fill="none" stroke="#9333ea" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="3" x2="21" y1="22" y2="22"/>
+                                <line x1="6" x2="6" y1="18" y2="11"/>
+                                <line x1="10" x2="10" y1="18" y2="11"/>
+                                <line x1="14" x2="14" y1="18" y2="11"/>
+                                <line x1="18" x2="18" y1="18" y2="11"/>
+                                <polygon points="12 2 20 7 4 7"/>
+                            </g>
+                        </g>
+                    </svg>
+
+                    <div class="pece-hero__cards">
+                        <article class="pece-hero__journey-card pece-hero__journey-card--pentad" data-stage="pentad" tabindex="0">
+                            <span class="pece-hero__journey-age">Ages 1&ndash;5</span>
+                            <p class="pece-hero__journey-name">PENTAD</p>
+                            <p class="pece-hero__journey-tag">Foundation Years</p>
+                            <p class="pece-hero__journey-desc">Identity formation, capacity maturation, and guided discovery.</p>
+                        </article>
+                        <article class="pece-hero__journey-card pece-hero__journey-card--tenner" data-stage="tenner" tabindex="0">
+                            <span class="pece-hero__journey-age">Ages 5&ndash;10</span>
+                            <p class="pece-hero__journey-name">TENNER</p>
+                            <p class="pece-hero__journey-tag">Discovery Years</p>
+                            <p class="pece-hero__journey-desc">Literacy, technology, and structured competence.</p>
+                        </article>
+                        <article class="pece-hero__journey-card pece-hero__journey-card--post" data-stage="post" tabindex="0">
+                            <span class="pece-hero__journey-age">Ages 10&ndash;15</span>
+                            <p class="pece-hero__journey-name">POST-INDUSTRIAL</p>
+                            <p class="pece-hero__journey-tag">Occupational Years</p>
+                            <p class="pece-hero__journey-desc">Craftsmanship, certification, and applied capability.</p>
+                        </article>
+                        <article class="pece-hero__journey-card pece-hero__journey-card--org" data-stage="org" tabindex="0">
+                            <span class="pece-hero__journey-age">Ages 15&ndash;17</span>
+                            <p class="pece-hero__journey-name">ORGANIZATIONAL</p>
+                            <p class="pece-hero__journey-tag">Leadership Years</p>
+                            <p class="pece-hero__journey-desc">Research, leadership, and organizational development.</p>
+                        </article>
                     </div>
                 </div>
             </div>
 
-            <div class="pece-hero__stats">
-                <div class="pece-hero__stat">
-                    <span class="pece-hero__stat-val">17</span>
-                    <span class="pece-hero__stat-label">Progressive levels</span>
+            <div class="pece-hero__bottom-bar" data-reveal>
+                <div class="pece-hero__actions">
+                    <a href="contact.html?inquiry=pece" class="pece-hero__btn pece-hero__btn--primary">
+                        Schedule Family Consultation
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                    </a>
+                    <a href="#pece-discovery" class="pece-hero__btn pece-hero__btn--ghost">Explore The PECE Journey</a>
+                    <a href="contact.html?inquiry=pece-prospectus" class="pece-hero__link">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12M8 11l4 4 4-4M4 21h16"/></svg>
+                        Download PECE Prospectus
+                    </a>
                 </div>
-                <div class="pece-hero__stat">
-                    <span class="pece-hero__stat-val">4</span>
-                    <span class="pece-hero__stat-label">Development phases</span>
-                </div>
-                <div class="pece-hero__stat">
-                    <span class="pece-hero__stat-val pece-hero__stat-val--text">UNESCO</span>
-                    <span class="pece-hero__stat-label">UNEVOC · UN partnership</span>
-                </div>
-                <div class="pece-hero__stat">
-                    <span class="pece-hero__stat-val pece-hero__stat-val--text">UDHR 26</span>
-                    <span class="pece-hero__stat-label">Article 26 compliant</span>
-                </div>
+                <p class="pece-hero__arc-header">
+                    <span class="pece-hero__arc-header-badge" aria-hidden="true">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6 4.6 2.3 7L12 16.8 5.7 21l2.3-7-6-4.6h7.6L12 2z"/></svg>
+                    </span>
+                    <span class="pece-hero__arc-header-text">Complete Education for the Full Development of the Human Personality</span>
+                </p>
             </div>
         </div>
     </section>
@@ -1850,6 +1741,7 @@
             });
         });
     </script>
+    <script src="assets/js/pece-hero.js?v=20260628h23"></script>
     <script src="assets/js/pece-discovery.js?v=20260626pd4"></script>
 </body>
 </html>
