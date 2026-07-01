@@ -5,6 +5,8 @@
   'use strict';
 
   var GAP = 20;
+  var AUTOPLAY_MS = 7000;
+  var MANUAL_GRACE_MS = 12000;
 
   function initSection(root) {
     var viewport = root.querySelector('.pece-discovery__viewport');
@@ -18,8 +20,31 @@
     var touchStartX = 0;
     var touchDeltaX = 0;
     var dragging = false;
+    var autoplayTimer = null;
+    var manualGrace = false;
+    var sectionVisible = false;
+    var userEngaged = false;
+    var autoplayEnabled = true;
 
     if (!viewport || !track || !slides.length) return;
+
+    if (global.matchMedia) {
+      var motionQuery = global.matchMedia('(prefers-reduced-motion: reduce)');
+      autoplayEnabled = !motionQuery.matches;
+      if (motionQuery.addEventListener) {
+        motionQuery.addEventListener('change', function (e) {
+          autoplayEnabled = !e.matches;
+          if (!autoplayEnabled) clearAutoplayTimer();
+          else scheduleAutoplay();
+        });
+      } else if (motionQuery.addListener) {
+        motionQuery.addListener(function (e) {
+          autoplayEnabled = !e.matches;
+          if (!autoplayEnabled) clearAutoplayTimer();
+          else scheduleAutoplay();
+        });
+      }
+    }
 
     function clamp(i) {
       return Math.max(0, Math.min(slides.length - 1, i));
@@ -67,32 +92,72 @@
       syncViewportHeight();
     }
 
-    function goTo(i) {
+    function applyIndex(i) {
       index = clamp(i);
       updatePosition();
     }
 
-    function next() { goTo(index + 1); }
-    function prev() { goTo(index - 1); }
+    function clearAutoplayTimer() {
+      if (autoplayTimer) {
+        clearTimeout(autoplayTimer);
+        autoplayTimer = null;
+      }
+    }
 
-    if (prevBtn) prevBtn.addEventListener('click', prev);
-    if (nextBtn) nextBtn.addEventListener('click', next);
+    function canAutoplay() {
+      return autoplayEnabled &&
+        sectionVisible &&
+        !userEngaged &&
+        global.document.visibilityState !== 'hidden';
+    }
+
+    function scheduleAutoplay() {
+      clearAutoplayTimer();
+      if (!canAutoplay()) return;
+      var delay = manualGrace ? MANUAL_GRACE_MS : AUTOPLAY_MS;
+      autoplayTimer = setTimeout(function () {
+        autoplayTimer = null;
+        manualGrace = false;
+        var nextIndex = index + 1 >= slides.length ? 0 : index + 1;
+        applyIndex(nextIndex);
+        scheduleAutoplay();
+      }, delay);
+    }
+
+    function goToManual(i) {
+      applyIndex(i);
+      manualGrace = true;
+      scheduleAutoplay();
+    }
+
+    function nextManual() {
+      if (index < slides.length - 1) goToManual(index + 1);
+      else scheduleAutoplay();
+    }
+
+    function prevManual() {
+      if (index > 0) goToManual(index - 1);
+      else scheduleAutoplay();
+    }
+
+    if (prevBtn) prevBtn.addEventListener('click', prevManual);
+    if (nextBtn) nextBtn.addEventListener('click', nextManual);
 
     questions.forEach(function (btn, i) {
-      btn.addEventListener('click', function () { goTo(i); });
+      btn.addEventListener('click', function () { goToManual(i); });
     });
 
     dots.forEach(function (dot, i) {
-      dot.addEventListener('click', function () { goTo(i); });
+      dot.addEventListener('click', function () { goToManual(i); });
     });
 
     root.querySelectorAll('[data-advance]').forEach(function (btn) {
-      btn.addEventListener('click', function () { next(); });
+      btn.addEventListener('click', nextManual);
     });
 
     root.addEventListener('keydown', function (e) {
-      if (e.key === 'ArrowLeft') { e.preventDefault(); prev(); }
-      if (e.key === 'ArrowRight') { e.preventDefault(); next(); }
+      if (e.key === 'ArrowLeft') { e.preventDefault(); prevManual(); }
+      if (e.key === 'ArrowRight') { e.preventDefault(); nextManual(); }
     });
 
     viewport.addEventListener('touchstart', function (e) {
@@ -110,22 +175,70 @@
     viewport.addEventListener('touchend', function () {
       if (!dragging) return;
       dragging = false;
-      if (touchDeltaX > 55) prev();
-      else if (touchDeltaX < -55) next();
+      if (touchDeltaX > 55) prevManual();
+      else if (touchDeltaX < -55) nextManual();
       touchDeltaX = 0;
     });
+
+    var engageTarget = root;
+
+    engageTarget.addEventListener('mouseenter', function () {
+      userEngaged = true;
+      clearAutoplayTimer();
+    });
+
+    engageTarget.addEventListener('mouseleave', function () {
+      userEngaged = false;
+      scheduleAutoplay();
+    });
+
+    engageTarget.addEventListener('focusin', function () {
+      userEngaged = true;
+      clearAutoplayTimer();
+    });
+
+    engageTarget.addEventListener('focusout', function (e) {
+      if (engageTarget.contains(e.relatedTarget)) return;
+      userEngaged = false;
+      scheduleAutoplay();
+    });
+
+    global.document.addEventListener('visibilitychange', function () {
+      if (global.document.visibilityState === 'hidden') clearAutoplayTimer();
+      else scheduleAutoplay();
+    });
+
+    if ('IntersectionObserver' in global) {
+      var sectionObs = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          sectionVisible = entry.isIntersecting;
+          if (sectionVisible) scheduleAutoplay();
+          else clearAutoplayTimer();
+        });
+      }, { threshold: 0.2 });
+      sectionObs.observe(root);
+    } else {
+      sectionVisible = true;
+    }
 
     var resizeTimer;
     global.addEventListener('resize', function () {
       clearTimeout(resizeTimer);
-      resizeTimer = setTimeout(updatePosition, 120);
+      resizeTimer = setTimeout(function () {
+        updatePosition();
+        scheduleAutoplay();
+      }, 120);
     });
 
     if (global.document && global.document.fonts && global.document.fonts.ready) {
-      global.document.fonts.ready.then(function () { updatePosition(); });
+      global.document.fonts.ready.then(function () {
+        updatePosition();
+        scheduleAutoplay();
+      });
     }
 
-    goTo(0);
+    applyIndex(0);
+    scheduleAutoplay();
   }
 
   function initVisibility(root) {
