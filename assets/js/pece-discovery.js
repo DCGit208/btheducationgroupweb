@@ -25,23 +25,72 @@
     var sectionVisible = false;
     var userEngaged = false;
     var autoplayEnabled = true;
+    var orbitMotionEnabled = true;
+    var orbitRing = root.querySelector('.pd-orbit-ring');
+    var orbitNodes = Array.prototype.slice.call(root.querySelectorAll('.pd-orbit-node'));
+    var orbitAngle = 0;
+    var orbitLastTs = 0;
+    var orbitRunning = false;
+    var ORBIT_DURATION_MS = 24000;
 
     if (!viewport || !track || !slides.length) return;
+
+    function shouldRunOrbit() {
+      return orbitMotionEnabled && index === 0 && sectionVisible;
+    }
+
+    function applyOrbitAngle(deg) {
+      if (!orbitRing) return;
+      orbitRing.style.transform = 'rotate(' + deg + 'deg)';
+      orbitNodes.forEach(function (node) {
+        node.style.transform = 'rotate(' + (-deg) + 'deg)';
+      });
+    }
+
+    function orbitFrame(ts) {
+      global.requestAnimationFrame(orbitFrame);
+      if (!shouldRunOrbit()) {
+        orbitRunning = false;
+        orbitLastTs = 0;
+        return;
+      }
+      if (!orbitLastTs) orbitLastTs = ts;
+      orbitAngle = (orbitAngle + ((ts - orbitLastTs) / ORBIT_DURATION_MS) * 360) % 360;
+      orbitLastTs = ts;
+      applyOrbitAngle(orbitAngle);
+      orbitRunning = true;
+    }
+
+    function syncOrbitSpin() {
+      if (!orbitRing || !orbitNodes.length) return;
+      if (shouldRunOrbit()) {
+        if (!orbitRunning) orbitLastTs = 0;
+      } else {
+        orbitRunning = false;
+        orbitLastTs = 0;
+        applyOrbitAngle(orbitAngle);
+      }
+    }
 
     if (global.matchMedia) {
       var motionQuery = global.matchMedia('(prefers-reduced-motion: reduce)');
       autoplayEnabled = !motionQuery.matches;
+      orbitMotionEnabled = !motionQuery.matches;
       if (motionQuery.addEventListener) {
         motionQuery.addEventListener('change', function (e) {
           autoplayEnabled = !e.matches;
+          orbitMotionEnabled = !e.matches;
           if (!autoplayEnabled) clearAutoplayTimer();
           else scheduleAutoplay();
+          syncOrbitSpin();
         });
       } else if (motionQuery.addListener) {
         motionQuery.addListener(function (e) {
           autoplayEnabled = !e.matches;
+          orbitMotionEnabled = !e.matches;
           if (!autoplayEnabled) clearAutoplayTimer();
           else scheduleAutoplay();
+          syncOrbitSpin();
         });
       }
     }
@@ -90,6 +139,7 @@
 
       root.setAttribute('data-active-slide', String(index + 1));
       syncViewportHeight();
+      syncOrbitSpin();
     }
 
     function applyIndex(i) {
@@ -214,6 +264,7 @@
           sectionVisible = entry.isIntersecting;
           if (sectionVisible) scheduleAutoplay();
           else clearAutoplayTimer();
+          syncOrbitSpin();
         });
       }, { threshold: 0.2 });
       sectionObs.observe(root);
@@ -239,6 +290,7 @@
 
     applyIndex(0);
     scheduleAutoplay();
+    global.requestAnimationFrame(orbitFrame);
   }
 
   function initVisibility(root) {

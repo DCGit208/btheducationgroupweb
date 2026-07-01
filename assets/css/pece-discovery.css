@@ -274,31 +274,30 @@
 
 .pece-discovery__visual svg {
   width: 100%;
-  max-width: 340px;
+  max-width: 380px;
   height: auto;
 }
 
-/* Ecosystem animation — active slide only */
-.pece-discovery__slide.is-active .pd-orbit-ring {
-  animation: pdOrbit 24s linear infinite;
+.pd-orbit-ring {
+  transform-origin: 0 0;
 }
 
-.pece-discovery__slide.is-active .pd-orbit-node {
+.pd-orbit-node {
+  transform-origin: 0 0;
+}
+
+/* Dot pulse — active slide only */
+.pece-discovery__slide.is-active .pd-orbit-dot {
   animation: pdPulse 3s ease-in-out infinite;
-}
-
-@keyframes pdOrbit {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
 }
 
 @keyframes pdPulse {
   0%, 100% { opacity: 1; }
-  50% { opacity: 0.72; }
+  50% { opacity: 0.82; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .pd-orbit-ring, .pd-orbit-node { animation: none !important; }
+  .pd-orbit-dot { animation: none !important; }
 }
 
 /* Card 02 — Why PECE (stacked narrative + compare columns) */
