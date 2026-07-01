@@ -282,8 +282,8 @@
   transform-origin: 0 0;
 }
 
-.pd-orbit-node {
-  transform-origin: 0 0;
+.pd-ecosystem__labels {
+  pointer-events: none;
 }
 
 /* Dot pulse — active slide only */

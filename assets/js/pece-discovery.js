@@ -27,7 +27,6 @@
     var autoplayEnabled = true;
     var orbitMotionEnabled = true;
     var orbitRing = root.querySelector('.pd-orbit-ring');
-    var orbitNodes = Array.prototype.slice.call(root.querySelectorAll('.pd-orbit-node'));
     var orbitAngle = 0;
     var orbitLastTs = 0;
     var orbitRunning = false;
@@ -42,9 +41,6 @@
     function applyOrbitAngle(deg) {
       if (!orbitRing) return;
       orbitRing.style.transform = 'rotate(' + deg + 'deg)';
-      orbitNodes.forEach(function (node) {
-        node.style.transform = 'rotate(' + (-deg) + 'deg)';
-      });
     }
 
     function orbitFrame(ts) {
@@ -62,7 +58,7 @@
     }
 
     function syncOrbitSpin() {
-      if (!orbitRing || !orbitNodes.length) return;
+      if (!orbitRing) return;
       if (shouldRunOrbit()) {
         if (!orbitRunning) orbitLastTs = 0;
       } else {
