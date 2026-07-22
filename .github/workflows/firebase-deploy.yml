@@ -94,4 +94,5 @@ jobs:
           fi
           ONLY=$(IFS=,; echo "${PARTS[*]}")
           echo "Deploying: --only ${ONLY}"
-          firebase deploy --only "${ONLY}" --project bth-gwix-operator-network --non-interactive
+          # --force accepts Artifact Registry cleanup-policy setup so CI does not fail after a successful deploy
+          firebase deploy --only "${ONLY}" --project bth-gwix-operator-network --non-interactive --force
