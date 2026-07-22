@@ -30,7 +30,10 @@ Per the operations manual:
 
 - One demonstration cohort has 50 participants.
 - One cohort has five operational teams.
-- Each operational team has one team leader and nine members.
+- Each operational team has one team leader.
+- Team member count must be configurable because the manual uses two phrasings:
+  - 50 total participants can mean five leaders plus 45 members, or one leader plus nine members per team.
+  - "10 members per team" / "recruit ten committed participants" can also be operated as one leader plus 10 recruited member seats.
 - The leadership council is composed of five cohort/team leaders.
 - Every team participates in four revenue engines:
   - Workforce Development
@@ -45,8 +48,228 @@ BTH / Steward / WDS oversight
   -> Cohort
     -> 5 operational teams
       -> 1 cohort leader per team
-      -> 9 cohort members per team
+      -> configurable member target, default 10 member seats unless BTH locks the 50-total interpretation
 ```
+
+## Relationship to main infrastructure
+
+The mainstream infrastructure remains:
+
+```text
+Steward
+  -> SWI Partner
+    -> SWD-INV
+      -> WDS
+        -> 2 production cohorts per WDS
+```
+
+Model/demonstration cohorts must not distort the live mainstream topology. They should be provisioned as separate cohort records under an assigned WDS with explicit mode fields:
+
+```js
+{
+  infrastructureMode: "model", // model | production
+  lifecycleState: "draft", // draft | recruiting | active | graduated | promoted | archived
+  countsTowardMainstream: false,
+  wdsCode: "WDS-EDTECH-IV-01"
+}
+```
+
+Rules:
+
+- `model` cohorts are used for demonstrations, pilots, learning, and operational proof.
+- `production` cohorts count toward mainstream WDS capacity and network rollups.
+- A model cohort can later be promoted only by Steward/BTH governance after validation.
+- Dashboards may show model progress, but GWIX public/mainstream telemetry should not count model cohorts unless promoted.
+
+## Account provisioning authority
+
+Recommended authority split:
+
+- Steward/BTH Administration creates or approves actual Firebase Auth accounts.
+- WDS can prepare cohort/team/member records inside its assigned scope.
+- Cohort leaders can nominate or invite members, but should not directly create authenticated accounts in the first production-grade workflow.
+- Cohort leaders can maintain operational reports for their own team after accounts exist.
+- Cohort members can update limited personal progress inputs only where explicitly allowed.
+
+This protects account integrity, payment integrity, and role assignment. A later workflow can allow leaders to submit pending member applications into a review queue:
+
+```text
+leader creates pending_member_application
+  -> WDS reviews scope
+    -> Steward/BTH approves
+      -> Cloud Function creates Firebase Auth + users/{uid}
+```
+
+## Provisioning the "5 leaders develop 10 cohorts" obligation
+
+The "one team develops ten additional cohorts" obligation should not create all 10 child cohorts immediately as full production cohorts. It should be represented as an assignment portfolio.
+
+Suggested structure:
+
+```js
+team_targets/{teamId} {
+  cohortId,
+  teamId,
+  leaderCode,
+  assignedCohortsTarget: 10,
+  assignedCohortsCompleted: 0,
+  developmentValueTargetFcfa: 4380000000,
+  deploymentAnnualTargetFcfa: 4380000000,
+  acquisitionValueTargetFcfa: 4380000000,
+  governanceAnnualTargetFcfa: 438000000
+}
+```
+
+Then, as the leader/team actually develops pipeline cohorts:
+
+```js
+cohort_assignments/{assignmentId} {
+  parentCohortId,
+  sourceTeamId,
+  leaderCode,
+  assignedCohortCode,
+  status: "planned", // planned | recruiting | active | validated | acquired
+  mode: "model",
+  valueFcfa: 438000000
+}
+```
+
+Rollup:
+
+- One parent demonstration cohort has five teams.
+- Each team has a target of 10 assigned cohorts.
+- Full parent cohort development target can therefore be 50 assigned cohorts, but each team dashboard should track its own 10-cohort obligation first.
+
+## Registration and signups
+
+Recommended registration channels:
+
+1. Public interest capture from `/workforce-engage.html?intent=cohort`.
+2. Steward/WDS internal cohort creation from the dashboard.
+3. Bulk upload/import for approved model cohort participants.
+4. Leader-submitted member nominations, routed to approval.
+
+Suggested application collections:
+
+```js
+cohort_applications/{applicationId} {
+  mode: "model",
+  cohortId,
+  teamId,
+  applicantType: "leader", // leader | member
+  name,
+  email,
+  phone,
+  requestedWorkforceLevel,
+  status: "submitted", // submitted | under_review | approved | rejected | provisioned
+  submittedAt
+}
+```
+
+Applications should not grant access. Access starts only after approval and provisioning.
+
+## Fees, yearly billing, and payments
+
+For three-year programs, fees should be modeled as annual obligations with optional installment records.
+
+Suggested collections:
+
+```js
+cohort_fee_plans/{planId} {
+  programYears: 3,
+  currency: "FCFA",
+  annualFees: {
+    year1: 0,
+    year2: 0,
+    year3: 0
+  },
+  appliesTo: "member", // leader | member | sponsor | cohort
+  notes
+}
+```
+
+```js
+cohort_invoices/{invoiceId} {
+  cohortId,
+  teamId,
+  memberId,
+  operatorCode,
+  programYear: 1,
+  dueDate,
+  amountFcfa,
+  status: "due", // due | partially_paid | paid | overdue | waived
+  paymentProvider: "manual" // manual | stripe | bank | mobile_money
+}
+```
+
+```js
+cohort_payments/{paymentId} {
+  invoiceId,
+  cohortId,
+  teamId,
+  memberId,
+  operatorCode,
+  payerRole,
+  engine: "development",
+  amountFcfa,
+  status: "pending", // pending | paid | failed | refunded
+  paidAt,
+  createdAt
+}
+```
+
+Important distinction:
+
+- Fees paid by members/sponsors are not the same as revenue participation earned by leaders/members.
+- The dashboard should show both separately:
+  - Program fee status: what the participant owes/has paid.
+  - Participation economics: modeled/earned value from Development, Deployment, Acquisition, Governance.
+
+## LMS inside the dashboard
+
+The dashboard should not rebuild a full LMS from scratch immediately. It should start as an LMS integration and progress tracker.
+
+Recommended LMS model:
+
+```js
+cohort_learning_paths/{pathId} {
+  cohortId,
+  teamId,
+  workforceLevel,
+  modules: [
+    {
+      id,
+      title,
+      provider,
+      url,
+      certificationCode,
+      required: true
+    }
+  ]
+}
+```
+
+```js
+member_learning_progress/{progressId} {
+  memberId,
+  moduleId,
+  status: "not_started", // not_started | in_progress | complete | certified
+  score,
+  evidenceUrl,
+  completedAt
+}
+```
+
+Dashboard LMS sections:
+
+- My learning path
+- Required certification modules
+- Lab/practical assignments
+- Evidence uploads/links
+- Certification readiness
+- Leader view of team learning progress
+
+This allows BTH to connect to existing learning systems, certification partners, PDFs, or external course portals without delaying the operator-network infrastructure.
 
 ## Base econometric values
 
@@ -223,37 +446,33 @@ The first implementation slice should support these collections:
 
 ### `cohort_payments/{paymentId}`
 
-```js
-{
-  (cohortId,
-    teamId,
-    memberId,
-    leaderCode,
-    operatorCode,
-    role,
-    engine,
-    period,
-    amountFcfa,
-    status,
-    paidAt,
-    createdAt);
-}
+```text
+cohortId
+teamId
+memberId
+leaderCode
+operatorCode
+role
+engine
+period
+amountFcfa
+status
+paidAt
+createdAt
 ```
 
 ### `cohort_reports/{reportId}`
 
-```js
-{
-  (cohortId,
-    teamId,
-    leaderCode,
-    type,
-    period,
-    summary,
-    metrics,
-    createdAt,
-    createdBy);
-}
+```text
+cohortId
+teamId
+leaderCode
+type
+period
+summary
+metrics
+createdAt
+createdBy
 ```
 
 ## Security model
