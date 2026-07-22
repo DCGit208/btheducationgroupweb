@@ -491,6 +491,179 @@
       "</div>";
   }
 
+  function sum(items, fieldPath) {
+    return (items || []).reduce(function (total, item) {
+      var value = item;
+      fieldPath.split(".").forEach(function (part) {
+        value = value && value[part];
+      });
+      return total + Number(value || 0);
+    }, 0);
+  }
+
+  function avg(items, fieldPath) {
+    if (!items || !items.length) return 0;
+    return Math.round(sum(items, fieldPath) / items.length);
+  }
+
+  function renderWdsPortfolio(mountEl, profile, portfolio) {
+    if (!mountEl) return;
+    portfolio = portfolio || {};
+    var cohorts = portfolio.cohorts || [];
+    var teams = portfolio.teams || [];
+    var members = portfolio.members || [];
+    var payments = portfolio.payments || [];
+    var leaderCount = teams.filter(function (team) {
+      return !!(team.leaderCode || team.leaderUid);
+    }).length;
+    var paid = payments
+      .filter(function (p) {
+        return String(p.status || "").toLowerCase() === "paid";
+      })
+      .reduce(function (total, p) {
+        return total + Number(p.amountFcfa || 0);
+      }, 0);
+    var pending = payments
+      .filter(function (p) {
+        return String(p.status || "").toLowerCase() !== "paid";
+      })
+      .reduce(function (total, p) {
+        return total + Number(p.amountFcfa || 0);
+      }, 0);
+
+    var targetParticipants =
+      sum(cohorts, "targetParticipants") || cohorts.length * 50;
+    var targetLeaders = sum(cohorts, "leaderTarget") || cohorts.length * 5;
+    var deploymentTarget =
+      sum(teams, "targets.deploymentAnnualTargetFcfa") ||
+      teams.length * BASE.deploymentAnnualTargetFcfa;
+    var deploymentActual = sum(teams, "actuals.deploymentValueFcfa");
+
+    var teamRows = teams.length
+      ? teams
+          .map(function (team) {
+            var teamMembers = members.filter(function (member) {
+              return member.teamId === team.id || member.teamId === team.code;
+            });
+            var target = Number(
+              team.memberTarget || team.teamMemberTarget || 10,
+            );
+            var p = {
+              attendance: avg(teamMembers, "progress.attendancePct"),
+              certification: avg(teamMembers, "progress.certificationPct"),
+              readiness: avg(teamMembers, "progress.deploymentReadinessPct"),
+            };
+            return (
+              "<tr><td><strong>" +
+              esc(team.name || team.code || team.id) +
+              "</strong><br><code>" +
+              esc(team.leaderCode || "Leader pending") +
+              "</code></td><td>" +
+              teamMembers.length +
+              " / " +
+              target +
+              "</td><td>" +
+              p.attendance +
+              "%</td><td>" +
+              p.certification +
+              "%</td><td>" +
+              p.readiness +
+              "%</td><td>" +
+              fmtFcfa((team.actuals && team.actuals.deploymentValueFcfa) || 0) +
+              "</td></tr>"
+            );
+          })
+          .join("")
+      : '<tr><td colspan="6" style="color:#64748b">No cohort teams registered under this WDS yet. Use WDS/steward provisioning to create five leader teams for each model cohort.</td></tr>';
+
+    var cohortRows = cohorts.length
+      ? cohorts
+          .map(function (cohort) {
+            var cohortTeams = teams.filter(function (team) {
+              return (
+                team.cohortId === cohort.id || team.cohortId === cohort.code
+              );
+            });
+            return (
+              "<tr><td><strong>" +
+              esc(cohort.name || cohort.code || cohort.id) +
+              "</strong><br><code>" +
+              esc(cohort.infrastructureMode || "model") +
+              "</code></td><td>" +
+              esc(cohort.lifecycleState || cohort.status || "draft") +
+              "</td><td>" +
+              cohortTeams.length +
+              " / " +
+              (cohort.leaderTarget || 5) +
+              "</td><td>" +
+              esc(cohort.countsTowardMainstream ? "Production" : "Model") +
+              "</td></tr>"
+            );
+          })
+          .join("")
+      : '<tr><td colspan="4" style="color:#64748b">No model or production cohorts assigned to this WDS yet.</td></tr>';
+
+    mountEl.innerHTML =
+      '<div class="gois-card"><h3><i class="fa-solid fa-people-group"></i> WDS cohort portfolio — 5:10 strategy</h3>' +
+      '<p style="font-size:13px;color:#64748b;margin:0 0 12px">WDS recruits the cohort by appointing five leaders first, then working with those leaders to complete the full 50-person model or production cohort.</p>' +
+      '<div class="gois-kpi-grid">' +
+      kpi("Cohorts", cohorts.length, "Model/production under this WDS") +
+      kpi(
+        "Leaders",
+        leaderCount + " / " + targetLeaders,
+        "Five leader slots per cohort",
+      ) +
+      kpi(
+        "Members",
+        members.length + " / " + targetParticipants,
+        "Full cohort target",
+      ) +
+      kpi(
+        "Deployment",
+        pct(deploymentActual, deploymentTarget) + "%",
+        fmtFcfa(deploymentTarget) + " target",
+      ) +
+      kpi("Paid", fmtFcfa(paid), fmtFcfa(pending) + " pending") +
+      "</div></div>" +
+      '<div class="gois-card"><h3><i class="fa-solid fa-layer-group"></i> Assigned cohorts</h3><div class="gois-table-wrap"><table class="gois-table">' +
+      "<thead><tr><th>Cohort</th><th>Lifecycle</th><th>Leader teams</th><th>Mainstream count</th></tr></thead><tbody>" +
+      cohortRows +
+      "</tbody></table></div></div>" +
+      '<div class="gois-card"><h3><i class="fa-solid fa-users-viewfinder"></i> Leaders, teams, KPIs, and direct econometrics</h3><div class="gois-table-wrap"><table class="gois-table">' +
+      "<thead><tr><th>Leader / team</th><th>Members</th><th>Attendance</th><th>Certification</th><th>Readiness</th><th>Deployment actual</th></tr></thead><tbody>" +
+      teamRows +
+      "</tbody></table></div></div>" +
+      '<div class="gois-card"><h3><i class="fa-solid fa-chart-pie"></i> WDS revenue-engine rollup</h3>' +
+      progress(
+        "Development value",
+        sum(teams, "actuals.developmentValueFcfa"),
+        sum(teams, "targets.developmentValueFcfa") ||
+          teams.length * BASE.teamDevelopmentValueFcfa,
+        "leader/team production",
+      ) +
+      progress(
+        "Deployment value",
+        deploymentActual,
+        deploymentTarget,
+        "annualized WDS direct target",
+      ) +
+      progress(
+        "Acquisition value",
+        sum(teams, "actuals.acquisitionValueFcfa"),
+        sum(teams, "targets.acquisitionValueFcfa") ||
+          teams.length * BASE.acquisitionValueFcfa,
+        "model-to-institution pathway",
+      ) +
+      progress(
+        "Governance value",
+        sum(teams, "actuals.governanceValueFcfa"),
+        sum(teams, "targets.governanceAnnualTargetFcfa") ||
+          teams.length * BASE.governanceAnnualTargetFcfa,
+        "annual governance capacity",
+      ) +
+      "</div>";
+  }
+
   global.GOISCohorts = {
     BASE: BASE,
     LEVEL_ALLOCATIONS: LEVEL_ALLOCATIONS,
@@ -501,5 +674,6 @@
     renderMemberOperations: renderMemberOperations,
     renderPayments: renderPayments,
     renderDeploymentTargets: renderDeploymentTargets,
+    renderWdsPortfolio: renderWdsPortfolio,
   };
 })(typeof window !== "undefined" ? window : global);

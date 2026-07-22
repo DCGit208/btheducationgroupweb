@@ -170,6 +170,12 @@
     }
     if (global.GOISData && state.profile) {
       state.cohortScope = await global.GOISData.loadCohortScope(state.profile);
+      if (getRank() === "wds") {
+        state.wdsCohortPortfolio = await global.GOISData.loadWdsCohortPortfolio(
+          state.profile,
+          state.operator && state.operator.data,
+        );
+      }
       state.downline = await global.GOISData.loadDownlineForOperator(
         state.operator && state.operator.data,
         state.profile,
@@ -302,9 +308,17 @@
         "</div>";
     }
     if (cohort && rank === "wds") {
-      cohort.innerHTML =
-        '<div class="gois-card"><h3><i class="fa-solid fa-people-group"></i> Cohort operations</h3>' +
-        '<p style="font-size:13px;color:#64748b">Track L1–L5 cohort production and certification pathways per Operations Manual.</p></div>';
+      if (global.GOISCohorts && global.GOISCohorts.renderWdsPortfolio) {
+        global.GOISCohorts.renderWdsPortfolio(
+          cohort,
+          state.profile || {},
+          state.wdsCohortPortfolio,
+        );
+      } else {
+        cohort.innerHTML =
+          '<div class="gois-card"><h3><i class="fa-solid fa-people-group"></i> Cohort operations</h3>' +
+          '<p style="font-size:13px;color:#64748b">Track L1–L5 cohort production and certification pathways per Operations Manual.</p></div>';
+      }
     }
     if (deploy && rank === "wds") {
       deploy.innerHTML =

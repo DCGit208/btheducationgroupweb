@@ -292,6 +292,36 @@
     return scope;
   }
 
+  async function loadWdsCohortPortfolio(profile, operatorData) {
+    var op = operatorData || {};
+    var wdsCode = op.code || (profile && profile.operatorCode) || "";
+    var result = {
+      wdsCode: wdsCode,
+      cohorts: [],
+      teams: [],
+      members: [],
+      payments: [],
+    };
+    if (!wdsCode) return result;
+
+    result.cohorts = await queryByField("cohorts", "wdsCode", wdsCode, 50);
+    result.teams = await queryByField("cohort_teams", "wdsCode", wdsCode, 150);
+    result.members = await queryByField(
+      "cohort_members",
+      "wdsCode",
+      wdsCode,
+      500,
+    );
+    result.payments = await queryByField(
+      "cohort_payments",
+      "wdsCode",
+      wdsCode,
+      500,
+    );
+
+    return result;
+  }
+
   global.GOISData = {
     loadActiveOperatorCounts: loadActiveOperatorCounts,
     loadStewardGlobalStats: loadStewardGlobalStats,
@@ -300,5 +330,6 @@
     loadRecentEconometricEvents: loadRecentEconometricEvents,
     loadAllActivities: loadAllActivities,
     loadCohortScope: loadCohortScope,
+    loadWdsCohortPortfolio: loadWdsCohortPortfolio,
   };
 })(typeof window !== "undefined" ? window : global);

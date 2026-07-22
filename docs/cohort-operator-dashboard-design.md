@@ -31,9 +31,14 @@ Per the operations manual:
 - One demonstration cohort has 50 participants.
 - One cohort has five operational teams.
 - Each operational team has one team leader.
-- Team member count must be configurable because the manual uses two phrasings:
-  - 50 total participants can mean five leaders plus 45 members, or one leader plus nine members per team.
-  - "10 members per team" / "recruit ten committed participants" can also be operated as one leader plus 10 recruited member seats.
+- WDS owns cohort recruitment using the 5:10 strategy:
+  - First recruit/appoint five cohort team leaders.
+  - Then each leader works with WDS to complete the remaining team members under that leader.
+  - WDS is accountable for the full 50-person cohort being constituted, governed, and tracked.
+- Team member count is controlled by the cohort record so BTH can lock the exact interpretation for each model:
+  - `targetParticipants: 50`
+  - `leaderTarget: 5`
+  - `teamMemberTarget: 10` when using the WDS 5:10 operating strategy.
 - The leadership council is composed of five cohort/team leaders.
 - Every team participates in four revenue engines:
   - Workforce Development
@@ -44,12 +49,33 @@ Per the operations manual:
 The dashboard must make these relationships operational:
 
 ```text
-BTH / Steward / WDS oversight
-  -> Cohort
-    -> 5 operational teams
-      -> 1 cohort leader per team
-      -> configurable member target, default 10 member seats unless BTH locks the 50-total interpretation
+Steward / SWI / SWD-INV governance
+  -> WDS
+    -> Model or production cohort
+      -> 5 cohort leaders
+        -> each leader completes a 10-person team under the WDS 5:10 strategy
 ```
+
+The WDS dashboard is therefore the direct operating dashboard for cohort econometrics. It should show:
+
+- Cohorts assigned to the WDS.
+- Five leader slots per cohort.
+- Each leader's team roster and completion percentage.
+- Team KPIs:
+  - attendance
+  - certification
+  - practical competency
+  - project completion
+  - deployment readiness
+- Revenue-engine rollups by cohort, leader, and team:
+  - Development
+  - Deployment
+  - Acquisition
+  - Governance
+- Payment/fee status rollups:
+  - yearly program fees due/paid/pending
+  - revenue participation paid/pending
+- Model vs production status so model cohorts do not inflate mainstream infrastructure counts.
 
 ## Relationship to main infrastructure
 
@@ -351,9 +377,15 @@ The first implementation slice should support these collections:
   code,
   name,
   status,
+  infrastructureMode,
+  lifecycleState,
+  countsTowardMainstream,
   wdsCode,
   sectorId,
   divisionId,
+  targetParticipants,
+  leaderTarget,
+  teamMemberTarget,
   startDate,
   year,
   targets: {
@@ -377,6 +409,7 @@ The first implementation slice should support these collections:
 ```js
 {
   cohortId,
+  wdsCode,
   code,
   name,
   leaderCode,
