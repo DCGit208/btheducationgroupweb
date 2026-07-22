@@ -23,11 +23,61 @@ service cloud.firestore {
     }
 
     function isOperator() {
-      return hasProfile() && role() in ['steward', 'bth_steward', 'admin', 'swi', 'swd_inv', 'wds'];
+      return hasProfile() && role() in ['steward', 'bth_steward', 'admin', 'swi', 'swd_inv', 'wds', 'cohort_leader', 'team_leader', 'cohort_member', 'member'];
+    }
+
+    function isWds() {
+      return hasProfile() && role() == 'wds';
+    }
+
+    function isCohortLeader() {
+      return hasProfile() && role() in ['cohort_leader', 'team_leader'];
     }
 
     function operatorCode() {
       return hasProfile() && userData().operatorCode is string ? userData().operatorCode : '';
+    }
+
+    function cohortId() {
+      return hasProfile() && userData().cohortId is string ? userData().cohortId : '';
+    }
+
+    function teamId() {
+      return hasProfile() && userData().teamId is string ? userData().teamId : '';
+    }
+
+    function memberId() {
+      return hasProfile() && userData().memberId is string ? userData().memberId : '';
+    }
+
+    function ownsWdsScope() {
+      return isWds() && resource.data.wdsCode == operatorCode();
+    }
+
+    function validCohortReportCreate() {
+      return request.resource.data.keys().hasOnly([
+        'cohortId',
+        'teamId',
+        'leaderCode',
+        'type',
+        'period',
+        'summary',
+        'metrics',
+        'createdAt',
+        'createdBy'
+      ]) &&
+      request.resource.data.cohortId == cohortId() &&
+      request.resource.data.teamId == teamId() &&
+      request.resource.data.leaderCode == operatorCode() &&
+      request.resource.data.type is string &&
+      request.resource.data.type.size() <= 80 &&
+      request.resource.data.period is string &&
+      request.resource.data.period.size() <= 40 &&
+      request.resource.data.summary is string &&
+      request.resource.data.summary.size() <= 4000 &&
+      (!request.resource.data.keys().hasAny(['metrics']) || request.resource.data.metrics is map) &&
+      request.resource.data.createdAt == request.time &&
+      request.resource.data.createdBy == request.auth.uid;
     }
 
     // Operator auth profile — created by steward / Admin SDK
@@ -52,6 +102,60 @@ service cloud.firestore {
       allow create: if isOperator() && (
         request.resource.data.operatorCode == operatorCode() || isSteward()
       );
+      allow update, delete: if isSteward();
+    }
+
+    // Cohort operating units — steward/WDS governance, leader/member scoped read
+    match /cohorts/{id} {
+      allow read: if isOperator() && (
+        isSteward() ||
+        ownsWdsScope() ||
+        id == cohortId()
+      );
+      allow create, update, delete: if isSteward();
+    }
+
+    match /cohort_teams/{id} {
+      allow read: if isOperator() && (
+        isSteward() ||
+        ownsWdsScope() ||
+        id == teamId() ||
+        resource.data.leaderCode == operatorCode()
+      );
+      allow create, update, delete: if isSteward();
+    }
+
+    match /cohort_members/{id} {
+      allow read: if isOperator() && (
+        isSteward() ||
+        ownsWdsScope() ||
+        id == memberId() ||
+        resource.data.memberCode == operatorCode() ||
+        (isCohortLeader() && resource.data.teamId == teamId())
+      );
+      allow create, update, delete: if isSteward();
+    }
+
+    match /cohort_payments/{id} {
+      allow read: if isOperator() && (
+        isSteward() ||
+        ownsWdsScope() ||
+        resource.data.memberId == memberId() ||
+        resource.data.operatorCode == operatorCode() ||
+        (isCohortLeader() && resource.data.teamId == teamId())
+      );
+      allow create, update, delete: if isSteward();
+    }
+
+    match /cohort_reports/{id} {
+      allow read: if isOperator() && (
+        isSteward() ||
+        ownsWdsScope() ||
+        resource.data.memberId == memberId() ||
+        resource.data.operatorCode == operatorCode() ||
+        resource.data.teamId == teamId()
+      );
+      allow create: if isCohortLeader() && validCohortReportCreate();
       allow update, delete: if isSteward();
     }
 

@@ -2,30 +2,38 @@
  * Role-based dashboard URLs for GWIX Operator Network login flows.
  */
 (function (global) {
-  'use strict';
+  "use strict";
 
   function normalizeType(role) {
-    return (role || 'swi').toString().toLowerCase().replace(/-/g, '_');
+    return (role || "swi").toString().toLowerCase().replace(/-/g, "_");
   }
 
   function getDashboardPathForRole(role, preview) {
     var type = normalizeType(role);
-    var base = preview ? '-test' : '';
-    if (type === 'steward' || type === 'bth_steward' || type === 'admin') {
-      return '/operator/steward/dashboard' + base + '.html';
+    var base = preview ? "-test" : "";
+    if (type === "steward" || type === "bth_steward" || type === "admin") {
+      return "/operator/steward/dashboard" + base + ".html";
     }
-    if (type === 'swd_inv' || type === 'swd-inv') {
-      return '/operator/swd-inv/dashboard' + base + '.html';
+    if (type === "swd_inv" || type === "swd-inv") {
+      return "/operator/swd-inv/dashboard" + base + ".html";
     }
-    if (type === 'wds') {
-      return '/operator/wds/dashboard' + base + '.html';
+    if (type === "wds") {
+      return "/operator/wds/dashboard" + base + ".html";
     }
-    return '/operator/swi/dashboard' + base + '.html';
+    if (type === "cohort_leader" || type === "team_leader") {
+      return "/operator/cohort-leader/dashboard" + base + ".html";
+    }
+    if (type === "cohort_member" || type === "member") {
+      return "/operator/cohort-member/dashboard" + base + ".html";
+    }
+    return "/operator/swi/dashboard" + base + ".html";
   }
 
   function isPreviewPage() {
-    return /-test(?:\.html)?$/.test(global.location.pathname) ||
-      global.location.pathname.indexOf('-test') !== -1;
+    return (
+      /-test(?:\.html)?$/.test(global.location.pathname) ||
+      global.location.pathname.indexOf("-test") !== -1
+    );
   }
 
   function redirectToRoleDashboard(role, replace) {
@@ -40,6 +48,6 @@
   global.GOISRoutes = {
     getDashboardPathForRole: getDashboardPathForRole,
     redirectToRoleDashboard: redirectToRoleDashboard,
-    isPreviewPage: isPreviewPage
+    isPreviewPage: isPreviewPage,
   };
-})(typeof window !== 'undefined' ? window : global);
+})(typeof window !== "undefined" ? window : global);

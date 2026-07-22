@@ -79,6 +79,11 @@ exports.goisApproveOperator = functions.https.onCall(async (data, context) => {
     sectorId: op.sectorId || null,
     divisionId: op.divisionId || null,
     parentCode: op.parentCode || null,
+    cohortId: op.cohortId || null,
+    teamId: op.teamId || null,
+    memberId: op.memberId || null,
+    leaderCode: op.leaderCode || null,
+    workforceLevel: op.workforceLevel || null,
     updatedAt: admin.firestore.FieldValue.serverTimestamp()
   }, { merge: true });
 
@@ -109,6 +114,8 @@ exports.goisApproveOperator = functions.https.onCall(async (data, context) => {
     dashboardPath: role === 'steward' ? '/operator/steward/dashboard.html'
       : role === 'swd_inv' ? '/operator/swd-inv/dashboard.html'
       : role === 'wds' ? '/operator/wds/dashboard.html'
+      : role === 'cohort_leader' ? '/operator/cohort-leader/dashboard.html'
+      : role === 'cohort_member' ? '/operator/cohort-member/dashboard.html'
       : '/operator/swi/dashboard.html'
   };
 });

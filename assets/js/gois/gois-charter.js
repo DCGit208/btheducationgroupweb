@@ -59,6 +59,28 @@
         'Track cohort-level performance across WDDAM phases',
         'Report operational activity to SWI / SWD-INV oversight'
       ]
+    },
+    cohort_leader: {
+      title: 'Cohort Team Leader',
+      lead: 'Operational custodian of one Workforce Infrastructure team — team formation, member supervision, reporting, deployment readiness, and revenue-engine accountability.',
+      bullets: [
+        'Build and maintain one operational team of ten participants',
+        'Track attendance, certification progress, practical assignments, and deployment readiness',
+        'Monitor team performance against Development, Deployment, Acquisition, and Governance targets',
+        'Submit periodic operational reports to BTH / WDS oversight',
+        'Maintain financial accountability for leader and member participation baselines'
+      ]
+    },
+    cohort_member: {
+      title: 'Cohort Member',
+      lead: 'Workforce Infrastructure participant — certification progress, professional conduct, deployment readiness, reporting support, and revenue-engine participation.',
+      bullets: [
+        'Complete required training, certification, and practical assignments',
+        'Maintain attendance, teamwork, operational discipline, and professional conduct',
+        'Contribute to team Development, Deployment, Acquisition, and Governance performance',
+        'Track workforce-level participation targets and payment status',
+        'Support operational reporting and deployment readiness evidence'
+      ]
     }
   };
 
@@ -67,7 +89,9 @@
       steward: ['Executive', 'SWI', 'SWD-INV', 'WDS', 'Institutional', 'Government', 'Multilateral'],
       swi: ['Executive', 'SWI', 'SWD-INV', 'Institutional'],
       swd_inv: ['SWD-INV', 'SWI', 'WDS', 'Institutional'],
-      wds: ['WDS', 'SWD-INV', 'SWI']
+      wds: ['WDS', 'SWD-INV', 'SWI'],
+      cohort_leader: ['WDS', 'SWD-INV', 'SWI'],
+      cohort_member: ['WDS', 'SWD-INV', 'SWI']
     };
     return map[rank] || map.swi;
   }
