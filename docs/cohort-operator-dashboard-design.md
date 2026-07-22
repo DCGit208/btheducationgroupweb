@@ -83,10 +83,11 @@ The mainstream infrastructure remains:
 
 ```text
 Steward
-  -> SWI Partner
-    -> SWD-INV
-      -> WDS
-        -> 2 production cohorts per WDS
+  -> 26 sector portfolios
+    -> SWI Partner assignments
+      -> SWD-INV assignments
+        -> WDS assignments
+          -> 2 assigned cohort slots per WDS
 ```
 
 Model/demonstration cohorts must not distort the live mainstream topology. They should be provisioned as separate cohort records under an assigned WDS with explicit mode fields:
@@ -106,24 +107,77 @@ Rules:
 - `production` cohorts count toward mainstream WDS capacity and network rollups.
 - A model cohort can later be promoted only by Steward/BTH governance after validation.
 - Dashboards may show model progress, but GWIX public/mainstream telemetry should not count model cohorts unless promoted.
+- Steward/BTH provisions the sector, SWI, SWD-INV, WDS, and cohort-slot assignments.
+- WDS does not approve accounts. WDS recruits and guides applicants into signup under cohort slots already assigned by Steward/BTH.
+- SWD-INV provides/coordinates WDS capacity under its assigned sector/division scope, but Steward/BTH remains the authority for account activation and final cohort assignment.
+
+## Sector-specific cohort provisioning
+
+The steward dashboard needs a provisioning view that can assign sector-specific infrastructure before public/signup activity begins:
+
+```text
+Steward selects sector / division
+  -> assigns SWI Partner
+    -> records SWD-INV referrals/assignments
+      -> records two WDS structures per SWD-INV as applicable
+        -> assigns two cohort slots to each WDS
+          -> generates signup links for each provisioned cohort slot
+```
+
+Recommended assignment records:
+
+```js
+sector_assignments/{assignmentId} {
+  sectorId,
+  divisionId,
+  swiCode,
+  swdInvCode,
+  wdsCode,
+  cohortSlotCount: 2,
+  status: "assigned",
+  createdBy,
+  createdAt
+}
+```
+
+```js
+wds_cohort_slots/{slotId} {
+  sectorId,
+  divisionId,
+  swiCode,
+  swdInvCode,
+  wdsCode,
+  cohortId,
+  slotNumber: 1,
+  infrastructureMode: "model",
+  countsTowardMainstream: false,
+  signupOpen: true,
+  signupUrl,
+  status: "recruiting"
+}
+```
+
+The WDS dashboard should display those assigned cohort slots and the signup link for each. That link is used by the WDS to guide leaders/members into the correct provisioned cohort.
 
 ## Account provisioning authority
 
 Recommended authority split:
 
 - Steward/BTH Administration creates or approves actual Firebase Auth accounts.
-- WDS can prepare cohort/team/member records inside its assigned scope.
-- Cohort leaders can nominate or invite members, but should not directly create authenticated accounts in the first production-grade workflow.
+- WDS recruits the cohort and guides applicants to the assigned cohort signup links.
+- WDS can see applications for its assigned cohort slots, but should not activate accounts.
+- Cohort leaders can nominate or invite members after they are appointed, but should not directly create authenticated accounts in the first production-grade workflow.
 - Cohort leaders can maintain operational reports for their own team after accounts exist.
 - Cohort members can update limited personal progress inputs only where explicitly allowed.
 
 This protects account integrity, payment integrity, and role assignment. A later workflow can allow leaders to submit pending member applications into a review queue:
 
 ```text
-leader creates pending_member_application
-  -> WDS reviews scope
-    -> Steward/BTH approves
+WDS shares assigned cohort signup link
+  -> applicant submits cohort_application
+    -> Steward/BTH reviews and approves
       -> Cloud Function creates Firebase Auth + users/{uid}
+        -> applicant receives role dashboard access
 ```
 
 ## Provisioning the "5 leaders develop 10 cohorts" obligation
@@ -171,9 +225,10 @@ Rollup:
 Recommended registration channels:
 
 1. Public interest capture from `/workforce-engage.html?intent=cohort`.
-2. Steward/WDS internal cohort creation from the dashboard.
+2. Steward/BTH internal sector/cohort-slot creation from the dashboard.
 3. Bulk upload/import for approved model cohort participants.
-4. Leader-submitted member nominations, routed to approval.
+4. WDS-shared signup links for provisioned cohort slots.
+5. Leader-submitted member nominations, routed to Steward/BTH approval.
 
 Suggested application collections:
 
@@ -181,6 +236,9 @@ Suggested application collections:
 cohort_applications/{applicationId} {
   mode: "model",
   cohortId,
+  wdsCode,
+  sectorId,
+  divisionId,
   teamId,
   applicantType: "leader", // leader | member
   name,

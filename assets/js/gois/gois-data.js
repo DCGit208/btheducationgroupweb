@@ -301,6 +301,7 @@
       teams: [],
       members: [],
       payments: [],
+      applications: [],
     };
     if (!wdsCode) return result;
 
@@ -314,6 +315,12 @@
     );
     result.payments = await queryByField(
       "cohort_payments",
+      "wdsCode",
+      wdsCode,
+      500,
+    );
+    result.applications = await queryByField(
+      "cohort_applications",
       "wdsCode",
       wdsCode,
       500,

@@ -80,6 +80,49 @@ service cloud.firestore {
       request.resource.data.createdBy == request.auth.uid;
     }
 
+    function validCohortApplicationCreate() {
+      return request.resource.data.keys().hasOnly([
+        'mode',
+        'cohortId',
+        'wdsCode',
+        'sectorId',
+        'divisionId',
+        'teamId',
+        'applicantType',
+        'name',
+        'email',
+        'phone',
+        'requestedWorkforceLevel',
+        'notes',
+        'status',
+        'submittedAt',
+        'source'
+      ]) &&
+      request.resource.data.mode in ['model', 'production'] &&
+      request.resource.data.cohortId is string &&
+      request.resource.data.cohortId.size() > 0 &&
+      request.resource.data.cohortId.size() <= 80 &&
+      request.resource.data.wdsCode is string &&
+      request.resource.data.wdsCode.size() > 0 &&
+      request.resource.data.wdsCode.size() <= 80 &&
+      request.resource.data.applicantType in ['leader', 'member'] &&
+      request.resource.data.name is string &&
+      request.resource.data.name.size() > 1 &&
+      request.resource.data.name.size() <= 160 &&
+      request.resource.data.email is string &&
+      request.resource.data.email.size() > 3 &&
+      request.resource.data.email.size() <= 254 &&
+      request.resource.data.status == 'submitted' &&
+      request.resource.data.submittedAt == request.time &&
+      request.resource.data.source == 'cohort_signup' &&
+      (!request.resource.data.keys().hasAny(['sectorId']) || request.resource.data.sectorId is string) &&
+      (!request.resource.data.keys().hasAny(['divisionId']) || request.resource.data.divisionId is string) &&
+      (!request.resource.data.keys().hasAny(['teamId']) || request.resource.data.teamId is string) &&
+      (!request.resource.data.keys().hasAny(['phone']) || (request.resource.data.phone is string && request.resource.data.phone.size() <= 40)) &&
+      (!request.resource.data.keys().hasAny(['requestedWorkforceLevel']) || request.resource.data.requestedWorkforceLevel in ['', '1', '2', '3', '4', '5']) &&
+      (!request.resource.data.keys().hasAny(['notes']) || (request.resource.data.notes is string && request.resource.data.notes.size() <= 1000));
+    }
+
     // Operator auth profile — created by steward / Admin SDK
     match /users/{uid} {
       allow read: if signedIn() && (request.auth.uid == uid || isSteward());
@@ -156,6 +199,15 @@ service cloud.firestore {
         resource.data.teamId == teamId()
       );
       allow create: if isCohortLeader() && validCohortReportCreate();
+      allow update, delete: if isSteward();
+    }
+
+    match /cohort_applications/{id} {
+      allow create: if validCohortApplicationCreate();
+      allow read: if isOperator() && (
+        isSteward() ||
+        resource.data.wdsCode == operatorCode()
+      );
       allow update, delete: if isSteward();
     }
 

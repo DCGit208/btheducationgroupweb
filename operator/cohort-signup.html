@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Cohort Application | GWIX Operator Network</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=DM+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/gois.css?v=20260722cohort3" />
+  </head>
+  <body class="gois-app" style="min-height: 100vh">
+    <div
+      class="gois-login-overlay"
+      style="position: relative; min-height: calc(100vh - 42px)"
+    >
+      <div class="gois-login-box" style="max-width: 620px">
+        <h2>GWIX Cohort Application</h2>
+        <p
+          style="
+            font-size: 13px;
+            color: #64748b;
+            text-align: center;
+            margin: -8px 0 20px;
+          "
+        >
+          Submit your application under the cohort assigned by BTH/WDS. This
+          does not create login access until Steward/BTH approval.
+        </p>
+        <div id="cohortSignupStatus" class="gois-login-error"></div>
+        <form id="cohortSignupForm" style="display: grid; gap: 12px">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px">
+            <div class="gois-form-group">
+              <label for="cohortId">Cohort ID</label>
+              <input id="cohortId" required autocomplete="off" />
+            </div>
+            <div class="gois-form-group">
+              <label for="wdsCode">WDS Code</label>
+              <input id="wdsCode" required autocomplete="off" />
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px">
+            <div class="gois-form-group">
+              <label for="sectorId">Sector</label>
+              <input id="sectorId" autocomplete="off" />
+            </div>
+            <div class="gois-form-group">
+              <label for="divisionId">Division</label>
+              <input id="divisionId" autocomplete="off" />
+            </div>
+          </div>
+
+          <div class="gois-form-group">
+            <label for="applicantType">Application type</label>
+            <select id="applicantType" required>
+              <option value="leader">Cohort team leader</option>
+              <option value="member">Cohort member</option>
+            </select>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px">
+            <div class="gois-form-group">
+              <label for="fullName">Full name</label>
+              <input id="fullName" required autocomplete="name" />
+            </div>
+            <div class="gois-form-group">
+              <label for="email">Email</label>
+              <input id="email" type="email" required autocomplete="email" />
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px">
+            <div class="gois-form-group">
+              <label for="phone">Phone</label>
+              <input id="phone" autocomplete="tel" />
+            </div>
+            <div class="gois-form-group">
+              <label for="workforceLevel">Requested workforce level</label>
+              <select id="workforceLevel">
+                <option value="">Not sure yet</option>
+                <option value="1">Level 1</option>
+                <option value="2">Level 2</option>
+                <option value="3">Level 3</option>
+                <option value="4">Level 4</option>
+                <option value="5">Level 5</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="gois-form-group">
+            <label for="notes">Notes / background</label>
+            <textarea
+              id="notes"
+              rows="4"
+              maxlength="1000"
+              placeholder="Briefly describe your background, certification goal, or team referral."
+            ></textarea>
+          </div>
+
+          <button
+            type="submit"
+            class="gois-btn gois-btn-primary"
+            style="width: 100%; justify-content: center"
+          >
+            Submit application
+          </button>
+        </form>
+        <p style="font-size: 12px; color: #64748b; text-align: center">
+          Already provisioned?
+          <a href="login.html">Sign in to the GWIX Operator Network</a>
+        </p>
+      </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+    <script src="../assets/js/firebase-config.js?v=20260617gois3"></script>
+    <script>
+      (function () {
+        "use strict";
+
+        var params = new URLSearchParams(window.location.search);
+        ["cohortId", "wdsCode", "sectorId", "divisionId"].forEach(
+          function (key) {
+            var el = document.getElementById(key);
+            if (el && params.get(key)) el.value = params.get(key);
+          },
+        );
+
+        var statusEl = document.getElementById("cohortSignupStatus");
+        var form = document.getElementById("cohortSignupForm");
+
+        function showStatus(message, ok) {
+          statusEl.textContent = message;
+          statusEl.classList.add("show");
+          statusEl.style.color = ok ? "#15803d" : "#991b1b";
+          statusEl.style.background = ok ? "#dcfce7" : "#fef2f2";
+          statusEl.style.borderColor = ok ? "#bbf7d0" : "#fecaca";
+        }
+
+        function val(id) {
+          return (document.getElementById(id).value || "").trim();
+        }
+
+        form.addEventListener("submit", async function (event) {
+          event.preventDefault();
+          if (!window.db) {
+            showStatus("Firebase is not configured. Please try again later.");
+            return;
+          }
+
+          var payload = {
+            mode: "model",
+            cohortId: val("cohortId"),
+            wdsCode: val("wdsCode"),
+            sectorId: val("sectorId"),
+            divisionId: val("divisionId"),
+            teamId: "",
+            applicantType: val("applicantType"),
+            name: val("fullName"),
+            email: val("email").toLowerCase(),
+            phone: val("phone"),
+            requestedWorkforceLevel: val("workforceLevel"),
+            notes: val("notes"),
+            status: "submitted",
+            submittedAt: firebase.firestore.FieldValue.serverTimestamp(),
+            source: "cohort_signup",
+          };
+
+          try {
+            await window.db.collection("cohort_applications").add(payload);
+            form.reset();
+            showStatus(
+              "Application submitted. BTH/Steward approval is required before login access is created.",
+              true,
+            );
+          } catch (err) {
+            showStatus(err.message || "Application could not be submitted.");
+          }
+        });
+      })();
+    </script>
+  </body>
+</html>

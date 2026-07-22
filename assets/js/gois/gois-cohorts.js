@@ -513,6 +513,7 @@
     var teams = portfolio.teams || [];
     var members = portfolio.members || [];
     var payments = portfolio.payments || [];
+    var applications = portfolio.applications || [];
     var leaderCount = teams.filter(function (team) {
       return !!(team.leaderCode || team.leaderUid);
     }).length;
@@ -584,6 +585,15 @@
                 team.cohortId === cohort.id || team.cohortId === cohort.code
               );
             });
+            var signupUrl =
+              "/operator/cohort-signup.html?cohortId=" +
+              encodeURIComponent(cohort.id || cohort.code || "") +
+              "&wdsCode=" +
+              encodeURIComponent(portfolio.wdsCode || cohort.wdsCode || "") +
+              "&sectorId=" +
+              encodeURIComponent(cohort.sectorId || "") +
+              "&divisionId=" +
+              encodeURIComponent(cohort.divisionId || "");
             return (
               "<tr><td><strong>" +
               esc(cohort.name || cohort.code || cohort.id) +
@@ -597,11 +607,37 @@
               (cohort.leaderTarget || 5) +
               "</td><td>" +
               esc(cohort.countsTowardMainstream ? "Production" : "Model") +
+              '</td><td><a class="gois-btn" href="' +
+              esc(signupUrl) +
+              '" target="_blank" rel="noopener"><i class="fa-solid fa-user-plus"></i> Signup link</a>' +
               "</td></tr>"
             );
           })
           .join("")
-      : '<tr><td colspan="4" style="color:#64748b">No model or production cohorts assigned to this WDS yet.</td></tr>';
+      : '<tr><td colspan="5" style="color:#64748b">No model or production cohorts assigned to this WDS yet.</td></tr>';
+
+    var applicationRows = applications.length
+      ? applications
+          .slice(0, 25)
+          .map(function (app) {
+            return (
+              "<tr><td><strong>" +
+              esc(app.name || "Applicant") +
+              "</strong><br>" +
+              esc(app.email || "") +
+              "</td><td>" +
+              esc(app.applicantType || "member") +
+              "</td><td>" +
+              esc(app.cohortId || "—") +
+              "</td><td>" +
+              esc(app.requestedWorkforceLevel || "—") +
+              "</td><td>" +
+              esc(app.status || "submitted") +
+              "</td></tr>"
+            );
+          })
+          .join("")
+      : '<tr><td colspan="5" style="color:#64748b">No applications submitted through this WDS cohort signup link yet.</td></tr>';
 
     mountEl.innerHTML =
       '<div class="gois-card"><h3><i class="fa-solid fa-people-group"></i> WDS cohort portfolio — 5:10 strategy</h3>' +
@@ -619,6 +655,11 @@
         "Full cohort target",
       ) +
       kpi(
+        "Applications",
+        applications.length,
+        "Submitted, pending BTH review",
+      ) +
+      kpi(
         "Deployment",
         pct(deploymentActual, deploymentTarget) + "%",
         fmtFcfa(deploymentTarget) + " target",
@@ -626,8 +667,14 @@
       kpi("Paid", fmtFcfa(paid), fmtFcfa(pending) + " pending") +
       "</div></div>" +
       '<div class="gois-card"><h3><i class="fa-solid fa-layer-group"></i> Assigned cohorts</h3><div class="gois-table-wrap"><table class="gois-table">' +
-      "<thead><tr><th>Cohort</th><th>Lifecycle</th><th>Leader teams</th><th>Mainstream count</th></tr></thead><tbody>" +
+      "<thead><tr><th>Cohort</th><th>Lifecycle</th><th>Leader teams</th><th>Mainstream count</th><th>Signup</th></tr></thead><tbody>" +
       cohortRows +
+      "</tbody></table></div></div>" +
+      '<div class="gois-card"><h3><i class="fa-solid fa-inbox"></i> Cohort applications</h3>' +
+      '<p style="font-size:13px;color:#64748b;margin:0 0 12px">WDS can monitor applications submitted through assigned cohort links. Approval and account provisioning remain with Steward/BTH.</p>' +
+      '<div class="gois-table-wrap"><table class="gois-table">' +
+      "<thead><tr><th>Applicant</th><th>Type</th><th>Cohort</th><th>Level</th><th>Status</th></tr></thead><tbody>" +
+      applicationRows +
       "</tbody></table></div></div>" +
       '<div class="gois-card"><h3><i class="fa-solid fa-users-viewfinder"></i> Leaders, teams, KPIs, and direct econometrics</h3><div class="gois-table-wrap"><table class="gois-table">' +
       "<thead><tr><th>Leader / team</th><th>Members</th><th>Attendance</th><th>Certification</th><th>Readiness</th><th>Deployment actual</th></tr></thead><tbody>" +

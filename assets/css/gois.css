@@ -493,12 +493,15 @@ body.gois-app {
   font-size: 13px;
 }
 
-.gois-form-group input {
+.gois-form-group input,
+.gois-form-group select,
+.gois-form-group textarea {
   width: 100%;
   padding: 11px 14px;
   border: 2px solid #e2e8f0;
   border-radius: 8px;
   font-size: 1rem;
+  font-family: inherit;
 }
 
 .gois-login-error {
