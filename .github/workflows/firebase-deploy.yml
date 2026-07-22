@@ -7,11 +7,11 @@ on:
   push:
     branches: [main]
     paths-ignore:
-      - '**/*.md'
-      - 'COMPLETE_BACKUP/**'
-      - 'content-materials/**'
-      - '02_SHARED_SERVICES/**'
-      - '.github/workflows/deploy-to-ftp.yml'
+      - "**/*.md"
+      - "COMPLETE_BACKUP/**"
+      - "content-materials/**"
+      - "02_SHARED_SERVICES/**"
+      - ".github/workflows/deploy-to-ftp.yml"
   workflow_dispatch:
 
 concurrency:
@@ -60,17 +60,19 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: "20"
           cache: npm
-          cache-dependency-path: functions/package-lock.json
+          cache-dependency-path: |
+            package-lock.json
+            functions/package-lock.json
 
       - name: Authenticate to Google Cloud
         uses: google-github-actions/auth@v2
         with:
           credentials_json: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
 
-      - name: Install Firebase CLI
-        run: npm install -g firebase-tools
+      - name: Install root dependencies
+        run: npm ci
 
       - name: Install functions dependencies
         if: steps.filter.outputs.functions == 'true' || github.event_name == 'workflow_dispatch'
@@ -95,4 +97,4 @@ jobs:
           ONLY=$(IFS=,; echo "${PARTS[*]}")
           echo "Deploying: --only ${ONLY}"
           # --force accepts Artifact Registry cleanup-policy setup so CI does not fail after a successful deploy
-          firebase deploy --only "${ONLY}" --project bth-gwix-operator-network --non-interactive --force
+          npx -y firebase-tools@latest deploy --only "${ONLY}" --project bth-gwix-operator-network --non-interactive --force
