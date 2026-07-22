@@ -1,0 +1,54 @@
+name: Firebase Hosting Preview
+
+# Creates a temporary Firebase Hosting preview URL for pull requests.
+# Production deploys are handled by firebase-deploy.yml after merge to main.
+
+on:
+  pull_request:
+    branches: [main]
+    paths-ignore:
+      - "**/*.md"
+      - "functions/**"
+      - "firestore.rules"
+      - "firestore.indexes.json"
+      - "COMPLETE_BACKUP/**"
+      - "content-materials/**"
+      - "02_SHARED_SERVICES/**"
+      - ".github/workflows/deploy-to-ftp.yml"
+  workflow_dispatch:
+
+concurrency:
+  group: firebase-hosting-preview-${{ github.event_name == 'pull_request' && github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  preview:
+    name: Deploy hosting preview
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      checks: write
+      contents: read
+      pull-requests: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Require FIREBASE_SERVICE_ACCOUNT
+        env:
+          FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+        run: |
+          if [ -z "$FIREBASE_SERVICE_ACCOUNT" ]; then
+            echo "::error::Add repository secret FIREBASE_SERVICE_ACCOUNT (service account JSON)"
+            exit 1
+          fi
+
+      - name: Deploy preview channel
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: ${{ secrets.GITHUB_TOKEN }}
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+          projectId: bth-gwix-operator-network
+          channelId: ${{ github.event_name == 'pull_request' && format('pr-{0}', github.event.pull_request.number) || format('manual-{0}', github.run_id) }}
+          expires: 14d
