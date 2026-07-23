@@ -68,6 +68,11 @@
       icon: "fa-solid fa-users-viewfinder",
     },
     {
+      id: "learning",
+      label: "Learning",
+      icon: "fa-solid fa-graduation-cap",
+    },
+    {
       id: "deployment-targets",
       label: "Deployment targets",
       icon: "fa-solid fa-bullseye",
@@ -84,6 +89,11 @@
       id: "member-ops",
       label: "My operations",
       icon: "fa-solid fa-user-check",
+    },
+    {
+      id: "learning",
+      label: "Learning",
+      icon: "fa-solid fa-graduation-cap",
     },
     {
       id: "deployment-targets",
@@ -154,6 +164,7 @@
           COHORT_LEADER_EXTRA[0],
           COHORT_LEADER_EXTRA[1],
           COHORT_LEADER_EXTRA[2],
+          COHORT_LEADER_EXTRA[3],
         );
       }
       if (rank === "cohort_member") {
@@ -163,6 +174,7 @@
           COHORT_MEMBER_EXTRA[0],
           COHORT_MEMBER_EXTRA[1],
           COHORT_MEMBER_EXTRA[2],
+          COHORT_MEMBER_EXTRA[3],
         );
       }
       return nav;

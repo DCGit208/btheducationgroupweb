@@ -491,6 +491,65 @@
       "</div>";
   }
 
+  function renderLearning(mountEl, rank, profile, scope) {
+    if (!mountEl) return;
+    var member = (scope && scope.member) || {};
+    var level = memberLevel(profile || {}, scope);
+    var teamLabel =
+      (scope && scope.team && (scope.team.name || scope.team.code)) ||
+      profile.teamId ||
+      "Assigned team";
+    var modules = [
+      ["Orientation", "Workforce Infrastructure doctrine", "Required"],
+      [
+        "Certification",
+        "Level " + level + " certification pathway",
+        "Required",
+      ],
+      ["Practical", "Lab/project evidence and assignments", "Required"],
+      [
+        "Deployment",
+        "Deployment readiness and professional conduct",
+        "Required",
+      ],
+      [
+        "Governance",
+        "Reporting, continuity, and quality standards",
+        "Required",
+      ],
+    ];
+    var rows = modules
+      .map(function (m) {
+        return (
+          "<tr><td><strong>" +
+          esc(m[0]) +
+          "</strong></td><td>" +
+          esc(m[1]) +
+          "</td><td>" +
+          esc(m[2]) +
+          '</td><td><span class="gois-badge gois-badge--arch">Configured externally</span></td></tr>'
+        );
+      })
+      .join("");
+
+    mountEl.innerHTML =
+      '<div class="gois-card"><h3><i class="fa-solid fa-graduation-cap"></i> Learning management</h3>' +
+      '<p style="font-size:13px;color:#64748b;margin:0 0 12px">LMS is represented here as a governed learning-path layer. It can link to external course portals, certification partners, practical assignments, and evidence records without rebuilding a full LMS inside GWIX.</p>' +
+      '<div class="gois-kpi-grid">' +
+      kpi(
+        "Scope",
+        rank === "cohort_leader" ? teamLabel : "My pathway",
+        "Cohort learning path",
+      ) +
+      kpi("Workforce level", "L" + level, "Pathway level") +
+      kpi("Modules", modules.length, "Baseline pathway") +
+      "</div>" +
+      '<div class="gois-table-wrap"><table class="gois-table">' +
+      "<thead><tr><th>Stage</th><th>Learning item</th><th>Requirement</th><th>Status</th></tr></thead><tbody>" +
+      rows +
+      "</tbody></table></div></div>";
+  }
+
   function sum(items, fieldPath) {
     return (items || []).reduce(function (total, item) {
       var value = item;
@@ -721,6 +780,7 @@
     renderMemberOperations: renderMemberOperations,
     renderPayments: renderPayments,
     renderDeploymentTargets: renderDeploymentTargets,
+    renderLearning: renderLearning,
     renderWdsPortfolio: renderWdsPortfolio,
   };
 })(typeof window !== "undefined" ? window : global);

@@ -267,6 +267,7 @@
     var memberOps = document.getElementById("goisMemberOpsMount");
     var payments = document.getElementById("goisPaymentsMount");
     var targets = document.getElementById("goisDeploymentTargetsMount");
+    var learning = document.getElementById("goisLearningMount");
     var nodes =
       state.downline && state.downline.nodes ? state.downline.nodes : [];
 
@@ -343,6 +344,12 @@
         state.profile || {},
         state.cohortScope,
       );
+      global.GOISCohorts.renderLearning(
+        learning,
+        rank,
+        state.profile || {},
+        state.cohortScope,
+      );
     }
     if (rank === "cohort_member" && global.GOISCohorts) {
       global.GOISCohorts.renderMemberOperations(
@@ -358,6 +365,12 @@
       );
       global.GOISCohorts.renderDeploymentTargets(
         targets,
+        rank,
+        state.profile || {},
+        state.cohortScope,
+      );
+      global.GOISCohorts.renderLearning(
+        learning,
         rank,
         state.profile || {},
         state.cohortScope,

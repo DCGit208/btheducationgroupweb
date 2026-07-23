@@ -2,21 +2,36 @@
  * GOIS Cloud Functions client — approve operator with login provisioning.
  */
 (function (global) {
-  'use strict';
+  "use strict";
 
   function functions() {
-    return typeof firebase !== 'undefined' && firebase.functions
+    return typeof firebase !== "undefined" && firebase.functions
       ? firebase.functions()
       : null;
   }
 
   async function approveWithLogin(operatorId, email, password) {
     var fn = functions();
-    if (!fn) throw new Error('Firebase Functions not loaded.');
-    var callable = fn.httpsCallable('goisApproveOperator');
-    var result = await callable({ operatorId: operatorId, email: email, password: password || null });
+    if (!fn) throw new Error("Firebase Functions not loaded.");
+    var callable = fn.httpsCallable("goisApproveOperator");
+    var result = await callable({
+      operatorId: operatorId,
+      email: email,
+      password: password || null,
+    });
     return result.data;
   }
 
-  global.GOISProvision = { approveWithLogin: approveWithLogin };
-})(typeof window !== 'undefined' ? window : global);
+  async function approveCohortApplication(payload) {
+    var fn = functions();
+    if (!fn) throw new Error("Firebase Functions not loaded.");
+    var callable = fn.httpsCallable("goisApproveCohortApplication");
+    var result = await callable(payload);
+    return result.data;
+  }
+
+  global.GOISProvision = {
+    approveWithLogin: approveWithLogin,
+    approveCohortApplication: approveCohortApplication,
+  };
+})(typeof window !== "undefined" ? window : global);

@@ -151,6 +151,130 @@
     return loadOperatorsByStatus("active");
   }
 
+  function generateCohortId(form) {
+    var sector = (form.sectorId || "SECTOR")
+      .toUpperCase()
+      .replace(/[^A-Z0-9]+/g, "-");
+    var division = (form.divisionId || "DIV")
+      .toUpperCase()
+      .replace(/[^A-Z0-9]+/g, "-");
+    var slot = form.slotNumber || "1";
+    return (
+      "COHORT-" +
+      sector +
+      "-" +
+      division +
+      "-" +
+      (form.wdsCode || "WDS") +
+      "-" +
+      slot
+    );
+  }
+
+  async function provisionCohortSlot(profile, form) {
+    var firestore = db();
+    if (!firestore) throw new Error("Firestore not configured");
+    var cohortId = form.cohortId || generateCohortId(form);
+    var signupUrl =
+      "/operator/cohort-signup.html?cohortId=" +
+      encodeURIComponent(cohortId) +
+      "&wdsCode=" +
+      encodeURIComponent(form.wdsCode) +
+      "&sectorId=" +
+      encodeURIComponent(form.sectorId || "") +
+      "&divisionId=" +
+      encodeURIComponent(form.divisionId || "");
+
+    await firestore
+      .collection("cohorts")
+      .doc(cohortId)
+      .set(
+        {
+          code: cohortId,
+          name: form.name || cohortId,
+          status: "recruiting",
+          lifecycleState: "recruiting",
+          infrastructureMode: form.infrastructureMode || "model",
+          countsTowardMainstream: form.countsTowardMainstream === true,
+          signupOpen: true,
+          signupUrl: signupUrl,
+          sectorId: form.sectorId || "",
+          divisionId: form.divisionId || "",
+          swiCode: form.swiCode || "",
+          swdInvCode: form.swdInvCode || "",
+          wdsCode: form.wdsCode || "",
+          slotNumber: Number(form.slotNumber || 1),
+          targetParticipants: 50,
+          leaderTarget: 5,
+          teamMemberTarget: 10,
+          targets: {
+            cohortValueFcfa: 438000000,
+            developmentValueFcfa: 438000000,
+            deploymentAnnualTargetFcfa: 4380000000,
+            acquisitionValueFcfa: 438000000,
+            governanceAnnualTargetFcfa: 43800000,
+          },
+          actuals: {
+            developmentValueFcfa: 0,
+            deploymentValueFcfa: 0,
+            acquisitionValueFcfa: 0,
+            governanceValueFcfa: 0,
+          },
+          createdAt: firebase.firestore.FieldValue.serverTimestamp(),
+          createdBy: profile.operatorCode || profile.email,
+        },
+        { merge: true },
+      );
+
+    await firestore
+      .collection("wds_cohort_slots")
+      .doc(cohortId)
+      .set(
+        {
+          cohortId: cohortId,
+          sectorId: form.sectorId || "",
+          divisionId: form.divisionId || "",
+          swiCode: form.swiCode || "",
+          swdInvCode: form.swdInvCode || "",
+          wdsCode: form.wdsCode || "",
+          slotNumber: Number(form.slotNumber || 1),
+          infrastructureMode: form.infrastructureMode || "model",
+          countsTowardMainstream: form.countsTowardMainstream === true,
+          signupOpen: true,
+          signupUrl: signupUrl,
+          status: "recruiting",
+          updatedAt: firebase.firestore.FieldValue.serverTimestamp(),
+          updatedBy: profile.operatorCode || profile.email,
+        },
+        { merge: true },
+      );
+
+    await logActivity(
+      profile,
+      "COHORT_SLOT_PROVISIONED",
+      cohortId + " · " + (form.wdsCode || "WDS") + " · signup opened",
+    );
+    return { cohortId: cohortId, signupUrl: signupUrl };
+  }
+
+  async function loadCohortApplications(status) {
+    var firestore = db();
+    if (!firestore) return [];
+    try {
+      var snap = await firestore
+        .collection("cohort_applications")
+        .where("status", "==", status || "submitted")
+        .limit(100)
+        .get();
+      return snap.docs.map(function (d) {
+        return { id: d.id, data: d.data() };
+      });
+    } catch (e) {
+      console.warn("[GOIS] loadCohortApplications", e);
+      return [];
+    }
+  }
+
   function renderRegistry(mountEl, profile) {
     if (!mountEl) return;
 
@@ -177,6 +301,23 @@
       '<div class="gois-form-group"><label>Workforce level</label><select id="goisRegLevel" style="width:100%;padding:10px;border:2px solid #e2e8f0;border-radius:8px"><option value="">—</option><option value="1">Level 1</option><option value="2">Level 2</option><option value="3">Level 3</option><option value="4">Level 4</option><option value="5">Level 5</option></select></div></div>' +
       '<button type="submit" class="gois-btn gois-btn-primary"><i class="fa-solid fa-plus"></i> Register to queue</button>' +
       '<p id="goisRegStatus" style="font-size:12px;color:#64748b;margin:0"></p></form></div>' +
+      '<div class="gois-card"><h3><i class="fa-solid fa-diagram-project"></i> Provision WDS cohort slot</h3>' +
+      '<form id="goisCohortSlotForm" style="display:grid;gap:12px;max-width:720px">' +
+      '<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">' +
+      '<div class="gois-form-group"><label>Sector</label><input id="goisSlotSector" required placeholder="e.g. EdTech"></div>' +
+      '<div class="gois-form-group"><label>Division</label><input id="goisSlotDivision" required placeholder="e.g. IV"></div></div>' +
+      '<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">' +
+      '<div class="gois-form-group"><label>SWI code</label><input id="goisSlotSwi" placeholder="SWI-..."></div>' +
+      '<div class="gois-form-group"><label>SWD-INV code</label><input id="goisSlotSwd" placeholder="SWD-..."></div></div>' +
+      '<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">' +
+      '<div class="gois-form-group"><label>WDS code</label><input id="goisSlotWds" required placeholder="WDS-..."></div>' +
+      '<div class="gois-form-group"><label>Slot #</label><select id="goisSlotNumber"><option value="1">Slot 1</option><option value="2">Slot 2</option></select></div></div>' +
+      '<div class="gois-form-group"><label>Cohort ID override (optional)</label><input id="goisSlotCohort" placeholder="Auto-generated if blank"></div>' +
+      '<div class="gois-form-group"><label>Cohort display name</label><input id="goisSlotName" placeholder="e.g. EdTech IV Model Cohort 01"></div>' +
+      '<button type="submit" class="gois-btn gois-btn-primary"><i class="fa-solid fa-link"></i> Provision cohort slot & signup link</button>' +
+      '<p id="goisSlotStatus" style="font-size:12px;color:#64748b;margin:0"></p></form></div>' +
+      '<div class="gois-card"><h3><i class="fa-solid fa-inbox"></i> Cohort application review</h3>' +
+      '<div id="goisCohortApplications"><div class="gois-empty">Loading…</div></div></div>' +
       '<div class="gois-card"><h3><i class="fa-solid fa-clock"></i> Pending approval</h3>' +
       '<div id="goisPendingQueue"><div class="gois-empty">Loading…</div></div></div>' +
       '<div class="gois-card"><h3><i class="fa-solid fa-circle-check"></i> Active operators</h3>' +
@@ -214,7 +355,45 @@
         }
       });
 
+    document
+      .getElementById("goisCohortSlotForm")
+      .addEventListener("submit", async function (e) {
+        e.preventDefault();
+        var statusEl = document.getElementById("goisSlotStatus");
+        statusEl.textContent = "Provisioning cohort slot…";
+        statusEl.style.color = "#64748b";
+        try {
+          var result = await provisionCohortSlot(profile, {
+            sectorId: document.getElementById("goisSlotSector").value.trim(),
+            divisionId: document
+              .getElementById("goisSlotDivision")
+              .value.trim(),
+            swiCode: document.getElementById("goisSlotSwi").value.trim(),
+            swdInvCode: document.getElementById("goisSlotSwd").value.trim(),
+            wdsCode: document.getElementById("goisSlotWds").value.trim(),
+            slotNumber: document.getElementById("goisSlotNumber").value,
+            cohortId: document.getElementById("goisSlotCohort").value.trim(),
+            name: document.getElementById("goisSlotName").value.trim(),
+            infrastructureMode: "model",
+          });
+          statusEl.innerHTML =
+            "Provisioned <code>" +
+            esc(result.cohortId) +
+            '</code> · <a href="' +
+            esc(result.signupUrl) +
+            '" target="_blank" rel="noopener">Open signup link</a>';
+          statusEl.style.color = "#15803d";
+          e.target.reset();
+          global.dispatchEvent(new CustomEvent("gois-registry-changed"));
+        } catch (err) {
+          statusEl.textContent =
+            err.message || "Cohort slot provisioning failed";
+          statusEl.style.color = "#991b1b";
+        }
+      });
+
     refreshQueues(profile);
+    refreshCohortApplications(profile);
   }
 
   function renderPendingQueue(items, profile) {
@@ -407,6 +586,128 @@
     });
   }
 
+  function renderCohortApplications(items, profile) {
+    var mount = document.getElementById("goisCohortApplications");
+    if (!mount) return;
+    if (!items.length) {
+      mount.innerHTML =
+        '<div class="gois-empty">No submitted cohort applications.</div>';
+      return;
+    }
+    var rows = items
+      .map(function (row) {
+        var d = row.data;
+        return (
+          '<tr data-app-id="' +
+          esc(row.id) +
+          '"><td><strong>' +
+          esc(d.name || "Applicant") +
+          "</strong><br>" +
+          esc(d.email || "") +
+          "</td><td>" +
+          esc(d.applicantType || "member") +
+          "</td><td><code>" +
+          esc(d.cohortId || "") +
+          "</code><br>" +
+          esc(d.wdsCode || "") +
+          "</td><td>" +
+          esc(d.requestedWorkforceLevel || "—") +
+          '</td><td style="white-space:nowrap">' +
+          '<button type="button" class="gois-btn gois-btn-primary gois-app-approve" data-id="' +
+          esc(row.id) +
+          '" data-type="' +
+          esc(d.applicantType || "member") +
+          '">Approve &amp; login</button> ' +
+          '<button type="button" class="gois-btn gois-app-reject" data-id="' +
+          esc(row.id) +
+          '">Reject</button></td></tr>'
+        );
+      })
+      .join("");
+
+    mount.innerHTML =
+      '<div class="gois-table-wrap"><table class="gois-table">' +
+      "<thead><tr><th>Applicant</th><th>Type</th><th>Cohort / WDS</th><th>Level</th><th>Actions</th></tr></thead><tbody>" +
+      rows +
+      "</tbody></table></div>";
+
+    mount.querySelectorAll(".gois-app-approve").forEach(function (btn) {
+      btn.addEventListener("click", async function () {
+        var applicationId = btn.getAttribute("data-id");
+        var type = btn.getAttribute("data-type") || "member";
+        var role = type === "leader" ? "cohort_leader" : "cohort_member";
+        var teamId =
+          prompt(
+            "Team ID (required for members; blank auto-generates for leaders):",
+          ) || "";
+        var leaderCode =
+          role === "cohort_member"
+            ? prompt("Leader code for member (optional):") || ""
+            : "";
+        var password =
+          prompt("Set password (leave blank to auto-generate):") || "";
+        btn.disabled = true;
+        btn.textContent = "Provisioning…";
+        try {
+          if (
+            !global.GOISProvision ||
+            !global.GOISProvision.approveCohortApplication
+          ) {
+            throw new Error(
+              "Deploy Cloud Functions to approve cohort applications.",
+            );
+          }
+          var result = await global.GOISProvision.approveCohortApplication({
+            applicationId: applicationId,
+            role: role,
+            teamId: teamId.trim(),
+            leaderCode: leaderCode.trim(),
+            password: password || null,
+          });
+          var msg = "Provisioned · " + result.operatorCode;
+          if (result.temporaryPassword) {
+            msg += "\n\nTemporary password:\n" + result.temporaryPassword;
+          }
+          alert(msg);
+          refreshCohortApplications(profile);
+          refreshQueues(profile);
+        } catch (err) {
+          alert(err.message || "Application approval failed");
+          btn.disabled = false;
+          btn.textContent = "Approve & login";
+        }
+      });
+    });
+
+    mount.querySelectorAll(".gois-app-reject").forEach(function (btn) {
+      btn.addEventListener("click", async function () {
+        var reason = prompt("Rejection reason (optional):") || "";
+        btn.disabled = true;
+        try {
+          var firestore = db();
+          await firestore
+            .collection("cohort_applications")
+            .doc(btn.getAttribute("data-id"))
+            .update({
+              status: "rejected",
+              rejectedAt: firebase.firestore.FieldValue.serverTimestamp(),
+              rejectedBy: profile.operatorCode || profile.email,
+              rejectReason: reason,
+            });
+          refreshCohortApplications(profile);
+        } catch (err) {
+          alert(err.message || "Application rejection failed");
+          btn.disabled = false;
+        }
+      });
+    });
+  }
+
+  async function refreshCohortApplications(profile) {
+    var submitted = await loadCohortApplications("submitted");
+    renderCohortApplications(submitted, profile);
+  }
+
   async function refreshQueues(profile) {
     var pending = await loadOperatorsByStatus("pending");
     var active = await loadActiveOperators();
@@ -420,7 +721,9 @@
     approveOperator: approveOperator,
     rejectOperator: rejectOperator,
     registerOperator: registerOperator,
+    provisionCohortSlot: provisionCohortSlot,
     loadActiveOperators: loadActiveOperators,
     loadOperatorsByStatus: loadOperatorsByStatus,
+    loadCohortApplications: loadCohortApplications,
   };
 })(typeof window !== "undefined" ? window : global);

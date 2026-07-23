@@ -158,6 +158,14 @@ service cloud.firestore {
       allow create, update, delete: if isSteward();
     }
 
+    match /wds_cohort_slots/{id} {
+      allow read: if isOperator() && (
+        isSteward() ||
+        ownsWdsScope()
+      );
+      allow create, update, delete: if isSteward();
+    }
+
     match /cohort_teams/{id} {
       allow read: if isOperator() && (
         isSteward() ||
@@ -209,6 +217,58 @@ service cloud.firestore {
         resource.data.wdsCode == operatorCode()
       );
       allow update, delete: if isSteward();
+    }
+
+    match /cohort_fee_plans/{id} {
+      allow read: if isOperator() && (
+        isSteward() ||
+        resource.data.wdsCode == operatorCode() ||
+        resource.data.cohortId == cohortId()
+      );
+      allow create, update, delete: if isSteward();
+    }
+
+    match /cohort_invoices/{id} {
+      allow read: if isOperator() && (
+        isSteward() ||
+        resource.data.wdsCode == operatorCode() ||
+        resource.data.memberId == memberId() ||
+        resource.data.operatorCode == operatorCode() ||
+        (isCohortLeader() && resource.data.teamId == teamId())
+      );
+      allow create, update, delete: if isSteward();
+    }
+
+    match /cohort_learning_paths/{id} {
+      allow read: if isOperator() && (
+        isSteward() ||
+        resource.data.wdsCode == operatorCode() ||
+        resource.data.cohortId == cohortId() ||
+        resource.data.teamId == teamId()
+      );
+      allow create, update, delete: if isSteward();
+    }
+
+    match /member_learning_progress/{id} {
+      allow read: if isOperator() && (
+        isSteward() ||
+        resource.data.wdsCode == operatorCode() ||
+        resource.data.memberId == memberId() ||
+        resource.data.operatorCode == operatorCode() ||
+        (isCohortLeader() && resource.data.teamId == teamId())
+      );
+      allow create, update, delete: if isSteward();
+    }
+
+    match /cohort_econometric_ledger/{id} {
+      allow read: if isOperator() && (
+        isSteward() ||
+        resource.data.wdsCode == operatorCode() ||
+        resource.data.cohortId == cohortId() ||
+        resource.data.teamId == teamId() ||
+        resource.data.memberId == memberId()
+      );
+      allow create, update, delete: if isSteward();
     }
 
     // Public GWIX econometric feed (read) — steward publishes (write)
