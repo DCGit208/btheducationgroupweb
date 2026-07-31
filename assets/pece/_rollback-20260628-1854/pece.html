@@ -1,0 +1,1745 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PECE — Professional Early Child Education | Children Deserve Better | BTH Education Group</title>
+    <meta name="description" content="PECE — Professional Early Child Education by BTH Education Group. Children Deserve Better. Full education journeys, mentorings, and development programmes for ages 1–5, 5–10, 10–15, and 15–17. 17-level UNESCO-UNEVOC-UN aligned system.">
+    <meta name="keywords" content="PECE, Professional Early Child Education, PENTAD, TENNER, Post Industrial, Organizational Development, UNESCO, UNEVOC, UN, UDHR Article 26, SDG 4, 17-level program, BTH Education Group, Dr. Coach Achu Gustave">
+    
+    <!-- Advanced Preloading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Advanced Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/pece-hero.css?v=20260628h20">
+    <link rel="stylesheet" href="assets/css/pece-discovery.css?v=20260626pd5">
+    
+    <style>
+        /* Revolutionary Design System */
+        :root {
+            /* PECE Brand Colors */
+            --pece-primary: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+            --pece-secondary: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            --pece-accent: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            --pece-success: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+            --pece-warning: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+            --pece-premium: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            
+            /* Advanced Typography */
+            --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-mono: 'JetBrains Mono', Monaco, 'Cascadia Code', monospace;
+            
+            /* Spacing System */
+            --space-xs: 0.25rem;
+            --space-sm: 0.5rem;
+            --space-md: 1rem;
+            --space-lg: 1.5rem;
+            --space-xl: 2rem;
+            --space-2xl: 3rem;
+            --space-3xl: 4rem;
+            --space-4xl: 6rem;
+            
+            /* Advanced Shadows */
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            --shadow-premium: 0 32px 64px -12px rgba(255, 154, 158, 0.4);
+            
+            /* Glass Morphism */
+            --glass-light: rgba(255, 255, 255, 0.25);
+            --glass-dark: rgba(0, 0, 0, 0.25);
+            --glass-blur: saturate(180%) blur(20px);
+            
+            /* Contrast-Compliant Color System */
+            --contrast-text-primary: #1f2937;
+            --contrast-text-secondary: #374151;
+            --contrast-text-muted: #6b7280;
+            --contrast-border-light: #e5e7eb;
+            --contrast-border-medium: #d1d5db;
+            --contrast-accent-blue: #3b82f6;
+            --contrast-accent-green: #059669;
+            --contrast-accent-red: #dc2626;
+            --contrast-accent-purple: #7c3aed;
+            --contrast-accent-orange: #ea580c;
+            --contrast-accent-cyan: #0891b2;
+        }
+
+        /* Advanced Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-primary);
+            line-height: 1.6;
+            color: #1a202c;
+            background: #f8fafc;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        /* Revolutionary Header */
+        .pece-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: var(--glass-blur);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            padding: var(--space-md) 0;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .header-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 var(--space-xl);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .header-logo {
+            display: flex;
+            align-items: center;
+            gap: var(--space-md);
+            font-size: 1.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+        }
+
+        .header-nav {
+            display: flex;
+            gap: var(--space-lg);
+        }
+
+        .nav-link {
+            color: var(--contrast-text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            padding: var(--space-sm) var(--space-md);
+            border-radius: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            background: var(--glass-light);
+            transform: translateY(-2px);
+        }
+
+        /* Framework Section */
+        .framework-section {
+            padding: var(--space-4xl) 0;
+            background: white;
+        }
+
+        .section-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 var(--space-xl);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: var(--space-4xl);
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--contrast-text-primary);
+            margin-bottom: var(--space-lg);
+        }
+
+        .section-subtitle {
+            font-size: 1.125rem;
+            color: var(--contrast-text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .methodology-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-2xl);
+            margin-bottom: var(--space-4xl);
+        }
+
+        .methodology-card {
+            background: white;
+            padding: var(--space-2xl);
+            border-radius: 1.5rem;
+            box-shadow: var(--shadow-xl);
+            border: 1px solid var(--contrast-border-light);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .methodology-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--pece-primary);
+        }
+
+        .methodology-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-2xl);
+        }
+
+        .methodology-icon {
+            font-size: 3rem;
+            margin-bottom: var(--space-lg);
+            display: block;
+        }
+
+        .methodology-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--contrast-text-primary);
+            margin-bottom: var(--space-md);
+        }
+
+        .methodology-description {
+            color: var(--contrast-text-secondary);
+            margin-bottom: var(--space-lg);
+            line-height: 1.6;
+        }
+
+        .methodology-features {
+            list-style: none;
+        }
+
+        .methodology-features li {
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+            margin-bottom: var(--space-sm);
+            color: var(--contrast-text-secondary);
+        }
+
+        .methodology-features li::before {
+            content: '✓';
+            color: var(--contrast-accent-green);
+            font-weight: bold;
+        }
+
+        /* Level System */
+        .level-system-section {
+            padding: var(--space-4xl) 0;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        }
+
+        .level-tabs {
+            display: flex;
+            justify-content: center;
+            gap: var(--space-sm);
+            margin-bottom: var(--space-3xl);
+            background: white;
+            border-radius: 1rem;
+            padding: var(--space-sm);
+            box-shadow: var(--shadow-md);
+            max-width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .level-tab {
+            padding: var(--space-md) var(--space-lg);
+            border: none;
+            background: transparent;
+            color: var(--contrast-text-secondary);
+            font-weight: 500;
+            border-radius: 0.75rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: var(--font-primary);
+        }
+
+        .level-tab.active {
+            background: var(--pece-primary);
+            color: white;
+            box-shadow: var(--shadow-md);
+        }
+
+        .level-tab:hover:not(.active) {
+            background: var(--glass-light);
+        }
+
+        .level-content {
+            display: none;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        .level-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .level-overview {
+            background: white;
+            padding: var(--space-2xl);
+            border-radius: 1.5rem;
+            box-shadow: var(--shadow-lg);
+            margin-bottom: var(--space-2xl);
+        }
+
+        .level-header {
+            text-align: center;
+            margin-bottom: var(--space-2xl);
+        }
+
+        .level-title {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--contrast-text-primary);
+            margin-bottom: var(--space-md);
+        }
+
+        .phase-subtitle {
+            font-size: 1.2rem;
+            color: var(--accent-color);
+            margin: 0.5rem 0 1rem 0;
+            text-align: center;
+            font-weight: 600;
+            font-style: italic;
+        }
+
+        .phase-program-subtitle {
+            color: var(--contrast-accent-orange);
+            margin-bottom: var(--space-md);
+        }
+
+        .level-description {
+            font-size: 1.125rem;
+            color: var(--contrast-text-secondary);
+            margin-bottom: var(--space-lg);
+        }
+
+        .level-metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--space-lg);
+            margin-bottom: var(--space-2xl);
+        }
+
+        .metric-card {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            padding: var(--space-lg);
+            border-radius: 1rem;
+            text-align: center;
+        }
+
+        .metric-value {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--contrast-accent-purple);
+            display: block;
+        }
+
+        .metric-label {
+            font-size: 0.875rem;
+            color: var(--contrast-text-muted);
+            margin-top: var(--space-sm);
+        }
+
+        .level-modules {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: var(--space-xl);
+        }
+
+        .module-card {
+            background: white;
+            padding: var(--space-xl);
+            border-radius: 1rem;
+            box-shadow: var(--shadow-md);
+            border-left: 4px solid var(--contrast-accent-blue);
+        }
+
+        .module-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--contrast-text-primary);
+            margin-bottom: var(--space-md);
+            display: flex;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+
+        .module-content {
+            color: var(--contrast-text-secondary);
+            line-height: 1.6;
+        }
+
+        .module-content ul {
+            margin-top: var(--space-md);
+            padding-left: var(--space-lg);
+        }
+
+        .module-content li {
+            margin-bottom: var(--space-sm);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: var(--space-4xl) 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .cta-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: var(--space-lg);
+        }
+
+        .cta-description {
+            font-size: 1.125rem;
+            margin-bottom: var(--space-2xl);
+            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: var(--space-lg);
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--space-sm);
+            padding: var(--space-md) var(--space-xl);
+            border-radius: 0.75rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 2px solid transparent;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background: white;
+            color: var(--contrast-text-primary);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: white;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--contrast-text-primary);
+            color: white;
+            padding: var(--space-2xl) 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 var(--space-xl);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .methodology-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .level-tabs {
+                flex-wrap: wrap;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="pece-header">
+        <div class="header-container">
+            <a href="index.html" class="header-logo">
+                <i class="fas fa-graduation-cap"></i>
+                BTH Education Group
+            </a>
+            <nav class="header-nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="program.html" class="nav-link">Programs</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pece-hero" aria-labelledby="pece-hero-heading">
+        <div class="pece-hero__texture" aria-hidden="true"></div>
+
+        <div class="pece-hero__inner">
+            <div class="pece-hero__copy">
+                    <span class="pece-hero__eyebrow" data-reveal>BTH Education Group &bull; Early Child Education Platform</span>
+                    <h1 class="pece-hero__heading" id="pece-hero-heading" data-reveal>Children Deserve <span class="pece-hero__heading-accent">Better.</span></h1>
+                    <p class="pece-hero__thesis" data-reveal>Developing The Whole Child For Life, Leadership, And The Future Of Work.</p>
+
+                    <div class="pece-hero__brand" data-reveal>
+                        <p class="pece-hero__program">PECE <span class="pece-hero__program-sep" aria-hidden="true">|</span> <span class="pece-hero__program-sub">Professional Early Child Education</span></p>
+                    </div>
+                    <span class="pece-hero__badge" data-reveal>A Complete Human Development System</span>
+
+                    <p class="pece-hero__lead" data-reveal>
+                        PECE is a family-governed human development system that develops children personally, professionally, financially, occupationally, relationally, and morally from early childhood through leadership readiness.
+                        <span class="pece-hero__lead-em">More than schooling. Complete education for life.</span>
+                    </p>
+
+                    <ul class="pece-hero__trust" data-reveal>
+                        <li class="pece-hero__trust-item">
+                            <svg class="pece-hero__trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg>
+                            UNESCO-UNEVOC Inspired
+                        </li>
+                        <li class="pece-hero__trust-item">
+                            <svg class="pece-hero__trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M12 3v18M7 8h10M9 12h6"/></svg>
+                            UDHR Article 26 Aligned
+                        </li>
+                        <li class="pece-hero__trust-item">
+                            <svg class="pece-hero__trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3a15 15 0 010 18M12 3a15 15 0 000 18M3 12h18"/></svg>
+                            SDG 4 &bull; 8 &bull; 16 &bull; 17
+                        </li>
+                        <li class="pece-hero__trust-item">
+                            <svg class="pece-hero__trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><circle cx="9" cy="7" r="3"/><circle cx="15" cy="7" r="3"/><path d="M3 20c0-3 3-5 6-5s6 2 6 5"/></svg>
+                            Family-Governed Development
+                        </li>
+                    </ul>
+
+                    <div class="pece-hero__pillars" data-reveal>
+                        <h2 class="pece-hero__pillars-title">6 Pillars Of Complete Education</h2>
+                        <ul class="pece-hero__pillars-grid">
+                            <li class="pece-hero__pillar pece-hero__pillar--personal">
+                                <span class="pece-hero__pillar-ring"><svg class="pece-hero__pillar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 00-7.8 0L12 5.6l-1-1a5.5 5.5 0 00-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 000-7.8z"/></svg></span>
+                                <span class="pece-hero__pillar-label">Personal</span>
+                            </li>
+                            <li class="pece-hero__pillar pece-hero__pillar--professional">
+                                <span class="pece-hero__pillar-ring"><svg class="pece-hero__pillar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg></span>
+                                <span class="pece-hero__pillar-label">Professional</span>
+                            </li>
+                            <li class="pece-hero__pillar pece-hero__pillar--occupational">
+                                <span class="pece-hero__pillar-ring"><svg class="pece-hero__pillar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg></span>
+                                <span class="pece-hero__pillar-label">Occupational</span>
+                            </li>
+                            <li class="pece-hero__pillar pece-hero__pillar--financial">
+                                <span class="pece-hero__pillar-ring"><svg class="pece-hero__pillar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M3 3v18h18M7 16l4-4 3 3 5-6"/></svg></span>
+                                <span class="pece-hero__pillar-label">Financial</span>
+                            </li>
+                            <li class="pece-hero__pillar pece-hero__pillar--relationship">
+                                <span class="pece-hero__pillar-ring"><svg class="pece-hero__pillar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><circle cx="9" cy="7" r="3"/><circle cx="15" cy="7" r="3"/><path d="M3 20c0-3 3-5 6-5s6 2 6 5"/></svg></span>
+                                <span class="pece-hero__pillar-label">Relationship</span>
+                            </li>
+                            <li class="pece-hero__pillar pece-hero__pillar--truth">
+                                <span class="pece-hero__pillar-ring"><svg class="pece-hero__pillar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M4 4.5A2.5 2.5 0 016.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15z"/></svg></span>
+                                <span class="pece-hero__pillar-label">Truth</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="pece-hero__actions" data-reveal>
+                <a href="contact.html?inquiry=pece" class="pece-hero__btn pece-hero__btn--primary">
+                    Schedule Family Consultation
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                </a>
+                <a href="#pece-discovery" class="pece-hero__btn pece-hero__btn--ghost">Explore The PECE Journey</a>
+                <a href="contact.html?inquiry=pece-prospectus" class="pece-hero__link">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12M8 11l4 4 4-4M4 21h16"/></svg>
+                    Download PECE Prospectus
+                </a>
+                    </div>
+            </div>
+
+            <div class="pece-hero__ecosystem">
+                <p class="pece-hero__arc-header" data-reveal>
+                    <span class="pece-hero__arc-header-badge" aria-hidden="true">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6 4.6 2.3 7L12 16.8 5.7 21l2.3-7-6-4.6h7.6L12 2z"/></svg>
+                    </span>
+                    <span class="pece-hero__arc-header-text">Complete Education for the Full Development of the Human Personality</span>
+                </p>
+
+                <div class="pece-hero__diagram" data-reveal>
+                    <svg class="pece-hero__orbit" viewBox="0 0 820 620" role="img" aria-label="The Whole Child development orbit with four growth stages">
+                        <defs>
+                            <radialGradient id="peceOrb" cx="42%" cy="38%" r="70%">
+                                <stop offset="0%" stop-color="#fff1c2"/>
+                                <stop offset="50%" stop-color="#f9cf63"/>
+                                <stop offset="100%" stop-color="#eea426"/>
+                            </radialGradient>
+                            <radialGradient id="peceBgGlow" cx="50%" cy="50%" r="50%">
+                                <stop offset="0%" stop-color="#fbb43d" stop-opacity="0.30"/>
+                                <stop offset="45%" stop-color="#f7a93a" stop-opacity="0.10"/>
+                                <stop offset="100%" stop-color="#f7a93a" stop-opacity="0"/>
+                            </radialGradient>
+                            <linearGradient id="peceArc" gradientUnits="userSpaceOnUse" x1="440" y1="128" x2="440" y2="492">
+                                <stop offset="0%" stop-color="#16a34a"/>
+                                <stop offset="34%" stop-color="#2563eb"/>
+                                <stop offset="67%" stop-color="#d97706"/>
+                                <stop offset="100%" stop-color="#9333ea"/>
+                            </linearGradient>
+                            <filter id="peceNodeShadow" x="-60%" y="-60%" width="220%" height="220%">
+                                <feDropShadow dx="0" dy="5" stdDeviation="7" flood-color="#1a2332" flood-opacity="0.18"/>
+                            </filter>
+                        </defs>
+
+                        <!-- warm bloom that fills the centre -->
+                        <circle class="pece-orb__bloom" cx="280" cy="310" r="275" fill="url(#peceBgGlow)"/>
+
+                        <!-- concentric rings -->
+                        <g class="pece-orbit__rings" fill="none" stroke="#e7ddcb">
+                            <circle cx="280" cy="310" r="155" stroke-width="1.3"/>
+                            <circle cx="280" cy="310" r="185" stroke-width="1.3"/>
+                            <circle class="pece-orbit__ring--spin" cx="280" cy="310" r="215" stroke-dasharray="2 8" stroke-width="1.6"/>
+                        </g>
+
+                        <!-- decorative orbit dots on the left sweep -->
+                        <g class="pece-orbit__dots">
+                            <circle cx="166" cy="128" r="4" fill="#16a34a" opacity="0.45"/>
+                            <circle cx="81"  cy="230" r="4" fill="#2563eb" opacity="0.45"/>
+                            <circle cx="81"  cy="390" r="4" fill="#d97706" opacity="0.45"/>
+                            <circle cx="166" cy="492" r="4" fill="#9333ea" opacity="0.45"/>
+                        </g>
+
+                        <!-- colored growth arc through the four nodes -->
+                        <path class="pece-orbit__arc" d="M394 128 A215 215 0 0 1 394 492" fill="none" stroke="url(#peceArc)" stroke-width="4" stroke-linecap="round"/>
+                        <g class="pece-orbit__arc-dots">
+                            <circle cx="447" cy="175" r="5" fill="#2563eb"/>
+                            <circle cx="495" cy="310" r="5" fill="#d97706"/>
+                            <circle cx="447" cy="445" r="5" fill="#9333ea"/>
+                        </g>
+
+                        <!-- curved connectors (node → evenly-spaced card), flowing with the orbit -->
+                        <g class="pece-hero__connectors">
+                            <path class="pece-hero__connector" data-stage="pentad" d="M424 128 C512 128 512 93 600 93" stroke="#16a34a"/>
+                            <path class="pece-hero__connector" data-stage="tenner" d="M512 237 C556 237 556 237 600 237" stroke="#2563eb"/>
+                            <path class="pece-hero__connector" data-stage="post" d="M512 384 C556 384 556 382 600 382" stroke="#d97706"/>
+                            <path class="pece-hero__connector" data-stage="org" d="M424 492 C512 492 512 527 600 527" stroke="#9333ea"/>
+                            <circle class="pece-hero__connector-dot" data-stage="pentad" cx="600" cy="93" r="4.5" fill="#16a34a"/>
+                            <circle class="pece-hero__connector-dot" data-stage="tenner" cx="600" cy="237" r="4.5" fill="#2563eb"/>
+                            <circle class="pece-hero__connector-dot" data-stage="post" cx="600" cy="382" r="4.5" fill="#d97706"/>
+                            <circle class="pece-hero__connector-dot" data-stage="org" cx="600" cy="527" r="4.5" fill="#9333ea"/>
+                        </g>
+
+                        <!-- central orb -->
+                        <circle class="pece-orb__halo" cx="280" cy="310" r="150" fill="url(#peceOrb)" opacity="0.20"/>
+                        <circle cx="280" cy="310" r="120" fill="url(#peceOrb)"/>
+                        <text class="pece-hero__orb-text" x="280" y="310" text-anchor="middle">
+                            <tspan x="280" dy="-0.12em">WHOLE</tspan>
+                            <tspan x="280" dy="1.05em">CHILD</tspan>
+                        </text>
+
+                        <!-- icon nodes -->
+                        <g class="pece-hero__node" data-stage="pentad">
+                            <circle cx="394" cy="128" r="31" fill="#ffffff" stroke="#16a34a" stroke-width="3" filter="url(#peceNodeShadow)"/>
+                            <g transform="translate(379 113) scale(1.25)" fill="none" stroke="#16a34a" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M7 20h10"/>
+                                <path d="M10 20c5.5-2.5.8-6.4 3-10"/>
+                                <path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"/>
+                                <path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"/>
+                            </g>
+                        </g>
+                        <g class="pece-hero__node" data-stage="tenner">
+                            <circle cx="482" cy="237" r="31" fill="#ffffff" stroke="#2563eb" stroke-width="3" filter="url(#peceNodeShadow)"/>
+                            <g transform="translate(467 222) scale(1.25)" fill="none" stroke="#2563eb" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M6 18h8"/>
+                                <path d="M3 22h18"/>
+                                <path d="M14 22a7 7 0 1 0 0-14h-1"/>
+                                <path d="M9 14h2"/>
+                                <path d="M9 12a2 2 0 0 1-2-2V6h6v4a2 2 0 0 1-2 2Z"/>
+                                <path d="M12 6V3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3"/>
+                            </g>
+                        </g>
+                        <g class="pece-hero__node" data-stage="post">
+                            <circle cx="482" cy="384" r="31" fill="#ffffff" stroke="#d97706" stroke-width="3" filter="url(#peceNodeShadow)"/>
+                            <g transform="translate(467 369) scale(1.25)" fill="none" stroke="#d97706" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/>
+                                <circle cx="12" cy="12" r="3"/>
+                            </g>
+                        </g>
+                        <g class="pece-hero__node" data-stage="org">
+                            <circle cx="394" cy="492" r="31" fill="#ffffff" stroke="#9333ea" stroke-width="3" filter="url(#peceNodeShadow)"/>
+                            <g transform="translate(379 477) scale(1.25)" fill="none" stroke="#9333ea" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="3" x2="21" y1="22" y2="22"/>
+                                <line x1="6" x2="6" y1="18" y2="11"/>
+                                <line x1="10" x2="10" y1="18" y2="11"/>
+                                <line x1="14" x2="14" y1="18" y2="11"/>
+                                <line x1="18" x2="18" y1="18" y2="11"/>
+                                <polygon points="12 2 20 7 4 7"/>
+                            </g>
+                        </g>
+                    </svg>
+
+                    <div class="pece-hero__cards">
+                        <article class="pece-hero__journey-card pece-hero__journey-card--pentad" data-stage="pentad" tabindex="0">
+                            <span class="pece-hero__journey-age">Ages 1&ndash;5</span>
+                            <p class="pece-hero__journey-name">PENTAD</p>
+                            <p class="pece-hero__journey-tag">Foundation Years</p>
+                            <p class="pece-hero__journey-desc">Identity formation, capacity maturation, and guided discovery.</p>
+                        </article>
+                        <article class="pece-hero__journey-card pece-hero__journey-card--tenner" data-stage="tenner" tabindex="0">
+                            <span class="pece-hero__journey-age">Ages 5&ndash;10</span>
+                            <p class="pece-hero__journey-name">TENNER</p>
+                            <p class="pece-hero__journey-tag">Discovery Years</p>
+                            <p class="pece-hero__journey-desc">Literacy, technology, and structured competence.</p>
+                        </article>
+                        <article class="pece-hero__journey-card pece-hero__journey-card--post" data-stage="post" tabindex="0">
+                            <span class="pece-hero__journey-age">Ages 10&ndash;15</span>
+                            <p class="pece-hero__journey-name">POST-INDUSTRIAL</p>
+                            <p class="pece-hero__journey-tag">Occupational Years</p>
+                            <p class="pece-hero__journey-desc">Craftsmanship, certification, and applied capability.</p>
+                        </article>
+                        <article class="pece-hero__journey-card pece-hero__journey-card--org" data-stage="org" tabindex="0">
+                            <span class="pece-hero__journey-age">Ages 15&ndash;17</span>
+                            <p class="pece-hero__journey-name">ORGANIZATIONAL</p>
+                            <p class="pece-hero__journey-tag">Leadership Years</p>
+                            <p class="pece-hero__journey-desc">Research, leadership, and organizational development.</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Parent Discovery Experience -->
+    <section class="pece-discovery" id="pece-discovery" aria-labelledby="pece-discovery-heading" tabindex="0">
+        <div class="pece-discovery__container">
+            <header class="pece-discovery__header">
+                <span class="pece-discovery__eyebrow">Why Families Choose PECE</span>
+                <h2 class="pece-discovery__title" id="pece-discovery-heading">Discover Complete Education</h2>
+                <p class="pece-discovery__subtitle">Explore how PECE develops the whole child for family life, leadership, meaningful work, and lifelong contribution.</p>
+            </header>
+
+            <nav class="pece-discovery__questions" role="tablist" aria-label="Parent discovery questions">
+                <button type="button" class="pece-discovery__question is-active" role="tab" aria-selected="true" data-slide="0">What</button>
+                <button type="button" class="pece-discovery__question" role="tab" aria-selected="false" data-slide="1">Why</button>
+                <button type="button" class="pece-discovery__question" role="tab" aria-selected="false" data-slide="2">Problem</button>
+                <button type="button" class="pece-discovery__question" role="tab" aria-selected="false" data-slide="3">Outcomes</button>
+                <button type="button" class="pece-discovery__question" role="tab" aria-selected="false" data-slide="4">Trust</button>
+                <button type="button" class="pece-discovery__question" role="tab" aria-selected="false" data-slide="5">Next</button>
+            </nav>
+
+            <div class="pece-discovery__slider" aria-roledescription="carousel" aria-label="PECE parent discovery">
+                <div class="pece-discovery__viewport">
+                    <div class="pece-discovery__track">
+
+                        <!-- Card 01: What Is PECE? -->
+                        <article class="pece-discovery__slide is-active" role="tabpanel" aria-label="What Is PECE?" aria-hidden="false">
+                            <div class="pece-discovery__card">
+                                <div class="pece-discovery__card-content">
+                                    <p class="pece-discovery__card-label">What Is PECE?</p>
+                                    <h3 class="pece-discovery__card-title">Complete Education For The Full Development Of The Human Personality</h3>
+                                    <p class="pece-discovery__card-body">PECE (Professional Early Child Education) is a family-governed human development system designed to develop children personally, professionally, occupationally, financially, relationally, and morally from childhood through leadership readiness — in accordance with UDHR Article 26(2).</p>
+                                    <ul class="pece-discovery__list">
+                                        <li>Personal Development</li>
+                                        <li>Professional Development</li>
+                                        <li>Occupational Development</li>
+                                        <li>Financial Development</li>
+                                        <li>Relationship Development</li>
+                                        <li>Truth Education</li>
+                                    </ul>
+                                    <a href="#development-phases" class="pece-discovery__cta">Explore The PECE Journey</a>
+                                </div>
+                                <div class="pece-discovery__visual" aria-hidden="true">
+                                    <svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Whole child development ecosystem">
+                                        <defs>
+                                            <linearGradient id="pdGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                                <stop offset="0%" stop-color="#E86F17"/>
+                                                <stop offset="100%" stop-color="#FFC54D"/>
+                                            </linearGradient>
+                                        </defs>
+                                        <circle cx="160" cy="160" r="118" fill="none" stroke="rgba(232,111,23,0.15)" stroke-width="2"/>
+                                        <g class="pd-orbit-ring" style="transform-origin:160px 160px">
+                                            <circle cx="160" cy="42" r="22" fill="url(#pdGrad)" opacity="0.9"/>
+                                            <circle cx="262" cy="95" r="22" fill="url(#pdGrad)" opacity="0.85"/>
+                                            <circle cx="262" cy="225" r="22" fill="url(#pdGrad)" opacity="0.85"/>
+                                            <circle cx="160" cy="278" r="22" fill="url(#pdGrad)" opacity="0.9"/>
+                                            <circle cx="58" cy="225" r="22" fill="url(#pdGrad)" opacity="0.85"/>
+                                            <circle cx="58" cy="95" r="22" fill="url(#pdGrad)" opacity="0.85"/>
+                                        </g>
+                                        <circle cx="160" cy="160" r="48" fill="#fff" stroke="url(#pdGrad)" stroke-width="3"/>
+                                        <text x="160" y="154" text-anchor="middle" font-size="11" font-weight="700" fill="#1B1B1B">WHOLE</text>
+                                        <text x="160" y="170" text-anchor="middle" font-size="11" font-weight="700" fill="#1B1B1B">CHILD</text>
+                                        <text x="160" cy="42" y="46" text-anchor="middle" font-size="8" fill="#fff" font-weight="600">Personal</text>
+                                        <text x="262" y="99" text-anchor="middle" font-size="7" fill="#fff" font-weight="600">Professional</text>
+                                        <text x="262" y="229" text-anchor="middle" font-size="7" fill="#fff" font-weight="600">Occupational</text>
+                                        <text x="160" y="282" text-anchor="middle" font-size="7" fill="#fff" font-weight="600">Financial</text>
+                                        <text x="58" y="229" text-anchor="middle" font-size="7" fill="#fff" font-weight="600">Relational</text>
+                                        <text x="58" y="99" text-anchor="middle" font-size="7" fill="#fff" font-weight="600">Truth</text>
+                                    </svg>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Card 02: Why Does My Child Need PECE? -->
+                        <article class="pece-discovery__slide" role="tabpanel" aria-label="Why Does My Child Need PECE?" aria-hidden="true">
+                            <div class="pece-discovery__card pece-discovery__card--why">
+                                <div class="pece-why__intro">
+                                    <p class="pece-discovery__card-label">Why Does My Child Need PECE?</p>
+                                    <h3 class="pece-discovery__card-title pece-why__title">&ldquo;Schooling&rdquo; Is No Longer Enough</h3>
+                                    <p class="pece-why__dek">Substandard education fails the child — and the law.</p>
+                                    <p class="pece-discovery__card-body pece-discovery__card-body--legal pece-why__legal"><strong>Article 26(3):</strong> Parents choose the method. <strong>Article 26(2):</strong> The outcome must still be the full development of the human personality.</p>
+                                </div>
+                                <div class="pece-compare" role="region" aria-label="Substandard academic delivery compared with PECE complete development">
+                                    <div class="pece-compare__split">
+                                        <div class="pece-compare__col pece-compare__col--gap">
+                                            <span class="pece-compare__col-label">Substandard academic delivery</span>
+                                            <ul class="pece-compare__list pece-compare__list--gap">
+                                                <li>Teaches subjects</li>
+                                                <li>Academic focus only</li>
+                                                <li>Certificates of attendance — not industry-ready certification</li>
+                                                <li>Limited career / occupational exposure</li>
+                                                <li>Little or no financial education</li>
+                                                <li>Little or no relationship education</li>
+                                                <li>No leadership pathway · minimal truth formation</li>
+                                            </ul>
+                                        </div>
+                                        <div class="pece-compare__col pece-compare__col--pece">
+                                            <span class="pece-compare__col-label">PECE — Article 26(2) complete development</span>
+                                            <ul class="pece-compare__list pece-compare__list--full">
+                                                <li>Develops the <span>whole child</span></li>
+                                                <li><span>Complete personal</span> development</li>
+                                                <li><span>Certified professional</span> development &amp; industry credentials from childhood</li>
+                                                <li><span>Complete occupational</span> education &amp; early mastery</li>
+                                                <li><span>Complete financial</span> education from childhood</li>
+                                                <li><span>Complete relationship</span> &amp; family development</li>
+                                                <li><span>Leadership</span>, institution building &amp; truth education</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="pece-why__footer">
+                                    <button type="button" class="pece-discovery__cta" data-advance>View The Standard Gap</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Card 03: What Problem Does PECE Solve? -->
+                        <article class="pece-discovery__slide" role="tabpanel" aria-label="What Problem Does PECE Solve?" aria-hidden="true">
+                            <div class="pece-discovery__card pece-discovery__card--crisis">
+                                <div class="pece-discovery__card-content pece-discovery__card-content--crisis">
+                                    <p class="pece-discovery__card-label">What Problem Does PECE Solve?</p>
+                                    <h3 class="pece-discovery__card-title">The Crisis Of Incomplete Education</h3>
+                                    <p class="pece-discovery__card-body">Many young people leave school with certificates of attendance — not industry-ready certification, not occupational mastery, not the full personality development Article 26(2) requires.</p>
+                                    <p class="pece-discovery__card-body pece-discovery__card-body--legal"><strong>Article 26(2)</strong> defines the outcome. Substandard delivery is not a parent’s only option.</p>
+                                    <p class="pece-discovery__resolve">PECE addresses the mandate gap through six domains of complete human development.</p>
+                                </div>
+                                <div class="pece-discovery__visual pece-discovery__visual--mandate" role="img" aria-label="Substandard delivery covers attendance and subjects only; PECE delivers complete development across six domains">
+                                    <div class="pece-mandate">
+                                        <div class="pece-mandate__banner">UDHR Article 26(2) — Full Personality Development</div>
+                                        <div class="pece-mandate__split">
+                                            <div class="pece-mandate__col pece-mandate__col--gap">
+                                                <span class="pece-mandate__col-label">Substandard delivery</span>
+                                                <ul class="pece-mandate__list pece-mandate__list--gap">
+                                                    <li>Certificate of attendance</li>
+                                                    <li>Subjects &amp; grades only</li>
+                                                    <li>No industry-ready certification pathway</li>
+                                                </ul>
+                                            </div>
+                                            <div class="pece-mandate__col pece-mandate__col--pece">
+                                                <span class="pece-mandate__col-label">PECE complete development</span>
+                                                <ul class="pece-mandate__list pece-mandate__list--full">
+                                                    <li><span>Personal</span> development</li>
+                                                    <li><span>Professional</span> development &amp; industry certification</li>
+                                                    <li><span>Occupational</span> education &amp; early mastery</li>
+                                                    <li><span>Financial</span> education from childhood</li>
+                                                    <li><span>Relational</span> &amp; family development</li>
+                                                    <li><span>Truth</span> education &amp; leadership formation</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="pece-mandate__ring" aria-hidden="true">
+                                            <div class="pece-mandate__ring-core">1/6</div>
+                                        </div>
+                                        <p class="pece-mandate__footer"><strong>PECE</strong> closes the mandate gap — from attendance to complete development.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Card 04: Outcomes -->
+                        <article class="pece-discovery__slide" role="tabpanel" aria-label="What Outcomes Will My Child Achieve?" aria-hidden="true">
+                            <div class="pece-discovery__card">
+                                <div class="pece-discovery__card-content">
+                                    <p class="pece-discovery__card-label">What Outcomes Will My Child Achieve?</p>
+                                    <h3 class="pece-discovery__card-title">The PECE Graduate Profile</h3>
+                                    <p class="pece-discovery__card-body">A PECE learner develops the competencies required for meaningful life, productive work, leadership, and societal contribution.</p>
+                                    <div class="pece-discovery__outcomes">
+                                        <div class="pece-discovery__outcome"><span class="pece-discovery__outcome-icon">🎯</span> Self-command</div>
+                                        <div class="pece-discovery__outcome"><span class="pece-discovery__outcome-icon">💛</span> Emotional maturity</div>
+                                        <div class="pece-discovery__outcome"><span class="pece-discovery__outcome-icon">🌍</span> Global competencies</div>
+                                        <div class="pece-discovery__outcome"><span class="pece-discovery__outcome-icon">💡</span> Entrepreneurial capability</div>
+                                        <div class="pece-discovery__outcome"><span class="pece-discovery__outcome-icon">⚙️</span> Occupational mastery</div>
+                                        <div class="pece-discovery__outcome"><span class="pece-discovery__outcome-icon">💰</span> Financial literacy</div>
+                                        <div class="pece-discovery__outcome"><span class="pece-discovery__outcome-icon">🏛️</span> Leadership ability</div>
+                                        <div class="pece-discovery__outcome"><span class="pece-discovery__outcome-icon">🔬</span> Research capacity</div>
+                                        <div class="pece-discovery__outcome"><span class="pece-discovery__outcome-icon">👨‍👩‍👧</span> Family leadership</div>
+                                        <div class="pece-discovery__outcome"><span class="pece-discovery__outcome-icon">✨</span> Purpose-driven living</div>
+                                    </div>
+                                </div>
+                                <div class="pece-discovery__visual" aria-hidden="true">
+                                    <svg viewBox="0 0 320 280" xmlns="http://www.w3.org/2000/svg">
+                                        <defs><linearGradient id="pdGrad4" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#E86F17"/><stop offset="100%" stop-color="#FFC54D"/></linearGradient></defs>
+                                        <circle cx="160" cy="140" r="100" fill="none" stroke="rgba(232,111,23,0.2)" stroke-width="2"/>
+                                        <circle cx="160" cy="140" r="70" fill="none" stroke="rgba(232,111,23,0.35)" stroke-width="2"/>
+                                        <circle cx="160" cy="140" r="40" fill="url(#pdGrad4)" opacity="0.9"/>
+                                        <text x="160" y="136" text-anchor="middle" font-size="10" font-weight="700" fill="#fff">GRADUATE</text>
+                                        <text x="160" y="150" text-anchor="middle" font-size="10" font-weight="700" fill="#fff">PROFILE</text>
+                                    </svg>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Card 05: Trust -->
+                        <article class="pece-discovery__slide" role="tabpanel" aria-label="Why Should I Trust BTH Education Group?" aria-hidden="true">
+                            <div class="pece-discovery__card">
+                                <div class="pece-discovery__card-content">
+                                    <p class="pece-discovery__card-label">Why Should I Trust BTH Education Group?</p>
+                                    <h3 class="pece-discovery__card-title">Built Upon Education, Workforce Development, And Human Development Expertise</h3>
+                                    <div class="pece-discovery__trust-grid">
+                                        <div class="pece-discovery__trust-item"><span class="pece-discovery__trust-val">ISO 17024</span><span class="pece-discovery__trust-label">Global certification authority</span></div>
+                                        <div class="pece-discovery__trust-item"><span class="pece-discovery__trust-val">26 · 130</span><span class="pece-discovery__trust-label">Workforce infrastructure sectors &amp; divisions</span></div>
+                                        <div class="pece-discovery__trust-item"><span class="pece-discovery__trust-val">UNESCO</span><span class="pece-discovery__trust-label">UNEVOC · UN alignment</span></div>
+                                        <div class="pece-discovery__trust-item"><span class="pece-discovery__trust-val">17 Levels</span><span class="pece-discovery__trust-label">Family education leadership</span></div>
+                                        <div class="pece-discovery__trust-item"><span class="pece-discovery__trust-val">5.8M+</span><span class="pece-discovery__trust-label">Professionals represented globally</span></div>
+                                        <div class="pece-discovery__trust-item"><span class="pece-discovery__trust-val">120+</span><span class="pece-discovery__trust-label">Countries · professional ecosystem</span></div>
+                                    </div>
+                                    <p class="pece-discovery__card-body">PECE is developed and administered by BTH Education Group, an institution committed to complete human development, workforce readiness, and strong family institutions.</p>
+                                </div>
+                                <div class="pece-discovery__visual" aria-hidden="true">
+                                    <svg viewBox="0 0 320 240" xmlns="http://www.w3.org/2000/svg">
+                                        <line x1="40" y1="120" x2="280" y2="120" stroke="#E86F17" stroke-width="2" opacity="0.4"/>
+                                        <circle cx="60" cy="120" r="8" fill="#E86F17"/>
+                                        <circle cx="120" cy="120" r="8" fill="#F9A55A"/>
+                                        <circle cx="180" cy="120" r="8" fill="#F9A55A"/>
+                                        <circle cx="240" cy="120" r="8" fill="#FFC54D"/>
+                                        <text x="60" y="90" text-anchor="middle" font-size="8" fill="#666">2015</text>
+                                        <text x="120" y="90" text-anchor="middle" font-size="8" fill="#666">PECE Map</text>
+                                        <text x="180" y="90" text-anchor="middle" font-size="8" fill="#666">17 Levels</text>
+                                        <text x="240" y="90" text-anchor="middle" font-size="8" fill="#666">2025</text>
+                                        <text x="160" y="160" text-anchor="middle" font-size="10" font-weight="700" fill="#E86F17">Institutional continuity</text>
+                                    </svg>
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Card 06: Next Steps -->
+                        <article class="pece-discovery__slide" role="tabpanel" aria-label="What Do I Do Next?" aria-hidden="true">
+                            <div class="pece-discovery__card">
+                                <div class="pece-discovery__card-content">
+                                    <p class="pece-discovery__card-label">What Do I Do Next?</p>
+                                    <h3 class="pece-discovery__card-title">Begin Your Child's Genius Development Journey</h3>
+                                    <div class="pece-discovery__timeline">
+                                        <div class="pece-discovery__step">
+                                            <div class="pece-discovery__step-num">Step 1</div>
+                                            <div class="pece-discovery__step-title">Schedule Family Consultation</div>
+                                        </div>
+                                        <div class="pece-discovery__step">
+                                            <div class="pece-discovery__step-num">Step 2</div>
+                                            <div class="pece-discovery__step-title">Complete PECE Assessment</div>
+                                        </div>
+                                        <div class="pece-discovery__step">
+                                            <div class="pece-discovery__step-num">Step 3</div>
+                                            <div class="pece-discovery__step-title">Receive Personalized Development Roadmap</div>
+                                        </div>
+                                    </div>
+                                    <div class="pece-discovery__actions-row">
+                                        <a href="contact.html?inquiry=pece" class="pece-discovery__cta">Schedule Consultation</a>
+                                        <a href="contact.html?inquiry=pece-prospectus" class="pece-discovery__cta pece-discovery__cta--secondary">Download Prospectus</a>
+                                        <a href="apply.html?program=pece" class="pece-discovery__cta pece-discovery__cta--outline">Apply To PECE</a>
+                                    </div>
+                                </div>
+                                <div class="pece-discovery__visual" aria-hidden="true">
+                                    <svg viewBox="0 0 320 260" xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="40" y="40" width="240" height="48" rx="12" fill="rgba(232,111,23,0.12)" stroke="#E86F17" stroke-width="1.5"/>
+                                        <text x="160" y="70" text-anchor="middle" font-size="11" font-weight="700" fill="#E86F17">1 · Consultation</text>
+                                        <path d="M160 88 L160 108" stroke="#E86F17" stroke-width="2"/>
+                                        <rect x="40" y="108" width="240" height="48" rx="12" fill="rgba(249,165,90,0.15)" stroke="#F9A55A" stroke-width="1.5"/>
+                                        <text x="160" y="138" text-anchor="middle" font-size="11" font-weight="700" fill="#c2410c">2 · Assessment</text>
+                                        <path d="M160 156 L160 176" stroke="#F9A55A" stroke-width="2"/>
+                                        <rect x="40" y="176" width="240" height="48" rx="12" fill="rgba(255,197,77,0.2)" stroke="#FFC54D" stroke-width="1.5"/>
+                                        <text x="160" y="206" text-anchor="middle" font-size="11" font-weight="700" fill="#92400e">3 · Roadmap</text>
+                                    </svg>
+                                </div>
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+
+                <div class="pece-discovery__controls">
+                    <button type="button" class="pece-discovery__arrow pece-discovery__arrow--prev" aria-label="Previous discovery card" disabled>&#8592;</button>
+                    <div class="pece-discovery__dots" role="tablist" aria-label="Discovery progress">
+                        <button type="button" class="pece-discovery__dot is-active" aria-label="Card 1 of 6" aria-current="true"></button>
+                        <button type="button" class="pece-discovery__dot" aria-label="Card 2 of 6"></button>
+                        <button type="button" class="pece-discovery__dot" aria-label="Card 3 of 6"></button>
+                        <button type="button" class="pece-discovery__dot" aria-label="Card 4 of 6"></button>
+                        <button type="button" class="pece-discovery__dot" aria-label="Card 5 of 6"></button>
+                        <button type="button" class="pece-discovery__dot" aria-label="Card 6 of 6"></button>
+                    </div>
+                    <button type="button" class="pece-discovery__arrow pece-discovery__arrow--next" aria-label="Next discovery card">&#8594;</button>
+                </div>
+            </div>
+
+            <footer class="pece-discovery__closing">
+                <h3 class="pece-discovery__closing-title">Children Deserve Better. Complete Education Makes That Possible.</h3>
+                <p class="pece-discovery__closing-text">Developing the whole child for family, leadership, meaningful work, and lifelong contribution.</p>
+            </footer>
+        </div>
+    </section>
+
+    <!-- Core Methodologies Section -->
+    <section class="framework-section" id="development-phases">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">PECE Development Phases</h2>
+                <p class="section-subtitle">
+                    Four progressive development phases spanning 17 levels of comprehensive human development from Foundation to Advanced Knowledge Creation
+                </p>
+            </div>
+
+            <div class="methodology-grid">
+                <!-- PENTAD (1-5) -->
+                <div class="methodology-card">
+                    <span class="methodology-icon">🌟</span>
+                    <h3 class="methodology-title">PENTAD (Levels 1-5)</h3>
+                    <p class="methodology-description">
+                        Personal Development - Foundation Program. Etymological-Epistemological-Axiological-Ontological Development with Research Debut in Cognoscitive Development.
+                    </p>
+                    <ul class="methodology-features">
+                        <li>Development of Capacities (Cognitive, Psychomotor, Conative & Affective)</li>
+                        <li>Etymological Development (Word Origins & Language)</li>
+                        <li>Epistemological Development (Knowledge & Learning)</li>
+                        <li>Axiological Development (Values & Ethics)</li>
+                        <li>Ontological Development (Being & Existence)</li>
+                    </ul>
+                </div>
+
+                <!-- TENNER (5-10) -->
+                <div class="methodology-card">
+                    <span class="methodology-icon">🔟</span>
+                    <h3 class="methodology-title">TENNER (Levels 5-10)</h3>
+                    <p class="methodology-description">
+                        Personal Development - Matter. Basic Education & IT Specialist Certification Programs with Research Praxis in Cognoscitive Development.
+                    </p>
+                    <ul class="methodology-features">
+                        <li>Basic Education: Language Development, Digital Literacy, Entrepreneurship</li>
+                        <li>IT Specialist: Databases, Software Development, Networking, Security</li>
+                        <li>Programming: JavaScript, Java, Python, HTML/CSS, HTML5</li>
+                        <li>Device Configuration and Management</li>
+                        <li>Maturation of Capacities</li>
+                    </ul>
+                </div>
+
+                <!-- POST INDUSTRY (10-15) -->
+                <div class="methodology-card">
+                    <span class="methodology-icon">🏭</span>
+                    <h3 class="methodology-title">POST INDUSTRY (Levels 10-15)</h3>
+                    <p class="methodology-description">
+                        Occupational Development with Post-industrial work-based Journeyman Certifications and Critical Action Research for Knowledge Creation.
+                    </p>
+                    <ul class="methodology-features">
+                        <li>Post-industrial Work-based Journeyman Certifications</li>
+                        <li>Critical Action Research Methodology</li>
+                        <li>Knowledge Creation & Innovation</li>
+                        <li>Advanced Occupational Skills</li>
+                        <li>Industry-Specific Expertise Development</li>
+                    </ul>
+                </div>
+
+                <!-- ORGANIZATIONAL DEVELOPMENT (15-17) -->
+                <div class="methodology-card">
+                    <span class="methodology-icon">🏢</span>
+                    <h3 class="methodology-title">ORGANIZATIONAL DEVELOPMENT (Levels 15-17)</h3>
+                    <p class="methodology-description">
+                        Reconcile Organizational Development with Advanced Knowledge Creation for institutional leadership and global impact.
+                    </p>
+                    <ul class="methodology-features">
+                        <li>Reconcile Organizational Development</li>
+                        <li>Advanced Knowledge Creation</li>
+                        <li>Institutional Leadership</li>
+                        <li>Global Impact Strategies</li>
+                        <li>UNESCO-UNEVOC-UN Partnership Integration</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Level System Section -->
+    <section class="level-system-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">PECE 17-Level Development System</h2>
+                <p class="section-subtitle">
+                    Complete progression from Personal Foundation through Advanced Knowledge Creation
+                </p>
+            </div>
+
+            <!-- Phase Navigation Tabs -->
+            <div class="level-tabs">
+                <button class="level-tab active" data-level="pentad">PENTAD (1-5)</button>
+                <button class="level-tab" data-level="tenner">TENNER (5-10)</button>
+                <button class="level-tab" data-level="postindustry">POST INDUSTRY (10-15)</button>
+                <button class="level-tab" data-level="organizational">ORGANIZATIONAL (15-17)</button>
+            </div>
+
+            <!-- PENTAD Phase Content (Levels 1-5) -->
+            <div class="level-content active" data-level="pentad">
+                <div class="level-overview">
+                    <div class="level-header">
+                        <h3 class="level-title">PENTAD Phase (Levels 1-5)</h3>
+                        <h4 class="phase-program-subtitle">Personal Development - Foundation Program</h4>
+                        <p class="level-description">
+                            Etymological-Epistemological-Axiological-Ontological Development with Research Debut in Cognoscitive Development. 
+                            Foundation of capacities across four developmental domains.
+                        </p>
+                    </div>
+
+                    <div class="level-metrics">
+                        <div class="metric-card">
+                            <span class="metric-value">5</span>
+                            <div class="metric-label">Levels (1-5)</div>
+                        </div>
+                        <div class="metric-card">
+                            <span class="metric-value">18-30</span>
+                            <div class="metric-label">Months Duration</div>
+                        </div>
+                        <div class="metric-card">
+                            <span class="metric-value">$8,500</span>
+                            <div class="metric-label">Total Investment</div>
+                        </div>
+                        <div class="metric-card">
+                            <span class="metric-value">4</span>
+                            <div class="metric-label">Capacity Domains</div>
+                        </div>
+                    </div>
+
+                    <div class="level-modules">
+                        <div class="module-card">
+                            <h4 class="module-title">
+                                <i class="fas fa-brain"></i>
+                                Research Debut - Cognoscitive Development
+                            </h4>
+                            <div class="module-content">
+                                <p>Introduction to research methodology and cognitive development principles.</p>
+                                <ul>
+                                    <li>Basic research methodology</li>
+                                    <li>Cognoscitive development theory</li>
+                                    <li>Research documentation techniques</li>
+                                    <li>Critical thinking foundations</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="module-card">
+                            <h4 class="module-title">
+                                <i class="fas fa-cogs"></i>
+                                Development of Capacities
+                            </h4>
+                            <div class="module-content">
+                                <p>Four fundamental capacity domains for comprehensive human development.</p>
+                                <ul>
+                                    <li><strong>Cognitive Capacities:</strong> Thinking, reasoning, problem-solving</li>
+                                    <li><strong>Psychomotor Capacities:</strong> Physical skills, coordination, movement</li>
+                                    <li><strong>Conative Capacities:</strong> Will, motivation, goal-directed behavior</li>
+                                    <li><strong>Affective Capacities:</strong> Emotions, feelings, values</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="module-card">
+                            <h4 class="module-title">
+                                <i class="fas fa-book-open"></i>
+                                Etymological Development
+                            </h4>
+                            <div class="module-content">
+                                <p>Word origins, language development, and linguistic foundations.</p>
+                                <ul>
+                                    <li>Etymology and word origin studies</li>
+                                    <li>Language acquisition principles</li>
+                                    <li>Vocabulary development strategies</li>
+                                    <li>Communication foundations</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="module-card">
+                            <h4 class="module-title">
+                                <i class="fas fa-lightbulb"></i>
+                                Epistemological Development
+                            </h4>
+                            <div class="module-content">
+                                <p>Knowledge theory, learning processes, and understanding development.</p>
+                                <ul>
+                                    <li>Theory of knowledge</li>
+                                    <li>Learning process understanding</li>
+                                    <li>Knowledge acquisition methods</li>
+                                    <li>Critical evaluation skills</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="module-card">
+                            <h4 class="module-title">
+                                <i class="fas fa-heart"></i>
+                                Axiological Development
+                            </h4>
+                            <div class="module-content">
+                                <p>Values, ethics, and moral development foundations.</p>
+                                <ul>
+                                    <li>Value system development</li>
+                                    <li>Ethical reasoning principles</li>
+                                    <li>Moral development theory</li>
+                                    <li>Character formation strategies</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="module-card">
+                            <h4 class="module-title">
+                                <i class="fas fa-user"></i>
+                                Ontological Development
+                            </h4>
+                            <div class="module-content">
+                                <p>Being, existence, and identity development.</p>
+                                <ul>
+                                    <li>Being and existence concepts</li>
+                                    <li>Identity formation processes</li>
+                                    <li>Self-awareness development</li>
+                                    <li>Existential understanding</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TENNER Phase Content (Levels 5-10) -->
+            <div class="level-content" data-level="tenner">
+                <div class="level-overview">
+                    <div class="level-header">
+                        <h3 class="level-title">TENNER Phase (Levels 5-10)</h3>
+                        <h4 class="phase-subtitle">Personal Development - Matter</h4>
+                        <p class="level-description">
+                            Basic Education Certification Program and IT Specialist Certification Program with Research Praxis 
+                            in Cognoscitive Development leading to Maturation of Capacities.
+                        </p>
+                    </div>
+
+                    <div class="level-metrics">
+                        <div class="metric-card">
+                            <span class="metric-value">5</span>
+                            <div class="metric-label">Levels (5-10)</div>
+                        </div>
+                        <div class="metric-card">
+                            <span class="metric-value">24-36</span>
+                            <div class="metric-label">Months Duration</div>
+                        </div>
+                        <div class="metric-card">
+                            <span class="metric-value">$15,500</span>
+                            <div class="metric-label">Total Investment</div>
+                        </div>
+                        <div class="metric-card">
+                            <span class="metric-value">2</span>
+                            <div class="metric-label">Certification Programs</div>
+                        </div>
+                    </div>
+
+                    <div class="level-modules">
+                        <div class="module-card">
+                            <h4 class="module-title">
+                                <i class="fas fa-graduation-cap"></i>
+                                Basic Education Certification Program
+                            </h4>
+                            <div class="module-content">
+                                <p>Comprehensive foundation in essential educational competencies.</p>
+                                <ul>
+                                    <li><strong>Language Development:</strong> Advanced linguistic skills</li>
+                                    <li><strong>Digital Literacy:</strong> Modern technology integration</li>
+                                    <li><strong>Entrepreneurship:</strong> Business and innovation foundations</li>
+                                    <li><strong>Small Business:</strong> Enterprise development skills</li>
+                                    <li><strong>Computerized Accounting:</strong> Financial management systems</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="module-card">
+                            <h4 class="module-title">
+                                <i class="fas fa-laptop-code"></i>
+                                IT Specialist Certification Program
+                            </h4>
+                            <div class="module-content">
+                                <p>Comprehensive technology and development skills certification.</p>
+                                <ul>
+                                    <li><strong>Databases:</strong> Data management and SQL</li>
+                                    <li><strong>Software Development:</strong> Application creation</li>
+                                    <li><strong>Networking:</strong> Infrastructure and connectivity</li>
+                                    <li><strong>Network Security:</strong> Cybersecurity fundamentals</li>
+                                    <li><strong>Device Configuration:</strong> System management</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="module-card">
+                            <h4 class="module-title">
+                                <i class="fas fa-code"></i>
+                                Programming Languages Mastery
+                            </h4>
+                            <div class="module-content">
+                                <p>Multiple programming languages for comprehensive development capability.</p>
+                                <ul>
+                                    <li><strong>JavaScript:</strong> Web development and interactivity</li>
+                                    <li><strong>Java:</strong> Enterprise application development</li>
+                                    <li><strong>Python:</strong> Data science and automation</li>
+                                    <li><strong>HTML & CSS:</strong> Web structure and styling</li>
+                                    <li><strong>HTML5 Application Development:</strong> Modern web apps</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="module-card">
+                            <h4 class="module-title">
+                                <i class="fas fa-flask"></i>
+                                Research Praxis - Cognoscitive Development
+                            </h4>
+                            <div class="module-content">
+                                <p>Advanced research methodology and cognitive development implementation.</p>
+                                <ul>
+                                    <li>Applied research methodology</li>
+                                    <li>Cognoscitive development assessment</li>
+                                    <li>Data collection and analysis</li>
+                                    <li>Research documentation and reporting</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="module-card">
+                            <h4 class="module-title">
+                                <i class="fas fa-seedling"></i>
+                                Maturation of Capacities
+                            </h4>
+                            <div class="module-content">
+                                <p>Advanced development across all four capacity domains.</p>
+                                <ul>
+                                    <li>Advanced cognitive capacity development</li>
+                                    <li>Enhanced psychomotor skills</li>
+                                    <li>Strengthened conative abilities</li>
+                                    <li>Mature affective capacities</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- POST INDUSTRY Phase Content (Levels 10-15) -->
+            <div class="level-content" data-level="postindustry">
+                <div class="level-overview">
+                    <div class="level-header">
+                        <h3 class="level-title">POST INDUSTRY Phase (Levels 10-15)</h3>
+                        <h4 class="phase-subtitle">Occupational Development</h4>
+                        <p class="level-description">
+                            Post-industrial work-based Journeyman Certifications with Critical Action Research 
+                            for Knowledge Creation in advanced occupational development.
+                        </p>
+                    </div>
+
+                    <div class="level-metrics">
+                        <div class="metric-card">
+                            <span class="metric-value">5</span>
+                            <div class="metric-label">Levels (10-15)</div>
+                        </div>
+                        <div class="metric-card">
+                            <span class="metric-value">30-42</span>
+                            <div class="metric-label">Months Duration</div>
+                        </div>
+                        <div class="metric-card">
+                            <span class="metric-value">$28,500</span>
+                            <div class="metric-label">Total Investment</div>
+                        </div>
+                        <div class="metric-card">
+                            <span class="metric-value">Multiple</span>
+                            <div class="metric-label">Journeyman Certs</div>
+                        </div>
+                    </div>
+
+                    <div class="level-modules">
+                        <div class="module-card">
+                            <h4 class="module-title">
+                                <i class="fas fa-industry"></i>
+                                Post-Industrial Work-Based Certifications
+                            </h4>
+                            <div class="module-content">
+                                <p>Advanced occupational certifications for the modern workforce.</p>
+                                <ul>
+                                    <li>Industry 4.0 competencies</li>
+                                    <li>Advanced manufacturing skills</li>
+                                    <li>Digital transformation leadership</li>
+                                    <li>Automation and robotics integration</li>
+                                    <li>Sustainable industry practices</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="module-card">
+                            <h4 class="module-title">
+                                <i class="fas fa-tools"></i>
+                                Journeyman Certification Programs
+                            </h4>
+                            <div class="module-content">
+                                <p>Master-level craft and technical certifications.</p>
+                                <ul>
+                                    <li>Advanced technical skills mastery</li>
+                                    <li>Quality control and assurance</li>
+                                    <li>Safety and compliance expertise</li>
+                                    <li>Leadership and mentoring abilities</li>
+                                    <li>Innovation and problem-solving</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="module-card">
+                            <h4 class="module-title">
+                                <i class="fas fa-search"></i>
+                                Critical Action Research
+                            </h4>
+                            <div class="module-content">
+                                <p>Advanced research methodology for occupational development.</p>
+                                <ul>
+                                    <li>Critical research methodology</li>
+                                    <li>Action research implementation</li>
+                                    <li>Workplace improvement studies</li>
+                                    <li>Evidence-based practice development</li>
+                                    <li>Research dissemination and impact</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="module-card">
+                            <h4 class="module-title">
+                                <i class="fas fa-lightbulb"></i>
+                                Knowledge Creation
+                            </h4>
+                            <div class="module-content">
+                                <p>Advanced knowledge development and innovation methodologies.</p>
+                                <ul>
+                                    <li>Innovation and creativity processes</li>
+                                    <li>Knowledge management systems</li>
+                                    <li>Intellectual property development</li>
+                                    <li>Technology transfer processes</li>
+                                    <li>Industry collaboration frameworks</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="module-card">
+                            <h4 class="module-title">
+                                <i class="fas fa-globe"></i>
+                                Global Occupational Standards
+                            </h4>
+                            <div class="module-content">
+                                <p>International standards and best practices in occupational development.</p>
+                                <ul>
+                                    <li>International occupational standards</li>
+                                    <li>Global workforce development trends</li>
+                                    <li>Cross-cultural competency</li>
+                                    <li>International collaboration skills</li>
+                                    <li>Global mobility and adaptation</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ORGANIZATIONAL DEVELOPMENT Phase Content (Levels 15-17) -->
+            <div class="level-content" data-level="organizational">
+                <div class="level-overview">
+                    <div class="level-header">
+                        <h3 class="level-title">ORGANIZATIONAL DEVELOPMENT Phase (Levels 15-17)</h3>
+                        <h4 class="phase-subtitle">Strategic Leadership</h4>
+                        <p class="level-description">
+                            Master-level Organizational Development with Strategic Leadership, 
+                            Advanced Research, and Global Impact implementation across multiple organizational structures.
+                        </p>
+                    </div>
+
+                    <div class="level-metrics">
+                        <div class="metric-card">
+                            <span class="metric-value">3</span>
+                            <div class="metric-label">Levels (15-17)</div>
+                        </div>
+                        <div class="metric-card">
+                            <span class="metric-value">18-24</span>
+                            <div class="metric-label">Months Duration</div>
+                        </div>
+                        <div class="metric-card">
+                            <span class="metric-value">$18,500</span>
+                            <div class="metric-label">Total Investment</div>
+                        </div>
+                        <div class="metric-card">
+                            <span class="metric-value">Master</span>
+                            <div class="metric-label">Certification</div>
+                        </div>
+                    </div>
+
+                    <div class="level-modules">
+                        <div class="module-card">
+                            <h4 class="module-title">
+                                <i class="fas fa-chess-king"></i>
+                                Strategic Leadership Excellence
+                            </h4>
+                            <div class="module-content">
+                                <p>Master-level strategic leadership across complex organizational systems.</p>
+                                <ul>
+                                    <li>Visionary leadership development</li>
+                                    <li>Strategic planning and execution</li>
+                                    <li>Transformational change management</li>
+                                    <li>High-impact decision making</li>
+                                    <li>Global leadership competencies</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="module-card">
+                            <h4 class="module-title">
+                                <i class="fas fa-building"></i>
+                                Organizational Development Mastery
+                            </h4>
+                            <div class="module-content">
+                                <p>Advanced organizational development across multiple structures and contexts.</p>
+                                <ul>
+                                    <li>Organizational design and restructuring</li>
+                                    <li>Culture transformation initiatives</li>
+                                    <li>Performance optimization systems</li>
+                                    <li>Talent development and succession</li>
+                                    <li>Multi-site coordination excellence</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="module-card">
+                            <h4 class="module-title">
+                                <i class="fas fa-microscope"></i>
+                                Advanced Research Leadership
+                            </h4>
+                            <div class="module-content">
+                                <p>Leading advanced research initiatives with global impact and knowledge creation.</p>
+                                <ul>
+                                    <li>Research program leadership</li>
+                                    <li>Grant writing and funding acquisition</li>
+                                    <li>International research collaboration</li>
+                                    <li>Evidence-based practice development</li>
+                                    <li>Knowledge dissemination strategies</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="module-card">
+                            <h4 class="module-title">
+                                <i class="fas fa-globe"></i>
+                                Global Impact Implementation
+                            </h4>
+                            <div class="module-content">
+                                <p>Creating sustainable global impact through organizational excellence.</p>
+                                <ul>
+                                    <li>International program scaling</li>
+                                    <li>Global partnership development</li>
+                                    <li>Policy influence and advocacy</li>
+                                    <li>Sustainable development integration</li>
+                                    <li>Cross-cultural implementation</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="module-card">
+                            <h4 class="module-title">
+                                <i class="fas fa-network-wired"></i>
+                                Multi-Organizational Systems
+                            </h4>
+                            <div class="module-content">
+                                <p>Managing and optimizing complex multi-organizational systems and networks.</p>
+                                <ul>
+                                    <li>Network governance and coordination</li>
+                                    <li>Inter-organizational collaboration</li>
+                                    <li>System-wide quality assurance</li>
+                                    <li>Resource optimization across sites</li>
+                                    <li>Impact measurement and evaluation</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="module-card">
+                            <h4 class="module-title">
+                                <i class="fas fa-trophy"></i>
+                                Master Practitioner Certification
+                            </h4>
+                            <div class="module-content">
+                                <p>Achievement of the highest level of professional recognition and certification.</p>
+                                <ul>
+                                    <li>Master Practitioner designation</li>
+                                    <li>International professional recognition</li>
+                                    <li>Expert consultant qualification</li>
+                                    <li>Thought leadership credentials</li>
+                                    <li>Global authority status</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="section-container">
+            <h2 class="cta-title">Begin Your PECE Journey Today</h2>
+            <p class="cta-description">
+                Join thousands of professionals who have transformed their careers and impact through our 
+                comprehensive PECE certification program. Start at Level 1 and progress to Master-level expertise.
+            </p>
+            <div class="cta-buttons">
+                <a href="apply.html?program=pece" class="btn btn-primary">
+                    <i class="fas fa-rocket"></i>
+                    Apply Now
+                </a>
+                <a href="contact.html" class="btn btn-secondary">
+                    <i class="fas fa-comments"></i>
+                    Schedule Consultation
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 BTH Education Group. All rights reserved. | Professional Early Child Education Excellence</p>
+        </div>
+    </footer>
+
+    <script>
+        // Level Tab Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const levelTabs = document.querySelectorAll('.level-tab');
+            const levelContents = document.querySelectorAll('.level-content');
+
+            levelTabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    const targetLevel = this.getAttribute('data-level');
+
+                    // Remove active class from all tabs and contents
+                    levelTabs.forEach(t => t.classList.remove('active'));
+                    levelContents.forEach(c => c.classList.remove('active'));
+
+                    // Add active class to clicked tab and corresponding content
+                    this.classList.add('active');
+                    document.querySelector(`[data-level="${targetLevel}"].level-content`).classList.add('active');
+                });
+            });
+
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Header scroll effect
+            let lastScrollY = window.scrollY;
+            window.addEventListener('scroll', () => {
+                const header = document.querySelector('.pece-header');
+                if (window.scrollY > 100) {
+                    header.style.background = 'rgba(255, 255, 255, 0.98)';
+                    header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
+                } else {
+                    header.style.background = 'rgba(255, 255, 255, 0.95)';
+                    header.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.1)';
+                }
+                lastScrollY = window.scrollY;
+            });
+
+            // Animate elements on scroll
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all cards and modules
+            document.querySelectorAll('.methodology-card, .module-card, .metric-card').forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                el.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
+                observer.observe(el);
+            });
+        });
+    </script>
+    <script src="assets/js/pece-hero.js?v=20260628h20"></script>
+    <script src="assets/js/pece-discovery.js?v=20260626pd4"></script>
+</body>
+</html>

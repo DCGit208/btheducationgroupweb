@@ -1,0 +1,599 @@
+/* PECE Hero — full-bleed art stage (updatedhero2.png, 1659×948) + overlaid content */
+
+.pece-hero {
+  --pece-cream: #faf6f0;
+  --pece-cream-panel: #f3ece3;
+  --pece-cream-border: #e8dfd3;
+  --pece-navy: #1a2332;
+  --pece-navy-muted: #4a5568;
+  --pece-orange: #e86f17;
+  --pece-orange-soft: #fff4eb;
+  --pece-orange-border: #fcd9bd;
+  --pece-ease: cubic-bezier(0.22, 1, 0.36, 1);
+
+  --stage-green: #16a34a;
+  --stage-blue: #2563eb;
+  --stage-gold: #d97706;
+  --stage-purple: #9333ea;
+
+  /* Artboard = natural pixels of updatedhero2.png */
+  --art-w: 1659;
+  --art-h: 948;
+  --art-ratio: 1659 / 948;
+
+  /* Shared safe inset so copy + cards align to the same centered max-width */
+  --hero-max: 1380px;
+
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: start;
+  justify-items: stretch;
+  color: var(--pece-navy);
+  /* matches the artwork's bottom edge so the area below the art is seamless */
+  background-color: #fae7ce;
+}
+
+/* ---- Layer 1: full-bleed background art ---- */
+.pece-hero__stage {
+  grid-area: 1 / 1;
+  align-self: start;
+  width: 100%;
+  aspect-ratio: var(--art-ratio);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.pece-hero__bg {
+  width: 100%;
+  height: 100%;
+  background:
+    linear-gradient(to bottom, rgba(250, 231, 206, 0) 86%, #fae7ce 100%),
+    url("../pece/updatedhero2.png") center top / 100% 100% no-repeat;
+}
+
+/* ---- Layer 2: journey cards, locked to the SAME artboard coordinates ---- */
+.pece-hero__nodes {
+  grid-area: 1 / 1;
+  align-self: start;
+  position: relative;
+  width: 100%;
+  aspect-ratio: var(--art-ratio);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.pece-hero__nodes-inner {
+  position: absolute;
+  inset: 0;
+}
+
+/* ---- Layer 3: centered content (copy + CTAs) ---- */
+.pece-hero__container {
+  grid-area: 1 / 1;
+  align-self: start;
+  z-index: 1;
+  width: 100%;
+  max-width: var(--hero-max);
+  margin: 0 auto;
+  padding: clamp(4rem, 7vw, 7rem) clamp(1rem, 4vw, 3rem) clamp(2.5rem, 4vw, 3.5rem);
+}
+
+.pece-hero__surface {
+  display: flex;
+  flex-direction: column;
+}
+
+.pece-hero__banner {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin: 0 auto 1.4rem 0;
+  width: fit-content;
+  max-width: min(100%, 30rem);
+  padding: 0.5rem 0.95rem;
+  border-radius: 999px;
+  font-size: 0.64rem;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--pece-navy-muted);
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid var(--pece-cream-border);
+  box-shadow: 0 6px 22px rgba(26, 35, 50, 0.07);
+  backdrop-filter: blur(6px);
+}
+
+.pece-hero__banner-icon {
+  flex-shrink: 0;
+  color: var(--pece-orange);
+}
+
+/* Copy column — constrained to the left "safe zone" of the artwork */
+.pece-hero__copy {
+  max-width: 33rem;
+}
+
+/* keep grid wrapper as a simple block; spacer no longer needed */
+.pece-hero__grid {
+  display: block;
+}
+
+.pece-hero__spacer {
+  display: none;
+}
+
+.pece-hero__eyebrow {
+  display: block;
+  margin-bottom: 0.65rem;
+  font-size: 0.64rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--pece-orange);
+}
+
+.pece-hero__heading {
+  margin: 0 0 0.7rem;
+  font-size: clamp(2.2rem, 4.4vw, 3.3rem);
+  font-weight: 800;
+  line-height: 1.04;
+  letter-spacing: -0.03em;
+  color: var(--pece-navy);
+}
+
+.pece-hero__heading-accent {
+  color: var(--pece-orange);
+}
+
+.pece-hero__thesis {
+  margin: 0 0 1.1rem;
+  max-width: 27rem;
+  font-size: clamp(0.98rem, 1.8vw, 1.1rem);
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--pece-navy-muted);
+}
+
+.pece-hero__brand {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.65rem;
+  margin-bottom: 0.9rem;
+}
+
+.pece-hero__program {
+  margin: 0;
+  font-size: clamp(1.15rem, 2.5vw, 1.45rem);
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: var(--pece-navy);
+}
+
+.pece-hero__program-sep {
+  color: #cbd5e1;
+  font-weight: 400;
+}
+
+.pece-hero__program-sub {
+  margin: 0;
+  font-size: clamp(0.88rem, 1.6vw, 1rem);
+  font-weight: 600;
+  color: var(--pece-navy-muted);
+}
+
+.pece-hero__badge {
+  display: inline-flex;
+  margin-bottom: 0.9rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--pece-orange);
+  background: rgba(255, 244, 235, 0.92);
+  border: 1px solid var(--pece-orange-border);
+}
+
+.pece-hero__lead {
+  margin: 0 0 1.1rem;
+  max-width: 32rem;
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: var(--pece-navy-muted);
+}
+
+.pece-hero__lead-em {
+  display: block;
+  margin-top: 0.45rem;
+  font-weight: 700;
+  color: var(--pece-orange);
+}
+
+/* Trust chips */
+.pece-hero__trust {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.5rem;
+  margin: 0 0 1.1rem;
+  padding: 0;
+  list-style: none;
+  max-width: 33rem;
+}
+
+@media (min-width: 640px) {
+  .pece-hero__trust {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.pece-hero__trust-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.65rem 0.45rem;
+  border-radius: 12px;
+  text-align: center;
+  font-size: 0.57rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--pece-navy-muted);
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid var(--pece-cream-border);
+  box-shadow: 0 2px 10px rgba(26, 35, 50, 0.05);
+  backdrop-filter: blur(4px);
+  transition: transform 0.25s var(--pece-ease), box-shadow 0.25s ease;
+}
+
+.pece-hero__trust-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(26, 35, 50, 0.08);
+}
+
+.pece-hero__trust-icon {
+  width: 1.3rem;
+  height: 1.3rem;
+  color: var(--pece-orange);
+}
+
+/* Pillars panel */
+.pece-hero__pillars {
+  max-width: 33rem;
+  padding: 0.85rem 0.8rem;
+  border-radius: 14px;
+  background: rgba(243, 236, 227, 0.9);
+  border: 1px solid var(--pece-cream-border);
+  backdrop-filter: blur(4px);
+}
+
+.pece-hero__pillars-title {
+  margin: 0 0 0.65rem;
+  font-size: 0.57rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--pece-navy-muted);
+}
+
+.pece-hero__pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: 640px) {
+  .pece-hero__pillars-grid {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+}
+
+.pece-hero__pillar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  text-align: center;
+}
+
+.pece-hero__pillar-ring {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.3rem;
+  height: 2.3rem;
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid var(--pece-cream-border);
+  transition: transform 0.25s var(--pece-ease);
+}
+
+.pece-hero__pillar:hover .pece-hero__pillar-ring {
+  transform: scale(1.08);
+}
+
+.pece-hero__pillar-icon {
+  width: 1.02rem;
+  height: 1.02rem;
+}
+
+.pece-hero__pillar--personal .pece-hero__pillar-icon { color: var(--stage-green); }
+.pece-hero__pillar--professional .pece-hero__pillar-icon { color: var(--stage-blue); }
+.pece-hero__pillar--occupational .pece-hero__pillar-icon { color: var(--stage-gold); }
+.pece-hero__pillar--financial .pece-hero__pillar-icon { color: #059669; }
+.pece-hero__pillar--relationship .pece-hero__pillar-icon { color: #e11d48; }
+.pece-hero__pillar--truth .pece-hero__pillar-icon { color: var(--stage-purple); }
+
+.pece-hero__pillar-label {
+  font-size: 0.5rem;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--pece-navy-muted);
+}
+
+/* ---- Journey cards (desktop: absolute on artboard) ---- */
+.pece-hero__journey-card {
+  position: absolute;
+  width: var(--card-w, 12%);
+  max-width: 12rem;
+  padding: 0.55rem 0.65rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.97);
+  border: 1px solid rgba(232, 223, 211, 0.95);
+  box-shadow: 0 8px 24px rgba(26, 35, 50, 0.1);
+  pointer-events: auto;
+  transform: translateY(-50%);
+  transition: transform 0.3s var(--pece-ease), box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.pece-hero__journey-card:hover,
+.pece-hero__journey-card:focus-within,
+.pece-hero__journey-card.is-active {
+  transform: translateY(calc(-50% - 2px)) translateX(3px);
+  box-shadow: 0 12px 30px rgba(26, 35, 50, 0.14);
+}
+
+.pece-hero__journey-card--pentad:hover,
+.pece-hero__journey-card--pentad.is-active { border-color: rgba(22, 163, 74, 0.4); }
+.pece-hero__journey-card--tenner:hover,
+.pece-hero__journey-card--tenner.is-active { border-color: rgba(37, 99, 235, 0.4); }
+.pece-hero__journey-card--post:hover,
+.pece-hero__journey-card--post.is-active { border-color: rgba(217, 119, 6, 0.4); }
+.pece-hero__journey-card--org:hover,
+.pece-hero__journey-card--org.is-active { border-color: rgba(147, 51, 234, 0.4); }
+
+.pece-hero__journey-age {
+  display: block;
+  margin-bottom: 0.08rem;
+  font-size: 0.53rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.pece-hero__journey-card--pentad .pece-hero__journey-age { color: var(--stage-green); }
+.pece-hero__journey-card--tenner .pece-hero__journey-age { color: var(--stage-blue); }
+.pece-hero__journey-card--post .pece-hero__journey-age { color: var(--stage-gold); }
+.pece-hero__journey-card--org .pece-hero__journey-age { color: var(--stage-purple); }
+
+.pece-hero__journey-name {
+  margin: 0 0 0.06rem;
+  font-size: 0.84rem;
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: 0.02em;
+  color: var(--pece-navy);
+}
+
+.pece-hero__journey-tag {
+  margin: 0 0 0.24rem;
+  font-size: 0.61rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.pece-hero__journey-card--pentad .pece-hero__journey-tag { color: var(--stage-green); }
+.pece-hero__journey-card--tenner .pece-hero__journey-tag { color: var(--stage-blue); }
+.pece-hero__journey-card--post .pece-hero__journey-tag { color: var(--stage-gold); }
+.pece-hero__journey-card--org .pece-hero__journey-tag { color: var(--stage-purple); }
+
+.pece-hero__journey-desc {
+  margin: 0;
+  font-size: 0.5rem;
+  line-height: 1.4;
+  color: var(--pece-navy-muted);
+}
+
+.pece-hero__journey-card:focus-visible {
+  outline: 2px solid var(--pece-orange);
+  outline-offset: 2px;
+}
+
+/* CTA row */
+.pece-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.7rem;
+  margin-top: clamp(1.5rem, 3vw, 2rem);
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(232, 223, 211, 0.85);
+  max-width: 33rem;
+}
+
+.pece-hero__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  min-height: 48px;
+  padding: 0.7rem 1.2rem;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  transition: transform 0.25s var(--pece-ease), box-shadow 0.25s ease;
+}
+
+.pece-hero__btn:focus-visible {
+  outline: 2px solid var(--pece-orange);
+  outline-offset: 3px;
+}
+
+.pece-hero__btn--primary {
+  color: #fff;
+  background: linear-gradient(135deg, var(--pece-orange) 0%, #c2410c 100%);
+  box-shadow: 0 8px 24px rgba(232, 111, 23, 0.28);
+}
+
+.pece-hero__btn--primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(232, 111, 23, 0.35);
+}
+
+.pece-hero__btn--ghost {
+  color: var(--pece-navy);
+  background: #fff;
+  border: 1px solid var(--pece-cream-border);
+  box-shadow: 0 2px 8px rgba(26, 35, 50, 0.04);
+}
+
+.pece-hero__btn--ghost:hover {
+  transform: translateY(-2px);
+  border-color: #d1d5db;
+}
+
+.pece-hero__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  min-height: 48px;
+  padding: 0.35rem 0;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--pece-navy-muted);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.pece-hero__link:hover,
+.pece-hero__link:focus-visible {
+  color: var(--pece-orange);
+  border-bottom-color: var(--pece-orange);
+}
+
+/* =========================================================
+   TABLET / MOBILE  (< 1024px): stack image, copy, then cards
+   ========================================================= */
+@media (max-width: 1023px) {
+  .pece-hero {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 2.5rem;
+  }
+
+  .pece-hero__stage {
+    order: 1;
+    width: 100%;
+    aspect-ratio: var(--art-ratio);
+  }
+
+  .pece-hero__container {
+    order: 2;
+    align-self: auto;
+    padding-top: clamp(1.75rem, 5vw, 2.5rem);
+    padding-bottom: 0;
+  }
+
+  .pece-hero__banner {
+    margin-left: 0;
+    margin-right: auto;
+  }
+
+  /* cards become a normal stacked list below the copy */
+  .pece-hero__nodes {
+    order: 3;
+    position: static;
+    width: 100%;
+    max-width: var(--hero-max);
+    margin: 1.25rem auto 0;
+    padding: 0 clamp(1rem, 4vw, 3rem);
+    aspect-ratio: auto;
+  }
+
+  .pece-hero__nodes-inner {
+    position: static;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem;
+  }
+
+  .pece-hero__journey-card {
+    position: static;
+    width: 100%;
+    max-width: none;
+    transform: none;
+  }
+
+  .pece-hero__journey-card:hover,
+  .pece-hero__journey-card.is-active {
+    transform: translateY(-2px);
+  }
+}
+
+@media (max-width: 600px) {
+  .pece-hero__nodes-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .pece-hero__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .pece-hero__btn {
+    width: 100%;
+  }
+
+  .pece-hero__link {
+    justify-content: center;
+  }
+}
+
+/* Reveal */
+.pece-hero [data-reveal] {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.7s var(--pece-ease), transform 0.7s var(--pece-ease);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+.pece-hero.is-revealed [data-reveal] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pece-hero [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .pece-hero__trust-item:hover,
+  .pece-hero__btn:hover,
+  .pece-hero__journey-card:hover,
+  .pece-hero__journey-card.is-active {
+    transform: none;
+  }
+}
