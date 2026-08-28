@@ -129,10 +129,10 @@ service cloud.firestore {
       allow create, update, delete: if isSteward();
     }
 
-    // Registered operators (SWI · SWD-INV · WDS)
+    // Registered operators (SWI · SWD-INV · WDS) — writes are steward-only
     match /operators/{operatorId} {
       allow read: if isOperator();
-      allow create: if signedIn();
+      allow create: if isSteward();
       allow update, delete: if isSteward();
     }
 
