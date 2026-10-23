@@ -164,45 +164,15 @@
     teamHeading.append(element("p", "", sector.teamIntro));
     teamWrap.append(teamHeading);
 
-    var teamGrid = element("div", "team-grid");
-    sector.teams.forEach(function (team, index) {
-      var card = element("article", "team-card");
-      card.append(element("span", "", "Team 0" + (index + 1)));
-      card.append(element("h3", "", team.name));
-      card.append(element("p", "", team.scope));
-      var link = element("a", "text-link", "Explore this Team →");
-      link.href = workforceMail("WDDAM Cohort 01 interest — " + sector.name + " — " + team.name, "Hello,\n\nI am interested in learning more about the " + team.name + " Team in the WDDAM™ " + sector.name + " Cohort 01 pathway. Please share the approved next step.\n\nThank you.");
-      card.append(link);
-      teamGrid.append(card);
-    });
-    teamWrap.append(teamGrid);
+    var explorerMount = element("div", "explorer");
+    explorerMount.id = "explorer-mount";
+    explorerMount.dataset.accent = sector.accent;
+    teamWrap.append(explorerMount);
     teamWrap.append(element("p", "source-line", "Source: " + sector.source));
     teamSection.append(teamWrap);
     if (teamAnchor) teamAnchor.replaceWith(teamSection);
     else mount.append(teamSection);
 
-    var levelsSection = element("section", "section");
-    var levelsWrap = element("div", "wrap reveal");
-    var levelHeading = element("div", "sector-journey-heading");
-    levelHeading.append(element("p", "eyebrow", "A clear, evidence-led pathway"));
-    levelHeading.append(element("h2", "", "Bring what you know. Discover what comes next."));
-    levelHeading.append(element("p", "", "No WDDAM™ level is assumed. Qualification and placement follow the approved process; prior experience and credentials inform review but do not guarantee readiness."));
-    levelsWrap.append(levelHeading);
-    var journey = element("div", "journey-grid");
-    [
-      ["01", "Explore your fit", "Choose a sector and the Team whose work interests you."],
-      ["02", "Demonstrate capability", "Qualification and assessment use the approved sector standards and evidence."],
-      ["03", "Progress with purpose", "Interview, acceptance, enrollment and Team assignment follow the readiness process."]
-    ].forEach(function (step) {
-      var card = element("article", "journey-card");
-      card.append(element("span", "journey-number", step[0]));
-      card.append(element("h3", "", step[1]));
-      card.append(element("p", "", step[2]));
-      journey.append(card);
-    });
-    levelsWrap.append(journey);
-    levelsSection.append(levelsWrap);
-    mount.insertBefore(levelsSection, pathwayAnchor || null);
 
     var pathwaySection = element("section", "section");
     pathwaySection.id = "pathways";

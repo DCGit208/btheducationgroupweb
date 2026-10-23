@@ -1,0 +1,83 @@
+.explorer { --sector-color: var(--mint); }
+[data-accent="coral"] .explorer, .explorer[data-accent="coral"] { --sector-color: var(--coral); }
+.explorer[data-accent="violet"] { --sector-color: var(--violet); }
+.explorer[data-accent="blue"] { --sector-color: var(--blue); }
+.explorer[data-accent="mint"] { --sector-color: var(--mint); }
+
+.team-tabs { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: .6rem; margin-bottom: 1.6rem; }
+.team-tab {
+  display: flex; flex-direction: column; align-items: flex-start; gap: .45rem; min-height: 96px; padding: .85rem .9rem;
+  color: var(--muted); text-align: left; font: inherit; cursor: pointer;
+  background: var(--panel); border: 1px solid var(--line); border-radius: 14px;
+  transition: border-color .15s, background .15s, color .15s, transform .15s;
+}
+.team-tab:hover { border-color: var(--sector-color); color: var(--ink); transform: translateY(-2px); }
+.team-tab[aria-selected="true"] { color: var(--ink); background: var(--panel-2); border-color: var(--sector-color); box-shadow: inset 0 3px 0 var(--sector-color); }
+.team-tab:focus-visible, .level-step:focus-visible { outline: 2px solid var(--sector-color); outline-offset: 3px; }
+.team-tab-index { font-size: .72rem; letter-spacing: .14em; color: var(--sector-color); font-weight: 700; }
+.team-tab-name { font-size: .88rem; font-weight: 600; line-height: 1.3; }
+
+.team-intro { max-width: 760px; margin-bottom: 1.6rem; }
+.team-intro h3 { margin: 0 0 .4rem; font-size: clamp(1.4rem, 2.6vw, 2rem); }
+.team-intro p { margin: 0; color: var(--muted); }
+
+.level-steps { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: .5rem; margin: 0 0 1.4rem; padding: 0; list-style: none; }
+.level-step {
+  position: relative; width: 100%; padding: .75rem .8rem; text-align: left; font: inherit; cursor: pointer;
+  color: var(--muted); background: transparent; border: 1px solid var(--line); border-radius: 12px;
+  transition: border-color .15s, background .15s, color .15s;
+}
+.level-step::after { content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 3px; border-radius: 0 0 12px 12px; background: transparent; }
+.level-step.is-reached::after { background: color-mix(in srgb, var(--sector-color) 55%, transparent); }
+.level-step[aria-pressed="true"] { color: #07131c; background: var(--sector-color); border-color: var(--sector-color); }
+.level-step[aria-pressed="true"]::after { display: none; }
+.level-step-name { display: block; font-size: 1.15rem; font-weight: 800; }
+.level-step-label { display: block; margin-top: .15rem; font-size: .72rem; line-height: 1.25; opacity: .85; }
+
+.level-panel { padding: clamp(1.2rem, 3vw, 2rem); background: var(--panel); border: 1px solid var(--line); border-radius: 18px; }
+.level-head h3 { margin: .2rem 0 1.3rem; font-size: clamp(1.4rem, 2.8vw, 2.1rem); }
+.level-head .eyebrow { color: var(--sector-color); }
+.level-grid { display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr); gap: 1.8rem; }
+.level-block { margin-bottom: 1.5rem; }
+.level-block h4 { margin: 0 0 .65rem; font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; color: var(--quiet); }
+.tick-list, .role-list, .chip-list { margin: 0; padding: 0; list-style: none; }
+.tick-list li { position: relative; padding: .35rem 0 .35rem 1.5rem; color: var(--ink); }
+.tick-list li::before { content: ""; position: absolute; left: .1rem; top: .85rem; width: .5rem; height: .5rem; border-radius: 50%; background: var(--sector-color); }
+.chip-list { display: flex; flex-wrap: wrap; gap: .45rem; }
+.chip { padding: .38rem .7rem; font-size: .82rem; font-weight: 600; color: var(--ink); background: var(--panel-2); border: 1px solid color-mix(in srgb, var(--sector-color) 45%, transparent); border-radius: 999px; }
+.chips-muted .chip { color: var(--muted); border-color: var(--line); font-weight: 500; }
+.builds-on { margin-top: .4rem; color: var(--muted); }
+.builds-on summary { cursor: pointer; font-size: .88rem; margin-bottom: .6rem; }
+.role-list li { display: flex; flex-direction: column; gap: .1rem; padding: .6rem 0; border-bottom: 1px solid var(--line); }
+.role-list li:last-child { border-bottom: 0; }
+.role-list span { font-size: .8rem; color: var(--quiet); }
+.portfolio-group { margin-bottom: .9rem; }
+.portfolio-group h5 { margin: 0 0 .45rem; font-size: .85rem; color: var(--sector-color); }
+.portfolio-note, .muted { font-size: .82rem; color: var(--quiet); }
+
+.market-card { margin-top: .4rem; padding: 1.1rem; background: var(--night); border: 1px solid var(--line); border-radius: 14px; }
+.market-card .eyebrow { color: var(--sector-color); margin-bottom: .3rem; }
+.market-card h4 { margin: 0 0 1rem; font-size: 1.05rem; }
+.pay-bar { position: relative; height: 8px; margin: .3rem 0 .9rem; border-radius: 999px; background: linear-gradient(90deg, color-mix(in srgb, var(--sector-color) 25%, transparent), var(--sector-color)); }
+.pay-median { position: absolute; top: -5px; width: 4px; height: 18px; margin-left: -2px; border-radius: 2px; background: var(--ink); }
+.pay-figures { display: flex; justify-content: space-between; gap: .5rem; }
+.pay-figure { display: flex; flex-direction: column; }
+.pay-figure strong { font-size: 1.05rem; }
+.pay-figure.is-median strong { font-size: 1.35rem; color: var(--sector-color); }
+.pay-figure:last-child { text-align: right; }
+.pay-figure span { font-size: .72rem; color: var(--quiet); }
+.market-note { margin: 1rem 0 .5rem; font-size: .82rem; color: var(--muted); }
+.market-source { margin: 0; font-size: .72rem; line-height: 1.45; color: var(--quiet); }
+
+.level-cta { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; margin-top: 1.6rem; padding-top: 1.4rem; border-top: 1px solid var(--line); }
+
+@media (max-width: 900px) {
+  .team-tabs { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .level-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .level-steps { grid-template-columns: repeat(5, minmax(60px, 1fr)); overflow-x: auto; }
+  .level-step { padding: .6rem .5rem; }
+  .level-step-label { display: none; }
+  .level-step-name { text-align: center; }
+}
