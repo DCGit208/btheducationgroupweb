@@ -5,6 +5,13 @@ RewriteBase /
 # Legacy GWIX trial URL → production exchange
 RewriteRule ^gwix-trial/?$ /gwix [R=301,L]
 
+# WDDAM campaign short links
+RewriteRule ^wddam/?$ /wddam-campaign/ [R=301,L,NC]
+RewriteRule ^medtech/?$ /wddam-campaign/medical-technology/ [R=301,L,NC]
+RewriteRule ^cyber/?$ /wddam-campaign/cybersecurity/ [R=301,L,NC]
+RewriteRule ^it/?$ /wddam-campaign/information-technology/ [R=301,L,NC]
+RewriteRule ^cloud/?$ /wddam-campaign/cloud-data-ai/ [R=301,L,NC]
+
 # Remove .html extension from URLs (clean URLs)
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d

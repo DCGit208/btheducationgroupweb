@@ -1,7 +1,6 @@
 window.WDDAM_LADDERS = window.WDDAM_LADDERS || {};
 window.WDDAM_LADDERS["cloud-data-ai"] = {
  "sector": "Cloud (Data & AI)",
- "marketYear": "2025",
  "teams": [
   {
    "id": "T1",
@@ -616,38 +615,6 @@ window.WDDAM_LADDERS["cloud-data-ai"] = {
      ]
     }
    ]
-  }
- ],
- "market": [
-  {
-   "occupation": "Computer Network Architects",
-   "p10": 79900,
-   "median": 134050,
-   "p90": 202680
-  },
-  {
-   "occupation": "Database Architects",
-   "p10": 86240,
-   "median": 139500,
-   "p90": 204000
-  },
-  {
-   "occupation": "Data Scientists",
-   "p10": 67240,
-   "median": 120230,
-   "p90": 199130
-  },
-  {
-   "occupation": "Network and Computer Systems Administrators",
-   "p10": 62640,
-   "median": 99130,
-   "p90": 155050
-  },
-  {
-   "occupation": "Computer and Information Systems Managers",
-   "p10": 107550,
-   "median": 175140,
-   "p90": 297510
   }
  ]
 };

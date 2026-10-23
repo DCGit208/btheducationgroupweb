@@ -61,6 +61,56 @@
         "source": "/gwix-trial.html",
         "destination": "/gwix",
         "type": 301
+      },
+      {
+        "source": "/wddam",
+        "destination": "/wddam-campaign/",
+        "type": 301
+      },
+      {
+        "source": "/wddam/",
+        "destination": "/wddam-campaign/",
+        "type": 301
+      },
+      {
+        "source": "/medtech",
+        "destination": "/wddam-campaign/medical-technology/",
+        "type": 301
+      },
+      {
+        "source": "/medtech/",
+        "destination": "/wddam-campaign/medical-technology/",
+        "type": 301
+      },
+      {
+        "source": "/cyber",
+        "destination": "/wddam-campaign/cybersecurity/",
+        "type": 301
+      },
+      {
+        "source": "/cyber/",
+        "destination": "/wddam-campaign/cybersecurity/",
+        "type": 301
+      },
+      {
+        "source": "/it",
+        "destination": "/wddam-campaign/information-technology/",
+        "type": 301
+      },
+      {
+        "source": "/it/",
+        "destination": "/wddam-campaign/information-technology/",
+        "type": 301
+      },
+      {
+        "source": "/cloud",
+        "destination": "/wddam-campaign/cloud-data-ai/",
+        "type": 301
+      },
+      {
+        "source": "/cloud/",
+        "destination": "/wddam-campaign/cloud-data-ai/",
+        "type": 301
       }
     ]
   }

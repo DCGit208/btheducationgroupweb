@@ -1,7 +1,6 @@
 window.WDDAM_LADDERS = window.WDDAM_LADDERS || {};
 window.WDDAM_LADDERS["information-technology"] = {
  "sector": "Information Technology",
- "marketYear": "2025",
  "teams": [
   {
    "id": "T1",
@@ -624,38 +623,6 @@ window.WDDAM_LADDERS["information-technology"] = {
      ]
     }
    ]
-  }
- ],
- "market": [
-  {
-   "occupation": "Computer User Support Specialists",
-   "p10": 40980,
-   "median": 61860,
-   "p90": 100540
-  },
-  {
-   "occupation": "Computer Network Architects",
-   "p10": 79900,
-   "median": 134050,
-   "p90": 202680
-  },
-  {
-   "occupation": "Network and Computer Systems Administrators",
-   "p10": 62640,
-   "median": 99130,
-   "p90": 155050
-  },
-  {
-   "occupation": "Software Developers",
-   "p10": 82460,
-   "median": 135980,
-   "p90": 214670
-  },
-  {
-   "occupation": "Computer and Information Systems Managers",
-   "p10": 107550,
-   "median": 175140,
-   "p90": 297510
   }
  ]
 };

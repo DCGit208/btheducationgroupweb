@@ -1,7 +1,6 @@
 window.WDDAM_LADDERS = window.WDDAM_LADDERS || {};
 window.WDDAM_LADDERS["medical-technology"] = {
  "sector": "Medical Technology",
- "marketYear": "2025",
  "teams": [
   {
    "id": "MT-T01",
@@ -702,38 +701,6 @@ window.WDDAM_LADDERS["medical-technology"] = {
      ]
     }
    ]
-  }
- ],
- "market": [
-  {
-   "occupation": "Medical Equipment Repairers",
-   "p10": 38490,
-   "median": 61660,
-   "p90": 98280
-  },
-  {
-   "occupation": "Radiologic Technologists and Technicians",
-   "p10": 55980,
-   "median": 80110,
-   "p90": 118660
-  },
-  {
-   "occupation": "Information Security Analysts",
-   "p10": 75090,
-   "median": 129180,
-   "p90": 199850
-  },
-  {
-   "occupation": "Compliance Officers",
-   "p10": 48220,
-   "median": 80730,
-   "p90": 133720
-  },
-  {
-   "occupation": "Medical and Health Services Managers",
-   "p10": 73390,
-   "median": 123860,
-   "p90": 224340
   }
  ]
 };

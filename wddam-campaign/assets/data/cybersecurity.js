@@ -1,7 +1,6 @@
 window.WDDAM_LADDERS = window.WDDAM_LADDERS || {};
 window.WDDAM_LADDERS["cybersecurity"] = {
  "sector": "Cybersecurity",
- "marketYear": "2025",
  "teams": [
   {
    "id": "OS",
@@ -494,39 +493,6 @@ window.WDDAM_LADDERS["cybersecurity"] = {
    ]
   }
  ],
- "market": [
-  {
-   "occupation": "Information Security Analysts",
-   "p10": 75090,
-   "median": 129180,
-   "p90": 199850
-  },
-  {
-   "occupation": "Information Security Analysts",
-   "p10": 75090,
-   "median": 129180,
-   "p90": 199850
-  },
-  {
-   "occupation": "Information Security Analysts",
-   "p10": 75090,
-   "median": 129180,
-   "p90": 199850
-  },
-  {
-   "occupation": "Software Developers",
-   "p10": 82460,
-   "median": 135980,
-   "p90": 214670,
-   "note": "closest match for application security"
-  },
-  {
-   "occupation": "Compliance Officers",
-   "p10": 48220,
-   "median": 80730,
-   "p90": 133720
-  }
- ],
  "portfolio": {
   "groups": [
    {
@@ -572,6 +538,6 @@ window.WDDAM_LADDERS["cybersecurity"] = {
     ]
    }
   ],
-  "note": "The cybersecurity specification defines an approved certification portfolio. Which credentials apply to a given Team and level depends on the Team, concentration and readiness, and is confirmed during enrolment."
+  "note": "The cybersecurity specification defines an approved certification portfolio rather than a fixed per-level list. The Foundation portfolio belongs to Level 1; Professional and AI/Strategic credentials are introduced progressively as capability develops. Which credentials apply to a given Team and level is confirmed during enrolment."
  }
 };
