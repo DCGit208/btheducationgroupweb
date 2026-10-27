@@ -15,6 +15,53 @@
     { name: "Year 3", focus: "Leadership & deployment readiness", levels: [4] }
   ];
   var state = { team: 0, level: 0 };
+  var KEY_CREDS = /CABT|CBET|CHTM/;
+
+  function scheduleOf(team) {
+    var all = window.WDDAM_SCHEDULES && window.WDDAM_SCHEDULES[slug];
+    return all && all[team.id] ? all[team.id] : null;
+  }
+
+  function renderTimeline(sched, level) {
+    var data = sched.levels[LEVELS[state.level]];
+    var wrap = el("div", "timeline-wrap");
+    if (data.milestones && data.milestones.length) {
+      var strip = el("ul", "milestones");
+      data.milestones.forEach(function (text) {
+        strip.append(el("li", KEY_CREDS.test(text) ? "is-key" : "", text));
+      });
+      wrap.append(strip);
+    }
+    var grid = el("div", "timeline");
+    var kinds = [["c", "Complete", "is-complete"], ["s", "Start", "is-start"], ["k", "Continue", "is-continue"]];
+    data.years.forEach(function (year, index) {
+      var col = el("article", "tl-year");
+      col.append(el("p", "tl-year-name", "Year " + (index + 1)));
+      if (year.t) col.append(el("h5", "tl-theme", year.t));
+      kinds.forEach(function (kind) {
+        var items = year[kind[0]];
+        if (!items || !items.length) return;
+        var group = el("div", "tl-group " + kind[2]);
+        group.append(el("span", "tl-badge", kind[1]));
+        var list = el("ul", "tl-list");
+        items.forEach(function (text) {
+          list.append(el("li", KEY_CREDS.test(text) && kind[0] === "c" ? "is-key" : "", text));
+        });
+        group.append(list);
+        col.append(group);
+      });
+      (year.n || []).forEach(function (text) { col.append(el("p", "tl-note", text)); });
+      grid.append(col);
+    });
+    wrap.append(grid);
+    if (data.htm) {
+      var htm = el("p", "tl-htm");
+      htm.append(el("strong", "", "HTM competencies at " + LEVELS[state.level] + ": "));
+      htm.append(document.createTextNode(data.htm));
+      wrap.append(htm);
+    }
+    return wrap;
+  }
 
   function yearOf(levelIndex) {
     return YEARS.findIndex(function (year) { return year.levels.indexOf(levelIndex) !== -1; });
@@ -135,7 +182,8 @@
     panel.replaceChildren();
 
     var head = el("header", "level-head");
-    head.append(el("p", "eyebrow", YEARS[yearOf(state.level)].name + " · " + LEVELS[state.level] + " · " + level.positioning));
+    var sched = scheduleOf(team);
+    head.append(el("p", "eyebrow", (sched ? "3-year schedule" : YEARS[yearOf(state.level)].name) + " · " + LEVELS[state.level] + " · " + level.positioning));
     head.append(el("h3", "", level.title));
     panel.append(head);
 
@@ -149,9 +197,13 @@
     }
 
     var yearIndex = yearOf(state.level);
-    main.append(block(YEARS[yearIndex].name + " certification roadmap", renderRoadmap(team, yearIndex)));
+    if (sched) {
+      main.append(block(LEVELS[state.level] + " certifications by year", renderTimeline(sched, level)));
+    } else {
+      main.append(block(YEARS[yearIndex].name + " certification roadmap", renderRoadmap(team, yearIndex)));
+    }
 
-    if (!ladder.portfolio && YEARS[yearIndex].levels[0] > 0) {
+    if (!sched && !ladder.portfolio && YEARS[yearIndex].levels[0] > 0) {
       var earlier = [];
       var yearStart = YEARS[yearIndex].levels[0];
       for (var index = 0; index < yearStart; index += 1) {
@@ -235,7 +287,25 @@
 
     var steps = el("div", "year-steps");
     steps.setAttribute("aria-label", "Three-year pathway");
-    YEARS.forEach(function (year) {
+    var sched = scheduleOf(team);
+    if (sched) {
+      steps.className = "level-select";
+      steps.setAttribute("aria-label", "Levels");
+      LEVELS.forEach(function (name, index) {
+        var button = el("button", "level-step" + (index <= state.level ? " is-reached" : ""));
+        button.type = "button";
+        button.setAttribute("aria-pressed", String(index === state.level));
+        button.append(el("span", "level-step-name", name));
+        button.append(el("span", "level-step-label", team.levels[index].positioning));
+        button.append(el("span", "level-step-end", "→ " + sched.levels[name].end));
+        button.addEventListener("click", function () {
+          state.level = index;
+          writeUrl();
+          render();
+        });
+        steps.append(button);
+      });
+    } else YEARS.forEach(function (year) {
       var group = el("div", "year-group");
       group.style.flexGrow = String(year.levels.length);
       var count = yearCertCount(team, year);

@@ -90,3 +90,28 @@
 @media (max-width: 760px) {
   .year-steps { flex-direction: column; }
 }
+
+.level-select { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: .6rem; margin: 0 0 1.5rem; }
+.level-step-end { display: block; margin-top: .35rem; font-family: "DM Mono", monospace; font-size: .68rem; letter-spacing: .04em; color: var(--sector-color); }
+.level-step[aria-pressed="true"] .level-step-end { color: #0a0f1e; font-weight: 700; }
+.milestones { display: flex; flex-wrap: wrap; gap: .5rem; margin: 0 0 1rem; padding: 0; list-style: none; }
+.milestones li { padding: .35rem .7rem; font-size: .78rem; color: var(--x-muted); border: 1px solid var(--x-line); border-radius: 999px; }
+.milestones li.is-key { color: #0a0f1e; font-weight: 700; background: var(--sector-color); border-color: var(--sector-color); }
+.timeline { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .75rem; }
+.tl-year { padding: .9rem; border: 1px solid var(--x-line); border-radius: 12px; background: var(--x-panel); }
+.tl-year-name { margin: 0 0 .6rem; font-family: "DM Mono", monospace; font-size: .74rem; letter-spacing: .14em; text-transform: uppercase; color: var(--sector-color); }
+.tl-theme { margin: 0 0 .6rem; font-size: .88rem; color: #fff; }
+.tl-group { margin-bottom: .75rem; }
+.tl-badge { display: inline-block; margin-bottom: .35rem; padding: .1rem .5rem; font-size: .66rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; border-radius: 999px; }
+.is-complete .tl-badge { color: #0a0f1e; background: #4ade80; }
+.is-start .tl-badge { color: #0a0f1e; background: #fbbf24; }
+.is-continue .tl-badge { color: #0a0f1e; background: #93c5fd; }
+.tl-list { margin: 0; padding: 0; list-style: none; }
+.tl-list li { padding: .3rem 0; font-size: .82rem; line-height: 1.35; color: var(--x-ink); border-bottom: 1px solid var(--x-line); overflow-wrap: anywhere; }
+.tl-list li:last-child { border-bottom: 0; }
+.tl-list li.is-key { color: var(--sector-color); font-weight: 700; }
+.tl-note { margin: .5rem 0 0; font-size: .8rem; line-height: 1.4; color: var(--x-muted); }
+.tl-htm { margin: 1rem 0 0; font-size: .85rem; color: var(--x-muted); }
+.tl-htm strong { color: #fff; }
+@media (max-width: 1100px) { .timeline { grid-template-columns: 1fr; } }
+@media (max-width: 760px) { .level-select { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
