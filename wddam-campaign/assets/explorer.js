@@ -184,7 +184,7 @@
     panel.append(grid);
 
     var cta = el("div", "level-cta");
-    var link = el("a", "button", "Ask about " + team.name + " · " + LEVELS[state.level] + " →");
+    var link = el("a", "btn btn-gold", "Ask about " + team.name + " · " + LEVELS[state.level] + " →");
     link.href = mail(
       "WDDAM Cohort 01 — " + ladder.sector + " — " + team.name + " — " + LEVELS[state.level],
       "Hello,\n\nI am interested in the " + team.name + " Team (" + LEVELS[state.level] + ") in the WDDAM™ " + ladder.sector + " Cohort 01 pathway. Please share the approved next step.\n\nThank you."

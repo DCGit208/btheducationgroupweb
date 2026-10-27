@@ -3,164 +3,187 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Explore four WDDAM™ sector pathways, discover the Specialized Teams, and express interest in Cohort 01.">
-  <meta name="theme-color" content="#07131c">
+  <meta name="description" content="WDDAM™ Cohort 01: choose Medical Technology, Cybersecurity, Information Technology or Cloud (Data & AI) and explore Teams, levels and certifications.">
+  <meta name="theme-color" content="#0a0f1e">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="BTH Education Group">
   <meta property="og:url" content="https://www.btheducationgroup.org/wddam-campaign">
-  <meta property="og:title" content="WDDAM™ Cohort 01 — Build the skills. Shape what’s next.">
-  <meta property="og:description" content="Choose a sector, discover five defined Specialized Teams, and express interest in WDDAM™ Cohort 01.">
+  <meta property="og:title" content="WDDAM™ Cohort 01 — Choose Your Sector | BTH Education Group">
+  <meta property="og:description" content="WDDAM™ Cohort 01: choose Medical Technology, Cybersecurity, Information Technology or Cloud (Data & AI) and explore Teams, levels and certifications.">
   <link rel="canonical" href="https://www.btheducationgroup.org/wddam-campaign">
-  <title>WDDAM™ Cohort 01 — Build the skills. Shape what’s next.</title>
-  <link rel="stylesheet" href="assets/campaign.css?v=20261021f">
-  <script src="assets/campaign-data.js?v=20261021h" defer></script>
-  <script src="assets/campaign.js?v=20261021h" defer></script>
+  <title>WDDAM™ Cohort 01 — Choose Your Sector | BTH Education Group</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=DM+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/workforce-infrastructure.css?v=20260617g">
+  <link rel="stylesheet" href="/assets/css/workforce-infrastructure-v2.css?v=20260617g">
+  <link rel="stylesheet" href="/assets/css/workforce-expansion.css?v=20260617g">
+  <link rel="stylesheet" href="/assets/css/workforce-deployment-v2.css?v=20260617g">
+  <link rel="stylesheet" href="/assets/css/gwix.css?v=20260617m">
+  <link rel="stylesheet" href="assets/explorer.css?v=20261027a">
+  <script src="assets/campaign-data.js?v=20261027a" defer></script>
+  <script src="assets/campaign.js?v=20261027a" defer></script>
 </head>
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header">
-    <div class="wrap header-inner">
-      <a class="brand" href="./" aria-label="BTH Education Group — WDDAM campaign home">
-        <span class="brand-mark" aria-hidden="true">BTH</span>
-        <span>BTH Education Group<small>WDDAM™ workforce infrastructure</small></span>
-      </a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">Menu</button>
-      <nav class="nav-links" id="primary-nav" aria-label="Main navigation">
-        <a href="#sectors">Four sectors</a>
-        <a href="#architecture">How joining works</a>
-        <a href="#pathways">Pathways</a>
-        <a class="button button-small" href="#sectors">Explore sectors <span aria-hidden="true">→</span></a>
-      </nav>
+<body class="wf-v2 gwix">
+  <div class="scroll-progress" id="scrollProgress"></div>
+  <a class="skip-link" href="#hero">Skip to main content</a>
+  <nav class="topnav topnav--v2" aria-label="WDDAM campaign navigation">
+    <div class="topnav__shell">
+      <div class="topnav-inner">
+        <a href="/" class="nav-brand" aria-label="BTH Education Group — homepage">BTH <span>Education</span> Group</a>
+        <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="nav-panel-v2" id="nav-toggle-v2">
+          <span class="nav-toggle__label">Menu</span>
+          <span class="nav-toggle__bars" aria-hidden="true"></span>
+        </button>
+        <div class="nav-panel" id="nav-panel-v2">
+          <div class="nav-primary" role="menubar" aria-label="Primary sections">
+            <a href="#sectors" role="menuitem">Sectors</a>
+            <a href="#architecture" role="menuitem">How it works</a>
+            <a href="#targets" role="menuitem">Team mix</a>
+            <a href="#next-steps" role="menuitem">Next steps</a>
+          </div>
+          <div class="nav-panel__aux">
+            <a href="/gwix" class="nav-link-aux">GWIX Exchange</a>
+            <a href="/workforce-infrastructure" class="nav-link-aux">Global Doctrine</a>
+            <a href="/workforce-engage?intent=briefing" class="btn btn-primary nav-cta-btn nav-cta-btn--in-panel">Executive Briefing</a>
+          </div>
+        </div>
+        <div class="nav-actions">
+          <a href="/workforce-engage?intent=briefing" class="btn btn-primary nav-cta-btn">Executive Briefing</a>
+        </div>
+      </div>
     </div>
-  </header>
-
+  </nav>
   <main id="main">
-    <section class="hero">
-      <div class="wrap hero-grid">
-        <div class="hero-story reveal">
-          <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> WDDAM™ · Cohort 01</p>
-          <h1>Build the skills.<br><span class="highlight">Shape what’s next.</span></h1>
-          <p class="hero-copy">Find the sector that moves you. Explore a defined Team pathway to develop and demonstrate capability—then progress through a readiness-led process.</p>
-          <div class="hero-actions">
-            <a class="button" href="#sectors">Choose your sector <span aria-hidden="true">→</span></a>
-            <a class="button button-secondary" href="#pathways">How joining works</a>
-          </div>
-          <p class="hero-footnote">No WDDAM™ level is assumed. Assessment and readiness—not a promise of a job—guide progression.</p>
+  <section class="hero gwix-hero" id="hero">
+    <canvas id="neural-canvas"></canvas>
+    <div class="hero-photo-layer" id="heroPhotoLayer"></div>
+    <div class="hero-orb orb-1"></div>
+    <div class="hero-orb orb-2"></div>
+    <div class="hero-orb orb-3"></div>
+    <div class="hero-grid">
+      <div>
+        <div class="hero-badge"><span>&#x25CF;</span> WDDAM™ · Cohort 01</div>
+        <h1>Build the skills.<br>Shape what’s <em>next.</em></h1>
+        <div class="gwix-status-line"><span class="gwix-pulse" aria-hidden="true"></span><span>Cohort 01 · Four sectors</span><span class="gwix-state gwix-state--framework">Now exploring</span></div>
+        <p class="hero-audience-line">Find the sector that moves you. Explore a defined <strong>Team</strong> pathway across <strong>L1–L5</strong> and a <strong>3-year</strong> certification roadmap — then progress through a readiness-led process.</p>
+        <div class="hero-cta-row">
+          <a class="btn btn-gold btn-lg" href="#sectors">Choose your sector</a>
+          <a class="btn btn-outline btn-lg" href="#architecture">How joining works</a>
         </div>
-        <aside class="hero-aside campaign-art reveal" aria-label="Four Cohort 01 sector targets">
-          <div class="campaign-art-head"><span>COHORT 01 · FOUR SECTORS</span><span>01 / 04</span></div>
-          <div class="campaign-art-title"><div><p class="eyebrow">One place to start</p><h2>Find the work<br>that fits you.</h2></div><span class="orbit-mark" aria-hidden="true">W</span></div>
-          <nav class="sector-rail" aria-label="Sector links">
-            <a data-sector="coral" href="medical-technology/"><span class="rail-index">01</span><span class="rail-copy"><strong>Medical Technology</strong><small>5 defined Specialized Teams</small></span><span class="rail-arrow" aria-hidden="true">↗</span></a>
-            <a data-sector="violet" href="cybersecurity/"><span class="rail-index">02</span><span class="rail-copy"><strong>Cybersecurity</strong><small>5 defined Specialized Teams</small></span><span class="rail-arrow" aria-hidden="true">↗</span></a>
-            <a data-sector="blue" href="information-technology/"><span class="rail-index">03</span><span class="rail-copy"><strong>Information Technology</strong><small>5 defined Specialized Teams</small></span><span class="rail-arrow" aria-hidden="true">↗</span></a>
-            <a data-sector="mint" href="cloud-data-ai/"><span class="rail-index">04</span><span class="rail-copy"><strong>Cloud · Data · AI</strong><small>5 defined Specialized Teams</small></span><span class="rail-arrow" aria-hidden="true">↗</span></a>
-          </nav>
-          <div class="campaign-art-foot"><span><i aria-hidden="true"></i> FOUR DISTINCT SECTOR PATHWAYS</span><strong>20 <small>Specialized Teams</small></strong></div>
-        </aside>
-      </div>
-    </section>
-
-    <div class="metrics-band" aria-label="Cohort 01 pathway overview">
-      <div class="wrap metrics">
-        <div class="metric"><strong>04</strong><span>sectors to explore</span></div>
-        <div class="metric"><strong>20</strong><span>defined Specialized Teams</span></div>
-        <div class="metric"><strong>L1–L5</strong><span>cumulative capability pathway</span></div>
-        <div class="metric"><strong>Evidence</strong><span>guides qualification and readiness</span></div>
+        <div class="gwix-telemetry-strip" aria-label="Cohort 01 overview">
+          <div class="gwix-tel"><div class="gwix-tel__val gold">4</div><div class="gwix-tel__key">Sectors to explore</div></div>
+          <div class="gwix-tel"><div class="gwix-tel__val">20</div><div class="gwix-tel__key">Specialized Teams</div></div>
+          <div class="gwix-tel"><div class="gwix-tel__val">L1–L5</div><div class="gwix-tel__key">Cumulative levels</div></div>
+          <div class="gwix-tel"><div class="gwix-tel__val">3</div><div class="gwix-tel__key">Years · certification roadmap</div></div>
+          <div class="gwix-tel"><div class="gwix-tel__val">200</div><div class="gwix-tel__key">Positions across four cohorts</div></div>
+        </div>
+        <div class="gwix-markets-strip" aria-label="Cohort 01 sectors">
+          <a href="medical-technology/" class="gwix-market-chip"><div class="gwix-market-chip__num">Sector 01</div><div class="gwix-market-chip__title">Medical Technology</div><div class="gwix-market-chip__meta">5 Teams · L1–L5 · <span class="gwix-state gwix-state--framework">Cohort 01</span></div></a>
+          <a href="cybersecurity/" class="gwix-market-chip"><div class="gwix-market-chip__num">Sector 02</div><div class="gwix-market-chip__title">Cybersecurity</div><div class="gwix-market-chip__meta">5 Teams · L1–L5 · <span class="gwix-state gwix-state--framework">Cohort 01</span></div></a>
+          <a href="information-technology/" class="gwix-market-chip"><div class="gwix-market-chip__num">Sector 03</div><div class="gwix-market-chip__title">Information Technology</div><div class="gwix-market-chip__meta">5 Teams · L1–L5 · <span class="gwix-state gwix-state--framework">Cohort 01</span></div></a>
+          <a href="cloud-data-ai/" class="gwix-market-chip"><div class="gwix-market-chip__num">Sector 04</div><div class="gwix-market-chip__title">Cloud (Data & AI)</div><div class="gwix-market-chip__meta">5 Teams · L1–L5 · <span class="gwix-state gwix-state--framework">Cohort 01</span></div></a>
+        </div>
+        <p class="hero-audience-line" style="margin-top:1.25rem;font-size:.85rem;opacity:.75">No WDDAM™ level is assumed. Assessment and readiness — not a promise of a job — guide progression.</p>
       </div>
     </div>
+  </section>
 
-    <section class="section" id="sectors">
-      <div class="wrap">
-        <div class="section-header reveal">
-          <div><p class="eyebrow">Choose your direction</p><h2>Where do you want to make a difference?</h2></div>
-          <p>Each sector has five defined Teams and a distinct capability pathway. Find the work that interests you, then explore where you might fit.</p>
-        </div>
-        <div class="sector-grid" id="sector-grid" aria-live="polite"></div>
+  <section class="gwix-section gwix-section--light" id="sectors" aria-labelledby="sectors-heading">
+    <div class="gwix-container">
+      <header class="gwix-section-header gwix-section-header--center reveal">
+        <p class="gwix-eyebrow">Choose your direction</p>
+        <h2 id="sectors-heading">Where do you want to make a difference?</h2>
+        <p class="gwix-lead">Each sector has five defined Teams and a distinct capability pathway. Pick one to explore Teams, levels, certifications and roles.</p>
+      </header>
+      <div class="gwix-entry-grid reveal" id="sector-grid" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <section class="gwix-section gwix-section--dark" id="architecture" aria-labelledby="arch-heading">
+    <div class="gwix-container">
+      <header class="gwix-section-header reveal">
+        <p class="gwix-eyebrow">What makes Cohort 01 different</p>
+        <h2 id="arch-heading">A defined path. Real standards. No guesswork.</h2>
+        <p class="gwix-lead">WDDAM™ connects your professional capability to a defined sector Team through a clear, evidence-led process — not a vague promise of placement.</p>
+      </header>
+      <div class="gwix-monitor-grid reveal">
+        <article class="gwix-monitor-card"><div class="gwix-monitor-card__cat">01 · Place</div><div class="gwix-monitor-card__val">5 Teams</div><div class="gwix-monitor-card__desc">Five distinct Teams per sector give complementary skills a defined workforce context.</div></article>
+        <article class="gwix-monitor-card"><div class="gwix-monitor-card__cat">02 · Path</div><div class="gwix-monitor-card__val">L1–L5</div><div class="gwix-monitor-card__desc">Cumulative development across 3 years — certifications, roles and portfolio values by level.</div></article>
+        <article class="gwix-monitor-card"><div class="gwix-monitor-card__cat">03 · Proof</div><div class="gwix-monitor-card__val">Evidence</div><div class="gwix-monitor-card__desc">Qualification, assessment and readiness guide progression. Experience informs review; it does not guarantee placement.</div></article>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="section light-section" id="architecture">
-      <div class="wrap">
-        <div class="section-header reveal">
-          <div><p class="eyebrow">What makes Cohort 01 different</p><h2>A defined path. Real standards. No guesswork.</h2></div>
-          <p>WDDAM™ connects your professional capability to a defined sector Team through a clear, evidence-led process—not a vague promise of placement.</p>
-        </div>
-        <div class="journey-grid reveal">
-          <article class="journey-card"><span class="journey-number">01</span><h3>A place for your capability</h3><p>Five distinct Teams in each sector give complementary skills a defined workforce context.</p></article>
-          <article class="journey-card"><span class="journey-number">02</span><h3>A path you can see</h3><p>Explore cumulative L1–L5 development and the standards that guide each sector.</p></article>
-          <article class="journey-card"><span class="journey-number">03</span><h3>Progress earned with evidence</h3><p>Qualification, assessment and readiness matter. Experience can inform review; it does not guarantee placement.</p></article>
-        </div>
+  <section class="gwix-section gwix-section--white" id="targets" aria-labelledby="targets-heading">
+    <div class="gwix-container">
+      <header class="gwix-section-header reveal">
+        <p class="gwix-eyebrow">Built for complementary capability</p>
+        <h2 id="targets-heading">See how each Team is composed.</h2>
+        <p class="gwix-lead">Each sector cohort has five Teams of ten with a defined mix across L1–L5. These are target positions in the architecture — not advertised jobs or live vacancies.</p>
+      </header>
+      <div class="gwix-monitor-grid reveal">
+        <article class="gwix-monitor-card"><div class="gwix-monitor-card__cat">L5</div><div class="gwix-monitor-card__val">1</div><div class="gwix-monitor-card__desc">per Team · 5 per cohort</div></article>
+        <article class="gwix-monitor-card"><div class="gwix-monitor-card__cat">L4</div><div class="gwix-monitor-card__val">2</div><div class="gwix-monitor-card__desc">per Team · 10 per cohort</div></article>
+        <article class="gwix-monitor-card"><div class="gwix-monitor-card__cat">L3</div><div class="gwix-monitor-card__val">2</div><div class="gwix-monitor-card__desc">per Team · 10 per cohort</div></article>
+        <article class="gwix-monitor-card"><div class="gwix-monitor-card__cat">L2</div><div class="gwix-monitor-card__val">2</div><div class="gwix-monitor-card__desc">per Team · 10 per cohort</div></article>
+        <article class="gwix-monitor-card"><div class="gwix-monitor-card__cat">L1</div><div class="gwix-monitor-card__val">3</div><div class="gwix-monitor-card__desc">per Team · 15 per cohort</div></article>
+        <article class="gwix-monitor-card"><div class="gwix-monitor-card__cat">Total</div><div class="gwix-monitor-card__val">10 / 50</div><div class="gwix-monitor-card__desc">per Team / per sector cohort</div></article>
       </div>
-    </section>
+      <p class="camp-source" style="color:#64748b">Source: WDDAM™ Version 3.0, §12.3.6; Four-Sector Cohort Sales &amp; Acquisition Master, §§1.4–1.5. Targets do not report applicant or vacancy counts.</p>
+    </div>
+  </section>
 
-    <section class="section" id="targets">
-      <div class="wrap">
-        <div class="section-header reveal">
-          <div><p class="eyebrow">Built for complementary capability</p><h2>See how each Team is composed.</h2></div>
-          <p>Each sector cohort has five Teams of ten, with a defined mix across L1–L5. These are target positions in the architecture—not advertised jobs or live vacancies.</p>
-        </div>
-        <details class="target-details">
-          <summary>View the approved 10-person Team mix</summary>
-          <div class="target-card">
-            <table class="target-table">
-              <thead><tr><th>Capability level</th><th>Per Team</th><th>Per cohort</th></tr></thead>
-              <tbody>
-                <tr><td>L5</td><td>1</td><td>5</td></tr>
-                <tr><td>L4</td><td>2</td><td>10</td></tr>
-                <tr><td>L3</td><td>2</td><td>10</td></tr>
-                <tr><td>L2</td><td>2</td><td>10</td></tr>
-                <tr><td>L1</td><td>3</td><td>15</td></tr>
-                <tr><td>Total target positions</td><td>10</td><td>50</td></tr>
-              </tbody>
-            </table>
-          </div>
-          <p class="fine-print">Source: WDDAM™ Version 3.0, §12.3.6; Four-Sector Cohort Sales &amp; Acquisition Master, §§1.4–1.5. Targets do not report applicant or vacancy counts.</p>
-        </details>
+  <section class="gwix-section gwix-section--light" id="next-steps" aria-labelledby="next-heading">
+    <div class="gwix-container">
+      <header class="gwix-section-header gwix-section-header--center reveal">
+        <p class="gwix-eyebrow">Your next steps</p>
+        <h2 id="next-heading">Know what happens after you raise your hand.</h2>
+        <p class="gwix-lead">Interest starts a conversation. It does not skip qualification, assessment or readiness review.</p>
+      </header>
+      <div class="gwix-pathway-grid reveal">
+        <div class="gwix-pathway"><h4>01 · Express interest</h4><p>Tell the workforce team which sector and Team interest you.</p></div>
+        <div class="gwix-pathway"><h4>02 · Follow the approved route</h4><p>Receive the appropriate qualification and assessment steps.</p></div>
+        <div class="gwix-pathway"><h4>03 · Move forward when ready</h4><p>Acceptance, enrollment and Team assignment follow the approved readiness process.</p></div>
       </div>
-    </section>
-
-    <section class="section light-section" id="next-steps">
-      <div class="wrap">
-        <div class="section-header reveal">
-          <div><p class="eyebrow">Your next steps</p><h2>Know what happens after you raise your hand.</h2></div>
-          <p>Interest starts a conversation. It does not skip qualification, assessment or readiness review.</p>
-        </div>
-        <div class="journey-grid reveal">
-          <article class="journey-card"><span class="journey-number">01</span><h3>Express interest</h3><p>Tell the workforce team which sector and Team interest you.</p></article>
-          <article class="journey-card"><span class="journey-number">02</span><h3>Follow the approved route</h3><p>Receive the appropriate qualification and assessment steps.</p></article>
-          <article class="journey-card"><span class="journey-number">03</span><h3>Move forward when ready</h3><p>Acceptance, enrollment and Team assignment follow the approved readiness process.</p></article>
-        </div>
-        <p class="fine-print">The campaign email is an expression of interest, not a formal application or promise of acceptance.</p>
-      </div>
-    </section>
-
-    <section class="section" id="pathways">
-      <div class="wrap">
-        <div class="section-header reveal">
-          <div><p class="eyebrow">Cohort 01 · your move</p><h2>See yourself in one of these teams?</h2></div>
-          <p>Start with a direct expression of interest. Ask the workforce team for the approved next step.</p>
-        </div>
-        <div class="page-cta reveal">
-          <div><p class="eyebrow">Start with one message</p><h2>Tell us where you want to contribute.</h2><p>Choose a sector above, then email the workforce team to express interest. This does not submit a formal application, create an offer or guarantee acceptance. Contact <a href="mailto:workforce@btheducationgroup.org">workforce@btheducationgroup.org</a>.</p></div>
-          <div class="cta-actions"><a class="button" href="mailto:workforce@btheducationgroup.org?subject=WDDAM%20Cohort%2001%20interest">Express interest →</a></div>
-        </div>
-        <p class="notice" style="margin-top:1rem"><strong>Already assigned to a cohort?</strong> The separate GWIX application requires your Cohort ID and WDS Code. <a href="https://www.btheducationgroup.org/operator/cohort-signup">Continue only if you have those details</a>.</p>
-      </div>
-    </section>
-
+      <p style="text-align:center;margin-top:2rem" class="reveal"><a class="btn btn-gold btn-lg" href="mailto:workforce@btheducationgroup.org?subject=WDDAM%20Cohort%2001%20interest">Express your interest</a></p>
+    </div>
+  </section>
   </main>
-
-  <footer class="site-footer">
-    <div class="wrap footer-inner">
-      <span>BTH Education Group · WDDAM™ Four-Sector Campaign</span>
-      <nav class="footer-links" aria-label="Related workforce pages">
-        <a href="https://www.btheducationgroup.org/workforce-deployment">Workforce Deployment</a>
-        <a href="https://www.btheducationgroup.org/gwix">GWIX</a>
-        <a href="https://www.btheducationgroup.org/workforce-infrastructure">Workforce Infrastructure</a>
-        <a href="https://www.btheducationgroup.org/privacy.html">Privacy</a>
-      </nav>
+  <footer class="site-footer site-footer--v2">
+    <div class="footer-inner">
+      <div class="footer-brand-col">
+        <div class="footer-brand">WDDAM™ · BTH <span>Education</span> Group</div>
+        <p class="footer-tagline">WDDAM™ Cohort 01 — four sector workforce pathways. Interest is not a formal application or offer; assessment and readiness guide progression.</p>
+        <div class="footer-contact">
+          <p><a href="mailto:workforce@btheducationgroup.org">workforce@btheducationgroup.org</a></p>
+          <p><a href="tel:+237680289956">+237 680 28 99 56</a></p>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Cohort 01 sectors</div>
+        <ul class="footer-links">
+          <li><a href="medical-technology/">Medical Technology</a></li>
+          <li><a href="cybersecurity/">Cybersecurity</a></li>
+          <li><a href="information-technology/">Information Technology</a></li>
+          <li><a href="cloud-data-ai/">Cloud (Data &amp; AI)</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Resources</div>
+        <ul class="footer-links">
+          <li><a href="/gwix">GWIX Exchange</a></li>
+          <li><a href="/workforce-infrastructure">Global Doctrine</a></li>
+          <li><a href="/workforce-engage?intent=briefing">Executive Briefing</a></li>
+          <li><a href="/privacy.html">Privacy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; 2026 BTH Education Group · WDDAM™ Cohort 01</div>
+      <div>4 Sectors &nbsp;&middot;&nbsp; 20 Teams &nbsp;&middot;&nbsp; L1–L5 &nbsp;&middot;&nbsp; 3 Years</div>
     </div>
   </footer>
+  <script src="/assets/js/workforce-infrastructure.js?v=20260617g" defer></script>
 </body>
 </html>
