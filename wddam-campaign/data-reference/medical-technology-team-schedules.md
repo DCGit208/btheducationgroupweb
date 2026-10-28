@@ -102,3 +102,69 @@ These totals count each certification once within the cumulative architecture, w
 1. The supplied L5 table omitted Network+ and AAMI CRES. Corrected placement: Year 2 completes ESB, Network+ and Security+ (cumulative 8) and starts CRES; Year 3 completes Project+, CRES and BIET (cumulative 11).
 2. L5 Year 1 is unchanged (5 completed; BIET starts).
 3. L2 and L3 Year 3 add no new credential: the schedule is complete and the cumulative count carries forward (6 and 8).
+
+---
+
+## Team 3 — Healthcare IT & Medical Systems Cybersecurity (MT-T03)
+
+Status: **received and confirmed**. ETA CETa (EM1–EM5) counts as one certification. Completed credentials carry forward to higher levels.
+
+### Consolidated certification totals
+
+| Level | Common certification stack | Team-specific credentials completed | Total |
+|---|---|---|---:|
+| L1 — Foundation | IC3-GS6; ETA CETa (EM1–EM5); ETA BMD | None | 3 |
+| L2 — Technical Operations | All L1 credentials; Certiport ESB; CompTIA Tech+; CompTIA A+ | None | 6 |
+| L3 — Advanced Technical Operations | All L2 credentials; CompTIA Network+; CompTIA Project+ | None | 8 |
+| L4 — Principal Operations | All L3 credentials; CompTIA Security+ | CompTIA CySA+ | 10 |
+| L5 — Executive & Strategic Operations | All L4 credentials | CISSP | 11 |
+
+Team-specific decisions:
+- **L4:** CompTIA CySA+
+- **L5:** CISSP
+- CISM, CASP+/SecurityX and HCISPP are excluded from the approved totals.
+
+### Level 1 — Foundation
+
+| Year | Certifications and milestones | Cumulative certification count | Specialty development |
+|---|---|---:|---|
+| Year 1 | **Complete:** IC3-GS6; ETA CETa (EM1–EM5); ETA BMD. | 3 completed. | Digital literacy; computer electronics; biomedical technology fundamentals; healthcare IT orientation; clinical technology terminology; documentation; safe handling of healthcare systems. |
+| Year 2 | **Continue:** apply IC3-GS6, ETA CETa and ETA BMD through practical healthcare technology support. Certification schedule complete. | 3 completed. | Introduction to EHR/HIS environments; clinical applications and patient-information flows; confidentiality; basic endpoint hygiene; medical-device identification; cybersecurity awareness and escalation. |
+| Year 3 | **Continue:** apply all three completed certifications in integrated foundation activities. Certification schedule complete. | 3 completed. | Foundational healthcare IT support; recognition of connected medical systems; identification of basic security risks; documentation and escalation; preparation for technical operations. |
+
+### Level 2 — Technical Operations
+
+| Year | Certifications and milestones | Cumulative certification count | Specialty development |
+|---|---|---:|---|
+| Year 1 | **Complete:** IC3-GS6; ETA CETa (EM1–EM5); ETA BMD. | 3 completed. | Healthcare IT foundations; clinical workflows; digital infrastructure; user support; medical technology orientation; confidentiality and safe technical support. |
+| Year 2 | **Continue:** IC3-GS6; ETA CETa (EM1–EM5); ETA BMD. **Complete:** Certiport ESB; CompTIA Tech+; CompTIA A+. | 6 completed. | EHR/HIS application support; clinical workstations and endpoints; operating systems; user administration; healthcare application troubleshooting; patient-information handling; basic access control. |
+| Year 3 | **Continue:** IC3-GS6; ETA CETa (EM1–EM5); ETA BMD; Certiport ESB; CompTIA Tech+; CompTIA A+. Certification schedule complete. | 6 completed. | Applied healthcare IT operations; secure configuration; account and endpoint hygiene; documentation and escalation of suspicious activity; introduction to HL7/FHIR data exchange and clinical interfaces. |
+
+### Level 3 — Advanced Technical Operations
+
+| Year | Certifications and milestones | Cumulative certification count | Specialty development |
+|---|---|---:|---|
+| Year 1 | **Complete:** IC3-GS6; ETA CETa (EM1–EM5); ETA BMD. | 3 completed. | Healthcare systems orientation; clinical workflows; medical-device connectivity awareness; confidentiality; foundational support and documentation. |
+| Year 2 | **Continue:** IC3-GS6; ETA CETa (EM1–EM5); ETA BMD. **Complete:** Certiport ESB; CompTIA Tech+; CompTIA A+. | 6 completed. | Healthcare application operations; endpoint administration; EHR/HIS support; identity and access fundamentals; clinical interfaces and data flows. |
+| Year 3 | **Continue:** IC3-GS6; ETA CETa (EM1–EM5); ETA BMD; Certiport ESB; CompTIA Tech+; CompTIA A+. **Complete:** CompTIA Network+; CompTIA Project+. | 8 completed. | Healthcare network architecture; connected medical-device inventory; network exposure mapping; segmentation concepts; HL7/FHIR integration dependencies; secure remote connectivity; change control; introduction to IEC 81001-5-1 lifecycle security. |
+
+### Level 4 — Principal Operations
+
+| Year | Certifications and milestones | Cumulative certification count | Specialty development |
+|---|---|---:|---|
+| Year 1 | **Complete:** IC3-GS6; ETA CETa (EM1–EM5); ETA BMD. | 3 completed. | Healthcare IT foundations; clinical technology orientation; digital infrastructure; confidentiality; medical-device awareness. |
+| Year 2 | **Continue:** IC3-GS6; ETA CETa (EM1–EM5); ETA BMD. **Complete:** Certiport ESB; CompTIA Tech+; CompTIA A+. | 6 completed. | Healthcare systems operations; endpoint security foundations; EHR/HIS access management; application support; secure configuration and escalation. |
+| Year 3 | **Continue:** IC3-GS6; ETA CETa (EM1–EM5); ETA BMD; Certiport ESB; CompTIA Tech+; CompTIA A+. **Complete:** CompTIA Network+; CompTIA Project+; CompTIA Security+; CompTIA CySA+. | 10 completed. | Healthcare infrastructure security; network segmentation; medical-device vulnerability assessment; threat detection and security monitoring; identity and privileged access; incident response; healthcare data protection; health-software lifecycle security; IEC 81001-5-1 applied risk and control assessment. |
+
+### Level 5 — Executive & Strategic Operations
+
+| Year | Certifications and milestones | Cumulative certification count | Specialty development |
+|---|---|---:|---|
+| Year 1 | **Complete:** IC3-GS6; ETA CETa (EM1–EM5); ETA BMD. | 3 completed. | Healthcare IT foundations; clinical workflows; medical-device awareness; digital infrastructure; confidentiality and escalation. |
+| Year 2 | **Continue:** IC3-GS6; ETA CETa (EM1–EM5); ETA BMD. **Complete:** Certiport ESB; CompTIA Tech+; CompTIA A+. | 6 completed. | Healthcare IT operations; clinical application and endpoint management; EHR/HIS access practices; clinical data-flow awareness; operational risk documentation. |
+| Year 3 | **Continue:** IC3-GS6; ETA CETa (EM1–EM5); ETA BMD; Certiport ESB; CompTIA Tech+; CompTIA A+; CompTIA CySA+ (inherited from L4). **Complete:** CompTIA Network+; CompTIA Project+; CompTIA Security+; CISSP. **Complete:** L5 specialty capstone and executive leadership assessment. | 11 completed. | Healthcare cybersecurity strategy; medical-device security governance; healthcare network architecture; enterprise risk ownership; clinical incident-response architecture; patient-data protection; supplier and lifecycle governance; executive reporting; clinical continuity; resource prioritization; IEC 81001-5-1 and NIST NICE applied to enterprise governance and workforce design. |
+
+### Confirmed by Dr. Coach Achu (28 Oct 2026)
+
+1. L5 Year 3 does **not** re-complete CySA+; it is inherited from L4 and applied at L5.
+2. L5 Year 3 completes Network+, Project+, Security+ and CISSP, with cumulative total 11.
