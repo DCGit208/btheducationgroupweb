@@ -38,3 +38,65 @@ Sequence rule: CABT completes at L2, CBET at L3, CHTM at L5. The formal HTM mana
 1. "Complete" means complete in the stated year, including EM1–EM5 and CETa for L2–L5 in Year 1.
 2. L1 completes ETA BMD in Year 3; L2 and L3 complete it in Year 2.
 3. L2 Year 3 is "Certification & Professional Development": AAMI CABT and foundational HTM complete, plus operational consolidation.
+
+---
+
+## Team 2 — Medical Imaging & Diagnostic Technology (MT-T02)
+
+Status: **received**. Each level is a standalone three-year schedule. ETA CETa is one certification comprising EM1–EM5; it is not counted as six certifications.
+
+### Level 1 — Foundation
+
+| Year | Certifications and completion milestones | Cumulative certification count | Specialty development |
+|---|---|---:|---|
+| Year 1 | **Complete:** IC3-GS6. **ETA CETa:** complete EM1–EM3 modules. | 1 completed; CETa in progress | Imaging fundamentals, anatomy, medical terminology, diagnostic workflow, equipment awareness, and introductory ultrasound, radiography, CT, MRI, and nuclear medicine. |
+| Year 2 | **Complete:** ETA CETa (EM1–EM5). | 2 | Imaging modalities, equipment components, safe handling, technical documentation, and imaging-system functions. |
+| Year 3 | **Complete:** ETA BMD. | 3 | Biomedical electronics, imaging equipment identification, technical support fundamentals, and equipment documentation. |
+
+### Level 2 — Technical Operations
+
+| Year | Certifications and completion milestones | Cumulative certification count | Specialty development |
+|---|---|---:|---|
+| Year 1 | **Complete:** IC3-GS6, ETA CETa, CompTIA Tech+. **Start:** Certiport ESB. | 3 completed; ESB in progress | Imaging equipment operations, diagnostic workflow, PACS fundamentals, imaging workstation support, and technical documentation. |
+| Year 2 | **Complete:** Certiport ESB, CompTIA A+, ETA BMD. | 6 | PACS operations, imaging workstation support, equipment service coordination, technical troubleshooting, and maintenance documentation. |
+| Year 3 | **Complete:** Level 2 certification schedule. | 6 | Consolidate imaging operations, PACS application, equipment service support, maintenance coordination, asset records, and operational documentation. |
+
+### Level 3 — Advanced Technical Operations
+
+| Year | Certifications and completion milestones | Cumulative certification count | Specialty development |
+|---|---|---:|---|
+| Year 1 | **Complete:** IC3-GS6, ETA CETa, ETA BMD, Certiport ESB, CompTIA Tech+, and CompTIA A+. **Start:** CompTIA Network+ and CompTIA Project+. | 6 completed; Network+ and Project+ in progress | DICOM fundamentals, IHE interoperability concepts, imaging connectivity, advanced modality awareness, and networked imaging-system operations. |
+| Year 2 | **Complete:** CompTIA Network+ and CompTIA Project+. | 8 | Network-aware troubleshooting, PACS connectivity, DICOM workflows, imaging-system configuration, and technical project implementation. |
+| Year 3 | **Complete:** Level 3 certification schedule. | 8 | Consolidate connected imaging systems, modality-specific technical operations, interoperability, equipment configuration, technical acceptance, and imaging deployment projects. |
+
+### Level 4 — Principal Operations
+
+| Year | Certifications and completion milestones | Cumulative certification count | Specialty development |
+|---|---|---:|---|
+| Year 1 | **Complete:** IC3-GS6, ETA CETa, ETA BMD, Certiport ESB, CompTIA Tech+, CompTIA A+, CompTIA Network+, and CompTIA Project+. **Start:** CompTIA Security+. | 8 completed; Security+ in progress | Advanced imaging-system troubleshooting, CT/MRI technical operations, radiography, ultrasound, nuclear medicine, radiation-safety operations, and imaging-system risk awareness. |
+| Year 2 | **Complete:** CompTIA Security+. **Start:** AAMI CRES. | 9 completed; CRES in progress | Imaging-system cybersecurity, advanced equipment support, imaging maintenance, service quality, and technical safety management. |
+| Year 3 | **Complete:** AAMI CRES. | 10 | Consolidate advanced imaging operations, equipment service, safety, maintenance, troubleshooting, and principal-level technical responsibility. |
+
+### Level 5 — Executive & Strategic Operations
+
+| Year | Certifications and completion milestones | Cumulative certification count | Specialty development |
+|---|---|---:|---|
+| Year 1 | **Complete:** IC3-GS6, ETA CETa, ETA BMD, CompTIA Tech+, and CompTIA A+. **Start:** ETA BIET. | 5 completed; BIET in progress | Imaging portfolio awareness, modality architecture, equipment lifecycle strategy, service governance, deployment planning, and advanced imaging engineering practice. |
+| Year 2 | **Complete:** Certiport ESB and CompTIA Security+. **Continue:** ETA BIET development. | 7 completed; BIET in progress | PACS/DICOM/IHE interoperability governance, imaging-system security, equipment lifecycle management, imaging quality and risk, and service performance. |
+| Year 3 | **Complete:** CompTIA Project+ and ETA BIET. | 9 | Imaging commissioning, advanced modality integration, radiation-safety architecture, imaging technology governance, lifecycle leadership, and workforce deployment. |
+
+### Consolidated certification totals (as supplied)
+
+These totals count each certification once within the cumulative architecture, with ETA CETa counted as one credential.
+
+| Level | Common certification stack | Imaging-specific credentials | Total certifications |
+|---|---|---|---:|
+| L1 | IC3-GS6, ETA CETa, ETA BMD | — | 3 |
+| L2 | L1 + ESB, Tech+, A+ | — | 6 |
+| L3 | L2 + Network+, Project+ | — | 8 |
+| L4 | L3 + Security+ | AAMI CRES | 10 |
+| L5 | Common stack as allocated in the L5 schedule | ETA BIET; AAMI CRES retained in the specialty architecture | 10 across the full L5 architecture when CRES is included |
+
+### Count reconciliation to confirm before rendering Team 2
+
+The supplied schedule is preserved as written. The L5 annual rows total 9 credentials, while the consolidated total states 10 including retained AAMI CRES. Also, CompTIA Network+ is included by L3/L4 and described as inherited in the architecture, but is not listed in the L5 annual allocation. Confirm whether Network+ is intentionally excluded from the L5 sequence or should be carried into its Year 1 completion list and count. The interface should not show a misleading cumulative total until this is reconciled.
