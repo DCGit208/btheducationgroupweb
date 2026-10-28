@@ -53,6 +53,208 @@ window.WDDAM_SCHEDULES["medical-technology"] = {
      {"c": ["AAMI CHTM — Certified Healthcare Technology Manager"], "n": ["Apply strategic HTM, equipment lifecycle governance, acquisition planning, technical workforce management and portfolio performance."]}
     ]
    }
+  } },
+ "MT-T02": {
+  "summary": "Medical imaging and diagnostic technology Team: common certification spine plus ETA BIET and AAMI CRES. ETA CETa (EM1–EM5) counts as one certification.",
+  "levels": {
+   "L1": {
+    "end": "ETA BMD",
+    "milestones": [
+     "ETA CETa completes in Year 2",
+     "ETA BMD completes in Year 3",
+     "3 certifications by Year 3"
+    ],
+    "years": [
+     {
+      "c": [
+       "IC3-GS6"
+      ],
+      "k": [
+       "ETA CETa — EM1–EM3 modules complete"
+      ],
+      "cnt": "1 completed; CETa in progress",
+      "dev": "Imaging fundamentals, anatomy, medical terminology, diagnostic workflow, equipment awareness, and introductory ultrasound, radiography, CT, MRI and nuclear medicine."
+     },
+     {
+      "c": [
+       "ETA CETa (EM1–EM5)"
+      ],
+      "cnt": "2",
+      "dev": "Imaging modalities, equipment components, safe handling, technical documentation and imaging-system functions."
+     },
+     {
+      "c": [
+       "ETA BMD"
+      ],
+      "cnt": "3",
+      "dev": "Biomedical electronics, imaging equipment identification, technical support fundamentals and equipment documentation."
+     }
+    ]
+   },
+   "L2": {
+    "end": "ETA BMD",
+    "milestones": [
+     "Certiport ESB, CompTIA A+ and ETA BMD complete in Year 2",
+     "6 certifications by Year 2"
+    ],
+    "years": [
+     {
+      "c": [
+       "IC3-GS6",
+       "ETA CETa",
+       "CompTIA Tech+"
+      ],
+      "s": [
+       "Certiport ESB"
+      ],
+      "cnt": "3 completed; ESB in progress",
+      "dev": "Imaging equipment operations, diagnostic workflow, PACS fundamentals, imaging workstation support and technical documentation."
+     },
+     {
+      "c": [
+       "Certiport ESB",
+       "CompTIA A+",
+       "ETA BMD"
+      ],
+      "cnt": "6",
+      "dev": "PACS operations, imaging workstation support, equipment service coordination, technical troubleshooting and maintenance documentation."
+     },
+     {
+      "t": "Certification schedule complete",
+      "cnt": "6",
+      "dev": "Consolidate imaging operations, PACS application, equipment service support, maintenance coordination, asset records and operational documentation."
+     }
+    ]
+   },
+   "L3": {
+    "end": "CompTIA Project+",
+    "milestones": [
+     "Network+ and Project+ complete in Year 2",
+     "8 certifications by Year 2"
+    ],
+    "years": [
+     {
+      "c": [
+       "IC3-GS6",
+       "ETA CETa",
+       "ETA BMD",
+       "Certiport ESB",
+       "CompTIA Tech+",
+       "CompTIA A+"
+      ],
+      "s": [
+       "CompTIA Network+",
+       "CompTIA Project+"
+      ],
+      "cnt": "6 completed; Network+ and Project+ in progress",
+      "dev": "DICOM fundamentals, IHE interoperability concepts, imaging connectivity, advanced modality awareness and networked imaging-system operations."
+     },
+     {
+      "c": [
+       "CompTIA Network+",
+       "CompTIA Project+"
+      ],
+      "cnt": "8",
+      "dev": "Network-aware troubleshooting, PACS connectivity, DICOM workflows, imaging-system configuration and technical project implementation."
+     },
+     {
+      "t": "Certification schedule complete",
+      "cnt": "8",
+      "dev": "Consolidate connected imaging systems, modality-specific technical operations, interoperability, equipment configuration, technical acceptance and imaging deployment projects."
+     }
+    ]
+   },
+   "L4": {
+    "end": "AAMI CRES",
+    "milestones": [
+     "Security+ completes in Year 2",
+     "AAMI CRES completes in Year 3",
+     "10 certifications by Year 3"
+    ],
+    "years": [
+     {
+      "c": [
+       "IC3-GS6",
+       "ETA CETa",
+       "ETA BMD",
+       "Certiport ESB",
+       "CompTIA Tech+",
+       "CompTIA A+",
+       "CompTIA Network+",
+       "CompTIA Project+"
+      ],
+      "s": [
+       "CompTIA Security+"
+      ],
+      "cnt": "8 completed; Security+ in progress",
+      "dev": "Advanced imaging-system troubleshooting, CT/MRI technical operations, radiography, ultrasound, nuclear medicine, radiation-safety operations and imaging-system risk awareness."
+     },
+     {
+      "c": [
+       "CompTIA Security+"
+      ],
+      "s": [
+       "AAMI CRES"
+      ],
+      "cnt": "9 completed; CRES in progress",
+      "dev": "Imaging-system cybersecurity, advanced equipment support, imaging maintenance, service quality and technical safety management."
+     },
+     {
+      "c": [
+       "AAMI CRES"
+      ],
+      "cnt": "10",
+      "dev": "Consolidate advanced imaging operations, equipment service, safety, maintenance, troubleshooting and principal-level technical responsibility."
+     }
+    ]
+   },
+   "L5": {
+    "end": "ETA BIET",
+    "milestones": [
+     "AAMI CRES and ETA BIET complete in Year 3",
+     "11 certifications by Year 3"
+    ],
+    "years": [
+     {
+      "c": [
+       "IC3-GS6",
+       "ETA CETa",
+       "ETA BMD",
+       "CompTIA Tech+",
+       "CompTIA A+"
+      ],
+      "s": [
+       "ETA BIET"
+      ],
+      "cnt": "5 completed; BIET in progress",
+      "dev": "Imaging portfolio awareness, modality architecture, equipment lifecycle strategy, service governance, deployment planning and advanced imaging engineering practice."
+     },
+     {
+      "c": [
+       "Certiport ESB",
+       "CompTIA Network+",
+       "CompTIA Security+"
+      ],
+      "s": [
+       "AAMI CRES"
+      ],
+      "k": [
+       "ETA BIET — development"
+      ],
+      "cnt": "8 completed; CRES and BIET in progress",
+      "dev": "PACS/DICOM/IHE interoperability governance, imaging-system security, equipment lifecycle management, imaging quality and risk, and service performance."
+     },
+     {
+      "c": [
+       "CompTIA Project+",
+       "AAMI CRES",
+       "ETA BIET"
+      ],
+      "cnt": "11",
+      "dev": "Imaging commissioning, advanced modality integration, radiation-safety architecture, imaging technology governance, lifecycle leadership and workforce deployment."
+     }
+    ]
+   }
   }
  }
 };

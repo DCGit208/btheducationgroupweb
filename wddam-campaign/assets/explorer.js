@@ -37,6 +37,7 @@
     data.years.forEach(function (year, index) {
       var col = el("article", "tl-year");
       col.append(el("p", "tl-year-name", "Year " + (index + 1)));
+      if (year.cnt) col.append(el("p", "tl-count", "Certifications: " + year.cnt));
       if (year.t) col.append(el("h5", "tl-theme", year.t));
       kinds.forEach(function (kind) {
         var items = year[kind[0]];
@@ -51,6 +52,12 @@
         col.append(group);
       });
       (year.n || []).forEach(function (text) { col.append(el("p", "tl-note", text)); });
+      if (year.dev) {
+        var dev = el("p", "tl-dev");
+        dev.append(el("strong", "", "Specialty development: "));
+        dev.append(document.createTextNode(year.dev));
+        col.append(dev);
+      }
       grid.append(col);
     });
     wrap.append(grid);

@@ -115,3 +115,6 @@
 .tl-htm strong { color: #fff; }
 @media (max-width: 1100px) { .timeline { grid-template-columns: 1fr; } }
 @media (max-width: 760px) { .level-select { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.tl-count { margin: 0 0 .6rem; padding: .35rem .6rem; font-size: .76rem; font-weight: 700; color: var(--sector-color); border: 1px solid var(--x-line); border-radius: 8px; }
+.tl-dev { margin: .75rem 0 0; padding-top: .6rem; font-size: .8rem; line-height: 1.4; color: var(--x-muted); border-top: 1px solid var(--x-line); }
+.tl-dev strong { color: #fff; }

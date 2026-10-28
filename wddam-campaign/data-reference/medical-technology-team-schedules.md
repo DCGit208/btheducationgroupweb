@@ -82,8 +82,8 @@ Status: **received**. Each level is a standalone three-year schedule. ETA CETa i
 | Year | Certifications and completion milestones | Cumulative certification count | Specialty development |
 |---|---|---:|---|
 | Year 1 | **Complete:** IC3-GS6, ETA CETa, ETA BMD, CompTIA Tech+, and CompTIA A+. **Start:** ETA BIET. | 5 completed; BIET in progress | Imaging portfolio awareness, modality architecture, equipment lifecycle strategy, service governance, deployment planning, and advanced imaging engineering practice. |
-| Year 2 | **Complete:** Certiport ESB and CompTIA Security+. **Continue:** ETA BIET development. | 7 completed; BIET in progress | PACS/DICOM/IHE interoperability governance, imaging-system security, equipment lifecycle management, imaging quality and risk, and service performance. |
-| Year 3 | **Complete:** CompTIA Project+ and ETA BIET. | 9 | Imaging commissioning, advanced modality integration, radiation-safety architecture, imaging technology governance, lifecycle leadership, and workforce deployment. |
+| Year 2 | **Complete:** Certiport ESB, CompTIA Network+ and CompTIA Security+. **Start:** AAMI CRES. **Continue:** ETA BIET development. | 8 completed; CRES and BIET in progress | PACS/DICOM/IHE interoperability governance, imaging-system security, equipment lifecycle management, imaging quality and risk, and service performance. |
+| Year 3 | **Complete:** CompTIA Project+, AAMI CRES and ETA BIET. | 11 | Imaging commissioning, advanced modality integration, radiation-safety architecture, imaging technology governance, lifecycle leadership, and workforce deployment. |
 
 ### Consolidated certification totals (as supplied)
 
@@ -95,8 +95,10 @@ These totals count each certification once within the cumulative architecture, w
 | L2 | L1 + ESB, Tech+, A+ | — | 6 |
 | L3 | L2 + Network+, Project+ | — | 8 |
 | L4 | L3 + Security+ | AAMI CRES | 10 |
-| L5 | Common stack as allocated in the L5 schedule | ETA BIET; AAMI CRES retained in the specialty architecture | 10 across the full L5 architecture when CRES is included |
+| L5 | L4 stack (IC3-GS6, CETa, BMD, ESB, Tech+, A+, Network+, Project+, Security+) | AAMI CRES; ETA BIET | 11 |
 
-### Count reconciliation to confirm before rendering Team 2
+### Confirmed by Dr. Coach Achu (28 Oct 2026)
 
-The supplied schedule is preserved as written. The L5 annual rows total 9 credentials, while the consolidated total states 10 including retained AAMI CRES. Also, CompTIA Network+ is included by L3/L4 and described as inherited in the architecture, but is not listed in the L5 annual allocation. Confirm whether Network+ is intentionally excluded from the L5 sequence or should be carried into its Year 1 completion list and count. The interface should not show a misleading cumulative total until this is reconciled.
+1. The supplied L5 table omitted Network+ and AAMI CRES. Corrected placement: Year 2 completes ESB, Network+ and Security+ (cumulative 8) and starts CRES; Year 3 completes Project+, CRES and BIET (cumulative 11).
+2. L5 Year 1 is unchanged (5 completed; BIET starts).
+3. L2 and L3 Year 3 add no new credential: the schedule is complete and the cumulative count carries forward (6 and 8).
